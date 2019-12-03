@@ -1,3 +1,5 @@
+.. _cv32e40p-introduction:
+
 Introduction
 ============
 
@@ -20,6 +22,13 @@ It follows these specifications:
 * `RISC-V Instruction Set Manual, Volume II: Privileged Architecture, document version 20190608-Base-Ratified (June 8, 2019) <https://github.com/riscv/riscv-isa-manual/releases/download/Ratified-IMFDQC-and-Priv-v1.11/riscv-privileged-20190608.pdf>`_.
   It implements the Machine ISA version 1.11.
 * `RISC-V External Debug Support, version 0.13.2 <https://content.riscv.org/wp-content/uploads/2019/03/riscv-debug-release.pdf>`_
+
+PULP Specific User Manual
+-------------------------
+
+This document acts as a datasheet and as the Xpulp Instruction Set Extensions specifications.
+* `PULP Document, <https://github.com/pulp-platform/riscv/blob/master/doc/user_manual.doc>`_
+
 
 History
 -------
