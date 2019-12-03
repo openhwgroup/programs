@@ -19,3 +19,9 @@ Verification
     Verification Plan (aka Test Plan) for the cores.
 
 .. _OpenHW Group: https://www.openhwgroup.org
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   introduction
