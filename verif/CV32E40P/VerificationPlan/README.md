@@ -1,2 +1,1 @@
-Placeholder directory for a specific [CV32E40P high-level feature](https://github.com/openhwgroup/core-v-verif/tree/master/doc). The Verification Plan (aka
-Test Plan) for this feature will be committed here as soon as is available.
+This is the root directory of the CV32E40P Verification Plan (aka Test Plan).  Each sub-directory is the Verification Plan a specific [CV32E40P high-level feature](https://github.com/openhwgroup/core-v-verif/tree/master/doc) of the same name.
