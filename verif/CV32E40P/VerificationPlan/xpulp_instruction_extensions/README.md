@@ -1,2 +1,2 @@
-Placeholder directory for a specific [CV32E40P high-level feature](https://github.com/openhwgroup/core-v-verif/tree/master/doc). The Verification Plan (aka
-Test Plan) for this feature will be committed here as soon as is available.
+## Verification (Test) Plans for the XPULP Instruction Extension
+At the time of this writting (2019-12-21), only the plan Bit Manipulation Instructions has been published here.  The plan is in both Excel (xlsx) and Markdown (md) formats.  Send an email to mike@openhwgroup.org if you have a preference.  Otherwise he'll pick _his_ favorite.
