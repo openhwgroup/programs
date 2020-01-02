@@ -5,11 +5,11 @@ Test Plans) spreadsheets for this high-level feature will be committed here as t
 
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
-| RV32I | Complete | Not yet scheduled | Looking for feedback |
-| Zifencei extension | Not started | | |
-| Zicsr extension | Not started | | |
+| RV32I | Ready for Review | Not yet scheduled | Looking for feedback |
+| Zifencei extension | Ready for Review | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
+| Zicsr extension | Ready for Reivew | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
 | M extension | Not started | | |
-| F extension | Not started | | |
+| F extension | Not started | | Tentative feature for CV32E40P |
 | C extension | Not started | | |
 | Counter extension | Not started | | |
 | Instruction Expections | Complete (?) | | Unsure of EEI dependencies |
