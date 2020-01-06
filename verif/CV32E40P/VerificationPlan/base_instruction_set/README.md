@@ -11,5 +11,5 @@ Test Plans) spreadsheets for this high-level feature will be committed here as t
 | M extension | Not started | | |
 | F extension | Not started | | Tentative feature for CV32E40P |
 | C extension | Not started | | |
-| Counter extension | Not started | | |
+| Counter extension | Not started | | Is the complete and definative list of counters defined? |
 | Instruction Expections | Complete (?) | | Unsure of EEI dependencies |
