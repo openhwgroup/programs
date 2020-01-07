@@ -12,10 +12,10 @@ A Verification Plan should focus on the **_what_**, and not the **_how_** of ver
 
 The “how” part is captured in the Verification Strategy document.  That document exists to support the Verification Plan. For example the CV32E40P testplan specifies that all RV32I instructions be generated and their results checked.  Obviously, the testbench needs to have these capabilities and its the purpose of the Verification Strategy document to explain how that is done.
 ## A Trivial Example: the RV32I ADDI Instruction
-Let's assume your task is to verify the CV32E40P's implementation of the RV32I ADDI instruction.  Simple right?  Create a simple assembler program with a few **_addi_** instructions check the results and we're done.  Checking for the correct result (rd = rs1 + imm), is insufficent.  We also need to check:
+Let's assume your task is to verify the CV32E40P's implementation of the RV32I ADDI instruction.  Simple right?  Create a simple assembler program with a few **_addi_** instructions check the results and we're done.  Of course, checking for the correct result (rd = rs1 + imm), is insufficent.  We also need to check:
 * Overflow is detected and flagged correctly
 * Underflow is detected and flagged correctly
-* No instruction execution side-effects
+* No instruction execution side-effects (e.g. unexpected GPR changes, unexpected condition codes)
 
 Its also important that the instruction is fully exercised, so we also need to cover the following cases:
 * Use x0..x31 as rs1
@@ -29,8 +29,8 @@ Note the simplifying assumptions made here.  With one 32-bit and one 12-bit oper
 So, specifying the Testplan for the addi instruction forces us to think about what the feature-under-test does, what we need to check to ensure its done properly and what stimulus and configuration needs to be covered to ensure the feature is tested under all penitent conditions.
 
 The template used for this project attempts to provide an easy-to-use format to capture and review this information for every feature in the design.
-## The CORE-V Verification Plan Template
-The following sub-sections explain each of the columns in the template spreadsheet.
+## HOWTO: The CORE-V Verification Plan Template
+The following sub-sections explain each of the columns in the [template spreadsheet](https://github.com/openhwgroup/core-v-docs/blob/master/verif/CV32E40P/VerificationPlan/CORE-V_VerifPlan_Template.xlsx).
 ### Requirement Location
 This is a pointer to the source Requirements document of the Features in question.  It can be a standards document, such as the RISC-V ISA, or a micro-architecture specification.   Please include a chapter or section number.
 ### Feature
