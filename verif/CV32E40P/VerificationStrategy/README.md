@@ -1,1 +1,1 @@
-# Verification Strategy documents for the CV32E40P RISC-V core
+# CV32E40P-specific Verification Strategy documents
