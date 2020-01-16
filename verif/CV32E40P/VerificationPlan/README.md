@@ -15,11 +15,11 @@ contact @mikeopenhwgroup.
 | RV32I | @mikeopenhwgroup | Ready for Review | Not yet scheduled | Looking for feedback |
 | Zifencei extension | @mikeopenhwgroup | Ready for Review | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
 | Zicsr extension | @mikeopenhwgroup | Ready for Reivew | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
-| M extension | arnaud.grasset@thalesgroup.com | Committed | | |
+| M extension | arnaud.grasset@thalesgroup.com | Ready for Review | | |
 | F extension | | Not started | | Tentative feature for CV32E40P |
-| C extension | arnaud.grasset@thalesgroup.com | Committed | | |
+| C extension | arnaud.grasset@thalesgroup.com | Ready for Review | | |
 | Counter extension | | Not started | | Is the complete and definative list of counters defined? |
-| Instruction Expections | @kenowhg | Complete (?) | | Unsure of EEI dependencies |
+| Instruction Exceptions | @kenowhg | Complete (?) | | Unsure of EEI dependencies |
 
 ### Privileged spec
 
