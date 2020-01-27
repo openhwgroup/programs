@@ -15,10 +15,10 @@ contact @mikeopenhwgroup.
 | RV32I | @mikeopenhwgroup | Ready for Review | Not yet scheduled | Looking for feedback |
 | Zifencei extension | @mikeopenhwgroup | Ready for Review | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
 | Zicsr extension | @mikeopenhwgroup | Ready for Reivew | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
-| M extension | arnaud.grasset@thalesgroup.com | Ready for Review | | |
+| M extension | @agrasset | Ready for Review | Not yet Scheduled | |
 | F extension | | Not started | | Tentative feature for CV32E40P |
-| C extension | arnaud.grasset@thalesgroup.com | Ready for Review | | |
-| Counter extension | | Not started | | Is the complete and definative list of counters defined? |
+| C extension | @agrasset | Ready for Review | | |
+| Counter extension | @agrasset | Ready for Review | Not yet Scheduled | Is the complete and definative list of counters defined? |
 | Instruction Exceptions | @kenowhg | Complete (?) | | Unsure of EEI dependencies |
 
 ### Privileged spec
@@ -33,11 +33,11 @@ contact @mikeopenhwgroup.
 | Feature | Owner | Capture | Review | Comment |
 |---------|-------|---------|--------|---------|
 | Post-increment load/store | | | | |
-| Hardware Loop | | | | Optional CV32E40P Feature |
-| Bit Manipulation | | | | |
-| General ALU | @alfredoh1234 | | | |
+| Hardware Loop | @agrasset | | | Optional CV32E40P Feature.  Arnaud has on-going discussions with Cores TWG |
+| Bit Manipulation | @alfredoh1234 | Ready for Review | Not yet Scheduled | |
+| General ALU | @alfredoh1234 | Ready for Review | Not yet Scheduled | |
 | Immediate branching | | | | |
-| SIMD | @alfredoh1234 | | | |
+| SIMD | | | | |
 
 ### Custom circuitry
 
