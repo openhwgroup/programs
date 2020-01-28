@@ -42,9 +42,19 @@ A summary of what the features does.  It should be a _summary_, not a verbatium 
 ### Verification Goals
 A summary of what stimulus and/or configuration needs to be generated/checked/covered to ensue sufficient testing of the Feature.
 ### Pass/Fail Criteria
-How will the testbench know the test passed?
+Here we attempt to answer the question, "how will the testbench know the test passed?".  There are several methods that are typically used in CORE-V projects, and it is common to use more than one for a given item in a Verification Plan.
+* **Self Checking**: A self-checking test encodes the correct result directly into the testcase and compares what the DUT does against this "known good" outcome.  See the **_RISCY Testcases_** section of the [Verification Strategy](https://github.com/openhwgroup/core-v-docs/blob/master/verif/Common/OpenHWGroup_CORE-V_Verif_Strategy.pdf) for an example of this.  This strategy is used extensively by the RISC-V Foundation Compliance tests.
+* **Signature Check**: this is a more sophisitcated form of a self checking test.  The results of the test are used to calculate a signature and this is compared against a "known good" signature.  This strategy is also used by the RISC-V Foundation Compliance tests.
+* **Check against ISS**: Here, the testcase does not "know" the correct outcome of the test, it merely provides stimulus to the DUT.  The pass/fail criteria is determined a verification environment (testbench) component, usually the ISS, and the verification environment must compare the actual results from the DUT and the expected results from the ISS (or other reference model). When practical, this is the preferred approach because it makes testcase maintenance simplier.
+* **Other**: If one of the above Pass/Fail Criteria does not fit your needs, specify it here.
 ### Test Type
-Specify whether the Feature will be covered in a Compliance test, a manually written Directed test or a Constrained-Random test.
+Choose one or more of the following:
+* **RISC-V Compliance**: a self-checking ISA compliance testcase from the RISC-V Foundation.
+* **OpenHW Compliance**: a self-checking ISA compliance testcase from the OpenHW Group.
+* **Directed Self-Checking**: a directed (non-random) self-checking testcase from the OpenHW Group that is not specifically targetting ISA compliance.
+* **Directed Non-Self-Checking**: a directed (non-random) non-self-checking testcase from the OpenHW Group that is not specifically targetting ISA compliance.  Note that these tests assume that the pass/fail criteria will be "Check against ISS" (or other reference model).
+* **Constrained-Random**: a constrained-random testcase.  Typically the stimulus for these will come from the Google random instruction stream generator.  Note that by defintion these tests cannot be self-checking.
+* **Other**: If one of the above Test Types does not fit your needs, specify it here.
 ### Coverage Method
 How will we know that the Feature is verified (covered)?  There are several choices here:
 * **Testcase:** if the testcase was run, the Feature was tested.
