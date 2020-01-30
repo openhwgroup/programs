@@ -34,7 +34,7 @@ The following sub-sections explain each of the columns in the [template spreadsh
 ### Requirement Location
 This is a pointer to the source Requirements document of the Features in question.  It can be a standards document, such as the RISC-V ISA, or a micro-architecture specification.   Please include a chapter or section number.
 ### Feature
-The high-level feature you are trying to verify.  For example, RV32I Register-Immediate Instructions.
+The high-level feature you are trying to verify.  For example, RV32I Register-Immediate Instructions.  In some cases, it may be natural to use the section header name of the reference document.
 ### Sub-Feature
 This is an optional, but often used column.  Using our previous examples, ADDI is a sub-feature of RV32I Register-Immediate Instructions.  If it makes sense to decompose the Feature into two or more sub-features, use this columnn for that.  If required, add a column for sub-sub-features. 
 ### Feature Description
@@ -44,8 +44,10 @@ A summary of what stimulus and/or configuration needs to be generated/checked/co
 ### Pass/Fail Criteria
 Here we attempt to answer the question, "how will the testbench know the test passed?".  There are several methods that are typically used in CORE-V projects, and it is common to use more than one for a given item in a Verification Plan.
 * **Self Checking**: A self-checking test encodes the correct result directly into the testcase and compares what the DUT does against this "known good" outcome.  See the **_RISCY Testcases_** section of the [Verification Strategy](https://github.com/openhwgroup/core-v-docs/blob/master/verif/Common/OpenHWGroup_CORE-V_Verif_Strategy.pdf) for an example of this.  This strategy is used extensively by the RISC-V Foundation Compliance tests.
-* **Signature Check**: this is a more sophisitcated form of a self checking test.  The results of the test are used to calculate a signature and this is compared against a "known good" signature.  This strategy is also used by the RISC-V Foundation Compliance tests.
-* **Check against ISS**: Here, the testcase does not "know" the correct outcome of the test, it merely provides stimulus to the DUT.  The pass/fail criteria is determined a verification environment (testbench) component, usually the ISS, and the verification environment must compare the actual results from the DUT and the expected results from the ISS (or other reference model). When practical, this is the preferred approach because it makes testcase maintenance simplier.
+* **Signature Check**: This is a more sophisitcated form of a self checking test.  The results of the test are used to calculate a signature and this is compared against a "known good" signature.  This strategy is also used by the RISC-V Foundation Compliance tests.
+* **Check against ISS**: Here, the testcase does not "know" the correct outcome of the test, it merely provides stimulus to the DUT.  The pass/fail criteria is determined a verification environment (testbench) component, in this case the **_Instruction Set Simulator_** (ISS), and the verification environment must compare the actual results from the DUT and the expected results from the ISS (or other reference model). When practical, this is the preferred approach because it makes testcase maintenance simplier.
+* **Check against RM**: The pass/fail criteria is determined by a **_Reference Model_** (RM).  An RM is a verification environment (testbench) component which models some or all of the DUT behavior.  In this context RM is a more generic term for ISS.  Use this criteria when you suspect that the ISS will not model the specific behavior needed.
+* **Assertion Check**: Failure is detected by an assertion, typically coded in SVA.
 * **Other**: If one of the above Pass/Fail Criteria does not fit your needs, specify it here.
 ### Test Type
 Choose one or more of the following:
@@ -58,7 +60,8 @@ Choose one or more of the following:
 ### Coverage Method
 How will we know that the Feature is verified (covered)?  There are several choices here:
 * **Testcase:** if the testcase was run, the Feature was tested.
-* **Functional Coverage:** the testbench supports explicit functional coverage to measure the required stimulus/configuration conditions to show that the Feature was tested.  **This is the perferred method of coverage.**
+* **Functional Coverage:** the testbench supports SystemVerilog cover_groups that measures stimulus/configuration/response conditions to show that the Feature was tested.  **This is the perferred method of coverage.**
+* **Assertion Coverage**: an alternate form of functional coverage, implemented as SVA cover properties.
 * **Code Coverage:** the Feature is deemed to be tested when the specific conditions in the RTL have been exercised.
 ### Link to Coverage
 This field is used to link the Feature to coverage data generated in Regression.  Leave this blank for now as this information is tool dependent.
