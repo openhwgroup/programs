@@ -17,9 +17,9 @@ contact @mikeopenhwgroup.
 | Zicsr extension | @mikeopenhwgroup | Ready for Reivew | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
 | M extension | @agrasset | Ready for Review | Not yet Scheduled | |
 | F extension | | Not started | | Tentative feature for CV32E40P |
-| C extension | @agrasset | Ready for Review | | |
+| C extension | @agrasset | Ready for Review | Not yet Scheduled | |
 | Counter extension | @agrasset | Ready for Review | Not yet Scheduled | Is the complete and definative list of counters defined? |
-| Instruction Exceptions | @kenowhg | Complete (?) | | Unsure of EEI dependencies |
+| Instruction Exceptions | @kenowhg | Ready for Review | Not yet Scheduled | Unsure of EEI dependencies |
 
 ### Privileged spec
 
