@@ -34,8 +34,8 @@ contact @mikeopenhwgroup.
 |---------|-------|---------|--------|---------|
 | Post-increment load/store | @silabs-wajidm | | | |
 | Hardware Loop | @agrasset | First draft | Not Ready for Review | Optional CV32E40P Feature.  Arnaud has on-going discussions with Cores TWG |
-| Bit Manipulation | @alfredoh1234<br>@silabs-wajidm | Input from @alfredoh1234 submitted | Not Ready for Review | |
-| General ALU | @alfredoh1234 | Input from @alfredoh1234 submitted | Not Ready for Review | |
+| Bit Manipulation | @alfredoh1234 | Ready for Review | Not yet Scheduled | |
+| General ALU | @alfredoh1234 | Ready for Review | Not yet Scheduled | |
 | Immediate branching | @silabs-wajidm | | | |
 | SIMD | | | | |
 
