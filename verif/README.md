@@ -4,18 +4,19 @@ The sub-directories below this point contain all of the verification documentati
 * **CV32E40P**: verification documentation specific to the CV32E40P core
 * **CV32E40**: verification documentation specific to the CV32E40 core
 # How to Write a Verification Plan (Testplan)
-The CORE-V projects use spreadsheets to capture Testplans.  I know, I know, we _all_ hate spreadsheets, but they really are the best format for this type of data.  The template for the spreadsheet is simple enough that you can use either Microsoft Office Excel or LibreOffice Calc.  The key is to start with the template from the **Common** directory.
+The CORE-V projects use spreadsheets to capture Testplans.  I know, I know, we _all_ hate spreadsheets, but they really are the best format for this type of data.  The template for the spreadsheet is simple enough that you can use either Microsoft Office Excel or LibreOffice Calc.  The Verification Plan [template](https://github.com/openhwgroup/core-v-docs/blob/master/verif/CV32E40P/VerificationPlan/CORE-V_VerifPlan_Template.xlsx) for the CV32E40P is located at the root of the [VerificationPlan](https://github.com/openhwgroup/core-v-docs/blob/master/verif/CV32E40P/VerificationPlan) directory.
 ## Verification Planning
-A key activity of any verification effort is to capture a Verification Plan (aka Test Plan or just testplan).  The purpose of a verification plan is to identify what features need to be verified; the success criteria of the feature and the coverage metrics for testing the feature.
+A key activity of any verification effort is to capture a Verification Plan (aka Test Plan or just Testplan).  The purpose of a verification plan is to identify what features need to be verified; the success criteria of the feature and the coverage metrics for testing the feature.  Testplans also allow us to reason about the capabilities of the verification environment.
 
 A Verification Plan should focus on the **_what_**, and not the **_how_** of verification.  When capturing a testplan we are mostly interested in creating a laundry list of thing to verify.  At this stage we are not (yet) concerned with how to verify them.
 
-The “how” part is captured in the Verification Strategy document.  That document exists to support the Verification Plan. For example the CV32E40P testplan specifies that all RV32I instructions be generated and their results checked.  Obviously, the testbench needs to have these capabilities and its the purpose of the Verification Strategy document to explain how that is done.
+The “how” part is captured in the [Verification Strategy](https://github.com/openhwgroup/core-v-docs/blob/master/verif/Common/OpenHWGroup_CORE-V_Verif_Strategy.pdf) document.  That document exists to support the Verification Plan. For example the CV32E40P testplan specifies that all RV32I instructions be generated and their results checked.  Obviously, the testbench needs to have these capabilities and its a goal of the Verification Strategy document to explain how that is done.
 ## A Trivial Example: the RV32I ADDI Instruction
 Let's assume your task is to verify the CV32E40P's implementation of the RV32I ADDI instruction.  Simple right?  Create a simple assembler program with a few **_addi_** instructions check the results and we're done.  Of course, checking for the correct result (rd = rs1 + imm), is insufficent.  We also need to check:
 * Overflow is detected and flagged correctly
 * Underflow is detected and flagged correctly
 * No instruction execution side-effects (e.g. unexpected GPR changes, unexpected condition codes)
+* Program counter updates appropriately
 
 Its also important that the instruction is fully exercised, so we also need to cover the following cases:
 * Use x0..x31 as rs1
@@ -24,7 +25,7 @@ Its also important that the instruction is fully exercised, so we also need to c
 * Set/Clear all bits of rs1
 * Set/Clear all bits of rd
 
-Note the simplifying assumptions made here.  With one 32-bit and one 12-bit operand there are 2,244 unique sums that can be calculated.  Including the cross-products of source and destination register yields O(10^6) unique instruction calls.  The RV32I ISA specifies 40 instructions so this gives us O(10^7) instruction executions simply to fully verify the most basic instructions in a CORE-V design.  Obviously this is impractical and one of the things that makes Verification an Art is determing the minimal amount of coverage to have confidence that a feature is sufficiently tested.  It is the opinion of the author that the above coverage is sufficient for the addi instruction.  You may see it as overkill or underkill depending on your understanding of the micro-architecture or your risk adversion.
+Note the simplifying assumptions made here.  With one 32-bit and one 12-bit operand there are 2,244 unique sums that can be calculated.  Including the cross-products of source and destination register yields O(10^6) unique instruction calls.  The RV32I ISA specifies 40 instructions so this gives us O(10^7) instruction executions simply to fully verify the most basic instructions in a CORE-V design.  Obviously this is impractical and one of the things that makes Verification an art is determing the minimal amount of coverage to have confidence that a feature is sufficiently tested.  It is the opinion of the author that the above coverage is sufficient for the addi instruction.  You may see it as overkill or underkill depending on your understanding of the micro-architecture or your level of risk adversion.
 
 So, specifying the Testplan for the addi instruction forces us to think about what the feature-under-test does, what we need to check to ensure its done properly and what stimulus and configuration needs to be covered to ensure the feature is tested under all penitent conditions.
 
@@ -32,7 +33,7 @@ The template used for this project attempts to provide an easy-to-use format to 
 ## HOWTO: The CORE-V Verification Plan Template
 The following sub-sections explain each of the columns in the [template spreadsheet](https://github.com/openhwgroup/core-v-docs/blob/master/verif/CV32E40P/VerificationPlan/CORE-V_VerifPlan_Template.xlsx).
 ### Requirement Location
-This is a pointer to the source Requirements document of the Features in question.  It can be a standards document, such as the RISC-V ISA, or a micro-architecture specification.   The CV32E40P [introduction](https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/introduction.rst) lists sources of [documentation](https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/introduction.rst#standards-compliance) relevant to the CV32E40P.  _Every item in a Verification Plan must be attributed to one or more of these sources_.  Please also include a chapter or section number.  Note that if you are using the CV32E40P User Manual as a reference, you **must** provide a release/version number as well since this document is currently in active development (actually, it does not yet exist, see the [RI5CY User Manual](https://github.com/pulp-platform/riscv/blob/master/doc/user_manual.doc)).   Note that the RI5CY user manual cannot be used as a reference document for capturing CV32E40P verification plans - any section of the Vplan that needs information from the user manual will be delayed until the CV32E40P user manual is available.
+This is a pointer to the source Requirements document of the Features in question.  It can be a standards document, such as the RISC-V ISA, or a micro-architecture specification.   The CV32E40P [introduction](https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/introduction.rst) lists sources of [documentation](https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/introduction.rst#standards-compliance) relevant to the CV32E40P.  _Every item in a Verification Plan must be attributed to one or more of these sources_.  Please also include a chapter or section number.  Note that if you are using the CV32E40P User Manual as a reference, you **must** provide a release/version number as well since this document is currently in active development (actually, it does not yet exist, see the [RI5CY User Manual](https://github.com/pulp-platform/riscv/blob/master/doc/user_manual.doc)).   Note that the RI5CY user manual cannot be used as a reference document for capturing CV32E40P verification plans - any section of the Testplan that needs information from the user manual will be delayed until the CV32E40P user manual is available.
 ### Feature
 The high-level feature you are trying to verify.  For example, RV32I Register-Immediate Instructions.  In some cases, it may be natural to use the section header name of the reference document.
 ### Sub-Feature
@@ -40,7 +41,11 @@ This is an optional, but often used column.  Using our previous examples, ADDI i
 ### Feature Description
 A summary of what the features does.  It should be a _summary_, not a verbatium copy-n-paste from the Requirements Document.
 ### Verification Goals
-A summary of what stimulus and/or configuration needs to be generated/checked/covered to ensue sufficient testing of the Feature.
+A summary of what stimulus and/or configuration needs to be generated/checked/covered to ensue sufficient testing of the Feature.  Recall the example of the _addi_ instruction.   The verification goals of that feature are:
+* Overflow is detected and flagged correctly
+* Underflow is detected and flagged correctly
+* No instruction execution side-effects (e.g. unexpected GPR changes, unexpected condition codes)
+* Program counter updates appropriately
 ### Pass/Fail Criteria
 Here we attempt to answer the question, "how will the testbench know the test passed?".  There are several methods that are typically used in CORE-V projects, and it is common to use more than one for a given item in a Verification Plan.
 * **Self Checking**: A self-checking test encodes the correct result directly into the testcase and compares what the DUT does against this "known good" outcome.  See the **_RISCY Testcases_** section of the [Verification Strategy](https://github.com/openhwgroup/core-v-docs/blob/master/verif/Common/OpenHWGroup_CORE-V_Verif_Strategy.pdf) for an example of this.  This strategy is used extensively by the RISC-V Foundation Compliance tests.
