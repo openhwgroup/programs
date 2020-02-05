@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: GitHub Community Forum
-    url: https://github.community/
+  - name: Tasks to create new or modify existing documentation
+    url: https://github.com/openhwgroup/core-v-docs/blob/master/.github/ISSUE_TEMPLATE/task.md
     about: Please ask and answer questions here.
-  - name: GitHub Security Bug Bounty
-    url: https://bounty.github.com/
+  - name: Bugs against existing documentation
+    url: https://github.com/openhwgroup/core-v-docs/blob/master/.github/ISSUE_TEMPLATE/doc_bug.md
     about: Please report security vulnerabilities here.
