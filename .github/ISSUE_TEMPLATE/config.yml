@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Tasks to create new or modify existing documentation
-    url: https://github.com/openhwgroup/core-v-docs/blob/master/.github/ISSUE_TEMPLATE/task.md
-    about: Please ask and answer questions here.
-  - name: Bugs against existing documentation
-    url: https://github.com/openhwgroup/core-v-docs/blob/master/.github/ISSUE_TEMPLATE/doc_bug.md
-    about: Please report security vulnerabilities here.
+  - name: Tasks
+    url: https://github.com/openhwgroup/core-v-docs/issues/new?template=task.md
+    about: Tasks to create new or modify existing documentation.
+  - name: Bugs
+    url: https://github.com/openhwgroup/core-v-docs/issues/new?template=doc_bug.md
+    about: Bugs against existing documentation.
