@@ -57,7 +57,7 @@ Here we attempt to answer the question, "how will the testbench know the test pa
 ### Test Type
 Choose one or more of the following:
 * **RISC-V Compliance**: a self-checking ISA compliance testcase from the RISC-V Foundation.
-* **OpenHW Compliance**: a self-checking ISA compliance testcase from the OpenHW Group.
+* **OpenHW Compliance**: OpenHW Compliance is compliance testing of the custom XPULP instructions supported by CV32E40P.  For these we need to generate our own compliance test-suite.  It is not yet know if these can be randomly generated or will require a self-checking ISA compliance testcase from the OpenHW Group.  Note that if they are to be randomly generated then the ISS will need to be able to process XPULP instructions.
 * **Directed Self-Checking**: a directed (non-random) self-checking testcase from the OpenHW Group that is not specifically targetting ISA compliance.
 * **Directed Non-Self-Checking**: a directed (non-random) non-self-checking testcase from the OpenHW Group that is not specifically targetting ISA compliance.  Note that these tests assume that the pass/fail criteria will be "Check against ISS" (or other reference model).
 * **Constrained-Random**: a constrained-random testcase.  Typically the stimulus for these will come from the Google random instruction stream generator.  Note that by defintion these tests cannot be self-checking.
