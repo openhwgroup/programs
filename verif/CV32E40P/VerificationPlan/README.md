@@ -37,7 +37,7 @@ contact @mikeopenhwgroup.
 | Bit Manipulation | @alfredoh1234 | Ready for Review | Not yet Scheduled | |
 | General ALU | @alfredoh1234 | Ready for Review | Not yet Scheduled | |
 | Immediate branching | @silabs-wajidm | | | |
-| SIMD | @alfredoh1234 | | | |
+| SIMD | @alfredoh1234 | First draft | Ready for Review | |
 
 ### Custom circuitry
 
