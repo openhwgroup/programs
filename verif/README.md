@@ -1,6 +1,6 @@
 # Verification Documentation
 The sub-directories below this point contain all of the verification documentation for the CORE-V family of RISC-V cores.
-* **Common**: CORE-V verification documentation not specific to any one core
+* **Common**: CORE-V verification documentation not specific to any one core. The most important document here is the [Verification Strategy](https://core-v-docs-verif-strat.readthedocs.io/en/latest/).
 * **CV32E40P**: verification documentation specific to the CV32E40P core
 * **CV32E40**: verification documentation specific to the CV32E40 core
 # How to Write a Verification Plan (Testplan)
