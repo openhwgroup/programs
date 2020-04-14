@@ -4,12 +4,12 @@ This directory contains non-core-specific verification documents for the CORE-V 
 ## CORE-V_Verification_Strategy:
 Verification environment architectures, methodologies and tools used to verify the first two members CORE-V family of RISC-V cores, the CV32E and CV64A.
 
-The readthedocs rendering can be viewed [here](https://core-v-docs-verif-strat.readthedocs.io/en/latest/).
+The readthedocs html rendering can be viewed [here](https://core-v-docs-verif-strat.readthedocs.io/en/latest/).   You can download a PDF version from the same site (click on `v: latest` at the bottom of the left-hand pane).
 
 Created using [Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html).
 
 ## OpenHWGroupWorkflow:
-Discussion document to develop the highly distributed, collabraitve workflow used by the OpenHW Group and its members.
+Discussion document to develop the highly distributed, collabrative workflow used by the OpenHW Group and its members.
 
 
 ## Presentations:
