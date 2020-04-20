@@ -36,7 +36,7 @@ contact @mikeopenhwgroup.
 | Hardware Loop | @agrasset | First draft | Not Ready for Review | Optional CV32E40P Feature.  Arnaud has on-going discussions with Cores TWG |
 | Bit Manipulation | @alfredoh1234 | Ready for Review | Not yet Scheduled | |
 | General ALU | @alfredoh1234 | Ready for Review | Not yet Scheduled | |
-| Immediate branching | @silabs-wajidm | | | |
+| Immediate branching | @silabs-wajidm | Ready for Review | | |
 | SIMD | @alfredoh1234 | First draft | Ready for Review | |
 
 ### Custom circuitry
