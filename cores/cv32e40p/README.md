@@ -4,4 +4,4 @@ The current view of the CV32E40P and CV32E40 features list can be found in
 The user manual of the CV32E40P is in the sub-directory of the same name.  This
 document is captured in reStructuredText and is rendered to html using
 [Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html).
-The readthedocs rendering can be viewed [here]().
+The readthedocs rendering can be viewed [here](https://core-v-docs-verif-strat.readthedocs.io/projects/cv32e40p_um/en/latest/).
