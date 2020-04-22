@@ -7,11 +7,11 @@ These documents are viewable using readthedocs, see below.
 Directory contents...
 ### cores
 Architecture and Design documentation for the CORE-V cores. The readthedocs
-rendering of the CV32E40P user Manual can be viewed [here](https://core-v-docs-verif-strat.readthedocs.io/projects/cv32e40p_um/en/latest/).
+rendering of the `CV32E40P User Manual` can be viewed [here](https://core-v-docs-verif-strat.readthedocs.io/projects/cv32e40p_um/en/latest/).
 
 ### verif
 Verification Strategy, Verification Plans, Workflow plus meeting slides and minutes.  The
-readthedocs rendering of the CORE-V Verification Strategy can be viewed [here](https://core-v-docs-verif-strat.readthedocs.io/en/latest/).
+readthedocs rendering of the `CORE-V Verification Strategy` can be viewed [here](https://core-v-docs-verif-strat.readthedocs.io/en/latest/).
 
 ### platform
 Information about the hardware and software of the physical platforms built to demonstrate
