@@ -13,9 +13,10 @@ maintain the ability to run testcases and regressions.
 
 The UVM environment will be based on the verification environment
 developed for the Ibex core, using the Google random-instruction
-generator for stimulus creation, the Imperas ISS for results prediction
-and will also be able to run hand-coded code-segments (programs) such as
-those developed by the RISC-V Compliance Task Group.
+generator for stimulus creation, the Imperas Instruction Set Simulator
+(ISS) for results prediction and will also be able to run hand-coded
+code-segments (programs) such as those developed by the RISC-V Compliance Task
+Group.
 
 The end-goal is to have a single UVM-based verification environment
 capable of complete CV32E40P and CV32E40 verification. This environment
@@ -69,10 +70,10 @@ Recall from the structure of the core testbench. Swapping out the RI5CY
 RTL model for the CV32E40P RTL model, and adding SystemVerilog
 interfaces yields the testbench components for the phase 1 environment.
 Rounding out the environment is a minimal UVM environment and UVM base
-test. This is shown in Illustration 4.
+test. This is shown in `Illustration 4`_.
 
 .. figure:: ../images/CV32E_VE_phase1.png
-   :name: cv32_env_phase1
+   :name: Illustration 4
    :align: center
    :alt: 
 
@@ -97,7 +98,7 @@ Makefiles used to control compilation and execution of testcases.
 Phase 2 Environment
 ~~~~~~~~~~~~~~~~~~~
 
-The phase two environment is shown in Illustration 5. Phase 2 introduces the `Google
+The phase two environment is shown in `Illustration 5`_. Phase 2 introduces the `Google
 Random Instruction Generator <https://github.com/google/riscv-dv>`__ and
 the `Imperas
 ISS <http://www.imperas.com/articles/imperas-empowers-riscv-community-with-riscvovpsim>`__
@@ -116,13 +117,13 @@ phase 2 environment are:
    modifications.
 
 .. figure:: ../images/CV32E_VE_phase2.png
-   :name: CV32_VE_Phase2
+   :name: Illustration 5
    :align: center
    :alt: 
 
    Illustration 5: Phase 2 Verification Environment for CV32E
 
-As shown in the Illustration, the environment is not a single entity.
+As shown in `Illustration 5`_, the environment is not a single entity.
 Rather, it is a collection of disjoint components, held together by
 script-ware to make it appear as a single environment. When the user
 invokes a command to run a testcase, for example, make
@@ -189,11 +190,12 @@ significant ToDo.
 Phase 3 Environment
 ~~~~~~~~~~~~~~~~~~~
 
-Phase 3 adds significant capability to the environment, notably the integration
-of the ISS as an environment component and the ability to exercise either the
-CV32E40* core or the CV32E40* Subsystem as the device-under test.
+Phase 3 adds significant capabilies to the environment, notably the integration
+of the ISS as an environment component and the
+ability to exercise either the CV32E40* core or the CV32E40* subsystem as the
+device-under test.
 
-Illustration 5 shows the ISS as an entity external to the environment.  Wrapping
+`Illustration 5`_ shows the ISS as an entity external to the environment.  Wrapping
 the ISS in a DPI layer allows the ISS to be integrated into the UVM environment
 and thus controllable via the UVM run-flow.  The benefit of this is that testcases
 will have direct control over the operation of the ISS and comparision between the
@@ -206,51 +208,58 @@ in a future revision of this document.
 At the time of this writing (2020-04-21) there is a proposal to develop a
 CV32E40P Subsystem, comprized of the Core, a Debug Module and Debug Transport
 Module, plus a cross-bar which will allow for Debug Module and an external AHB
-master to access to Core memory.  Details of this Subsystem can be found in the
-Architecture Specification for the
+master to access instruction and data memory.  Details of this Subsystem can be
+found in the Architecture Specification for the
 `Open  Bus Interface <https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/OBI-v1.0.pdf>`__.
 
-Illustration 6 shows a simple (?) change to the **uvmt_cv32_tb** that allows
+`Illustration 6`_ shows a simple (?) change to the **uvmt_cv32_tb** that allows
 the testbench (and thereby the UVM enviroment) to switch between a Core-level
 DUT and a Subsystem-level DUT.
 
 Here, the memory model **mm_ram** has been moved from the dut_wrap module to
 the testbench module.  The connection between the memory model and the dut_wrap
-is via new SystemVerilog interfaces, **itcm** and **dtcm**.  These interfaces support
-both the Core-level instruction and data interfaces as well as the OBI instruction
-and data interfaces.  This is possible because the OBI standard is a super-set of
-the Core's interfaces.  Any difference in operation between these interfaces is
-controlled at compile time [11]_.
-
+is via new SystemVerilog interfaces, **itcm** and **dtcm**.  These SystemVerilog
+interfaces support both the Core-level instruction and data interfaces as well
+as the OBI instruction and data interfaces.  This is possible because the OBI
+standard is a super-set of the Core's interfaces.  Any difference in operation
+between these interfaces is controlled at compile time [11]_.
 
 .. figure:: ../images/MemoryModelTestbench.png
-   :name: Memory Model in the Testbench
+   :name: Illustration 6
    :align: center
    :alt: 
 
    Illustration 6: Moving Memory Model to the Testbench
 
-In Illustration 7 the **uvmt_cv32_core_wrap** (or core wrapper) is replaced with
+In `Illustration 7`_ the **uvmt_cv32_dut_wrap** (or core wrapper) is replaced with
 **uvmt_cv32_ss_wrap** (subsystem wrapper).  This subsystem wrapper has the same
 SystemVerilog interfaces as the core wrapper and instantiates the CV32E40*
 Subsystem directly.  For Core-level testing, the the OBI XBAR and DM_TOP modules
-are replaced with "dummy" modules at compile-time.  The dummy XBAR simply connects
-the Core's instruction and data buses to the itcm_if and dtcm_if and the DM is
-replaced with an empty shell.  The UVM environment's Debug Agent can drive either
-the DMI bus or debug_req input to the Core, as determined by the compile-time
-setup of the wrapper.
+are replaced with "shell" modules at compile-time.  The XBAR shell is a pass-through
+for the instruction and data buses to directly connect to
+itcm_if and dtcm_if respectively.  Likewise, the DM is also replaced with a shell
+that drives Hi-Z on its debug_req output, thereby allowing debug_req to be driven
+directly from the dbg_if.  The DM shell drives the ready output on the DMI low to
+ensure that the Debug Agent (in the UVM environment, not shown in the Illustration)
+does not inadvertently attempt debug access via the DMI.  Instead, the Debug Agent
+is configured to drive debug_req directly.
 
-Similarly, the AHB master and slave interfaces (not shown in the Illustration)
-connect to SystemVerilog interfaces which connect to AHB Agents in the UVM
-environment.  If the wrapper has been compiled to instantiate just the Core,
-these AHB Agents are configured to be inactive.
+Testing the Subsystem involves no compile-time changes to the UVM environment
+as it is able to use the same SystemVerilog interfaces.  The run-time configuration
+is changed such that the Debug Agent drives Hi-Z on its debug_req ouput and all
+accesses to the DM use the DMI signalling.   At compile-time the RTL for the
+OBI XBAR and DM modules are instantiated.  The AHB master and slave interfaces
+of the Subsystem (not shown in the Illustration) connect to their own SystemVerilog
+interfaces which connect to AHB Agents in the UVM environment.  If the wrapper has
+been compiled to instantiate just the Core, these AHB Agents are configured to
+be inactive.
 
 .. figure:: ../images/SubsystemWrapper.png
-   :name: Subsystem Wrapper
+   :name: Illustration 7
    :align: center
    :alt: 
 
-   Illustration 7: Subsystem Wrapper
+   Illustration 7: Subsystem Wrapper (compiled for Core-level verification)
 
 Phase 3 Development Strategy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
