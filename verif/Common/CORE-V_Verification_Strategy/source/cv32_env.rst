@@ -189,7 +189,68 @@ significant ToDo.
 Phase 3 Environment
 ~~~~~~~~~~~~~~~~~~~
 
-ToDo
+Phase 3 adds significant capability to the environment, notably the integration
+of the ISS as an environment component and the ability to exercise either the
+CV32E40* core or the CV32E40* Subsystem as the device-under test.
+
+Illustration 5 shows the ISS as an entity external to the environment.  Wrapping
+the ISS in a DPI layer allows the ISS to be integrated into the UVM environment
+and thus controllable via the UVM run-flow.  The benefit of this is that testcases
+will have direct control over the operation of the ISS and comparision between the
+predictions made by the ISS and actual instruction execution by the Core are
+done in real time.  This is a significant aid to debugging failures.
+
+Details of this integration will be added to `Phase 3 Development Strategy`_
+in a future revision of this document.
+
+At the time of this writing (2020-04-21) there is a proposal to develop a
+CV32E40P Subsystem, comprized of the Core, a Debug Module and Debug Transport
+Module, plus a cross-bar which will allow for Debug Module and an external AHB
+master to access to Core memory.  Details of this Subsystem can be found in the
+Architecture Specification for the
+`Open  Bus Interface <https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/OBI-v1.0.pdf>`__.
+
+Illustration 6 shows a simple (?) change to the **uvmt_cv32_tb** that allows
+the testbench (and thereby the UVM enviroment) to switch between a Core-level
+DUT and a Subsystem-level DUT.
+
+Here, the memory model **mm_ram** has been moved from the dut_wrap module to
+the testbench module.  The connection between the memory model and the dut_wrap
+is via new SystemVerilog interfaces, **itcm** and **dtcm**.  These interfaces support
+both the Core-level instruction and data interfaces as well as the OBI instruction
+and data interfaces.  This is possible because the OBI standard is a super-set of
+the Core's interfaces.  Any difference in operation between these interfaces is
+controlled at compile time [11]_.
+
+
+.. figure:: ../images/MemoryModelTestbench.png
+   :name: Memory Model in the Testbench
+   :align: center
+   :alt: 
+
+   Illustration 6: Moving Memory Model to the Testbench
+
+In Illustration 7 the **uvmt_cv32_core_wrap** (or core wrapper) is replaced with
+**uvmt_cv32_ss_wrap** (subsystem wrapper).  This subsystem wrapper has the same
+SystemVerilog interfaces as the core wrapper and instantiates the CV32E40*
+Subsystem directly.  For Core-level testing, the the OBI XBAR and DM_TOP modules
+are replaced with "dummy" modules at compile-time.  The dummy XBAR simply connects
+the Core's instruction and data buses to the itcm_if and dtcm_if and the DM is
+replaced with an empty shell.  The UVM environment's Debug Agent can drive either
+the DMI bus or debug_req input to the Core, as determined by the compile-time
+setup of the wrapper.
+
+Similarly, the AHB master and slave interfaces (not shown in the Illustration)
+connect to SystemVerilog interfaces which connect to AHB Agents in the UVM
+environment.  If the wrapper has been compiled to instantiate just the Core,
+these AHB Agents are configured to be inactive.
+
+.. figure:: ../images/SubsystemWrapper.png
+   :name: Subsystem Wrapper
+   :align: center
+   :alt: 
+
+   Illustration 7: Subsystem Wrapper
 
 Phase 3 Development Strategy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -219,4 +280,11 @@ Compiling the Environment
    maintained there, not in the
    `core-v-docs <https://github.com/openhwgroup/core-v-docs/tree/master/verif>`__\ project
    which is home for this document.
+
+.. [11]
+   The memory model is currently implemented as a SystemVerilog module.  Replacing
+   this with a SystemVerilog class based implementation would allow for run-time
+   control of the SystemVerilog interface operation.  This is a nice-to-have
+   feature and is not, on its own, enough of a reason to re-code the memory model.
+
 

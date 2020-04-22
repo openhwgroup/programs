@@ -31,7 +31,7 @@ executing these instructions when *fetch\_en* is asserted. Test programs
 may be manually produced by a human or by a tool such as the UVM random
 instructor generator component of the environment. Test programs are
 coded either in RISC-V assembler or C. All of the randomly generated
-programs are RISC-V assembler [11]_.
+programs are RISC-V assembler [12]_.
 
 The environment can support test programs regardless of how they are
 created. However, the environment needs to know two things about a test
@@ -59,7 +59,7 @@ programs:
 
 1. **Pre-existing, self-checking**
    The environment requires a memory image for the program to exist in
-   the expected location, and will check the “status flags [12]_”
+   the expected location, and will check the “status flags [13]_”
    virtual peripheral for pass/fail information.
 2. **Pre-existing, not self-checking**
    The environment requires a memory image for the program to exist in
@@ -94,7 +94,7 @@ pre-existing test programs. From the environment’s perspective, this
 indistinguishable from type 1 or type 2.
 
 The programs can be written to execute any legal instruction supported
-by the core [13]_. Programs have access to the full address range
+by the core [14]_. Programs have access to the full address range
 supported by the memory model in the testbench plus a small set of
 memory-mapped “virtual peripherals”, see below.
 
@@ -226,7 +226,7 @@ run-flow that is familiar to UVM developers. Programs running on the
 core are completely self-contained within their extremely simple
 execution environment that is wholly defined by the ISA, memory map
 supported by the *dp\_mem* and the virtual peripherals supported by
-*mm\_mem*\  [14]_. This execution environment knows nothing about the
+*mm\_mem*\  [15]_. This execution environment knows nothing about the
 UVM environment, so the CORE-V UVM environments are implemented to be
 aware of the test program and to respond accordingly as part of the
 run-flow.
@@ -236,7 +236,7 @@ programs supported by the CORE UVM environment and section
 :ref:`uvm_test` showed how the configure_phase() and run_phase()
 of a CORE-V UVM run-flow implement the interaction between the UVM
 environment and the test program. This interaction is depends on the
-type of test program. Illustration 6 shows how the CORE-V UVM base test
+type of test program. Illustration 8 shows how the CORE-V UVM base test
 supports a type 1 test program.
 
 .. figure:: ../images/type1.png
@@ -244,7 +244,7 @@ supports a type 1 test program.
    :align: center
    :alt: 
 
-   Illustration 6: Preexisting, Self-checking Test Program (type 1) in a
+   Illustration 8: Preexisting, Self-checking Test Program (type 1) in a
    CORE-V UVM test
 
 In the self-checking scenario, the testcase is pre-compiled into machine
@@ -272,11 +272,11 @@ will terminate the simulation and is, by definition, a failure.
    :align: center
    :alt: 
 
-   Illustration 7: Generated, non-self-checking (type 4) Test Program in
+   Illustration 9: Generated, non-self-checking (type 4) Test Program in
    a CORE-V UVM test
 
 The flow for a type 4 (generated, non-self checking) test program is
-only slightly different as shown in Illustration 7. In these tests the configure phase
+only slightly different as shown in Illustration 9. In these tests the configure phase
 will invoke the generator to produce a test program and the toolchain to
 compile it before signalling the TB to load the machine code into
 *dp_mem*. As before, the run phase will assert fetch_en to the core
@@ -384,21 +384,21 @@ intended to provide you with everything you need to know to run an
 existing testcase or a new testcase. If this is not the case, please
 create a GitHub issue and assign it to @mikeopenhwgroup.
 
-.. [11]
+.. [12]
    Those familiar with the RI5CY testbench may recall that random
    generation of C programs using
    `csmith <https://embed.cs.utah.edu/csmith/>`__ was supported. Csmith
    was developed to exercise C compilers, not processors, it is not
    supported in the CORE-V environments.
 
-.. [12]
+.. [13]
    See Section :ref:`virtual_peripherals`.
 
-.. [13]
+.. [14]
    Generation of illegal or malformed instructions is also supported,
    and will be discussed in a later version of this document.
 
-.. [14]
+.. [15]
    This is termed Execution Environment Interface or EEI by the RISC-V
    ISA.
 

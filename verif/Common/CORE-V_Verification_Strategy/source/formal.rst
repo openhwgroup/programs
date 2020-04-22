@@ -75,7 +75,7 @@ model. This will be captured in a future release of this document.
 Development of Sail Models for CORE-V Cores
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-At the time of this writing [15]_, the completeness of the RV32/64IMAC
+At the time of this writing [16]_, the completeness of the RV32/64IMAC
 Sail models is not known, but is believed to be complete. Extensions of
 the models will be required to support Zifencei, Zicsr, Counters and the
 XPULP extensions. OpenHW may also wish to include User Mode and PMP
@@ -195,7 +195,7 @@ coded.
 OneSpin will initiate development of Formal testbenches (FTB) for CV32E
 and CV64A as soon as possible. These FTBs will be open-source, ideally
 implemented in SystemVerilog, and may be based on OneSpin’s RISC-V
-Verification App [16]_.
+Verification App [17]_.
 
 It is not expected that OneSpin will deliver a complete formal
 testbench. Rather, OneSpin will deliver a formal testbench that has two
@@ -238,9 +238,9 @@ OneSpin’s own compute infrastructure or on the Virtual Machines provided
 by IBM and managed by OpenHW. ACs from other member companies will run
 on the IBM Cloud and use OneSpin tools.
 
-.. [15]
+.. [16]
    First week of January, 2020.
 
-.. [16]
+.. [17]
    OneSpin White paper: Assuring the Integrity of RISC-V Cores and SoCs.
    OneSpin Solutions, 2019.
