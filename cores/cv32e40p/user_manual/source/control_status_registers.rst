@@ -44,6 +44,20 @@ any overhead that we do not explicitly need.
 +-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
 | 11                | 11        | 00         | 010100     | 0xF14             | MHARTID     | R     | Hardware Thread ID                       |
 +-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
+| 01                | 11        | 10         | 100000     | 0x7A0             | TSELECT     | R     | Trigger Select Register                  |
++-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
+| 01                | 11        | 10         | 100001     | 0x7A1             | TDATA1      | R/W   | Trigger Data Register 1                  |
++-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
+| 01                | 11        | 10         | 100010     | 0x7A2             | TDATA2      | R     | Trigger Data Register 2                  |
++-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
+| 01                | 11        | 10         | 100011     | 0x7A3             | TDATA3      | R     | Trigger Data Register 3                  |
++-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
+| 01                | 11        | 10         | 101000     | 0x7A8             | MCONTEXT    | R/W   | Machine Context Register                 |
++-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
+| 01                | 11        | 10         | 101010     | 0x7AA             | SCONTEXT    | R/W   | Machine Context Register                 |
++-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
+| 01                | 11        | 10         | 110001     | 0x7AA             | DPC         | R/W   | Debug PC                                 |
++-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
 | 01                | 11        | 10         | 110000     | 0x7B0             | DCSR        | R/W   | Debug Control and Status                 |
 +-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
 | 01                | 11        | 10         | 110001     | 0x7B1             | DPC         | R/W   | Debug PC                                 |
@@ -172,13 +186,18 @@ Machine Trap-Vector Base Address (MTVEC)
 
 CSR Address: 0x305
 
-+--------+-----+-----+-----+-----+-----+-----+-----+-----+
-| 31 : 8 | 7   | 6   | 5   | 4   | 3   | 2   | 1   | 0   |
-+========+=====+=====+=====+=====+=====+=====+=====+=====+
-|        | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   |
-+--------+-----+-----+-----+-----+-----+-----+-----+-----+
+Reset Value: 0x0000_0001
 
-When an exception is encountered, the core jumps to the corresponding
++-------------+-----------+---------------------------------------------------------------------------------------------------------------+
+|   Bit #     |   R/W     |   Description                                                                                                 |
++=============+===========+===============================================================================================================+
+| 31 : 2      |   R/W     | BASE: The trap-vector base address, always aligned to 256 bytes, i.e., mtvec[7:2] is always set to  0.        |
++-------------+-----------+---------------------------------------------------------------------------------------------------------------+
+|  1 : 0      |   R       | MODE: Always set to 01 to indicate vectored interrupt handling.                                               |
++-------------+-----------+---------------------------------------------------------------------------------------------------------------+
+
+
+When an exception or an interrupt (except irq\_fastx\_i) is encountered, the core jumps to the corresponding
 handler using the content of the MTVEC[31:8] as base address. Only
 8-byte aligned addresses are allowed. The only mode supported is
 vectorized interrupt, thus the bits 1:0 are hardwired to 01.
@@ -190,13 +209,18 @@ Machine Trap-Vector Base Address (MTVECX)
 
 CSR Address: 0x7D1
 
-+--------+-----+-----+-----+-----+-----+-----+-----+-----+
-| 31 : 8 | 7   | 6   | 5   | 4   | 3   | 2   | 1   | 0   |
-+========+=====+=====+=====+=====+=====+=====+=====+=====+
-|        | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   |
-+--------+-----+-----+-----+-----+-----+-----+-----+-----+
+Reset Value: 0x0000_0001
 
-When an extended fast interrupt is encountered, the core jumps to the
++-------------+-----------+---------------------------------------------------------------------------------------------------------------+
+|   Bit #     |   R/W     |   Description                                                                                                 |
++=============+===========+===============================================================================================================+
+| 31 : 2      |   R/W     | BASE: The trap-vector base address, always aligned to 256 bytes, i.e., mtvec[7:2] is always set to  0.        |
++-------------+-----------+---------------------------------------------------------------------------------------------------------------+
+|  1 : 0      |   R       | MODE: Always set to 01 to indicate vectored interrupt handling.                                               |
++-------------+-----------+---------------------------------------------------------------------------------------------------------------+
+
+
+When an extended fast interrupt (irq\_fastx\_i) is encountered, the core jumps to the
 corresponding handler using the content of the MTVECX[31:8] as base
 address. Only 8-byte aligned addresses are allowed. The only mode
 supported is vectorized interrupt, thus the bits 1:0 are hardwired to
@@ -266,21 +290,15 @@ CSR Address: 0x342
 
 Reset Value: 0x0000_0000
 
-+-----------+----+----+----+---+
-| 31 : 4    | 3  | 2  | 1  | 0 |
-+===========+====+====+====+===+
-| Interrupt | Exception Code   |
-+-----------+------------------+
++-------------+-----------+----------------------------------------------------------------------------------+
+|   Bit #     |   R/W     |   Description                                                                    |
++=============+===========+==================================================================================+
++-------------+-----------+----------------------------------------------------------------------------------+
+| 31          |   R       | **Interrupt:** This bit is set when the exception was triggered by an interrupt. |
++-------------+-----------+----------------------------------------------------------------------------------+
+|  5 : 0      |   R       | **Exception Code**                                                               |
++-------------+-----------+----------------------------------------------------------------------------------+
 
-Detailed:
-
-+-------------+-----------+------------------------------------------------------------------------------------+
-|   Bit #     |   R/W     |   Description                                                                      |
-+=============+===========+====================================================================================+
-| 31          | R/W       | **Interrupt:** This bit is set when the exception was triggered by an interrupt.   |
-+-------------+-----------+------------------------------------------------------------------------------------+
-| 4:0         | R/W       | **Exception Code**                                                                 |
-+-------------+-----------+------------------------------------------------------------------------------------+
 
 Table 7: MCAUSE
 
@@ -345,18 +363,15 @@ CSR Address: 0xF14/0x014
 
 Reset Value: Defined
 
-+---------+--------------+----+---------+
-| 31 : 11 | 10   :     5 | 4  | 3  :  0 |
-+=========+==============+====+=========+
-|         | Cluster ID   |    | Core ID |
-+---------+--------------+----+---------+
-
-Detailed:
 
 +-------------+-----------+--------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                    |
 +=============+===========+==================================================+
+| 31:6        | R         | 0                                                |
++-------------+-----------+--------------------------------------------------+
 | 10:5        | R         | **Cluster ID:** ID of the cluster                |
++-------------+-----------+--------------------------------------------------+
+| 4           | R         | 0                                                |
 +-------------+-----------+--------------------------------------------------+
 | 3:0         | R         | **Core ID:** ID of the core within the cluster   |
 +-------------+-----------+--------------------------------------------------+
@@ -451,3 +466,141 @@ Reset Value: 0x0000_0000
 +-------------+
 
 Scratch register that can be used by implementations that need it.
+
+
+Trigger Select Register (tselect)
+---------------------------------
+
+CSR Address: 0x7A0
+
+Reset Value: 0x0000_0000
+
+Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+
+CV32E40P implements a single trigger, therefore this register will always read as zero
+
+
+Trigger Data Register 1 (tdata1)
+--------------------------------
+
+CSR Address: 0x7A1
+
+Reset Value: 0x2800_1000
+
+Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+Since native triggers are not supported, writes to this register from M-Mode will be ignored.
+
+CV32E40P only implements one type of trigger, Match Control. Most fields of this register will read as a fixed value to reflect the single mode that is supported, in particular, instruction address match as described in the Debug Specification 0.13.2 section 5.2.2 & 5.2.9.
+
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++-------+------+------------------------------------------------------------------+
+| 31:28 | R    | **type:** 2 = Address/Data match trigger type.                   |
++-------+------+------------------------------------------------------------------+
+| 27    | R    | **dmode:** 1 = Only debug mode can write tdata registers         |
++-------+------+------------------------------------------------------------------+
+| 26:21 | R    | **maskmax:** 0 = Only exact matching supported.                  |
++-------+------+------------------------------------------------------------------+
+| 20    | R    | **hit:** 0 = Hit indication not supported.                       |
++-------+------+------------------------------------------------------------------+
+| 19    | R    | **select:** 0 = Only address matching is supported.              |
++-------+------+------------------------------------------------------------------+
+| 18    | R    | **timing:** 0 = Break before the instruction at the specified    |
+|       |      | address.                                                         |
++-------+------+------------------------------------------------------------------+
+| 17:16 | R    | **sizelo:** 0 = Match accesses of any size.                      |
++-------+------+------------------------------------------------------------------+
+| 15:12 | R    | **action:** 1 = Enter debug mode on match.                       |
++-------+------+------------------------------------------------------------------+
+| 11    | R    | **chain:** 0 = Chaining not supported.                           |
++-------+------+------------------------------------------------------------------+
+| 10:7  | R    | **match:** 0 = Match the whole address.                          |
++-------+------+------------------------------------------------------------------+
+| 6     | R    | **m:** 1 = Match in M-Mode.                                      |
++-------+------+------------------------------------------------------------------+
+| 5     | R    | zero.                                                            |
++-------+------+------------------------------------------------------------------+
+| 4     | R    | **s:** 0 = S-Mode not supported.                                 |
++-------+------+------------------------------------------------------------------+
+| 3     | R    | **u:** 1 = Match in U-Mode.                                      |
++-------+------+------------------------------------------------------------------+
+| 2     | RW   | **execute:** Enable matching on instruction address.             |
++-------+------+------------------------------------------------------------------+
+| 1     | R    | **store:** 0 = Store address / data matching not supported.      |
++-------+------+------------------------------------------------------------------+
+| 0     | R    | **load:** 0 = Load address / data matching not supported.        |
++-------+------+------------------------------------------------------------------+
+
+Trigger Data Register 2 (tdata2)
+--------------------------------
+
+CSR Address: 0x7A2
+
+Reset Value: 0x0000_0000
+
+Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter). Since native triggers are not supported, writes to this register from M-Mode will be ignored.
+
+This register stores the instruction address to match against for a breakpoint trigger.
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++-------+------+------------------------------------------------------------------+
+| 31:0  | R    | **data**                                                         |
++-------+------+------------------------------------------------------------------+
+
+
+
+Trigger Data Register 3 (tdata3)
+--------------------------------
+
+CSR Address: 0x7A3
+
+Reset Value: 0x0000_0000
+
+Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+
+CV32E40P does not support the features requiring this register. Writes are ignored and reads will always return zero.
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++-------+------+------------------------------------------------------------------+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+
+
+Machine Context Register (mcontext)
+-----------------------------------
+
+CSR Address: 0x7A8
+
+Reset Value: 0x0000_0000
+
+Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+
+CV32E40P does not support the features requiring this register. Writes are ignored and reads will always return zero.
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++-------+------+------------------------------------------------------------------+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+
+Supervisor Context Register (scontext)
+--------------------------------------
+
+CSR Address: 0x7AA
+
+Reset Value: 0x0000_0000
+
+Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+
+CV32E40P does not support the features requiring this register. Writes are ignored and reads will always return zero.
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++-------+------+------------------------------------------------------------------+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
