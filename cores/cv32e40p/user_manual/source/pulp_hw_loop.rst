@@ -17,7 +17,7 @@ mapped in the CSR address space.
 
 The HWloop constraints are:
 
--  Start address of an HWLoop must be aligned
+-  Start address of an HWLoop must be word aligned
 
 -  HWLoop body must contain at least 3 instructions
 
@@ -29,7 +29,7 @@ The HWloop constraints are:
 
 In order to use hardware loops, the compiler needs to setup the loop
 beforehand with the following instructions. Note that the minimum loop
-size is two instructions and the last instruction cannot be any jump or
+size is 3 instructions and the last instruction cannot be any jump or
 branch instruction.
 
 For debugging and context switches, the hardware loop registers are
