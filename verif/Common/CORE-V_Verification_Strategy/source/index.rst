@@ -18,6 +18,7 @@ Editor: **Michael Thompson**
    cv32_env
    cv64_env
    sim_tests
+   test_program_environment
    formal
    fpga
 
