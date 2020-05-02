@@ -54,98 +54,106 @@ be mandatory (e.g. **.start**), while others may be optional.
 Aligning the Test-Programs to the Hardware Environment
 ------------------------------------------------------
 
-The linker command file (typically called **link.ld**) is used to map the
-program and data sections of the test-program to physical memory addresses.
-Typically, these files have two commands, **MEMORY** and **SECTIONS**. If
+Beyond the hardware, there are a number of files that define the test program
+environment.  These are discussed below.
+
+Linker Control File
+~~~~~~~~~~~~~~~~~~~
+
+A file variously refered to as the linker command file, linker control file or
+linker script and typically given the filename **link.ld** is used to map the
+symbols used in the test-program to physical memory addresses.  Some excellent
+background material on the topic is available at
+`Sourceware.org <https://sourceware.org/binutils/docs-2.34/ld/Scripts.html#Scripts>`__.
+
+Typically, linker scripts have two commands, **MEMORY** and **SECTIONS**. If
 MEMORY is not present then the linker assumes that there is sufficient
 contiguous memory to hold the program.  We are constrained by a need to support
 the Compliance test-suite and the Google generator, so it is possible we need
-more than one linker control file.  In any case, it should be possible to
-define a small (one or two) set that will support the hardware environment and
-all types of test programs we may wish to write/generate.
+more than one linker control file, although a single script for all uses should
+be out goal. 
 
-The Ugly Details
-----------------
+Jeremy Bennett of Embecosm has provided a minimalist linker control file, and
+Paul Zavalney of Silicon Labs suggested additions to support the debugger. The
+two contributions have been merged into a single script by Mike Thompson::
 
-All of the link.ld files in use today in core-v-verif were inherited from the
-RI5CY project.  The MEMORY section from these link.ld files look something like
-this::
-
-   MEMORY
-   {
-     /*
-     ** the memory in the testbench is 1024k in size;
-     ** set LENGTH=1008k and leave at least 16k for stack
-     */
-     mem : ORIGIN = 0x00000000, LENGTH = 0x000fc000
-   }
-   
-A cut-down version of the SECTIONS command in one of the linker command files
-looks something like this::
-
-   SECTIONS
-   {
-      .vectors (ORIGIN(mem)):
-      {
-        __irq_base_vector = .;
-        KEEP(*(.vectors));
-      } > mem
-   
-      .start (ORIGIN(mem) + 0x80):
-      {
-         __boot_addr = .;
-        KEEP(*(.start));
-      } > mem
-
-      .legacy_irq (ORIGIN(mem) + 0x8000):
-      {
-        KEEP(*(.legacy_irq));
-      } > mem
-   }
-
-A couple of things to note:
-
-- The code of the test-program is assumed to have .vectors, .start and .legacy_irq symbols.
-- The value of the .start symbol needs to match the value of boot_addr_i in the testbench.
-
-As mentioned previously, the MEMORY command is not required and in fact the linker command
-file used by the Google instruction generator does not use one.  Here it is in its entirety::
-
-  OUTPUT_ARCH( "riscv" )
+  OUTPUT_ARCH( "cv32e40p" )
   ENTRY(_start)
+
+  MEMORY
+  {
+     /* This matches the physical memory supported by the testbench    */
+     mem (rwxai) : ORIGIN = 0x00000000, LENGTH = 0x00100000
+
+     /* ORIGIN must match the DM_HALTADDRESS parameter in the core RTL */
+     dbg (rwxai) : ORIGIN = 0x1A110800, LENGTH = 0x800
+  }
 
   SECTIONS
   {
-    . = 0x80000000;
-    .text : { *(.text) }
-    . = ALIGN(0x1000);
-    .tohost : { *(.tohost) }
-    . = ALIGN(0x1000);
-    .page_table : { *(.page_table) }
-    .data : { *(.data) }
-    .user_stack : { *(.user_stack) }
-    .kernel_data : { *(.kernel_data) }
-    .kernel_stack : { *(.kernel_stack) }
-    .bss : { *(.bss) }
-    _end = .;
+     DBG :
+     {
+        .debugger (ORIGIN(dbg)):
+        {
+          KEEP(*(.debugger));
+        }
+
+        /* Debugger Stack*/
+        .debugger_stack         : ALIGN(16)
+        {
+         PROVIDE(__debugger_stack_start = .);
+         . = 0x80;                    /* Is this ORIGIN + 0x80? */
+        }
+     } >dbg
+
+     MEM : 
+     {
+        . = 0x00000000;
+        .vectors : { *(.vectors) }
+        . = 0x00000080;                   /* must equal value on boot_addr_i */
+        _start = .;
+        .text : { *(.start) }
+        . = ALIGN (0x80)
+        .legacy_irq : { *(.legacy_irq) }  /* is this still needed? */
+        . = ALIGN(0x1000);
+        .tohost : { *(.tohost) }
+        . = ALIGN(0x1000);
+        .page_table : { *(.page_table) }
+        .data : { *(.data) }
+        .user_stack : { *(.user_stack) }
+        .kernel_data : { *(.kernel_data) }
+        .kernel_stack : { *(.kernel_stack) }
+        .bss : { *(.bss) }
+        _end = .;
+     } > mem
   }
 
-Note that in this case, ENTRY command is used to define the symbol for the first
-instruction (_start) and the "." operator is used to define the address of the
-program (in this case at 0x8000_0000).  The requirement here is that the program
-produced by the generator must have a global start symbol, which it does::
+A few open issues:
 
-  .global _start
-  _start:
-           li x1 0x0
-           li x2 0x0
-  ...etc...
+1. How much effort will it be to replace the above generic linker control file
+   with the link.ld file supplied with the pre-existing test-programs from
+   RI5CY and RISC-V?
 
-Obviously, this will not work with our testbench as the start is aligned to a
-memory address that does not exist. So either the testbench or the linker control
-file need to be modified if we are to use the Google generator.
+2. How does the linker control file need to change to support interrupts?
 
+3. Will this linker script fully support test-programs generated by the Google
+   generator?
+
+4. What additional information do human test-program writers needs to produce
+   test-programs compatible with this linker script?
+
+C Runtime
+~~~~~~~~~
+
+While it is assumed that the vast majority of test programs written for CORE-V
+pre-silicon verification will be captured as assembly (\*.S) programs, The
+environment provides support for minimalist C programs via a C runtime
+file in *./cv32/tests/core/custom/crt0.S* [17]_.  crt0.S performs the
+bare minimum required to run a C program.  Note that **support for command-line
+arguments is deliberately not supported**.
 
 .. [16]
    This needs to be fixed - they should match.
 
+.. [17]
+   This will be moved in the near future.
