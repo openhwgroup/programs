@@ -4,7 +4,7 @@ April 29, 2020
 Attendees:
 ----------
 
-**OpenHW:** Davide Schiavone,Mike Thompson
+**OpenHW:** Davide Schiavone, Mike Thompson<br>
 **SiLabs:** Oivind Ekelund, Wajid Minhass, Paul Zavalney, Sebastian Ahmed, Steve Richmon
 
 Notes:
@@ -13,8 +13,9 @@ Notes:
 Actions: Mike, Wajid, Paul.
 Note: meeting minutes published on GitHub at core-v-docs/verif/MeetingMinutes.
 
+Topics:
+-------
 1. Status of Actions from last meeting:
-
 - Mike confirmed that riscv-dbg is being used by lowRISC Ibex.
 - Davide reached out to Chips Alliance but has not received confirmation from them regarding their use/verification of riscv-dbg.
 - Mike captured strategy for supporting both Core-level and Subsystem-level verification in a single UVM environment in the Verification Strategy.  Arjan provided review comments.
@@ -53,7 +54,7 @@ April 15, 2020
 Attendees:
 ----------
 
-**OpenHW:** Davide Schiavone,Mike Thompson
+**OpenHW:** Davide Schiavone,Mike Thompson<br>
 **SiLabs:** Oivind Ekelund, Paul Zavalney, Sebastian Ahmed, Steve Richmon, Arjan Bink
 
 Notes:
