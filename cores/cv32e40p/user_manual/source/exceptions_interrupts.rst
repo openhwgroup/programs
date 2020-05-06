@@ -1,13 +1,21 @@
 Exceptions and Interrupts
 =========================
 
-CV32E40P supports interrupts, exceptions on illegal instructions and (if
-enabled) on PMP filtered requests on the data and instruction bus.
+CV32E40P supports interrupts and exceptions on illegal instructions.
+
+.. only:: PMP
+
+  If enabled, CV32E40P supports exceptions on PMP filtered requests on
+  the data and instruction bus.
 
 The base address of the interrupt vector table is given by the mtvec
 address. As CV32E40P supports only vectorized interrupts, the interrupt 0
-is reserved for exceptions as illegal instructions, ecall and
-instruction or data prohibited accesses.
+is reserved for exceptions as illegal instructions or ecall.
+
+.. only:: PMP
+
+  Exceptions for prohibited instruction or data accesses use the address
+  for interrupt 0 as well.
 
 Interrupts
 ----------
@@ -27,9 +35,12 @@ Exceptions
 
 | The illegal instruction exception, ecall instruction exceptions cannot
   be disabled and are always active.
-| For PMP exceptions when enabled, every instruction or data requests is
-  filtered by the PMP which can possibly generated LOAD, STORE or FETCH
-  exceptions.
+
+.. only:: PMP
+
+  | For PMP exceptions when enabled, every instruction or data requests is
+    filtered by the PMP which can possibly generated LOAD, STORE or FETCH
+    exceptions.
 
 Handling
 --------
