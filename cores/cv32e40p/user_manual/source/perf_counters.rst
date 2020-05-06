@@ -195,7 +195,7 @@ counter register. Accessing PCCR0-30 will access the same counter
 register in the ASIC. Reading/writing from/to PCCR31 in the ASIC will
 access the same register as PCCR0-30.
 
-Figure 6 shows how events are first masked with the PCER register and
+Figure 9 shows how events are first masked with the PCER register and
 then ORed together to increase the one performance counter PCCR.
 
 .. figure:: ../images/Events_PCCR_PCMR_PCER.png
@@ -203,4 +203,4 @@ then ORed together to increase the one performance counter PCCR.
    :align: center
    :alt: 
 
-   Figure 6: Events and PCCR, PCMR and PCER on the ASIC.
+   Figure 9: Events and PCCR, PCMR and PCER on the ASIC.
