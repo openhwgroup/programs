@@ -41,19 +41,24 @@ CV32E40P supports the following instructions:
 
 -  Full support for RV32I Base Integer Instruction Set
 
-   -  Full support for Zifencei (Instruction-Fetch Fence)
-
-   -  Full support for Zicsr (Control and Status Register (CSR) Instructions)
-
 -  Full support for RV32C Standard Extension for Compressed Instructions
 
 -  Full support for RV32M Integer Multiplication and Division
    Instruction Set Extension
 
+-  Full support for Zifencei (Instruction-Fetch Fence)
+
+-  Full support for Zicsr (Control and Status Register (CSR) Instructions)
+
 -  Full support for the Counters extension
 
 -  Optional full support for RV32F Single Precision Floating Point
    Extensions
+
+.. only:: ATOMIC
+
+-  Optional full support for RV32A Standard Extension for Atomic
+   Instructions, v2.0
 
 -  PULP specific extensions
 
