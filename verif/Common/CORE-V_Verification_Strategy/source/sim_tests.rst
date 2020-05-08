@@ -120,19 +120,20 @@ by several existing testcases, so this peripheral may also be maintained
 over the long term.
 
 The debug control virtual peripheral is used by a test program to control
- the debug_req signal going to the core. The assertion can be a pulse or
- a level change. The start delay and pulse duration is also controllable.
- Once the debug_req is seen by the core, it will enter debug mode and
- start executing code located at DM_HaltAddress, which is mapped to the
- debug memory (*dbg_dp_ram*).
+the debug_req signal going to the core. The assertion can be a pulse or
+a level change. The start delay and pulse duration is also controllable.
+Once the debug_req is seen by the core, it will enter debug mode and
+start executing code located at DM_HaltAddress, which is mapped to the
+debug memory (*dbg_dp_ram*).
 
 The debug memory is loaded with a hex image defined with the plusarg
- +debugger=<filename.hex>
++debugger=<filename.hex>
+
 If the +debugger plusarg is not provided, then the debug memory will
- have a single default instruction, dret, that will result in the
- core returning back to main execution of the test program. The
- debug_test is an example of a test that will use the debug control
- virtual peripheral and provide a specific debugger code image.
+have a single default instruction, dret, that will result in the
+core returning back to main execution of the test program. The
+debug_test is an example of a test that will use the debug control
+virtual peripheral and provide a specific debugger code image.
  
 
 The use of the interrupt timer control and instruction memory stall
