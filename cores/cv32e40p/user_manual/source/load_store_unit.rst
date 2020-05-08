@@ -1,7 +1,7 @@
 Load-Store-Unit (LSU)
 =====================
 
-The LSU of the core takes care of accessing the data memory. Load and
+The Load-Store Unit (LSU) of the core takes care of accessing the data memory. Load and
 stores on words (32 bit), half words (16 bit) and bytes (8 bit) are
 supported.
 
@@ -10,7 +10,7 @@ Table 2 describes the signals that are used by the LSU.
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
 | **Signal**             | **Direction**   | **Description**                                                                                                              |
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
-| data\_req\_o           | output          | Request ready, will stay high until data\_gnt\_i is high for one cycle                                                       |
+| data\_req\_o           | output          | Request valid, will stay high until data\_gnt\_i is high for one cycle                                                       |
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
 | data\_addr\_o[31:0]    | output          | Address                                                                                                                      |
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
@@ -32,9 +32,9 @@ Table 2: LSU Signals
 Misaligned Accesses
 -------------------
 
-The LSU is able to perform misaligned accesses, meaning accesses that
-are not aligned on natural word boundaries. However, it needs to perform
-two separate word-aligned accesses internally. This means that at least
+The LSU is able to handle misaligned accesses, meaning accesses that
+are not aligned on natural word boundaries. However, it does so by performing
+two separate word-aligned accesses. This means that at least
 two cycles are needed for misaligned loads and stores.
 
 Protocol
@@ -63,7 +63,9 @@ granting a request, the memory answers with a data\_rvalid\_i set high
 if data\_rdata\_i is valid. This may happen one or more cycles after the
 request has been granted. Note that data\_rvalid\_i must also be set when
 a write was performed, although the data\_rdata\_i has no meaning in this
-case.
+case. When multiple granted requests are outstanding, it is assumed that
+the memory requests will be kept in-order and one data\_rvalid\_i will be
+signalled for each of them, in the order they were issued.
 
 Figure 4, Figure 5, Figure 6 and Figure 7 show example timing diagrams of
 the protocol.

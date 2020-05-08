@@ -1,13 +1,11 @@
 Instruction Fetch
 =================
 
-The instruction fetcher of the CV32E40P is able to supply one instruction to
-the ID stage per cycle if the external bus interface is able to serve one
-instruction per cycle. In case of executing compressed instructions, on average
-less than one 32-bit instruction fetch will we needed per instruction in the
-ID stage. The (internal) instruction address is half-word-aligned due to the
-support of compressed instructions. It is not possible to jump to instruction
-addresses that have the LSB bit set.
+The Instruction Fetch (IF) stage of the CV32E40P is able to supply one instruction to
+the Instruction Decode (ID ) stage per cycle if the external bus interface is able
+to serve one instruction per cycle. In case of executing compressed instructions,
+on average less than one 32-bit instruction fetch will we needed per instruction
+in the ID stage.
 
 For optimal performance and timing closure reasons, a prefetcher is used
 which fetches instructions via the external bus interface from for example
@@ -17,7 +15,7 @@ The prefetch unit performs word-aligned 32-bit prefetches and stores the
 fetched words in a FIFO with four entries. As a result of this (speculative)
 prefetch, CV32E40P can fetch up to four words outside of the code region
 and care should therefore be taken that no unwanted read side effects occur
-for such prefetches that are outside of the actual code region.
+for such prefetches outside of the actual code region.
 
 Table 1 describes the signals that are used to fetch instructions. This
 interface is a simplified version of the interface that is used by the
@@ -27,9 +25,9 @@ are possible and thus it needs fewer signals.
 +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
 | **Signal**              | **Direction**   | **Description**                                                                                                                |
 +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_req\_o           | output          | Request ready, will stay high until instr\_gnt\_i is high for one cycle                                                        |
+| instr\_req\_o           | output          | Request valid, will stay high until instr\_gnt\_i is high for one cycle                                                        |
 +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_addr\_o[31:0]    | output          | Address                                                                                                                        |
+| instr\_addr\_o[31:0]    | output          | Address, word aligned                                                                                                          |
 +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
 | instr\_rdata\_i[31:0]   | input           | Data read from memory                                                                                                          |
 +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
@@ -39,6 +37,14 @@ are possible and thus it needs fewer signals.
 +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
 
 Table 1: Instruction Fetch Signals
+
+Misaligned Accesses
+-------------------
+
+Externally, the IF interface performs word-aligned instruction fetches only.
+Misaligned instruction fetches are handled by performing two separate word-aligned instruction fetches.
+Internally, the core can deal with both word- and half-word-aligned instruction addresses to support compressed instructions.
+The LSB of the instruction address is ignored internally.
 
 Protocol
 --------
