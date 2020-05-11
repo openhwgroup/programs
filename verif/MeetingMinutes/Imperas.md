@@ -29,7 +29,7 @@ Topics:
 - Send Lee the updates to the code for DSIM
 - NM File: for the monitor only - symbol for stdout peripheral and for program ecall (for exit).
 - Drystone testcase is failing because of reads of uninitialized memory.  See "Handing of uninitialized memory" below.
-- Davide cannot reproduce trace issue<br>
+- Davide cannot reproduce [trace issue](https://github.com/openhwgroup/cv32e40p/issues/325)<br>
 ACTION: **Greg** to investigate.
 
 3. Handing of uninitialized memory:
