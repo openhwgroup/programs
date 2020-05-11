@@ -8,15 +8,20 @@ Attendees:
 **Imperas:** Lee Moore, Simon Davidmann<br>
 **em-micro:** Greg Tumbush
 
+Notes:
+------
+
+New actions: Mike, Greg, Simon.<br>
+
 Topics:
 -------
 
 1. Open Actions:
 
-- **Greg** issued updated pull-request
-- **Lee** already investigate ELFD generation (see minutes from May 4).
-- **Mike** worked with Owain Jones at CMC to get OVPsim licenses installed.
-- **Mike** reports that NVIDIA has accepted action to create execution-example for core-v-isg.
+- **Greg** issued updated pull-request (closed)
+- **Lee** already investigate ELFD generation (see minutes from May 4). (closed)
+- **Mike** worked with Owain Jones at CMC to get OVPsim licenses installed. (closed)
+- **Mike** reports that NVIDIA has accepted action to create execution-example for core-v-isg. (closed)
 
 
 2. Lee's Issues:
@@ -24,7 +29,8 @@ Topics:
 - Send Lee the updates to the code for DSIM
 - NM File: for the monitor only - symbol for stdout peripheral and for program ecall (for exit).
 - Drystone testcase is failing because of reads of uninitialized memory.  See "Handing of uninitialized memory" below.
-- Davide cannot reproduce - Greg to investigate.
+- Davide cannot reproduce trace issue<br>
+ACTION: **Greg** to investigate.
 
 3. Handing of uninitialized memory:
 
@@ -56,7 +62,7 @@ Attendees:
 Notes:
 ------
 
-Actions: Mike, Lee, Greg.
+Actions: Mike, Lee, Greg.<br>
 Note: meeting minutes published on GitHub at core-v-docs/verif/MeetingMinutes.
 
 Topics:
