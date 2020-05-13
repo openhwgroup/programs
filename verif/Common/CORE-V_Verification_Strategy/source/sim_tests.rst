@@ -105,10 +105,11 @@ Virtual Peripherals
 
 A SystemVerilog module called *mm_ram* is located at
 *$PROJ_ROOT/cv32/tb/core/mm_ram.sv*. It connects to the core as shown
-in . In additional to supporting the instruction and data memory
-(*dp_ram*) this module implements a set of virtual peripherals by
-responding to write cycles at specific addresses on the data bus. These
-virtual peripherals provides the features listed in .
+in . In addition to supporting the instruction, data memory
+(*dp_ram*), and debug memory (*dbg_dp_ram*), this module implements a
+set of virtual peripherals by responding to write cycles at specific
+addresses on the data bus. These virtual peripherals provides the features
+listed in Table 1.
 
 The printer and status flags virtual peripherals are used in almost
 every assembler testcase provided by the RISC-V foundation for their ISA
@@ -117,6 +118,23 @@ maintained throughout the entire CORE-V verification effort. It is also
 believed, but not known for certain, that the signature writer is used
 by several existing testcases, so this peripheral may also be maintained
 over the long term.
+
+The debug control virtual peripheral is used by a test program to control
+the debug_req signal going to the core. The assertion can be a pulse or
+a level change. The start delay and pulse duration is also controllable.
+Once the debug_req is seen by the core, it will enter debug mode and
+start executing code located at DM_HaltAddress, which is mapped to the
+debug memory (*dbg_dp_ram*).
+
+The debug memory is loaded with a hex image defined with the plusarg
++debugger=<filename.hex>
+
+If the +debugger plusarg is not provided, then the debug memory will
+have a single default instruction, dret, that will result in the
+core returning back to main execution of the test program. The
+debug_test is an example of a test that will use the debug control
+virtual peripheral and provide a specific debugger code image.
+ 
 
 The use of the interrupt timer control and instruction memory stall
 controller are not well understood and it is possible that none of the
@@ -140,6 +158,23 @@ new test programs developed for CORE-V is strongly discouraged.
 |                          |                       | This starts a timer that counts down each clk cycle.           |
 |                          |                       |                                                                |
 |                          |                       | When timer hits 0, an interrupt (irq\_o) is asserted.          |
++--------------------------+-----------------------+----------------------------------------------------------------+
+| Debug Control            | 32’h1500_0008         | Asserts the debug_req signal to the core. debug_req can be a   |
+|                          |                       | pulse or a level change, with a programable start delay and    |
+|                          |                       | pulse duration as determined by the wdata fields:              |
+|                          |                       |                                                                |
+|                          |                       +----------------------------------------------------------------+
+|                          |                       |   wdata[31]    = debug_req signal value                        |
+|                          |                       +----------------------------------------------------------------+
+|                          |                       |   wdata[30]    = debug request mode: 0= level, 1= pulse        |
+|                          |                       +----------------------------------------------------------------+
+|                          |                       |   wdata[29]    = debug pulse duration is random                |
+|                          |                       +----------------------------------------------------------------+
+|                          |                       |   wdata[28:16] = debug pulse duration or pulse random max range|
+|                          |                       +----------------------------------------------------------------+
+|                          |                       |   wdata[15]    = start delay is random                         |
+|                          |                       +----------------------------------------------------------------+
+|                          |                       |   wdata[14:0]  = start delay or start random max rangee        |
 +--------------------------+-----------------------+----------------------------------------------------------------+
 | Virtual Peripheral       | 32’h2000_0000         | Assert test_passed if wdata==’d123456789                       |
 | Status Flags             |                       |                                                                |
