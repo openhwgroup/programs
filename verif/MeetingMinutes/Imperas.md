@@ -6,7 +6,7 @@ Attendees:
 
 **OpenHW:** Mike Thompson<br>
 **Imperas:** Lee Moore, Simon Davidmann<br>
-**em-micro:** Greg Tumbush
+**Tumbush Enterprises:** GregTumbush
 
 Notes:
 ------
@@ -57,7 +57,7 @@ Attendees:
 
 **OpenHW:** Mike Thompson<br>
 **Imperas:** Lee Moore, Simon Davidmann<br>
-**em-micro:** Greg Tumbush
+**Tumbush Enterprises:** Greg Tumbush
 
 Notes:
 ------
