@@ -105,11 +105,11 @@ Virtual Peripherals
 
 A SystemVerilog module called *mm_ram* is located at
 *$PROJ_ROOT/cv32/tb/core/mm_ram.sv*. It connects to the core as shown
-in . In addition to supporting the instruction, data memory
-(*dp_ram*), and debug memory (*dbg_dp_ram*), this module implements a
-set of virtual peripherals by responding to write cycles at specific
-addresses on the data bus. These virtual peripherals provides the features
-listed in Table 1.
+in :ref:`Illustration 4`. In addition to supporting the instruction,
+data memory (*dp_ram*), and debug memory (*dbg_dp_ram*), this module
+implements a set of virtual peripherals by responding to write cycles
+at specific addresses on the data bus. These virtual peripherals provides
+the features listed in Table 1.
 
 The printer and status flags virtual peripherals are used in almost
 every assembler testcase provided by the RISC-V foundation for their ISA
