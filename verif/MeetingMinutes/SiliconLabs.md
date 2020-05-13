@@ -1,3 +1,50 @@
+May 13, 2020
+==============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson<br>
+**SiLabs:** Oivind Ekelund, Wajid Minhass, Paul Zavalney, Sebastian Ahmed, Steve Richmond, Arjan Bink
+
+Notes:
+------
+
+Actions: Mike, Wajid, Paul.
+
+
+Topics:
+-------
+1. Status of Actions from last meeting:
+
+- **Mike**: retired the "dm", "scripts", "tb\_MPU", tb\_riscv" and "verilotor-model" testbenches in the core-v-verif repository.
+- **Mike** introduced Arjan and Sebastien Jacq of Thales to see if we can set up a fully functional verison of the PULP toolchain at Thales.   See "Toolchain" below.
+- **Wajid** reports he will be able to start work Debug Vplan and review of the lowRISC Ibex implementation starting June 1.
+- **Mike** has reached out to newly appointed SW TG co-chairs regarding toolchain.  The issue is complex and a solution will be a long time coming.  See topic #2.
+- **Mike** and **Paul** still need to integrate Paul's debug verification strategy the core-v-verif verification strategy.
+
+2. "CV32E" project-specific meeting
+
+- Sebastian recommended we have a "CV32E40P" project-specific weekly meeting involving both Design and Verification.  Initial goals of meeting should be to define a project plan for CV32E40P to get to RTL Freeze.
+
+3. Toolchain
+
+- Mike reports that the SW TG has formally accepted the task of defining/supporting the toolchain.  In the meantime, verification will continue to use the PULP toolchain.
+- Arjan reports that existing RISC-V Compliance suite compiles cleanly with the PULP toolchain.  The issue is with our
+OpenHW "support code".  Since this is OpenHW code, we can resolve this oursevles.<br>
+ACTION: **Mike** to connect the Thales team with both Arjan and Jeremy at Embecosm to work-out detailed implementation fo the "support code".
+
+4. Debug verification
+
+- Mike expects to be able to integrate Paul's work this week.  Paul warned that the current tests are "developer code".  :-)
+- ACTION: **Paul** to send Mike the URL for his working fork.
+
+5. Other Business
+
+- Mike reports that the test program environment (crt0.S, link.ld, etc.) is not stable.  Each of the test programs inherited from PULP has its own set and they are not compatible with each other.  Mike's efforts to consolidate the environment and settled on a single set of files is stalled.<br>
+ACTION: **Mike** to reach out to Craig Blackmore of Embecosm for help.
+
+
 May 6, 2020
 ==============
 
