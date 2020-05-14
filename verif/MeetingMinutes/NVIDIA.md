@@ -1,3 +1,45 @@
+May 13, 2020
+===========
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson <br>
+**NVIDIA** Neo Fang, Doris Yin, Eric Liang, Wenjing Song
+
+Notes:
+------
+
+Actions: Neo, Mike
+
+Topics:
+--------
+
+1. Open action items:
+
+- CLOSED: **Mike:** to create a set of slides and present in our next meeting (see CORE-V Overview for NVIDIA team below).
+- CLOSED: **Neo:** to create a "vcs.mk" to support compiling with Synopsys VCS.
+- OPEN: **Neo:** has made some progress creating example testbench to run core-v-isg.  Still working on it.
+
+2. CORE-V Overview for NVIDIA team:
+
+- Mike gave a status [presentation](https://github.com/openhwgroup/core-v-docs/blob/master/verif/Common/Presentations/20200512_OpenHW_Verif_Status.pdf) to the NVIDIA team.
+- Neo had several questions about OpenHW plans for Formal Verification.  The detailed plann is captured in the [Formal Verification](https://core-v-docs-verif-strat.readthedocs.io/en/latest/formal.html) chapter of the CORE-V Verification Strategy.<br>
+ACTION: **Mike** to forward a couple of useful papers from Oski Technologies.
+- The current plan of record for the CV32E40P is to use the Imperas Instruction Set Simulator (ISS) as the reference model for the core.  Using a Spike model will require additional effort (it is possible, just not part of the plan).
+- Mike informed the team that users of the Imperas ISS will need to obtain a license from Imperas.  These will be provided free of charge by Imperas for OpenHW members working on CV32E40P.
+
+3. Using [core-v-isg](https://github.com/openhwgroup/core-v-isg) for 32-bit cores:
+
+- Neo is not sure how much effort it would be to port the NVIDIA instruction set generator (now core-v-isg) for 32-bit architectures.<br>
+ACTION: **Neo** to investigate and report back at the next meeting.
+
+4. Next meetings:
+
+- team agreed to maintain weekly meetings at this timeslot (9AM Beijing time).
+- **Mike** to send out an Agenda 2 days ahead of time (with reminders of Action Items).
+
+
 May 6, 2020
 ===========
 
