@@ -19,7 +19,7 @@ Topics:
 
 - **Mike**: retired the "dm", "scripts", "tb\_MPU", tb\_riscv" and "verilotor-model" testbenches in the core-v-verif repository.
 - **Mike** introduced Arjan and Sebastien Jacq of Thales to see if we can set up a fully functional verison of the PULP toolchain at Thales.   See "Toolchain" below.
-- **Wajid** reports he will be able to start work Debug Vplan and review of the lowRISC Ibex implementation starting June 1.
+- **Wajid** reports he will be able to start work Debug Vplan and review of the lowRISC Ibex implementation starting the week of June 8.
 - **Mike** has reached out to newly appointed SW TG co-chairs regarding toolchain.  The issue is complex and a solution will be a long time coming.  See topic #2.
 - **Mike** and **Paul** still need to integrate Paul's debug verification strategy the core-v-verif verification strategy.
 
