@@ -10,7 +10,7 @@ Attendees:
 Notes:
 ------
 
-Actions: Mike, Jean Roch
+Actions: Mike
 
 Topics:
 -------
