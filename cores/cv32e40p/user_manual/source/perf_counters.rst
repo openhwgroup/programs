@@ -1,206 +1,94 @@
+.. _performance-counters:
+
 Performance Counters
 ====================
 
-Performance Counters in CV32E40P are placed inside the Control and Status
-Registers and can be accessed with csrr and csrw instructions. See Table
-9.1 for the address map of the performance counter registers
+CV32E40P implements performance counters according to the RISC-V Privileged Specification, version 1.11 (see Hardware Performance Monitor, Section 3.1.11).
+The performance counters are placed inside the Control and Status Registers (CSRs) and can be accessed with the ``CSRRW(I)`` and ``CSRRS/C(I)`` instructions.
 
-Machine/User Performance Counter Mode Register (PCMR)
------------------------------------------------------
+CV32E40P implements the clock cycle counter ``mcycle(h)``, the retired instruction counter ``minstret(h)``, as well as the parameterizable number of event counters ``mhpmcounter3(h)`` - ``mhpmcounter31(h)`` and the corresponding event selector CSRs ``mhpmevent3`` - ``mhpmevent31``, and the ``mcountinhibit`` CSR to individually enable/disable the counters.
+``mcycle(h)`` and ``minstret(h)`` are always available.
 
-CSR Address: 0x7E1/0xCC1
+All counters are 64 bit wide.
 
-Reset Value: 0x0000_0003
+The number of event counters is determined by the parameter ``NUM_MHPMCOUNTERS`` with a range from 0 to 29 (default value of 1).
 
-+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+------------+---------------+
-| 31 | 30 | 29 | 28 | 27 | 26 | 25 | 24 | 23 | 22 | 21 | 20 | 19 | 18 | 17 | 16 | 15 | 14 | 13 | 12 | 11 | 10 | 09 | 08 | 07 | 06 | 05 | 04 | 03 | 02 | 01         | 00            |
-+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+============+===============+
-|    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Saturation | Global Enable |
-+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+------------+---------------+
+Unimplemented counters always read 0.
 
-Detailed:
+.. _event_selector::
 
-+---------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Bit #   | R/W   | Description                                                                                                                                           |
-+=========+=======+=======================================================================================================================================================+
-| 0       | R/W   | Global Enable: Activate/deactivate all performance counters. If this bit is 0, all performance counters are disabled. After reset, this bit is set.   |
-+---------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1       | R/W   | Saturation: If this bit is set, saturating arithmetic is used in the performance counter counters. After reset, this bit is set.                      |
-+---------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+Event Selector
+--------------
 
-Table 11: PCMR
+The following events can be monitored using the performance counters of CV32E40P.
 
-Machine/User Performance Counter Event Register (PCER)
-------------------------------------------------------
 
-CSR Address: 0x7E0/0xCC0
++-------------+-----------------+-------------------------------------------+
+| Bit #       | Event Name      |                                           |
++=============+=================+===========================================+
+| 0           | CYCLES          | Number of cycles                          |
++-------------+-----------------+-------------------------------------------+
+| 1           | INSTR           | Number of instructions retired            |
++-------------+-----------------+-------------------------------------------+
+| 2           | LD_STALL        | Number of load use hazards                |
++-------------+-----------------+-------------------------------------------+
+| 3           | JMP_STALL       | Number of jump register hazards           |
++-------------+-----------------+-------------------------------------------+
+| 4           | IMISS           | Cycles waiting for instruction fethces,   |
+|             |                 | excluding jumps and branches              |
++-------------+-----------------+-------------------------------------------+
+| 5           | LD              | Number of loads                           |
++-------------+-----------------+-------------------------------------------+
+| 6           | ST              | Number of stores                          |
++-------------+-----------------+-------------------------------------------+
+| 7           | JUMP            | Number of jumps (unconditional)           |
++-------------+-----------------+-------------------------------------------+
+| 8           | BRANCH          | Number of branches (conditional)          |
++-------------+-----------------+-------------------------------------------+
+| 9           | BRANCH_TAKEN    | Number of branches taken (conditional)    |
++-------------+-----------------+-------------------------------------------+
+| 10          | COMP_INSTR      | Number of compressed instructions retired |
++-------------+-----------------+-------------------------------------------+
+| 11          | PIPE_STALL      | Cycles from stalled pipeline              |
++-------------+-----------------+-------------------------------------------+
+| 12          | APU_TYPE        | Numbe of type conflicts on APU/FP         |
++-------------+-----------------+-------------------------------------------+
+| 13          | APU_CONT        | Number of contentions on APU/FP           |
++-------------+-----------------+-------------------------------------------+
+| 14          | APU_DEP         | Number of dependency stall on APU/FP      |
++-------------+-----------------+-------------------------------------------+
+| 15          | APU_WB          | Number of write backs on APUB/FP          |
++-------------+-----------------+-------------------------------------------+
 
-Reset Value: 0x0000\_0000
+The event selector CSRs ``mhpmevent3`` - ``mhpmevent31`` define which of these events are counted by the event counters ``mhpmcounter3(h)`` - ``mhpmcounter31(h)``.
+If a specific bit in an event selector CSR is set to 1, this means that events with this ID are being counted by the counter associated with that selector CSR.
+If an event selector CSR is 0, this means that the corresponding counter is not counting any event.
 
-+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
-| 31 | 30 | 29 | 28 | 27 | 26 | 25 | 24 | 23 | 22 | 21 | 20 | 19 | 18 | 17 | 16 | 15 | 14 | 13 | 12 | 11 | 10 | 09 | 08 | 07 | 06 | 05 | 04 | 03 | 02 | 01 | 00 |
-+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+
-|    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
-+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
+Controlling the counters from software
+--------------------------------------
 
-Detailed:
+By default, all available counters are disabled after reset in order to provide the lowest power consumption.
 
-+-------------+-----------+-----------------+
-| Bit #       | R/W       | Description     |
-+=============+===========+=================+
-| 16          | R/W       | TCDM_CONT       |
-+-------------+-----------+-----------------+
-| 15          | R/W       | ST_EXT_CYC      |
-+-------------+-----------+-----------------+
-| 14          | R/W       | LD_EXT_CYC      |
-+-------------+-----------+-----------------+
-| 20          | R/W       | FP_WB           |
-+-------------+-----------+-----------------+
-| 19          | R/W       | FP_DEP          |
-+-------------+-----------+-----------------+
-| 18          | R/W       | FP_CONT         |
-+-------------+-----------+-----------------+
-| 17          | R/W       | FP_TYPE         |
-+-------------+-----------+-----------------+
-| 16          | R/W       | CSR_HAZARD      |
-+-------------+-----------+-----------------+
-| 15          | R/W       | TCDM_CONT       |
-+-------------+-----------+-----------------+
-| 14          | R/W       | ST_EXT_CYC      |
-+-------------+-----------+-----------------+
-| 13          | R/W       | LD_EXT_CYC      |
-+-------------+-----------+-----------------+
-| 12          | R/W       | ST_EXT          |
-+-------------+-----------+-----------------+
-| 11          | R/W       | LD_EXT          |
-+-------------+-----------+-----------------+
-| 10          | R/W       | COMP_INSTR      |
-+-------------+-----------+-----------------+
-| 9           | R/W       | BRANCH_TAKEN    |
-+-------------+-----------+-----------------+
-| 8           | R/W       | BRANCH          |
-+-------------+-----------+-----------------+
-| 7           | R/W       | JUMP            |
-+-------------+-----------+-----------------+
-| 6           | R/W       | ST              |
-+-------------+-----------+-----------------+
-| 5           | R/W       | LD              |
-+-------------+-----------+-----------------+
-| 4           | R/W       | IMISS           |
-+-------------+-----------+-----------------+
-| 3           | R/W       | JMP_STALL       |
-+-------------+-----------+-----------------+
-| 2           | R/W       | LD_STALL        |
-+-------------+-----------+-----------------+
-| 1           | R/W       | INSTR           |
-+-------------+-----------+-----------------+
-| 0           | R/W       | CYCLES          |
-+-------------+-----------+-----------------+
+They can be individually enabled/disabled by overwriting the corresponding bit in the ``mcountinhibit`` CSR at address ``0x320`` as described in the RISC-V Privileged Specification, version 1.11 (see Machine Counter-Inhibit CSR, Section 3.1.13).
+In particular, to enable/disable ``mcycle(h)``, bit 0 must be written. For ``minstret(h)``, it is bit 2. For event counter ``mhpmcounterX(h)``, it is bit X.
 
-Table 8: PCER
+The lower 32 bits of all counters can be accessed through the base register, whereas the upper 32 bits are accessed through the ``h``-register.
+Reads of all these registers are non-destructive.
 
-Each bit in the PCER register controls one performance counter. If the
-bit is 1, the counter is enabled and starts counting events. If it is 0,
-the counter is disabled and its value won’t change.
+Parametrization at synthesis time
+---------------------------------
 
-In the ASIC there is only one counter register, thus all counter events
-are masked by PCER and ORed together, i.e. if one of the enabled event
-happens, the counter will be increased. If multiple non-masked events
-happen at the same time, the counter will only be increased by one.
+The ``mcycle(h)`` and ``minstret(h)`` counters are always available and 64 bit wide.
 
-In order to be able to count separate events on the ASIC, the program
-can be executed in a loop with different events configured.
+The number of available event counters ``mhpmcounterX(h)`` can be controlled via the ``NUM_MHPMCOUNTERS`` parameter.
+By default ``NUM_MHPCOUNTERS`` set to 1.
 
-In the FPGA or RTL simulation version, each event has its own counter
-and can be accessed separately.
+An increment of 1 to the NUM_MHPCOUNTERS results in the addition of the following:
 
-Performance Counter Counter Register (PCCR0-31)
------------------------------------------------
+   - 64 flops for ``mhpmcounterX``
+   - 15 flops for `mhpmeventX`
+   -  1 flop  for `mcountinhibit[X]`
+   - Adder and event enablement logic
 
-CSR Address: 0x780 - 0x79F
 
-Reset Value: 0x0000_0000
 
-+----------------------------------+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
-| 31                               | 30 | 29 | 28 | 27 | 26 | 25 | 24 | 23 | 22 | 21 | 20 | 19 | 18 | 17 | 16 | 15 | 14 | 13 | 12 | 11 | 10 | 09 | 08 | 07 | 06 | 05 | 04 | 03 | 02 | 01 | 00 |
-+==================================+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+====+
-| Unsigned Integer Counter Value   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
-+----------------------------------+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
-
-Table 9: PCCR0-31
-
-PCCR registers support both saturating and wrap-around arithmetic. This
-is controlled by the saturation bit in PCMR.
-
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-|   Register     |   Name        |   Description                                                                                                                              |
-+================+===============+============================================================================================================================================+
-| PCCR0          | CYCLES        | Counts the number of cycles the core was active (not sleeping)                                                                             |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR1          | INSTR         | Counts the number of instructions executed                                                                                                 |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR2          | LD_STALL      | Number of load data hazards                                                                                                                |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR3          | JR_STALL      | Number of jump register data hazards                                                                                                       |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR4          | IMISS         | Cycles waiting for instruction fetches, i.e. number of instructions wasted due to non-ideal caching                                        |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR5          | LD            | Number of data memory loads executed.                                                                                                      |
-|                |               |                                                                                                                                            |
-|                |               | Misaligned accesses are counted twice                                                                                                      |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR6          | ST            | Number of data memory stores executed.                                                                                                     |
-|                |               |                                                                                                                                            |
-|                |               | Misaligned accesses are counted twice                                                                                                      |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR7          | JUMP          | Number of unconditional jumps (j, jal, jr, jalr)                                                                                           |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR8          | BRANCH        | Number of branches.                                                                                                                        |
-|                |               |                                                                                                                                            |
-|                |               | Counts taken and not taken branches                                                                                                        |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR9          | BTAKEN        | Number of taken branches.                                                                                                                  |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR10         | RVC           | Number of compressed instructions executed                                                                                                 |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR11         | LD_EXT        | Number of memory loads to EXT executed. Misaligned accesses are counted twice. Every non-TCDM access is considered external (PULP only)    |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR12         | ST_EXT        | Number of memory stores to EXT executed. Misaligned accesses are counted twice. Every non-TCDM access is considered external (PULP only)   |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR13         | LD_EXT_CYC    | Cycles used for memory loads to EXT. Every non-TCDM access is considered external (PULP only)                                              |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR14         | ST_EXT_CYC    | Cycles used for memory stores to EXT. Every non-TCDM access is considered external (PULP only)                                             |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR15         | TCDM_CONT     | Cycles wasted due to TCDM/log-interconnect contention (PULP only)                                                                          |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR16         | CSR_HAZARD    | Cycles wasted due to CSR access                                                                                                            |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR17         | FP_TYPE       | Cycles wasted due to different latencies of subsequent FP-operations                                                                       |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR18         | FP_CONT       | Cycles wasted due to contentions at the shared FPU (PULP only)                                                                             |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR19         | FP_DEP        | Cycles wasted due to data hazards in subsequent FP instructions                                                                            |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR20         | FP_WB         | Cycles wasted due to FP operations resulting in write-back contentions                                                                     |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| PCCR31         | ALL           | Special Register, a write to this register will set all counters to the supplied value                                                     |
-+----------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-
-Table 104: PCCR Definitions
-
-In the FPGA, RTL simulation and Virtual-Platform there are individual
-counters for each event type, i.e. PCCR0-30 each represent a separate
-register. To save area in the ASIC, there is only one counter and one
-counter register. Accessing PCCR0-30 will access the same counter
-register in the ASIC. Reading/writing from/to PCCR31 in the ASIC will
-access the same register as PCCR0-30.
-
-Figure 6 shows how events are first masked with the PCER register and
-then ORed together to increase the one performance counter PCCR.
-
-.. figure:: ../images/Events_PCCR_PCMR_PCER.png
-   :name: events and pccr, pcmr and pcer
-   :align: center
-   :alt: 
-
-   Figure 6: Events and PCCR, PCMR and PCER on the ASIC.
