@@ -14,6 +14,7 @@ Editor: **Davide Schiavone**
    pulp_alu_extensions
    fpu
    pulp_hw_loop
+   pulp_cluster
    pipeline
    register_file
    control_status_registers
