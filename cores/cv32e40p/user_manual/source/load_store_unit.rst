@@ -1,3 +1,5 @@
+.. _load-store-unit:
+
 Load-Store-Unit (LSU)
 =====================
 

@@ -66,8 +66,8 @@ Optional Floating Point Support
 -------------------------------
 
 Floating-point support in the form of IEEE-754 single precision can be
-enabled by setting the parameter **FPU** of the toplevel file
-“riscv\_core” to one. This will instantiate the FPU in the execution
+enabled by setting the parameter ``FPU`` of the toplevel module ``cv32e40p_core``
+to 1. This will instantiate the FPU in the execution
 stage, and also extend the register file to host floating-point operands
 and extend the ALU to support the floating-point comparisons and
 classifications.

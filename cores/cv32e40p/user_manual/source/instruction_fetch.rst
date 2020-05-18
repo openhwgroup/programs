@@ -1,3 +1,5 @@
+.. _instruction-fetch:
+
 Instruction Fetch
 =================
 

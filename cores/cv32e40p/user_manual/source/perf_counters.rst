@@ -1,3 +1,5 @@
+.. _performance-counters:
+
 Performance Counters
 ====================
 

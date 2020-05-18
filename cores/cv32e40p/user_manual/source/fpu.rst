@@ -1,12 +1,14 @@
+.. _fpu:
+
 Optional private Floating Point Unit (FPU)
 ==========================================
 
 It is possible to extend the core with a private FPU, which is capable
 of performing all RISC-V floating-point operations that are defined in
 the RV32F ISA extensions. The latency of the individual instructions and
-information where they are computed are summarized in Table 3. FP
-extensions can be enabled by setting the parameter of the toplevel file
-“riscv\_core.sv” to one.
+information where they are computed are summarized in Table 3. Floating Point
+extensions can be enabled by setting the parameter ``FPU`` of the toplevel module
+``cv32e40p_core`` to 1.
 
 The FPU is divided into three parts:
 

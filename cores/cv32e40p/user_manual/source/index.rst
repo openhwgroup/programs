@@ -8,6 +8,7 @@ Editor: **Davide Schiavone**
    :caption: Contents:
 
    intro
+   integration
    instruction_fetch
    load_store_unit
    multiply_accumulate
