@@ -72,8 +72,7 @@ Instantiation Template
       .fetch_enable_i           (),
       .core_sleep_o             (),
       .clock_en_i               (),
-      .core_busy_o              (),
-      .fregfile_disable_i       ()
+      .core_busy_o              ()
   );
 
 Parameters
@@ -155,6 +154,4 @@ Interfaces
 |                         |                         |     | :ref:`pulp_cluster`                        |
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``core_busy_o``         | 1                       | out | Core busy, see :ref:`pulp_cluster`         |  
-+-------------------------+-------------------------+-----+--------------------------------------------+
-| ``fregfile_disable_i``  | 1                       | in  | Disable FPU register file, see :ref:`fpu`  |
 +-------------------------+-------------------------+-----+--------------------------------------------+
