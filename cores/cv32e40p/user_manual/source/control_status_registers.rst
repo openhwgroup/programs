@@ -618,7 +618,7 @@ CV32E40P does not support the features requiring this register. Writes are ignor
 
 
 Machine Cycle Counter (mcycle)
------------------------------------
+----------------------------------
 
 CSR Address: 0xB00
 

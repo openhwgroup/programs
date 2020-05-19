@@ -15,7 +15,6 @@ The number of event counters is determined by the parameter ``NUM_MHPMCOUNTERS``
 
 Unimplemented counters always read 0.
 
-
 .. _event_selector::
 
 Event Selector
