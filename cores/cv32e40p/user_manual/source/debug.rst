@@ -8,16 +8,17 @@ The following list shows the simplified overview of events that occur in the cor
  #. Enters Debug Mode
  #. Saves the PC to DPC
  #. Updates the cause in the DCSR
- #. Points the PC to the location determined by the parameter DmHaltAddr
+ #. Points the PC to the location determined by the input port dm_haltaddr_i
  #. Begins executing debug control code.
 
 
 Debug Mode can be entered by one of the following conditions:
 
  - External debug event using the debug_req_i signal
- - Trigger Module match event 
+ - Trigger Module match event
+ - ebreak instruction when dcsr.ebreakm == 1
 
-A user wishing to perform an abstract access, whereby the user can observe or control a core’s GPR or CSR register used by the software, is done by invoking debug control code to move values to and from internal registers to an externally addressable Debug Module (DM). Using this execution-based debug allows for the reduction of the overall number of debug interface signals.
+A user wishing to perform an abstract access, whereby the user can observe or control a core’s GPR or CSR register from the hart, is done by invoking debug control code to move values to and from internal registers to an externally addressable Debug Module (DM). Using this execution-based debug allows for the reduction of the overall number of debug interface signals.
 
 .. note::
 
@@ -36,32 +37,25 @@ The CV3240P also supports a Trigger Module to enable entry into debug mode on a 
 Interface
 ---------
 
-+-----------------+-----------+-----------------------------+
-| Signal          | Direction | Description                 |
-+=================+===========+=============================+
-| ``debug_req_i`` | input     | Request to enter Debug Mode |
-+-----------------+-----------+-----------------------------+
++-------------------------+-----------+-----------------------------+
+| Signal                  | Direction | Description                 |
++=========================+===========+=============================+
+| ``debug_req_i``         | input     | Request to enter Debug Mode |
++-------------------------+-----------+-----------------------------+
+| ``dm_haltaddr_i[31:0]`` | input     | Address for debugger entry  |
++-------------------------+-----------+-----------------------------+
 
 ``debug_req_i`` is the "debug interrupt", issued by the debug module when the core should enter Debug Mode.
 
-Parameters
-----------
+``dm_haltaddr_i`` is the address where the PC jumps to for a debug entry event. When in Debug Mode, an ebreak instruction will also cause the PC to jump back to this address without affecting status registers.
 
-+---------------------+-----------------------------------------------------------------+
-| Parameter           | Description                                                     |
-+=====================+=================================================================+
-| ``DmHaltAddr``      | Address to jump to when entering Debug Mode                     |
-+---------------------+-----------------------------------------------------------------+
-| ``DEBUG_TRIGGER_EN``| Enable support for debug triggers                               |
-+---------------------+-----------------------------------------------------------------+
 
 Core Debug Registers
 --------------------
 
-CV32E40P implements four core debug registers, namely :ref:`csr-dcsr`, :ref:`csr-dpc`, and two debug scratch registers.
+CV32E40P implements four core debug registers, namely :ref:`csr-dcsr`, :ref:`csr-dpc`, and two debug scratch registers. Access to these registers in non debug_mode results in an illegal instruction.
 
-If the ``DEBUG_TRIGGER_EN`` parameter is set, debug trigger registers are available.
-See :ref:`csr-tselect`, :ref:`csr-tdata1` and :ref:`csr-tdata2` for details.
+Several trigger registers are required to adhere to specification. The following are the most relevant:
+:ref:`csr-tselect`, :ref:`csr-tdata1` and :ref:`csr-tdata2`
 
-If software tries to access any of debug or trigger registers without the core being in Debug Mode, an illegal instruction exception is triggered.
-
+The csr-tdata1.dmode is hardwired to a value of 1 which limits access to the trigger registers when the processor is in Debug Mode only. If software tries to access any of the trigger registers without the core being in Debug Mode, an illegal instruction exception is triggered.
