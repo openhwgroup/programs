@@ -1,3 +1,121 @@
+May 20, 2020
+==============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson<br>
+**SiLabs:** Oivind Ekelund, Wajid Minhass, Paul Zavalney, Sebastian Ahmed, Steve Richmond
+
+Notes:
+------
+
+Actions: Mike, Wajid.
+
+
+Topics:
+-------
+1. Status of Actions from last meeting:
+
+- **Wajid** reports he will be able to start work Debug Vplan and review of the
+lowRISC Ibex implementation starting the week of June 8.
+- **Mike** has reached out to newly appointed SW TG co-chairs regarding toolchain.
+The issue is complex and a solution will be a long time coming.  See topic #2.
+- **Mike** to connect the Thales team with both Arjan and Jeremy at Embecosm to
+work-out detailed implementation fo the "support code". See topic #2.
+- **Mike** to reach out to Craig Blackmore of Embecosm for help. See topic #2.
+- **Paul** to send Mike the URL for his working fork. (Closed)
+- **Mike** and **Paul** still need to integrate Paul's debug verification strategy
+the core-v-verif verification strategy.
+
+
+2. Toolchain and Test-program Environment
+
+- There are three open actions related to this topic with little to show for it.
+- Mike reached out directly to Jeremy Bennett of Embecosm and we discussed the situation in detail.
+- "Its complicated" is the short answer.  Jeremy agreed that he should "own" this issue and will propose a solution.
+
+
+3. Imperas ISS
+
+- Mike reports that the Imperas `OVPsim` Instruction Set Simulator is ready for
+deployment and will be merged to the head of the core-v-verif master branch today.
+- Using the ISS requires an OVPsim license.  Node-locked licenses will be available
+to OpenHW members via the Imperas website.
+ACTION:  **Mike** to send Steve Richamond process for OVPsim ISS license floater.
+
+
+4. Integration of outstanding pull-requests
+
+- Paul commented that the order of verification pull-requests should be in lock-step with the RTL pull-requests.
+
+
+5. CV32E40P Verification Project Plan
+
+- Current draft of project plan shows RTL Freeze on 2020-10-30.
+- Sebastian noted that this was a little later than some might wish for and commented
+that the XPULP ISA verification is a significant fraction of overall effort.<br>
+ACTION: **Mike** to update plan with XPULP ISA verification deferred and resource
+allocated to pull-in date for RTL Freeze.
+
+
+6. Future meetings
+
+- Now that the full OpenHW leadership team is staffed, meetings at the TWG and TG
+level are starting.
+- Kick-off of VTG with Steve, Leo and Mike has alreadty happened.
+- Working to schedule first "full" VTG meeting next week.
+- Team concluded that these "SiLabs specific" VTG meetings will no longer be required
+when full VTG meeting are in place.  SiLabs meetings can be on an 'as needed' basis.
+
+
+May 13, 2020
+==============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson<br>
+**SiLabs:** Oivind Ekelund, Wajid Minhass, Paul Zavalney, Sebastian Ahmed, Steve Richmond, Arjan Bink
+
+Notes:
+------
+
+Actions: Mike, Wajid, Paul.
+
+
+Topics:
+-------
+1. Status of Actions from last meeting:
+
+- **Mike**: retired the "dm", "scripts", "tb\_MPU", tb\_riscv" and "verilotor-model" testbenches in the core-v-verif repository.
+- **Mike** introduced Arjan and Sebastien Jacq of Thales to see if we can set up a fully functional verison of the PULP toolchain at Thales.   See "Toolchain" below.
+- **Wajid** reports he will be able to start work Debug Vplan and review of the lowRISC Ibex implementation starting the week of June 8.
+- **Mike** has reached out to newly appointed SW TG co-chairs regarding toolchain.  The issue is complex and a solution will be a long time coming.  See topic #2.
+- **Mike** and **Paul** still need to integrate Paul's debug verification strategy the core-v-verif verification strategy.
+
+2. "CV32E" project-specific meeting
+
+- Sebastian recommended we have a "CV32E40P" project-specific weekly meeting involving both Design and Verification.  Initial goals of meeting should be to define a project plan for CV32E40P to get to RTL Freeze.
+
+3. Toolchain
+
+- Mike reports that the SW TG has formally accepted the task of defining/supporting the toolchain.  In the meantime, verification will continue to use the PULP toolchain.
+- Arjan reports that existing RISC-V Compliance suite compiles cleanly with the PULP toolchain.  The issue is with our
+OpenHW "support code".  Since this is OpenHW code, we can resolve this oursevles.<br>
+ACTION: **Mike** to connect the Thales team with both Arjan and Jeremy at Embecosm to work-out detailed implementation fo the "support code".
+
+4. Debug verification
+
+- Mike expects to be able to integrate Paul's work this week.  Paul warned that the current tests are "developer code".  :-)
+ACTION: **Paul** to send Mike the URL for his working fork.
+
+5. Other Business
+
+- Mike reports that the test program environment (crt0.S, link.ld, etc.) is not stable.  Each of the test programs inherited from PULP has its own set and they are not compatible with each other.  Mike's efforts to consolidate the environment and settled on a single set of files is stalled.<br>
+ACTION: **Mike** to reach out to Craig Blackmore of Embecosm for help.
+
+
 May 6, 2020
 ==============
 
@@ -147,3 +265,4 @@ ACTION: **Wajid** owns this (Paul agreed to contribute)
 - No strong comments/opinions about using GitHub's "per-repository projects", so Mike will publish tasks as GitHub issues on the CV32E40P Debug Verification project.
 - Agreed to hold weekly meetings.
 - ACTION: **Sebastian** to suggest convenient time for Austin and Oslo (we can assume these are also convenient for Ottawa and Zurick).
+

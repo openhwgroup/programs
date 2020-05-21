@@ -1,17 +1,63 @@
+May 14, 2020
+============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson, Davide Schiavone <br>
+**Thales:** Jerome Quevremont, Jean Roch Coulon, Sebastien Jacq
+
+Notes:
+------
+
+Actions: Mike
+
+Topics:
+-------
+
+1. Open Actions:
+
+- **Jean Roch** and **Mike** agreed to date/time for a meeting to review an update of the CV32E verification strategy and status presentation.  Closed.
+
+2. Instruction Generator:
+
+- Jean Roch has reviewed comparison chart for core-v-isg (NVIDIA instruction generator).  The
+chart does not explicitly call out features important to INVIA such as MMU, cache, interrupts and all RV ISA extensions (M, C, A, M, D, etc.).<br>
+ACTION: **Mike** to discuss with NIVIDA.
+
+3. CV32A
+
+- The CV32A is a 32-bit variant of the PULP Ariane core developed by Thales/INVIA.  It may
+be donated to OpenHW.
+- Thales/TDT is interested in an FPGA implementation of CV32A.
+- Thales/INVIA is primarily interested in an ASIC implementation of CV32A.
+Thales TDT and INVIA teams are not targetting use of CV32E40P but are willing to contribute
+to the verification of CV32E40P for features that overlap with CV32A.
+
+3. CV32E40P Verification Project Plan:
+
+- Mike has a task to develop a project plan to complete CV32E40P verification by 2020-10-30.
+
+4. Next Meeting:
+
+- The weekly meeting on Thursday, May 21 will be cancelled to due a holiday in France.
+- Jerome Quevremont is on vacation from May 15..25.
+- Sebastien Jacq can sit in on any meetings called to discuss the CV32E40P Verification Project Plan.
+
+
 May 7, 2020
 ===========
 
 Attendees:
 ----------
 
-**OpenHW:** Mike Thompsoni, Davide Schiavone <br>
+**OpenHW:** Mike Thompson, Davide Schiavone <br>
 **Thales:** Jerome Quevremont, Jean Roch Coulon
 
 Notes:
 ------
 
 Actions: Mike, Jean Roch
-
 
 Topics:
 -------

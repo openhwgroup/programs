@@ -377,37 +377,39 @@ Reset Value: Defined
 
 Table 10: MHARTID
 
-PMP Configuration (PMPCFGx)
----------------------------
+.. only:: PMP
 
-CSR Address: 0x3A{0,1,2,3}
+  PMP Configuration (PMPCFGx)
+  ---------------------------
 
-Reset Value: 0x0000_0000
+  CSR Address: 0x3A{0,1,2,3}
 
-+----------+
-| 31 : 0   |
-+==========+
-| PMPCFGx  |
-+----------+
+  Reset Value: 0x0000_0000
 
-If the PMP is enabled, these four registers contain the configuration of
-the PMP as specified by the official privileged spec 1.10.
+  +----------+
+  | 31 : 0   |
+  +==========+
+  | PMPCFGx  |
+  +----------+
 
-PMP Address (PMPADDRx)
-----------------------
+  If the PMP is enabled, these four registers contain the configuration of
+  the PMP as specified by the official privileged spec 1.10.
 
-CSR Address: 0x3B{0x0, 0x1, …. 0xF}
+  PMP Address (PMPADDRx)
+  ----------------------
 
-Reset Value: 0x0000_0000
+  CSR Address: 0x3B{0x0, 0x1, …. 0xF}
 
-+----------+
-| 31 : 0   |
-+==========+
-| PMPADDRx |
-+----------+
+  Reset Value: 0x0000_0000
 
-If the PMP is enabled, these sixteen registers contain the addresses of
-the PMP as specified by the official privileged spec 1.10.
+  +----------+
+  | 31 : 0   |
+  +==========+
+  | PMPADDRx |
+  +----------+
+
+  If the PMP is enabled, these sixteen registers contain the addresses of
+  the PMP as specified by the official privileged spec 1.10.
 
 .. _csr-tselect:
 
