@@ -1,3 +1,60 @@
+May 26, 2020
+============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson<br>
+**Imperas:** Duncan Graham, David McConnell,Lee Moore, Simon Davidmann<br>
+**Tumbush Enterprises:** GregTumbush
+
+Notes:
+------
+
+New actions: Mike, Greg, Simon.<br>
+
+Topics:
+-------
+
+1. Open Actions:
+
+- **Greg** reports that Davide has not made progress on [trace issue](https://github.com/openhwgroup/cv32e40p/issues/325). It is hoped that once Davide has the ISS installed he can reproduce the issue himself.
+- **Greg** undated the environment to initialize all memory with random data.  (closed)
+- **Mike** was helped by Duncan to install license file (and debugger tools0 on CMC VMs. (closed)
+- **Simon** wrote up a HOWTO for OpenHW users to install ISS license.  It was pipecleaned by Alfredo Herera of BTA Design Services and updates made based on that experience.  (Alfredo is now up and running with the ISS in his shop.) (closed)
+
+2. ISS integration
+
+- The Imperas OVPsim Instruction Set Simulator (ISS) is fully integrated into the master branch of the CV32E40(P) UVM verification environment.   It is currently "off by default", but will be swithced to "on by default" in the next merge.
+- Alfredo Herera of BTA Design Services pipecleaned the process of downloading and installing the ISS license.
+
+3. Makefile return code
+
+- Greg and Lee report that the Makefile return a non-zero error code.
+- Mike cannot reproduce this.   Lee suggested that it could be due to different shells being used by different users.
+ACTION: **Mike** to all `SHELL=/bin/bash`
+
+4. Generic Test-Programs
+
+- Current xrun.mk Makefile requires multiple targets to be added for each new testcase.
+- Mike have developed a strategy for dealing with this and needs to roll it out for Xcelium (xun).
+ACTION: **Mike** to ensure this is properly captured in the Verification Strategy and implemented in dsim.mk and xrun.mk.
+
+5. Adding Functional Coverage
+
+- Mike inquired about the state of functional coverage code developed by Imperas for similar RISCV projects.
+- Lee reports that he has "prototype" RV32I code he can make available.
+ACTION: **Lee** to send to Mike (pull-request?)
+
+6. Future Meetings
+
+- Later today is the first formal meeting of the Verification Task Group.
+- These meetings are expected to happen weekly and will be open to all members of the OpenHW Group.
+- Given that, and the fact that the ISS is now installed, there is no longer a need for weekly "Imperas only" meetings.
+- Imperas team members are encouraged to attend future VTG meetings.
+- Should specific topics arise, we can book an "Imperas only" meeting on as as-needed basis.
+
+
 May 11, 2020
 ============
 
