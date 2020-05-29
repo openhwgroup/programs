@@ -387,95 +387,41 @@ Reset Value: Defined
 
 Table 10: MHARTID
 
-PMP Configuration (PMPCFGx)
----------------------------
+.. only:: PMP
 
-CSR Address: 0x3A{0,1,2,3}
+  PMP Configuration (PMPCFGx)
+  ---------------------------
 
-Reset Value: 0x0000_0000
+  CSR Address: 0x3A{0,1,2,3}
 
-+----------+
-| 31 : 0   |
-+==========+
-| PMPCFGx  |
-+----------+
+  Reset Value: 0x0000_0000
 
-If the PMP is enabled, these four registers contain the configuration of
-the PMP as specified by the official privileged spec 1.10.
+  +----------+
+  | 31 : 0   |
+  +==========+
+  | PMPCFGx  |
+  +----------+
 
-PMP Address (PMPADDRx)
-----------------------
+  If the PMP is enabled, these four registers contain the configuration of
+  the PMP as specified by the official privileged spec 1.10.
 
-CSR Address: 0x3B{0x0, 0x1, …. 0xF}
+  PMP Address (PMPADDRx)
+  ----------------------
 
-Reset Value: 0x0000_0000
+  CSR Address: 0x3B{0x0, 0x1, …. 0xF}
 
-+----------+
-| 31 : 0   |
-+==========+
-| PMPADDRx |
-+----------+
+  Reset Value: 0x0000_0000
 
+  +----------+
+  | 31 : 0   |
+  +==========+
+  | PMPADDRx |
+  +----------+
 
-If the PMP is enabled, these sixteen registers contain the addresses of
-the PMP as specified by the official privileged spec 1.10.
+  If the PMP is enabled, these sixteen registers contain the addresses of
+  the PMP as specified by the official privileged spec 1.10.
 
-Debug Control and Status (DCSR)
--------------------------------
-
-CSR Address: 0x7B0
-
-Reset Value: 0x0000_0003
-
-+-------------+-----------+-------------------------------------------------------------------------------------------------+
-|   Bit #     |   R/W     |   Description                                                                                   |
-+=============+===========+=================================================================================================+
-| 31:28       | R         | **xdebugver:** returns 4 - External debug support exists as it is described in this document.   |
-+-------------+-----------+-------------------------------------------------------------------------------------------------+
-| 15          | R/W       | **ebreakm**                                                                                     |
-+-------------+-----------+-------------------------------------------------------------------------------------------------+
-| 12          | R/W       | **ebreaku**                                                                                     |
-+-------------+-----------+-------------------------------------------------------------------------------------------------+
-| 11          | R/W       | **stepi**                                                                                       |
-+-------------+-----------+-------------------------------------------------------------------------------------------------+
-| 8:6         | R/W       | **cause**                                                                                       |
-+-------------+-----------+-------------------------------------------------------------------------------------------------+
-| 2           | R/W       | **step**                                                                                        |
-+-------------+-----------+-------------------------------------------------------------------------------------------------+
-| 1:0         | R         | **priv:** returns the current priviledge mode                                                   |
-+-------------+-----------+-------------------------------------------------------------------------------------------------+
-
-Debug PC (DPC)
---------------
-
-CSR Address: 0x7B1
-
-Reset Value: 0x0000_0000
-
-+----------+
-| 31 : 0   |
-+==========+
-| DPC      |
-+----------+
-
-When the core enters in Debug Mode, DPC contains the virtual address of
-the next instruction to be executed.
-
-Debug Scratch Register 0/1 (dscratch0/1)
-----------------------------------------
-
-CSR Address: 0x7B2/0x7B3
-
-Reset Value: 0x0000_0000
-
-+-------------+
-| 31 : 0      |
-+=============+
-| DSCRATCH0/1 |
-+-------------+
-
-Scratch register that can be used by implementations that need it.
-
+.. _csr-tselect:
 
 Trigger Select Register (tselect)
 ---------------------------------
@@ -488,6 +434,8 @@ Accessible in Debug Mode or M-Mode when trigger support is enabled (using the Db
 
 CV32E40P implements a single trigger, therefore this register will always read as zero
 
+
+.. _csr-tdata1:
 
 Trigger Data Register 1 (tdata1)
 --------------------------------
@@ -541,6 +489,8 @@ CV32E40P only implements one type of trigger, Match Control. Most fields of this
 | 0     | R    | **load:** 0 = Load address / data matching not supported.        |
 +-------+------+------------------------------------------------------------------+
 
+.. _csr-tdata2:
+
 Trigger Data Register 2 (tdata2)
 --------------------------------
 
@@ -558,8 +508,6 @@ This register stores the instruction address to match against for a breakpoint t
 | 31:0  | R    | **data**                                                         |
 +-------+------+------------------------------------------------------------------+
 
-
-
 Trigger Data Register 3 (tdata3)
 --------------------------------
 
@@ -576,8 +524,6 @@ CV32E40P does not support the features requiring this register. Writes are ignor
 +=======+======+==================================================================+
 | 31:0  | R    | 0                                                                |
 +-------+------+------------------------------------------------------------------+
-
-
 
 Machine Context Register (mcontext)
 -----------------------------------
@@ -614,8 +560,65 @@ CV32E40P does not support the features requiring this register. Writes are ignor
 | 31:0  | R    | 0                                                                |
 +-------+------+------------------------------------------------------------------+
 
+.. _csr-dcsr:
 
+Debug Control and Status (DCSR)
+-------------------------------
 
+CSR Address: 0x7B0
+
+Reset Value: 0x0000_0003
+
++-------------+-----------+-------------------------------------------------------------------------------------------------+
+|   Bit #     |   R/W     |   Description                                                                                   |
++=============+===========+=================================================================================================+
+| 31:28       | R         | **xdebugver:** returns 4 - External debug support exists as it is described in this document.   |
++-------------+-----------+-------------------------------------------------------------------------------------------------+
+| 15          | R/W       | **ebreakm**                                                                                     |
++-------------+-----------+-------------------------------------------------------------------------------------------------+
+| 12          | R/W       | **ebreaku**                                                                                     |
++-------------+-----------+-------------------------------------------------------------------------------------------------+
+| 11          | R/W       | **stepi**                                                                                       |
++-------------+-----------+-------------------------------------------------------------------------------------------------+
+| 8:6         | R/W       | **cause**                                                                                       |
++-------------+-----------+-------------------------------------------------------------------------------------------------+
+| 2           | R/W       | **step**                                                                                        |
++-------------+-----------+-------------------------------------------------------------------------------------------------+
+| 1:0         | R         | **priv:** returns the current priviledge mode                                                   |
++-------------+-----------+-------------------------------------------------------------------------------------------------+
+
+.. _csr-dpc:
+
+Debug PC (DPC)
+--------------
+
+CSR Address: 0x7B1
+
+Reset Value: 0x0000_0000
+
++----------+
+| 31 : 0   |
++==========+
+| DPC      |
++----------+
+
+When the core enters in Debug Mode, DPC contains the virtual address of
+the next instruction to be executed.
+
+Debug Scratch Register 0/1 (dscratch0/1)
+----------------------------------------
+
+CSR Address: 0x7B2/0x7B3
+
+Reset Value: 0x0000_0000
+
++-------------+
+| 31 : 0      |
++=============+
+| DSCRATCH0/1 |
++-------------+
+
+Scratch register that can be used by implementations that need it.
 
 Machine Cycle Counter (mcycle)
 ----------------------------------

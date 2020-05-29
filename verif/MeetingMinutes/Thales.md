@@ -31,7 +31,7 @@ ACTION: **Mike** to discuss with NIVIDA.
 be donated to OpenHW.
 - Thales/TDT is interested in an FPGA implementation of CV32A.
 - Thales/INVIA is primarily interested in an ASIC implementation of CV32A.
-Thales TDT and NVIA teams are not targetting use of CV32E40P but are willing to contribute
+Thales TDT and INVIA teams are not targetting use of CV32E40P but are willing to contribute
 to the verification of CV32E40P for features that overlap with CV32A.
 
 3. CV32E40P Verification Project Plan:
