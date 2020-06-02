@@ -203,16 +203,16 @@ Reset Value: 0x0000_0001
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                                                                 |
 +=============+===========+===============================================================================================================+
-| 31 : 2      |   R/W     | BASE: The trap-vector base address, always aligned to 256 bytes, i.e., mtvec[7:2] is always set to  0.        |
+| 31 : 2      |   R/W     | BASE: The trap-vector base address, always aligned to 256 bytes, i.e., mtvec[7:2] is always set to 0.         |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
-|  1 : 0      |   R       | MODE: Always set to 01 to indicate vectored interrupt handling.                                               |
+|  1 : 0      |   R/W     | MODE: 00 = direct mode, 01 = vectored mode.                                                                   |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
 
 
 When an exception or an interrupt is encountered, the core jumps to the corresponding
 handler using the content of the MTVEC[31:8] as base address. Only
-8-byte aligned addresses are allowed. The only mode supported is
-vectorized interrupt, thus the bits 1:0 are hardwired to 01.
+8-byte aligned addresses are allowed. Both direct mode and vectored mode
+are supported.
 
 Table 9: MTVEC
 
@@ -231,9 +231,8 @@ Table 9: MTVEC
 
   When an exception is encountered in user-mode, the core jumps to the
   corresponding handler using the content of the UTVEC[31:8] as base
-  address. Only 8-byte aligned addresses are allowed. The only mode
-  supported is vectorized interrupt, thus the bits 1:0 are hardwired to
-  01. *Note that PULP/issimo does not support USER interrupts.*
+  address. Only 8-byte aligned addresses are allowed. Both direct mode 
+  and vectored mode are supported.
 
   Table 10: UTVEC
 
