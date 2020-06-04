@@ -46,8 +46,16 @@ CV32E40P supports the following instructions:
 -  Full support for RV32M Integer Multiplication and Division
    Instruction Set Extension
 
+-  Full support for Zifencei (Instruction-Fetch Fence)
+
+-  Full support for Zicsr (Control and Status Register (CSR) Instructions)
+
+-  Full support for the Counters extension
+
 -  Optional full support for RV32F Single Precision Floating Point
    Extensions
+
+.. only:: ATOMIC
 
 -  Optional full support for RV32A Standard Extension for Atomic
    Instructions, v2.0
@@ -60,17 +68,21 @@ CV32E40P supports the following instructions:
 
    -  ALU extensions, see Chapter 5
 
-   -  Hardware Loops, see Chapter 7
+   -  Optional support for Hardware Loops, see Chapter 7
 
 Optional Floating Point Support
 -------------------------------
 
 Floating-point support in the form of IEEE-754 single precision can be
 enabled by setting the parameter **FPU** of the toplevel file
-“riscv\_core” to one. This will instantiate the FPU in the execution
-stage, and also extend the register file to host floating-point operands
-and extend the ALU to support the floating-point comparisons and
-classifications.
+"riscv\_core" to one. This will instantiate the FPU in the execution
+stage and extend the ALU to support the floating-point comparisons and
+classifications. By default a dedicated register file consisting of 32
+floating-point registers, f0-f31, is instantiated. This default behavior
+can be overruled by setting the parameter **PULP_ZFINX** of the toplevel
+file "riscv\_core" to one, in which case the dedicated register file is
+not included and the general purpose register file is used instead to
+host the floating-point operands.
 
 ASIC Synthesis
 --------------
@@ -174,6 +186,10 @@ Document Revisions
 +--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
 | 4.4    | 30.03.20   | A. Bink            | Fixed MIEX, MTVECX, MIPX CSR addresses and added description for MIPX, MTVECX, MIEX, MIP, MIE.   |
 +--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
+| 4.5    | 06.05.20   | A. Bink            | Fixed supported instruction set section.                                                         |
++--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
 | 4.6    | 06.05.20   | A. Bink            | Made bus interface descriptions for instruction fetch unit and LSU compatible with OBI           |
++--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
+| 4.7    | 06.05.20   | A. Bink            | (Conditionally) removed PMP-related documentation                                                |
 +--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
 

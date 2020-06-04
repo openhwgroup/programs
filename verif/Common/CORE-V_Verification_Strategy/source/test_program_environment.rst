@@ -12,9 +12,24 @@ Recall from :ref:`sim_tests` that a “test program” is set of RISC-V instruct
 that are loaded into the testbench memory and executed by the core RTL model.
 Test-program are typically written in C or RISC-V assembler and can be either
 human or machine generated.  In either case it needs to be "aware" of the
-hardware environment supported by the core and its testbench.  This linkage
-between the test-program and hardware needs to be flexible to support a variety
-of test-program sources:
+hardware environment supported by the core and its testbench.
+
+Illustration 9 uses the Core testbench as an example to illustrate the relationship
+between the testbench (everything inside the yellow rectangle), the test program
+(testcase.S) and a test program environment (crt0.S and link.ld).  The UVM
+verification environment will use the same test program environment as the Core
+testbench.
+
+.. figure:: ../images/TestProgramEnvironment.png
+   :name: Test_Program_Environment_Illustration
+   :align: center
+   :alt: 
+
+   Illustration 9: Test Program Environment for "Core" testbench
+
+
+This linkage between the test-program and hardware needs to be flexible to
+support a variety of test-program sources:
 
 - manually written assembler and C test-programs inherited from RI5CY
 - test-programs from the RISC-V Foundation Compliance Test Suite
