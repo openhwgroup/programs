@@ -1,3 +1,56 @@
+May 20, 2020
+============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson <br>
+**NVIDIA** Neo Fang, Wenjing Song, Lesliex
+
+Notes:
+------
+
+Actions: Mike
+
+Topics:
+--------
+
+1. Open Action Items:
+
+- (Closed) **Neo**: example testbench to run core-v-isg.
+- (Closed) **Mike** to forward a couple of useful formal verification papers from Oski Technologies.
+- (Closed) **Neo** to investigate the effort required to port the NVIDIA instruction set generator for 32-bits.
+- (Closed) **Mike** to send out an agenda 2 days ahead of time.
+
+2. Additional questions about the NVIDIA ISG.
+
+* Mike asked about the effort required to create a 64/32-bit version of the NVIDIA ISG.
+  * Neo estimates this would be about 2 to 3 weeks of effort for an engineer already familiar with the code.
+* User Manual:
+  * A User Manual is planned, but NVIDA cannot commit to a specific delivery date.   Effort to generate the document is ~2wk.
+  * Mike will review the "NEED_CHANGE" comments in the `riscv_base_seq` to see if he has any questions about controlling the generator.
+* The INVIA sub-division of Thale has seen core-v-isg and wants to know if it supports MMU, cache, interrupts and all RV ISA extensions (M, C, A, M, D, etc.).
+  * MMU is not explicitly supported
+  * Cache is not supported
+  * the NVIDIA ISG will generate code for interrupt handlers, but the testbench is required to drive interrupts
+  * RV64IMCF extensions are supported
+  * User and Supervisor modes are supported
+
+3. Example testbench:
+
+- Thanks to Neo for generating this so quickly.
+- Mike has updated the dsim.mk Makefile and successfully run the example using Metrics DSIM
+ACTION: **Mike** to update xrun.mk to allow Cadence Xcelium users to run the example.
+- Mike and Neo briefly reviewed some of the code.
+
+4. NVIDIA contribution to OpenHW CORE-V verification.
+
+- Rick O'Connor has issued a "call for participation" to execute verification of the CV32E40P as soon as possible.
+- Mike has developed a detailed project plan that requires 4 FTE engineers to complete the task by 2020-09-25.
+- How can NVIDIA contribute to this effort?
+ACTION: **Mike** to arrange a meeting with NVIDIA leaders to discuss.
+
+
 May 13, 2020
 ===========
 

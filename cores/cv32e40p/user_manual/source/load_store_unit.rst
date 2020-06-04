@@ -80,17 +80,6 @@ protocol.
 
    Figure 4: Slow Response Memory Transaction
 
-Physical Memory Protection (PMP) Unit
--------------------------------------
-
-The CV32E40P core has a PMP module which can be enabled by setting the
-parameter PULP_SECURE=1 which also enabled the core to possibly run in
-USER MODE. Such unit has a configurable number of entries (up to 16) and
-supports all the modes as TOR, NAPOT and NA4. Every fetch, load and
-store access executed in USER MODE are first filtered by the PMP unit
-which can possibly generated exceptions. For the moment, the MPRV bit in
-MSTATUS as well as the LOCK mechanism in the PMP are not supported.
-
 Post-Incrementing Load and Store Instructions
 ---------------------------------------------
 
@@ -106,3 +95,16 @@ instructions allow the address increment to be embedded in the memory
 access instructions and get rid of separate instructions to handle
 pointers. Coupled with hardware loop extension, this instructions allow
 to reduce the loop overhead significantly.
+
+.. only:: PMP
+
+  Physical Memory Protection (PMP) Unit
+  -------------------------------------
+
+  The CV32E40P core has a PMP module which can be enabled by setting the
+  parameter PULP_SECURE=1 which also enabled the core to possibly run in
+  USER MODE. Such unit has a configurable number of entries (up to 16) and
+  supports all the modes as TOR, NAPOT and NA4. Every fetch, load and
+  store access executed in USER MODE are first filtered by the PMP unit
+  which can possibly generated exceptions. For the moment, the MPRV bit in
+  MSTATUS as well as the LOCK mechanism in the PMP are not supported.

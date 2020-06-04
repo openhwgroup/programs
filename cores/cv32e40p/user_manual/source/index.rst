@@ -10,6 +10,7 @@ Editor: **Davide Schiavone**
    intro
    instruction_fetch
    load_store_unit
+   apu
    multiply_accumulate
    pulp_alu_extensions
    fpu
