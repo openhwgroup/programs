@@ -15,7 +15,7 @@ The number of event counters is determined by the parameter ``NUM_MHPMCOUNTERS``
 
 Unimplemented counters always read 0.
 
-.. _event_selector::
+.. _event_selector:
 
 Event Selector
 --------------
@@ -89,6 +89,3 @@ An increment of 1 to the NUM_MHPCOUNTERS results in the addition of the followin
    - 15 flops for `mhpmeventX`
    -  1 flop  for `mcountinhibit[X]`
    - Adder and event enablement logic
-
-
-

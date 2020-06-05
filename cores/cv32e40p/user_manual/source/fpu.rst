@@ -3,7 +3,6 @@
 Floating Point Unit (FPU)
 =========================
 
-
 The RV32F ISA extension for floating-point support in the form of IEEE-754 single
 precision can be enabled by setting the parameter **FPU** of the toplevel file
 ``cv32e40p_core.sv`` to 1. This will extend the CV32E40P decoder accordingly

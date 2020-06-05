@@ -1,7 +1,9 @@
+.. _load-store-unit:
+
 Load-Store-Unit (LSU)
 =====================
 
-The LSU of the core takes care of accessing the data memory. Load and
+The Load-Store Unit (LSU) of the core takes care of accessing the data memory. Load and
 stores on words (32 bit), half words (16 bit) and bytes (8 bit) are
 supported.
 
@@ -10,7 +12,7 @@ Table 2 describes the signals that are used by the LSU.
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
 | **Signal**             | **Direction**   | **Description**                                                                                                              |
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
-| data\_req\_o           | output          | Request ready, must stay high until data\_gnt\_i is high for one cycle                                                       |
+| data\_req\_o           | output          | Request valid, will stay high until data\_gnt\_i is high for one cycle                                                       |
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
 | data\_addr\_o[31:0]    | output          | Address                                                                                                                      |
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
@@ -22,7 +24,7 @@ Table 2 describes the signals that are used by the LSU.
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
 | data\_rdata\_i[31:0]   | input           | Data read from memory                                                                                                        |
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
-| data\_rvalid\_i        | input           | data\_rdata\_is holds valid data when data\_rvalid\_i is high. This signal will be high for exactly one cycle per request.   |
+| data\_rvalid\_i        | input           | data\_rdata\_i holds valid data when data\_rvalid\_i is high. This signal will be high for exactly one cycle per request.    |
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
 | data\_gnt\_i           | input           | The other side accepted the request. data\_addr\_o may change in the next cycle                                              |
 +------------------------+-----------------+------------------------------------------------------------------------------------------------------------------------------+
@@ -32,53 +34,71 @@ Table 2: LSU Signals
 Misaligned Accesses
 -------------------
 
-The LSU is able to perform misaligned accesses, meaning accesses that
-are not aligned on natural word boundaries. However, it needs to perform
-two separate word-aligned accesses internally. This means that at least
+The LSU is able to handle misaligned accesses, meaning accesses that
+are not aligned on natural word boundaries. However, it does so by performing
+two separate word-aligned accesses. This means that at least
 two cycles are needed for misaligned loads and stores.
 
 Protocol
 --------
 
-The protocol that is used by the LSU to communicate with a memory works
-as follows:
+The data bus interface is compliant to the OBI (Open Bus Interface) protocol.
+See https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/OBI-v1.0.pdf
+for details about the protocol. The CV32E40P data interface does not implement
+the following optional OBI signals: auser, wuser, aid, rready, err, ruser, rid.
+These signals can be thought of as being tied off as specified in the OBI
+specification. The CV32E40P data interface can cause up to two outstanding
+transactions.
 
-The LSU provides a valid address in data\_addr\_o and sets data\_req\_o
-high. The memory then answers with a data\_gnt\_i set high as soon as it
-is ready to serve the request. This may happen in the same cycle as the
-request was sent or any number of cycles later. After a grant was
-received, the address may be changed in the next cycle by the LSU. In
-addition, the data\_wdata\_o, data\_we\_o and data\_be\_o signals may be
-changed as it is assumed that the memory has already processed and
-stored that information. After receiving a grant, the memory answers
-with a data\_rvalid\_i set high if data\_rdata\_i is valid. This may
-happen one or more cycles after the grant has been received. Note that
-data\_rvalid\_i must also be set when a write was performed, although
-the data\_rdata\_i has no meaning in this case.
+The OBI protocol that is used by the LSU to communicate with a memory works
+as follows.
 
-Figure 2, Figure 3 and Figure 4 show example-timing diagrams of the
-protocol.
+The LSU provides a valid address on data\_addr\_o, control information
+on data\_we\_o, data\_be\_o (as well as write data on data\_wdata\_o in
+case of a store) and sets data\_req\_o high. The memory sets data\_gnt\_i
+high as soon as it is ready to serve the request. This may happen at any
+time, even before the request was sent. After a request has been granted
+the address phase signals (data\_addr\_o, data\_we\_o, data\_be\_o and
+data\_wdata\_o) may be changed in the next cycle by the LSU as the memory
+is assumed to already have processed and stored that information. After
+granting a request, the memory answers with a data\_rvalid\_i set high
+if data\_rdata\_i is valid. This may happen one or more cycles after the
+request has been granted. Note that data\_rvalid\_i must also be set when
+a write was performed, although the data\_rdata\_i has no meaning in this
+case. When multiple granted requests are outstanding, it is assumed that
+the memory requests will be kept in-order and one data\_rvalid\_i will be
+signalled for each of them, in the order they were issued.
 
-.. figure:: ../images/Basic_Memory_Transaction.png
-   :name: basic memory transaction
+Figure 4, Figure 5, Figure 6 and Figure 7 show example timing diagrams of
+the protocol.
+
+.. figure:: ../images/obi_data_basic.svg
+   :name: obi data basic
    :align: center
-   :alt: 
+   :alt:
 
-   Figure 2: Basic Memory Transaction
+   Figure 4: Basic Memory Transaction
 
-.. figure:: ../images/Back_to_Back_Memory_Transaction.png
-   :name: back to back memory transaction 
+.. figure:: ../images/obi_data_back_to_back.svg
+   :name: obi data back to back
    :align: center
-   :alt: 
+   :alt:
 
-   Figure 3: Back-to-back Memory Transaction
+   Figure 5: Back-to-back Memory Transactions
 
-.. figure:: ../images/Slow_Response_Memory_Transaction.png
-   :name: slow response memory transaction 
+.. figure:: ../images/obi_data_slow_response.svg
+   :name: obi data slow response
    :align: center
-   :alt: 
+   :alt:
 
-   Figure 4: Slow Response Memory Transaction
+   Figure 6: Slow Response Memory Transaction
+
+.. figure:: ../images/obi_data_multiple_outstanding.svg
+   :name: obi data multiple outstanding
+   :align: center
+   :alt:
+
+   Figure 7: Multiple Outstanding Memory Transactions
 
 Post-Incrementing Load and Store Instructions
 ---------------------------------------------
@@ -93,7 +113,7 @@ instructions to execute code with regular data access patterns, which
 can typically be found in loops. These post-incrementing load/store
 instructions allow the address increment to be embedded in the memory
 access instructions and get rid of separate instructions to handle
-pointers. Coupled with hardware loop extension, this instructions allow
+pointers. Coupled with hardware loop extension, these instructions allow
 to reduce the loop overhead significantly.
 
 .. only:: PMP

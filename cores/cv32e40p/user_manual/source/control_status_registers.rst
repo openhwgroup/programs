@@ -26,17 +26,13 @@ any overhead that we do not explicitly need.
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
 | 00                | 11        | 01         | 000100     | 0x344         | MIP           | R     | Machine Interrupt Pending Register                     |
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
-| 01                | 11        | 11         | 010000     | 0x7D0         | MIEX          | R/W   | Machine Interrupt Enable Ext Register                  |
+| 01                | 11        | 11         | 010000     | 0x7D0         | MIE1          | R/W   | Machine Interrupt Enable 1 Register                    |
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
-| 01                | 11        | 11         | 010001     | 0x7D1         | MTVECX        | R     | Machine Trap-Vector Base Address Ext                   |
-+-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
-| 01                | 11        | 11         | 010010     | 0x7D2         | MIPX          | R     | Machine Interrupt Pending Ext Register                 |
+| 01                | 11        | 11         | 010010     | 0x7D2         | MIP1          | R     | Machine Interrupt Pending 1 Register                   |
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
 | 01                | 11        | 10         | 110xxx     | 0x7B0-0x7B7   | HWLP          | R/W   | Hardware Loop Registers                                |
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
 | 11                | 00        | 00         | 010000     | 0xC10         | PRIVLV        | R     | Privilege Level                                        |
-+-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
-| 00                | 00        | 00         | 010100     | 0x014         | UHARTID       | R     | Hardware Thread ID                                     |
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
 | 11                | 11        | 00         | 010100     | 0xF14         | MHARTID       | R     | Hardware Thread ID                                     |
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
@@ -79,6 +75,20 @@ any overhead that we do not explicitly need.
 
 Table 7: Control and Status Register Map
 
+.. only:: USER
+
+  +---------------------------------------------------------+-------------------+-------------+-------+------------------------------------------+
+  |   CSR Address                                           |   Hex             |   Name      |  Acc. |   Description                            |
+  +-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
+  |   11:10           |   9:8     |   7:6      |   5:0      |                   |             |       |                                          |
+  +===================+===========+============+============+===================+=============+=======+==========================================+
+  | 00                | 00        | 00         | 010100     | 0x014             | UHARTID     | R     | Hardware Thread ID                       |
+  +-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
+  | 00                | 00        | 01         | 000001     | 0x041             | UEPC        | R/W   | User Exception Program Counter           |
+  +-------------------+-----------+------------+------------+-------------------+-------------+-------+------------------------------------------+
+
+  Table 8: Control and Status Register Map (additional CSRs for User mode)
+
 Machine Status (MSTATUS)
 ------------------------
 
@@ -100,22 +110,24 @@ Reset Value: 0x0000_1800
 | 0           | R/W       | **User Interrupt Enable:** If you want to enable user level interrupt handling in your exception handler, set the Interrupt Enable UIE to 1’b1 inside your handler code. *Note that PULP/issimo does not support USER interrupts.*                                  |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-User Status (USTATUS)
----------------------
+.. only:: USER
 
-CSR Address: 0x000
+  User Status (USTATUS)
+  ---------------------
 
-Reset Value: 0x0000_0000
+  CSR Address: 0x000
 
-Detailed:
+  Reset Value: 0x0000_0000
 
-+-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|   Bit #     |   R/W     |   Description                                                                                                                                                                                                                                                       |
-+=============+===========+=====================================================================================================================================================================================================================================================================+
-| 4           | R/W       | **Previous User Interrupt Enable:** If user mode is enabled, when an exception is encountered, UPIE will be set to UIE. When the uret instruction is executed, the value of UPIE will be stored to UIE. *Note that PULP/issimo does not support USER interrupts.*   |
-+-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 0           | R/W       | **User Interrupt Enable:** If you want to enable user level interrupt handling in your exception handler, set the Interrupt Enable UIE to 1’b1 inside your handler code. *Note that PULP/issimo does not support USER interrupts.*                                  |
-+-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  Detailed:
+
+  +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |   Bit #     |   R/W     |   Description                                                                                                                                                                                                                                                       |
+  +=============+===========+=====================================================================================================================================================================================================================================================================+
+  | 4           | R/W       | **Previous User Interrupt Enable:** If user mode is enabled, when an exception is encountered, UPIE will be set to UIE. When the uret instruction is executed, the value of UPIE will be stored to UIE. *Note that PULP/issimo does not support USER interrupts.*   |
+  +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  | 0           | R/W       | **User Interrupt Enable:** If you want to enable user level interrupt handling in your exception handler, set the Interrupt Enable UIE to 1’b1 inside your handler code. *Note that PULP/issimo does not support USER interrupts.*                                  |
+  +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Machine Interrupt Enable Register (MIE)
 ---------------------------------------
@@ -129,7 +141,7 @@ Detailed:
 +-------------+-----------+------------------------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                                            |
 +=============+===========+==========================================================================================+
-| 30:16       | R/W       | Machine Fast Interrupt Enables: Set bit x+16 to enable fast interrupt irq\_fast\_i[x].   |
+| 31:16       | R/W       | Machine Fast Interrupt Enables: Set bit x+16 to enable fast interrupt irq\_fast\_i[x].   |
 +-------------+-----------+------------------------------------------------------------------------------------------+
 | 11          | R/W       | **Machine External Interrupt Enable (MEIE)**: If set, irq\_external\_i is enabled.       |
 +-------------+-----------+------------------------------------------------------------------------------------------+
@@ -150,9 +162,7 @@ Detailed:
 +-------------+-----------+---------------------------------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                                                     |
 +=============+===========+===================================================================================================+
-| 31          | R         | Non-maskable interrupt pending: If set, irq\_nmi\_i is pending.                                   |
-+-------------+-----------+---------------------------------------------------------------------------------------------------+
-| 30:16       | R         | Machine Fast Interrupts Pending: If bit x+16 is set, fast interrupt irq\_fast\_i[x] is pending.   |
+| 31:16       | R         | Machine Fast Interrupts Pending: If bit x+16 is set, fast interrupt irq\_fast\_i[x] is pending.   |
 +-------------+-----------+---------------------------------------------------------------------------------------------------+
 | 11          | R         | **Machine External Interrupt Pending (MEIP)**: If set, irq\_external\_i is pending.               |
 +-------------+-----------+---------------------------------------------------------------------------------------------------+
@@ -161,8 +171,8 @@ Detailed:
 | 3           | R         | **Machine Software Interrupt Pending (MSIP)**: if set, irq\_software\_i is pending.               |
 +-------------+-----------+---------------------------------------------------------------------------------------------------+
 
-Machine Interrupt Enable Register (MIEX)
-----------------------------------------
+Machine Interrupt Enable Register 1 (MIE1)
+------------------------------------------
 
 CSR Address: 0x7D0
 
@@ -173,11 +183,11 @@ Detailed:
 +-------------+-----------+-------------------------------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                                                   |
 +=============+===========+=================================================================================================+
-| 31:0        | R/W       | Machine Fast Interrupt ExtensionEnables: Set bit x to enable fast interrupt irq\_fastx\_i[x].   |
+| 31:0        | R/W       | Machine Fast Interrupt Enable 1: Set bit x to enable fast interrupt irq\_fast\_i[16+x].         |
 +-------------+-----------+-------------------------------------------------------------------------------------------------+
 
-Machine Interrupt Pending Register (MIPX)
------------------------------------------
+Machine Interrupt Pending Register 1 (MIP1)
+-------------------------------------------
 
 CSR Address: 0x7D2
 
@@ -188,7 +198,7 @@ Detailed:
 +-------------+-----------+-----------------------------------------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                                                             |
 +=============+===========+===========================================================================================================+
-| 31:0        | R         | Machine Fast Interrupts Extension Pending: If bit x is set, fast interrupt irq\_fastx\_i[x] is pending.   |
+| 31:0        | R         | Machine Fast Interrupt Pending 1: If bit x is set, fast interrupt irq\_fast\_i[16+x] is pending.          |
 +-------------+-----------+-----------------------------------------------------------------------------------------------------------+
 
 Machine Trap-Vector Base Address (MTVEC)
@@ -201,61 +211,38 @@ Reset Value: 0x0000_0001
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                                                                 |
 +=============+===========+===============================================================================================================+
-| 31 : 2      |   R/W     | BASE: The trap-vector base address, always aligned to 256 bytes, i.e., mtvec[7:2] is always set to  0.        |
+| 31 : 2      |   R/W     | BASE: The trap-vector base address, always aligned to 256 bytes, i.e., mtvec[7:2] is always set to 0.         |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
-|  1 : 0      |   R       | MODE: Always set to 01 to indicate vectored interrupt handling.                                               |
+|  1 : 0      |   R/W     | MODE: 00 = direct mode, 01 = vectored mode.                                                                   |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
 
 
-When an exception or an interrupt (except irq\_fastx\_i) is encountered, the core jumps to the corresponding
+When an exception or an interrupt is encountered, the core jumps to the corresponding
 handler using the content of the MTVEC[31:8] as base address. Only
-8-byte aligned addresses are allowed. The only mode supported is
-vectorized interrupt, thus the bits 1:0 are hardwired to 01.
+8-byte aligned addresses are allowed. Both direct mode and vectored mode
+are supported.
 
-Table 6: MTVEC
+Table 9: MTVEC
 
-Machine Trap-Vector Base Address (MTVECX)
------------------------------------------
+.. only:: USER
 
-CSR Address: 0x7D1
+  User Trap-Vector Base Address (UTVEC)
+  -------------------------------------
 
-Reset Value: 0x0000_0001
+  CSR Address: 0x005
 
-+-------------+-----------+---------------------------------------------------------------------------------------------------------------+
-|   Bit #     |   R/W     |   Description                                                                                                 |
-+=============+===========+===============================================================================================================+
-| 31 : 2      |   R/W     | BASE: The trap-vector base address, always aligned to 256 bytes, i.e., mtvec[7:2] is always set to  0.        |
-+-------------+-----------+---------------------------------------------------------------------------------------------------------------+
-|  1 : 0      |   R       | MODE: Always set to 01 to indicate vectored interrupt handling.                                               |
-+-------------+-----------+---------------------------------------------------------------------------------------------------------------+
+  +--------+-----+-----+-----+-----+-----+-----+-----+-----+
+  | 31 : 8 | 7   | 6   | 5   | 4   | 3   | 2   | 1   | 0   |
+  +========+=====+=====+=====+=====+=====+=====+=====+=====+
+  |        | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   |
+  +--------+-----+-----+-----+-----+-----+-----+-----+-----+
 
+  When an exception is encountered in user-mode, the core jumps to the
+  corresponding handler using the content of the UTVEC[31:8] as base
+  address. Only 8-byte aligned addresses are allowed. Both direct mode 
+  and vectored mode are supported.
 
-When an extended fast interrupt (irq\_fastx\_i) is encountered, the core jumps to the
-corresponding handler using the content of the MTVECX[31:8] as base
-address. Only 8-byte aligned addresses are allowed. The only mode
-supported is vectorized interrupt, thus the bits 1:0 are hardwired to
-01.
-
-Table 7: MTVECX
-
-User Trap-Vector Base Address (UTVEC)
--------------------------------------
-
-CSR Address: 0x005
-
-+--------+-----+-----+-----+-----+-----+-----+-----+-----+
-| 31 : 8 | 7   | 6   | 5   | 4   | 3   | 2   | 1   | 0   |
-+========+=====+=====+=====+=====+=====+=====+=====+=====+
-|        | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   |
-+--------+-----+-----+-----+-----+-----+-----+-----+-----+
-
-When an exception is encountered in user-mode, the core jumps to the
-corresponding handler using the content of the UTVEC[31:8] as base
-address. Only 8-byte aligned addresses are allowed. The only mode
-supported is vectorized interrupt, thus the bits 1:0 are hardwired to
-01. *Note that PULP/issimo does not support USER interrupts.*
-
-Table 6: UTVEC
+  Table 10: UTVEC
 
 Machine Exception PC (MEPC)
 ---------------------------
@@ -275,23 +262,25 @@ in MEPC, and the core jumps to the exception address. When a mret
 instruction is executed, the value from MEPC replaces the current
 program counter.
 
-User Exception PC (UEPC)
-------------------------
+.. only:: USER
 
-CSR Address: 0x041
+  User Exception PC (UEPC)
+  ------------------------
 
-Reset Value: 0x0000_0000
+  CSR Address: 0x041
 
-+------+-------+
-| 31   | 30: 0 |
-+======+=======+
-| UEPC |       |
-+------+-------+
+  Reset Value: 0x0000_0000
 
-When an exception is encountered in user mode, the current program
-counter is saved in UEPC, and the core jumps to the exception address.
-When a uret instruction is executed, the value from UEPC replaces the
-current program counter.
+  +------+-------+
+  | 31   | 30: 0 |
+  +======+=======+
+  | UEPC |       |
+  +------+-------+
+
+  When an exception is encountered in user mode, the current program
+  counter is saved in UEPC, and the core jumps to the exception address.
+  When a uret instruction is executed, the value from UEPC replaces the
+  current program counter.
 
 Machine Cause (MCAUSE)
 ----------------------
@@ -309,32 +298,34 @@ Reset Value: 0x0000_0000
 +-------------+-----------+----------------------------------------------------------------------------------+
 
 
-Table 7: MCAUSE
+Table 11: MCAUSE
 
-User Cause (UCAUSE)
--------------------
+.. only:: USER
 
-CSR Address: 0x042
+  User Cause (UCAUSE)
+  -------------------
 
-Reset Value: 0x0000_0000
+  CSR Address: 0x042
 
-+-----------+----+----+----+---+
-| 31 : 4    | 3  | 2  | 1  | 0 |
-+===========+====+====+====+===+
-| Interrupt | Exception Code   |
-+-----------+------------------+
+  Reset Value: 0x0000_0000
 
-Detailed:
+  +-----------+----+----+----+---+
+  | 31 : 4    | 3  | 2  | 1  | 0 |
+  +===========+====+====+====+===+
+  | Interrupt | Exception Code   |
+  +-----------+------------------+
 
-+-------------+-----------+------------------------------------------------------------------------------------+
-|   Bit #     |   R/W     |   Description                                                                      |
-+=============+===========+====================================================================================+
-| 31          | R/W       | **Interrupt:** This bit is set when the exception was triggered by an interrupt.   |
-+-------------+-----------+------------------------------------------------------------------------------------+
-| 4:0         | R/W       | **Exception Code**                                                                 |
-+-------------+-----------+------------------------------------------------------------------------------------+
+  Detailed:
 
-Table 8: MCAUSE
+  +-------------+-----------+------------------------------------------------------------------------------------+
+  |   Bit #     |   R/W     |   Description                                                                      |
+  +=============+===========+====================================================================================+
+  | 31          | R/W       | **Interrupt:** This bit is set when the exception was triggered by an interrupt.   |
+  +-------------+-----------+------------------------------------------------------------------------------------+
+  | 4:0         | R/W       | **Exception Code**                                                                 |
+  +-------------+-----------+------------------------------------------------------------------------------------+
+
+Table 12: MCAUSE
 
 Privilege Level
 ---------------
@@ -351,23 +342,42 @@ Reset Value: 0x0000_0003
 | 1:0         | R         | **PRV LVL**: It contains the current privilege level the core is executing.   |
 +-------------+-----------+-------------------------------------------------------------------------------+
 
-Table 9: PRIVILEGE LEVEL
+Table 13: PRIVILEGE LEVEL
 
-MHARTID/UHARTID
+.. _csr-mhartid:
+
+MHARTID
 ---------------
 
-CSR Address: 0xF14/0x014
+CSR Address: 0xF14
 
 Reset Value: Defined
 
++-------------+-----------+----------------------------------------------------------------+
+|   Bit #     |   R/W     |   Description                                                  |
++=============+===========+================================================================+
+| 31:0        | R         | Hardware Thread ID **hart_id_i**, see  :ref:`core-integration` |
++-------------+-----------+----------------------------------------------------------------+
 
-+-------------+-----------+---------------------------------------------------+
-|   Bit #     |   R/W     |   Description                                     |
-+=============+===========+===================================================+
-| 31:0        | R         | **hart_id_i** It contains the hart_id of the core |
-+-------------+-----------+---------------------------------------------------+
+Table 14: MHARTID
 
-Table 10: MHARTID
+.. only:: USER
+
+  UHARTID
+  ---------------
+
+  CSR Address: 0x014
+
+  Reset Value: Defined
+
+
+  +-------------+-----------+--------------------------------------------------+
+  |   Bit #     |   R/W     |   Description                                    |
+  +=============+===========+==================================================+
+  | 31:0        | R         | Hardware Thread ID                               |
+  +-------------+-----------+--------------------------------------------------+
+  
+  Table 15: UHARTID
 
 .. only:: PMP
 

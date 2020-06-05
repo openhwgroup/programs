@@ -10,12 +10,14 @@ Editor: **Davide Schiavone**
    intro
    getting_started
    pipeline
+   integration
    instruction_fetch
    load_store_unit
    register_file
    apu
    fpu
    pulp_hw_loop
+   pulp_cluster
    control_status_registers
    perf_counters
    exceptions_interrupts
