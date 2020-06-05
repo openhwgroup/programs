@@ -11,7 +11,7 @@ only needs the EX stage before the WB stage, that is currently blocked
 waiting for an rvalid, is ready. Currently this is not done in CV32E40P,
 but might be added in the future.
 
-Figure 5 shows the relevant control signals for the pipeline operation.
+Figure 8 shows the relevant control signals for the pipeline operation.
 The main control signals, the ready signals of each pipeline stage, are
 propagating from right to left. Each pipeline stage has two control
 inputs: an enable and a clear. The enable activates the pipeline stage
@@ -34,4 +34,4 @@ right neighbor.
    :align: center
    :alt: 
 
-   Figure 5: CV32E40P Pipeline
+   Figure 8: CV32E40P Pipeline

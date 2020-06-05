@@ -89,6 +89,3 @@ An increment of 1 to the NUM_MHPCOUNTERS results in the addition of the followin
    - 15 flops for `mhpmeventX`
    -  1 flop  for `mcountinhibit[X]`
    - Adder and event enablement logic
-
-
-
