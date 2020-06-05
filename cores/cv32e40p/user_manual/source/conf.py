@@ -70,6 +70,10 @@ language = 'en'
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+# Numbering
+numfig=True
+numfig_format = {'figure': 'Figure %s', 'table': 'Table %s', 'code-block': 'Listing %s'}
+
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
 
