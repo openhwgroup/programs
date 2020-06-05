@@ -1,3 +1,5 @@
+.. _cs-registers:
+
 Control and Status Registers
 ============================
 

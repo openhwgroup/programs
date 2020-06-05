@@ -1,21 +1,19 @@
 Introduction 
 =============
 
-CV32E40P (previously known as RI5CY) is a 4-stage in-order 32b RISC-V
+CV32E40P is a 4-stage in-order 32-bit RISC-V
 processor core. The ISA of CV32E40P
 has been extended to support multiple additional instructions including
 hardware loops, post-increment load and store instructions and
 additional ALU instructions that are not part of the standard RISC-V
-ISA.
-
-Figure 1 shows a block diagram of the core.
+ISA. :numref:`blockdiagram` shows a block diagram of the core.
 
 .. figure:: ../images/CV32E40P_Block_Diagram.png
-   :name: cv32e40p block diagram
+   :name: blockdiagram
    :align: center
    :alt: 
 
-   Figuire 1: Block Diagram of CV32E40P RISC-V Core
+   Block Diagram of CV32E40P RISC-V Core
 
 License
 -------
@@ -33,56 +31,84 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+Standards Compliance
+--------------------
 
-Supported Instruction Set
--------------------------
+CV32E40P is a standards-compliant 32-bit RISC-V processor.
+It follows these specifications:
 
-CV32E40P supports the following instructions:
+* `RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document Version 20191213 (December 13, 2019) <https://github.com/riscv/riscv-isa-manual/releases/download/Ratified-IMAFDQC/riscv-spec-20191213.pdf>`_
+* `RISC-V Instruction Set Manual, Volume II: Privileged Architecture, document version 20190608-Base-Ratified (June 8, 2019) <https://github.com/riscv/riscv-isa-manual/releases/download/Ratified-IMFDQC-and-Priv-v1.11/riscv-privileged-20190608.pdf>`_.
+  CV32E40P implements the Machine ISA version 1.11.
+* `RISC-V External Debug Support, version 0.13.2 <https://content.riscv.org/wp-content/uploads/2019/03/riscv-debug-release.pdf>`_
 
--  Full support for RV32I Base Integer Instruction Set
+Many features in the RISC-V specification are optional, and CV32E40P can be parametrized to enable or disable some of them.
 
--  Full support for RV32C Standard Extension for Compressed Instructions
+CV32E40P supports the following base instruction set.
 
--  Full support for RV32M Integer Multiplication and Division
-   Instruction Set Extension
+* The RV32I Base Integer Instruction Set, version 2.1
 
--  Full support for Zifencei (Instruction-Fetch Fence)
+In addition, the following standard instruction set extensions are available.
 
--  Full support for Zicsr (Control and Status Register (CSR) Instructions)
+.. list-table:: CV32E40P Standard Instruction Set Extensions
+   :header-rows: 1
 
--  Full support for the Counters extension
+   * - Standard Extension
+     - Version
+     - Configurability
 
--  Optional full support for RV32F Single Precision Floating Point
-   Extensions
+   * - **C**: Standard Extension for Compressed Instructions
+     - 2.0
+     - always enabled
 
-.. only:: ATOMIC
+   * - **M**: Standard Extension for Integer Multiplication and Division
+     - 2.0
+     - always enabled
 
--  Optional full support for RV32A Standard Extension for Atomic
-   Instructions, v2.0
+   * - **Zicsr**: Control and Status Register Instructions
+     - 2.0
+     - always enabled
 
--  PULP specific extensions
+   * - **Zifencei**: Instruction-Fetch Fence
+     - 2.0
+     - always enabled
 
-   -  Post-Incrementing load and stores, see Chapter 3
+   * - **F**: Single-Precision Floating-Point
+     - 2.2
+     - optionally enabled based on ``FPU`` parameter
 
-   -  Multiply-Accumulate extensions, see Chapter 4
+The following custom instruction set extensions are available.
 
-   -  ALU extensions, see Chapter 5
+.. list-table:: CV32E40P Custom Instruction Set Extensions
+   :header-rows: 1
 
-   -  Optional support for Hardware Loops, see Chapter 7
+   * - Custom Extension
+     - Version
+     - Configurability
 
-Optional Floating Point Support
--------------------------------
+   * - **Xpulp**: PULP ISA Extensions (excluding **Xpulphwlp**, **Xpulpcluster**, **Xpulpzfinx**)
+     - 1.0
+     - always enabled
 
-Floating-point support in the form of IEEE-754 single precision can be
-enabled by setting the parameter **FPU** of the toplevel file
-"riscv\_core" to one. This will instantiate the FPU in the execution
-stage and extend the ALU to support the floating-point comparisons and
-classifications. By default a dedicated register file consisting of 32
-floating-point registers, f0-f31, is instantiated. This default behavior
-can be overruled by setting the parameter **PULP_ZFINX** of the toplevel
-file "riscv\_core" to one, in which case the dedicated register file is
-not included and the general purpose register file is used instead to
-host the floating-point operands.
+   * - **Xpulphwlp**: PULP Hardware Loop Extension
+     - 1.0
+     - optionally enabled based on ``PULP_HWLP`` parameter
+
+   * - **Xpulpcluster**: PULP Cluster Extension
+     - 1.0
+     - optionally enabled based on ``PULP_CLUSTER`` parameter
+
+   * - **Xpulpzfinx**: PULP Share Integer (X) Registers with Floating Point (F) Register Extension
+     - 1.0
+     - optionally enabled based on ``PULP_ZFINX`` parameter
+
+Most content of the RISC-V privileged specification is optional.
+CV32E40P currently supports the following features according to the RISC-V Privileged Specification, version 1.11.
+
+* M-Mode
+* All CSRs listed in :ref:`cs-registers`
+* Hardware Performance Counters as described in :ref:`performance-counters` based on ``NUM_MHPMCOUNTERS`` parameter
+* Trap handling supporting direct mode or vectored mode as described at :ref:`exceptions-interrupts`
 
 ASIC Synthesis
 --------------
@@ -90,34 +116,55 @@ ASIC Synthesis
 ASIC synthesis is supported for CV32E40P. The whole design is completely
 synchronous and uses positive-edge triggered flip-flops, except for the
 register file, which can be implemented either with latches or with
-flip-flops. See Chapter 8 for more details about the register file. The
+flip-flops. See :ref:`register-file` for more details. The
 core occupies an area of about 50 kGE when the latch based register file
-is used. With the FPU, the core area increases to about 90 kGE (30kGE
-FPU, 10kGE additional register file).
+is used. With the FPU, the area increases to about 90 kGE (30 kGE
+FPU, 10 kGE additional register file). A technology specific implementation
+of a clock gating cell as described in :ref:`clock-gating-cell` needs to
+be provided.
 
 FPGA Synthesis
 --------------
 
 FPGA synthesis is supported for CV32E40P when the flip-flop based register
 file is used. Since latches are not well supported on FPGAs, it is
-crucial to select the flip-flop based register file.
+crucial to select the flip-flop based register file. The user needs to provide
+a technology specific implementation of a clock gating cell as described 
+in :ref:`clock-gating-cell`. 
 
-Outline
+Contents
+--------
+
+ * :ref:`getting-started` discusses the requirements and initial steps to start using CV32E40P.
+ * :ref:`core-integration` provides the instantiation template and gives descriptions of the design parameters as well as the input and output ports.
+ * :ref:`pipeline-details` described the overal pipeline structure.
+ * The instruction and data interfaces of CV32E40P are explained in :ref:`instruction-fetch` and :ref:`load-store-unit`, respectively.
+ * The two register-file flavors are described in :ref:`register-file`.
+ * :ref:`apu` describes the Auxiliary Processing Unit (APU).
+ * :ref:`fpu` describes the Floating Point Unit (FPU).
+ * The control and status registers are explained in :ref:`cs-registers`.
+ * :ref:`performance-counters` gives an overview of the performance monitors and event counters available in CV32E40P.
+ * :ref:`exceptions-interrupts` deals with the infrastructure for handling exceptions and interrupts.
+ * :ref:`debug-support` gives a brief overview on the debug infrastructure.
+ * :ref:`tracer` gives a brief overview of the tracer module.
+ * :ref:`custom-isa-extensions` describes the custom instruction set extensions.
+ * :ref:`glossary` provides definitions of used terminology.
+
+History
 -------
 
-This document summarizes all the functionality of the CV32E40P core in more
-detail. First, the instruction and data interfaces are explained in
-Chapter 2 and 3. The multiplier as well as the ALU are then explained in
-Chapter 4 and 5. Chapter 7 focuses on the hardware loop extensions and
-Chapter 9 explains the register file. Control and status registers are
-explained in Chapter 10 and Chapter 11 gives an overview of all
-performance counters. Chapter 12 deals with exceptions and interrupts,
-and Chapter 13 summarizes the accessible debug registers. Finally,
-Chapter 14 gives an overview of all instruction-extensions, its
-encodings and meanings.
+CV32E40P started its life as a fork of the OR10N CPU core that is based on the OpenRISC ISA. Then, under the name of RI5CY, it became a RISC-V core (2016), and it has been maintained by the PULP platform <https://pulp-platform.org> team until February 2020, when it has been contributed to OpenHW Group https://www.openhwgroup.org>.
+
+References
+----------
+
+1. `Gautschi, Michael, et al. "Near-Threshold RISC-V Core With DSP Extensions for Scalable IoT Endpoint Devices." in IEEE Transactions on Very Large Scale Integration (VLSI) Systems, vol. 25, no. 10, pp. 2700-2713, Oct. 2017 <https://ieeexplore.ieee.org/document/7864441>`_
+
+2. `Schiavone, Pasquale Davide, et al. "Slow and steady wins the race? A comparison of ultra-low-power RISC-V cores for Internet-of-Things applications." 27th International Symposium on Power and Timing Modeling, Optimization and Simulation (PATMOS 2017) <https://doi.org/10.1109/PATMOS.2017.8106976>`_
 
 Contributors
-============
+------------
+
 | Andreas Traber
   (`*atraber@iis.ee.ethz.ch* <mailto:atraber@iis.ee.ethz.ch>`__)
 
@@ -129,66 +176,10 @@ Pasquale Davide Schiavone
 
 Arjan Bink (`*arjan.bink@silabs.com* <mailto:arjan.bink@silabs.com>`__)
 
+Paul Zavalney (`*paul.zavalney@silabs.com* <mailto:paul.zavalney@silabs.com>`__)
+
 | Micrel Lab and Multitherman Lab
 | University of Bologna, Italy
 
 | Integrated Systems Lab
 | ETH Zürich, Switzerland
-
-Document Revisions
-------------------
-
-| May 2020
-| Revision 4.5
-
-
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| Rev.   | Date       | Author             | Description                                                                                      |
-+========+============+====================+==================================================================================================+
-| 0.1    | 25.02.16   | Andreas Traber     | First Draft                                                                                      |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 0.8    | 13.05.16   | Andreas Traber     | Added instruction encoding                                                                       |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 0.9    | 19.05.16   | Michael Gautschi   | Typos and general corrections                                                                    |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 1.1    | 12.07.16   | P.D. Schiavone     | Removed pv.ball, and replaced with p.beqimm                                                      |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 1.2    | 14.11.16   | P.D. Schiavone     | Added register variants of clip, addnorm, and bit manipulation instructions                      |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 1.3    | 04.01.17   | Michael Gautschi   | Fixed typos, references, foot notes and date style                                               |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 1.4    | 08.03.17   | P.D. Schiavone     | Updated to priv spec 1.9 and new IRQ handling                                                    |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 1.5    | 06.06.17   | P.D. Schiavone     | General updates                                                                                  |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 1.6    | 03.07.17   | Michael Gautschi   | Extended with optional FP support                                                                |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 1.7    | 12.07.17   | P.D. Schiavone     | Revised instructions added in Rev. 1.2                                                           |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 1.8    | 08.11.17   | P.D. Schiavone     | Add note in HW Loop                                                                              |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 1.9    | 06.02.18   | A. Ruospo          | Fixed CSR reset values and general corrections                                                   |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 2.0    | 08.03.18   | P.D. Schiavone     | Fixed Documentation issue with lp.setupi instruction #29                                         |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 2.1    | 16.05.18   | P.D. Schiavone     | Fixed Documentation issue in Debug                                                               |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 2.2    | 28.06.18   | P.D. Schiavone     | Fixed Nested Exception Support #40                                                               |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 3.0    | 19.12.18   | P.D. Schiavone     | PMP plus priv spec 1.10                                                                          |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 4.0    | 17.04.19   | P.D. Schiavone     | New debug. Change HWLoop addresses                                                               |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 4.1    | 21.08.19   | Robert Balas       | Update PCER and PCMR addresses                                                                   |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 4.2    | 20.12.19   | P.D. Schiavone     | Issue #98, #103, #110, #111                                                                      |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 4.3    | 28.01.20   | P.D. Schiavone     | New HWLoop constraints and issue #209                                                            |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 4.4    | 30.03.20   | A. Bink            | Fixed MIEX, MTVECX, MIPX CSR addresses and added description for MIPX, MTVECX, MIEX, MIP, MIE.   |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 4.5    | 06.05.20   | A. Bink            | Fixed supported instruction set section.                                                         |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-| 4.7    | 06.05.20   | A. Bink            | (Conditionally) removed PMP-related documentation                                                |
-+--------+------------+--------------------+--------------------------------------------------------------------------------------------------+
-

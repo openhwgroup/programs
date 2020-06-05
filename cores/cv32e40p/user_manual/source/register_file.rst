@@ -1,47 +1,60 @@
+.. _register-file:
+
 Register File
 =============
 
-CV32E40P has thirty-one 32-bit wide registers which form registers x1 to x31.
-Register x0 is statically bound to 0 and can only be read, it does not
+Source files: :file:`rtl/cv32e40p_register_file_ff.sv` :file:`rtl/cv32e40p_register_file_latch.sv`
+
+CV32E40P has 31 32-bit wide registers which form registers ``x1`` to ``x31``.
+Register ``x0`` is statically bound to 0 and can only be read, it does not
 contain any sequential logic.
 
-There are two flavors of register file available:
+The register file has three read ports and two write ports. Register file reads are performed in the ID stage.
+Register file writes are performed in the WB stage.
 
-1. Latch-based
+There are two flavors of register file available.
 
-2. Flip-flop based
+ * Flip-flop based (:file:`rtl/cv32e40p_register_file_ff.sv`)
+ * Latch-based (:file:`rtl/cv32e40p_register_file_latch.sv`)
 
+Both flavors have their own benefits and trade-offs.
 While the latch-based register file is recommended for ASICs, the
 flip-flop based register file is recommended for FPGA synthesis,
 although both are compatible with either synthesis target. Note the
 flip-flop based register file is significantly larger than the
 latch-based register-file for an ASIC implementation.
 
+
+Flip-Flop-Based Register File
+-----------------------------
+
+The flip-flop-based register file uses regular, positive-edge-triggered flip-flops to implement the registers.
+This makes it the **first choice when simulating the design using Verilator**.
+To select the flip-flop-based register file, make sure to use the source file ``cv32e40p_register_file_ff.sv`` in your project.
+
 Latch-based Register File
 -------------------------
 
-The latch based register file contains manually instantiated clock
-gating cells to keep the clock inactive when the latches are not
-written.
+The latch-based register file uses level-sensitive latches to implement the registers.
 
-It is assumed that there is a clock gating cell for the target
-technology that is wrapped in a module called cluster_clock_gating and
-has the following ports:
+This allows for significant area savings compared to an implementation using regular flip-flops and
+thus makes the latch-based register file the **first choice for ASIC implementations**.
+Simulation of the latch-based register file is possible using commercial tools.
 
--  clk_i: Clock Input
+.. note:: The latch-based register file cannot be simulated using Verilator.
 
--  en_i: Clock Enable Input
+The latch-based register file can also be used for FPGA synthesis, but this is not recommended as FPGAs usually do not well support latches.
 
--  test_en_i: Test Enable Input (activates the clock even though en_i
-   is not set)
-
--  clk_o: Gated Clock Output
+To select the latch-based register file, make sure to use the source file ``cv32e40p_register_file_latch.sv`` in your project.
+In addition, a technology-specific clock gating cell must be provided to keep the clock inactive when the latches are not written.
+This cell must be wrapped in a module called ``cv32e40p_clock_gate``.
+For more information regarding the clock gating cell, checkout :ref:`getting-started`.
 
 FPU Register File
 -----------------
 
 In case the optional FPU is instantiated, the register file is extended
-with an additional register bank of 32 registers f0-f31. These registers
+with an additional register bank of 32 registers ``f0``-``f31``. These registers
 are stacked on top of the existing register file and can be accessed
 concurrently with the limitation that a maximum of three operands per
 cycle can be read. Each of the three operands addresses is extended with

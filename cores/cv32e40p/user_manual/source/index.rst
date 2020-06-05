@@ -8,17 +8,18 @@ Editor: **Davide Schiavone**
    :caption: Contents:
 
    intro
+   getting_started
+   pipeline
    instruction_fetch
    load_store_unit
+   register_file
    apu
-   multiply_accumulate
-   pulp_alu_extensions
    fpu
    pulp_hw_loop
-   pipeline
-   register_file
    control_status_registers
    perf_counters
    exceptions_interrupts
    debug
+   tracer
    instruction_set_extensions
+   glossary
