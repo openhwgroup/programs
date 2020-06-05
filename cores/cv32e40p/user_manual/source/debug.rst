@@ -39,17 +39,22 @@ The CV3240P also supports a Trigger Module to enable entry into debug mode on a 
 Interface
 ---------
 
-+-------------------------+-----------+-----------------------------+
-| Signal                  | Direction | Description                 |
-+=========================+===========+=============================+
-| ``debug_req_i``         | input     | Request to enter Debug Mode |
-+-------------------------+-----------+-----------------------------+
-| ``dm_haltaddr_i[31:0]`` | input     | Address for debugger entry  |
-+-------------------------+-----------+-----------------------------+
++-------------------------------+-----------+--------------------------------------------+
+| Signal                        | Direction | Description                                |
++===============================+===========+============================================+
+| ``debug_req_i``               | input     | Request to enter Debug Mode                |
++-------------------------------+-----------+--------------------------------------------+
+| ``dm_halt_addr_i[31:0]``      | input     | Address for debugger entry                 |
++-------------------------------+-----------+--------------------------------------------+
+| ``dm_exception_addr_i[31:0]`` | input     | Address for debugger exception entry       |
++-------------------------------+-----------+--------------------------------------------+
 
 ``debug_req_i`` is the "debug interrupt", issued by the debug module when the core should enter Debug Mode.
 
-``dm_haltaddr_i`` is the address where the PC jumps to for a debug entry event. When in Debug Mode, an ebreak instruction will also cause the PC to jump back to this address without affecting status registers.
+``dm_halt_addr_i`` is the address where the PC jumps to for a debug entry event. When in Debug Mode, an ebreak instruction will also cause the PC to jump back to this address without affecting status registers. This must be word aligned
+
+``dm_exception_addr_i`` is the address where the PC jumps to when an exception occurs during Debug Mode. When in Debug Mode, an mret or uret instruction will also cause the PC to jump back to this address without affecting status registers. This address must be word aligned. A typical usage may be to tie this addess to be the same address as the dm_halt_addr_i.
+
 
 
 Core Debug Registers
