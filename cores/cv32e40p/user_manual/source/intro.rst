@@ -74,15 +74,18 @@ Optional Floating Point Support
 -------------------------------
 
 Floating-point support in the form of IEEE-754 single precision can be
-enabled by setting the parameter **FPU** of the toplevel file
-"riscv\_core" to one. This will instantiate the FPU in the execution
-stage and extend the ALU to support the floating-point comparisons and
-classifications. By default a dedicated register file consisting of 32
+enabled by setting the parameter ``FPU`` of the toplevel module ``cv32e40p_core``
+to 1. This will instantiate the FPU in the execution
+stage, and also extend the register file to host floating-point operands
+and extend the ALU to support the floating-point comparisons and
+classifications.
+By default a dedicated register file consisting of 32
 floating-point registers, f0-f31, is instantiated. This default behavior
 can be overruled by setting the parameter **PULP_ZFINX** of the toplevel
-file "riscv\_core" to one, in which case the dedicated register file is
+file "cv32e40p\_core" to one, in which case the dedicated register file is
 not included and the general purpose register file is used instead to
 host the floating-point operands.
+
 
 ASIC Synthesis
 --------------

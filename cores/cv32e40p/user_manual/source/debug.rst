@@ -1,3 +1,5 @@
+.. _debug-support:
+
 Debug
 =====
 
