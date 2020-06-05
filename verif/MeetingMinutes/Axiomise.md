@@ -39,7 +39,7 @@ ACTION: **Arjan** and **Alex** to discuss offline.
 8. Parameterization
 - The RI5CY/CV32E40P core is highly parameterizable.  OpenHW has made several significant updates to this.
 - Need to ensure that the parameters used by Aximoise match those being used by OpenHW.
-- These are specified in the `Integation` section of the User Manual.
+- These are specified in the [Core Integration](https://core-v-docs-verif-strat.readthedocs.io/projects/cv32e40p_um/en/latest/integration.html) chapter of the User Manual.
 9. Meeting cadence:
 - Team agreed to meet bi-weekly.
 - Mike to book next meeting: Friday, June 19 at 10:00 A.M. EDT.
