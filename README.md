@@ -16,3 +16,11 @@ readthedocs rendering of the `CORE-V Verification Strategy` can be viewed [here]
 ### platform
 Information about the hardware and software of the physical platforms built to demonstrate
 the capabilities of the CORE-V cores.  Coming soon.
+
+## Issues and Troubleshooting
+If you find any problems or issues with the documentation, please check out the [issue
+ tracker](https://github.com/openhwgroup/core-v-docs/issues) and create a new issue if your problem is
+not yet tracked.
+
+## credits
+The flow, style, and parts of the content of the `CV32E40P User Manual` are based on the Ibex User Manual from [lowRISC](https://www.lowrisc.org).
