@@ -244,7 +244,7 @@ A hardware loop is subject to the following constraints:
 Operations
 ^^^^^^^^^^
 
-**Long Hardware Loop Setup instructions** 
+**Long Hardware Loop Setup instructions**
 
 +----------------------------------------------+-----------------------+----------------------------------+
 | **Mnemonic**                                 | **Description**       |                                  |
@@ -811,20 +811,39 @@ performed.
 SIMD instructions are available in two flavors:
 
 -  8-Bit, to perform four operations on the 4 bytes inside a 32-bit word
-   at the same time
+   at the same time (.b)
 
 -  16-Bit, to perform two operations on the 2 half-words inside a 32-bit
-   word at the same time
+   word at the same time (.h)
+
+All the operations are rounded to the specified bidwidth as for the original
+RISC-V arithmetic operations. This is described by the "and" operation with a
+MASK. No overflow or carry-out flags are generated as for the 32-Bit operations.
 
 Additionally, there are three modes that influence the second operand:
 
 1. Normal mode, vector-vector operation. Both operands, from rs1 and
    rs2, are treated as vectors of bytes or half-words.
 
+   e.g. pv.add.h x3,x2,x1 performs:
+
+    x3[31:16] = x2[31:16] + x1[31:16]
+
+    x3[15: 0] = x2[15: 0] + x1[15: 0]
+
+
 2. Scalar replication mode (.sc), vector-scalar operation. Operand 1 is
    treated as a vector, while operand 2 is treated as a scalar and
    replicated two or four times to form a complete vector. The LSP is
    used for this purpose.
+
+   e.g. pv.add.sc.h x3,x2,x1 performs:
+
+    x3[31:16] = x2[31:16] + x1[15: 0]
+
+    x3[15: 0] = x2[15: 0] + x1[15: 0]
+
+
 
 3. Immediate scalar replication mode (.sci), vector-scalar operation.
    Operand 1 is treated as vector, while operand 2 is treated as a
@@ -832,11 +851,22 @@ Additionally, there are three modes that influence the second operand:
    zero-extended, depending on the operation. If not specified, the
    immediate is sign-extended.
 
+   e.g. pv.add.sci.h x3,x2,0xDA performs:
+
+    x3[31:16] = x2[31:16] + 0xFFDA
+
+    x3[15: 0] = x2[15: 0] + 0xFFDA
+
+In the following Table, the index i ranges from 0 to 1 for 16-Bit
+operations and from 0 to 3 for 8-Bit operations.
+
+- The index 0 is 15:0  for 16-Bit operations, or   7:0 for 8-Bit operations.
+- The index 1 is 31:16 for 16-Bit operations, or  15:8 for 8-Bit operations.
+- The index 2 is 23:16 for 8-Bit operations.
+- The index 3 is 31:24 for 8-Bit operations.
+
 SIMD ALU Operations
 ^^^^^^^^^^^^^^^^^^^
-
-General ALU Instructions
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 +---------------------------------------+---------------------------------------------------------------------------------------+
 | **Mnemonic**                          | **Description**                                                                       |
