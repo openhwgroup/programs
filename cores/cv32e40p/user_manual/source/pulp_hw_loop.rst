@@ -37,27 +37,39 @@ mapped into the CSR address space and thus it is possible to read and
 write them via csrr and csrw instructions. Since hardware loop registers
 could be overwritten in when processing interrupts, the registers have
 to be saved in the interrupt routine together with the general purpose
-registers.
+registers. The CS HWLoop registers are described in the control_status_registers
+section.
 
-CSR Mapping
------------
+The GCC compiler uses HWLoop automatically without the need of assembly.
+Below an assembly code example of an nested HWLoop that computes
+a matrix addition.
 
-+-------------------+-----------+------------+------------+-------------------+--------------+-------+---------------------------+
-|  CSR Address                                            |                   |              |       |                           |
-+-------------------+-----------+------------+------------+                   |              |       |                           |
-|   11:10           |   9:8     |   7:6      |   5:0      |  Hex              | Name         | Acc.  | Decription                |
-+===================+===========+============+============+===================+==============+=======+===========================+
-| 01                | 11        | 10         | 110000     | 0x7C0             | lpstart[0]   | R/W   | Hardware Loop 0 Start     |
-+-------------------+-----------+------------+------------+-------------------+--------------+-------+---------------------------+
-| 01                | 11        | 10         | 110001     | 0x7C1             | lpendt[0]    | R/W   | Hardware Loop 0 End       |
-+-------------------+-----------+------------+------------+-------------------+--------------+-------+---------------------------+
-| 01                | 11        | 10         | 110010     | 0x7C2             | lpcount[0]   | R/W   | Hardware Loop 0 Counter   |
-+-------------------+-----------+------------+------------+-------------------+--------------+-------+---------------------------+
-| 01                | 11        | 10         | 110100     | 0x7C4             | lpstart[1]   | R/W   | Hardware Loop 0 Start     |
-+-------------------+-----------+------------+------------+-------------------+--------------+-------+---------------------------+
-| 01                | 11        | 10         | 110101     | 0x7C5             | lpend[1]     | R/W   | Hardware Loop 1 End       |
-+-------------------+-----------+------------+------------+-------------------+--------------+-------+---------------------------+
-| 01                | 11        | 10         | 110110     | 0x7C6             | lpcount[1]   | R/W   | Hardware Loop 1 Counter   |
-+-------------------+-----------+------------+------------+-------------------+--------------+-------+---------------------------+
+.. code-block:: c
+   :linenos:
 
-Table 6: Hardware-Loop CSR Mapping
+   asm volatile (
+       ".option norvc;"
+       "add %[j],x0, x0;"
+       "add %[j],x0, x0;"
+       "lp.count  x1, %[N];"
+       "lp.endi   x1, endO;"
+       "lp.starti x1, startO;"
+           "startO:   lp.count  x0, %[N];"
+           "lp.endi   x0, endZ;"
+           "lp.starti x0, startZ;"
+               "startZ: addi %[i], x0, 1;"
+               "        addi %[i], x0, 1;"
+               "endZ:   addi %[i], x0, 1;"
+           "addi %[j],x0, 2;"
+           "endO:   addi %[j], x0, 2;"
+       : [i] "+r" (i), [j] "+r" (j)
+       : [N] "r" (10)
+   );
+
+
+At the beginning of the HWLoop, the registers %[i] and %[j] are 0.
+The innermost loop, from start0 to end0, adds to %[i] three times 1 and
+it is executed 10x10 times. Whereas the outermost loop, from startO to endO,
+executes 10 times the innermost loop and adds two times 2 to the register %[j].
+At the end of the loop, the register %[i] contains 300 and the register %[j] contains 40.
+
