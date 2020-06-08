@@ -1,14 +1,23 @@
 .. _fpu:
 
-Optional private Floating Point Unit (FPU)
-==========================================
+Floating Point Unit (FPU)
+=========================
 
-It is possible to extend the core with a private FPU, which is capable
-of performing all RISC-V floating-point operations that are defined in
-the RV32F ISA extensions. The latency of the individual instructions and
-information where they are computed are summarized in Table 3. Floating Point
-extensions can be enabled by setting the parameter ``FPU`` of the toplevel module
-``cv32e40p_core`` to 1.
+The RV32F ISA extension for floating-point support in the form of IEEE-754 single
+precision can be enabled by setting the parameter **FPU** of the toplevel file
+``cv32e40p_core.sv`` to 1. This will extend the CV32E40P decoder accordingly
+and it will extend the ALU to support the floating-point comparisons and
+classifications. The actual Floating Point Unit is instantiated outside the
+CV32E40P and is accessed via the APU interface (see :ref:`apu`).
+By default a dedicated register file consisting of 32
+floating-point registers, ``f0``-``f31``, is instantiated. This default behavior
+can be overruled by setting the parameter **PULP_ZFINX** of the toplevel
+file ``cv32e40p_core.sv`` to 1, in which case the dedicated register file is
+not included and the general purpose register file is used instead to
+host the floating-point operands.
+
+The latency of the individual instructions and
+information where they are computed are summarized in Table 3.
 
 The FPU is divided into three parts:
 

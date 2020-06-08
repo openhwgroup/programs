@@ -1,5 +1,17 @@
-Instruction Set Extensions
-==========================
+.. _custom-isa-extensions:
+
+PULP Instruction Set Extensions
+===============================
+
+CV32E40P supports the PULP ISA Extensions (**Xpulp**) and optional Hardware Looping (**Xpulphwlp**).
+
+ * Post-Incrementing load and stores, see :ref:`pulp_load_store`.
+ * Hardware Loop extension, see :ref:`pulp_hardware_loop`.
+ * ALU extensions, see :ref:`pulp_alu`.
+ * Multiply-Accumulate extensions, see :ref:`pulp_multiply_accumulate`.
+ * Optional support for Hardware Loops, see :ref:`pulp_simd`.
+
+.. _pulp_load_store:
 
 Post-Incrementing Load & Store Instructions
 -------------------------------------------
@@ -205,6 +217,8 @@ Encoding
 | 000 0000   | src      | base   | 110      | offset | 010 0011   | **p.sw rs2, rs3(rs1)**    |
 +------------+----------+--------+----------+--------+------------+---------------------------+
 
+.. _pulp_hardware_loop:
+
 Hardware Loops
 --------------
 
@@ -279,22 +293,34 @@ Encoding
 | uimmL[11:0]     | uimmS[4:0] | 101      | 0000   |    | 111 1011   | **lp.setupi L, uimmS, uimmL** |
 +-----------------+------------+----------+--------+----+------------+-------------------------------+
 
+.. _pulp_alu:
+
 ALU
 ---
 
-The ALU extensions are split into several subgroups that belong
+CV32E40P supports advanced ALU operations that allow to perform multiple
+instructions that are specified in the base instruction set in one
+single instruction and thus increases efficiency of the core. For
+example, those instructions include zero-/sign-extension instructions
+for 8-bit and 16-bit operands, simple bit manipulation/counting
+instructions and min/max/avg instructions. The ALU does also support
+saturating, clipping, and normalizing instructions which make fixed-point
+arithmetic more efficient.
+
+The custom extensions to the ALU are split into several subgroups that belong
 together.
 
 -  Bit manipulation instructions are useful to work on single bits or
-   groups of bits within a word, see Section 14.3.1.
+   groups of bits within a word, see :ref:`pulp_bit_manipulation`.
 
 -  General ALU instructions try to fuse common used sequences into a
    single instruction and thus increase the performance of small kernels
-   that use those sequence, see Section 14.3.3.
+   that use those sequence, see :ref:`pulp_general_alu`.
 
 -  Immediate branching instructions are useful to compare a register
-   with an immediate value before taking or not a branch, see Section
-   13.3.5.
+   with an immediate value before taking or not a branch, see see :ref:`pulp_immediate_branching`.
+
+.. _pulp_bit_manipulation:
 
 Bit Manipulation Operations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -404,6 +430,8 @@ Bit Manipulation Encoding
 +------------+---------+--------+----------+--------+------------+--------------------------+
 | 000 1000   | 00000   | src1   | 011      | dest   | 011 0011   | **p.cnt rD, rs1**        |
 +------------+---------+--------+----------+--------+------------+--------------------------+
+
+.. _pulp_general_alu:
 
 General ALU Operations
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -592,6 +620,8 @@ General ALU Encoding
 | 11    | 00000         | src2   | src1   | 111      | dest   | 101 1011   | **p.subuRNr rD, rs1, rs2**       |
 +-------+---------------+--------+--------+----------+--------+------------+----------------------------------+
 
+.. _pulp_immediate_branching:
+
 Immediate Branching Operations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -617,8 +647,13 @@ Immediate Branching Encoding
 |         |          |         | Src1     | 011     | [4:1]    | [11]   | 1100011    | **p.bneimm rs1, Imm5, Imm12**   |
 +---------+----------+---------+----------+---------+----------+--------+------------+---------------------------------+
 
+.. _pulp_multiply_accumulate:
+
 Multiply-Accumulate
 -------------------
+
+CV32E40P supports custom extensions for multiply-accumulate and half-word multiplications with
+an optional post-multiplication shift.
 
 MAC Operations
 ^^^^^^^^^^^^^^
@@ -763,15 +798,17 @@ MAC Encoding
 | 01    | Luimm5[4:0]   | src2   | src1   | 101      | dest   | 101 1011   | **p.machhuRN rD, rs1, rs2, Is3**   |
 +-------+---------------+--------+--------+----------+--------+------------+------------------------------------+
 
-Vectorial
+.. _pulp_simd:
+
+SIMD
 ---------
 
-Vectorial instructions perform operations in a SIMD-like manner on
+The SIMD instructions perform operations on
 multiple sub-word elements at the same time. This is done by segmenting
 the data path into smaller parts when 8 or 16-bit operations should be
 performed.
 
-Vectorial instructions are available in two flavors:
+SIMD instructions are available in two flavors:
 
 -  8-Bit, to perform four operations on the 4 bytes inside a 32-bit word
    at the same time (.b)
@@ -828,12 +865,8 @@ operations and from 0 to 3 for 8-Bit operations.
 - The index 2 is 23:16 for 8-Bit operations.
 - The index 3 is 31:24 for 8-Bit operations.
 
-
-Vectorial ALU Operations
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-General ALU Instructions
-~~~~~~~~~~~~~~~~~~~~~~~~
+SIMD ALU Operations
+^^^^^^^^^^^^^^^^^^^
 
 +---------------------------------------+---------------------------------------------------------------------------------------+
 | **Mnemonic**                          | **Description**                                                                       |
@@ -1013,8 +1046,8 @@ Shuffle and Pack Instructions
 |                                       | Note: The rest of the bits of rD are untouched and keep their previous value          |
 +---------------------------------------+---------------------------------------------------------------------------------------+
 
-Vectorial ALU Encoding
-^^^^^^^^^^^^^^^^^^^^^^
+SIMD ALU Encoding
+^^^^^^^^^^^^^^^^^
 
 +----------+-----+----+---------+---------+--------+----------+----------+----------------------------------+
 | 31  : 27 | 26  | 25 | 24 : 20 | 19 : 15 | 14 :12 | 11  :  7 | 6   :  0 |                                  |
@@ -1345,10 +1378,10 @@ Vectorial ALU Encoding
 **Note:** Imm6[5:0] is encoded as { Imm6[0], Imm6[5:1] }, LSB at the 25th bit of the instruction
 
 
-Vectorial Comparison Operations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SIMD Comparison Operations
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Vectorial comparisons are done on individual bytes (.b) or half-words
+SIMD comparisons are done on individual bytes (.b) or half-words
 (.h), depending on the chosen mode. If the comparison result is true,
 all bits in the corresponding byte/half-word are set to 1. If the
 comparison result is false, all bits are set to 0.
@@ -1389,8 +1422,8 @@ instruction is used for the comparison.
 |                                  |                            | Note: Unsigned comparison         |
 +----------------------------------+----------------------------+-----------------------------------+
 
-Vectorial Comparison Encoding
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SIMD Comparison Encoding
+^^^^^^^^^^^^^^^^^^^^^^^^
 +----------+----+----+-------------+----------+---------+----------+------------+-----------------------------------+
 | 31 :  27 | 26 | 25 | 24   :   20 | 19 : 15  | 14 : 12 | 11  :  7 | 6  :    0  |                                   |
 +----------+----+----+-------------+----------+---------+----------+------------+-----------------------------------+
