@@ -12,7 +12,19 @@ Attendees:
 Notes:
 ------
 
-New actions: Alex and Arjan<br>
+Update on Alex/Arjan Action Item (see below)<br>
+Email ffrom Arjan published in an email sent on 2020-06-08):
+* Instruction address output is not kept stable during address phase : https://github.com/openhwgroup/cv32e40p/issues/128
+* LSBs of data address are not consistent with byte enables: https://github.com/openhwgroup/cv32e40p/issues/176 
+<br>
+Issue #128 violates the ‘RI5CY user manual’. Issue #176 could maybe not reasonably have been spotted as the expected behavior was not part of the ‘RI5CY user manual’. The bus interfaces of CV32E40P will become compatible with https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/OBI-v1.0.pdf once this pull request https://github.com/openhwgroup/cv32e40p/pull/322 has been accepted. The above two issues (and more) have been fixed in that pull request. The issues above violate requirement R-3.1.1 and R-8 respectively of the OBI spec.
+<br>
+Response ffrom Ashish<br>
+Issue 128 is literally a deja-vu moment for me. It was one of the first bugs I had found on 0riscy and later on ibex see https://github.com/darbaria/0riscy/issues/2
+<br>
+As this was not fixed on either of these cores, I decided not to lose my sleep any longer on this issue for RISCY.
+<br>
+In any case, unlike 0riscy where I had planned to carry out a more thorough micro-arch verification, we haven’t started anything on RISCY yet. This bug like its cousin I had found in March 2019 I suspect doesn’t break the ISA checks.
 
 Topics:
 -------
