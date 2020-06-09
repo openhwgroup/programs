@@ -1,3 +1,42 @@
+June 9, 2020 - CV32E40P Sprint
+==============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson, Rick O'Connor<br>
+**Futurewei:** Leo Wang<br>
+**SiLabs:** Steve Richmond, Paul Zavalney, Wajid Minhass, Arjan Bink<br>
+**Imperas:** Simon Davidmann<br>
+**EM Micro:** Greg Tumbush<br>
+**Thales:** Jerome Quevremont, Sebastien Jacq<br>
+**SymbioticEDA:** Nina Engelhardt<br>
+**BTA Design Services:** Alfredo Herrera<br>
+
+Notes:
+-------
+
+Actions: Mike
+
+Topics:
+1. Status of Sprint #1 (2020-06-01 to 2020-06-19)
+
+- Low risk items<br>
+    - User manual proceeding very well.  Thank you Cores Task Group and Davide!<br>
+    - EM-Micro has signed on with OpenHW.  Welcome Greg Tumbush and colleagues!<br>
+        - EM-Micro will develop Interrupt testplans and own verification of interrupts.<br>
+
+- Medium risk<br>
+    - Verification strategy document updates addressing the Test Program Environment and the Test Writer's Guide.<br>
+    - Excellent progress made on the toolchain by Craig Blackmore of Embecosm.  This is a gating item to further testbench development.<br>
+
+- High risk:<br>
+    - RV32IMC compliance infrastructure, including functional coverage instrumented and measured (w/ no closure target)<br>
+        - Thales/TRT will complete Compliance testing, but cannot help with Functional Coverage<br>
+    - Google riscv-dv is not integrated yet<br>
+        - Thales/INVIA can not currently help with CV32E40P<br>
+**Action:** Mike to get in touch with Thales to confirm CV32E40P tasks
+
 May 20, 2020
 ==============
 
@@ -44,3 +83,4 @@ Topics:
 - Proposed time of 1.5 hours per meeting.
 - Proposed 10am CDT (US Central).  Thales propsed moving this to at least 930am to ensure that meeting ends before 6pm in Europe.<br>
 **ACTION:** Steve to propose next VTG meeting time on Mattermost.
+
