@@ -15,6 +15,7 @@ Editor: **Michael Thompson**
    intro
    planning_requirements
    pulp_verif
+   corev_env
    cv32_env
    cv64_env
    sim_tests
