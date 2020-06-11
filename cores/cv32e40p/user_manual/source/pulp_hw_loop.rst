@@ -1,9 +1,12 @@
+.. _hwloop-specs:
+
 PULP Hardware Loop Extensions
 =============================
 
 To increase the efficiency of small loops, CV32E40P supports hardware
-loops. Hardware loops make it possible to execute a piece of code
-multiple times, without the overhead of branches or updating a counter.
+loops optioonally. They can be enabled by setting the PULP_HWLP parameter.
+Hardware loops make executing a piece of code
+multiple times possible, without the overhead of branches or updating a counter.
 Hardware loops involve zero stall cycles for jumping to the first
 instruction of a loop.
 
@@ -14,6 +17,8 @@ decremented every time the loop body is executed. CV32E40P contains two
 hardware loop register sets to support nested hardware loops, each of
 them can store these three values in separate flip flops which are
 mapped in the CSR address space.
+Loop number 0 has higher priority than loop number 1 in a nested loop
+configuration, meaning that loop 0 represents the inner loop.
 
 The HWloop constraints are:
 
@@ -21,10 +26,10 @@ The HWloop constraints are:
 
 -  HWLoop body must contain at least 3 instructions
 
--  No Compress instructions allowed in the HWLoop body
+-  No Compressed instructions (RVC) allowed in the HWLoop body
 
 -  The End address of the outermost HWLoop (#1) must be at least 2
-   instructions further thatn the End address innermost HWloop (#0),
+   instructions further than the End address innermost HWloop (#0),
    i.e. HWLoop[1].endaddress >= HWLoop[0].endaddress + 8
 
 In order to use hardware loops, the compiler needs to setup the loop
@@ -37,10 +42,12 @@ mapped into the CSR address space and thus it is possible to read and
 write them via csrr and csrw instructions. Since hardware loop registers
 could be overwritten in when processing interrupts, the registers have
 to be saved in the interrupt routine together with the general purpose
-registers. The CS HWLoop registers are described in the control_status_registers
+registers. The CS HWLoop registers are described in the :ref:`cs-registers`
 section.
 
-The GCC compiler uses HWLoop automatically without the need of assembly.
+The PULP GCC compiler uses HWLoop automatically without the need of assembly.
+The mainline GCC does not generate any PULP instructions as for the other custom extensions.
+
 Below an assembly code example of an nested HWLoop that computes
 a matrix addition.
 

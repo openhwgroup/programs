@@ -11,6 +11,9 @@ CV32E40P supports the PULP ISA Extensions (**Xpulp**) and optional Hardware Loop
  * Multiply-Accumulate extensions, see :ref:`pulp_multiply_accumulate`.
  * Optional support for Hardware Loops, see :ref:`pulp_simd`.
 
+To use such instructions, you need to compile your SW with the PULP GCC compiler.
+
+
 .. _pulp_load_store:
 
 Post-Incrementing Load & Store Instructions
@@ -230,21 +233,15 @@ command that does all of this in a single instruction. The short command
 has a limited range for the number of instructions contained in the loop
 and the loop must start in the next instruction after the setup
 instruction.
+Details about the HWLoop constraints are reported in :ref:`hwloop-specs`.
 
-Loop number 0 has higher priority than loop number 1 in a nested loop
-configuration, meaning that loop 0 represents the inner loop.
-
-A hardware loop is subject to the following constraints:
-
--  Minimum of 2 instructions in the loop body.
-
--  Loop counter has to be bigger than 0, since the loop body is always
-   entered at least once.
+In the following tables, the HWLoop instructions are reported.
+In assembly, **L** is referred by x0 or x1.
 
 Operations
 ^^^^^^^^^^
 
-**Long Hardware Loop Setup instructions** 
+**Long Hardware Loop Setup instructions**
 
 +----------------------------------------------+-----------------------+----------------------------------+
 | **Mnemonic**                                 | **Description**       |                                  |
