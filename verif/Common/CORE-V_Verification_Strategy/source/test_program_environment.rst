@@ -8,6 +8,11 @@ test program in the CORE-V verification environments. The current version of
 this document is specific to the CV32E40P. Further versions will be sufficiently
 generic to encompass all CORE-V cores.
 
+Software teams will generally use the term **Board Support Package** or BSP to
+refer to what this document calls the **Test-Program Environment** or TPE.  If
+you are familiar with BSPs then you may consider that term interchangable with TPE
+for the remainder of the discussion below.
+
 Recall from :ref:`sim_tests` that a “test program” is set of RISC-V instructions
 that are loaded into the testbench memory and executed by the core RTL model.
 Test-program are typically written in C or RISC-V assembler and can be either

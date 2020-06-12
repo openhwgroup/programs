@@ -61,12 +61,25 @@ Definition of Terms
 |             | compiles C and/or RISC-V Assembly source files into ELF            |
 |             | files.                                                             |
 +-------------+--------------------------------------------------------------------+
-| SDK         | Software Developers Toolkit. Also, riscv-gcc-tool-chain.           |
+| SDK         | Software Developers Toolkit.                                       |
 |             | A set of software tools used to compile C and/or RISC-V            |
 |             | assembler code into an executable format. In the case of           |
 |             | the CV32E and CV64A, this includes the supported RISC-V            |
 |             | ISA compliant instructions, plus a set of XPULP extended           |
 |             | instructions.                                                      |
++-------------+--------------------------------------------------------------------+
+| Toolchain   | See SDK.                                                           |
++-------------+--------------------------------------------------------------------+
+| Test-Program| A software program, written in C or RISC-V assembly, that executes |
+|             | on the simulated RTL model of a core.  Test-Programs may be        |
+|             | manually written or machine generated (e.g. riscv-dv).             |
++-------------+--------------------------------------------------------------------+
+| TPE         | Test-Program Envionment. A set of support files, such as a C       |
+|             | runtime configuration (crt0.S), linker control script (link.ld),   |
+|             | etc. that are used to define the software envrionment used by a    |
+|             | test-program.                                                      |
++-------------+--------------------------------------------------------------------+
+| BSP         | Board Support Package.  A more widely used term for BSP.           |
 +-------------+--------------------------------------------------------------------+
 | Verification| Code, scripts, configuration files and Makefiles used in           |
 | Environment | pre-silicon verification. Typically a testbench is a               |
@@ -78,6 +91,13 @@ Definition of Terms
 |             | test plus the SystemVerilog Interfaces that connect to the         |
 |             | environment object. In common usage “testbench” can also           |
 |             | have the same meaning as verification environment.                 |
++-------------+--------------------------------------------------------------------+
+| Testcase    | In the context of the CORE-V UVM verification environment, a       |
+|             | a testcase is distinct from a test-program.  A testcase is extended|
+|             | from the `uvm_test` class and is used to control the simulation of |
+|             | the UVM environment.   A test-program is a set of instructions     |
+|             | loaded into the testbench memory and executed by the simulated     |
+|             | core.                                                              |
 +-------------+--------------------------------------------------------------------+
 | $PROJ_ROOT  | Local path of a cloned copy of a GitHub repository. An             |
 |             | example to illustrate:                                             |
