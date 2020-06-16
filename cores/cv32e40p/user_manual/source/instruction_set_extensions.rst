@@ -11,6 +11,9 @@ CV32E40P supports the PULP ISA Extensions (**Xpulp**) and optional Hardware Loop
  * Multiply-Accumulate extensions, see :ref:`pulp_multiply_accumulate`.
  * Optional support for Hardware Loops, see :ref:`pulp_simd`.
 
+To use such instructions, you need to compile your SW with the PULP GCC compiler.
+
+
 .. _pulp_load_store:
 
 Post-Incrementing Load & Store Instructions
@@ -230,16 +233,10 @@ command that does all of this in a single instruction. The short command
 has a limited range for the number of instructions contained in the loop
 and the loop must start in the next instruction after the setup
 instruction.
+Details about the HWLoop constraints are reported in :ref:`hwloop-specs`.
 
-Loop number 0 has higher priority than loop number 1 in a nested loop
-configuration, meaning that loop 0 represents the inner loop.
-
-A hardware loop is subject to the following constraints:
-
--  Minimum of 2 instructions in the loop body.
-
--  Loop counter has to be bigger than 0, since the loop body is always
-   entered at least once.
+In the following tables, the HWLoop instructions are reported.
+In assembly, **L** is referred by x0 or x1.
 
 Operations
 ^^^^^^^^^^
@@ -811,20 +808,39 @@ performed.
 SIMD instructions are available in two flavors:
 
 -  8-Bit, to perform four operations on the 4 bytes inside a 32-bit word
-   at the same time
+   at the same time (.b)
 
 -  16-Bit, to perform two operations on the 2 half-words inside a 32-bit
-   word at the same time
+   word at the same time (.h)
+
+All the operations are rounded to the specified bidwidth as for the original
+RISC-V arithmetic operations. This is described by the "and" operation with a
+MASK. No overflow or carry-out flags are generated as for the 32-Bit operations.
 
 Additionally, there are three modes that influence the second operand:
 
 1. Normal mode, vector-vector operation. Both operands, from rs1 and
    rs2, are treated as vectors of bytes or half-words.
 
+   e.g. pv.add.h x3,x2,x1 performs:
+
+    x3[31:16] = x2[31:16] + x1[31:16]
+
+    x3[15: 0] = x2[15: 0] + x1[15: 0]
+
+
 2. Scalar replication mode (.sc), vector-scalar operation. Operand 1 is
    treated as a vector, while operand 2 is treated as a scalar and
    replicated two or four times to form a complete vector. The LSP is
    used for this purpose.
+
+   e.g. pv.add.sc.h x3,x2,x1 performs:
+
+    x3[31:16] = x2[31:16] + x1[15: 0]
+
+    x3[15: 0] = x2[15: 0] + x1[15: 0]
+
+
 
 3. Immediate scalar replication mode (.sci), vector-scalar operation.
    Operand 1 is treated as vector, while operand 2 is treated as a
@@ -832,11 +848,22 @@ Additionally, there are three modes that influence the second operand:
    zero-extended, depending on the operation. If not specified, the
    immediate is sign-extended.
 
+   e.g. pv.add.sci.h x3,x2,0xDA performs:
+
+    x3[31:16] = x2[31:16] + 0xFFDA
+
+    x3[15: 0] = x2[15: 0] + 0xFFDA
+
+In the following Table, the index i ranges from 0 to 1 for 16-Bit
+operations and from 0 to 3 for 8-Bit operations.
+
+- The index 0 is 15:0  for 16-Bit operations, or   7:0 for 8-Bit operations.
+- The index 1 is 31:16 for 16-Bit operations, or  15:8 for 8-Bit operations.
+- The index 2 is 23:16 for 8-Bit operations.
+- The index 3 is 31:24 for 8-Bit operations.
+
 SIMD ALU Operations
 ^^^^^^^^^^^^^^^^^^^
-
-General ALU Instructions
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 +---------------------------------------+---------------------------------------------------------------------------------------+
 | **Mnemonic**                          | **Description**                                                                       |
@@ -847,7 +874,7 @@ General ALU Instructions
 +---------------------------------------+---------------------------------------------------------------------------------------+
 | **pv.sub[.sc,.sci]{.h,.b}**           | rD[i] = (rs1[i] - op2[i]) & 0xFFFF                                                    |
 +---------------------------------------+---------------------------------------------------------------------------------------+
-| **pv.sub{.div2,.div4, .div8}**        | rD[i] = ((rs1[i] – rs2[i]) & 0xFFFF)>>{1,2,3}                                         |
+| **pv.sub{.div2,.div4, .div8}**        | rD[i] = ((rs1[i] – op2[i]) & 0xFFFF)>>{1,2,3}                                         |
 +---------------------------------------+---------------------------------------------------------------------------------------+
 | **pv.avg[.sc,.sci]{.h,.b}**           | rD[i] = ((rs1[i] + op2[i]) & {0xFFFF, 0xFF}) >> 1                                     |
 |                                       | Note: Arithmetic right shift                                                          |
@@ -1487,7 +1514,7 @@ SIMD Complex-number Operations
 
 SIMD Complex-number operations are extra instructions
 that uses the packed-SIMD extentions to represent Complex-numbers.
-These extentions use only the half-words mode.
+These extentions use only the half-words mode and only operand in registers.
 A number C = {Re, Im} is represented as a vector of two 16-Bits signed numbers.
 C[0] is the real part [15:0], C[1] is the
 imaginary part [31:16].

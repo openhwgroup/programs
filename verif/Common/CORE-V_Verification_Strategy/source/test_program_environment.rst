@@ -8,6 +8,11 @@ test program in the CORE-V verification environments. The current version of
 this document is specific to the CV32E40P. Further versions will be sufficiently
 generic to encompass all CORE-V cores.
 
+Software teams will generally use the term **Board Support Package** or BSP to
+refer to what this document calls the **Test-Program Environment** or TPE.  If
+you are familiar with BSPs then you may consider that term interchangable with TPE
+for the remainder of the discussion below.
+
 Recall from :ref:`sim_tests` that a “test program” is set of RISC-V instructions
 that are loaded into the testbench memory and executed by the core RTL model.
 Test-program are typically written in C or RISC-V assembler and can be either
@@ -43,15 +48,15 @@ Hardware Environment
 --------------------
 
 The testbench supports an instruction and data memory and a set of memory mapped
-virtual peripherals.  The address range for I&D memory is 0..0x10_0000 (1Mbyte)
-for the UVM testbench and 0..0x400_0000 (4Mbytes) for the core testbench [16]_.
+virtual peripherals.  The address range for I&D memory is 0x0..0x40_0000 (4Mbyte)
+for both the core and UVM testbenches.
 The virtual peripherals start at address 0x1000_0000. The core will start
 fetching instructions from the address provided on its **boot_addr_i** input. In
 addition, if debug_req_i is asserted, execution jumps to **DM_HALTADDR** (a
 SystemVerilog parameter). This hardware setup constrains the test-program in
 important ways:
 
-- The entire program, including data sections and exception tables must fit in a 1Mbyte space starting at address 0.
+- The entire program, including data sections and exception tables must fit in a 4Mbyte space starting at address 0.
 - The first instruction of the program must be at the address defined by **boot_addr_i**.
 - The address DM_HALTADDRESS must exist in the memory map, it should not be stomped on by the test-program and there should be something there to execute that will produce a predictable result.
 - The program must "know" about the addressing and function of the virtual peripherals (using the peripherals is optional).
@@ -163,12 +168,9 @@ C Runtime
 While it is assumed that the vast majority of test programs written for CORE-V
 pre-silicon verification will be captured as assembly (\*.S) programs, The
 environment provides support for minimalist C programs via a C runtime
-file in *./cv32/tests/core/custom/crt0.S* [17]_.  crt0.S performs the
+file in *./cv32/bsp/crt0.S* [16]_.  crt0.S performs the
 bare minimum required to run a C program.  Note that **support for command-line
 arguments is deliberately not supported**.
 
 .. [16]
-   This needs to be fixed - they should match.
-
-.. [17]
-   This will be moved in the near future.
+   Additional information on the "Board Support Package" will be added to this document in the near future.
