@@ -1,3 +1,45 @@
+June 17, 2020
+=============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson<br>
+**Thales:** Jerome Quevremont, Jean Roch Coulon, Sebastien Jacq
+
+Topics:
+--------
+1. Review of the VTG meeting held on Tuesday.
+
+2. Update on the transfer of Ariane from the PULP team to OpenHW
+
+- Ariane re-branded as CVA6 with two planned variants, CV32A6 and CV64A6.
+
+3. Discussion of Instruction Set Generators
+
+- The decision to use the Google (riscv-dv) generator for CV32E40P was driven primarily by schedule as neither
+the core-v-isg or FORCE-RISCV generators currently support the 32-bit ISA.
+- CVA6 also needs 32-bit support as the CV32A6 varient is likely to be done first.
+- In order to evaluate core-v-isg or FORCE-RISCV for use in the CVA6 project, people will need to be identified to add 32-bit support.
+- Both Mike and the Thales team agree that all variants of the CVA6 should use the same generator and that riscv-dv is the default generator until plans for 32-bit support of other generators can be put in place.
+
+4. Software toolchain
+
+- Thales is in a position to make a contribution to the CORE-V toolchain on behalf of OpenHW.
+- Mike recommended reaching out directly to Yunhai Shang (Alibaba) and Jermery Bennett (Embecosm).
+
+5. Common Testbench for CVE4 and CVA6 variants.
+
+- The current strategy recommended by OpenHW is to use a single verification project (core-v-verif) for all CORE-V cores.
+- Low level testbench modules are core-specific, but the environment and its components are re-used across cores.
+- Thales agrees with this strategy, but will require support to implement it.
+- Lacking this support, the Thales team may consider creating a separate testbench for CVA6.
+
+6. Update on RISC-V Compliance
+
+- Sebastien will create a pull-request to a development branch.
+- We will likely need assistance from Craig Blackmore on BSP/toolchain issues.
+
 May 14, 2020
 ============
 
