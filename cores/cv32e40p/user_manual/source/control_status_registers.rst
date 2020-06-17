@@ -28,7 +28,7 @@ any overhead that we do not explicitly need.
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
 | 01                | 11        | 11         | 010000     | 0x7D0         | MIE1          | R/W   | Machine Interrupt Enable 1 Register                    |
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
-| 01                | 11        | 11         | 010010     | 0x7D2         | MIP1          | R     | Machine Interrupt Pending 1 Register                   |
+| 01                | 11        | 11         | 010001     | 0x7D1         | MIP1          | R     | Machine Interrupt Pending 1 Register                   |
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
 | 01                | 11        | 10         | 110000     | 0x7C0         | LPSTART0      | R/W   | Hardware Loop 0 Start (if PULP_HWLP is enabled)        |
 +-------------------+-----------+------------+------------+---------------+---------------+-------+--------------------------------------------------------+
@@ -117,9 +117,9 @@ Reset Value: 0x0000_1800
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 4           | R/W       | **Previous User Interrupt Enable:** If user mode is enabled, when an exception is encountered, UPIE will be set to UIE. When the uret instruction is executed, the value of UPIE will be stored to UIE. *Note that PULP/issimo does not support USER interrupts.*   |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 3           | R/W       | **Machine Interrupt Enable:** If you want to enable interrupt handling in your exception handler, set the Interrupt Enable MIE to 1’b1 inside your handler code.                                                                                                    |
+| 3           | R/W       | **Machine Interrupt Enable:** If you want to enable interrupt handling in your exception handler, set the Interrupt Enable MIE to 1 inside your handler code.                                                                                                       |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 0           | R/W       | **User Interrupt Enable:** If you want to enable user level interrupt handling in your exception handler, set the Interrupt Enable UIE to 1’b1 inside your handler code. *Note that PULP/issimo does not support USER interrupts.*                                  |
+| 0           | R/W       | **User Interrupt Enable:** If you want to enable user level interrupt handling in your exception handler, set the Interrupt Enable UIE to 1 inside your handler code. *Note that PULP/issimo does not support USER interrupts.*                                     |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. only:: USER
@@ -136,9 +136,9 @@ Reset Value: 0x0000_1800
   +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
   |   Bit #     |   R/W     |   Description                                                                                                                                                                                                                                                       |
   +=============+===========+=====================================================================================================================================================================================================================================================================+
-  | 4           | R/W       | **Previous User Interrupt Enable:** If user mode is enabled, when an exception is encountered, UPIE will be set to UIE. When the uret instruction is executed, the value of UPIE will be stored to UIE. *Note that PULP/issimo does not support USER interrupts.*   |
+  | 4           | R/W       | **Previous User Interrupt Enable:** If user mode is enabled, when an exception is encountered, UPIE will be set to UIE. When the uret instruction is executed, the value of UPIE will be stored to UIE.                                                             |
   +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-  | 0           | R/W       | **User Interrupt Enable:** If you want to enable user level interrupt handling in your exception handler, set the Interrupt Enable UIE to 1’b1 inside your handler code. *Note that PULP/issimo does not support USER interrupts.*                                  |
+  | 0           | R/W       | **User Interrupt Enable:** If you want to enable user level interrupt handling in your exception handler, set the Interrupt Enable UIE to 1 inside your handler code.                                                                                               |
   +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Machine Interrupt Enable Register (MIE)
@@ -153,13 +153,13 @@ Detailed:
 +-------------+-----------+------------------------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                                            |
 +=============+===========+==========================================================================================+
-| 31:16       | R/W       | Machine Fast Interrupt Enables: Set bit x+16 to enable fast interrupt irq\_fast\_i[x].   |
+| 31:16       | R/W       | Machine Fast Interrupt Enables: Set bit x to enable interrupt irq_i[x].                  |
 +-------------+-----------+------------------------------------------------------------------------------------------+
-| 11          | R/W       | **Machine External Interrupt Enable (MEIE)**: If set, irq\_external\_i is enabled.       |
+| 11          | R/W       | **Machine External Interrupt Enable (MEIE)**: If set, irq_i[11] is enabled.              |
 +-------------+-----------+------------------------------------------------------------------------------------------+
-| 7           | R/W       | **Machine Timer Interrupt Enable (MTIE)**: If set, irq\_timer\_i is enabled.             |
+| 7           | R/W       | **Machine Timer Interrupt Enable (MTIE)**: If set, irq_i[7] is enabled.                  |
 +-------------+-----------+------------------------------------------------------------------------------------------+
-| 3           | R/W       | **Machine Software Interrupt Enable (MSIE)**: if set, irq\_software\_i is enabled.       |
+| 3           | R/W       | **Machine Software Interrupt Enable (MSIE)**: if set, irq_i[3] is enabled.               |
 +-------------+-----------+------------------------------------------------------------------------------------------+
 
 Machine Interrupt Pending Register (MIP)
@@ -174,13 +174,13 @@ Detailed:
 +-------------+-----------+---------------------------------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                                                     |
 +=============+===========+===================================================================================================+
-| 31:16       | R         | Machine Fast Interrupts Pending: If bit x+16 is set, fast interrupt irq\_fast\_i[x] is pending.   |
+| 31:16       | R         | Machine Fast Interrupts Pending: If bit x is set, interrupt irq_i[x] is pending.                  |
 +-------------+-----------+---------------------------------------------------------------------------------------------------+
-| 11          | R         | **Machine External Interrupt Pending (MEIP)**: If set, irq\_external\_i is pending.               |
+| 11          | R         | **Machine External Interrupt Pending (MEIP)**: If set, irq_i[11] is pending.                      |
 +-------------+-----------+---------------------------------------------------------------------------------------------------+
-| 7           | R         | **Machine Timer Interrupt Pending (MTIP)**: If set, irq\_timer\_i is pending.                     |
+| 7           | R         | **Machine Timer Interrupt Pending (MTIP)**: If set, irq_i[7] is pending.                          |
 +-------------+-----------+---------------------------------------------------------------------------------------------------+
-| 3           | R         | **Machine Software Interrupt Pending (MSIP)**: if set, irq\_software\_i is pending.               |
+| 3           | R         | **Machine Software Interrupt Pending (MSIP)**: if set, irq_i[3] is pending.                       |
 +-------------+-----------+---------------------------------------------------------------------------------------------------+
 
 Machine Interrupt Enable Register 1 (MIE1)
@@ -195,13 +195,13 @@ Detailed:
 +-------------+-----------+-------------------------------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                                                   |
 +=============+===========+=================================================================================================+
-| 31:0        | R/W       | Machine Fast Interrupt Enable 1: Set bit x to enable fast interrupt irq\_fast\_i[16+x].         |
+| 31:0        | R/W       | Machine Fast Interrupt Enable 1: Set bit x to enable interrupt irq_i[32+x].                     |
 +-------------+-----------+-------------------------------------------------------------------------------------------------+
 
 Machine Interrupt Pending Register 1 (MIP1)
 -------------------------------------------
 
-CSR Address: 0x7D2
+CSR Address: 0x7D1
 
 Reset Value: 0x0000_0000
 
@@ -210,7 +210,7 @@ Detailed:
 +-------------+-----------+-----------------------------------------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                                                             |
 +=============+===========+===========================================================================================================+
-| 31:0        | R         | Machine Fast Interrupt Pending 1: If bit x is set, fast interrupt irq\_fast\_i[16+x] is pending.          |
+| 31:0        | R         | Machine Fast Interrupt Pending 1: If bit x is set, interrupt irq_i[32+x] is pending.                      |
 +-------------+-----------+-----------------------------------------------------------------------------------------------------------+
 
 
