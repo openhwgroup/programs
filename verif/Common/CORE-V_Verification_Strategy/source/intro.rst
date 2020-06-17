@@ -31,6 +31,24 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+CORE-V Projects
+---------------
+
+The `core-v-verif <https://github.com/openhwgroup/core-v-verif>`_ project is being
+developed to verify all CORE-V cores.  The cores themselves are in their own git
+repositories.  Below are links to the RTL sources and documentation for CORE-V
+cores currently in development:
+
+- `CV32E40P RTL source <https://github.com/openhwgroup/cv32e40p>`_
+- `CV32E40P user manual <https://core-v-docs-verif-strat.readthedocs.io/projects/cv32e40p_um/en/latest/index.html>`_
+- `CVA6 RTL source <https://github.com/openhwgroup/cva6>`_
+
+The OpenHW Group also maintains multiple repositories for stand-alone verification
+components.  At the time of this writing two are up and running (more are planned):
+
+- `core-v-isg <https://github.com/openhwgroup/core-v-isg>`_ Instruction stream generator denotated by NVIDIA.
+- `FORCE-RISCV <https://github.com/openhwgroup/force-riscv>`_ Instruction stream generator denotated by Futurewei.
+
 Definition of Terms
 -------------------
 
@@ -38,9 +56,6 @@ Definition of Terms
 | Term        | Defintion                                                          |
 +=============+====================================================================+
 | CORE-V      | A family of RISC-V cores developed by the OpenHW Group.            |
-|             | The CV32E and the CV64A are the first two members of that          |
-|             | that family. The CV32E has two planned variants, the               |
-|             | CV32E40P and CV32E40.                                              |
 +-------------+--------------------------------------------------------------------+
 | Member      | A company or organization that signs-on with the OpenHW            |
 | Company     | Group and contributes resources (capital, people,                  |
@@ -193,7 +208,7 @@ and support.
    https://github.com/openhwgroup/core-v-cores.
 
 .. [3]
-   CV64A is not forks of the Ariane. The GitHub repository
+   CVA6 is not a fork of the Ariane. The GitHub repository
    https://github.com/pulp-platform/ariane was moved to
-   https://github.com/openhwgroup/core-v-cores.
+   https://github.com/openhwgroup/cva6.
 
