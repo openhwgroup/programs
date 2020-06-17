@@ -19,7 +19,7 @@ Topics:
 
 - The decision to use the Google (riscv-dv) generator for CV32E40P was driven primarily by schedule as neither
 the core-v-isg or FORCE-RISCV generators currently support the 32-bit ISA.
-- CVA6 also needs 32-bit support as the CV32A6 varient is likely to be done first.
+- CVA6 also needs 32-bit support as the CV32A6 variant is on the roadmap along with CV64A6.
 - In order to evaluate core-v-isg or FORCE-RISCV for use in the CVA6 project, people will need to be identified to add 32-bit support.
 - Both Mike and the Thales team agree that all variants of the CVA6 should use the same generator and that riscv-dv is the default generator until plans for 32-bit support of other generators can be put in place.
 
