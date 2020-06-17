@@ -59,10 +59,7 @@ Instantiation Template
       .apu_master_flags_i       (),
 
        // Interrupt interface
-      .irq_software_i           (),
-      .irq_timer_i              (),
-      .irq_external_i           (),
-      .irq_fast_i               (),
+      .irq_i                    (),
       .irq_ack_o                (),
       .irq_id_o                 (),
 
