@@ -145,13 +145,7 @@ Interfaces
 |                         |                         |     | Once fetching has been enabled the value   |
 |                         |                         |     | ``fetch_enable_i`` is ignored.             |
 +-------------------------+-------------------------+-----+--------------------------------------------+
-| ``core_sleep_o``        | 1                       | out | Core blocked on WFI with no outstanding    |
-|                         |                         |     | data or instruction accesses. Deasserts    |
-|                         |                         |     | if an external event (``irq_*`` or         |
-|                         |                         |     | ``debug_*`` ) wakes the core up. The       |
-|                         |                         |     | ``core_sleep_o`` signal can be used as an  |
-|                         |                         |     | indication for whether ``clk_i`` is        |
-|                         |                         |     | required                                   |
+| ``core_sleep_o``        | 1                       | out | Core is sleeping, see :ref:`sleep_unit`.   |
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``clock_en_i``          | 1                       | in  | Clock enable (only used when               |
 |                         |                         |     | ``PULP_CLUSTER`` = 1), see                 |
