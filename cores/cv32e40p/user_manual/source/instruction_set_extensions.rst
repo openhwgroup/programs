@@ -16,8 +16,8 @@ To use such instructions, you need to compile your SW with the PULP GCC compiler
 
 .. _pulp_load_store:
 
-Post-Incrementing Load & Store Instructions
--------------------------------------------
+Post-Incrementing Load & Store Instructions and Register-Register Load & Store Instructions
+-------------------------------------------------------------------------------------------
 
 Post-Incrementing load and store instructions perform a load, or a
 store, respectively, while at the same time incrementing the address
@@ -219,6 +219,35 @@ Encoding
 +------------+----------+--------+----------+--------+------------+---------------------------+
 | 000 0000   | src      | base   | 110      | offset | 010 0011   | **p.sw rs2, rs3(rs1)**    |
 +------------+----------+--------+----------+--------+------------+---------------------------+
+
+Event Load Instructions
+-----------------------
+
+The event load instruction **p.elw** is only supported if the ``PULP_CLUSTER`` parameter is set to 1.
+The event load performs a load word and can cause the CV32E40P to enter a sleep state as explained
+in :ref:`pulp_cluster`.
+
+Load Operations
+^^^^^^^^^^^^^^^
+
++----------------------------------------------------+-------------------------------+
+| **Mnemonic**                                       | **Description**               |
++====================================================+===============================+
+| **Event Load**                                     |                               |
++----------------------------------------------------+-------------------------------+
+| **p.elw rD, Imm(rs1)**                             | rD = Mem32(Sext(Imm)+rs1)     |
++----------------------------------------------------+-------------------------------+
+
+Encoding
+~~~~~~~~
+
++-------------+--------+----------+--------+------------+---------------------------+
+| 31   :   20 | 19 :15 | 14  : 12 | 11 :07 | 06  :   00 |                           |
++-------------+--------+----------+--------+------------+---------------------------+
+| imm[11:0]   | rs1    | funct3   | rd     | opcode     | Mnemonic                  |
++=============+========+==========+========+============+===========================+
+| offset      | base   | 110      | dest   | 000 0011   | **p.elw rD, Imm(rs1)**    |
++-------------+--------+----------+--------+------------+---------------------------+
 
 .. _pulp_hardware_loop:
 
