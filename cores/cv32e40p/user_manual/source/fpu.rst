@@ -93,48 +93,16 @@ FP CSR
 ------
 
 When using floating-point extensions the standard specifies a
-floating-point status and control register (fcsr) which contains the
+floating-point status and control register (:ref:`csr-fcsr`) which contains the
 exceptions that occurred since it was last reset and the rounding mode.
-fflags and frm can be accessed directly or over fcsr which is mapped to
+:ref:`csr-fflags` and :ref:`csr-frm` can be accessed directly or via :ref:`csr-fcsr` which is mapped to
 those two registers.
 
 Since CV32E40P includes an iterative div/sqrt unit, its precision and
-latency can be controlled over a custom csr (fprec). This allows faster
+latency can be controlled via the custom :ref:`csr-fprec` CSR. This allows faster
 division / square-root operations at the lower precision. By default,
 the single-precision equivalents are computed with a latency of 8
-cycles.
-
-+---------------------------------------------------------+-------------------+----------+-------+---------------------------------------------------------------------------------------+
-|   CSR Address                                           |                   |          |       |                                                                                       |
-+-------------------+-----------+------------+------------+-------------------+----------+-------+---------------------------------------------------------------------------------------+
-|   11:10           |   9:8     |   7:6      |   5:0      |   Hex             | Name     | Acc.  | Description                                                                           |
-+===================+===========+============+============+===================+==========+=======+=======================================================================================+
-| 00                | 00        | 00         | 00001      | 0x001             | fflags   | R/W   | Floating-point accrued exceptions                                                     |
-+-------------------+-----------+------------+------------+-------------------+----------+-------+---------------------------------------------------------------------------------------+
-| 00                | 00        | 00         | 00010      | 0x002             | frm      | R/W   | Floating-point dynamic rounding mode                                                  |
-+-------------------+-----------+------------+------------+-------------------+----------+-------+---------------------------------------------------------------------------------------+
-| 00                | 00        | 00         | 00011      | 0x003             | fcsr     | R/W   | Floating-point control and status register                                            |
-+-------------------+-----------+------------+------------+-------------------+----------+-------+---------------------------------------------------------------------------------------+
-| 00                | 00        | 00         | 00110      | 0x006             | fprec    | R/W   | Custom flag which controls the precision and latency of the iterative div/sqrt unit   |
-+-------------------+-----------+------------+------------+-------------------+----------+-------+---------------------------------------------------------------------------------------+
-
-Table 4: FP related CSRs
-
-+--------------------+----------------------------------------------------------------+---------------+
-|   fprec value      |   Precision                                                    |   Latency     |
-+====================+================================================================+===============+
-| 0                  | Default value: single precision                                | 8             |
-+--------------------+----------------------------------------------------------------+---------------+
-| 8 – 11             | Computes as many mantissa bits as specified in “fprec value”   | 5             |
-+--------------------+----------------------------------------------------------------+---------------+
-| 12 – 15            |                                                                | 6             |
-+--------------------+----------------------------------------------------------------+---------------+
-| 16 – 19            |                                                                | 7             |
-+--------------------+----------------------------------------------------------------+---------------+
-| 20 – 23            |                                                                | 8             |
-+--------------------+----------------------------------------------------------------+---------------+
-
-Table 5: Custom CSR to control the precision of FP DIV/SQRT operations
+cycles. The FPU CSRs are further described in :ref:`cs-registers`.
 
 Floating-point Performance Counters:
 ------------------------------------
