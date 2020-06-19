@@ -137,18 +137,18 @@ Filenames and filepaths are in italics: *./cv32/README.md*.
 CORE-V Genealogy
 ----------------
 
-The first two members the OpenHW Group’s CORE-V family of RISC-V cores
-are the CV32E and CV64A. Currently, two variants of the CV32E are
+The first two projects within the OpenHW Group’s CORE-V family of RISC-V cores
+are the CV32E4 and CVA6. Currently, two variants of the CV32E4 are
 defined: the CV32E40P and CV32E40. The OpenHW Group’s work builds on
 several RISC-V open-source projects, particularly the RI5CY and Ariane
-projects from PULP-Platform. CV32E is a derived of the RI5CY
-project [2]_, and CV64A is derived from Ariane [3]_. In addition, the
+projects from PULP-Platform. CV32E40(P) is a derived of the RI5CY
+project [2]_, and CVA6 is derived from Ariane [3]_. In addition, the
 verification environment for CORE-V leverages previous work done by
 lowRISC and others for the Ibex project, which is a fork of the
 PULP-Platform’s zero-riscy core.
 
 This is germane to this discussion because the architecture and
-implement of the verification environments for both CV32E and CV64A are
+implement of the verification environments for both CV32E40(P) and CVA6 are
 strongly influenced by the development history of these cores. This is
 discussed in more detailed in :ref:`pulp-verif`.
 
@@ -191,9 +191,9 @@ using Verilator, an open-source software tool which translates a subset
 of the SystemVerilog language to a C++ or SystemC cycle-accurate
 behavioural model. Continued support for Verilator will be on a
 best-effort basis, and the "core" testbench is not considered a production
-verification environment that is capable of fully verifying the CV32 cores.
+verification environment that is capable of fully verifying the CV32E40(P) cores.
 
-The specific EDA SystemVerilog simulators used by OpenHW are Metrics
+The specific SystemVerilog simulators used by OpenHW are Metrics
 **dsim** and Cadence **Xcelium**, so its a very safe bet that the
 Makefiles will always support rules to compile/simulate with these
 tools. Use of other commercial tools is predicated on community interest
@@ -203,7 +203,7 @@ and support.
    Memory interfaces, Debug&Trace capability, Interrupts, etc.
 
 .. [2]
-   Note that CV32E is not a fork of RI5CY. Rather, the GitHub repository
+   Note that CV32E40P is not a fork of RI5CY. Rather, the GitHub repository
    https://github.com/pulp-platform/riscv was moved to
    https://github.com/openhwgroup/core-v-cores.
 
