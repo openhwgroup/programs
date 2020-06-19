@@ -132,6 +132,14 @@ crucial to select the flip-flop based register file. The user needs to provide
 a technology specific implementation of a clock gating cell as described 
 in :ref:`clock-gating-cell`. 
 
+Verification
+------------
+
+The verification environment (testbenches, testcases, etc.) for the CV32E40P
+core can be found at  `core-v-verif <https://github.com/openhwgroup/core-v-verif>`_.
+It is recommended that you start by reviewing the
+`CORE-V Verification Strategy <https://core-v-docs-verif-strat.readthedocs.io/en/latest/>`_.
+
 Contents
 --------
 
