@@ -576,40 +576,6 @@ Detailed:
 | 3           | R         | **Machine Software Interrupt Pending (MSIP)**: if set, irq_i[3] is pending.                       |
 +-------------+-----------+---------------------------------------------------------------------------------------------------+
 
-.. only:: PMP
-
-  PMP Configuration (``pmpcfgx``)
-  -------------------------------
-
-  CSR Address: 0x3A{0,1,2,3}
-
-  Reset Value: 0x0000_0000
-
-  +----------+
-  | 31 : 0   |
-  +==========+
-  | PMPCFGx  |
-  +----------+
-
-  If the PMP is enabled, these four registers contain the configuration of
-  the PMP as specified by the official privileged spec 1.10.
-
-  PMP Address (``pmpaddrx``)
-  --------------------------
-
-  CSR Address: 0x3B{0x0, 0x1, …. 0xF}
-
-  Reset Value: 0x0000_0000
-
-  +----------+
-  | 31 : 0   |
-  +==========+
-  | PMPADDRx |
-  +----------+
-
-  If the PMP is enabled, these sixteen registers contain the addresses of
-  the PMP as specified by the official privileged spec 1.10.
-
 .. _csr-tselect:
 
 Trigger Select Register (``tselect``)
@@ -937,8 +903,8 @@ Detailed:
 | 31:0        | R/W       | Writes are ignored; reads return 0.                                    |
 +-------------+-----------+------------------------------------------------------------------------+
 
- Machine Architecture ID (``marchid``)
---------------------------------------
+Machine Architecture ID (``marchid``)
+-------------------------------------
 
 CSR Address: 0xF12
 
@@ -1078,3 +1044,38 @@ Detailed:
   +-------------+-----------+------------------------------------------------------------------------------------+
 
   Table 12: UCAUSE
+
+.. only:: PMP
+
+  PMP Configuration (``pmpcfgx``)
+  -------------------------------
+
+  CSR Address: 0x3A{0,1,2,3}
+
+  Reset Value: 0x0000_0000
+
+  +----------+
+  | 31 : 0   |
+  +==========+
+  | PMPCFGx  |
+  +----------+
+
+  If the PMP is enabled, these four registers contain the configuration of
+  the PMP as specified by the official privileged spec 1.10.
+
+  PMP Address (``pmpaddrx``)
+  --------------------------
+
+  CSR Address: 0x3B{0x0, 0x1, …. 0xF}
+
+  Reset Value: 0x0000_0000
+
+  +----------+
+  | 31 : 0   |
+  +==========+
+  | PMPADDRx |
+  +----------+
+
+  If the PMP is enabled, these sixteen registers contain the addresses of
+  the PMP as specified by the official privileged spec 1.10.
+
