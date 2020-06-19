@@ -1,11 +1,11 @@
 CORE-V Formal Verification
 ==========================
 
-Formal verification of the CV32E and CV64A cores is a joint effort of
+Formal verification of the CV32E and CVA6 cores is a joint effort of
 the OpenHW Group and OneSpin Solutions with the support of multiple
 Active Contributors (AC) from other OpenHW Group member companies. This
 section specifies the goals, work items, workflow and expected outcomes
-of CV32E and CV64A formal verification.
+of CV32E and CVA6 formal verification.
 
 Goals
 -----
@@ -79,11 +79,11 @@ At the time of this writing [17]_, the completeness of the RV32/64IMAC
 Sail models is not known, but is believed to be complete. Extensions of
 the models will be required to support Zifencei, Zicsr, Counters and the
 XPULP extensions. OpenHW may also wish to include User Mode and PMP
-support as well, especially for the CV64A. Its a given that much or all
+support as well, especially for the CVA6. Its a given that much or all
 of the work to create these extensions to the Sail models will need to
 be done by the OpenHW Group.
 
-Given that CV32E and CV64A projects are leveraging pre-existing
+Given that CV32E and CVA6 projects are leveraging pre-existing
 specifications and models, it should be possible for the
 micro-architecture and Sail models to be developed in parallel and by
 different ACs.
@@ -133,14 +133,14 @@ OpenHW Group to develop and deliver:
    Schiavone, Director of Engineering for the Cores Task Group.
 -  **Sail models** of each core’s ISA. This activity will be managed by
    the Verification Task Group. The expectation is that this
-   pre-existing Sail model can be extended for both the CV32E and CV64A
+   pre-existing Sail model can be extended for both the CV32E and CVA6
    cores, including the PULP ISA extensions.
 
 Compute and Tool Resources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is rows #4 and #5 in , above. Tool licenses in sufficient numbers
-to allow for "reasonable" regression turn-around time on CV64A RTL.
+to allow for "reasonable" regression turn-around time on CVA6 RTL.
 These tools will be installed on VMs on the IBM Cloud and will only be
 accessible by employees/contractors of the OpenHW Group or select ACs
 actively involved in formal verification work.
@@ -149,7 +149,7 @@ Formal Testplans
 ~~~~~~~~~~~~~~~~
 
 OpenHW and OneSpin will jointly develop Formal Testplans for both the
-CV32E and CV64A. The high-level goals of the FTBs will be two-fold:
+CV32E and CVA6. The high-level goals of the FTBs will be two-fold:
 
 1. Prove that the core designs conform to the RISC-V+Pulp-extended ISA.
    Specifically, every instruction must:
@@ -194,7 +194,7 @@ is considered complete when all assumptions, assertions and covers are
 coded.
 
 OneSpin will initiate development of Formal testbenches (FTB) for CV32E
-and CV64A as soon as possible. These FTBs will be open-source, ideally
+and CVA6 as soon as possible. These FTBs will be open-source, ideally
 implemented in SystemVerilog, and may be based on OneSpin’s RISC-V
 Verification App [18]_.
 

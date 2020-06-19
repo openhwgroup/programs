@@ -3,9 +3,9 @@
 PULP-Platform Simulation Verification
 =====================================
 
-Before discussing the verification strategy of the CV32E and CV64A, we
+Before discussing the verification strategy of the CV32E and CVA6, we
 need to consider the starting point provided to OpenHW by the RI5CY
-(CV32E) and Ariane (CV64A) cores from PULP-Platform. It is also
+(CV32E) and Ariane (CVA6) cores from PULP-Platform. It is also
 informative to consider the on-going Ibex project, another open-source
 RISC-V project derived from the ‘zero-riscy’ PULP-Platform core.
 
@@ -15,8 +15,8 @@ Those wanting more background should read the :ref:`ri5cy` and
 :ref:`ariane` sub-sections of this chapter which review the
 status of RI5CY and Ariane testbenches in sufficient detail to provide
 the necessary context for the :ref:`cv32_env` and
-:ref:`cv64_env` chapters, which detail how the RI5CY and Ariane simulation
-environments will be migrated to CV32E and CV64A simulation
+:ref:`cva6_env` chapters, which detail how the RI5CY and Ariane simulation
+environments will be migrated to CV32E and CVA6 simulation
 environments.
 
 .. _exec_summary:
@@ -37,10 +37,10 @@ the verification environment developed for the Ibex core and will also
 be able to run hand-coded code-segments (programs) such as those
 developed by the RISC-V Compliance Task Group.
 
-In the case of CV64A, the existing verification environment developed
+In the case of CVA6, the existing verification environment developed
 for Ariane is not yet mature enough for OpenHW to use. The
 recommendation here is to build a UVM environment from scratch for the
-CV64A. This environment will re-use many of the components developed for
+CVA6. This environment will re-use many of the components developed for
 the CV32E verification environment, and will have the same ability to
 run the RISC-V Compliance test-suite.
 
@@ -260,7 +260,7 @@ The rationale for undertaking such a task is twofold:
    verification environment, particularly software developers. Note that
    such tests can be difficult to debug if the self check indicates an
    error, but, for a more "mature" core design, such as the CV32E
-   (RI5CY) and CV64A (Ariane) they can provide a useful way to run
+   (RI5CY) and CVA6 (Ariane) they can provide a useful way to run
    ‘quick-and-dirty’ checks of specific core features.
 
 Waiting for two to three months for RI5CY core verification to re-start
@@ -313,23 +313,23 @@ configuration.*
 
 So, the (very) good news is that the Ariane core has been subjected to
 basic verification and extensive exercising in the FPGA prototype. The
-not-so-good news is that CV64A lacks a good starting point for its
+not-so-good news is that CVA6 lacks a good starting point for its
 verification efforts.
 
-Comments and Recommendations for CV64A Verification
+Comments and Recommendations for CVA6 Verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Given that the focus of the Ariane verification environment is based on
 a specific FPGA implementation that the OpenHW Group is unlikely to use
 and the lack of a library of existing testcases, it is recommended that
-a new UVM-based verification environment be developed for CV64A. This
+a new UVM-based verification environment be developed for CVA6. This
 would be a core-based verification environment as is envisioned for
 CV32E and not the mini-SoC environment currently used by Ariane.
 
 At the time of this writing it is not known if the UVM environment
-envisioned for CV32E can be easily extended for CV64A, thereby allowing
+envisioned for CV32E can be easily extended for CVA6, thereby allowing
 a single environment to support both, or completely independent
-environments for CV32E and CV64A will be required.
+environments for CV32E and CVA6 will be required.
 
 IBEX
 ----
@@ -350,7 +350,7 @@ OpenHW Group is not planning to verify this core on its own. However,
 the Ibex verification environment is the most mature of the three cores
 discussed here and its structure and implementation is the closest to
 the UVM constrained-random, coverage driven environment envisioned for
-CV32E and CV64A.
+CV32E and CVA6.
 
 The documentation associated with the Ibex core is the most mature of
 the three cores discussed and this is also true for the `Ibex
@@ -358,7 +358,7 @@ verification
 environment <https://ibex-core.readthedocs.io/en/latest/verification.html>`__,
 so it need not be repeated here.
 
-IBEX Impact on CV32E and CV64A Verification
+IBEX Impact on CV32E and CVA6 Verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Illustration 3 is a schematic of the Ibex UVM verification environment.  The
@@ -401,7 +401,7 @@ the compiler and ISS are coded in C/C++ so these components will be
 integrated using the SystemVerilog DPI. A new scoreboarding component to
 compare results from the ISS and RTL models will be required. It is
 expected that the *uvm_scoreboard* base class from the UVM library will
-be sufficient to meet the requirements of the CV32E and CV64A
+be sufficient to meet the requirements of the CV32E and CVA6
 environments with little or no extension.
 
 Refactoring the existing Ibex environment into a single UVM environment

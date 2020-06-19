@@ -81,7 +81,7 @@ as follows:
 
 The Instruction and Data memory interface is listed first for a reason.  This
 interface is generally the most core-specific.  For example, CV32E supports I&D
-interfaces that are AHB-like while CV64A supports AXI-like interfaces.  These
+interfaces that are AHB-like while CVA6 supports AXI-like interfaces.  These
 are significant difference and so the Testbench Layer deliberately hides this
 interface from the higher-level layers.  This is done in the "DUT Wrapper"
 module, see below.

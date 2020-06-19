@@ -8,7 +8,7 @@ environments are all UVM environments and the overall structure should
 be familiar to anyone with UVM experience. This section discusses the
 CORE-V-specific implementation details that affect test execution, and
 that are important to test writers. It attempts to be generic enough to
-apply to both the CV32E and CV64A environments.
+apply to both the CV32E and CVA6 environments.
 
 A unique feature of the CORE-V UVM environments is that a primary source
 of stimulus, and sometimes the only source of stimulus, comes in the

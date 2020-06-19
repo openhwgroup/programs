@@ -17,7 +17,7 @@ Editor: **Michael Thompson**
    pulp_verif
    corev_env
    cv32_env
-   cv64_env
+   cva6_env
    sim_tests
    test_program_environment
    formal

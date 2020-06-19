@@ -3,15 +3,15 @@ Introduction
 
 This document captures the methods, verification environment
 architectures and tools used to verify the first two members CORE-V
-family of RISC-V cores, the CV32E and CV64A.
+family of RISC-V cores, the CV32E and CVA6.
 
 The OpenHW Group will, together with its Member Companies, execute a
 complete, industrial grade pre-silicon verification of the first
-generation of CORE-V IP, the CV32E and CV64A cores, including their
+generation of CORE-V IP, the CV32E and CVA6 cores, including their
 execution environment [1]_. Experience has shown that “complete”
 verification requires the application of both dynamic (simulation, FPGA
 prototyping, emulation) and static (formal) verification techniques. All
-of these techniques will be applied to both CV32E and CV64A.
+of these techniques will be applied to both CV32E and CVA6.
 
 License
 -------
@@ -79,7 +79,7 @@ Definition of Terms
 | SDK         | Software Developers Toolkit.                                       |
 |             | A set of software tools used to compile C and/or RISC-V            |
 |             | assembler code into an executable format. In the case of           |
-|             | the CV32E and CV64A, this includes the supported RISC-V            |
+|             | the CV32E and CVA6, this includes the supported RISC-V             |
 |             | ISA compliant instructions, plus a set of XPULP extended           |
 |             | instructions.                                                      |
 +-------------+--------------------------------------------------------------------+
