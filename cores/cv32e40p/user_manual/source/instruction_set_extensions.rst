@@ -319,13 +319,13 @@ together.
 
 Extract, Insert, Clear and Set instructions have the following meaning:
 
-- Extract Is3+1/rs2[9:5]+1 bits from position Is2/rs2[4:0] [and sign extend it]
+- Extract Is3+1 or rs2[9:5]+1 bits from position Is2 or rs2[4:0] [and sign extend it]
 
-- Insert Is3+1/rs2[9:5]+1 bits at position Is2/rs2[4:0]
+- Insert Is3+1 or rs2[9:5]+1 bits at position Is2 or rs2[4:0]
 
-- Clear Is3+1/rs2[9:5]+1 bits at position Is2/rs2[4:0]
+- Clear Is3+1 or rs2[9:5]+1 bits at position Is2 or rs2[4:0]
 
-- Set Is3+1/rs2[9:5]+1 bits at position Is2/rs2[4:0]
+- Set Is3+1 or rs2[9:5]+1 bits at position Is2 or rs2[4:0]
 
 .. _pulp_bit_manipulation:
 
