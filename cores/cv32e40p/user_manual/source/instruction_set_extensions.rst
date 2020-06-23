@@ -13,6 +13,7 @@ CV32E40P supports the PULP ISA Extensions (**Xpulp**) and optional Hardware Loop
 
 To use such instructions, you need to compile your SW with the PULP GCC compiler.
 
+If not specified, all the operands are signed and immediate values sign-extended.
 
 .. _pulp_load_store:
 
