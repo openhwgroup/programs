@@ -91,6 +91,8 @@ any overhead that we do not explicitly need.
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x7A3         | ``tdata3``        | MRW       | Trigger Data Register 3                                 |
 +---------------+-------------------+-----------+---------------------------------------------------------+
+| 0x7A4         | ``tinfo``         | MR        | Trigger Info                                            |
++---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x7A8         | ``mcontext``      | MRW       | Machine Context Register                                |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x7AA         | ``scontext``      | MRW       | Machine Context Register                                |
@@ -681,6 +683,28 @@ Detailed:
 
 Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
 CV32E40P does not support the features requiring this register. Writes are ignored and reads will always return zero.
+
+Trigger Info (``tinfo``)
+------------------------------------
+
+CSR Address: 0x7A4
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:16 | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+| 15:0  | R    | **info**                                                         |
++-------+------+------------------------------------------------------------------+
+
+The **info** field contains one bit for each possible `type` enumerated in
+`tdata1`.  Bit N corresponds to type N.  If the bit is set, then that type is
+supported by the currently selected trigger.  If the currently selected trigger
+doesn’t exist, this field contains 1.
+
+Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
 
 Machine Context Register (``mcontext``)
 ---------------------------------------
