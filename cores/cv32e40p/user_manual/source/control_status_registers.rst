@@ -587,7 +587,7 @@ CSR Address: 0x7A0
 
 Reset Value: 0x0000_0000
 
-Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+Accessible in Debug Mode or M-Mode.
 
 CV32E40P implements a single trigger, therefore this register will always read as zero
 
@@ -600,7 +600,7 @@ CSR Address: 0x7A1
 
 Reset Value: 0x2800_1000
 
-Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+Accessible in Debug Mode or M-Mode.
 Since native triggers are not supported, writes to this register from M-Mode will be ignored.
 
 CV32E40P only implements one type of trigger, Match Control. Most fields of this register will read as a fixed value to reflect the single mode that is supported, in particular, instruction address match as described in the Debug Specification 0.13.2 section 5.2.2 & 5.2.9.
@@ -663,7 +663,7 @@ Detailed:
 | 31:0  | R    | **data**                                                         |
 +-------+------+------------------------------------------------------------------+
 
-Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter). Since native triggers are not supported, writes to this register from M-Mode will be ignored.
+Accessible in Debug Mode or M-Mode. Since native triggers are not supported, writes to this register from M-Mode will be ignored.
 This register stores the instruction address to match against for a breakpoint trigger.
 
 Trigger Data Register 3 (``tdata3``)
@@ -681,7 +681,7 @@ Detailed:
 | 31:0  | R    | 0                                                                |
 +-------+------+------------------------------------------------------------------+
 
-Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+Accessible in Debug Mode or M-Mode.
 CV32E40P does not support the features requiring this register. Writes are ignored and reads will always return zero.
 
 Trigger Info (``tinfo``)
@@ -704,7 +704,7 @@ The **info** field contains one bit for each possible `type` enumerated in
 supported by the currently selected trigger.  If the currently selected trigger
 doesn’t exist, this field contains 1.
 
-Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+Accessible in Debug Mode or M-Mode.
 
 Machine Context Register (``mcontext``)
 ---------------------------------------
@@ -721,7 +721,7 @@ Detailed:
 | 31:0  | R    | 0                                                                |
 +-------+------+------------------------------------------------------------------+
 
-Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+Accessible in Debug Mode or M-Mode.
 CV32E40P does not support the features requiring this register. Writes are ignored and reads will always return zero.
 
 Supervisor Context Register (``scontext``)
@@ -739,7 +739,7 @@ Detailed:
 | 31:0  | R    | 0                                                                |
 +-------+------+------------------------------------------------------------------+
 
-Accessible in Debug Mode or M-Mode when trigger support is enabled (using the DbgTriggerEn parameter).
+Accessible in Debug Mode or M-Mode.
 CV32E40P does not support the features requiring this register. Writes are ignored and reads will always return zero.
 
 .. _csr-dcsr:
