@@ -684,6 +684,8 @@ Detailed:
 Accessible in Debug Mode or M-Mode.
 CV32E40P does not support the features requiring this register. Writes are ignored and reads will always return zero.
 
+.. _csr-tinfo:
+
 Trigger Info (``tinfo``)
 ------------------------------------
 
