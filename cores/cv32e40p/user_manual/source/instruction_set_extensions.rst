@@ -347,6 +347,16 @@ together.
 -  Immediate branching instructions are useful to compare a register
    with an immediate value before taking or not a branch, see see :ref:`pulp_immediate_branching`.
 
+Extract, Insert, Clear and Set instructions have the following meaning:
+
+- Extract Is3+1 or rs2[9:5]+1 bits from position Is2 or rs2[4:0] [and sign extend it]
+
+- Insert Is3+1 or rs2[9:5]+1 bits at position Is2 or rs2[4:0]
+
+- Clear Is3+1 or rs2[9:5]+1 bits at position Is2 or rs2[4:0]
+
+- Set Is3+1 or rs2[9:5]+1 bits at position Is2 or rs2[4:0]
+
 .. _pulp_bit_manipulation:
 
 Bit Manipulation Operations
@@ -355,37 +365,31 @@ Bit Manipulation Operations
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | **Mnemonic**      |                         | **Description**                                                                                                                          |
 +===================+=========================+==========================================================================================================================================+
-| **p.extract**     | **rD, rs1, Is3, Is2**   | rD = Sext((rs1 & ((1 << Is3) – 1) << Is2) >> Is2)\*                                                                                      |
-|                   |                         | Note: Is3 + Is2 must be <= 32                                                                                                            |
+| **p.extract**     | **rD, rs1, Is3, Is2**   | rD = Sext(rs1[min(Is3+Is2,31):Is2])                                                                                                      |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **p.extractu**    | **rD, rs1, Is3, Is2**   | rD = Zext((rs1 & ((1 << Is3) – 1) << Is2) >> Is2) \*                                                                                     |
-|                   |                         | Note: Is3 + Is2 must be <= 32                                                                                                            |
+| **p.extractu**    | **rD, rs1, Is3, Is2**   | rD = Zext(rs1[min(Is3+Is2,31):Is2])                                                                                                      |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **p.extractr**    | **rD, rs1, rs2**        | rD = Sext((rs1 & ((1 << rs2[9:5]) – 1) << rs2[4:0]) >> rs2[4:0]) \*                                                                      |
-|                   |                         |                                                                                                                                          |
-|                   |                         | Note: rs2[9:5]+ rs2[4:0] must be <= 32                                                                                                   |
+| **p.extractr**    | **rD, rs1, rs2**        | rD = Sext(rs1[min(rs2[9:5]+rs2[4:0],31):rs2[4:0]])                                                                                       |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **p.extractur**   | **rD, rs1, rs2**        | rD = Zext((rs1 & ((1 << rs2[9:5]) – 1) << rs2[4:0]) >> rs2[4:0]) \*                                                                      |
-|                   |                         |                                                                                                                                          |
-|                   |                         | Note: rs2[9:5]+ rs2[4:0] must be <= 32                                                                                                   |
+| **p.extractur**   | **rD, rs1, rs2**        | rD = Zext(rs1[min(rs2[9:5]+rs2[4:0],31):rs2[4:0]])                                                                                       |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **p.insert**      | **rD, rs1, Is3, Is2**   | rD = (rD & ~(rs1[Is3:0] <<Is2)) \| (rs1[Is3:0] << Is2)                                                                                   |
-|                   |                         | Note: Is3 + Is2 must be <= 32, the rest of the bits of rD are passed through and are not modified                                        |
+| **p.insert**      | **rD, rs1, Is3, Is2**   | rD[min(Is3+Is2,31):Is2] = rs1[Is3:max(Is3+Is2,31)-31]                                                                                    |
+|                   |                         | the rest of the bits of rD are passed through and are not modified                                                                       |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **p.insertr**     | **rD, rs1, rs2**        | rD = (rD & ~(rs1[rs2[9:5]:0] << rs2[4:0])) \| (rs1[rs2[9:5]:0] << rs2[4:0])                                                              |
-|                   |                         | Note: rs2[9:5]+ rs2[4:0] must be <= 32, the rest of the bits of rD are passed through and are not modified                               |
+| **p.insertr**     | **rD, rs1, rs2**        | rD[min(rs2[9:5]+rs2[4:0],31):rs2[4:0]] = rs1[rs2[9:5]:max(rs2[9:5]+rs2[4:0],31)-31]                                                      |
+|                   |                         | the rest of the bits of rD are passed through and are not modified                                                                       |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **p.bclr**        | **rD, rs1, Is3, Is2**   | rD = rs1 & ~(((1 << (Is3+1)) – 1) << Is2)                                                                                                |
-|                   |                         | Note: Is3 + Is2 must be <= 32                                                                                                            |
+| **p.bclr**        | **rD, rs1, Is3, Is2**   | rD[min(Is3+Is2,31):Is2] = 0                                                                                                              |
+|                   |                         | the rest of the bits of rD are passed through and are not modified                                                                       |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **p.bclrr**       | **rD, rs1, rs2**        | rD = rs1 & ~(((1 << (rs2[9:5]+1)) – 1) << rs2[4:0])                                                                                      |
-|                   |                         | Note: rs2[9:5]+ rs2[4:0] must be <= 32                                                                                                   |
+| **p.bclrr**       | **rD, rs1, rs2**        | rD[min(rs2[9:5]+rs2[4:0],31):rs2[4:0]] = 0                                                                                               |
+|                   |                         | the rest of the bits of rD are passed through and are not modified                                                                       |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **p.bset**        | **rD, rs1, Is3, Is2**   | rD = rs1 \| (((1 << (Is3+1)) – 1) << Is2)                                                                                                |
-|                   |                         | Note: Is3 + Is2 must be <= 32                                                                                                            |
+| **p.bset**        | **rD, rs1, Is3, Is2**   | rD[min(Is3+Is2,31):Is2] = (Is3+1)'1 (a vector of Is3+1 ones)                                                                             |
+|                   |                         | the rest of the bits of rD are passed through and are not modified                                                                       |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **p.bsetr**       | **rD, rs1, rs2**        | rD = rs1 \| (((1 << (rs2[9:5]+1)) – 1) << rs2[4:0])                                                                                      |
-|                   |                         | Note: rs2[9:5]+ rs2[4:0] must be <= 32                                                                                                   |
+| **p.bsetr**       | **rD, rs1, rs2**        | rD[min(rs2[9:5]+rs2[4:0],31):rs2[4:0]] = (rs2[9:5]+1)'1 (a vector of rs2[9:5]+1                                                          |
+|                   |                         | the rest of the bits of rD are passed through and are not modified                                                                       |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | **p.ff1**         | **rD, rs1**             | rD = bit position of the first bit set in rs1, starting from LSB. If bit 0 is set, rD will be 0. If only bit 31 is set, rD will be 31.   |
 |                   |                         | If rs1 is 0, rD will be 32.                                                                                                              |
