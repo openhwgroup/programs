@@ -150,9 +150,8 @@ Contents
  * The two register-file flavors are described in :ref:`register-file`.
  * :ref:`apu` describes the Auxiliary Processing Unit (APU).
  * :ref:`fpu` describes the Floating Point Unit (FPU).
- * :ref:`sleep_unit` describes the Sleep unit.
+ * :ref:`sleep_unit` describes the Sleep unit including the PULP Cluster extension.
  * :ref:`hwloop-specs` describes the PULP Hardware Loop extension.
- * :ref:`pulp_cluster` describes the PULP Cluster extension.
  * The control and status registers are explained in :ref:`cs-registers`.
  * :ref:`performance-counters` gives an overview of the performance monitors and event counters available in CV32E40P.
  * :ref:`exceptions-interrupts` deals with the infrastructure for handling exceptions and interrupts.
