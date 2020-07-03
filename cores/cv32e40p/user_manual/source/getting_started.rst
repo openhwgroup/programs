@@ -18,7 +18,7 @@ Clock Gating Cell
 -----------------
 
 CV32E40P requires clock gating cells.
-This cells are usually specific to the selected target technology and thus not provided as part of the RTL design.
+These cells are usually specific to the selected target technology and thus not provided as part of the RTL design.
 A simulation-only version of the clock gating cell is provided in ``cv32e40p_sim_clock_gate.sv``. This file contains
 a module called ``cv32e40p_clock_gate`` that has the following ports:
 
