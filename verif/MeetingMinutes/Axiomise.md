@@ -1,3 +1,32 @@
+July 3, 2020
+============
+
+Attendees:
+----------
+**OpenHW:** Mike Thompson, Duncan Bees<br>
+**Axiomise:** Ashish Darbari, Alex Netterville<br>
+
+Actions:
+--------
+**Alex**: to open issue for un-aligned STORE (see topic #2 below).
+**Alex**: share status slides (which will be put up on GitHub).
+**Mike**: book next meeting for July 17.
+
+Topics:
+-------
+1. Mike provided quick OpenHW Group status update.  CV32E40P RTL is stable and by the end of July should be in "bug fix mode", with no changes for new or
+changed features.
+2. Quick status report from Alex.  Using a clone of cv32e40p from last week, good progress with the IS proof-kit has been made.  No failures,
+full coverage and only a few outstanding proofs.  Alex to provide summary slides shortly.
+3. Alex reports that on on an older version of the RTL a proof of unaligned STORE did not converge.  It now does converge with the latest RTL.  Mike requested
+Alex to create a GitHub issue and assign to either Arjan or Davide.
+4. Alex reviewed the preliminary formal verification plan.  It is complete except for the English language descriptions of the properties.  Mike reiterated
+that these are very important as not all members of OpenHW have a background in SVassertions and formal verification.
+5. Ashish reiterated that Axiomise has no plans to execute verificaiton of the Math instructions.
+6. Ashish, Alex and Mike agreed that it would be important to review the mapping of abstract registers (e.g. axiomise_REG_rs1) to the RTL with the design team.
+7. Goal for the next meeting is to review the english descriptions of the formal verification plan properties.
+
+
 June 5, 2020
 ============
 
