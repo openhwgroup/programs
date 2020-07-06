@@ -65,7 +65,7 @@ Core Debug Registers
 
 CV32E40P implements four core debug registers, namely :ref:`csr-dcsr`, :ref:`csr-dpc`, and two debug scratch registers. Access to these registers in non Debug Mode results in an illegal instruction.
 
-Several trigger registers are required to adhere to specification. The following are the most relevant: :ref:`csr-tselect`, :ref:`csr-tdata1`,  :ref:`csr-tdata1` and :ref:`csr-tdata2`
+Several trigger registers are required to adhere to specification. The following are the most relevant: :ref:`csr-tselect`, :ref:`csr-tdata1`,  :ref:`csr-tdata2` and :ref:`csr-tinfo`
 
 The TDATA1.DMODE is hardwired to a value of 1 which limits access to the trigger registers when the processor is in Debug Mode only. Access to the trigger registers outside of Debug Mode results in an illegal instruction exception.
 
@@ -109,5 +109,4 @@ Execuitng the EBREAK instruction when the core is in Debug Mode shall result in 
 
 - The core remains in Debug Mode and execution jumps back to the beginning of the debug code located at ``dm_halt_addr_i``
 - none of the CSRs are modified
-
 
