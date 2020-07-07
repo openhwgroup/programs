@@ -67,7 +67,9 @@ CV32E40P implements four core debug registers, namely :ref:`csr-dcsr`, :ref:`csr
 
 Several trigger registers are required to adhere to specification. The following are the most relevant: :ref:`csr-tselect`, :ref:`csr-tdata1`,  :ref:`csr-tdata2` and :ref:`csr-tinfo`
 
-The TDATA1.DMODE is hardwired to a value of 1 which limits access to the trigger registers when the processor is in Debug Mode only. Access to the trigger registers outside of Debug Mode results in an illegal instruction exception.
+The TDATA1.DMODE is hardwired to a value of 1. In non Debug Mode,
+writes to Trigger registers are ignored and reads reflect CSR values.
+
 
 .. _ebreak_behavior:
 
