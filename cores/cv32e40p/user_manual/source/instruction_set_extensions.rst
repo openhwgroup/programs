@@ -3,7 +3,7 @@
 PULP Instruction Set Extensions
 ===============================
 
-CV32E40P supports the PULP ISA Extensions (**Xpulp**) and optional Hardware Looping (**Xpulphwlp**).
+CV32E40P supports the following PULP ISA Extensions, which are part of **Xpulp** and can be enabled by setting ``PULP_XPULP`` == 1.
 
  * Post-Incrementing load and stores, see :ref:`pulp_load_store`.
  * Hardware Loop extension, see :ref:`pulp_hardware_loop`.
@@ -11,9 +11,11 @@ CV32E40P supports the PULP ISA Extensions (**Xpulp**) and optional Hardware Loop
  * Multiply-Accumulate extensions, see :ref:`pulp_multiply_accumulate`.
  * Optional support for Hardware Loops, see :ref:`pulp_simd`.
 
+Additionally the event load instruction (**p.elw**) is supported by setting ``PULP_CLUSTER`` == 1.
+ 
 To use such instructions, you need to compile your SW with the PULP GCC compiler.
 
-If not specified, all the operands are signed and immediate values sign-extended.
+If not specified, all the operands are signed and immediate values are sign-extended.
 
 .. _pulp_load_store:
 
@@ -27,6 +29,9 @@ scheme, the base address is used for the access and the modified address
 is written back to the register-file. There are versions of those
 instructions that use immediates and those that use registers as
 offsets. The base address always comes from a register.
+
+The custom post-incrementing load & store instructions and register-register
+load & store instructions are only supported if ``PULP_XPULP`` == 1.
 
 Load Operations
 ^^^^^^^^^^^^^^^
@@ -263,9 +268,12 @@ command that does all of this in a single instruction. The short command
 has a limited range for the number of instructions contained in the loop
 and the loop must start in the next instruction after the setup
 instruction.
-Details about the HWLoop constraints are reported in :ref:`hwloop-specs`.
 
-In the following tables, the HWLoop instructions are reported.
+Hardware loop instructions and related CSRs are only supported if ``PULP_XPULP`` == 1.
+
+Details about the hardware loop constraints are provided in :ref:`hwloop-specs`.
+
+In the following tables, the hardware loop instructions are reported.
 In assembly, **L** is referred by x0 or x1.
 
 Operations
@@ -333,6 +341,8 @@ for 8-bit and 16-bit operands, simple bit manipulation/counting
 instructions and min/max/avg instructions. The ALU does also support
 saturating, clipping, and normalizing instructions which make fixed-point
 arithmetic more efficient.
+
+The custom ALU extensions are only supported if ``PULP_XPULP`` == 1.
 
 The custom extensions to the ALU are split into several subgroups that belong
 together.
@@ -686,6 +696,8 @@ Multiply-Accumulate
 CV32E40P supports custom extensions for multiply-accumulate and half-word multiplications with
 an optional post-multiplication shift.
 
+The custom multiply-accumulate extensions are only supported if ``PULP_XPULP`` == 1.
+
 MAC Operations
 ^^^^^^^^^^^^^^
 
@@ -839,6 +851,8 @@ multiple sub-word elements at the same time. This is done by segmenting
 the data path into smaller parts when 8 or 16-bit operations should be
 performed.
 
+The custom SIMD extensions are only supported if ``PULP_XPULP`` == 1.
+
 SIMD instructions are available in two flavors:
 
 -  8-Bit, to perform four operations on the 4 bytes inside a 32-bit word
@@ -849,7 +863,7 @@ SIMD instructions are available in two flavors:
 
 All the operations are rounded to the specified bidwidth as for the original
 RISC-V arithmetic operations. This is described by the "and" operation with a
-MASK. No overflow or carry-out flags are generated as for the 32-Bit operations.
+MASK. No overflow or carry-out flags are generated as for the 32-bit operations.
 
 Additionally, there are three modes that influence the second operand:
 

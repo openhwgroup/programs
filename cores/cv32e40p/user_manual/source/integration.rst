@@ -15,7 +15,7 @@ Instantiation Template
       .FPU                      ( 0 ),
       .NUM_MHPMCOUNTERS         ( 1 ),
       .PULP_CLUSTER             ( 0 ),
-      .PULP_HWLP                ( 0 ),
+      .PULP_XPULP               ( 1 ),
       .PULP_ZFINX               ( 0 )
   ) u_core (
       // Clock and reset
@@ -86,8 +86,16 @@ Parameters
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
 | ``PULP_CLUSTER``             | bit         | 0          | Enable PULP Cluster support, see :ref:`pulp_cluster`            |
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``PULP_HWLP``                | bit         | 0          | Enable PULP Hardware Loop support, see :ref:`pulp_hardware_loop`|
-|                              |             |            | ``PULP_HWLP`` = 1 IS NOT SUPPORTED YET (IT IS UNDER DESIGN)     |
+| ``PULP_XPULP``               | bit         | 1          | Enable all of the custom PULP ISA extensions (except **p.elw**) |
+|                              |             |            | (see :ref:`custom-isa-extensions`) and all custom CSRs          |
+|                              |             |            | (see :ref:`cs-registers`).                                      |
+|                              |             |            |                                                                 |
+|                              |             |            | Examples of PULP ISA                                            |
+|                              |             |            | extensions are post-incrementing load and stores                |
+|                              |             |            | (see :ref:`pulp_load_store`) and hardware loops                 |
+|                              |             |            | (see :ref:`pulp_hardware_loop`).                                |
+|                              |             |            |                                                                 |
+|                              |             |            | ``HARDWARE LOOPING IS NOT SUPPORTED YET (IT IS UNDER DESIGN)``  |
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
 | ``PULP_ZFINX``               | bit         | 0          | Enable Floating Point instructions to use the General Purpose   |
 |                              |             |            | register file instead of requiring a dedicated Floating Point   |

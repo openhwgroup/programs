@@ -28,30 +28,32 @@ any overhead that we do not explicitly need.
 | User Custom CSRs                                                                                        |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x7C0         | ``lpstart0``      | URW       | Hardware Loop 0 Start.                                  |
-|               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
+|               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x7C1         | ``lpend0``        | URW       | Hardware Loop 0 End.                                    |
-|               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
+|               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x7C2         | ``lpcount0``      | URW       | Hardware Loop 0 Counter.                                |
-|               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
+|               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x7C4         | ``lpstart1``      | URW       | Hardware Loop 1 Start.                                  |
-|               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
+|               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x7C5         | ``lpend1``        | URW       | Hardware Loop 1 End.                                    |
-|               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
+|               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x7C6         | ``lpcount1``      | URW       | Hardware Loop 1 Counter.                                |
-|               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
+|               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x006         | ``fprec``         | URW       | Custom flag which controls the precision and latency    |
 |               |                   |           | of the iterative div/sqrt unit.                         |
-|               |                   |           | Only present if ``FPU`` = 1.                            |
+|               |                   |           | Only present if ``FPU`` = 1 and ``PULP_XPULP`` = 1.     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0xC10         | ``privlv``        | URO       | Privilege Level                                         |
+|               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x014         | ``uhartid``       | URO       | Hardware Thread ID                                      |
+|               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | Machine CSRs                                                                                            |
 +---------------+-------------------+-----------+---------------------------------------------------------+
@@ -132,12 +134,6 @@ any overhead that we do not explicitly need.
 | 0xF13         | ``mimpid``        | MRO       | Machine Implementation ID                               |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0xF14         | ``mhartid``       | MRO       | Hardware Thread ID                                      |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| Machine Custom CSRs                                                                                     |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7D0         | ``mie1``          | MRW       | Machine Interrupt Enable 1 Register                     |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7D1         | ``mip1``          | MRW       | Machine Interrupt Pending 1 Register                    |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 
 Table 7: Control and Status Register Map
@@ -225,7 +221,7 @@ Reset Value: 0x0000_0000
 HWLoop Start Address 0/1 (``lpstart0/1``)
 -----------------------------------------
 
-CSR Address: 0x7C0/0x7C4 (only present if ``PULP_HWLP`` = 1)
+CSR Address: 0x7C0/0x7C4 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -240,7 +236,7 @@ Detailed:
 HWLoop End Address 0/1 (``lpend0/1``)
 -------------------------------------
 
-CSR Address: 0x7C1/0x7C5 (only present if ``PULP_HWLP`` = 1)
+CSR Address: 0x7C1/0x7C5 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -255,7 +251,7 @@ Detailed:
 HWLoop Count Address 0/1 (``lpcount0/1``)
 -----------------------------------------
 
-CSR Address: 0x7C2/0x7C6 (only present if ``PULP_HWLP`` = 1)
+CSR Address: 0x7C2/0x7C6 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -272,7 +268,7 @@ Detailed:
 Floating-point precision (``fprec``)
 ------------------------------------
 
-CSR Address: 0x006 (only present if ``FPU`` = 1)
+CSR Address: 0x006 (only present if ``FPU`` = 1 and ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -299,7 +295,7 @@ Reset Value: 0x0000_0000
 Privilege Level (``privlv``)
 ----------------------------
 
-CSR Address: 0xC10
+CSR Address: 0xC10 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0003
 
@@ -318,7 +314,7 @@ Table 14: PRIVLV
 User Hardware Thread ID (``uhartid``)
 -------------------------------------
 
-CSR Address: 0x014
+CSR Address: 0x014 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: Defined
 
@@ -975,36 +971,6 @@ Reset Value: Defined
 +-------------+-----------+----------------------------------------------------------------+
 
 Table 14: MHARTID
-
-Machine Interrupt Enable Register 1 (``mie1``)
-----------------------------------------------
-
-CSR Address: 0x7D0
-
-Reset Value: 0x0000_0000
-
-Detailed:
-
-+-------------+-----------+-------------------------------------------------------------------------------------------------+
-|   Bit #     |   R/W     |   Description                                                                                   |
-+=============+===========+=================================================================================================+
-| 31:0        | R/W       | Machine Fast Interrupt Enable 1: Set bit x to enable interrupt irq_i[32+x].                     |
-+-------------+-----------+-------------------------------------------------------------------------------------------------+
-
-Machine Interrupt Pending Register 1 (``mip1``)
------------------------------------------------
-
-CSR Address: 0x7D1
-
-Reset Value: 0x0000_0000
-
-Detailed:
-
-+-------------+-----------+-----------------------------------------------------------------------------------------------------------+
-|   Bit #     |   R/W     |   Description                                                                                             |
-+=============+===========+===========================================================================================================+
-| 31:0        | R         | Machine Fast Interrupt Pending 1: If bit x is set, interrupt irq_i[32+x] is pending.                      |
-+-------------+-----------+-----------------------------------------------------------------------------------------------------------+
 
 .. only:: USER
 
