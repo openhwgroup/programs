@@ -53,7 +53,9 @@ Here we attempt to answer the question, "how will the testbench know the test pa
 * **Check against ISS**: Here, the testcase does not "know" the correct outcome of the test, it merely provides stimulus to the DUT.  The pass/fail criteria is determined a verification environment (testbench) component, in this case the **_Instruction Set Simulator_** (ISS), and the verification environment must compare the actual results from the DUT and the expected results from the ISS (or other reference model). When practical, this is the preferred approach because it makes testcase maintenance simplier.
 * **Check against RM**: The pass/fail criteria is determined by a **_Reference Model_** (RM).  An RM is a verification environment (testbench) component which models some or all of the DUT behavior.  In this context RM is a more generic term for ISS.  Use this criteria when you suspect that the ISS will not model the specific behavior needed.
 * **Assertion Check**: Failure is detected by an assertion, typically coded in SVA.
+* **Any/All**: Any (or all) of the above pass/fail criteria can be reasonably assumed to catch a non-compliance of a specific feature/requirement.
 * **Other**: If one of the above Pass/Fail Criteria does not fit your needs, specify it here.
+* **N/A**: Select this for those (rare) features in the specification do not have side effects that are observable in a functional simulation of an RTL model.
 ### Test Type
 Choose one or more of the following:
 * **RISC-V Compliance**: a self-checking ISA compliance testcase from the RISC-V Foundation.
@@ -61,6 +63,7 @@ Choose one or more of the following:
 * **Directed Self-Checking**: a directed (non-random) self-checking testcase from the OpenHW Group that is not specifically targetting ISA compliance.
 * **Directed Non-Self-Checking**: a directed (non-random) non-self-checking testcase from the OpenHW Group that is not specifically targetting ISA compliance.  Note that these tests assume that the pass/fail criteria will be "Check against ISS" (or other reference model).
 * **Constrained-Random**: a constrained-random testcase.  Typically the stimulus for these will come from the Google random instruction stream generator.  Note that by defintion these tests cannot be self-checking.
+* **ENV capability, not specific test**: Often, a specific feature is not specifically covered by a specific test or check.  For example, an assertion checking for bus protocol errors could reasonably expect to cause a failure with any type of test.
 * **Other**: If one of the above Test Types does not fit your needs, specify it here.
 ### Coverage Method
 How will we know that the Feature is verified (covered)?  There are several choices here:
