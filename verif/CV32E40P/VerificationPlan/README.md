@@ -68,13 +68,12 @@ contact @mikeopenhwgroup.
 
 | Feature | Owner | Capture | Review | Comment |
 |---------|-------|---------|--------|---------|
-| Debug | @alfredoh1234 | Ready for Review | Not yet Scheduled | Except @silabs-wajidm to execute this Vplan |
+| Debug | @silabs-oystein | Reviewed |  |  |
 | Trigger module | | | | Not a CV32E40P Feature |
 | Trace | | | | Not a CV32E40P Feature |
 
-### RVI-compliant interface
+### Physical Interfaces
 
 | Feature | Owner | Capture | Review | Comment |
 |---------|-------|---------|--------|---------|
-| RVI Instruction Bus interface | | | | |
-| RVI Data Bus interface | | | | |
+| OBI     | @mikeopenhw Ready for Review | | | |
