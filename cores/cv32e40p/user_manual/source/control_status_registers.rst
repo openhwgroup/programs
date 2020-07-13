@@ -27,31 +27,31 @@ any overhead that we do not explicitly need.
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | User Custom CSRs                                                                                        |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C0         | ``lpstart0``      | URW       | Hardware Loop 0 Start.                                  |
+| 0x800         | ``lpstart0``      | URW       | Hardware Loop 0 Start.                                  |
 |               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C1         | ``lpend0``        | URW       | Hardware Loop 0 End.                                    |
+| 0x801         | ``lpend0``        | URW       | Hardware Loop 0 End.                                    |
 |               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C2         | ``lpcount0``      | URW       | Hardware Loop 0 Counter.                                |
+| 0x802         | ``lpcount0``      | URW       | Hardware Loop 0 Counter.                                |
 |               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C4         | ``lpstart1``      | URW       | Hardware Loop 1 Start.                                  |
+| 0x804         | ``lpstart1``      | URW       | Hardware Loop 1 Start.                                  |
 |               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C5         | ``lpend1``        | URW       | Hardware Loop 1 End.                                    |
+| 0x805         | ``lpend1``        | URW       | Hardware Loop 1 End.                                    |
 |               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C6         | ``lpcount1``      | URW       | Hardware Loop 1 Counter.                                |
+| 0x806         | ``lpcount1``      | URW       | Hardware Loop 1 Counter.                                |
 |               |                   |           | Only present if ``PULP_HWLP`` = 1.                      |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x006         | ``fprec``         | URW       | Custom flag which controls the precision and latency    |
+| 0x807         | ``fprec``         | URW       | Custom flag which controls the precision and latency    |
 |               |                   |           | of the iterative div/sqrt unit.                         |
 |               |                   |           | Only present if ``FPU`` = 1.                            |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0xC10         | ``privlv``        | URO       | Privilege Level                                         |
+| 0xCC0         | ``uhartid``       | URO       | Hardware Thread ID                                      |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x014         | ``uhartid``       | URO       | Hardware Thread ID                                      |
+| 0xCC1         | ``privlv``        | URO       | Privilege Level                                         |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | Machine CSRs                                                                                            |
 +---------------+-------------------+-----------+---------------------------------------------------------+
@@ -225,7 +225,7 @@ Reset Value: 0x0000_0000
 HWLoop Start Address 0/1 (``lpstart0/1``)
 -----------------------------------------
 
-CSR Address: 0x7C0/0x7C4 (only present if ``PULP_HWLP`` = 1)
+CSR Address: 0x800/0x804 (only present if ``PULP_HWLP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -240,7 +240,7 @@ Detailed:
 HWLoop End Address 0/1 (``lpend0/1``)
 -------------------------------------
 
-CSR Address: 0x7C1/0x7C5 (only present if ``PULP_HWLP`` = 1)
+CSR Address: 0x801/0x805 (only present if ``PULP_HWLP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -255,7 +255,7 @@ Detailed:
 HWLoop Count Address 0/1 (``lpcount0/1``)
 -----------------------------------------
 
-CSR Address: 0x7C2/0x7C6 (only present if ``PULP_HWLP`` = 1)
+CSR Address: 0x802/0x806 (only present if ``PULP_HWLP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -272,7 +272,7 @@ Detailed:
 Floating-point precision (``fprec``)
 ------------------------------------
 
-CSR Address: 0x006 (only present if ``FPU`` = 1)
+CSR Address: 0x807 (only present if ``FPU`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -299,7 +299,7 @@ Reset Value: 0x0000_0000
 Privilege Level (``privlv``)
 ----------------------------
 
-CSR Address: 0xC10
+CSR Address: 0xCC1
 
 Reset Value: 0x0000_0003
 
@@ -310,23 +310,25 @@ Reset Value: 0x0000_0003
 +-------------+-----------+--------------------------------------------------+
 | 1:0         | R         | Current Privilege Level. 11 = Machine,           |
 |             |           | 10 = Hypervisor, 01 = Supervisor, 00 = User.     |
-|             |           | CV32E40P only supports machine mode.             |
+|             |           | CV32E40P only supports Machine mode.             |
 +-------------+-----------+--------------------------------------------------+
 
 Table 14: PRIVLV
 
+.. _csr-uhartid:
+
 User Hardware Thread ID (``uhartid``)
 -------------------------------------
 
-CSR Address: 0x014
+CSR Address: 0xCC0
 
 Reset Value: Defined
 
-+-------------+-----------+--------------------------------------------------+
-|   Bit #     | R         |   Description                                    |
-+=============+===========+==================================================+
-| 31:0        | R         | Hardware Thread ID                               |
-+-------------+-----------+--------------------------------------------------+
++-------------+-----------+----------------------------------------------------------------+
+|   Bit #     |   R/W     |   Description                                                  |
++=============+===========+================================================================+
+| 31:0        | R         | Hardware Thread ID **hart_id_i**, see  :ref:`core-integration` |
++-------------+-----------+----------------------------------------------------------------+
 
 Table 15: UHARTID
 
