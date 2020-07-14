@@ -81,7 +81,7 @@ Parameters
 +==============================+=============+============+=================================================================+
 | ``FPU``                      | bit         | 0          | Enable Floating Point Unit (FPU) support, see :ref:`fpu`        |
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``NUM_MHPMCOUNTERS``         | int (1..29) | 1          | Number of MHPMCOUNTER performance counters, see                 |
+| ``NUM_MHPMCOUNTERS``         | int (0..29) | 1          | Number of MHPMCOUNTER performance counters, see                 |
 |                              |             |            | :ref:`performance-counters`                                     |
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
 | ``PULP_CLUSTER``             | bit         | 0          | Enable PULP Cluster support, see :ref:`pulp_cluster`            |
