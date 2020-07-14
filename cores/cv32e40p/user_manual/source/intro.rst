@@ -86,13 +86,9 @@ The following custom instruction set extensions are available.
      - Version
      - Configurability
 
-   * - **Xpulp**: PULP ISA Extensions (excluding **Xpulphwlp**, **Xpulpcluster**, **Xpulpzfinx**)
+   * - **Xpulp**: PULP ISA Extensions (excluding **p.elw**)
      - 1.0
-     - always enabled
-
-   * - **Xpulphwlp**: PULP Hardware Loop Extension
-     - 1.0
-     - optionally enabled based on ``PULP_HWLP`` parameter
+     - optionally enabled based on ``PULP_XPULP`` parameter
 
    * - **Xpulpcluster**: PULP Cluster Extension
      - 1.0

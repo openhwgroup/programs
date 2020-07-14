@@ -4,7 +4,7 @@ PULP Hardware Loop Extensions
 =============================
 
 To increase the efficiency of small loops, CV32E40P supports hardware
-loops optioonally. They can be enabled by setting the PULP_HWLP parameter.
+loops optionally. They can be enabled by setting the ``PULP_XPULP`` parameter.
 Hardware loops make executing a piece of code
 multiple times possible, without the overhead of branches or updating a counter.
 Hardware loops involve zero stall cycles for jumping to the first

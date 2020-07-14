@@ -4,7 +4,7 @@ Exceptions and Interrupts
 =========================
 
 CV32E40P implements trap handling for interrupts and exceptions according to the RISC-V Privileged Specification, version 1.11.
-The ``irq_i[63:16]`` interrupts and the ``mie1`` and ``mip1`` CSRs are custom extensions.
+The ``irq_i[31:16]`` interrupts are a custom extension.
 
 When entering an interrupt/exception handler, the core sets the ``mepc`` CSR to the current program counter and saves ``mstatus``.MIE to ``mstatus``.MPIE.
 All exceptions cause the core to jump to the base address of the vector table in the ``mtvec`` CSR.
@@ -29,7 +29,7 @@ The following table describes the interrupt interface.
 +-------------------------+-----------+--------------------------------------------------+
 | Signal                  | Direction | Description                                      |
 +=========================+===========+==================================================+
-| ``irq_i[63:0]``         | input     | Active high, level sensistive interrupt inputs.  |
+| ``irq_i[31:0]``         | input     | Active high, level sensistive interrupt inputs.  |
 |                         |           | Not all interrupt inputs can be used on          |
 |                         |           | CV32E40P. Specifically irq_i[15:12],             |
 |                         |           | irq_i[10:8], irq_i[6:4] and irq_i[2:0] shall be  |
@@ -40,15 +40,15 @@ The following table describes the interrupt interface.
 |                         |           | correspond to the Machine External               |
 |                         |           | Interrupt (MEI), Machine Timer Interrupt (MTI),  |
 |                         |           | and Machine Software Interrupt (MSI)             |
-|                         |           | respectively. The irq_63:16] interrupts          |
+|                         |           | respectively. The irq_i[31:16] interrupts        |
 |                         |           | are a CV32E40P specific extension to the RISC-V  |
 |                         |           | Basic (a.k.a. CLINT) interrupt scheme.           |
 +-------------------------+-----------+--------------------------------------------------+
 | ``irq_ack_o``           | output    | Interrupt acknowledge.  Set to 1 for one cycle   |
-|                         |           | when the interrupt with ID ``irq_id_o[5:0]`` is  |
+|                         |           | when the interrupt with ID ``irq_id_o[4:0]`` is  |
 |                         |           | taken.                                           |
 +-------------------------+-----------+--------------------------------------------------+
-| ``irq_id_o[5:0]``       | output    | Interrupt index for taken interrupt. Only valid  |
+| ``irq_id_o[4:0]``       | output    | Interrupt index for taken interrupt. Only valid  |
 |                         |           | when ``irq_ack_o`` = 1.                          |
 +-------------------------+-----------+--------------------------------------------------+
 
@@ -57,21 +57,20 @@ Interrupts
 
 The ``irq_i[31:0]`` interrupts are controlled via the ``mstatus``, ``mie`` and ``mip`` CSRs. CV32E40P uses the upper 16 bits of ``mie`` and ``mip`` for custom interrupts (``irq_i[31:16]``),
 which reflects an intended custom extension in the RISC-V Basic (a.k.a. CLINT) interrupt architecture.
-The ``irq_i[63:32]`` interrupts are controlled via the ``mstatus``, ``mie1`` and ``mip1`` CSRs. The ``mie1`` and ``mip1`` CSRs are custom CSRs.
 After reset, all interrupts are disabled.
-To enable interrupts, both the global interrupt enable (MIE) bit in the ``mstatus`` CSR and the corresponding individual interrupt enable bit in the ``mie`` or ``mie1`` CSR need to be set.
+To enable interrupts, both the global interrupt enable (MIE) bit in the ``mstatus`` CSR and the corresponding individual interrupt enable bit in the ``mie`` CSR need to be set.
 For more information, see the :ref:`cs-registers` documentation.
 
 If multiple interrupts are pending, they are handled in the fixed priority order defined by the RISC-V Privileged Specification, version 1.11 (see Machine Interrupt Registers, Section 3.1.9).
 The highest priority is given to the interrupt with the highest ID, except for the Machine Timer Interrupt, which has the lowest priority. So from high to low priority the interrupts are
-ordered as follows: ``irq_i[63]``, ``irq_i[62]``, ..., ``irq_i[16]``, ``irq_i[11]``, ``irq_i[3]``, ``irq_i[7]``.
+ordered as follows: ``irq_i[31]``, ``irq_i[30]``, ..., ``irq_i[16]``, ``irq_i[11]``, ``irq_i[3]``, ``irq_i[7]``.
 
 All interrupt lines are level-sensitive. There are two supported mechanisms by which interrupts can be cleared at the external source.
 
 * A software-based mechanism in which the interrupt handler signals completion of the handling routine to the interrupt source, e.g., through a memory-mapped register, which then deasserts the corresponding interrupt line.
-* A hardware-based mechanism in which the ``irq_ack_o`` and ``irq_id_o[5:0]`` signals are used to clear the interrupt sourcee, e.g. by an external interrupt controller. ``irq_ack_o`` is a 1 ``clk_i`` cycle pulse during which ``irq_id_o[5:0]`` reflects the index in ``irq_id[]`` of the taken interrupt. 
+* A hardware-based mechanism in which the ``irq_ack_o`` and ``irq_id_o[4:0]`` signals are used to clear the interrupt sourcee, e.g. by an external interrupt controller. ``irq_ack_o`` is a 1 ``clk_i`` cycle pulse during which ``irq_id_o[4:0]`` reflects the index in ``irq_id[]`` of the taken interrupt. 
 
-In Debug Mode, all interrupts are ignored independent of ``mstatus``.MIE and the content of the ``mie`` and ``mie1`` CSRs.
+In Debug Mode, all interrupts are ignored independent of ``mstatus``.MIE and the content of the ``mie`` CSR.
 
 Exceptions
 ----------
@@ -125,7 +124,7 @@ If desired, software can explicitly enable interrupts by setting ``mstatus``.MIE
 However, software should only do this after saving ``mepc`` and ``mstatus``.
 There is no limit on the maximum number of nested interrupts.
 Note that, after enabling interrupts by setting ``mstatus``.MIE to 1, the current handler will be interrupted also by lower priority interrupts.
-To allow higher priority interrupts only, the handler must configure ``mie`` and ``mie1`` accordingly.
+To allow higher priority interrupts only, the handler must configure ``mie`` accordingly.
 
 The following pseudo-code snippet visualizes how to perform nested interrupt handling in software.
 
@@ -137,13 +136,11 @@ The following pseudo-code snippet visualizes how to perform nested interrupt han
      mepc_bak = mepc;
      mstatus_bak = mstatus;
 
-     // Save mie, mie1 to stack (optional)
+     // Save mie to stack (optional)
      mie_bak = mie;
-     mie1_bak = mie1;
 
      // Keep lower-priority interrupts disabled (optional)
      mie = mie & ~((1 << (id + 1)) - 1);
-     mie1 = mie1 & (~((1 << (id + 1)) - 1) >> 32);
 
      // Re-enable interrupts
      mstatus.MIE = 1;
@@ -156,9 +153,8 @@ The following pseudo-code snippet visualizes how to perform nested interrupt han
      mstatus = mstatus_bak;
      mepc = mepc_bak;
 
-     // Restore mie, mie1 (optional)
+     // Restore mie (optional)
      mie = mie_bak;
-     mie1 = mie1_bak;
    }
 
 Nesting of interrupts/exceptions in hardware is not supported.
