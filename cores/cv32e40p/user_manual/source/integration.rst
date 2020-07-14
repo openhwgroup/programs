@@ -25,6 +25,7 @@ Instantiation Template
 
       // Configuration
       .boot_addr_i              (),
+      .mtvec_addr_i             (),
       .dm_halt_addr_i           (),
       .dm_exception_addr_i      (),
       .hart_id_i                (),
@@ -110,6 +111,11 @@ Interfaces
 | ``boot_addr_i``         | 32                      | in  | Boot address. First program counter after  |
 |                         |                         |     | reset = ``boot_addr_i``. Must be half-word |
 |                         |                         |     | aligned. Do not change after enabling core |
+|                         |                         |     | via ``fetch_enable_i``                     |
++-------------------------+-------------------------+-----+--------------------------------------------+
+| ``mtvec_addr_i``        | 32                      | in  | ``mtvec`` address. Initial value for the   |
+|                         |                         |     | address part of :ref:`csr-mtvec`.          |
+|                         |                         |     | Do not change after enabling core          |
 |                         |                         |     | via ``fetch_enable_i``                     |
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``dm_halt_addr_i``      | 32                      | in  | Address to jump to when entering Debug     |

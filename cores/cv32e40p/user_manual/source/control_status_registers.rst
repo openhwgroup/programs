@@ -377,15 +377,89 @@ Machine ISA (``misa``)
 
 CSR Address: 0x301
 
-Reset Value: 0x0000_0000
+Reset Value: Defined
 
 Detailed:
 
 +-------------+-----------+------------------------------------------------------------------------+
 |   Bit #     |   R/W     |   Description                                                          |
 +=============+===========+========================================================================+
-| 31:0        | R/W       | Writes are ignored; reads return 0.                                    |
+| 31:30       | R/W       |  **MXL** (Machine XLEN). Read-only; writes are ignored.                |
 +-------------+-----------+------------------------------------------------------------------------+
+| 29:26       | R/W       | (Reserved). Read-only (0); writes are ignored.                         |
++-------------+-----------+------------------------------------------------------------------------+
+| 25          | R/W       | **Z** (Reserved). Read-only; writes are ignored.                       |
++-------------+-----------+------------------------------------------------------------------------+
+| 24          | R/W       | **Y** (Reserved). Read-only; writes are ignored.                       |
++-------------+-----------+------------------------------------------------------------------------+
+| 23          | R/W       | **X** (Non-standard extensions present). Read-only; writes are ignored.|
++-------------+-----------+------------------------------------------------------------------------+
+| 22          | R/W       | **W** (Reserved). Read-only; writes are ignored.                       |
++-------------+-----------+------------------------------------------------------------------------+
+| 21          | R/W       | **V** (Tentatively reserved for Vector extension). Read-only; writes   |
+|             |           | are ignored.                                                           |
++-------------+-----------+------------------------------------------------------------------------+
+| 20          | R/W       | **U** (User mode implemented). Read-only; writes are ignored.          |
++-------------+-----------+------------------------------------------------------------------------+
+| 19          | R/W       | **T** (Tentatively reserved for Transactional Memory extension).       |
+|             |           | Read-only; writes are ignored.                                         |
++-------------+-----------+------------------------------------------------------------------------+
+| 18          | R/W       | **S** (Supervisor mode implemented). Read-only; writes are ignored.    |
++-------------+-----------+------------------------------------------------------------------------+
+| 17          | R/W       | **R** (Reserved). Read-only; writes are ignored.                       |
++-------------+-----------+------------------------------------------------------------------------+
+| 16          | R/W       | **Q** (Quad-precision floating-point extension). Read-only; writes     |
+|             |           | are ignored.                                                           |
++-------------+-----------+------------------------------------------------------------------------+
+| 15          | R/W       | **P** (Tentatively reserved for Packed-SIMD extension). Read-only;     |
+|             |           | writes are ignored.                                                    |
++-------------+-----------+------------------------------------------------------------------------+
+| 14          | R/W       | **O** (Reserved). Read-only; writes are ignored.                       |
++-------------+-----------+------------------------------------------------------------------------+
+| 13          | R/W       | **N** (User-level interrupts supported). Read-only; writes are ignored.|
++-------------+-----------+------------------------------------------------------------------------+
+| 12          | R/W       | **M** (Integer Multiply/Divide extension). Read-only; writes are       |
+|             |           | ignored.                                                               |
++-------------+-----------+------------------------------------------------------------------------+
+| 11          | R/W       | **L** (Tentatively reserved for Decimal Floating-Point extension).     |
+|             |           | Read-only; writes are ignored.                                         |
++-------------+-----------+------------------------------------------------------------------------+
+| 10          | R/W       | **K** (Reserved). Read-only; writes are ignored.                       |
++-------------+-----------+------------------------------------------------------------------------+
+| 9           | R/W       | **J** (Tentatively reserved for Dynamically Translated Languages       |
+|             |           | extension). Read-only; writes are ignored.                             |
++-------------+-----------+------------------------------------------------------------------------+
+| 8           | R/W       | **I** (RV32I/64I/128I base ISA). Read-only; writes are ignored.        |
++-------------+-----------+------------------------------------------------------------------------+
+| 7           | R/W       | **H** (Hypervisor extension). Read-only; writes are ignored.           |
++-------------+-----------+------------------------------------------------------------------------+
+| 6           | R/W       | **G** (Additional standard extensions present). Read-only; writes are  |
+|             |           | ignored.                                                               |
++-------------+-----------+------------------------------------------------------------------------+
+| 5           | R/W       | **F** (Single-precision floating-point extension). Read-only; writes   |
+|             |           | are ignored.                                                           |
++-------------+-----------+------------------------------------------------------------------------+
+| 4           | R/W       | **E** (RV32E base ISA). Read-only; writes are ignored.                 |
++-------------+-----------+------------------------------------------------------------------------+
+| 3           | R/W       | **D** (Double-precision floating-point extension). Read-only; writes   |
+|             |           | are ignored.                                                           |
++-------------+-----------+------------------------------------------------------------------------+
+| 2           | R/W       | **C** (Compressed extension). Read-only; writes are ignored.           |
++-------------+-----------+------------------------------------------------------------------------+
+| 1           | R/W       | **B** (Tentatively reserved for Bit-Manipulation extension). Read-only;|
+|             |           | writes are ignored.                                                    |
++-------------+-----------+------------------------------------------------------------------------+
+| 0           | R/W       | **A** (Atomic extension). Read-only; writes are ignored.               |
++-------------+-----------+------------------------------------------------------------------------+
+
+All bitfields in the ``misa`` CSR read as 0 except for the following:
+
+* **C** = 1
+* **F** = 1 if ``FPU`` = 1
+* **I** = 1
+* **M** = 1
+* **X** = 1 if ``PULP_XPULP`` = 1 or ``PULP_CLUSTER`` = 1
+* **MXL** = 1 (i.e. XLEN = 32)
 
 Machine Interrupt Enable Register (``mie``)
 -------------------------------------------
@@ -408,12 +482,14 @@ Detailed:
 | 3           | R/W       | **Machine Software Interrupt Enable (MSIE)**: if set, irq_i[3] is enabled.               |
 +-------------+-----------+------------------------------------------------------------------------------------------+
 
+.. _csr-mtvec:
+
 Machine Trap-Vector Base Address (``mtvec``)
 --------------------------------------------
 
 CSR Address: 0x305
 
-Reset Value: 0x0000_0001
+Reset Value: Defined
 
 Detailed:
 
@@ -426,6 +502,8 @@ Detailed:
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
 
 Table 9: MTVEC
+
+The initial value of ``mtvec`` is equal to {**mtvec_addr_i[31:8]**, 6'b0, 2'b01}.
 
 When an exception or an interrupt is encountered, the core jumps to the corresponding
 handler using the content of the MTVEC[31:8] as base address. Only
