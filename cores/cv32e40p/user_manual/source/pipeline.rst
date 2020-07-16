@@ -44,8 +44,10 @@ and zero stall on the data-side memory interface.
 |                       | 2 (non-word aligned word             | transfers and for halfword transfers that cross a word      |
 |                       | transfer)                            | boundary 2 bus transactions are performed using EX and WB   |
 |                       |                                      | stages for 2 cycles each.                                   |
-|                       | 2 (halfword transfer crossing        |                                                             |
+|                       | 2 (halfword transfer crossing        | A **p.elw** takes 4 cycles.                                 |
 |                       | word boundary)                       |                                                             |
+|                       |                                      |                                                             |
+|                       | 4 (p.elw)                            |                                                             |
 +-----------------------+--------------------------------------+-------------------------------------------------------------+
 | Multiplication        | 1 (mul)                              | CV32E40P uses a single-cycle 32-bit x 32-bit multiplier     |
 |                       |                                      | with a 32-bit result. The multiplications with upper-word   |

@@ -69,8 +69,7 @@ Instantiation Template
       // Special control signals
       .fetch_enable_i           (),
       .core_sleep_o             (),
-      .clock_en_i               (),
-      .core_busy_o              ()
+      .pulp_clock_en_i          ()
   );
 
 Parameters
@@ -155,9 +154,7 @@ Interfaces
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``core_sleep_o``        | 1                       | out | Core is sleeping, see :ref:`sleep_unit`.   |
 +-------------------------+-------------------------+-----+--------------------------------------------+
-| ``clock_en_i``          | 1                       | in  | Clock enable (only used when               |
-|                         |                         |     | ``PULP_CLUSTER`` = 1), see                 |
-|                         |                         |     | :ref:`pulp_cluster`                        |
-+-------------------------+-------------------------+-----+--------------------------------------------+
-| ``core_busy_o``         | 1                       | out | Core busy, see :ref:`pulp_cluster`         |  
+| ``pulp_clock_en_i``     | 1                       | in  | PULP clock enable (only used when          |
+|                         |                         |     | ``PULP_CLUSTER`` = 1, tie to 0 otherwise), |
+|                         |                         |     | see :ref:`sleep_unit`                      |
 +-------------------------+-------------------------+-----+--------------------------------------------+
