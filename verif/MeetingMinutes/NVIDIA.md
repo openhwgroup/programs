@@ -1,3 +1,32 @@
+July 15, 2020
+============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson <br>
+**NVIDIA** Joe Wang, Eric Liang, Wenjing Song
+
+Actions:
+------
+
+**Mike** to work with OpenHW team to integrate NVIDIA team into GitHub and MatterMost discussions.<br>
+**Eric** to share "2.0" feature spreadsheet with Mike.  This will be published on GitHub.
+
+Topics:
+-------
+1. Due to internal project constraints, this was the first meeting between NVIDIA and the OpenHW Verification Task Group in some time.
+2. The NVIDIA team has determined that they will develop a "2.0" version of their instruction stream generator and would like to understand if there is sufficient interest from OpenHW to use it in [core-v-verif](https://github.com/openhwgroup/core-v-verif).
+3. Version 2.0 of the NVIDIA generator will update several key features:
+- User Documentation
+- Code Structure
+- Maintenance
+- Performance
+- Features<br>
+Work on 2.0 is expected to start in October 2020.  The NVIDIA team is open to considering specific input from OpenHW to the above feature list.
+4. There was a good discussion about how to staff this project.  NVIDIA would like to engage with OpenHW on this project.  Mike explained that the best way to that was to attend the bi-weekly VTG strategy meetings and get set-up on MatterMost, particularily the [ISG Channel](https://mattermost.openhwgroup.org/all-users/channels/twg-verification-isgs)
+
+
 May 20, 2020
 ============
 
