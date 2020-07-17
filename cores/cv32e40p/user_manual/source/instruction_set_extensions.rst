@@ -367,6 +367,91 @@ Extract, Insert, Clear and Set instructions have the following meaning:
 
 - Set Is3+1 or rs2[9:5]+1 bits at position Is2 or rs2[4:0]
 
+
+Bit Reverse Instruction
+^^^^^^^^^^^^^^^^^^^^^^^
+
+This section will describe the `p.bitrev` instruction from a bit manipulation
+perspective without describing it's application as part of an FFT. The bit
+revserse instruction will reverse bits in groupings of 1, 2 or 3 bits. The
+number of grouped bits is described by *Is3* as follows:
+
+* **0** - reverse single bits
+* **1** - reverse groups of 2 bits
+* **2** - reverse groups of 3 bits
+
+The number of bits that are reversed can be controlled by *Is2*. This will
+specify the number of bits that will be removed by a left shift prior to
+the reverse operation resulting in the *32-Is2* least significant bits of
+the input value being reversed and the *Is2* most significant bits of the
+input value being thrown out.
+
+What follows is a few examples.
+
+.. highlight:: none
+
+::
+
+   p.bitrev x18, x20, 0, 4 (groups of 1 bit; radix-2)
+
+   in:    0xC64A5933 11000110010010100101100100110011
+   shift: 0x64A59330 01100100101001011001001100110000
+   out:   0x0CC9A526 00001100110010011010010100100110
+
+   Swap pattern:
+   A B C D E F G H . . . . . . . . . . . . . . . . . . . . . . . .
+   0 1 1 0 0 1 0 0 1 0 1 0 0 1 0 1 1 0 0 1 0 0 1 1 0 0 1 1 0 0 0 0
+   . . . . . . . . . . . . . . . . . . . . . . . . H G F E D C B A
+   0 0 0 0 1 1 0 0 1 1 0 0 1 0 0 1 1 0 1 0 0 1 0 1 0 0 1 0 0 1 1 0
+
+In this example the input value is first shifted by 4 (*Is2*). Each individual
+bit is reversed. For example, bits 31 and 0 are swapped, 30 and 1, etc.
+
+::
+
+   p.bitrev x18, x20, 1, 4 (groups of 2 bits; radix-4)
+
+   in:    0xC64A5933 11000110010010100101100100110011
+   shift: 0x64A59330 01100100101001011001001100110000
+   out:   0x0CC65A19 00001100110001100101101000011001
+
+   Swap pattern:
+   A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P
+   01 10 01 00 10 10 01 01 10 01 00 11 00 11 00 00
+   P  O  N  M  L  K  J  I  H  G  F  E  D  C  B  A
+   00 00 11 00 11 00 01 10 01 01 10 10 00 01 10 01
+
+In this example the input value is first shifted by 4 (*Is2*). Each group of
+two bits are reversed. For example, bits 31 and 30 are swapped with 1 and 0
+(retaining their position relative to each other), bits 29 and 28 are swapped
+with 3 and 2, etc.
+
+::
+
+   p.bitrev x18, x20, 2, 4 (groups of 3 bits; radix-8)
+
+   in:    0xC64A5933 11000110010010100101100100110011
+   shift: 0x64A59330 01100100101001011001001100110000
+   out:   0x216B244B 00100001011010110010010001001011
+
+   Swap pattern:
+   A   B   C   D   E   F   G   H   I   J
+   011 001 001 010 010 110 010 011 001 100 00
+      J   I   H   G   F   E   D   C   B   A
+   00 100 001 011 010 110 010 010 001 001 011
+
+In this last example the input value is first shifted by 4 (*Is2*). Each group
+of three bits are reversed. For example, bits 31, 30 and 29 are swapped with
+4, 3 and 2 (retaining their position relative to each other), bits 28, 27 and
+26 are swapped with 7, 6 and 5, etc. Notice in this example that bits 0 and 1
+are lost and the result is shifted right by two with bits 31 and 30 being tied
+to zero. Also notice that when J (100) is swapped with A (011), the four most
+significant bits are no longer zero as in the other cases. This may not be
+desirable if the intention is to pack a specific number of grouped bits
+aligned to the least significant bit and zero extended into the result. In
+this case care should be taken to set *Is2* appropriately.
+
+
 .. _pulp_bit_manipulation:
 
 Bit Manipulation Operations
@@ -415,11 +500,11 @@ Bit Manipulation Operations
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | **p.ror**         | **rD, rs1, rs2**        | rD = RotateRight(rs1, rs2)                                                                                                               |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **p.bitrev**      | **rD, rs1, Is3, Is2**   | Given an input rs1. it returns a bit reversed representation assuming                                                                    |
+| **p.bitrev**      | **rD, rs1, Is3, Is2**   | Given an input rs1 it returns a bit reversed representation assuming                                                                     |
 |                   |                         |                                                                                                                                          |
-|                   |                         | FFT on 2^Is2 points in Radix 2^Is3                                                                                                       |
+|                   |                         | FFT on 2^Is2 points in Radix 2^(Is3+1)                                                                                                   |
 |                   |                         |                                                                                                                                          |
-|                   |                         | Note: Is3 can be either 1, 2 or 3                                                                                                        |
+|                   |                         | Note: Is3 can be either 0 (radix-2), 1 (radix-4) or 2 (radix-8)                                                                          |
 +-------------------+-------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 **Note:** Sign extension is done over the extracted bit, i.e. the Is2-th bit.
