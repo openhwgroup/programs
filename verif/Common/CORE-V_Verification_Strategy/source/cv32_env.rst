@@ -191,9 +191,10 @@ Phase 3 Environment
 ~~~~~~~~~~~~~~~~~~~
 
 Phase 3 adds significant capabilies to the environment, notably the integration
-of the ISS as an environment component and the
-ability to exercise either the CV32E40* core or the CV32E40* subsystem as the
-device-under test.
+of the ISS as an environment component and a **Step-and-Compare** instruction scoreboard.
+
+ISS Integration
+________________
 
 `Illustration 5`_ shows the ISS as an entity external to the environment.  Wrapping
 the ISS in a DPI layer allows the ISS to be integrated into the UVM environment
@@ -202,8 +203,15 @@ will have direct control over the operation of the ISS and comparision between t
 predictions made by the ISS and actual instruction execution by the Core are
 done in real time.  This is a significant aid to debugging failures.
 
-Details of this integration will be added to `Phase 3 Development Strategy`_
-in a future revision of this document.
+Step-and-Compare Scoreboarding
+______________________________
+
+ToDo
+
+
+
+Beyond Phase 3 Environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 At the time of this writing (2020-04-21) there is a proposal to develop a
 CV32E40P Subsystem, comprized of the Core, a Debug Module and Debug Transport
@@ -260,11 +268,6 @@ be inactive.
    :alt: 
 
    Illustration 7: Subsystem Wrapper (compiled for Core-level verification)
-
-Phase 3 Development Strategy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-ToDo
 
 File Structure and Organization
 -------------------------------
