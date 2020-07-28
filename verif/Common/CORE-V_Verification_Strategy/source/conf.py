@@ -42,6 +42,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
     'recommonmark',
+    'sphinx.ext.autosectionlabel',
 #    'sphinxcontrib.wavedrom',
 ]
 #wavedrom_html_jsinline = False

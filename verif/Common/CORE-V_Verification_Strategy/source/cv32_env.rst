@@ -25,19 +25,19 @@ will be rolled out in three phases as detailed below.
 Core Testbench
 --------------
 
-The “core” testbench, shown in , on page , is essentially the RI5CY
-testbench with some slight modifications. It is named after the
-directory is it located in. This testbench has the ability to run the
-directed, self-checking RISC-V Compliance and XPULP test programs
-(mostly written in Assembler) used by RISC-V and will be used to update
-the RISC-V Compliance and add XPULP Compliance testing for the CV32E40P.
-These tests are the foundation of the `Base Instruction
+The “core” testbench, is essentially the RI5CY testbench
+(shown in Illustration 1 of :ref:`PULP-Platform Simulation Verification`) with some
+slight modifications. It is named after the directory is it located in. This
+testbench has the ability to run the directed, self-checking RISC-V Compliance
+and XPULP test programs (mostly written in Assembler) used by RISC-V and will
+be used to update the RISC-V Compliance and add XPULP Compliance testing for
+the CV32E40P.  These tests are the foundation of the `Base Instruction
 Set <https://github.com/openhwgroup/core-v-docs/tree/master/verif/CV32E40P/VerificationPlan/base_instruction_set>`__
 and `XPULP Instruction
 Extensions <https://github.com/openhwgroup/core-v-docs/tree/master/verif/CV32E40P/VerificationPlan/xpulp_instruction_extensions>`__
 captured in the CV32E40P verification plan.
 
-The testbench has been (or will be) modified in the following ways:
+The testbench has been modified in the following ways:
 
 1. Fix several Lint errors (Metrics dsim strictly enforces the IEEE-1800
    type-checking rules).
