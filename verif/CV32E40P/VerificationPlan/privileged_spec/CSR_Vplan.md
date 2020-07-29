@@ -1,6 +1,4 @@
-Functional verification of CSRs in a RISC-V core.
-=================================================
-
+## Functional verification of CSRs in a RISC-V core
 The Controll and Status Registers in a RISC-V core are distinct from CSRs in
 non-processor ASIC/FPGA RTL in ways that have a direct impact on RTL
 verification.  Here, we discuss the problem in detail, using select RISC-V
@@ -13,8 +11,7 @@ verification in particular.   Its second purpose is form the Verification Plan
 not follow the same spreadsheet style template that is used for other CV32E40P
 Vplans.   The reason for this will become apparent as you read the document.
 
-Power-on-Reset Values
----------------------
+### Power-on-Reset Values
 
 Many (all?) RISC-V CSRs are expected to have a known value once the core comes
 out of hardware reset.  Testing these values is typically straightforward and
@@ -26,12 +23,11 @@ illegal instruction exception which should, in turn, update the value of MCAUSE.
 Therefore a test that checks the PoR value of MCAUSE must not access a non-existant
 CSR before reading MCAUSE.
 
-Access Mode Behavior
---------------------
+### Access Mode Behavior
 
 Here, we are trying to answer the question, "how does the CSR behave when it is
 accessed (written to, or read from).  In RISC-V cores, CSRs are accessed using
-the `CSRRW`, `CSRRS`, `CSRRC`, CSRRWI`, `CSRRSI` and `CSRRCI` instructions.
+the `CSRRW`, `CSRRS`, `CSRRC`, `CSRRWI`, `CSRRSI` and `CSRRCI` instructions.
 While in the general case a core may provide alternative means to access CSRs,
 in the CV32E40P, these instructions are the only access method available.
 
@@ -43,8 +39,7 @@ privilege, existance and field specification.  These are discussed in turn,
 with emphasis placed on pre-silicon functional verification (as opposed to 
 post-silicon use by software).
 
-Access Mode
-~~~~~~~~~~~
+#### Access Mode
 
 Access modes in RISC-V cores are simple and familar to those with prior experience
 with non-processor core ASIC/FPGA RTL.  In fact, there are only two access modes
@@ -55,8 +50,7 @@ value upon a read.
 2. RO: no bit of a RO field may be writable and must return the previous value upon
 read, event after being written to by either 0 or 1.
 
-Privilege
-~~~~~~~~~
+#### Privilege
 
 Of course, nothing is ever _that_ simple with RISC-V.  A core's privilege mode adds
 a second dimension to access mode.  Is it often the case that a CSR that is
@@ -68,8 +62,7 @@ the highest privilege level.
 
 CV32E40P only supports Machine mode, which greatly simplifies the problem.
 
-Existance
-~~~~~~~~~
+#### Existance
 
 CSR "existance" is a concept unique to processor core and is not generally seen in
 non-processor ASIC/FPGA RTL designs.  The RISC-V privileged and debug specifications
@@ -80,8 +73,7 @@ For example reading a Debug CSR when the core is not in debug mode results in an
 illegal instruction exception while reading the same register in debug mode
 returns a value.
 
-Field Specification
-~~~~~~~~~~~~~~~~~~~
+#### Field Specification
 
 Although the "field specification" may sound familiar to those with a
 non-processor RTL background, the term is used different in RISC-V where
@@ -102,8 +94,7 @@ functional verification of their access behavior.
 verification of their access behavior.
 
 
-Control Actions
----------------
+### Control Actions
 
 CSRs are called Control and Status Registers for a reason.  Control registers will
 change (control) the operation of the device under test in measureable ways and functional
@@ -120,14 +111,12 @@ register values).  In processor cores a program executing on the core acts as bo
 the control path (by executing CSR access instructions) and the data path (by
 executing code that is affected by the CSRs).
 
-Status Capture
---------------
+### Status Capture
 
 Certain external and/or program events will be recorded in status registers.
 This sub-section will be updated at a later date.
 
-CV32E40P CSR Verification Plan
-==============================
+## CV32E40P CSR Verification Plan
 
 | Testcase | Targeted Aspect | Type | Reference |
 |----------|-----------------|------|-----------|
@@ -138,12 +127,12 @@ CV32E40P CSR Verification Plan
 | csr\_privlege.c | Debug mode can access all CSRs | Manually written, directed | [5](#5) |
 | corev\_random\_csr.S | riscv-dv CSR test | Constrained-random generation | [6](#6) |
 
-ToDo:
------
+### ToDo:
+
 * Verification of status fields.
 * Verification of control fields.
 
-#1
+### 1
 For each machine-mode CSR in CV32E40P:
 - read current value
 - compare to documented PoR value in User Manual
@@ -152,22 +141,22 @@ Failure conditions:
 - any read value does not match documented PoR
 - any illegal instruction exceptions
 
-#2
+### 2
 Same as [1](#1) but first enter debug mode and then attempt to read all
 machine-mode and debug-mode registers
 
-#3
+### 3
 Similar to [1](#1) with added accesses between address ranges of existing
 machine-mode CSRs.  For example, address range 0x307 : 0x33F between Machine
 Trap Setup CSRs and Machine Trap Handling CSRs.
 
-#4
+### 4
 Access mode test of all CSRs.  The details of the algorithm will be documented
 here in a future commit of this document.
 
-#5
+### 5
 Same as [4](#4), run in Debug mode.  Add access mode testing of Debug CSRs.
 
-#6
+### 6
 At the time of this writing, it is not know if the CSR tests generated by
 riscv-dv can be readily used for CV32E40P.   Investigation is on-going.
