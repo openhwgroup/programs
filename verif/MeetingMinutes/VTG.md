@@ -1,3 +1,41 @@
+July 30, 2020 - VTG Meeting
+
+==============
+
+Attendees:
+----------
+
+**OpenHW:** Duncan Bees<br>
+**Futurewei:** Leo Wang<br>
+**SiLabs:** Steve Richmond<br>
+**Imperas:** Simon Davidmann<br>
+**Embecosm:** Craig Blackmore<br>
+**EM-Micro:** John Martin<br>
+
+
+Notes:
+----------
+
+Topics:
+
+1. Simulation Control
+
+- Initial PR for Xcelium Makefile updates was approved, awaiting merging<br>
+- Reviewed completed items, near term items and long ter items<br>
+- Steve to release Questa updates soon and complete documentation<br>
+- Regression tool YAML discussion regarding simple scope<br>
+
+2. Assertion standards
+
+- Quick presentation of upcoming PR merge.  No issues were raised.<br>
+
+3. FORCE-RISCV
+
+- Leo previewed documentation prepared by FORCE team to scope effort and tasks to enable RISCV32 generation from FORCE.
+    - Should be PRed soon for review.
+    - Interest in helping with the port from a Hong Kong-based professor and his students
+
+
 July 16, 2020 - VTG Meeting
 
 ==============
