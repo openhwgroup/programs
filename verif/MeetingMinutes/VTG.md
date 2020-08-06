@@ -1,5 +1,12 @@
-July 30, 2020 - VTG Meeting
+August 6, 2020 - Discussion with Duncan
+=======================================
 
+Here is the stuff we discussed Duncan.
+- one
+- two
+- another one
+
+July 30, 2020 - VTG Meeting
 ==============
 
 Attendees:
