@@ -206,7 +206,7 @@ done in real time.  This is a significant aid to debugging failures.
 Step-and-Compare Scoreboarding
 ______________________________
 
-ToDo
+.. include:: step_compare.rst
 
 
 
