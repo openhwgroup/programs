@@ -27,6 +27,7 @@ The table below contans the main signals used in stepping and comparing the RTL 
 +--------------------------------+----------+------------------------------------------------------------+
 
 Referring to Figure 1:
+
 1. The simulation starts with step_rtl=1.  The RTL throttles the ISS.
 2. Once the RTL retires an instruction (indicated by ev_rtl) the ISS is commanded to Step and retire an instruction (indicated by ev_ovp)
 3. The testbench compares the GPR, CSR, and PC a fixed time after both the RTL and ISS have retired an instruction
@@ -39,3 +40,20 @@ Referring to Figure 1:
    :alt: 
 
    Figure 1: Step and Compare Sequencing
+
+Step and compare is accomplshed in the *uvmt_cv32_step_compare.sv* module.
+
+Compare
+----------
+RTL module *riscv_tracer* flags that the RTL has retired an instruction by triggering the *retire* event.    Currently, the PC, GPRs, and CSRs are compared when the *compare* function is called. The comparison count is printed out at the end of the test. The test will cause a UVM_ERROR if the PC, GPR, or CSR is never compared, i.e. the comparison count is 0.  
+
+GPR Comparison
+----------
+When the RTL retire event is triggered *<gpr>_q* may not have updated yet. For this reason RTL module *riscv_tracer* maintains queue *reg_t insn_regs_write* which contains the address and value of any GPR which will be updated. It is assumed and checked that this queue is never greater than 1 which implies that only 0 or 1 GPR registers change as a result of a retired instruction. 
+
+If the size of queue *insn_regs_write* is 1 the GPR at the specified address is compared to that predicted by the ISS.  The remaining 31 registers are then compared. For these 31 registers, *<gpr>_q* has not updated due to the current retired instruction so *<gpr>_q* is used instead of *insn_regs_write*.
+
+If the size of queue *insn_regs_write* is 0 all 32 registers are compared, *<gpr>_q* is used for the observed value. 
+
+CSR Comparison
+---------------
