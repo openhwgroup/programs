@@ -7,5 +7,11 @@ The table below contans the main signals used in stepping and comparing the RTL 
 +--------------------------------+----------+------------------------------------------------------------+
 |  Name                          | Type     |    Meaning                                                 |
 +================================+==========+============================================================+
+| step_compare_if.ovp_cpu_retire | event    | ISS has retired an instruction, triggers ev_ovp event      |
++--------------------------------+----------+------------------------------------------------------------+
+| step_compare_if.riscv_retire   | event    | RTL has retired an instruction, triggers ev_rtl event      |
++--------------------------------+----------+------------------------------------------------------------+
+| step_ovp     	                 | bit      | If 1, step ISS until ovp.cpu.Retire event                  |
++--------------------------------+----------+------------------------------------------------------------+
 | ev_compare	                 | event    | RTL and ISS have both retired an instruction.  Do compare. |
 +--------------------------------+----------+------------------------------------------------------------+
