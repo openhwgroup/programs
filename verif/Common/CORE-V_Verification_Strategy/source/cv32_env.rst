@@ -206,11 +206,7 @@ done in real time.  This is a significant aid to debugging failures.
 Step-and-Compare Scoreboarding
 ______________________________
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   step_compare
+To Do
 
 
 
