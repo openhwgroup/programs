@@ -2,7 +2,7 @@ Step and Compare
 ================
 For most tests the Imperas ISS is used as the golden model, i.e. the predictor.  The ISS is used in a step and compare mode in which the ISS and RTL execution are in lock-step.  Step and compare is invaluable for debug because the ISS and RTL are executing the same instruction in a compare cycle.
 
-The table below contans the main signals used in stepping and comparing the RTL and ISS. 
+The table below contains the main signals used in stepping and comparing the RTL and ISS. 
 
 +--------------------------------+----------+------------------------------------------------------------+
 |  Name                          | Type     |    Meaning                                                 |
@@ -31,7 +31,7 @@ Referring to Figure 1:
 1. The simulation starts with step_rtl=1.  The RTL throttles the ISS.
 2. Once the RTL retires an instruction, indicated by ev_rtl, the ISS is commanded to Step and retire an instruction, indicated by ev_ovp.
 3. The testbench compares the GPR, CSR, and PC after both the RTL and ISS have retired an instruction.
-4. Once the testbench performs the compare, step_rtl asserts, event ev_compare is triggered and the process repeats.
+4. Once the testbench performs the compare, step_rtl asserts, event ev_compare is triggered, and the process repeats.
 
 
 .. figure:: ../images/step_compare_sequence1.png
@@ -41,11 +41,11 @@ Referring to Figure 1:
 
    Figure 1: Step and Compare Sequencing
 
-Step and compare is accomplished in the *uvmt_cv32_step_compare.sv* module.
+Step and compare is accomplished by the *uvmt_cv32_step_compare* module.
 
 Compare
 ----------
-RTL module *riscv_tracer.sv* flags that the RTL has retired an instruction by triggering the *retire* event.  The PC, GPRs, and CSRs are compared when the *compare* function is called. The comparison count is printed at the end of the test. The test will call UVM_ERROR if the PC, GPR, or CSR is never compared, i.e. the comparison count is 0.  
+RTL module *riscv_tracer* flags that the RTL has retired an instruction by triggering the *retire* event.  The PC, GPRs, and CSRs are compared when the *compare* function is called. The comparison count is printed at the end of the test. The test will call UVM_ERROR if the PC, GPR, or CSR is never compared, i.e. the comparison count is 0.  
 
 GPR Comparison
 ~~~~~~~~~~~~~~
