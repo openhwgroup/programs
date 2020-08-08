@@ -22,4 +22,3 @@ Editor: **Michael Thompson**
    test_program_environment
    formal
    fpga
-   step_compare

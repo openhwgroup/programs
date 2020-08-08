@@ -30,7 +30,7 @@ Referring to Figure 1:
 
 1. The simulation starts with step_rtl=1.  The RTL throttles the ISS.
 2. Once the RTL retires an instruction (indicated by ev_rtl) the ISS is commanded to Step and retire an instruction (indicated by ev_ovp)
-3. The testbench compares the GPR, CSR, and PC a fixed time after both the RTL and ISS have retired an instruction
+3. The testbench compares the GPR, CSR, and PC after both the RTL and ISS have retired an instruction
 4. Once the testbench performs the compare (indicated by ev_compare) step_rtl asserts and the process repeats
 
 
