@@ -45,11 +45,11 @@ Step and compare is accomplished in the *uvmt_cv32_step_compare.sv* module.
 
 Compare
 ----------
-RTL module *riscv_tracer* flags that the RTL has retired an instruction by triggering the *retire* event.    Currently, the PC, GPRs, and CSRs are compared when the *compare* function is called. The comparison count is printed out at the end of the test. The test will cause a UVM_ERROR if the PC, GPR, or CSR is never compared, i.e. the comparison count is 0.  
+RTL module *riscv_tracer* flags that the RTL has retired an instruction by triggering the *retire* event.  The PC, GPRs, and CSRs are compared when the *compare* function is called. The comparison count is printed at the end of the test. The test will call UVM_ERROR if the PC, GPR, or CSR is never compared, i.e. the comparison count is 0.  
 
 GPR Comparison
 ~~~~~~~~~~~~~~
-When the RTL retire event is triggered *<gpr>_q* may not have updated yet. For this reason RTL module *riscv_tracer* maintains queue *reg_t insn_regs_write* which contains the address and value of any GPR which will be updated. It is assumed and checked that this queue is never greater than 1 which implies that only 0 or 1 GPR registers change as a result of a retired instruction. 
+When the RTL retire event is triggered *<gpr>_q* may not yet have updated. For this reason RTL module *riscv_tracer* maintains queue *reg_t insn_regs_write* which contains the address and value of any GPR which will be updated. It is assumed and checked that this queue is never greater than 1 which implies that only 0 or 1 GPR registers change as a result of a retired instruction. 
 
 If the size of queue *insn_regs_write* is 1 the GPR at the specified address is compared to that predicted by the ISS.  The remaining 31 registers are then compared. For these 31 registers, *<gpr>_q* has not updated due to the current retired instruction so *<gpr>_q* is used instead of *insn_regs_write*.
 
@@ -57,6 +57,6 @@ If the size of queue *insn_regs_write* is 0 all 32 registers are compared, *<gpr
 
 CSR Comparison
 ~~~~~~~~~~~~~~
-When the RTL retire event is triggered the RTL CSR's will have updated and can be probed directly. At each Step the ISS will write the updated CSR registers to array *CSR* which is an array of 32-bits indexed by a string. The index is the name of the CSR, for example, mstatus. Array *CSR* is fully traversed every time function *compare* is called and compared with the relevant RTL CSR. A CSR that is not be compared can be ignored by setting bit *ignore=1*.  An example is *time*, which the ISS writes to array *CSR*.
+When the RTL retire event is triggered the RTL CSRs will have updated and can be probed directly. At each Step the ISS will write the updated CSR registers to array *CSR* which is an array of 32-bits indexed by a string. The index is the name of the CSR, for example, *mstatus*. Array *CSR* is fully traversed every call of function *compare* is called and compared with the relevant RTL CSR. A CSR that is not to be compared can be ignored by setting bit *ignore=1*.  An example is *time*, which the ISS writes to array *CSR* but is not present in the RTL CSRs.
 
 
