@@ -5,7 +5,7 @@
 | Company            |  Person           |20.05.11|20.06.08|20.07.13|20.08.10|20.MM.DD|
 |--------------------|-------------------|:------:|:------:|:------:|:------:|:------:|
 | AB Open Ltd        |                   |        |        |        |        |        |
-| Alibaba Group      | Yunshai Shang     | Y      | Y      | Y      |        |        |
+| Alibaba Group      | Yunshai Shang     | Y      | Y      | Y      | Y      |        |
 | Alibaba Group      | Xiaoning Qi       |        |        |        |        |        |
 | Ashling Micro. Ltd |                   |        |        |        |        |        |
 | Barcelona Sup.(BSC)|                   |        |        |        |        |        |
@@ -19,10 +19,10 @@
 | EM Micro. US Inc   | David McConnell   |        |        |        |        |        |
 | EM Micro. US Inc   | Greg Tumbush      |        |        |        |        |        |
 | Embecosm           | Jeremy Bennett    | Y      | Y      | Y      |        |        |
-| Embecosm           | Mary Bennett      |        |        |        |        |        |
-| Embecosm           | Craig Blackmore   | Y      | Y      | Y      |        |        |
-| Embecosm           | Pietra Ferreira   |        |        |        |        |        |
-| Embecosm           | Jessica Mills     |        |        |        |        |        |
+| Embecosm           | Mary Bennett      |        |        |        | Y      |        |
+| Embecosm           | Craig Blackmore   | Y      | Y      | Y      | Y      |        |
+| Embecosm           | Pietra Ferreira   |        |        |        | Y      |        |
+| Embecosm           | Jessica Mills     |        |        |        | Y      |        |
 | Embecosm           | Paolo Savini      |        | Y      | Y      |        |        |
 | ETH Zurich         |                   |        |        |        |        |        |
 | Futurewei Tech. Inc| Jiangliang Wang   |        |        |        |        |        |
@@ -52,14 +52,14 @@
 | Praesum Comm.      |                   |        |        |        |        |        |
 | Secure Thingz      |                   |        |        |        |        |        |
 | Silicon Labs. Inc. | Sebastian Ahmed   |        |        |        |        |        |
-| Silicon Labs. Inc. | Arjan Bink        | Y      | Y      |        |        |        |
+| Silicon Labs. Inc. | Arjan Bink        | Y      | Y      |        | Y      |        |
 | Silicon Labs. Inc. | Oystein Knauserud |        |        |        |        |        |
 | Silicon Labs. Inc. | A. Piovaccari     |        |        |        |        |        |
 | Silicon Labs. Inc. | Steve Richmond    |        |        |        |        |        |
 | Silicon Labs. Inc. | Paul Zavalney     |        | Y      |        |        |        |
 | Symbiotic GmbH     | Nina Engelhardt   |        |        |        |        |        |
 | Thales             | Jerome Quevremont |        |        |        |        |        |
-| Thales             | Zbigniew Chamski  | Y      | Y      |  Y     |        |        |
+| Thales             | Zbigniew Chamski  | Y      | Y      |  Y     | Y      |        |
 | Thales             | Jean-Roch Coulon  |        |        |        |        |        |
 | Univ. of Utah      |                   |        |        |        |        |        |
 | Symbiotic GmbH     |                   |        |        |        |        |        |
@@ -84,6 +84,6 @@
 | OpenHW             | Duncan Bees       |        |        | Y      |        |        |
 | OpenHW             | Rick O'Connor     | Y      |        |        |        |        |
 | OpenHW             | Jim Parisien      | Y      | Y      |        |        |        |
-| OpenHW             | Davide Schiavone  |        |        |        |        |        |
-| OpenHW             | Mike Thompson     | Y      | Y      | Y      |        |        |
+| OpenHW             | Davide Schiavone  |        |        |        | Y      |        |
+| OpenHW             | Mike Thompson     | Y      | Y      | Y      | Y      |        |
 | OpenHW             | Florian Zaruba    |        |        | Y      |        |        |
