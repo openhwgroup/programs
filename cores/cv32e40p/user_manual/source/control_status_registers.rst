@@ -9,6 +9,9 @@ that were needed for the PULP system. The reason for this is that we
 wanted to keep the footprint of the core as low as possible and avoid
 any overhead that we do not explicitly need.
 
+Writes of a non-supported value to a CSR does not throw an illegal
+instruction exception.
+
 +---------------+-------------------+-----------+---------------------------------------------------------+
 |  CSR Address  |   Name            | Privilege |   Description                                           |
 +---------------+-------------------+-----------+---------------------------------------------------------+
