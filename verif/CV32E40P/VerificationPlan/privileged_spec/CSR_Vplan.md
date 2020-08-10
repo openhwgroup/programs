@@ -26,10 +26,11 @@ CSR before reading MCAUSE.
 ### Access Mode Behavior
 
 Here, we are trying to answer the question, "how does the CSR behave when it is
-accessed (written to, or read from).  In RISC-V cores, CSRs are accessed using
-the `CSRRW`, `CSRRS`, `CSRRC`, `CSRRWI`, `CSRRSI` and `CSRRCI` instructions.
-While in the general case a core may provide alternative means to access CSRs,
-in the CV32E40P, these instructions are the only access method available.
+accessed (written to, or read from)?".  In RISC-V cores, CSRs are accessed using
+the `CSRRC`, `CSRRCI`, `CSRRS`, `CSRRSI`, `CSRRW` and `CSRRWI` instructions.  Note
+that there are also seven pseudoinstructions that will expand into one of these
+instructions.  While in the general case a core may provide alternative means to
+access CSRs, in the CV32E40P, these instructions are the only access method available.
 
 Note that when verifying access mode behavior we are not (yet) concerned about
 what the core will do when a given CSR has a specific value.
@@ -76,7 +77,7 @@ returns a value.
 #### Field Specification
 
 Although the "field specification" may sound familiar to those with a
-non-processor RTL background, the term is used different in RISC-V where
+non-processor RTL background, the term is used differently in RISC-V where
 "field specification" refers to how software is expected to interact with
 specific fields of specific CSRs.  This has a material impact on the strategy
 used for RTL verification of CSRs.  There are three field specification types:
