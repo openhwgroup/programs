@@ -1,3 +1,50 @@
+August 13, 2020 - VTG Meeting
+
+==============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson<br>
+**Futurewei:** Leo Wang<br>
+**SiLabs:** Steve Richmond, Paul Zavalney, Arjan Bink<br>
+**Imperas:** Simon Davidmann<br>
+**Embecosm:** Craig Blackmore<br>
+**EM-Micro:** John Martin<br>
+**Symbiotic EDA:** Nina Engelhardt<br>
+
+Notes:
+----------
+
+Topics:
+
+1. Simulation Control
+
+- Presented updates on PRs and next phases.
+- No feedback or concerns.
+
+2. Regression and Test Specification Updates
+
+- Presented plans and PR in review.
+- No feedback or concerns.
+
+3. Simulation vs. Formal
+
+- Presented issue with exceptions/illegal instructions on CV32E40P.
+- No technical objections to relying on OneSpin for illegal insruction/decoder completion coverage on CV32E40P.
+
+**Action: Steve to work with Mike to describe strategy and simulation coverage issue for TWG to ratify.
+
+4. Tags
+
+- Community has expressed to Mike desire for tag repo peridoically.  It is a relatively common Github practice
+  to provide tags.  This is especially helpful for non-expert Git users.
+- Don't really have milestones or any other natural tag boundary.
+- Mike proposing automated simple daily tagging.
+- Possibility to use a weekly regression tied to a Metrics regression.  Mike has meeting next week.
+
+**Action: Steve and Mike to propose/implement an automated tag.
+
 July 30, 2020 - VTG Meeting
 
 ==============
