@@ -21,29 +21,24 @@ indicated in the Table then the associated CSR is not implemented.  If the
 parameter column is empty then the associated CSR is always implemented.
 
 The **Privilege** column indicates the access mode of a CSR.  The first letter
-indicates the privilege level required to access the CSR.  Attempts to access a
-CSR with a higher privilege level than the core is currently running in will
-throw an illegal instruction exception [1]_.  The remaining letters indicate
-the read and/or write behavior of the CSR when accessed by the indicated or
-higher privilge level:
+indicates the lowest privilege level required to access the CSR.  Attempts to
+access a CSR with a higher privilege level than the core is currently running
+in will throw an illegal instruction exception.  This is largely a moot point
+for the CV32E40P as it only supports machine and debug modes.  The remaining
+letters indicate the read and/or write behavior of the CSR when accessed by
+the indicated or higher privilge level:
 
-.. QUESTION: if CV32E40P only supports machine (and debug) mode, how can thei
-.. FPU and XPULP-specific CSRs support User mode access privilege?
-
-
-* **RW**: CSR is **read-write**.  That is, csr instructions may write any value and
-  that value will be returned on a subsequent read (unless a side-effect causes
-  the core to change the CSR value).
+* **RW**: CSR is **read-write**.  That is, csr instructions may write any value
+  and that value will be returned on a subsequent read (unless a side-effect
+  causes the core to change the CSR value).
 
 * **RO**: CSR is **read-only**.  Writes by csr instrucions have no effect.
 
-Writes of a non-supported value to a CSR does not throw an illegal
+Writes of a non-supported value to a CSR do not result in an illegal
 instruction exception.
 
-Reads or writes to a CSR that is not implemented will throw an illegal
+Reads or writes to a CSR that is not implemented will result in an illegal
 instruction exception.
-
-.. QUESTION: shouldn't User Custom CSRs be in the range 0x800 - 0x8FF?
 
 +---------------+-------------------+-----------+---------------------+---------------------------------------------------------+
 |  CSR Address  |   Name            | Privilege | Parameter           |  Description                                            |
@@ -232,7 +227,7 @@ Reset Value: 0x0000_0000
 +-------------+-----------+------------------------------------------------------------------------+
 |   Bit #     |  Mode     |   Description                                                          |
 +=============+===========+========================================================================+
-| 31:3        | RW        | Writes are ignored; reads return 0.                                    |
+| 31:3        | RO        | Writes are ignored; reads return 0.                                    |
 +-------------+-----------+------------------------------------------------------------------------+
 | 2:0         | RW        | Rounding mode. 000 = RNE, 001 = RTZ, 010 = RDN, 011 = RUP, 100 = RMM   |
 |             |           | 101 = Invalid, 110 = Invalid, 111 = DYN.                               |
@@ -250,7 +245,7 @@ Reset Value: 0x0000_0000
 +-------------+-----------+------------------------------------------------------------------------+
 |   Bit #     |  Mode     |   Description                                                          |
 +=============+===========+========================================================================+
-| 31:8        | RW        | Reserved. Writes are ignored; reads return 0.                          |
+| 31:8        | RO        | Reserved. Writes are ignored; reads return 0.                          |
 +-------------+-----------+------------------------------------------------------------------------+
 | 7:5         | RW        | Rounding Mode (``frm``)                                                |
 +-------------+-----------+------------------------------------------------------------------------+
@@ -371,13 +366,25 @@ Reset Value: 0x0000_1800
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |   Bit #     |   Mode    |   Description                                                                                                                                                                                                                                                       |
 +=============+===========+=====================================================================================================================================================================================================================================================================+
+| 31:18       | RO        | Reserved, hardwired to 0                                                                                                                                                                                                                                            |
++-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 17:16       | RO        | **MPRV:** hardwired to 0                                                                                                                                                                                                                                            |
++-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 15:12       | RO        | Unimplemented, hardwired to 0                                                                                                                                                                                                                                       |
++-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 12:11       | RO        | **MPP:** Machine Previous Priviledge mode, hardwired to 11 when the user mode is not enabled.                                                                                                                                                                       |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 10:8        | RO        | Unimplemented, hardwired to 0                                                                                                                                                                                                                                       |
++-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 7           | RO        | **Previous Machine Interrupt Enable:** When an exception is encountered, MPIE will be set to MIE. When the mret instruction is executed, the value of MPIE will be stored to MIE.                                                                                   |
++-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 6:5         | RO        | Unimplemented, hardwired to 0                                                                                                                                                                                                                                       |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 4           | RO        | **Previous User Interrupt Enable:** If user mode is enabled, when an exception is encountered, UPIE will be set to UIE. When the uret instruction is executed, the value of UPIE will be stored to UIE.                                                             |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 3           | RW        | **Machine Interrupt Enable:** If you want to enable interrupt handling in your exception handler, set the Interrupt Enable MIE to 1 inside your handler code.                                                                                                       |
++-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2:1         | RO        | Unimplemented, hardwired to 0                                                                                                                                                                                                                                       |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 0           | RO        | **User Interrupt Enable:** If you want to enable user level interrupt handling in your exception handler, set the Interrupt Enable UIE to 1 inside your handler code.                                                                                               |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -414,6 +421,8 @@ Detailed:
 |   Bit #     |   Mode    |   Description                                                          |
 +=============+===========+========================================================================+
 | 31:30       | RO        | Machine XLEN: 0x1 for CV32E40P                                         |
++-------------+-----------+------------------------------------------------------------------------+
+| 29:26       | RO        | Reserved, hardwired to 0                                               |
 +-------------+-----------+------------------------------------------------------------------------+
 | 25:0        | RO        | Extensions.  See Table 3.2 of the Privileged Specification.            |
 +-------------+-----------+------------------------------------------------------------------------+
@@ -554,9 +563,9 @@ Reset Value: 0x0000_0000
 +-------------+-----------+------------------------------------------------------------------------+
 |   Bit #     |   Mode    |   Description                                                          |
 +=============+===========+========================================================================+
-| 31:2        | RW        | Machine Expection Program Counter 31:2                                 |
+| 31:1        | RW        | Machine Expection Program Counter 31:1                                 |
 +-------------+-----------+------------------------------------------------------------------------+
-| 1:0         | R0        | Always 0                                                               |
+|    0        | R0        | Always 0                                                               |
 +-------------+-----------+------------------------------------------------------------------------+
 
 When an exception is encountered, the current program counter is saved
@@ -1110,6 +1119,3 @@ Reset Value: Defined
   If the PMP is enabled, these sixteen registers contain the addresses of
   the PMP as specified by the official privileged spec 1.10.
 
-.. [1]
-   This is largely a moot point for the CV32E40P as it only supports machine
-   and debug modes.
