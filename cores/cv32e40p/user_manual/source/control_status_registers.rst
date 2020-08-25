@@ -28,11 +28,11 @@ for the CV32E40P as it only supports machine and debug modes.  The remaining
 letters indicate the read and/or write behavior of the CSR when accessed by
 the indicated or higher privilge level:
 
-* **RW**: CSR is **read-write**.  That is, csr instructions may write any value
+* **RW**: CSR is **read-write**.  That is, CSR instructions (e.g. csrrw) may write any value
   and that value will be returned on a subsequent read (unless a side-effect
   causes the core to change the CSR value).
 
-* **RO**: CSR is **read-only**.  Writes by csr instrucions have no effect.
+* **RO**: CSR is **read-only**.  Writes by CSR instrucions have no effect.
 
 Writes of a non-supported value to a CSR do not result in an illegal
 instruction exception.
@@ -66,7 +66,8 @@ instruction exception.
 | 0x7C6         | ``lpcount1``      | URW       | ``PULP_XPULP`` = 1  | Hardware Loop 1 Counter.                                |
 +---------------+-------------------+-----------+---------------------+---------------------------------------------------------+
 | 0x006         | ``fprec``         | URW       | ``PULP_XPULP`` = 1  | Custom flag which controls the precision and latency    |
-|               |                   |           |                     | of the iterative div/sqrt unit.                         |
+|               |                   |           | &&                  | of the iterative div/sqrt unit.                         |
+|               |                   |           | ``FPU`` = 1         |                                                         |
 +---------------+-------------------+-----------+---------------------+---------------------------------------------------------+
 | 0xC10         | ``privlv``        | URO       | ``PULP_XPULP`` = 1  | Privilege Level                                         |
 +---------------+-------------------+-----------+---------------------+---------------------------------------------------------+
@@ -181,11 +182,11 @@ What follows is a detailed definition of each of the CSRs listed above.  The
 accessed by the privilege level specified in Table 7 (or a higher privilege
 level):
 
-* **RO**: **read-only** fields are not affect by csr write instructions.  Such
+* **RO**: **read-only** fields are not affect by CSR write instructions.  Such
   fields either return a fixed value, or a value determined by the operation of
   the core.
 
-* **RW**: **read/write** fields store the value written by csr writes. Subsequent
+* **RW**: **read/write** fields store the value written by CSR writes. Subsequent
   reads return either the previously written value or a value determined by the
   operation of the core.
 
@@ -309,7 +310,7 @@ Reset Value: 0x0000_0000
 +-------------+-----------+----------------------------------------------------------------------------------+
 |   Bit #     |  Mode     | Description                                                                      |
 +=============+===========+==================================================================================+
-| 31:5        | RW        | Writes are ignored; reads return 0.                                              |
+| 31:5        | RO        | Writes are ignored; reads return 0.                                              |
 +-------------+-----------+----------------------------------------------------------------------------------+
 | 4:0         | RW        | Precision and latency of the iterative Floating-Point div/sqrt unit.             |
 |             |           +-----------------------------------------------------------------------+----------+
@@ -838,7 +839,9 @@ Detailed:
 +-------------+-----------+-------------------------------------------------------------------------------------------------+
 |   Bit #     |   Mode    |   Description                                                                                   |
 +=============+===========+=================================================================================================+
-| 31:0        | RO        | DPC                                                                                             |
+| 31:1        | RO        | zero                                                                                            |
++-------------+-----------+-------------------------------------------------------------------------------------------------+
+| 0           | RO        | DPC                                                                                             |
 +-------------+-----------+-------------------------------------------------------------------------------------------------+
 
 When the core enters in Debug Mode, DPC contains the virtual address of
@@ -871,7 +874,7 @@ Detailed:
 +-------+------+------------------------------------------------------------------+
 | Bit#  | Mode | Description                                                      |
 +=======+======+==================================================================+
-| 31:0  | RO   | The lower 32 bits of the 64 bit machine mode cycle counter.      |
+| 31:0  | RW   | The lower 32 bits of the 64 bit machine mode cycle counter.      |
 +-------+------+------------------------------------------------------------------+
 
 
@@ -887,7 +890,7 @@ Detailed:
 +-------+------+---------------------------------------------------------------------------+
 | Bit#  | Mode | Description                                                               |
 +=======+======+===========================================================================+
-| 31:0  | RO   | The lower 32 bits of the 64 bit machine mode instruction retired counter. |
+| 31:0  | RW   | The lower 32 bits of the 64 bit machine mode instruction retired counter. |
 +-------+------+---------------------------------------------------------------------------+
 
 
@@ -920,7 +923,7 @@ Detailed:
 +-------+------+------------------------------------------------------------------+
 | Bit#  | Mode | Description                                                      |
 +=======+======+==================================================================+
-| 31:0  | RO   | The upper 32 bits of the 64 bit machine mode cycle counter.      |
+| 31:0  | RW   | The upper 32 bits of the 64 bit machine mode cycle counter.      |
 +-------+------+------------------------------------------------------------------+
 
 
@@ -936,7 +939,7 @@ Detailed:
 +-------+------+---------------------------------------------------------------------------+
 | Bit#  | Mode | Description                                                               |
 +=======+======+===========================================================================+
-| 31:0  | RO   | The upper 32 bits of the 64 bit machine mode instruction retired counter. |
+| 31:0  | RW   | The upper 32 bits of the 64 bit machine mode instruction retired counter. |
 +-------+------+---------------------------------------------------------------------------+
 
 
@@ -1034,7 +1037,9 @@ Reset Value: Defined
   +=============+===========+===============================================================================================================+
   | 31 : 2      |   RW      | BASE: The trap-handler base address, always aligned to 256 bytes, i.e., utvec[7:2] is always set to 0.        |
   +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
-  |  1 : 0      |   RW      | MODE: 00 = direct mode, 01 = vectored mode. Writes to bit 1 are ignored and this bit always reads as 0.       |
+  |  1          |   RO      | MODE[1]: Always 0                                                                                             |
+  +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
+  |  0          |   RW      | MODE[0]: 0 = direct mode, 1 = vectored mode.                                                                  |
   +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
 
   When an exception is encountered in user-mode, the core jumps to the
