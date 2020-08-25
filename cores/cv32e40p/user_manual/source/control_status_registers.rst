@@ -28,11 +28,12 @@ for the CV32E40P as it only supports machine and debug modes.  The remaining
 letters indicate the read and/or write behavior of the CSR when accessed by
 the indicated or higher privilge level:
 
-* **RW**: CSR is **read-write**.  That is, CSR instructions (e.g. csrrw) may write any value
-  and that value will be returned on a subsequent read (unless a side-effect
-  causes the core to change the CSR value).
+* **RW**: CSR is **read-write**.  That is, CSR instructions (e.g. csrrw) may
+  write any value and that value will be returned on a subsequent read (unless
+  a side-effect causes the core to change the CSR value).
 
-* **RO**: CSR is **read-only**.  Writes by CSR instrucions have no effect.
+* **RO**: CSR is **read-only**.  Writes by CSR instrucions raise an illegal
+  instruction exception.
 
 Writes of a non-supported value to a CSR do not result in an illegal
 instruction exception.
