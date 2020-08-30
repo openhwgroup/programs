@@ -1,4 +1,4 @@
-# OpenHW Project Proposal
+# OpenHW Preliminary Project Proposal
 # CORE-V IDE
 
 
