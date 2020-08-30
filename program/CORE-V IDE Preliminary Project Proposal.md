@@ -4,7 +4,7 @@
 
 
 ## Summary of project
-This project proposal is for the CORE-V IDE project. CORE-V IDE will develop an open-source CORE-V version of the Eclipse CDT (C/C++ Development Tools) based IDE (Integrated Developmnent Environmnent). CORE-V IDE will provide the baseline capabilities for a C/C++ IDE suitable for both 32 and 64 bit CORE-V devices. Specific CORE-V IDEs will be able to be instantiated from the CORE-V IDE. 
+This  project proposal is for the CORE-V IDE project. CORE-V IDE will develop an open-source CORE-V version of the Eclipse CDT (C/C++ Development Tools) based IDE (Integrated Developmnent Environmnent). CORE-V IDE will provide the baseline capabilities for a C/C++ IDE suitable for both 32 and 64 bit CORE-V devices. Specific CORE-V IDEs will be able to be instantiated from the CORE-V IDE. 
 
 CORE-V IDE builds upon Eclipse CDT 10.0, Eclipse Embedded CDT, and potentially other projects. CORE-V IDE can be thought of as an OpenHW branded layer on top of those foundation layers, which integrates CORE-V technical tools (OpenHW reference tool chain, CORE-V libraries, CORE-V debugger) to provide the capabilities for a full IDE. As versions of the CORE-V tool chain become available, they can be integrated with CORE-V IDE package. 
 
