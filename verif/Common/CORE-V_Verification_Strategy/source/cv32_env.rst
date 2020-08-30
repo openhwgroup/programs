@@ -187,27 +187,107 @@ in such a way as to make the comparison script simple. Ideally, the
 comparison script would be implemented using ***diff***. This is a
 significant ToDo.
 
-Phase 3 Environment
-~~~~~~~~~~~~~~~~~~~
+Phase 3 Environment Reference Model (ISS) Integration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Phase 3 adds significant capabilies to the environment, notably the integration
-of the ISS as an environment component and a **Step-and-Compare** instruction scoreboard.
+`Illustration 5`_ shows the ISS as an entity external to the environment. Phase
+3 adds significant capabilies to the environment, notably the integration
+of the ISS as a fully integrated component in the UVM environment and a
+**Step-and-Compare** instruction scoreboard. After Phase 3 the Imperas ISS is
+used as the reference model to predict the status of the core's PC, GPRs and
+CSRs after each instruction is executed.  (Note that after this point in the
+document the terms "RM" and "ISS" are often used interchangeably.)
 
-ISS Integration
-________________
+Wrapping the RM in a DPI layer allows the RM to be integrated
+into the UVM environment and thus controllable via the UVM run-flow.  The
+benefit of this is that testcases will have direct control over the operation
+of the RM and comparision between the predictions made by the RM and actual
+instruction execution by the Core are done in real time.  This is a significant
+aid to debugging failures.
 
-`Illustration 5`_ shows the ISS as an entity external to the environment.  Wrapping
-the ISS in a DPI layer allows the ISS to be integrated into the UVM environment
-and thus controllable via the UVM run-flow.  The benefit of this is that testcases
-will have direct control over the operation of the ISS and comparision between the
-predictions made by the ISS and actual instruction execution by the Core are
-done in real time.  This is a significant aid to debugging failures.
+Step-and-Compare
+~~~~~~~~~~~~~~~~
 
-Step-and-Compare Scoreboarding
-______________________________
+The integrated RM is used in a step-and-compare mode in which the RM and
+RTL execution are in lock-step.  Step and compare is invaluable for debug
+because the RM and RTL are executing the same instruction in a compare cycle.
 
-ToDo
+The table below contains the main signals used in stepping and comparing the RTL and RM. 
 
++--------------------------------+----------+------------------------------------------------------------+
+|  Name                          | Type     |    Meaning                                                 |
++================================+==========+============================================================+
+| step_compare_if.ovp_cpu_retire | event    | RM has retired an instruction, triggers ev_ovp event       |
++--------------------------------+----------+------------------------------------------------------------+
+| step_compare_if.riscv_retire   | event    | RTL has retired an instruction, triggers ev_rtl event      |
++--------------------------------+----------+------------------------------------------------------------+
+| step_ovp     	                 | bit      | If 1, step RM until ovp.cpu.Retire event                   |
++--------------------------------+----------+------------------------------------------------------------+
+| ret_ovp	                 | bit	    | RM has retired an instruction, wait for compare event.     |
+|                                |          | Set to 1 on ovp.cpu.Retire event                           |
++--------------------------------+----------+------------------------------------------------------------+
+| ret_rtl	                 | bit	    | RTL has retired an instruction, wait for compare event.    |
+|                                |          | Set to 1 on riscv_tracer_i.retire event                    |
++--------------------------------+----------+------------------------------------------------------------+
+| ev_ovp	                 | event    | RM has retired an instruction                              |
++--------------------------------+----------+------------------------------------------------------------+
+| ev_rtl	                 | event    | RTL has retired an instruction                             |
++--------------------------------+----------+------------------------------------------------------------+
+| ev_compare	                 | event    | RTL and RM have both retired an instruction.  Do compare.  |
++--------------------------------+----------+------------------------------------------------------------+
+
+Referring to Illustration 6:
+
+1. The simulation starts with step_rtl=1.  The RTL throttles the RM.
+2. Once the RTL retires an instruction, indicated by ev_rtl, the RM is commanded to Step and retire an instruction, indicated by ev_ovp.
+3. The testbench compares the GPR, CSR, and PC after both the RTL and RM have retired an instruction.
+4. Once the testbench performs the compare, step_rtl asserts, event ev_compare is triggered, and the process repeats.
+
+
+.. figure:: ../images/step_compare_sequence1.png
+   :name: Step_and_Compare
+   :align: center
+
+   Illustration 6: Step and Compare Sequencing
+
+Step and compare is accomplished by the *uvmt_cv32_step_compare* module.
+
+Compare
+_______
+
+RTL module *riscv_tracer* flags that the RTL has retired an instruction by
+triggering the *retire* event.  The PC, GPRs, and CSRs are compared when the
+*compare* function is called. The comparison count is printed at the end of
+the test. The test will call UVM_ERROR if the PC, GPR, or CSR is never compared,
+i.e. the comparison count is 0.  
+
+GPR Comparison
+______________
+
+When the RTL retire event is triggered *<gpr>_q* may not yet have updated. For
+this reason RTL module *riscv_tracer* maintains queue *reg_t insn_regs_write*
+which contains the address and value of any GPR which will be updated. It is
+assumed and checked that this queue is never greater than 1 which implies that
+only 0 or 1 GPR registers change as a result of a retired instruction. 
+
+If the size of queue *insn_regs_write* is 1 the GPR at the specified address is
+compared to that predicted by the RM.  The remaining 31 registers are then
+compared. For these 31 registers, *<gpr>_q* will not update due to the current
+retired instruction so *<gpr>_q* is used instead of *insn_regs_write*.
+
+If the size of queue *insn_regs_write* is 0 all 32 registers are compared,
+*<gpr>_q* is used for the observed value. 
+
+CSR Comparison
+______________
+
+When the RTL retire event is triggered the RTL CSRs will have updated and can
+be probed directly. At each Step the RM will write the updated CSR registers to
+array *CSR* which is an array of 32-bits indexed by a string. The index is the
+name of the CSR, for example, *mstatus*. Array *CSR* is fully traversed every
+call of function *compare* and compared with the relevant RTL CSR. A CSR that
+is not to be compared can be ignored by setting bit *ignore=1*.  An example is
+*time*, which the RM writes to array *CSR* but is not present in the RTL CSRs.
 
 
 Beyond Phase 3 Environment
@@ -220,7 +300,7 @@ master to access instruction and data memory.  Details of this Subsystem can be
 found in the Architecture Specification for the
 `Open  Bus Interface <https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/OBI-v1.0.pdf>`__.
 
-`Illustration 6`_ shows a simple (?) change to the **uvmt_cv32_tb** that allows
+`Illustration 7`_ shows a simple (?) change to the **uvmt_cv32_tb** that allows
 the testbench (and thereby the UVM enviroment) to switch between a Core-level
 DUT and a Subsystem-level DUT.
 
@@ -233,13 +313,13 @@ standard is a super-set of the Core's interfaces.  Any difference in operation
 between these interfaces is controlled at compile time [11]_.
 
 .. figure:: ../images/MemoryModelTestbench.png
-   :name: Illustration 6
+   :name: Illustration 7
    :align: center
    :alt: 
 
-   Illustration 6: Moving Memory Model to the Testbench
+   Illustration 7: Moving Memory Model to the Testbench
 
-In `Illustration 7`_ the **uvmt_cv32_dut_wrap** (or core wrapper) is replaced with
+In `Illustration 8`_ the **uvmt_cv32_dut_wrap** (or core wrapper) is replaced with
 **uvmt_cv32_ss_wrap** (subsystem wrapper).  This subsystem wrapper has the same
 SystemVerilog interfaces as the core wrapper and instantiates the CV32E40*
 Subsystem directly.  For Core-level testing, the the OBI XBAR and DM_TOP modules
@@ -263,11 +343,11 @@ been compiled to instantiate just the Core, these AHB Agents are configured to
 be inactive.
 
 .. figure:: ../images/SubsystemWrapper.png
-   :name: Illustration 7
+   :name: Illustration 8
    :align: center
    :alt: 
 
-   Illustration 7: Subsystem Wrapper (compiled for Core-level verification)
+   Illustration 8: Subsystem Wrapper (compiled for Core-level verification)
 
 File Structure and Organization
 -------------------------------
@@ -298,5 +378,4 @@ Compiling the Environment
    this with a SystemVerilog class based implementation would allow for run-time
    control of the SystemVerilog interface operation.  This is a nice-to-have
    feature and is not, on its own, enough of a reason to re-code the memory model.
-
 

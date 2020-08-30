@@ -9,6 +9,9 @@ that were needed for the PULP system. The reason for this is that we
 wanted to keep the footprint of the core as low as possible and avoid
 any overhead that we do not explicitly need.
 
+Writes of a non-supported value to a CSR does not throw an illegal
+instruction exception.
+
 +---------------+-------------------+-----------+---------------------------------------------------------+
 |  CSR Address  |   Name            | Privilege |   Description                                           |
 +---------------+-------------------+-----------+---------------------------------------------------------+
@@ -64,8 +67,6 @@ any overhead that we do not explicitly need.
 | 0x304         | ``mie``           | MRW       | Machine Interrupt Enable Register                       |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x305         | ``mtvec``         | MRW       | Machine Trap-Handler Base Address                       |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x306         | ``mcounteren``    | MRW       | Machine Counter Enable                                  |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0x320         | ``mcountinhibit`` | MRW       | (HPM) Machine Counter-Inhibit Register                  |
 +---------------+-------------------+-----------+---------------------------------------------------------+
@@ -135,24 +136,48 @@ any overhead that we do not explicitly need.
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0xF14         | ``mhartid``       | MRO       | Hardware Thread ID                                      |
 +---------------+-------------------+-----------+---------------------------------------------------------+
+| Unprivileged CSRs                                                                                       |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC00         | ``cycle``         | URO       | (HPM) Cycle Counter                                     |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC02         | ``instret``       | URO       | (HPM) Instructions-Retired Counter                      |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC03         | ``hpmcounter3``   | URO       | (HPM) Performance-Monitoring Counter 3                  |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| .               .                   .           .                                                       |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC1F         | ``hpmcounter31``  | URO       | (HPM) Performance-Monitoring Counter 31                 |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC80         | ``cycleh``        | URO       | (HPM) Upper 32 Cycle Counter                            |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC82         | ``instreth``      | URO       | (HPM) Upper 32 Instructions-Retired Counter             |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC83         | ``hpmcounterh3``  | URO       | (HPM) Upper 32 Performance-Monitoring Counter 3         |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| .               .                   .           .                                                       |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC9F         | ``hpmcounterh31`` | URO       | (HPM) Upper 32 Performance-Monitoring Counter 31        |
++---------------+-------------------+-----------+---------------------------------------------------------+
 
 Table 7: Control and Status Register Map
 
 .. only:: USER
 
-  +-------------------+-------------+------------+------------------------------------------+
-  | CSR address       |   Name      | Privilege  |   Description                            |
-  +-------------------+-------------+------------+------------------------------------------+
-  |                   |             |            |                                          |
-  +===================+=============+============+==========================================+
-  | 0x000             | ``ustatus`` | URW        | User Status                              |
-  +-------------------+-------------+------------+------------------------------------------+
-  | 0x005             | ``utvec``   | URW        | User Trap-Handler Base Address           |
-  +-------------------+-------------+------------+------------------------------------------+
-  | 0x041             | ``uepc``    | URW        | User Exception Program Counter           |
-  +-------------------+-------------+------------+------------------------------------------+
-  | 0x042             | ``ucause``  | URW        | User Trap Cause                          |
-  +-------------------+-------------+------------+------------------------------------------+
+  +-------------------+----------------+------------+------------------------------------------+
+  | CSR address       |   Name         | Privilege  |   Description                            |
+  +-------------------+----------------+------------+------------------------------------------+
+  |                   |                |            |                                          |
+  +===================+================+============+==========================================+
+  | 0x000             | ``ustatus``    | URW        | User Status                              |
+  +-------------------+----------------+------------+------------------------------------------+
+  | 0x005             | ``utvec``      | URW        | User Trap-Handler Base Address           |
+  +-------------------+----------------+------------+------------------------------------------+
+  | 0x041             | ``uepc``       | URW        | User Exception Program Counter           |
+  +-------------------+----------------+------------+------------------------------------------+
+  | 0x042             | ``ucause``     | URW        | User Trap Cause                          |
+  +-------------------+----------------+------------+------------------------------------------+
+  | 0x306             | ``mcounteren`` | MRW        | Machine Counter Enable                   |
+  +-------------------+----------------+------------+------------------------------------------+
 
   Table 8: Control and Status Register Map (additional CSRs for User mode)
 
@@ -426,20 +451,35 @@ handler using the content of the MTVEC[31:8] as base address. Only
 8-byte aligned addresses are allowed. Both direct mode and vectored mode
 are supported.
 
-Machine Counter Enable (``mcounteren``)
----------------------------------------
+.. only:: USER
 
-CSR Address: 0x306
+  Machine Counter Enable (``mcounteren``)
+  ---------------------------------------
 
-Reset Value: 0x0000_0000
+  CSR Address: 0x306
 
-Detailed:
+  Reset Value: 0x0000_0000
 
-+-------------+-----------+------------------------------------------------------------------------+
-|   Bit #     |   R/W     |   Description                                                          |
-+=============+===========+========================================================================+
-| 31:0        | R/W       | Writes are ignored; reads return 0.                                    |
-+-------------+-----------+------------------------------------------------------------------------+
+  Detailed:
+
+  Each bit in the machine counter-enable register allows the associated read-only
+  unprivileged shadow performance register to be read from user mode. If the bit
+  is clear an attempt to read the register in user mode will trigger an illegal
+  instruction exception.
+
+  +-------+------+------------------------------------------------------------------+
+  | Bit#  | R/W  | Description                                                      |
+  +=======+======+==================================================================+
+  | 31:4  | R/W  | Dependent on number of counters implemented in design parameter  |
+  +-------+------+------------------------------------------------------------------+
+  | 3     | R/W  | **selectors:** hpmcounter3 enable for user mode                  |
+  +-------+------+------------------------------------------------------------------+
+  | 2     | R/W  | instret enable for user mode                                     |
+  +-------+------+------------------------------------------------------------------+
+  | 1     | R    | 0                                                                |
+  +-------+------+------------------------------------------------------------------+
+  | 0     | R/W  | cycle enable for user mode                                       |
+  +-------+------+------------------------------------------------------------------+
 
 Machine Counter-Inhibit Register (``mcountinhibit``)
 ----------------------------------------------------
@@ -1075,3 +1115,106 @@ Table 14: MHARTID
   If the PMP is enabled, these sixteen registers contain the addresses of
   the PMP as specified by the official privileged spec 1.10.
 
+Cycle Counter (``cycle``)
+-------------------------
+
+CSR Address: 0xC00
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the lower 32 bits of the 64 bit machine mode cycle counter.
+
+Instructions-Retired Counter (``instret``)
+------------------------------------------
+
+CSR Address: 0xC02
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the lower 32 bits of the 64 bit machine mode instruction retired counter.
+
+Performance Monitoring Counter (``hpmcounter3 .. hpmcounter31``)
+----------------------------------------------------------------
+
+CSR Address: 0xC03 - 0xC1F
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the lower 32 bits of the 64 bit machine mode
+performance counter. Non implemented counters always return a read value of 0.
+
+Upper 32 Cycle Counter (``cycleh``)
+-----------------------------------
+
+CSR Address: 0xC80
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the upper 32 bits of the 64 bit machine mode cycle counter.
+
+Upper 32 Instructions-Retired Counter (``instreth``)
+----------------------------------------------------
+
+CSR Address: 0xC82
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the upper 32 bits of the 64 bit machine mode instruction retired counter.
+
+Upper 32 Performance Monitoring Counter (``hpmcounter3h .. hpmcounter31h``)
+---------------------------------------------------------------------------
+
+CSR Address: 0xC83 - 0xC9F
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the upper 32 bits of the 64 bit machine mode
+performance counter. Non implemented counters always return a read value of 0.

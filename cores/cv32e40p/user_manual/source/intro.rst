@@ -65,6 +65,10 @@ In addition, the following standard instruction set extensions are available.
      - 2.0
      - always enabled
 
+   * - **Zicount**: Performance Counters
+     - 2.0
+     - always enabled
+
    * - **Zicsr**: Control and Status Register Instructions
      - 2.0
      - always enabled
