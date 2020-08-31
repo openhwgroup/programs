@@ -351,6 +351,9 @@ Reset Value: Defined
 
 Table 15: UHARTID
 
+Similar to ``mhartid`` the ``uhartid`` provides the Hardware Thread ID. It differs from ``mhartid`` only in the required privilege level. On
+CV32E40P, as it is a machine mode only implementation, this difference is not noticeable. 
+
 Machine Status (``mstatus``)
 ----------------------------
 
@@ -1052,14 +1055,14 @@ Machine Architecture ID (``marchid``)
 
 CSR Address: 0xF12
 
-Reset Value: 0x0000_0000
+Reset Value: 0x0000_0004
 
 Detailed:
 
 +-------------+-----------+------------------------------------------------------------------------+
 |   Bit #     |   R       |   Description                                                          |
 +=============+===========+========================================================================+
-| 31:0        | R         | Reads return 0.                                                        |
+| 31:0        | R         | Machine Architecture ID of CV32E40P is 4                               |
 +-------------+-----------+------------------------------------------------------------------------+
 
 Machine Implementation ID (``mimpid``)
