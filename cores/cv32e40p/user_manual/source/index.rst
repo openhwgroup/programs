@@ -18,7 +18,6 @@ Editor: **Davide Schiavone**
    fpu
    sleep
    pulp_hw_loop
-   pulp_cluster
    control_status_registers
    perf_counters
    exceptions_interrupts

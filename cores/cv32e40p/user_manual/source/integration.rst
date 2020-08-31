@@ -15,7 +15,7 @@ Instantiation Template
       .FPU                      ( 0 ),
       .NUM_MHPMCOUNTERS         ( 1 ),
       .PULP_CLUSTER             ( 0 ),
-      .PULP_HWLP                ( 0 ),
+      .PULP_XPULP               ( 1 ),
       .PULP_ZFINX               ( 0 )
   ) u_core (
       // Clock and reset
@@ -70,8 +70,7 @@ Instantiation Template
       // Special control signals
       .fetch_enable_i           (),
       .core_sleep_o             (),
-      .clock_en_i               (),
-      .core_busy_o              ()
+      .pulp_clock_en_i          ()
   );
 
 Parameters
@@ -82,13 +81,21 @@ Parameters
 +==============================+=============+============+=================================================================+
 | ``FPU``                      | bit         | 0          | Enable Floating Point Unit (FPU) support, see :ref:`fpu`        |
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``NUM_MHPMCOUNTERS``         | int (1..29) | 1          | Number of MHPMCOUNTER performance counters, see                 |
+| ``NUM_MHPMCOUNTERS``         | int (0..29) | 1          | Number of MHPMCOUNTER performance counters, see                 |
 |                              |             |            | :ref:`performance-counters`                                     |
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
 | ``PULP_CLUSTER``             | bit         | 0          | Enable PULP Cluster support, see :ref:`pulp_cluster`            |
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``PULP_HWLP``                | bit         | 0          | Enable PULP Hardware Loop support, see :ref:`pulp_hardware_loop`|
-|                              |             |            | ``PULP_HWLP`` = 1 IS NOT SUPPORTED YET (IT IS UNDER DESIGN)     |
+| ``PULP_XPULP``               | bit         | 1          | Enable all of the custom PULP ISA extensions (except **p.elw**) |
+|                              |             |            | (see :ref:`custom-isa-extensions`) and all custom CSRs          |
+|                              |             |            | (see :ref:`cs-registers`).                                      |
+|                              |             |            |                                                                 |
+|                              |             |            | Examples of PULP ISA                                            |
+|                              |             |            | extensions are post-incrementing load and stores                |
+|                              |             |            | (see :ref:`pulp_load_store`) and hardware loops                 |
+|                              |             |            | (see :ref:`pulp_hardware_loop`).                                |
+|                              |             |            |                                                                 |
+|                              |             |            | ``HARDWARE LOOPING IS NOT SUPPORTED YET (IT IS UNDER DESIGN)``  |
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
 | ``PULP_ZFINX``               | bit         | 0          | Enable Floating Point instructions to use the General Purpose   |
 |                              |             |            | register file instead of requiring a dedicated Floating Point   |
@@ -154,9 +161,7 @@ Interfaces
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``core_sleep_o``        | 1                       | out | Core is sleeping, see :ref:`sleep_unit`.   |
 +-------------------------+-------------------------+-----+--------------------------------------------+
-| ``clock_en_i``          | 1                       | in  | Clock enable (only used when               |
-|                         |                         |     | ``PULP_CLUSTER`` = 1), see                 |
-|                         |                         |     | :ref:`pulp_cluster`                        |
-+-------------------------+-------------------------+-----+--------------------------------------------+
-| ``core_busy_o``         | 1                       | out | Core busy, see :ref:`pulp_cluster`         |  
+| ``pulp_clock_en_i``     | 1                       | in  | PULP clock enable (only used when          |
+|                         |                         |     | ``PULP_CLUSTER`` = 1, tie to 0 otherwise), |
+|                         |                         |     | see :ref:`sleep_unit`                      |
 +-------------------------+-------------------------+-----+--------------------------------------------+
