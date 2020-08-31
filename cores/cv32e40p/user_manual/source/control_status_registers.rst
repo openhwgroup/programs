@@ -970,14 +970,14 @@ Reset Value: 0x0000_0000
 
 Detailed:
 
-+-------+------+------------------------------------------------------------------+
-| Bit#  | R/W  | Description                                                      |
-+=======+======+==================================================================+
-| 31:0  | R/W  | 0                                                                |
-+-------+------+------------------------------------------------------------------+
++-------+----------+------------------------------------------------------------------+
+| Bit#  | R/W      | Description                                                      |
++=======+==========+==================================================================+
+| 31:0  | WARL (0) | Machine performance-monitoring counter                           |
++-------+----------+------------------------------------------------------------------+
 
-The lower 32 bits of the 64 bit machine mode performance counter.
-Non implemented counters always return a read value of 0.
+The lower 32 bits of the 64 bit machine performance-monitoring counter(s).
+The number of machine performance-monitoring counters is determined by the parameter ``NUM_MHPMCOUNTERS`` with a range from 0 to 29 (default value of 1). Non implemented counters always return a read value of 0.
 
 Upper 32 Machine Cycle Counter (``mcycleh``)
 --------------------------------------------
@@ -1022,14 +1022,14 @@ Reset Value: 0x0000_0000
 
 Detailed:
 
-+-------+------+------------------------------------------------------------------+
-| Bit#  | R/W  | Description                                                      |
-+=======+======+==================================================================+
-| 31:0  | R/W  | 0                                                                |
-+-------+------+------------------------------------------------------------------+
++-------+----------+------------------------------------------------------------------+
+| Bit#  | R/W      | Description                                                      |
++=======+==========+==================================================================+
+| 31:0  | WARL (0) | Machine performance-monitoring counter                           |
++-------+----------+------------------------------------------------------------------+
 
-The upper 32 bits of the 64 bit machine mode performance counter.
-Non implemented counters always return a read value of 0.
+The upper 32 bits of the 64 bit machine performance-monitoring counter(s).
+The number of machine performance-monitoring counters is determined by the parameter ``NUM_MHPMCOUNTERS`` with a range from 0 to 29 (default value of 1). Non implemented counters always return a read value of 0.
 
 Machine Vendor ID (``mvendorid``)
 ---------------------------------
