@@ -27,7 +27,6 @@ Glossary
 * **RV32F**: RISC-V Floating Point (F extension)
 * **SIMD**: Single Instruction/Multiple Data
 * **Standard extension**: Standard extension to the RISC-V base instruction set (RISC-V Instruction Set Manual, Volume I: User-Level ISA)
-* **WARL (0)**: Write Any Values, Reads Legal Values (always 0)
 * **WARL**: Write Any Values, Reads Legal Values
 * **WB**: Write Back of instruction results
 * **WLRL**: Write/Read Only Legal Values
