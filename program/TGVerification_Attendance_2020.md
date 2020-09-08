@@ -12,6 +12,7 @@
 | Embecosm            | Craig Blackmore    | Y      |   Y    |        |        |        |        |        |
 | Futurewei Tech. Inc | Jingliang Leo Wang | Y      |   Y    |        |        |    Y   |    Y   |        |
 | Imperas Sw. Ltd     | Simon Davidmann    | Y      |   Y    |    Y   |        |        |    Y   |        |
+| Imperas Sw. Ltd     | Lee Moore          |        |        |        |    Y   |        |        |        |
 | Metrics             | Aimee Sutton       | Y      |        |        |    Y   |        |    Y   |        |
 | NXP USA, Inc.       | Vitor Sato         | Y      |        |        |        |        |        |        |
 | OneSpin             | Salaheddin Hetalani|        |        |        |    Y   |        |    Y   |        |
@@ -32,7 +33,6 @@
 **OpenHW
 **OpenHW Attendance Table**
 
-| Compan
 
 | Company             |  Person            |20.08.11|20.08.13|20.08.18|20.08.25|20.08.27|20.MM.DD|20.MM.DD|
 |---------------------|--------------------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
