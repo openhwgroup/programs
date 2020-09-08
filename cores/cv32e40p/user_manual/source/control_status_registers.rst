@@ -28,34 +28,54 @@ instruction exception.
 | 0x003         | ``fcsr``          | URW       | Floating-point control and status register.             |
 |               |                   |           | Only present if ``FPU`` = 1.                            |
 +---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC00         | ``cycle``         | URO       | (HPM) Cycle Counter                                     |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC02         | ``instret``       | URO       | (HPM) Instructions-Retired Counter                      |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC03         | ``hpmcounter3``   | URO       | (HPM) Performance-Monitoring Counter 3                  |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| .               .                   .           .                                                       |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC1F         | ``hpmcounter31``  | URO       | (HPM) Performance-Monitoring Counter 31                 |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC80         | ``cycleh``        | URO       | (HPM) Upper 32 Cycle Counter                            |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC82         | ``instreth``      | URO       | (HPM) Upper 32 Instructions-Retired Counter             |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC83         | ``hpmcounterh3``  | URO       | (HPM) Upper 32 Performance-Monitoring Counter 3         |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| .               .                   .           .                                                       |
++---------------+-------------------+-----------+---------------------------------------------------------+
+| 0xC9F         | ``hpmcounterh31`` | URO       | (HPM) Upper 32 Performance-Monitoring Counter 31        |
++---------------+-------------------+-----------+---------------------------------------------------------+
 | User Custom CSRs                                                                                        |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C0         | ``lpstart0``      | URW       | Hardware Loop 0 Start.                                  |
+| 0x800         | ``lpstart0``      | URW       | Hardware Loop 0 Start.                                  |
 |               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C1         | ``lpend0``        | URW       | Hardware Loop 0 End.                                    |
+| 0x801         | ``lpend0``        | URW       | Hardware Loop 0 End.                                    |
 |               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C2         | ``lpcount0``      | URW       | Hardware Loop 0 Counter.                                |
+| 0x802         | ``lpcount0``      | URW       | Hardware Loop 0 Counter.                                |
 |               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C4         | ``lpstart1``      | URW       | Hardware Loop 1 Start.                                  |
+| 0x804         | ``lpstart1``      | URW       | Hardware Loop 1 Start.                                  |
 |               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C5         | ``lpend1``        | URW       | Hardware Loop 1 End.                                    |
+| 0x805         | ``lpend1``        | URW       | Hardware Loop 1 End.                                    |
 |               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x7C6         | ``lpcount1``      | URW       | Hardware Loop 1 Counter.                                |
+| 0x806         | ``lpcount1``      | URW       | Hardware Loop 1 Counter.                                |
 |               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x006         | ``fprec``         | URW       | Custom flag which controls the precision and latency    |
+| 0x807         | ``fprec``         | URW       | Custom flag which controls the precision and latency    |
 |               |                   |           | of the iterative div/sqrt unit.                         |
 |               |                   |           | Only present if ``FPU`` = 1 and ``PULP_XPULP`` = 1.     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0xC10         | ``privlv``        | URO       | Privilege Level                                         |
+| 0xCC0         | ``uhartid``       | URO       | Hardware Thread ID                                      |
 |               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
-| 0x014         | ``uhartid``       | URO       | Hardware Thread ID                                      |
+| 0xCC1         | ``privlv``        | URO       | Privilege Level                                         |
 |               |                   |           | Only present if ``PULP_XPULP`` = 1.                     |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | Machine CSRs                                                                                            |
@@ -135,28 +155,6 @@ instruction exception.
 | 0xF13         | ``mimpid``        | MRO       | Machine Implementation ID                               |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 | 0xF14         | ``mhartid``       | MRO       | Hardware Thread ID                                      |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| Unprivileged CSRs                                                                                       |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0xC00         | ``cycle``         | URO       | (HPM) Cycle Counter                                     |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0xC02         | ``instret``       | URO       | (HPM) Instructions-Retired Counter                      |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0xC03         | ``hpmcounter3``   | URO       | (HPM) Performance-Monitoring Counter 3                  |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| .               .                   .           .                                                       |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0xC1F         | ``hpmcounter31``  | URO       | (HPM) Performance-Monitoring Counter 31                 |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0xC80         | ``cycleh``        | URO       | (HPM) Upper 32 Cycle Counter                            |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0xC82         | ``instreth``      | URO       | (HPM) Upper 32 Instructions-Retired Counter             |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0xC83         | ``hpmcounterh3``  | URO       | (HPM) Upper 32 Performance-Monitoring Counter 3         |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| .               .                   .           .                                                       |
-+---------------+-------------------+-----------+---------------------------------------------------------+
-| 0xC9F         | ``hpmcounterh31`` | URO       | (HPM) Upper 32 Performance-Monitoring Counter 31        |
 +---------------+-------------------+-----------+---------------------------------------------------------+
 
 Table 7: Control and Status Register Map
@@ -246,7 +244,7 @@ Reset Value: 0x0000_0000
 HWLoop Start Address 0/1 (``lpstart0/1``)
 -----------------------------------------
 
-CSR Address: 0x7C0/0x7C4 (only present if ``PULP_XPULP`` = 1)
+CSR Address: 0x800/0x804 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -261,7 +259,7 @@ Detailed:
 HWLoop End Address 0/1 (``lpend0/1``)
 -------------------------------------
 
-CSR Address: 0x7C1/0x7C5 (only present if ``PULP_XPULP`` = 1)
+CSR Address: 0x801/0x805 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -276,7 +274,7 @@ Detailed:
 HWLoop Count Address 0/1 (``lpcount0/1``)
 -----------------------------------------
 
-CSR Address: 0x7C2/0x7C6 (only present if ``PULP_XPULP`` = 1)
+CSR Address: 0x802/0x806 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -293,7 +291,7 @@ Detailed:
 Floating-point precision (``fprec``)
 ------------------------------------
 
-CSR Address: 0x006 (only present if ``FPU`` = 1 and ``PULP_XPULP`` = 1)
+CSR Address: 0x807 (only present if ``FPU`` = 1 and ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -320,7 +318,7 @@ Reset Value: 0x0000_0000
 Privilege Level (``privlv``)
 ----------------------------
 
-CSR Address: 0xC10 (only present if ``PULP_XPULP`` = 1)
+CSR Address: 0xCC1 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0003
 
@@ -331,25 +329,30 @@ Reset Value: 0x0000_0003
 +-------------+-----------+--------------------------------------------------+
 | 1:0         | R         | Current Privilege Level. 11 = Machine,           |
 |             |           | 10 = Hypervisor, 01 = Supervisor, 00 = User.     |
-|             |           | CV32E40P only supports machine mode.             |
+|             |           | CV32E40P only supports Machine mode.             |
 +-------------+-----------+--------------------------------------------------+
 
 Table 14: PRIVLV
 
+.. _csr-uhartid:
+
 User Hardware Thread ID (``uhartid``)
 -------------------------------------
 
-CSR Address: 0x014 (only present if ``PULP_XPULP`` = 1)
+CSR Address: 0xCC0 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: Defined
 
-+-------------+-----------+--------------------------------------------------+
-|   Bit #     | R         |   Description                                    |
-+=============+===========+==================================================+
-| 31:0        | R         | Hardware Thread ID                               |
-+-------------+-----------+--------------------------------------------------+
++-------------+-----------+----------------------------------------------------------------+
+|   Bit #     |   R/W     |   Description                                                  |
++=============+===========+================================================================+
+| 31:0        | R         | Hardware Thread ID **hart_id_i**, see  :ref:`core-integration` |
++-------------+-----------+----------------------------------------------------------------+
 
 Table 15: UHARTID
+
+Similar to ``mhartid`` the ``uhartid`` provides the Hardware Thread ID. It differs from ``mhartid`` only in the required privilege level. On
+CV32E40P, as it is a machine mode only implementation, this difference is not noticeable. 
 
 Machine Status (``mstatus``)
 ----------------------------
@@ -396,15 +399,79 @@ Machine ISA (``misa``)
 
 CSR Address: 0x301
 
-Reset Value: 0x0000_0000
+Reset Value: Defined
 
 Detailed:
 
-+-------------+-----------+------------------------------------------------------------------------+
-|   Bit #     |   R/W     |   Description                                                          |
-+=============+===========+========================================================================+
-| 31:0        | R/W       | Writes are ignored; reads return 0.                                    |
-+-------------+-----------+------------------------------------------------------------------------+
++-------------+------------+------------------------------------------------------------------------+
+|   Bit #     |   Mode     |   Description                                                          |
++=============+============+========================================================================+
+| 31:30       | WARL (0x1) |  **MXL** (Machine XLEN).                                               |
++-------------+------------+------------------------------------------------------------------------+
+| 29:26       | WLRL (0x0) | (Reserved).                                                            |
++-------------+------------+------------------------------------------------------------------------+
+| 25          | WARL (0x0) | **Z** (Reserved). Read-only; writes are ignored.                       |
++-------------+------------+------------------------------------------------------------------------+
+| 24          | WARL (0x0) | **Y** (Reserved).                                                      |
++-------------+------------+------------------------------------------------------------------------+
+| 23          | WARL       | **X** (Non-standard extensions present).                               |
++-------------+------------+------------------------------------------------------------------------+
+| 22          | WARL (0x0) | **W** (Reserved).                                                      |
++-------------+------------+------------------------------------------------------------------------+
+| 21          | WARL (0x0) | **V** (Tentatively reserved for Vector extension).                     |
++-------------+------------+------------------------------------------------------------------------+
+| 20          | WARL (0x0) | **U** (User mode implemented).                                         |
++-------------+------------+------------------------------------------------------------------------+
+| 19          | WARL (0x0) | **T** (Tentatively reserved for Transactional Memory extension).       |
++-------------+------------+------------------------------------------------------------------------+
+| 18          | WARL (0x0) | **S** (Supervisor mode implemented).                                   |
++-------------+------------+------------------------------------------------------------------------+
+| 17          | WARL (0x0) | **R** (Reserved).                                                      |
++-------------+------------+------------------------------------------------------------------------+
+| 16          | WARL (0x0) | **Q** (Quad-precision floating-point extension).                       |
++-------------+------------+------------------------------------------------------------------------+
+| 15          | WARL (0x0) | **P** (Tentatively reserved for Packed-SIMD extension).                |
++-------------+------------+------------------------------------------------------------------------+
+| 14          | WARL (0x0) | **O** (Reserved).                                                      |
++-------------+------------+------------------------------------------------------------------------+
+| 13          | WARL (0x0) | **N** (User-level interrupts supported).                               |
++-------------+------------+------------------------------------------------------------------------+
+| 12          | WARL (0x1) | **M** (Integer Multiply/Divide extension).                             |
++-------------+------------+------------------------------------------------------------------------+
+| 11          | WARL (0x0) | **L** (Tentatively reserved for Decimal Floating-Point extension).     |
++-------------+------------+------------------------------------------------------------------------+
+| 10          | WARL (0x0) | **K** (Reserved).                                                      |
++-------------+------------+------------------------------------------------------------------------+
+| 9           | WARL (0x0) | **J** (Tentatively reserved for Dynamically Translated Languages       |
+|             |            | extension).                                                            |
++-------------+------------+------------------------------------------------------------------------+
+| 8           | WARL (0x1) | **I** (RV32I/64I/128I base ISA).                                       |
++-------------+------------+------------------------------------------------------------------------+
+| 7           | WARL (0x0) | **H** (Hypervisor extension).                                          |
++-------------+------------+------------------------------------------------------------------------+
+| 6           | WARL (0x0) | **G** (Additional standard extensions present).                        |
++-------------+------------+------------------------------------------------------------------------+
+| 5           | WARL       | **F** (Single-precision floating-point extension).                     |
++-------------+------------+------------------------------------------------------------------------+
+| 4           | WARL (0x0) | **E** (RV32E base ISA).                                                |
++-------------+------------+------------------------------------------------------------------------+
+| 3           | WARL (0x0) | **D** (Double-precision floating-point extension).                     |
++-------------+------------+------------------------------------------------------------------------+
+| 2           | WARL (0x1) | **C** (Compressed extension).                                          |
++-------------+------------+------------------------------------------------------------------------+
+| 1           | WARL (0x0) | **B** (Tentatively reserved for Bit-Manipulation extension).           |
++-------------+------------+------------------------------------------------------------------------+
+| 0           | WARL (0x0) | **A** (Atomic extension).                                              |
++-------------+------------+------------------------------------------------------------------------+
+
+All bitfields in the ``misa`` CSR read as 0 except for the following:
+
+* **C** = 1
+* **F** = 1 if ``FPU`` = 1
+* **I** = 1
+* **M** = 1
+* **X** = 1 if ``PULP_XPULP`` = 1 or ``PULP_CLUSTER`` = 1
+* **MXL** = 1 (i.e. XLEN = 32)
 
 Machine Interrupt Enable Register (``mie``)
 -------------------------------------------
@@ -427,12 +494,14 @@ Detailed:
 | 3           | R/W       | **Machine Software Interrupt Enable (MSIE)**: if set, irq_i[3] is enabled.               |
 +-------------+-----------+------------------------------------------------------------------------------------------+
 
+.. _csr-mtvec:
+
 Machine Trap-Vector Base Address (``mtvec``)
 --------------------------------------------
 
 CSR Address: 0x305
 
-Reset Value: 0x0000_0001
+Reset Value: Defined
 
 Detailed:
 
@@ -445,6 +514,8 @@ Detailed:
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
 
 Table 9: MTVEC
+
+The initial value of ``mtvec`` is equal to {**mtvec_addr_i[31:8]**, 6'b0, 2'b01}.
 
 When an exception or an interrupt is encountered, the core jumps to the corresponding
 handler using the content of the MTVEC[31:8] as base address. Only
@@ -889,14 +960,14 @@ Reset Value: 0x0000_0000
 
 Detailed:
 
-+-------+------+------------------------------------------------------------------+
-| Bit#  | R/W  | Description                                                      |
-+=======+======+==================================================================+
-| 31:0  | R/W  | 0                                                                |
-+-------+------+------------------------------------------------------------------+
++-------+----------+------------------------------------------------------------------+
+| Bit#  | R/W      | Description                                                      |
++=======+==========+==================================================================+
+| 31:0  | WARL (0) | Machine performance-monitoring counter                           |
++-------+----------+------------------------------------------------------------------+
 
-The lower 32 bits of the 64 bit machine mode performance counter.
-Non implemented counters always return a read value of 0.
+The lower 32 bits of the 64 bit machine performance-monitoring counter(s).
+The number of machine performance-monitoring counters is determined by the parameter ``NUM_MHPMCOUNTERS`` with a range from 0 to 29 (default value of 1). Non implemented counters always return a read value of 0.
 
 Upper 32 Machine Cycle Counter (``mcycleh``)
 --------------------------------------------
@@ -941,14 +1012,14 @@ Reset Value: 0x0000_0000
 
 Detailed:
 
-+-------+------+------------------------------------------------------------------+
-| Bit#  | R/W  | Description                                                      |
-+=======+======+==================================================================+
-| 31:0  | R/W  | 0                                                                |
-+-------+------+------------------------------------------------------------------+
++-------+----------+------------------------------------------------------------------+
+| Bit#  | R/W      | Description                                                      |
++=======+==========+==================================================================+
+| 31:0  | WARL (0) | Machine performance-monitoring counter                           |
++-------+----------+------------------------------------------------------------------+
 
-The upper 32 bits of the 64 bit machine mode performance counter.
-Non implemented counters always return a read value of 0.
+The upper 32 bits of the 64 bit machine performance-monitoring counter(s).
+The number of machine performance-monitoring counters is determined by the parameter ``NUM_MHPMCOUNTERS`` with a range from 0 to 29 (default value of 1). Non implemented counters always return a read value of 0.
 
 Machine Vendor ID (``mvendorid``)
 ---------------------------------
@@ -974,14 +1045,14 @@ Machine Architecture ID (``marchid``)
 
 CSR Address: 0xF12
 
-Reset Value: 0x0000_0000
+Reset Value: 0x0000_0004
 
 Detailed:
 
 +-------------+-----------+------------------------------------------------------------------------+
 |   Bit #     |   R       |   Description                                                          |
 +=============+===========+========================================================================+
-| 31:0        | R         | Reads return 0.                                                        |
+| 31:0        | R         | Machine Architecture ID of CV32E40P is 4                               |
 +-------------+-----------+------------------------------------------------------------------------+
 
 Machine Implementation ID (``mimpid``)

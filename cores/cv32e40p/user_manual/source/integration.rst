@@ -25,6 +25,7 @@ Instantiation Template
 
       // Configuration
       .boot_addr_i              (),
+      .mtvec_addr_i             (),
       .dm_halt_addr_i           (),
       .dm_exception_addr_i      (),
       .hart_id_i                (),
@@ -119,6 +120,11 @@ Interfaces
 |                         |                         |     | aligned. Do not change after enabling core |
 |                         |                         |     | via ``fetch_enable_i``                     |
 +-------------------------+-------------------------+-----+--------------------------------------------+
+| ``mtvec_addr_i``        | 32                      | in  | ``mtvec`` address. Initial value for the   |
+|                         |                         |     | address part of :ref:`csr-mtvec`.          |
+|                         |                         |     | Do not change after enabling core          |
+|                         |                         |     | via ``fetch_enable_i``                     |
++-------------------------+-------------------------+-----+--------------------------------------------+
 | ``dm_halt_addr_i``      | 32                      | in  | Address to jump to when entering Debug     |
 |                         |                         |     | Mode, see :ref:`debug-support`. Must be    |
 |                         |                         |     | word-aligned. Do not change after enabling |
@@ -131,7 +137,8 @@ Interfaces
 |                         |                         |     | core via ``fetch_enable_i``                |
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``hart_id_i``           | 32                      | in  | Hart ID, usually static, can be read from  |
-|                         |                         |     | :ref:`csr-mhartid` CSR                     |
+|                         |                         |     | :ref:`csr-mhartid` and :ref:`csr-uhartid`  |
+|                         |                         |     | CSRs                                       |
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``instr_*``             | Instruction fetch interface, see :ref:`instruction-fetch`                  |
 +-------------------------+----------------------------------------------------------------------------+
