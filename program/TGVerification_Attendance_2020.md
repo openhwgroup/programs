@@ -6,22 +6,25 @@
 |---------------------|--------------------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | Alibaba             | Yunhai Shang       |        |        |        |        |    Y   |        |        |        |        |
 | EM Micro. US Inc    | David McConnell    | Y      |        |        |        |        |    Y   |        |        |        |
-| EM Micro. US Inc    | Greg Tumbush       | Y      |        |        |        |    Y   |    Y   |   Y    |        |        |
-| EM Micro. US Inc    | John Martin        | Y      |   Y    |    Y   |        |    Y   |    Y   |   Y    |        |        |
-| Embecosm            | Jeremy Bennett     | Y      |        |    Y   |        |        |    Y   |   Y    |        |        |
+| EM Micro. US Inc    | Greg Tumbush       | Y      |        |        |        |    Y   |    Y   |   Y    |   Y    |        |
+| EM Micro. US Inc    | John Martin        | Y      |   Y    |    Y   |        |    Y   |    Y   |   Y    |   Y    |        |
+| Embecosm            | Jeremy Bennett     | Y      |        |    Y   |        |        |    Y   |   Y    |   Y    |        |
 | Embecosm            | Craig Blackmore    | Y      |   Y    |        |        |        |        |        |        |        |
-| Futurewei Tech. Inc | Jingliang Leo Wang | Y      |   Y    |        |        |    Y   |    Y   |   Y    |        |        |
-| Imperas Sw. Ltd     | Simon Davidmann    | Y      |   Y    |    Y   |        |        |    Y   |        |        |        |
+| Futurewei Tech. Inc | Jingliang Leo Wang | Y      |   Y    |        |        |    Y   |    Y   |   Y    |   Y    |        |
+| Imperas Sw. Ltd     | Simon Davidmann    | Y      |   Y    |    Y   |        |        |    Y   |        |   Y    |        |
 | Imperas Sw. Ltd     | Lee Moore          |        |        |        |    Y   |        |        |   Y    |        |        |
 | Metrics             | Aimee Sutton       | Y      |        |        |    Y   |        |    Y   |   Y    |        |        |
 | OneSpin             | Salaheddin Hetalani|        |        |        |    Y   |        |    Y   |   Y    |        |        |
 | OneSpin             | Sven Beyer         |        |        |        |        |        |        |   Y    |        |        |
 | NXP USA, Inc.       | Vitor Sato         | Y      |        |        |        |        |        |        |        |        |
 | Silicon Labs. Inc.  | Arjan Bink         | Y      |   Y    |    Y   |        |        |    Y   |        |        |        |
-| Silicon Labs. Inc.  | Paul Zavalney      | Y      |   Y    |        |        |        |    Y   |   Y    |        |        |
-| Silicon Labs. Inc.  | Steve Richmond     | Y      |   Y    |    Y   |        |    Y   |    Y   |   Y    |        |        |
+| Silicon Labs. Inc.  | Paul Zavalney      | Y      |   Y    |        |        |        |    Y   |   Y    |   Y    |        |
+| Silicon Labs. Inc.  | Steve Richmond     | Y      |   Y    |    Y   |        |    Y   |    Y   |   Y    |   Y    |        |
 | Silicon Labs. Inc.  | Oystein Knauserud  |        |        |    Y   |        |        |    Y   |        |        |        |
-| Symbiotic GmbH      | Nina Engelhardt    | Y      |   Y    |    Y   |        |        |        |   Y    |        |        |
+| Symbiotic GmbH      | Nina Engelhardt    | Y      |   Y    |    Y   |        |        |        |   Y    |   Y    |        |
+| Thales              | Jean-Roch Coulon   |        |        |        |        |        |        |        |   Y    |        |
+| Thales              | Jerome Quevremont  |        |        |        |        |        |        |        |   Y    |        |
+| Thales              | Andre Sintzoff     |        |        |        |        |        |        |        |   Y    |        |
 
 **Guest/
 **Guest/Non-Member Attendance Table**
