@@ -179,19 +179,21 @@ Table 7: Control and Status Register Map
 
 .. only:: USER
 
-  +-------------------+-------------+------------+------------------------------------------+
-  | CSR address       |   Name      | Privilege  |   Description                            |
-  +-------------------+-------------+------------+------------------------------------------+
-  |                   |             |            |                                          |
-  +===================+=============+============+==========================================+
-  | 0x000             | ``ustatus`` | URW        | User Status                              |
-  +-------------------+-------------+------------+------------------------------------------+
-  | 0x005             | ``utvec``   | URW        | User Trap-Handler Base Address           |
-  +-------------------+-------------+------------+------------------------------------------+
-  | 0x041             | ``uepc``    | URW        | User Exception Program Counter           |
-  +-------------------+-------------+------------+------------------------------------------+
-  | 0x042             | ``ucause``  | URW        | User Trap Cause                          |
-  +-------------------+-------------+------------+------------------------------------------+
+  +-------------------+----------------+------------+------------------------------------------+
+  | CSR address       |   Name         | Privilege  |   Description                            |
+  +-------------------+----------------+------------+------------------------------------------+
+  |                   |                |            |                                          |
+  +===================+================+============+==========================================+
+  | 0x000             | ``ustatus``    | URW        | User Status                              |
+  +-------------------+----------------+------------+------------------------------------------+
+  | 0x005             | ``utvec``      | URW        | User Trap-Handler Base Address           |
+  +-------------------+----------------+------------+------------------------------------------+
+  | 0x041             | ``uepc``       | URW        | User Exception Program Counter           |
+  +-------------------+----------------+------------+------------------------------------------+
+  | 0x042             | ``ucause``     | URW        | User Trap Cause                          |
+  +-------------------+----------------+------------+------------------------------------------+
+  | 0x306             | ``mcounteren`` | MRW        | Machine Counter Enable                   |
+  +-------------------+----------------+------------+------------------------------------------+
 
   Table 8: Control and Status Register Map (additional CSRs for User mode)
 
@@ -277,7 +279,7 @@ Reset Value: 0x0000_0000
 HWLoop Start Address 0/1 (``lpstart0/1``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CSR Address: 0x7C0/0x7C4 (only present if ``PULP_XPULP`` = 1)
+CSR Address: 0x800/0x804 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -292,7 +294,7 @@ Detailed:
 HWLoop End Address 0/1 (``lpend0/1``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CSR Address: 0x7C1/0x7C5 (only present if ``PULP_XPULP`` = 1)
+CSR Address: 0x801/0x805 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -307,7 +309,7 @@ Detailed:
 HWLoop Count Address 0/1 (``lpcount0/1``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CSR Address: 0x7C2/0x7C6 (only present if ``PULP_XPULP`` = 1)
+CSR Address: 0x802/0x806 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -324,7 +326,7 @@ Detailed:
 Floating-point precision (``fprec``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CSR Address: 0x006 (only present if ``FPU`` = 1 and ``PULP_XPULP`` = 1)
+CSR Address: 0x807 (only present if ``FPU`` = 1 and ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0000
 
@@ -351,7 +353,7 @@ Reset Value: 0x0000_0000
 Privilege Level (``privlv``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CSR Address: 0xC10 (only present if ``PULP_XPULP`` = 1)
+CSR Address: 0xCC1 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: 0x0000_0003
 
@@ -362,21 +364,30 @@ Reset Value: 0x0000_0003
 +-------------+-----------+--------------------------------------------------+
 | 1:0         | RO        | Current Privilege Level. 11 = Machine,           |
 |             |           | 10 = Hypervisor, 01 = Supervisor, 00 = User.     |
-|             |           | CV32E40P only supports machine mode.             |
+|             |           | CV32E40P only supports Machine mode.             |
 +-------------+-----------+--------------------------------------------------+
+
+Table 14: PRIVLV
+
+.. _csr-uhartid:
 
 User Hardware Thread ID (``uhartid``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CSR Address: 0x014 (only present if ``PULP_XPULP`` = 1)
+CSR Address: 0xCC0 (only present if ``PULP_XPULP`` = 1)
 
 Reset Value: Defined
 
-+-------------+-----------+--------------------------------------------------+
-|   Bit #     | Mode      |   Description                                    |
-+=============+===========+==================================================+
-| 31:0        | RO        | Hardware Thread ID                               |
-+-------------+-----------+--------------------------------------------------+
++-------------+-----------+----------------------------------------------------------------+
+|   Bit #     | Mode      |   Description                                                  |
++=============+===========+================================================================+
+| 31:0        | RO        | Hardware Thread ID **hart_id_i**, see  :ref:`core-integration` |
++-------------+-----------+----------------------------------------------------------------+
+
+Table 15: UHARTID
+
+Similar to ``mhartid`` the ``uhartid`` provides the Hardware Thread ID. It differs from ``mhartid`` only in the required privilege level. On
+CV32E40P, as it is a machine mode only implementation, this difference is not noticeable. 
 
 Machine Status (``mstatus``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -439,15 +450,75 @@ Reset Value: 0x4080_1104
 
 Detailed:
 
-+-------------+-----------+------------------------------------------------------------------------+
-|   Bit #     |   Mode    |   Description                                                          |
-+=============+===========+========================================================================+
-| 31:30       | RO        | Machine XLEN: 0x1 for CV32E40P                                         |
-+-------------+-----------+------------------------------------------------------------------------+
-| 29:26       | RO        | Reserved, hardwired to 0                                               |
-+-------------+-----------+------------------------------------------------------------------------+
-| 25:0        | RO        | Extensions.  See Table 3.2 of the Privileged Specification.            |
-+-------------+-----------+------------------------------------------------------------------------+
++-------------+------------+------------------------------------------------------------------------+
+|   Bit #     |   Mode     |   Description                                                          |
++=============+============+========================================================================+
+| 31:30       | RO   (0x1) |  **MXL** (Machine XLEN).                                               |
++-------------+------------+------------------------------------------------------------------------+
+| 29:26       | RO   (0x0) | (Reserved).                                                            |
++-------------+------------+------------------------------------------------------------------------+
+| 25          | RO   (0x0) | **Z** (Reserved). Read-only; writes are ignored.                       |
++-------------+------------+------------------------------------------------------------------------+
+| 24          | RO   (0x0) | **Y** (Reserved).                                                      |
++-------------+------------+------------------------------------------------------------------------+
+| 23          | RO         | **X** (Non-standard extensions present).                               |
++-------------+------------+------------------------------------------------------------------------+
+| 22          | RO   (0x0) | **W** (Reserved).                                                      |
++-------------+------------+------------------------------------------------------------------------+
+| 21          | RO   (0x0) | **V** (Tentatively reserved for Vector extension).                     |
++-------------+------------+------------------------------------------------------------------------+
+| 20          | RO   (0x0) | **U** (User mode implemented).                                         |
++-------------+------------+------------------------------------------------------------------------+
+| 19          | RO   (0x0) | **T** (Tentatively reserved for Transactional Memory extension).       |
++-------------+------------+------------------------------------------------------------------------+
+| 18          | RO   (0x0) | **S** (Supervisor mode implemented).                                   |
++-------------+------------+------------------------------------------------------------------------+
+| 17          | RO   (0x0) | **R** (Reserved).                                                      |
++-------------+------------+------------------------------------------------------------------------+
+| 16          | RO   (0x0) | **Q** (Quad-precision floating-point extension).                       |
++-------------+------------+------------------------------------------------------------------------+
+| 15          | RO   (0x0) | **P** (Tentatively reserved for Packed-SIMD extension).                |
++-------------+------------+------------------------------------------------------------------------+
+| 14          | RO   (0x0) | **O** (Reserved).                                                      |
++-------------+------------+------------------------------------------------------------------------+
+| 13          | RO   (0x0) | **N** (User-level interrupts supported).                               |
++-------------+------------+------------------------------------------------------------------------+
+| 12          | RO   (0x1) | **M** (Integer Multiply/Divide extension).                             |
++-------------+------------+------------------------------------------------------------------------+
+| 11          | RO   (0x0) | **L** (Tentatively reserved for Decimal Floating-Point extension).     |
++-------------+------------+------------------------------------------------------------------------+
+| 10          | RO   (0x0) | **K** (Reserved).                                                      |
++-------------+------------+------------------------------------------------------------------------+
+| 9           | RO   (0x0) | **J** (Tentatively reserved for Dynamically Translated Languages       |
+|             |            | extension).                                                            |
++-------------+------------+------------------------------------------------------------------------+
+| 8           | RO   (0x1) | **I** (RV32I/64I/128I base ISA).                                       |
++-------------+------------+------------------------------------------------------------------------+
+| 7           | RO   (0x0) | **H** (Hypervisor extension).                                          |
++-------------+------------+------------------------------------------------------------------------+
+| 6           | RO   (0x0) | **G** (Additional standard extensions present).                        |
++-------------+------------+------------------------------------------------------------------------+
+| 5           | RO         | **F** (Single-precision floating-point extension).                     |
++-------------+------------+------------------------------------------------------------------------+
+| 4           | RO   (0x0) | **E** (RV32E base ISA).                                                |
++-------------+------------+------------------------------------------------------------------------+
+| 3           | RO   (0x0) | **D** (Double-precision floating-point extension).                     |
++-------------+------------+------------------------------------------------------------------------+
+| 2           | RO   (0x1) | **C** (Compressed extension).                                          |
++-------------+------------+------------------------------------------------------------------------+
+| 1           | RO   (0x0) | **B** (Tentatively reserved for Bit-Manipulation extension).           |
++-------------+------------+------------------------------------------------------------------------+
+| 0           | RO   (0x0) | **A** (Atomic extension).                                              |
++-------------+------------+------------------------------------------------------------------------+
+
+All bitfields in the ``misa`` CSR read as 0 except for the following:
+
+* **C** = 1
+* **F** = 1 if ``FPU`` = 1
+* **I** = 1
+* **M** = 1
+* **X** = 1 if ``PULP_XPULP`` = 1 or ``PULP_CLUSTER`` = 1
+* **MXL** = 1 (i.e. XLEN = 32)
 
 Machine Interrupt Enable Register (``mie``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -470,12 +541,14 @@ Detailed:
 | 3           | RW        | **Machine Software Interrupt Enable (MSIE)**: if set, irq_i[3] is enabled.               |
 +-------------+-----------+------------------------------------------------------------------------------------------+
 
+.. _csr-mtvec:
+
 Machine Trap-Vector Base Address (``mtvec``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 CSR Address: 0x305
 
-Reset Value: 0x0000_0001
+Reset Value: Defined
 
 Detailed:
 
@@ -491,25 +564,42 @@ Detailed:
 |  0          |   RW      | MODE[0]: 0 = direct mode, 1 = vectored mode.                                                                  |
 +-------------+-----------+---------------------------------------------------------------------------------------------------------------+
 
+The initial value of ``mtvec`` is equal to {**mtvec_addr_i[31:8]**, 6'b0, 2'b01}.
+
 When an exception or an interrupt is encountered, the core jumps to the corresponding
 handler using the content of the MTVEC[31:8] as base address. Only
 8-byte aligned addresses are allowed. Both direct mode and vectored mode
 are supported.
 
-Machine Counter Enable (``mcounteren``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. only:: USER
 
-CSR Address: 0x306
+  Machine Counter Enable (``mcounteren``)
+  ---------------------------------------
 
-Reset Value: 0x0000_0000
+  CSR Address: 0x306
 
-Detailed:
+  Reset Value: 0x0000_0000
 
-+-------------+-----------+------------------------------------------------------------------------+
-|   Bit #     |   Mode    |   Description                                                          |
-+=============+===========+========================================================================+
-| 31:0        | RO        | Writes are ignored; reads return 0.                                    |
-+-------------+-----------+------------------------------------------------------------------------+
+  Detailed:
+
+  Each bit in the machine counter-enable register allows the associated read-only
+  unprivileged shadow performance register to be read from user mode. If the bit
+  is clear an attempt to read the register in user mode will trigger an illegal
+  instruction exception.
+
+  +-------+------+------------------------------------------------------------------+
+  | Bit#  | Mode | Description                                                      |
+  +=======+======+==================================================================+
+  | 31:4  | RW   | Dependent on number of counters implemented in design parameter  |
+  +-------+------+------------------------------------------------------------------+
+  | 3     | RW   | **selectors:** hpmcounter3 enable for user mode                  |
+  +-------+------+------------------------------------------------------------------+
+  | 2     | RW   | instret enable for user mode                                     |
+  +-------+------+------------------------------------------------------------------+
+  | 1     | RO   | 0                                                                |
+  +-------+------+------------------------------------------------------------------+
+  | 0     | RW   | cycle enable for user mode                                       |
+  +-------+------+------------------------------------------------------------------+
 
 Machine Counter-Inhibit Register (``mcountinhibit``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -924,13 +1014,14 @@ Reset Value: 0x0000_0000
 
 Detailed:
 
-+-------+------+-------------------------------------------------------------------+
-| Bit#  | Mode | Description                                                       |
-+=======+======+===================================================================+
-| 31:0  | RW   | The lower 32 bits of the 64 bit machine mode performance counter. |
-+-------+------+-------------------------------------------------------------------+
++-------+----------+------------------------------------------------------------------+
+| Bit#  | Mode     | Description                                                      |
++=======+==========+==================================================================+
+| 31:0  | RW       | Machine performance-monitoring counter                           |
++-------+----------+------------------------------------------------------------------+
 
-Non implemented counters always return a read value of 0.
+The lower 32 bits of the 64 bit machine performance-monitoring counter(s).
+The number of machine performance-monitoring counters is determined by the parameter ``NUM_MHPMCOUNTERS`` with a range from 0 to 29 (default value of 1). Non implemented counters always return a read value of 0.
 
 Upper 32 Machine Cycle Counter (``mcycleh``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -973,13 +1064,14 @@ Reset Value: 0x0000_0000
 
 Detailed:
 
-+-------+------+-------------------------------------------------------------------+
-| Bit#  | Mode | Description                                                       |
-+=======+======+===================================================================+
-| 31:0  | RW   | The upper 32 bits of the 64 bit machine mode performance counter. |
-+-------+------+-------------------------------------------------------------------+
++-------+----------+------------------------------------------------------------------+
+| Bit#  | Mode     | Description                                                      |
++=======+==========+==================================================================+
+| 31:0  | RW       | Machine performance-monitoring counter                           |
++-------+----------+------------------------------------------------------------------+
 
-Non implemented counters always return a read value of 0.
+The upper 32 bits of the 64 bit machine performance-monitoring counter(s).
+The number of machine performance-monitoring counters is determined by the parameter ``NUM_MHPMCOUNTERS`` with a range from 0 to 29 (default value of 1). Non implemented counters always return a read value of 0.
 
 Machine Vendor ID (``mvendorid``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1005,14 +1097,14 @@ Machine Architecture ID (``marchid``)
 
 CSR Address: 0xF12
 
-Reset Value: 0x0000_0000
+Reset Value: 0x0000_0004
 
 Detailed:
 
 +-------------+-----------+------------------------------------------------------------------------+
 |   Bit #     |   Mode    |   Description                                                          |
 +=============+===========+========================================================================+
-| 31:0        | RO        | Reads return 0.                                                        |
+| 31:0        | RO        | Machine Architecture ID of CV32E40P is 4                               |
 +-------------+-----------+------------------------------------------------------------------------+
 
 Machine Implementation ID (``mimpid``)
@@ -1143,3 +1235,106 @@ Reset Value: Defined
   If the PMP is enabled, these sixteen registers contain the addresses of
   the PMP as specified by the official privileged spec 1.10.
 
+Cycle Counter (``cycle``)
+-------------------------
+
+CSR Address: 0xC00
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the lower 32 bits of the 64 bit machine mode cycle counter.
+
+Instructions-Retired Counter (``instret``)
+------------------------------------------
+
+CSR Address: 0xC02
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the lower 32 bits of the 64 bit machine mode instruction retired counter.
+
+Performance Monitoring Counter (``hpmcounter3 .. hpmcounter31``)
+----------------------------------------------------------------
+
+CSR Address: 0xC03 - 0xC1F
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the lower 32 bits of the 64 bit machine mode
+performance counter. Non implemented counters always return a read value of 0.
+
+Upper 32 Cycle Counter (``cycleh``)
+-----------------------------------
+
+CSR Address: 0xC80
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the upper 32 bits of the 64 bit machine mode cycle counter.
+
+Upper 32 Instructions-Retired Counter (``instreth``)
+----------------------------------------------------
+
+CSR Address: 0xC82
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the upper 32 bits of the 64 bit machine mode instruction retired counter.
+
+Upper 32 Performance Monitoring Counter (``hpmcounter3h .. hpmcounter31h``)
+---------------------------------------------------------------------------
+
+CSR Address: 0xC83 - 0xC9F
+
+Reset Value: 0x0000_0000
+
+Detailed:
+
++-------+------+------------------------------------------------------------------+
+| Bit#  | R/W  | Description                                                      |
++=======+======+==================================================================+
+| 31:0  | R    | 0                                                                |
++-------+------+------------------------------------------------------------------+
+
+Read-only unprivileged shadow of the upper 32 bits of the 64 bit machine mode
+performance counter. Non implemented counters always return a read value of 0.

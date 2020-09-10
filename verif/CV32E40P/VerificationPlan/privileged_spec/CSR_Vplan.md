@@ -83,15 +83,15 @@ specific fields of specific CSRs.  This has a material impact on the strategy
 used for RTL verification of CSRs.  There are three field specification types:
 
 1. **WPRI**: this field specification defines how software should interact
-with specific RW fields.  This software action is wholly independent of RTL
-logic behavior, so WPRI fields may be treated as RW for the purposes of RTL
+with specific "protected" fields.  This software action is wholly independent of RTL
+logic behavior, so WPRI fields may be treated as RO for the purposes of RTL
 functional verification of their access behavior.
 2. **WLRL**: once again, this field specification refers to how software should
 interact with specific RW fields.  The difference is that reads will only return
 _legal_ values on reads, acting as a mask on return values of a RW test.  In all
 other respects, WLRL fields may be treated as RW for the purposes of RTL
 functional verification of their access behavior.
-3. **WARL**: fields may be treated as RW for the purposes of RTL functional
+3. **WARL**: fields may be treated as RW (with read masking) for the purposes of RTL functional
 verification of their access behavior.
 
 

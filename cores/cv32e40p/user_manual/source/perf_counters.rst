@@ -15,6 +15,12 @@ The number of event counters is determined by the parameter ``NUM_MHPMCOUNTERS``
 
 Unimplemented counters always read 0.
 
+.. note::
+
+   All performance counters are using the gated version of ``clk_i``. The **wfi** instruction, the
+   **p.elw** instruction, and ``pulp_clock_en_i`` impact the gating of ``clk_i`` as explained
+   in :ref:`sleep_unit` and can therefore affect the counters.
+
 .. _event_selector:
 
 Event Selector
@@ -89,3 +95,11 @@ An increment of 1 to the NUM_MHPCOUNTERS results in the addition of the followin
    - 15 flops for `mhpmeventX`
    -  1 flop  for `mcountinhibit[X]`
    - Adder and event enablement logic
+
+Time Registers (``time(h)``)
+----------------------------
+
+The user mode ``time(h)`` registers are not implemented. Any access to these
+registers will trap. It is recommended that a software trap handler is
+implemented to detect access of these CSRs and convert that into access of the
+platform-defined ``mtime`` register (if implemented in the platform).
