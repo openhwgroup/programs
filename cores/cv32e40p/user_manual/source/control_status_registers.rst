@@ -446,7 +446,7 @@ Machine ISA (``misa``)
 
 CSR Address: 0x301
 
-Reset Value: 0x4080_1104
+Reset Value: defined
 
 Detailed:
 
