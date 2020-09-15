@@ -70,6 +70,11 @@ The event selector CSRs ``mhpmevent3`` - ``mhpmevent31`` define which of these e
 If a specific bit in an event selector CSR is set to 1, this means that events with this ID are being counted by the counter associated with that selector CSR.
 If an event selector CSR is 0, this means that the corresponding counter is not counting any event.
 
+.. note::
+
+   At most 1 bit should be set in an event selector. If multiple bits are set in an event selector, then the operation of the associated counter is undefined.
+
+
 Controlling the counters from software
 --------------------------------------
 
