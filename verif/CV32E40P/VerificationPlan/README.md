@@ -10,16 +10,16 @@ contact @mikeopenhwgroup.
 
 ### Base instruction set plus standard instruction extensions
 
-| Feature | Owner | Capture | Review | Comment |
-|---------|-------|---------|--------|---------|
-| RV32I | @mikeopenhwgroup | Ready for Review | Not yet scheduled | Looking for feedback |
-| Zifencei extension | @mikeopenhwgroup | Ready for Review | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
-| Zicsr extension | @mikeopenhwgroup | Ready for Reivew | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
-| M extension | @agrasset | Ready for Review | Not yet Scheduled | |
-| F extension | | Not started | | Tentative feature for CV32E40P |
-| C extension | @agrasset | Ready for Review | Not yet Scheduled | |
-| Counter extension | @agrasset | Ready for Review | Not yet Scheduled | Is the complete and definative list of counters defined? |
-| Instruction Exceptions | @kenowhg | Ready for Review | Not yet Scheduled | Unsure of EEI dependencies |
+| Feature | Capture | Review | Comment |
+|---------|---------|--------|---------|
+| RV32I | Complete | Complete | |
+| Zifencei extension | Ready for Review | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
+| Zicsr extension | Ready for Reivew | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
+| M extension | Ready for Review | Not yet Scheduled | |
+| F extension | Not started | | Not a verifiied feature of CV32E40P |
+| C extension | Ready for Review | Not yet Scheduled | |
+| Counter extension | Complete | Not yet Scheduled | |
+| Instruction Exceptions | Complete | Complete |  |
 
 ### Privileged spec
 
