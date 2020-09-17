@@ -13,21 +13,21 @@ contact @mikeopenhwgroup.
 
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
-| RV32I | Complete | Complete | |
-| Zifencei extension | Ready for Review | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
-| Zicsr extension | Ready for Reivew | Not yet scheduled | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
-| M extension | Ready for Review | Not yet Scheduled | |
-| F extension | Not started | | Not a verifiied feature of CV32E40P |
-| C extension | Ready for Review | Not yet Scheduled | |
-| Counter extension | Complete | Not yet Scheduled | |
+| RV32I | Complete | Waiting for Signoff | |
+| Zifencei extension | Complete | Waiting for Signoff | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
+| Zicsr extension | Complete | Waiting for Signoff | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
+| M extension | Complete | Waiting for Signoff | |
+| F extension | N/A | N/A | Not a verifiied feature of CV32E40P |
+| C extension | Complete | Waiting for Signoff | |
+| Counter extension | Complete | Waiting for Signoff | |
 | Instruction Exceptions | Complete | Complete |  |
 
 ### Privileged spec
 
-| Feature | Owner | Capture | Review | Comment |
-|---------|-------|---------|--------|---------|
-| User mode | | | | Not a CV32E40P Feature |
-| PMP | | | | Not a CV32E40P Feature |
+| Feature | Capture | Review | Comment |
+|---------|---------|--------|---------|
+| User mode | N/A| N/A | Not a CV32E40P Feature |
+| PMP | N/A | N/A | Not a CV32E40P Feature |
 
 ### Xpulp instruction extensions
 
@@ -73,8 +73,9 @@ contact @mikeopenhwgroup.
 | Trigger module | | | | Not a CV32E40P Feature |
 | Trace | | | | Not a CV32E40P Feature |
 
-### Physical Interfaces
+### Micro-architecure
 
-| Feature | Owner | Capture | Review | Comment |
-|---------|-------|---------|--------|---------|
-| OBI     | @mikeopenhw Ready for Review | | | |
+| Feature | Capture | Review | Comment |
+|---------|---------|--------|---------|
+| OBI     | Ready for Review | | | |
+| Pipelines | Not started | | | |
