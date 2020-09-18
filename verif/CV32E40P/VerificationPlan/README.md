@@ -28,8 +28,7 @@ The tables below capture the current status of the Verification Plan for the CV3
 
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
-| CLINT | | | |
-| CLINT extension (MIP2, MIE2) | | | |
+| CLINT | Captured | Reviewed | |
 | CLIC | | | Not a CV32E40P Feature |
 
 ### Debug & Trace
@@ -39,6 +38,14 @@ The tables below capture the current status of the Verification Plan for the CV3
 | Debug | Captured | Ready for Review |  |
 | Trigger module | | | Not a CV32E40P Feature |
 | Trace | | | Not a CV32E40P Feature |
+
+### Privileged spec
+
+| Feature | Capture | Review | Comment |
+|---------|---------|--------|---------|
+| CSRs | Incomplete | | |
+| User mode | N/A| N/A | Not a CV32E40P Feature |
+| PMP | N/A | N/A | Not a CV32E40P Feature |
 
 ### Micro-architecure
 
@@ -58,13 +65,6 @@ The tables below capture the current status of the Verification Plan for the CV3
 | General ALU | Preliminary draft | | |
 | Immediate branching | Preliminary draft | | |
 | SIMD | Preliminary draft | | |
-
-### Privileged spec
-
-| Feature | Capture | Review | Comment |
-|---------|---------|--------|---------|
-| User mode | N/A| N/A | Not a CV32E40P Feature |
-| PMP | N/A | N/A | Not a CV32E40P Feature |
 
 ### Custom circuitry
 
