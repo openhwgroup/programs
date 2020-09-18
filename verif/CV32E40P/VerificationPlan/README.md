@@ -5,9 +5,11 @@ Use the provided CORE-V_VerifPlan_Template.xlsx spreadsheet as your template to 
 
 ## Verification Plan Status
 
-The tables below capture the current status of the Verification Plan for the CV32E40P.
-The table will be updated at least weekly.  The owners are shown by their IDs on MatterMost.  If you plan to capture a Feature for the Verification Plan, please
-contact @mikeopenhwgroup.
+The tables below capture the current status of the Verification Plan for the CV32E40P by high-level feature.  Under the heading `Review` is one of following:
+* **Ready for Review**: Vplan has been captured and is awaiting review.
+* **Reviewed**: Vplan has been reviewed, and is waiting for updates to address review feedback.
+* **Waiting for Signoff**: Vplan has been reviewed and review comments addressed by the author.  Document is now waiting for reviewers to signoff on the post-review updates.
+* **Complete**: Post-preview updates have been signed-off.
 
 ### Base instruction set plus standard instruction extensions
 
