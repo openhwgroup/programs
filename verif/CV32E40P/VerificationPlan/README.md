@@ -24,56 +24,21 @@ The tables below capture the current status of the Verification Plan for the CV3
 | Counter extension | Complete | Waiting for Signoff | |
 | Instruction Exceptions | Complete | Complete |  |
 
-### Privileged spec
+### Interrupts
 
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
-| User mode | N/A| N/A | Not a CV32E40P Feature |
-| PMP | N/A | N/A | Not a CV32E40P Feature |
-
-### Xpulp instruction extensions
-
-| Feature | Owner | Capture | Review | Comment |
-|---------|-------|---------|--------|---------|
-| Post-increment load/store | @silabs-wajidm | First draft | | |
-| Hardware Loop | @agrasset | First draft | Not Ready for Review | Optional CV32E40P Feature.  Arnaud has on-going discussions with Cores TWG |
-| Bit Manipulation | @alfredoh1234 | Ready for Review | Not yet Scheduled | |
-| General ALU | @alfredoh1234 | Ready for Review | Not yet Scheduled | |
-| Immediate branching | @silabs-wajidm | Ready for Review | | |
-| SIMD | @alfredoh1234 | First draft | Ready for Review | |
-
-### Custom circuitry
-
-| Feature | Owner | Capture | Review | Comment |
-|---------|-------|---------|--------|---------|
-| RI5CY performance counters | | | | Not a CV32E40P Feature |
-| Advanced Processing Unit itf | | | | Not a CV32E40P Feature |
-| 128-bit wide Instruction Bus itf | | | | Not a CV32E40P Feature |
-| RI5CY interrupt scheme | | | | Not a CV32E40P Feature |
-| PULP cluster itf | | | | Tentative CV32E40P Feature |
-| Sleep interface | | | | |
-
-### Future extensions
-
-| Feature | Owner | Capture | Review | Comment |
-|---------|-------|---------|--------|---------|
-| Stack overflow protection | | | | Not a CV32E40P Feature |
-
-### Interrupts
-
-| Feature | Owner | Capture | Review | Comment |
-|---------|-------|---------|--------|---------|
-| CLINT | | | | |
-| CLINT extension (MIP2, MIE2) | | | | |
-| CLIC | | | | Not a CV32E40P Feature |
+| CLINT | | | |
+| CLINT extension (MIP2, MIE2) | | | |
+| CLIC | | | Not a CV32E40P Feature |
 
 ### Debug & Trace
 
-| Feature | Owner | Capture | Review | Comment |
-|---------|-------|---------|--------|---------|
-| Debug | @silabs-oystein | Reviewed |  |  |
-| Trigger module | | | | Not a CV32E40P Feature |
-| Trace | | | | Not a CV32E40P Feature |
+| Feature | Capture | Review | Comment |
+|---------|---------|--------|---------|
+| Debug | Captured | Ready for Review |  |
+| Trigger module | | | Not a CV32E40P Feature |
+| Trace | | | Not a CV32E40P Feature |
 
 ### Micro-architecure
 
@@ -81,3 +46,39 @@ The tables below capture the current status of the Verification Plan for the CV3
 |---------|---------|--------|---------|
 | OBI     | Ready for Review | | | |
 | Pipelines | Not started | | | |
+
+### Xpulp instruction extensions
+**Note**: Xpulp instructions are "exercised, but not fully verified" in CV32E40P.
+
+| Feature | Capture | Review | Comment |
+|---------|---------|--------|---------|
+| Post-increment load/store | Preliminary draft | | |
+| Hardware Loop | Preliminary draft | | On-going discussions with Cores TWG |
+| Bit Manipulation | Preliminary draft | | |
+| General ALU | Preliminary draft | | |
+| Immediate branching | Preliminary draft | | |
+| SIMD | Preliminary draft | | |
+
+### Privileged spec
+
+| Feature | Capture | Review | Comment |
+|---------|---------|--------|---------|
+| User mode | N/A| N/A | Not a CV32E40P Feature |
+| PMP | N/A | N/A | Not a CV32E40P Feature |
+
+### Custom circuitry
+
+| Feature | Capture | Review | Comment |
+|---------|---------|--------|---------|
+| RI5CY performance counters | | | Not a CV32E40P Feature |
+| Advanced Processing Unit itf | | | Not a CV32E40P Feature |
+| 128-bit wide Instruction Bus itf | | | Not a CV32E40P Feature |
+| RI5CY interrupt scheme | | | Not a CV32E40P Feature |
+| PULP cluster itf | | | Not a CV32E40P Feature |
+| Sleep interface | | | |
+
+### Future extensions
+
+| Feature | Capture | Review | Comment |
+|---------|---------|--------|---------|
+| Stack overflow protection | | | Not a CV32E40P Feature |
