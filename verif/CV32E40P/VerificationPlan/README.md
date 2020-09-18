@@ -76,9 +76,3 @@ The tables below capture the current status of the Verification Plan for the CV3
 | RI5CY interrupt scheme | | | Not a CV32E40P Feature |
 | PULP cluster itf | | | Not a CV32E40P Feature |
 | Sleep interface | | | |
-
-### Future extensions
-
-| Feature | Capture | Review | Comment |
-|---------|---------|--------|---------|
-| Stack overflow protection | | | Not a CV32E40P Feature |
