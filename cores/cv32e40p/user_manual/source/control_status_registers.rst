@@ -759,14 +759,17 @@ Trigger Data Register 1 (``tdata1``)
 
 CSR Address: 0x7A1
 
-.. Reset Value: 0x2800_1040
-
 Reset Value: 0x2800_1040
 
 Accessible in Debug Mode or M-Mode.
 Since native triggers are not supported, writes to this register from M-Mode will be ignored.
 
-CV32E40P only implements one type of trigger, Match Control. Most fields of this register will read as a fixed value to reflect the single mode that is supported, in particular, instruction address match as described in the Debug Specification 0.13.2 section 5.2.2 & 5.2.9.
+.. note::
+
+   CV32E40P only implements one type of trigger, Match Control. Most fields of this register will read as a fixed value to
+   reflect the single mode that is supported, in particular, instruction address match as described in the Debug Specification
+   0.13.2 section 5.2.2 & 5.2.9. The bitfields of this CSR which are marked as R/W in Debug Specification 0.13.2 therefore
+   act as WARL bitfields (corresponding to how these bitfields will be specified in the forthcoming Debug Specification 0.14.0).
 
 +-------+------+------------------------------------------------------------------+
 | Bit#  | Mode | Description                                                      |
@@ -852,20 +855,22 @@ Trigger Info (``tinfo``)
 
 CSR Address: 0x7A4
 
+Reset Value: 0x0000_0004
+
 Detailed:
 
-+-------+------+------------------------------------------------------------------+
-| Bit#  | Mode | Description                                                      |
-+=======+======+==================================================================+
-| 31:16 | RO   | 0                                                                |
-+-------+------+------------------------------------------------------------------+
-| 15:0  | RO   | **info**                                                         |
-+-------+------+------------------------------------------------------------------+
++-------+----------+------------------------------------------------------------------+
+| Bit#  | Mode     | Description                                                      |
++=======+==========+==================================================================+
+| 31:16 | RO (0x0) | 0                                                                |
++-------+----------+------------------------------------------------------------------+
+| 15:0  | RO (0x4) | **info**. Only type 2 is supported.                              |
++-------+----------+------------------------------------------------------------------+
 
 The **info** field contains one bit for each possible `type` enumerated in
 `tdata1`.  Bit N corresponds to type N.  If the bit is set, then that type is
 supported by the currently selected trigger.  If the currently selected trigger
-doesn’t exist, this field contains 1.
+does not exist, this field contains 1.
 
 Accessible in Debug Mode or M-Mode.
 
