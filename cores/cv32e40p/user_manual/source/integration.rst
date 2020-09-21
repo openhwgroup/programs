@@ -15,7 +15,7 @@ Instantiation Template
       .FPU                      ( 0 ),
       .NUM_MHPMCOUNTERS         ( 1 ),
       .PULP_CLUSTER             ( 0 ),
-      .PULP_XPULP               ( 1 ),
+      .PULP_XPULP               ( 0 ),
       .PULP_ZFINX               ( 0 )
   ) u_core (
       // Clock and reset
@@ -76,6 +76,17 @@ Instantiation Template
 Parameters
 ----------
 
+.. note::
+
+   The non-default (i.e. non-zero) settings of ``FPU``, ``PULP_CLUSTER``, ``PULP_XPULP`` and ``PULP_ZFINX`` have not
+   been verified yet. The default parameter value for ``PULP_XPULP`` will be changed to 1 once it has been verified.
+   The default configuration reflected below is currently under verification and this verification effort will be
+   completed first.
+
+.. note::
+   The instruction encodings for the PULP instructions is expected to change in a non-backward-compatible manner, 
+   see https://github.com/openhwgroup/cv32e40p/issues/452.
+
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
 | Name                         | Type/Range  | Default    | Description                                                     |
 +==============================+=============+============+=================================================================+
@@ -86,7 +97,7 @@ Parameters
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
 | ``PULP_CLUSTER``             | bit         | 0          | Enable PULP Cluster support, see :ref:`pulp_cluster`            |
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``PULP_XPULP``               | bit         | 1          | Enable all of the custom PULP ISA extensions (except **p.elw**) |
+| ``PULP_XPULP``               | bit         | 0          | Enable all of the custom PULP ISA extensions (except **p.elw**) |
 |                              |             |            | (see :ref:`custom-isa-extensions`) and all custom CSRs          |
 |                              |             |            | (see :ref:`cs-registers`).                                      |
 |                              |             |            |                                                                 |
@@ -95,7 +106,6 @@ Parameters
 |                              |             |            | (see :ref:`pulp_load_store`) and hardware loops                 |
 |                              |             |            | (see :ref:`pulp_hardware_loop`).                                |
 |                              |             |            |                                                                 |
-|                              |             |            | ``HARDWARE LOOPING IS NOT SUPPORTED YET (IT IS UNDER DESIGN)``  |
 +------------------------------+-------------+------------+-----------------------------------------------------------------+
 | ``PULP_ZFINX``               | bit         | 0          | Enable Floating Point instructions to use the General Purpose   |
 |                              |             |            | register file instead of requiring a dedicated Floating Point   |
