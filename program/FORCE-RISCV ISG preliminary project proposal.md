@@ -12,10 +12,10 @@ Note that support for 32-bit RISC-V is not there yet, but it will be a major par
 Additional features like MP/MT support and advanced resource dependency is also on the near term plan.
 
 ### Summary of Timeline
-- Preliminary Project Launch (PPL) in the OpenHW Group process is proposed for end September 2020
-- Project Launch (PL) in the OpenHW Group process is proposed for October 2020.
-- Project Plan Available (PPA) is proposed for mid-October 2020
-- 32-bit version support should be useable by end-of-year
+- Preliminary Project Launch (PPL) in the OpenHW Group process is proposed for end September 2020 TWG.
+- Project Launch (PL) in the OpenHW Group process is proposed for October 2020 TWG.
+- Project Plan Available (PPA) is proposed for October 2020 TWG.
+- 32-bit version support should be useable by end-of-year.
 - Fully functional 32-bit RISC-V ISG by end of Q1 2021.
 - On-going feature additions will continue afterwards.
 
@@ -75,11 +75,11 @@ RISCV-DV from Google is currently a very popular test generator for RISC-V desig
 ### Related efforts to be described
 Google's RISCV-DV released in Jan 23, 2019, 1 year and half before Futurewei Technologies' FORCE-RISCV open source and there is no other open source choices availabe.
 - RISCV-DV has all/most basic functionalities that a open source RISC-V 64-bit/32-bit processor project would need.
-- RISCV-DV lacks highly fine-grained control that FORCE-RISCV provide and due to not emulating generated instructions test generated are much too coarse to reach high coverage as the processor design get more complicated.
-- RISCV-DV would be not possible to be extended further in features beyond certain point.
+- In comparison with FORCE-RISCV, RISC-DV does not provide the same degree of fine-grain control as generated instructions are not emulated.  In more complex processor designs FORCE-RISCV is able to provide a higher level of coverage.
+- RISC-DV may not be as extensible as FORCE-RISCV.
 - Dependency on (customized) GCC toolchain.
 - Needs commercial license for System Verilog compile/simulating tools to contribute.
-- OpenHW Group don't have much influence on the project direction.
+- OpenHW Group doesn't currently have involvement in the RISC-DV project direction.
 
 ## External dependencies
 Third party open source libraries/projects with BSD/Apache like/compatible license would need to be updated periodically (quarterly or bi-yearly) to keep up with upstream.
@@ -94,7 +94,7 @@ Third party open source libraries/projects with BSD/Apache like/compatible licen
 This work will be planned and discussed in the Verification TG. The project plan will be produced by the project manager with assistance of Verification TG, and reviewed/approved in TWG.
 
 ## OpenHW engineering staff resource plan: requirement and availability
-Duncan Bees / Mike Thompson - program management oversight
+Duncan Bees/ Mike Thompson can provide program management oversight to the PM and TPL
 
 ## Engineering resource supplied by members - requirement and availability
 Futurewei Technologies will lead the engineering effort.
@@ -128,7 +128,8 @@ Slides presented to TWG on 09/07/2020 contains architecgture diagram: https://gi
 The project code will be using Apache 2.0 license.
 
 ## Description of initial code contribution, if required
-Initial code contribution has happened on June 12, 2020 from Futurewei Technologies.
+- Initial code contribution has happened on June 12, 2020 from Futurewei Technologies.
+- Contribution Questionnaire under Eclipse Foundation process to be done.
 
 ## Repository Structure
 Current code repository: https://github.com/openhwgroup/force-riscv
@@ -142,4 +143,5 @@ The following are initial steps forming elements of a project plan. A full proje
 -    Fully functional 32-bit RISC-V ISG by end of Q1 2021.
 -    On-going feature additions as requested by OpenHW Group members and broader open source community.
 -    On-going feature additions as call-for due to RISC-V new extensions and/or extension version upgrades.
+
 
