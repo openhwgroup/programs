@@ -60,6 +60,7 @@ To be confirmed:
 Three options (starting from the most desired):
 1.  Call for participation from an OpenHW member company
     - Thales would like to have participation from more OpenHW partners so encourages this.
+    - Staff can assist.
 2. PM is OpenHW staff member. 
     - Work closely with the TPL to document the plan.
     - Note that members own this project. In this case, staff PM would be more in background.
