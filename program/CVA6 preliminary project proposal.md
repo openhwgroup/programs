@@ -269,7 +269,7 @@ TBD
 
 |                  | CV64A6              | CV32A6              |
 | :--------------- | :-----------------: | :-----------------: |
-| ISA              | RV64IMA\[FD\]CZicsr | RV64IMA\[FD\]CZicsr |
+| ISA              | RV64IMA\[FD\]CZicsr | RV32IMA\[FD\]CZicsr |
 | Privilege levels | M/S/U               | M/S/U               |
 | [Virtual memory] | \[Sv39\]            | \[Sv32\]            |
 
