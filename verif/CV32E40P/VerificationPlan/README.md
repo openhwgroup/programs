@@ -35,9 +35,9 @@ The tables below capture the current status of the Verification Plan for the CV3
 
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
-| Debug | Captured | Ready for Review |  |
-| Trigger module | | | Not a CV32E40P Feature |
-| Trace | | | Not a CV32E40P Feature |
+| Debug | Captured | Reviewed |  |
+| Trigger module | N/A | N/A | Not a CV32E40P Feature |
+| Tracer | N/A | N/A | Behavioral model, not RTL |
 
 ### Privileged spec
 
@@ -51,8 +51,9 @@ The tables below capture the current status of the Verification Plan for the CV3
 
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
-| OBI     | Ready for Review | | | |
-| Pipelines | Not started | | | |
+| OBI     | Ready for Review | | |
+| Sleep Unit | Not started | | Partially covered by other Vplans, needs review to ensure no holes |
+| Pipelines | Not started | | |
 
 ### Xpulp instruction extensions
 **Note**: Xpulp instructions are "exercised, but not fully verified" in CV32E40P.
@@ -75,4 +76,3 @@ The tables below capture the current status of the Verification Plan for the CV3
 | 128-bit wide Instruction Bus itf | | | Not a CV32E40P Feature |
 | RI5CY interrupt scheme | | | Not a CV32E40P Feature |
 | PULP cluster itf | | | Not a CV32E40P Feature |
-| Sleep interface | | | |
