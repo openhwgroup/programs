@@ -335,7 +335,7 @@ Very preliminary analysis of major risks (feedback welcome):
 | ----------------------------- | :--------: | :----:     | ------------------------------------------------- |
 | **Not enough resources**      | **High**   | **Severe** | **Find more contributors / OpenHW subconcracts ** |
 | Not enough coordination       | Mid        | Major      | PM in addition to the TPL                         |
-| Export control                | Low        | Severe     | No US technology in the core, no US subcontracts  |
+| Export control                | Low        | Severe     | Apply OpenHW membership agreement                 |
 | Excessive verification effort | High       | Major      | Wise selection of verified configurations         |
 | Lack of market appeal         | ?          | Major      | ?                                                 |
 
