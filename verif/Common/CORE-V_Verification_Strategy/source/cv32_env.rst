@@ -272,7 +272,7 @@ only 0 or 1 GPR registers change as a result of a retired instruction.
 
 `Illustration 7`_ demonstrates that for a *lw x11, -730(x11)* instruction the GPR value 
 is updated one clock cycle after the RTL retire signal. The load to *x11* is retired but 
-RTL value *riscy_GPR[11]* has not updated to *0x075BCD15* yet. However, the queue insn_regs_write 
+RTL value *riscy_GPR[11]* has not updated to *0x075BCD15* yet. However, the queue *insn_regs_write* 
 has been updated and is used for the compare. It is assumed that all other RTL GPR 
 registers are static for this instruction and can be compared directly.  
  
