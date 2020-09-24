@@ -61,10 +61,10 @@ The present document gives a present snapshot of requirements and Preliminary Pr
 ## Explanation of why OpenHW should do this project
 
 The following strengths of FORCE-RISCV are in comparison to other open source ISGs where FORCE-RISCV does it better, if we implement support for 32-bit RISC-V, your 32-bit RISC-V design will also benefit from the high quality test generation.
-      •    High degree of test configurability via extensive Python front-end APIs.
-      •    High quality of randomness with generate-and-step using the linked ISS library, able to achieve high density of interesting test features and reach high micro-architecture coverage requirements.
-      •    Generates ELF files directly, no dependency on external toolchain compilation, simplifies the simulation work-flow.
-      •    Great test generation speed, able to scale well for heavy MP/MT processor verification.  Due to the origin of FORCE-RISCV from server-class CPU projects.
+-    High degree of test configurability via extensive Python front-end APIs.
+-    High quality of randomness with generate-and-step using the linked ISS library, able to achieve high density of interesting test features and reach high micro-architecture coverage requirements.
+-    Generates ELF files directly, no dependency on external toolchain compilation, simplifies the simulation work-flow.
+-    Great test generation speed, able to scale well for heavy MP/MT processor verification.  Due to the origin of FORCE-RISCV from server-class CPU projects.
 
 Additional advanced features like MP/MT and resource dependency will meet the need of more complicated processor design that OpenHW Group might tackle in the future.
 
@@ -73,7 +73,7 @@ Additional advanced features like MP/MT and resource dependency will meet the ne
 RISCV-DV from Google is currently a very popular test generator for RISC-V designs.
 
 ### Related efforts to be described
-- Google's RISCV-DV released in Jan 23, 2019, 1 year and half before Futurewei Technologies' FORCE-RISCV open source and there is no other open source choices availabe.
+Google's RISCV-DV released in Jan 23, 2019, 1 year and half before Futurewei Technologies' FORCE-RISCV open source and there is no other open source choices availabe.
 - RISCV-DV has all/most basic functionalities that a open source RISC-V 64-bit/32-bit processor project would need.
 - RISCV-DV lacks highly fine-grained control that FORCE-RISCV provide and due to not emulating generated instructions test generated are much too coarse to reach high coverage as the processor design get more complicated.
 - RISCV-DV would be not possible to be extended further in features beyond certain point.
@@ -82,7 +82,7 @@ RISCV-DV from Google is currently a very popular test generator for RISC-V desig
 - OpenHW Group don't have much influence on the project direction.
 
 ## External dependencies
-- Third party open source libraries/projects with BSD/Apache like/compatible license would need to be updated periodically (quarterly or bi-yearly) to keep up with upstream.
+Third party open source libraries/projects with BSD/Apache like/compatible license would need to be updated periodically (quarterly or bi-yearly) to keep up with upstream.
 
 ## List of project outputs
 - Buildable working source code supporting both 64-bit and 32-bit RISC-V.
@@ -91,37 +91,38 @@ RISCV-DV from Google is currently a very popular test generator for RISC-V desig
 - Regression system.
 
 ## TGs Impacted/Resource requirements
-- This work will be planned and discussed in the Verification TG. The project plan will be produced by the project manager with assistance of Verification TG, and reviewed/approved in TWG.
+This work will be planned and discussed in the Verification TG. The project plan will be produced by the project manager with assistance of Verification TG, and reviewed/approved in TWG.
 
 ## OpenHW engineering staff resource plan: requirement and availability
-- Duncan Bees / Mike Thompson - program management oversight
+Duncan Bees / Mike Thompson - program management oversight
 
 ## Engineering resource supplied by members - requirement and availability
-- Futurewei Technologies will lead the engineering effort.
-- We believe this project will benefit OpenHW CPU verification and the ecosystem as a whole. Other members can be involved as follows and increase their involvement as value of the project become more apparent to them:
-  •    Setting requirements and feature requests
-  •    Help with ISG development.
-  •    Help with ISG frontend test template and library development.
-  •    Use FORCE-RISCV in OpenHW Group projects, develop test templates for verification purpose and provide feedback.
+Futurewei Technologies will lead the engineering effort.
+
+We believe this project will benefit OpenHW CPU verification and the ecosystem as a whole. Other members can be involved as follows and increase their involvement as value of the project become more apparent to them:
+-    Setting requirements and feature requests
+-    Help with ISG development.
+-    Help with ISG frontend test template and library development.
+-    Use FORCE-RISCV in OpenHW Group projects, develop test templates for verification purpose and provide feedback.
 
 ## OpenHW marketing resource - requirement and availability
-- No additional resource requirements yet identified
+No additional resource requirements yet identified
 
 ## Marketing resource supplied by members - requirement and availability
-- No  resource requirements yet identified
+No  resource requirements yet identified
 
 ## Funding supplied by OpenHW - requirement and availability 
-- No funding requirements yet identified
+No funding requirements yet identified
 
 ## Funding supplied by members - requirement and availability
-- No funding requirements yet identified
+No funding requirements yet identified
 
 ## Architecture diagram
-- Slides presented to TWG on 09/07/2020 contains architecgture diagram: https://github.com/openhwgroup/core-v-docs/blob/master/TWG/MeetingPresentations/2020-09-07%20FORCE-RISCV%20ISG%20-%20status.pdf
+Slides presented to TWG on 09/07/2020 contains architecgture diagram: https://github.com/openhwgroup/core-v-docs/blob/master/TWG/MeetingPresentations/2020-09-07%20FORCE-RISCV%20ISG%20-%20status.pdf
 
 ## Who would make use of OpenHW output
-CVA6 project will be able to start using FORCE-RISCV 64-bit version.
-OpenHW Group members working on 64-bit and/or 32-bit RISC-V processor designs will directly benefit from the FORCE-RISCV with both 64-bit and 32-bit support in the long term.
+- CVA6 project will be able to start using FORCE-RISCV 64-bit version.
+- OpenHW Group members working on 64-bit and/or 32-bit RISC-V processor designs will directly benefit from the FORCE-RISCV with both 64-bit and 32-bit support in the long term.
 
 ## Project license model
 The project code will be using Apache 2.0 license.
@@ -137,9 +138,8 @@ Distribute via OpenHW Group GitHub repository.
 
 ## Preliminary Project plan
 The following are initial steps forming elements of a project plan. A full project plan is not yet available.
-  •    Baseline usable 32-bit RISC-V ISG implementation by end of 2020 (might not have full virtual memory and exception handling support).
-  •    Fully functional 32-bit RISC-V ISG by end of Q1 2021.
-  •    On-going feature additions as requested by OpenHW Group members and broader open source community.
-  •    On-going feature additions as call-for due to RISC-V new extensions and/or extension version upgrades.
-
+-   Baseline usable 32-bit RISC-V ISG implementation by end of 2020 (might not have full virtual memory and exception handling support).
+-    Fully functional 32-bit RISC-V ISG by end of Q1 2021.
+-    On-going feature additions as requested by OpenHW Group members and broader open source community.
+-    On-going feature additions as call-for due to RISC-V new extensions and/or extension version upgrades.
 
