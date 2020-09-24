@@ -166,7 +166,7 @@ Verification leader's expectactions:
 
 ### Future enhancements:
 
-Superscalar, SMP multi-core processor, SoC building blocks, architecture generation, build a silicon application processor...
+Adding standard or custom extensions, superscalar, SMP multi-core processor, SoC building blocks, architecture generation, build a silicon application processor...
 
 ## Explanation of why OpenHW should do this project
 
