@@ -28,7 +28,7 @@ The tables below capture the current status of the Verification Plan for the CV3
 
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
-| CLINT | Captured | Reviewed | |
+| CLINT | Captured | Ready for Signoff | |
 | CLIC | | | Not a CV32E40P Feature |
 
 ### Debug & Trace
