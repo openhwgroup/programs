@@ -26,56 +26,59 @@ Writeback (WB)
 Multi- and Single-Cycle Instructions
 ------------------------------------
 
-The table below shows the cycle count per instruction type. Some instructions have a variable time, this is indicated as a range e.g. 1..32 means
+:numref:`Cycle counts per instruction type` shows the cycle count per instruction type. Some instructions have a variable time, this is indicated as a range e.g. 1..32 means
 that the instruction takes a minimum of 1 cycle and a maximum of 32 cycles. The cycle counts assume zero stall on the instruction-side interface
 and zero stall on the data-side memory interface.
 
-+-----------------------+--------------------------------------+-------------------------------------------------------------+
-|   Instruction Type    |                 Cycles               |                         Description                         |
-+=======================+======================================+=============================================================+
-| Integer Computational | 1                                    | Integer Computational Instructions are defined in the       |
-|                       |                                      | RISCV-V RV32I Base Integer Instruction Set.                 |
-+-----------------------+--------------------------------------+-------------------------------------------------------------+
-| CSR Access            | 1                                    | CSR Access Instruction are defined in 'Zicsr' of the        |
-|                       |                                      | RISC-V specification.                                       |
-+-----------------------+--------------------------------------+-------------------------------------------------------------+
-| Load/Store            | 1                                    | Load/Store is handled in 1 bus transaction using both EX    |
-|                       |                                      | and WB stages for 1 cycle each. For misaligned word         |
-|                       | 2 (non-word aligned word             | transfers and for halfword transfers that cross a word      |
-|                       | transfer)                            | boundary 2 bus transactions are performed using EX and WB   |
-|                       |                                      | stages for 2 cycles each.                                   |
-|                       | 2 (halfword transfer crossing        | A **p.elw** takes 4 cycles.                                 |
-|                       | word boundary)                       |                                                             |
-|                       |                                      |                                                             |
-|                       | 4 (p.elw)                            |                                                             |
-+-----------------------+--------------------------------------+-------------------------------------------------------------+
-| Multiplication        | 1 (mul)                              | CV32E40P uses a single-cycle 32-bit x 32-bit multiplier     |
-|                       |                                      | with a 32-bit result. The multiplications with upper-word   |
-|                       | 5 (mulh, mulhsu, mulhu)              | result take 5 cycles to compute.                            |
-+-----------------------+--------------------------------------+-------------------------------------------------------------+
-| Division              |                                      | The number of cycles depends on the operand values.         |
-|                       |                                      |                                                             |
-| Remainder             |                                      |                                                             |
-+-----------------------+--------------------------------------+-------------------------------------------------------------+
-| Jump                  | 2                                    | Jumps are performed in the ID stage. Upon a jump the IF     |
-|                       |                                      | stage (including prefetch buffer) is flushed. The new PC    |
-|                       | 3 (target is a non-word-aligned      | request will appear on the instruction-side memory          |
-|                       | non-RVC instruction)                 | interface the same cycle the jump instruction is in the ID  |
-|                       |                                      | stage.                                                      |
-+-----------------------+--------------------------------------+-------------------------------------------------------------+
-| Branch (Not-Taken)    | 1                                    | Any branch where the condition is not met will              |
-|                       |                                      | not stall.                                                  |
-+-----------------------+--------------------------------------+-------------------------------------------------------------+
-| Branch (Taken)        | 3                                    | The EX stage is used to compute the branch decision. Any    |
-|                       |                                      | branch where the condition is met will be taken from  the   |
-|                       | 4 (target is a non-word-aligned      | EX stage and will cause a flush of the IF stage (including  |
-|                       | non-RVC instruction)                 | prefetch buffer) and ID stage.                              |
-+-----------------------+--------------------------------------+-------------------------------------------------------------+
-| Instruction Fence     | 2                                    | The FENCE.I instruction as defined in 'Zifencei' of the     |
-|                       |                                      | RISC-V specification. Internally it is implemented as a     |
-|                       | 3 (target is a non-word-aligned      | jump to the instruction following the fence. The jump       |
-|                       | non-RVC instruction)                 | performs the required flushing as described above.          |
-+-----------------------+--------------------------------------+-------------------------------------------------------------+
+.. table:: Cycle counts per instruction type
+  :name: Cycle counts per instruction type
+
+  +-----------------------+--------------------------------------+-------------------------------------------------------------+
+  |   Instruction Type    |                 Cycles               |                         Description                         |
+  +=======================+======================================+=============================================================+
+  | Integer Computational | 1                                    | Integer Computational Instructions are defined in the       |
+  |                       |                                      | RISCV-V RV32I Base Integer Instruction Set.                 |
+  +-----------------------+--------------------------------------+-------------------------------------------------------------+
+  | CSR Access            | 1                                    | CSR Access Instruction are defined in 'Zicsr' of the        |
+  |                       |                                      | RISC-V specification.                                       |
+  +-----------------------+--------------------------------------+-------------------------------------------------------------+
+  | Load/Store            | 1                                    | Load/Store is handled in 1 bus transaction using both EX    |
+  |                       |                                      | and WB stages for 1 cycle each. For misaligned word         |
+  |                       | 2 (non-word aligned word             | transfers and for halfword transfers that cross a word      |
+  |                       | transfer)                            | boundary 2 bus transactions are performed using EX and WB   |
+  |                       |                                      | stages for 2 cycles each.                                   |
+  |                       | 2 (halfword transfer crossing        | A **p.elw** takes 4 cycles.                                 |
+  |                       | word boundary)                       |                                                             |
+  |                       |                                      |                                                             |
+  |                       | 4 (p.elw)                            |                                                             |
+  +-----------------------+--------------------------------------+-------------------------------------------------------------+
+  | Multiplication        | 1 (mul)                              | CV32E40P uses a single-cycle 32-bit x 32-bit multiplier     |
+  |                       |                                      | with a 32-bit result. The multiplications with upper-word   |
+  |                       | 5 (mulh, mulhsu, mulhu)              | result take 5 cycles to compute.                            |
+  +-----------------------+--------------------------------------+-------------------------------------------------------------+
+  | Division              |                                      | The number of cycles depends on the operand values.         |
+  |                       |                                      |                                                             |
+  | Remainder             |                                      |                                                             |
+  +-----------------------+--------------------------------------+-------------------------------------------------------------+
+  | Jump                  | 2                                    | Jumps are performed in the ID stage. Upon a jump the IF     |
+  |                       |                                      | stage (including prefetch buffer) is flushed. The new PC    |
+  |                       | 3 (target is a non-word-aligned      | request will appear on the instruction-side memory          |
+  |                       | non-RVC instruction)                 | interface the same cycle the jump instruction is in the ID  |
+  |                       |                                      | stage.                                                      |
+  +-----------------------+--------------------------------------+-------------------------------------------------------------+
+  | Branch (Not-Taken)    | 1                                    | Any branch where the condition is not met will              |
+  |                       |                                      | not stall.                                                  |
+  +-----------------------+--------------------------------------+-------------------------------------------------------------+
+  | Branch (Taken)        | 3                                    | The EX stage is used to compute the branch decision. Any    |
+  |                       |                                      | branch where the condition is met will be taken from  the   |
+  |                       | 4 (target is a non-word-aligned      | EX stage and will cause a flush of the IF stage (including  |
+  |                       | non-RVC instruction)                 | prefetch buffer) and ID stage.                              |
+  +-----------------------+--------------------------------------+-------------------------------------------------------------+
+  | Instruction Fence     | 2                                    | The FENCE.I instruction as defined in 'Zifencei' of the     |
+  |                       |                                      | RISC-V specification. Internally it is implemented as a     |
+  |                       | 3 (target is a non-word-aligned      | jump to the instruction following the fence. The jump       |
+  |                       | non-RVC instruction)                 | performs the required flushing as described above.          |
+  +-----------------------+--------------------------------------+-------------------------------------------------------------+
 
 Hazards
 -------

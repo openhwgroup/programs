@@ -19,26 +19,27 @@ prefetch, CV32E40P can fetch up to four words outside of the code region
 and care should therefore be taken that no unwanted read side effects occur
 for such prefetches outside of the actual code region.
 
-Table 1 describes the signals that are used to fetch instructions. This
+:numref:`Instruction Fetch interface signals` describes the signals that are used to fetch instructions. This
 interface is a simplified version of the interface that is used by the
-LSU, which is described in Chapter 3. The difference is that no writes
+LSU, which is described in :ref:`load-store-unit`. The difference is that no writes
 are possible and thus it needs fewer signals.
 
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| **Signal**              | **Direction**   | **Description**                                                                                                                |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_req\_o           | output          | Request valid, will stay high until instr\_gnt\_i is high for one cycle                                                        |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_addr\_o[31:0]    | output          | Address, word aligned                                                                                                          |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_rdata\_i[31:0]   | input           | Data read from memory                                                                                                          |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_rvalid\_i        | input           | instr\_rdata\_i holds valid data when instr\_rvalid\_i is high. This signal will be high for exactly one cycle per request.    |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_gnt\_i           | input           | The other side accepted the request. instr\_addr\_o may change in the next cycle.                                              |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+.. table:: Instruction Fetch interface signals
+  :name: Instruction Fetch interface signals
 
-Table 1: Instruction Fetch Signals
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | **Signal**              | **Direction**   | **Description**                                                                                                                |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | instr\_req\_o           | output          | Request valid, will stay high until instr\_gnt\_i is high for one cycle                                                        |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | instr\_addr\_o[31:0]    | output          | Address, word aligned                                                                                                          |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | instr\_rdata\_i[31:0]   | input           | Data read from memory                                                                                                          |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | instr\_rvalid\_i        | input           | instr\_rdata\_i holds valid data when instr\_rvalid\_i is high. This signal will be high for exactly one cycle per request.    |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | instr\_gnt\_i           | input           | The other side accepted the request. instr\_addr\_o may change in the next cycle.                                              |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
 
 Misaligned Accesses
 -------------------
