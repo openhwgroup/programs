@@ -75,36 +75,36 @@ the ``data_rdata_i`` has no meaning in that case). When multiple granted request
 are outstanding, it is assumed that the memory requests will be kept in-order and
 one ``data_rvalid_i`` will be signalled for each of them, in the order they were issued.
 
-Figure 4, Figure 5, Figure 6 and Figure 7 show example timing diagrams of
-the protocol.
+:numref:`obi-data-basic`, :numref:`obi-data-back-to-back`, :numref:`obi-data-slow-response` and
+:numref:`obi-data-multiple-outstanding` show example timing diagrams of the protocol.
 
 .. figure:: ../images/obi_data_basic.svg
-   :name: obi data basic
+   :name: obi-data-basic
    :align: center
    :alt:
 
-   Figure 4: Basic Memory Transaction
+   Basic Memory Transaction
 
 .. figure:: ../images/obi_data_back_to_back.svg
-   :name: obi data back to back
+   :name: obi-data-back-to-back
    :align: center
    :alt:
 
-   Figure 5: Back-to-back Memory Transactions
+   Back-to-back Memory Transactions
 
 .. figure:: ../images/obi_data_slow_response.svg
-   :name: obi data slow response
+   :name: obi-data-slow-response
    :align: center
    :alt:
 
-   Figure 6: Slow Response Memory Transaction
+   Slow Response Memory Transaction
 
 .. figure:: ../images/obi_data_multiple_outstanding.svg
-   :name: obi data multiple outstanding
+   :name: obi-data-multiple-outstanding
    :align: center
    :alt:
 
-   Figure 7: Multiple Outstanding Memory Transactions
+   Multiple Outstanding Memory Transactions
 
 Post-Incrementing Load and Store Instructions
 ---------------------------------------------

@@ -59,18 +59,18 @@ rready, err, ruser, rid. These signals can be thought of as being tied off as
 specified in the OBI specification. The CV32E40P instruction fetch interface can
 cause up to four outstanding transactions.
 
-Figure 2 and Figure 3 show example timing diagrams of the protocol.
+:numref:`obi-instruction-basic` and :numref:`obi-instruction-multiple-outstanding` show example timing diagrams of the protocol.
 
 .. figure:: ../images/obi_instruction_basic.svg
-   :name: obi instruction basic
+   :name: obi-instruction-basic
    :align: center
    :alt:
 
-   Figure 2: Back-to-back Memory Transactions
+   Back-to-back Memory Transactions
 
 .. figure:: ../images/obi_instruction_multiple_outstanding.svg
-   :name: obi instruction multiple outstanding
+   :name: obi-instruction-multiple-outstanding
    :align: center
    :alt:
 
-   Figure 3: Multiple Outstanding Memory Transactions
+   Multiple Outstanding Memory Transactions
