@@ -331,13 +331,13 @@ OpenHW GitHub repository
 
 Very preliminary analysis of major risks (feedback welcome):
 
-|                               | Likelihood | Impact     | Avoidance&nbsp;/ Mitigation                       |
-| ----------------------------- | :--------: | :----:     | ------------------------------------------------- |
-| **Not enough resources**      | **High**   | **Severe** | **Find more contributors / OpenHW subconcracts ** |
-| Not enough coordination       | Mid        | Major      | PM in addition to the TPL                         |
-| Export control                | Low        | Severe     | Apply OpenHW membership agreement                 |
-| Excessive verification effort | High       | Major      | Wise selection of verified configurations         |
-| Lack of market appeal         | ?          | Major      | ?                                                 |
+|                               | Likelihood | Impact     | Avoidance&nbsp;/ Mitigation                                                   |
+| ----------------------------- | :--------: | :----:     | ----------------------------------------------------------------------------- |
+| **Not enough resources**      | **High**   | **Severe** | **Find more contributors / OpenHW subconcracts**                              |
+| Not enough coordination       | Mid        | Major      | PM in addition to the TPL                                                     |
+| Export control                | Low        | Major      | Apply OpenHW membership agreement (carefully review non-OpenHW contributions) |
+| Excessive verification effort | High       | Major      | Wise selection of verified configurations                                     |
+| Lack of market appeal         | ?          | Major      | ?                                                                             |
 
 
 ## Preliminary Project plan
