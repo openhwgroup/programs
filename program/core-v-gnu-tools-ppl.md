@@ -185,7 +185,7 @@ The software TG will be responsible for oversight of the planning and delivery o
 
 The standard GNU tool chain components are shown in the following diagram.
 
-![GNU tool components](images/gnu-tools.svg)
+![](images/gnu-tools.png)
 
 ## Who would make use of OpenHW output
 
