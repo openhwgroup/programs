@@ -28,7 +28,7 @@
 | Thales              | Jean-Roch Coulon   |        |        |        |        |        |        |        |   Y    |        |        |        |        |
 | Thales              | Jerome Quevremont  |        |        |        |        |        |        |        |   Y    |        |        |        |        |
 | Thales              | Andre Sintzoff     |        |        |        |        |        |        |        |   Y    |        |        |        |        |
-        |
+
 **Guest/
 **Guest/Non-Member Attendance Table**
 
