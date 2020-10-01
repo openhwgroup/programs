@@ -91,11 +91,14 @@ All OpenHW group members are invited to contributed expertise to this project. A
 
 ## Project Manager and technical lead
 
-- Jessica Mills, Embecosm
+- Jessica Mills, Embecosm, supported by Jeremy Bennett, Embecosm
 
 This is a much lighter role than a traditional project manager, since the requirements are fully defined through the hardware design process.  The primary roles will be:
 - tracking and reporting status to OpenHW Software TG and Technical WG
 - identifying and resolving issues related to the outcome.
+
+Jessica Mills is currently project managing the CORE-V GCC development effort
+within Embecosm, work she co-presented at OSDForum in September 2020.
 
 ## Project documents
 
