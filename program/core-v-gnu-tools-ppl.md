@@ -24,21 +24,23 @@ Because of the scale of this project, the work is composed in three phases:
 2. support for Linux application use of C and C++ with CVA6 (32-/64-bit) and the _GlibC_ C library; and
 3. support for other RTOS
 
-The proposal addresses just the first phase. Other phases will be the subject of separate proposals.
+The proposal addresses just the first phase. Other phases will be the subject of separate proposals. Phase 1 will provide the following.
 
-In order to support the Software TG primary goal of developing a thriving commercial ecosystem, only a minimal implementation will be provided.  Software companies will rely on there being the majority of work still to be done in order to drive their businesses.
+- support for the following CORE-V instruction set extensions:
 
-- support for the following CORE-V instruction set extensions
+  - hardware loop;
+  - multiple accumulate;
+  - post-increment and register-indexed load/store;
+  - direct branches; and
+  - general ALU operations.
 
-  - hardware loop
-  - multiple accumulate
-  - post-increment and register-indexed load/store
-  - direct branches
-  - general ALU operations
-
-- support for a generic CORE-V instruction set extension interface
+- support for a generic CORE-V instruction set extension interface:
 
   - this will provide a commercial driver for future tool chain development for these extensions.
+
+In order to support the Software TG primary goal of developing a thriving commercial ecosystem, only a basic implementation will be provided.  By basic implemention, we mean that the assembler/linker will support the instructions, the compiler will have intrinisc/builtin function support and the compiler will have patterns to generate the instructions from C code in obvious circumstances.
+
+However there will be no attempt to provide compiler optimization (which is a much bigger task).  Software companies will rely on the majority of work still needing to be done in order to drive their businesses.
 
 In order to support the Software TG secondary goal of upstreaming all open source tool developments:
 
@@ -82,6 +84,8 @@ Once CORE-V is accepted upstream, code will be developed exclusively in upstream
 
 ## OpenHW members/participants committed to participate in this project
 
+All OpenHW group members are invited to contributed expertise to this project. At present we are aware of:
+
 1. Embecosm
 2. To be checked: Thales (phase 2)
 
@@ -98,13 +102,19 @@ This is a much lighter role than a traditional project manager, since the requir
 The following project documents will be created:
 - Preliminary Project Proposal (this document)
 
-  - including a project plan
+  - including an initial project plan
+  - including an initial risk register
 
 - Project Proposal, an updated version of this document
+
+  - separate detailed project plan
+  - separate risk register
 
 ## Virtual customer
 
 It is proposed that the OpenHW Group Hardware TG act as a "virtual customer" to exercise the compiler as it is developed.
+
+While the tool chain will have been thoroughly tested, it will benefit from the OpenHW Group Hardware TG being able to use if with their reference applications.
 
 ## Summary of requirements
 
@@ -124,7 +134,9 @@ Description of competing, alternative, or related efforts in the industry
 
 The upstream GNU tool chain projects already support standard RISC-V.  It is reasonably standard, but relatively immature by comparison with competing tool chains such as Arm and MIPS.
 
-The PULP GNU tool chain is based on GCC from 2017, shortly after RISC-V was added upstream.  It lacks all the more recent work on RISC-V optimization work.  It is a research compiler, and does not follow GNU design principles or coding standards.  It does not include any PULP specific tests
+The PULP GNU tool chain is based on GCC from 2017, shortly after RISC-V was
+added upstream.  It lacks all the more recent work on RISC-V optimization
+work.  It is a research compiler, and does not always follow GNU design principles or coding standards.  It does not include any PULP specific tests
 
 There are also other non-GNU tool chains for RISC-V
 
@@ -147,8 +159,19 @@ External dependencies
 
 ## Project deliverables
 
+### Final deliverables
+
 1. extensions to upstream GNU compiler tools to support CORE-V; and
 2. revisions to the CORE-V design specifications to clarify ambiguities.
+
+### Interim deliverables
+
+1. Reports on progress to the monthly SW TG:
+   - progress against work packages;
+   - regression test results;
+   - updates to the project plan; and
+   - updates to the risk register.
+2. Continuously updated source code as new features are added.
 
 ## TGs impacted/resource requirements
 
@@ -160,8 +183,12 @@ The software TG will be responsible for oversight of the planning and delivery o
 
 ## Engineering resource supplied by members - requirement and availability
 
-- Embecosm has already contributed around 3 engineer months to CORE-V GNU compiler tool chain development, and is willing to contribute another 3 engineer months during 2020.
-- around 9 engineer months is needed to complete the project
+Previous work by Craig Blackmore of Embecosm has estimated the effort to be 15
+engineer months work *for experienced GNU tool chain engineers*.  This is to
+achieve a tested functional tool chain *without* optimization.
+
+- Embecosm has already contributed around 3 engineer months to CORE-V GNU compiler tool chain development, and is willing to contribute another 3 engineer months during 2020 and early 2021.
+- a further 9 engineer months is needed to complete the project
 
 *Note:* This is effort by GNU compiler tool chain specialist engineers.
 
@@ -209,7 +236,21 @@ The delivered code will be distributed as part of the upstream projects.
 
 Pending upstream adoption, the source code for the components will be available through mirror repositories under OpenHW Group GitHub.
 
+## Preliminary risk register
+
+This will become a separate document at full project launch.
+
+Risk is scored as likelihood (1-10) x impact (1-3) with mitigation required for any risk with score of 10 or more, of with an impact of 3 (project killer).
+
+| Risk                          |   L |   I |   R | Mitigation                 |
+|:----------------------------- | ---:| ---:| ---:|:---------------------------|
+| Isufficient resource available | 5 | 3 | 15 | Socialize around OpenHW members to find expertise or funding. |
+| Ownership of software for upstreaming | 5 | 2 | 10 | Ensure OpenHW group has FSF approval, discuss transfer of ownership with Luca Benini, clean room rewrite as last resort. |
+| No process for allocating new relocations | 5 | 2 | 10 | Propose new process to RISC-V International psABI group, suggest allocation is coincident with upstreaming. |
+
 ## Preliminary project plan
+
+This will become a separate document at full project launch.
 
 The support of any instruction set extension in the GNU compiler tool chain breaks into four work packages.
 
@@ -279,7 +320,5 @@ We propose the following work sequence within the scope of Phase 1 of this PPL:
 - work packages 1, 2 and 3 for direct branches;
 - work packages 1, 2 and 3 for general ALU operations; and
 - work package 7.
-
-This has been estimated to be around 15 engineer months work *for experienced GNU tool chain engineers*.
 
 Note that we do not propose any optimization work as part of this project.
