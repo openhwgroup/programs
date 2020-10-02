@@ -23,7 +23,7 @@ The project comprises two main components
 
 ### Component 1 - Design and Fabrication of the SoC Device
 * Design and verification of the CV32E40P core 
-    - assumed ready now
+    - RTL freeze targted for October
 * Front end SoC design [primarily resourced by or through QuickLogic]
     - starting from core-v-mcu FPGA design
     - integrate eFPGA (logic array, fixed function blocks for accelerators, and configuration controller) from QuickLogic (exact same that was used in ETH Zurich Arnold test chip)
@@ -150,12 +150,12 @@ To differentiate from the competition, marketing can stress the:
 
 ## External dependencies
 - GF22 PDK: GLOBALFOUNDRIES
-- standard cells libraries: GLOBALFOUNDRIES
-- memory macros: GLOBALFOUNDRIES
-- I/O: GLOBALFOUNDRIES
+- standard cells libraries: Synopsys/GLOBALFOUNDRIES (need to confirm)
+- memory macros: Synopsys/GLOBALFOUNDRIES (need to confirm)
+- I/O: Synopsys/GLOBALFOUNDRIES (need to confirm)
 - FLL or PLL: [TBD]
 - eFPGA & FOSS Tools: QuickLogic
-- ASIC desing tools: Cadence
+- ASIC design tools: Cadence
 - dev kit: QuickLogic
 - open source: GCC, LLVM
 - Eclipse Foundation, Github
