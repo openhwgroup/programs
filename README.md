@@ -18,7 +18,7 @@ readthedocs rendering of the `CORE-V Verification Strategy` can be viewed [here]
 
 ### platform
 Information about the hardware and software of the physical platforms built to demonstrate
-the capabilities of the CORE-V cores.  Coming soon.
+the capabilities of the CORE-V cores.
 
 ## Issues and Troubleshooting
 If you find any problems or issues with the documentation, please check out the [issue
