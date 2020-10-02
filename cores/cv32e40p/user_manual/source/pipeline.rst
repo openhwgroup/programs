@@ -18,10 +18,10 @@ Instruction Decode (ID)
   Decodes fetched instruction and performs required registerfile reads. Jumps are taken from the ID stage.
 
 Execute (EX)
-  Executes the instructions. The EX stage contains the ALU, Multiplier and Divider. Branches (with their condition met) are taken from the EX stage. Multi-cycle instructions will stall this stage until they are complete. The address generation part of the load-store-unit (LSU) is contained in EX as well.
+  Executes the instructions. The EX stage contains the ALU, Multiplier and Divider. Branches (with their condition met) are taken from the EX stage. Multi-cycle instructions will stall this stage until they are complete. The ALU, Multiplier and Divider instructions write back their result to the register file from the EX stage. The address generation part of the load-store-unit (LSU) is contained in EX as well.
 
 Writeback (WB)
-  Writes the computation result(s) back to the registerfile. The data write back part of the load-store-unit (LSU) is contained in WB as well.
+  Writes the result of Load instructions back to the register file.
 
 Multi- and Single-Cycle Instructions
 ------------------------------------
