@@ -72,7 +72,7 @@ Target to have eval boards released to developers in early Q2
 * Backend: CMC
 * Dev Kit: QuickLogic (TBD -- Tim Saxe until then)
 * SDK: TBD
-* FOSS FPGA Tools: QuickLogic (TBD-- Tim Saxe until then)
+* FOSS FPGA Tools: QuickLogic (Lalit Sharma <LSharma@quicklogic.com>)
 
 ## Project Manager (PM)
 Front end: QuickLogic (TBD -- Tim Saxe until then)
