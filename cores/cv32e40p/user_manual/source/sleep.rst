@@ -17,37 +17,40 @@ The clock gating in the Sleep Unit is impacted by the following:
  * **p.elw** instruction (only when ``PULP_CLUSTER`` = 1)
  * ``pulp_clock_en_i`` (only when ``PULP_CLUSTER`` = 1)
 
-The following table describes the Sleep Unit interface.
+:numref:`Sleep Unit interface signals` describes the Sleep Unit interface.
 
-+--------------------------------------+-----------+--------------------------------------------------+
-| Signal                               | Direction | Description                                      |
-+======================================+===========+==================================================+
-| ``pulp_clock_en_i``                  | input     | ``PULP_CLUSTER`` = 0: ``pulp_clock_en_i`` is not |
-|                                      |           | used. Tie to 0.                                  |
-|                                      |           +--------------------------------------------------+
-|                                      |           | ``PULP_CLUSTER`` = 1: ``pulp_clock_en_i``        |
-|                                      |           | can be used to gate ``clk_i`` internal to        |
-|                                      |           | the core when ``core_sleep_o`` = 1. See          |
-|                                      |           | :ref:`pulp_cluster` for details.                 |
-+--------------------------------------+-----------+--------------------------------------------------+
-| ``core_sleep_o``                     | output    | ``PULP_CLUSTER`` = 0: Core is sleeping because   |
-|                                      |           | of a **wfi** instruction. If                     |
-|                                      |           | ``core_sleep_o`` = 1, then ``clk_i`` is gated    |
-|                                      |           | off internally and it is allowed to gate off     |
-|                                      |           | ``clk_i`` externally as well. See                |
-|                                      |           | :ref:`wfi` for details.                          |
-|                                      |           +--------------------------------------------------+
-|                                      |           | ``PULP_CLUSTER`` = 1: Core is sleeping because   |
-|                                      |           | of a **p.elw** instruction.                      |
-|                                      |           | If ``core_sleep_o`` = 1,                         |
-|                                      |           | then the ``pulp_clock_en_i`` directly            |
-|                                      |           | controls the internally instantiated clock gate  |
-|                                      |           | and therefore ``pulp_clock_en_i`` can be set     |
-|                                      |           | to 0 to internally gate off ``clk_i``. If        |
-|                                      |           | ``core_sleep_o`` = 0, then it is not allowed     |
-|                                      |           | to set ``pulp_clock_en_i`` to 0.                 |
-|                                      |           | See :ref:`pulp_cluster` for details.             |
-+--------------------------------------+-----------+--------------------------------------------------+
+.. table:: Sleep Unit interface signals
+  :name: Sleep Unit interface signals
+
+  +--------------------------------------+-----------+--------------------------------------------------+
+  | Signal                               | Direction | Description                                      |
+  +======================================+===========+==================================================+
+  | ``pulp_clock_en_i``                  | input     | ``PULP_CLUSTER`` = 0: ``pulp_clock_en_i`` is not |
+  |                                      |           | used. Tie to 0.                                  |
+  |                                      |           +--------------------------------------------------+
+  |                                      |           | ``PULP_CLUSTER`` = 1: ``pulp_clock_en_i``        |
+  |                                      |           | can be used to gate ``clk_i`` internal to        |
+  |                                      |           | the core when ``core_sleep_o`` = 1. See          |
+  |                                      |           | :ref:`pulp_cluster` for details.                 |
+  +--------------------------------------+-----------+--------------------------------------------------+
+  | ``core_sleep_o``                     | output    | ``PULP_CLUSTER`` = 0: Core is sleeping because   |
+  |                                      |           | of a **wfi** instruction. If                     |
+  |                                      |           | ``core_sleep_o`` = 1, then ``clk_i`` is gated    |
+  |                                      |           | off internally and it is allowed to gate off     |
+  |                                      |           | ``clk_i`` externally as well. See                |
+  |                                      |           | :ref:`wfi` for details.                          |
+  |                                      |           +--------------------------------------------------+
+  |                                      |           | ``PULP_CLUSTER`` = 1: Core is sleeping because   |
+  |                                      |           | of a **p.elw** instruction.                      |
+  |                                      |           | If ``core_sleep_o`` = 1,                         |
+  |                                      |           | then the ``pulp_clock_en_i`` directly            |
+  |                                      |           | controls the internally instantiated clock gate  |
+  |                                      |           | and therefore ``pulp_clock_en_i`` can be set     |
+  |                                      |           | to 0 to internally gate off ``clk_i``. If        |
+  |                                      |           | ``core_sleep_o`` = 0, then it is not allowed     |
+  |                                      |           | to set ``pulp_clock_en_i`` to 0.                 |
+  |                                      |           | See :ref:`pulp_cluster` for details.             |
+  +--------------------------------------+-----------+--------------------------------------------------+
 
 .. note::
 
