@@ -1,3 +1,37 @@
+September 24, 2020 - VTG Meeting
+
+==============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson, Duncan Bees<br>
+**Futurewei:** Jingliang Leo Wang<br>
+**Imperas:** Simon Davidmann, Lee Moore<br>
+**Embecosm:** Jeremy Bennett<br>
+**EM-Micro:** John Martin<br>
+**Symbiotic EDA:** Nina Engelhardt<br>
+
+Notes:
+----------
+
+Topics:
+
+1. FORCE-RISCV Preliminary Project Launch.
+
+- Jingliang (Leo) Wang presented PPL draft.
+- A few timeline and details updates are suggested and adopted.
+- Some technical details are discussed.
+- Jeremy Bennett is interested in using the ISG to verify assembler.
+
+** Action: Jingliang (Leo) Wang to update the PPL and submit to GitHub for broader publishing.
+
+2. Definition of RTL freeze
+
+- Mike Thompson presented RTL freeze definition details document.
+- No feedback or concerns.
+
+
 August 13, 2020 - VTG Meeting
 
 ==============
