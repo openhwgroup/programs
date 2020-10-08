@@ -19,26 +19,27 @@ prefetch, CV32E40P can fetch up to four words outside of the code region
 and care should therefore be taken that no unwanted read side effects occur
 for such prefetches outside of the actual code region.
 
-Table 1 describes the signals that are used to fetch instructions. This
+:numref:`Instruction Fetch interface signals` describes the signals that are used to fetch instructions. This
 interface is a simplified version of the interface that is used by the
-LSU, which is described in Chapter 3. The difference is that no writes
+LSU, which is described in :ref:`load-store-unit`. The difference is that no writes
 are possible and thus it needs fewer signals.
 
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| **Signal**              | **Direction**   | **Description**                                                                                                                |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_req\_o           | output          | Request valid, will stay high until instr\_gnt\_i is high for one cycle                                                        |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_addr\_o[31:0]    | output          | Address, word aligned                                                                                                          |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_rdata\_i[31:0]   | input           | Data read from memory                                                                                                          |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_rvalid\_i        | input           | instr\_rdata\_i holds valid data when instr\_rvalid\_i is high. This signal will be high for exactly one cycle per request.    |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| instr\_gnt\_i           | input           | The other side accepted the request. instr\_addr\_o may change in the next cycle.                                              |
-+-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+.. table:: Instruction Fetch interface signals
+  :name: Instruction Fetch interface signals
 
-Table 1: Instruction Fetch Signals
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | **Signal**              | **Direction**   | **Description**                                                                                                                |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | instr\_req\_o           | output          | Request valid, will stay high until instr\_gnt\_i is high for one cycle                                                        |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | instr\_addr\_o[31:0]    | output          | Address, word aligned                                                                                                          |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | instr\_rdata\_i[31:0]   | input           | Data read from memory                                                                                                          |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | instr\_rvalid\_i        | input           | instr\_rdata\_i holds valid data when instr\_rvalid\_i is high. This signal will be high for exactly one cycle per request.    |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+  | instr\_gnt\_i           | input           | The other side accepted the request. instr\_addr\_o may change in the next cycle.                                              |
+  +-------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
 
 Misaligned Accesses
 -------------------
@@ -57,20 +58,20 @@ for details about the protocol. The CV32E40P instruction fetch interface does no
 implement the following optional OBI signals: we, be, wdata, auser, wuser, aid,
 rready, err, ruser, rid. These signals can be thought of as being tied off as
 specified in the OBI specification. The CV32E40P instruction fetch interface can
-cause up to four outstanding transactions.
+cause up to two outstanding transactions.
 
-Figure 2 and Figure 3 show example timing diagrams of the protocol.
+:numref:`obi-instruction-basic` and :numref:`obi-instruction-multiple-outstanding` show example timing diagrams of the protocol.
 
 .. figure:: ../images/obi_instruction_basic.svg
-   :name: obi instruction basic
+   :name: obi-instruction-basic
    :align: center
    :alt:
 
-   Figure 2: Back-to-back Memory Transactions
+   Back-to-back Memory Transactions
 
 .. figure:: ../images/obi_instruction_multiple_outstanding.svg
-   :name: obi instruction multiple outstanding
+   :name: obi-instruction-multiple-outstanding
    :align: center
    :alt:
 
-   Figure 3: Multiple Outstanding Memory Transactions
+   Multiple Outstanding Memory Transactions
