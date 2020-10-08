@@ -6,7 +6,7 @@
 ## Projects
 
 
-##OpenHW Dashboard
+## OpenHW Dashboard
 
 Last Update Oct 5 2020
 
