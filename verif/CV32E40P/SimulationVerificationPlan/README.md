@@ -28,14 +28,14 @@ The tables below capture the current status of the Verification Plan for the CV3
 
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
-| CLINT | Captured | Ready for Signoff | |
+| CLINT | Captured | Complete | |
 | CLIC | | | Not a CV32E40P Feature |
 
 ### Debug & Trace
 
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
-| Debug | Captured | Reviewed | Review scheduled for 2020-09-30 |
+| Debug | Captured | Complete | |
 | Trigger module | N/A | N/A | Not a CV32E40P Feature |
 | Tracer | N/A | N/A | Behavioral model, not RTL |
 

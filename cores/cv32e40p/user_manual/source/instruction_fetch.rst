@@ -58,7 +58,7 @@ for details about the protocol. The CV32E40P instruction fetch interface does no
 implement the following optional OBI signals: we, be, wdata, auser, wuser, aid,
 rready, err, ruser, rid. These signals can be thought of as being tied off as
 specified in the OBI specification. The CV32E40P instruction fetch interface can
-cause up to four outstanding transactions.
+cause up to two outstanding transactions.
 
 :numref:`obi-instruction-basic` and :numref:`obi-instruction-multiple-outstanding` show example timing diagrams of the protocol.
 
