@@ -698,8 +698,14 @@ Reset Value: 0x0000_0000
 +=============+===========+==================================================================================+
 | 31          |   RW      | **Interrupt:** This bit is set when the exception was triggered by an interrupt. |
 +-------------+-----------+----------------------------------------------------------------------------------+
-| 30:0        |   WLRL    | **Exception Code**                                                               |
+| 30:5        |   RO (0)  | Always 0                                                                         |
 +-------------+-----------+----------------------------------------------------------------------------------+
+| 4:0         |   RW      | **Exception Code**   (See note below)                                            |
++-------------+-----------+----------------------------------------------------------------------------------+
+
+**NOTE**: software accesses to `mcause[4:0]` must be sensitive to the WLRL field specification of this CSR.  For example,
+when `mcause[31]` is set, writing 0x1 to `mcause[1]` (Supervisor software interrupt) will result in UNDEFINED behavior.
+
 
 Machine Trap Value (``mtval``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1217,12 +1223,6 @@ Reset Value: Defined
 
   Reset Value: 0x0000_0000
 
-  +-----------+----+----+----+---+
-  | 31 : 4    | 3  | 2  | 1  | 0 |
-  +===========+====+====+====+===+
-  | Interrupt | Exception Code   |
-  +-----------+------------------+
-
   Detailed:
 
   +-------------+-----------+------------------------------------------------------------------------------------+
@@ -1230,8 +1230,14 @@ Reset Value: Defined
   +=============+===========+====================================================================================+
   | 31          | RW        | **Interrupt:** This bit is set when the exception was triggered by an interrupt.   |
   +-------------+-----------+------------------------------------------------------------------------------------+
-  | 30:0        | WLRL      | **Exception Code**                                                                 |
+  | 30:5        |   RO (0)  | Always 0                                                                           |
   +-------------+-----------+------------------------------------------------------------------------------------+
+  | 4:0         |   RW      | **Exception Code**   (See note below)                                              |
+  +-------------+-----------+------------------------------------------------------------------------------------+
+
+**NOTE**: software accesses to `ucause[4:0]` must be sensitive to the WLRL field specification of this CSR.  For example,
+when `ucause[31]` is set, writing 0x1 to `ucause[1]` (Supervisor software interrupt) will result in UNDEFINED behavior.
+
 
 .. only:: PMP
 
