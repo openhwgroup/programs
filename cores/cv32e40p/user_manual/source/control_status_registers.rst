@@ -32,11 +32,12 @@ the indicated or higher privilge level:
   write any value and that value will be returned on a subsequent read (unless
   a side-effect causes the core to change the CSR value).
 
-* **RO**: CSR is **read-only**.  Writes by CSR instrucions raise an illegal
+* **RO**: CSR is **read-only**.  Writes by CSR instructions raise an illegal
   instruction exception.
 
-Writes of a non-supported value to a CSR do not result in an illegal
-instruction exception.
+Writes of a non-supported value to **WLRL** bitfields of a **RW** CSR do not result in an illegal
+instruction exception. The exact bitfield access types, e.g. **WLRL** or **WARL**, can be found in the RISC-V
+privileged specification.
 
 Reads or writes to a CSR that is not implemented will result in an illegal
 instruction exception.
@@ -695,9 +696,9 @@ Reset Value: 0x0000_0000
 +-------------+-----------+----------------------------------------------------------------------------------+
 |   Bit #     |   Mode    |   Description                                                                    |
 +=============+===========+==================================================================================+
-| 31          |   RO      | **Interrupt:** This bit is set when the exception was triggered by an interrupt. |
+| 31          |   RW      | **Interrupt:** This bit is set when the exception was triggered by an interrupt. |
 +-------------+-----------+----------------------------------------------------------------------------------+
-|  5 : 0      |   RO      | **Exception Code**                                                               |
+| 30:0        |   WLRL    | **Exception Code**                                                               |
 +-------------+-----------+----------------------------------------------------------------------------------+
 
 Machine Trap Value (``mtval``)
@@ -712,7 +713,7 @@ Detailed:
 +-------------+-----------+------------------------------------------------------------------------+
 |   Bit #     |   Mode    |   Description                                                          |
 +=============+===========+========================================================================+
-| 31:0        | RO        | Writes are ignored; reads return 0.                                    |
+| 31:0        | RO (0)    | Writes are ignored; reads return 0.                                    |
 +-------------+-----------+------------------------------------------------------------------------+
 
 Machine Interrupt Pending Register (``mip``)
@@ -1229,7 +1230,7 @@ Reset Value: Defined
   +=============+===========+====================================================================================+
   | 31          | RW        | **Interrupt:** This bit is set when the exception was triggered by an interrupt.   |
   +-------------+-----------+------------------------------------------------------------------------------------+
-  | 4:0         | RW        | **Exception Code**                                                                 |
+  | 30:0        | WLRL      | **Exception Code**                                                                 |
   +-------------+-----------+------------------------------------------------------------------------------------+
 
 .. only:: PMP

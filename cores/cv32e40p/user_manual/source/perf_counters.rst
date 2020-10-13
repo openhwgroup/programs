@@ -43,13 +43,9 @@ The following events can be monitored using the performance counters of CV32E40P
 | 4           | IMISS           | Cycles waiting for instruction fethces,   |
 |             |                 | excluding jumps and branches              |
 +-------------+-----------------+-------------------------------------------+
-| 5           | LD              | Number of data interface read             |
-|             |                 | transactions as a result of load          |
-|             |                 | instructions                              |
+| 5           | LD              | Number of load instructions               |
 +-------------+-----------------+-------------------------------------------+
-| 6           | ST              | Number of data interface write            |
-|             |                 | transactions as a result of store         |
-|             |                 | instructions                              |
+| 6           | ST              | Number of store instructions              |
 +-------------+-----------------+-------------------------------------------+
 | 7           | JUMP            | Number of jumps (unconditional)           |
 +-------------+-----------------+-------------------------------------------+
