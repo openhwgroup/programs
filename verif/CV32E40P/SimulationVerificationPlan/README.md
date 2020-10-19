@@ -16,7 +16,7 @@ The tables below capture the current status of the Verification Plan for the CV3
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
 | RV32I | Complete | Complete | |
-| Zifencei extension | Complete | Waiting for Signoff | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
+| Zifencei extension | Complete | Complete | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
 | Zicsr extension | Complete | Complete | See CV32E40P_RV32Z_Extention_Instructions.xlsx |
 | M extension | Complete | Complete | |
 | F extension | N/A | N/A | Not a verifiied feature of CV32E40P |
