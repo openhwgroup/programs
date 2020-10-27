@@ -7,6 +7,9 @@ Auxiliary Processing Unit Interface
 -----------------------------------
 
 :numref:`Auxiliary Processing Unit interface signals` describes the signals of the Auxiliary Processing Unit interface.
+This interface is used to send decoded instructions to an external co-processor that receives the operands and the operation and returns the result of such operation. The CV32E40P core uses it to process RV32F instructions (see Chapter 11 of the `RISC-V Instruction Set Manual, Volume I: User-Level ISA`).
+The CV32E40P core prepares the operands (apu\_operands\_o,  and apu\_flags\_o) and the FP operation (apu\_op\_o) in the ID stage (i.e., decoding the instruction and reading the register file) and sends them to the external FPU unit in the EX stage. The FPU takes at least one cycle (depending on the instruction) to compute the operation, sent back through the apu\_result\_i and apu\_flags\_i signals. The results are then written in the register file of the core. The core is responsible for handling stalls and data-hazards.
+
 
 .. table:: Auxiliary Processing Unit interface signals
   :name: Auxiliary Processing Unit interface signals
@@ -47,6 +50,32 @@ Connection with the FPU
 -----------------------
 
 The CV32E40P sends FP operands over the apu\_operands\_o bus; the decoded RV32F operation as ADD, SUB, MUL, etc through the apu\_op\_o bus; the cast, destination and source formats as well as rounding mode through the apu\_flags\_o bus. The respose is the FPU result and relative output flags as Overflow, Underflow, etc.
+
+The operands are encoded as following:
+
+- apu\_operands\_o\[0\] contains the rs1 operand of a OP-FP instructions
+
+- apu\_operands\_o\[1\] contains the rs2 operand of a OP-FP instructions
+
+- apu\_operands\_o\[2\] contains the rs3 operand of a OP-FP instructions
+
+The flags are encoded as following:
+
+- apu\_flags\_o[14:11]  0
+
+- apu\_flags\_o[10:9]   format for casts (int32)
+
+- apu\_flags\_o[8:6]    format source for float2float conversion or move
+
+- apu\_flags\_o[5:3]    format destination for float2float conversion or move
+
+- apu\_flags\_o[2:0]    rounding mode
+
+
+As the core implements only RV32F, the apu\_flags\_o is set to FP32 and INT32 only mode in the format fields.
+
+
+FP-Load and Store instructions as well as FP-CSR are handled by the CV32E40P datapath.
 
 
 APU Tracer
