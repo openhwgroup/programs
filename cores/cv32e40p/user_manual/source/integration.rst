@@ -48,16 +48,14 @@ Instantiation Template
       .data_rdata_i             (),
 
       // Auxiliary Processing Unit (APU) interface
-      .apu_master_req_o         (),
-      .apu_master_ready_o       (),
-      .apu_master_gnt_i         (),
-      .apu_master_operands_o    (),
-      .apu_master_op_o          (),
-      .apu_master_type_o        (),
-      .apu_master_flags_o       (),
-      .apu_master_valid_i       (),
-      .apu_master_result_i      (),
-      .apu_master_flags_i       (),
+      .apu_req_o                (),
+      .apu_gnt_i                (),
+      .apu_operands_o           (),
+      .apu_op_o                 (),
+      .apu_flags_o              (),
+      .apu_rvalid_i             (),
+      .apu_result_i             (),
+      .apu_flags_i              (),
 
        // Interrupt interface
       .irq_i                    (),
