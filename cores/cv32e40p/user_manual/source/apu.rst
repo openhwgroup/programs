@@ -14,21 +14,21 @@ Auxiliary Processing Unit Interface
   +---------------------------------+---------------+------------------------------------------------------------------------------------------------------------------------------+
   | **Signal**                      | **Direction** | **Description**                                                                                                              |
   +=================================+===============+==============================================================================================================================+
-  | ``apu\_req\_o``                 | output        | Request valid, will stay high until apu\_gnt\_i is high for one cycle                                                        |
+  | ``apu_req_o``                   | output        | Request valid, will stay high until ``apu_gnt_i`` is high for one cycle                                                      |
   +---------------------------------+---------------+------------------------------------------------------------------------------------------------------------------------------+
-  | ``apu\_gnt\_i``                 | input         | The other side accepted the request.  apu\\_operands\_o, apu\_op\_o, apu\_flags\_o may change in the next cycle.             |
+  | ``apu_gnt_i``                   | input         | The other side accepted the request.  ``apu_operands_o``, ``apu_op_o``, ``apu_flags_o`` may change in the next cycle.        |
   +---------------------------------+---------------+------------------------------------------------------------------------------------------------------------------------------+
-  | ``apu\_operands\_o[2:0][31:0]`` | output        | APU's operands                                                                                                               |
+  | ``apu_operands_o[2:0][31:0]``   | output        | APU's operands                                                                                                               |
   +---------------------------------+---------------+------------------------------------------------------------------------------------------------------------------------------+
-  | ``apu\_op\_o[5:0]``             | output        | APU's operation                                                                                                              |
+  | ``apu_op_o[5:0]``               | output        | APU's operation                                                                                                              |
   +---------------------------------+---------------+------------------------------------------------------------------------------------------------------------------------------+
-  | ``apu\_flags\_o[14:0]``         | output        | APU's flags                                                                                                                  |
+  | ``apu_flags_o[14:0]``           | output        | APU's flags                                                                                                                  |
   +---------------------------------+---------------+------------------------------------------------------------------------------------------------------------------------------+
-  | ``apu\_rvalid\_i``              | input         | apu\_result\_i holds valid data when apu\_valid\_i is high. This signal will be high for exactly one cycle per request       |
+  | ``apu_rvalid_i``                | input         | ``apu_result_i`` holds valid data when ``apu_valid_i`` is high. This signal will be high for exactly one cycle per request   |
   +---------------------------------+---------------+------------------------------------------------------------------------------------------------------------------------------+
-  | ``apu\_result\_i[31:0]``        | input         | APU's result                                                                                                                 |
+  | ``apu_result_i[31:0]``          | input         | APU's result                                                                                                                 |
   +---------------------------------+---------------+------------------------------------------------------------------------------------------------------------------------------+
-  | ``apu\_flags\_i[4:0]``          | input         | APU's flag result                                                                                                            |
+  | ``apu_flags_i[4:0]``            | input         | APU's flag result                                                                                                            |
   +---------------------------------+---------------+------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -38,7 +38,7 @@ Protocol
 The apu bus interface is derived from to the OBI (Open Bus Interface) protocol.
 See https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/OBI-v1.0.pdf
 for details about the protocol.
-The CV32E40P apu interface uses the apu\_operands\_o, apu\_op\_o, and apu\_flags\_o as the address signal during the Address phase, indicating its validity with the `apu\_req\_o signal. It uses the apu\_result\_i and apu\_flags\_i as the rdata of the response phase. It does not implement the OBI signals: we, be, wdata, auser, wuser, aid,
+The CV32E40P apu interface uses the ``apu_operands_o``, ``apu_op_o``, and ``apu_flags_o`` as the address signal during the Address phase, indicating its validity with the ``apu_req_o`` signal. It uses the ``apu_result_i`` and ``apu_flags_i`` as the rdata of the response phase. It does not implement the OBI signals: we, be, wdata, auser, wuser, aid,
 rready, err, ruser, rid. These signals can be thought of as being tied off as
 specified in the OBI specification.
 The CV32E40P apu interface can cause up to two outstanding transactions.
@@ -46,7 +46,7 @@ The CV32E40P apu interface can cause up to two outstanding transactions.
 Connection with the FPU
 -----------------------
 
-The CV32E40P sends FP operands over the apu\_operands\_o bus; the decoded RV32F operation as ADD, SUB, MUL, etc through the apu\_op\_o bus; the cast, destination and source formats as well as rounding mode through the apu\_flags\_o bus. The respose is the FPU result and relative output flags as Overflow, Underflow, etc.
+The CV32E40P sends FP operands over the ``apu_operands_o`` bus; the decoded RV32F operation as ADD, SUB, MUL, etc through the ``apu_op_o`` bus; the cast, destination and source formats as well as rounding mode through the ``apu_flags_o`` bus. The respose is the FPU result and relative output flags as Overflow, Underflow, etc.
 
 
 APU Tracer
