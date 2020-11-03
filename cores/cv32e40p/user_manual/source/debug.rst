@@ -45,6 +45,12 @@ Interface
 +===============================+===========+============================================+
 | ``debug_req_i``               | input     | Request to enter Debug Mode                |
 +-------------------------------+-----------+--------------------------------------------+
+| ``debug_havereset_o``         | output    | Debug status: Core has been reset          |
++-------------------------------+-----------+--------------------------------------------+
+| ``debug_running_o``           | output    | Debug status: Core is running              |
++-------------------------------+-----------+--------------------------------------------+
+| ``debug_halted_o``            | output    | Debug status: Core is halted               |
++-------------------------------+-----------+--------------------------------------------+
 | ``dm_halt_addr_i[31:0]``      | input     | Address for debugger entry                 |
 +-------------------------------+-----------+--------------------------------------------+
 | ``dm_exception_addr_i[31:0]`` | input     | Address for debugger exception entry       |
@@ -52,13 +58,17 @@ Interface
 
 ``debug_req_i`` is the "debug interrupt", issued by the debug module when the core should enter Debug Mode. The ``debug_req_i`` is synchronous to ``clk_i`` and requires a minimum assertion of one clock period to enter Debug Mode. The instruction being decoded during the same cycle that ``debug_req_i`` is first asserted shall not be executed before entering Debug Mode.
 
+``debug_havereset_o`` is used to signal that the CV32E40P has been reset. ``debug_havereset_o`` = 1 during assertion of ``rst_ni``. It will only go to 0 some (not further specified number of) cycles after ``rst_ni`` has been deasserted and ``fetch_enable_i`` has been sampled high.
+
+``debug_running_o`` is used to signal that the CV32E40P is running normally, i.e. it is no longer in its reset state as signaled via ``debug_havereset_o`` nor is it in debug mode as signaled via ``debug_halted_o``.
+
+``debug_halted_o`` is used to signal that the CV32E40P is in debug mode.
+
 ``dm_halt_addr_i`` is the address where the PC jumps to for a debug entry event. When in Debug Mode, an ebreak instruction will also cause the PC to jump back to this address without affecting status registers. (see :ref:`ebreak_behavior` below)
 
 ``dm_exception_addr_i`` is the address where the PC jumps to when an exception occurs during Debug Mode. When in Debug Mode, the mret or uret instruction will also cause the PC to jump back to this address without affecting status registers.
 
 Both ``dm_halt_addr_i`` and ``dm_exception_addr_i`` must be word aligned.
-
-
 
 Core Debug Registers
 --------------------
@@ -70,6 +80,49 @@ Several trigger registers are required to adhere to specification. The following
 The TDATA1.DMODE is hardwired to a value of 1. In non Debug Mode,
 writes to Trigger registers are ignored and reads reflect CSR values.
 
+Debug state
+-----------
+
+As specified in `RISC-V Debug Specification <https://riscv.org/specifications/debug-specification/>`_ every hart that can be selected by
+the Debug Module is in exactly one of four states: ``nonexistent``, ``unavailable``, ``running`` or ``halted``. Harts are ``nonexistent`` if
+they will never be part of the system, no matter how long a user waits. Harts are ``unavailable`` if they might become available at a later
+time, or if there are other harts with higher indexes than this one. Harts may be ``unavailable`` for a variety of reasons including being
+reset or temporarily being powered down.  Harts are ``running`` when they are executing normally, as if no debugger was attached. This
+includes being in a low power mode or waiting for an interrupt, as long as a halt request will result in the hart being ``halted``.
+Harts are ``halted`` when they are in Debug Mode, only performing tasks on behalf of the debugger.
+
+The remainder of this section assumes that the CV32E40P will not be classified as ``nonexistent`` by the integrator.
+
+The CV32E40P signals to the Debug Module whether it is ``running`` or ``halted`` via its ``debug_running_o`` and ``debug_halted_o`` pins
+respectively. Therefore, assuming that this core will not be integrated as a ``nonexistent`` core, the CV32E40P is classified as ``unavailable``
+when neither ``debug_running_o`` or ``debug_halted_o`` is asserted. Upon ``rst_ni`` assertion the debug state will be ``unavailable`` until some
+cycle(s) after ``rst_ni`` has been deasserted and ``fetch_enable_i`` has been sampled high. After this point (until a next reset assertion) the
+core will transition between having its ``debug_halted_o`` or ``debug_running_o`` pin asserted depending whether the core is in debug mode or not.
+Exactly one of the ``debug_havereset_o``, ``debug_running_o``, ``debug_halted_o`` is asserted at all times.
+
+:numref:`debug-running` and show :numref:`debug-halted` show typical examples of transitioning into the ``running`` and ``halted`` states.
+
+.. figure:: ../images/debug_running.svg
+   :name: debug-running
+   :align: center
+   :alt:
+
+   Transition into debug ``running`` state
+
+.. figure:: ../images/debug_halted.svg
+   :name: debug-halted
+   :align: center
+   :alt:
+
+   Transition into debug ``halted`` state
+
+The key properties of the debug states are:
+
+ * The CV32E40P can remain in its ``unavailable`` state for an arbitrarily long time (depending on ``rst_ni`` and ``fetch_enable_i``).
+ * If ``debug_req_i`` is asserted after ``rst_ni`` deassertion and latest at the time of ``fetch_enable_i`` assertion, then the CV32E40P
+   is guaranteed to transition straight from its ``unavailable`` state into its ``halted`` state. If ``debug_req_i`` is asserted at a later
+   point in time, then the CV32E40P might transition through the ``running`` state on its ways to the ``halted`` state.
+ * If ``debug_req_i`` is asserted during the ``running`` state, the core will eventually transition into the ``halted`` state (typically after a couple of cycles).
 
 .. _ebreak_behavior:
 
@@ -77,8 +130,6 @@ EBREAK Behavior
 --------------------
 
 The EBREAK instruction description is distributed across several RISC-V specifications:  `RISC-V Debug Specification <https://riscv.org/specifications/debug-specification/>`_, `RISC-V Priveleged Specification <https://riscv.org/specifications/privileged-isa/>`_, `RISC-V ISA <https://riscv.org/specifications/isa-spec-pdf/>`_. The following is a summary of the behavior for three common scenarios.
-
-
 
 Scenario 1 : Enter Exception
 """"""""""""""""""""""""""""
@@ -111,4 +162,3 @@ Execuitng the EBREAK instruction when the core is in Debug Mode shall result in 
 
 - The core remains in Debug Mode and execution jumps back to the beginning of the debug code located at ``dm_halt_addr_i``
 - none of the CSRs are modified
-
