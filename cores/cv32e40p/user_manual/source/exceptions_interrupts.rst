@@ -11,7 +11,7 @@ All exceptions cause the core to jump to the base address of the vector table in
 Interrupts are handled in either direct mode or vectored mode depending on the value of ``mtvec``.MODE. In direct mode the core
 jumps to the base address of the vector table in the ``mtvec`` CSR. In vectored mode the core jumps to the base address
 plus four times the interrupt ID. Upon executing an MRET instruction, the core jumps to the program counter previously saved in the
-``mepc`` CSR and restores ``mstatus``.MPIE to ``mstatus``.MIE. 
+``mepc`` CSR and restores ``mstatus``.MPIE to ``mstatus``.MIE.
 
 The base address of the vector table must be aligned to 256 bytes (i.e., its least significant byte must be 0x00) and can be programmed
 by writing to the ``mtvec`` CSR. For more information, see the :ref:`cs-registers` documentation.
@@ -69,7 +69,7 @@ ordered as follows: ``irq_i[31]``, ``irq_i[30]``, ..., ``irq_i[16]``, ``irq_i[11
 All interrupt lines are level-sensitive. There are two supported mechanisms by which interrupts can be cleared at the external source.
 
 * A software-based mechanism in which the interrupt handler signals completion of the handling routine to the interrupt source, e.g., through a memory-mapped register, which then deasserts the corresponding interrupt line.
-* A hardware-based mechanism in which the ``irq_ack_o`` and ``irq_id_o[4:0]`` signals are used to clear the interrupt sourcee, e.g. by an external interrupt controller. ``irq_ack_o`` is a 1 ``clk_i`` cycle pulse during which ``irq_id_o[4:0]`` reflects the index in ``irq_id[]`` of the taken interrupt. 
+* A hardware-based mechanism in which the ``irq_ack_o`` and ``irq_id_o[4:0]`` signals are used to clear the interrupt sourcee, e.g. by an external interrupt controller. ``irq_ack_o`` is a 1 ``clk_i`` cycle pulse during which ``irq_id_o[4:0]`` reflects the index in ``irq_id[]`` of the taken interrupt.
 
 In Debug Mode, all interrupts are ignored independent of ``mstatus``.MIE and the content of the ``mie`` CSR.
 
@@ -89,6 +89,7 @@ CV32E40P can trigger an exception due to the following exception causes:
 +----------------+---------------------------------------------------------------+
 
 The illegal instruction exception and M-Mode ECALL instruction exceptions cannot be disabled and are always active.
+The core raises illegal exceptions for any explicit RISC-V ISA defined case, and for any instruction encodings that are not defined in the CV32E40P core with respect to its specified parameters.
 
 .. only:: PMP
 
