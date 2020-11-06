@@ -10,32 +10,32 @@ Issue #47
 -	General discussion about labeling strategy for Github issues. Are the labels associated with a tag, i.e. will labels made at the time of a tagged 
 -       release stay as they are?  
 -	(In cores repo, a different label system was used. A "PULP" label is used for "PULP" features. This is potentially more permanent.
--	AI: Mike will find out what happens to issues on a tag
+-	AI: Mike will find out what happens to issues on a tag - SUBSEQUENTLY - Mike determined that labels are not associated with a tag
 -	AI: Mike, when we do tag for RTL Freeze, we should have a document to describe issues
 
 
-#48
+Issue #48
 -	Similar to 47, this one is functional coverage – same waiving strategy as 47
 
-#50 – 	Task: ensure 100% coverage of ISA instructions
--	This issue will be closed once functional coverage is 100% complete
+Issue #50 – 	Task: ensure 100% coverage of ISA instructions
+-	This issue will be closed once ISA functional coverage is 100% complete
 	
 -	Note, the goal is not 100% functinoal coverage in a single run. We would however like to get as close to 100% as possible in a single run.
 
 
-#51 - 
+Issue #51 - 
 	similar to #48 - Waived
 
 
 
-#65 – Integrating existing tests in CV32 repo
+Issue #65 – Integrating existing tests in CV32 repo
 - 	when we took over RI5CY repo there was a small example testbench. Basically a hello world testbench
 -	Arjan: remains value to designers.
 - 	This specific issue is for integration of these tests into core-v-verif.
 -	This will NOT be done
 Issue is now closed
 
-#84 Need single-point-of-control for simulation timescale
+Issue #84 Need single-point-of-control for simulation timescale
 -	This is gating RTL Freeze
 -	This is a System Verilog enhancement 
 -	May already be done - MT needs to check on this to see if it is done
@@ -45,7 +45,7 @@ Issue is now closed
 -	MT to report back by end of this week
 
 
-#221 – ci_check does not correctly detect tool errors
+Issue #221 – ci_check does not correctly detect tool errors
 -	the python script for ci_check doesn’t correctly look at passes and failures and can erroneously report a pass
 -	We want this fixed
 -	Not a gating item – but maybe it should be - prefer not to Waive it
@@ -53,28 +53,28 @@ Issue is now closed
 -	input is YAML 
 -	coding with python dictionaries involved
 
-#248 – Compare failures due to stalls
+Issue #248 – Compare failures due to stalls
 -	this is not gating 
 -	we don’t want to lose the information
 -	will be WAIVED – we have a workaround in place
 
 
-#253 - Compliance test cases have mismatches in signature check
+Issue #253 - Compliance test cases have mismatches in signature check
 -	This is gating RTL Freeze
 -	Make files compile the code, runs through the ISS, then looks for a second signature for an RTL simulation – which we don’t do at this stage. The make files from the compliance test suites don’t understand that. They are looking for a signature – we don’t produce that. 
 -	MT will work with Lee to get the signature check working
 
 	 
 
-#268 – CSR step and compare mistiming with random stalls
+Issue #268 – CSR step and compare mistiming with random stalls
 - 	similar to 248 – will be waived – not gating
 
-#294 – Verilog compile fails on uvmt_cv32_tb.sv on commit 1e77175 using vcs simulator
--	This is related to a bug in the Synopsis simulator
+Issue #294 – Verilog compile fails on uvmt_cv32_tb.sv on commit 1e77175 using vcs simulator
+-	This is related to a bug in the Synopsys VCS simulator
 -	Opened by mtvaden 
 -	this will be closed due to non-response on questions
 
-#319 – Counters test-program fails in the presense of memory stalls
+Issue #319 – Counters test-program fails in the presense of memory stalls
 -	prediction of the value in the counter falls apart in presence of memory stalls
 -	Solution will be that Arjan will split the test in two. 
 -	Counter test case will be removed
