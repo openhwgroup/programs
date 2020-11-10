@@ -90,10 +90,6 @@ instruction exception.
   +---------------+-------------------+-----------+---------------------+---------------------------------------------------------+
   | 0x806         | ``lpcount1``      | URW       | ``PULP_XPULP`` = 1  | Hardware Loop 1 Counter.                                |
   +---------------+-------------------+-----------+---------------------+---------------------------------------------------------+
-  | 0x807         | ``fprec``         | URW       | ``PULP_XPULP`` = 1  | Custom flag which controls the precision and latency    |
-  |               |                   |           | &&                  | of the iterative div/sqrt unit.                         |
-  |               |                   |           | ``FPU`` = 1         |                                                         |
-  +---------------+-------------------+-----------+---------------------+---------------------------------------------------------+
   | 0xCC0         | ``uhartid``       | URO       | ``PULP_XPULP`` = 1  | Hardware Thread ID                                      |
   +---------------+-------------------+-----------+---------------------+---------------------------------------------------------+
   | 0xCC1         | ``privlv``        | URO       | ``PULP_XPULP`` = 1  | Privilege Level                                         |
@@ -322,35 +318,6 @@ Detailed:
 | 31:0        | RW        | Number of iteration of HWLoop 0/1.        |
 +-------------+-----------+-------------------------------------------+
 
-.. _csr-fprec:
-
-Floating-point precision (``fprec``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-CSR Address: 0x807 (only present if ``FPU`` = 1 and ``PULP_XPULP`` = 1)
-
-Reset Value: 0x0000_0000
-
-+-------------+-----------+----------------------------------------------------------------------------------+
-|   Bit #     |  Mode     | Description                                                                      |
-+=============+===========+==================================================================================+
-| 31:5        | RO        | Writes are ignored; reads return 0.                                              |
-+-------------+-----------+----------------------------------------------------------------------------------+
-| 4:0         | RW        | Precision and latency of the iterative Floating-Point div/sqrt unit.             |
-|             |           +-----------------------------------------------------------------------+----------+
-|             |           | Value   | Precision                                                   | Latency  |
-|             |           +---------+-------------------------------------------------------------+----------+
-|             |           | 0       | Default value: single precision                             | 8        |
-|             |           +---------+-------------------------------------------------------------+----------+
-|             |           | 8 - 11  | Computes as many mantissa bits as specified ``fprec`` value | 5        |
-|             |           +---------+-------------------------------------------------------------+----------+
-|             |           | 12 - 15 |                                                             | 6        |
-|             |           +---------+-------------------------------------------------------------+----------+
-|             |           | 16 - 19 |                                                             | 7        |
-|             |           +---------+-------------------------------------------------------------+----------+
-|             |           | 20 - 23 |                                                             | 8        |
-+-------------+-----------+---------+-------------------------------------------------------------+----------+
-
 Privilege Level (``privlv``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -390,7 +357,7 @@ Reset Value: Defined
   +-------------+-----------+----------------------------------------------------------------+
 
 Similar to ``mhartid`` the ``uhartid`` provides the Hardware Thread ID. It differs from ``mhartid`` only in the required privilege level. On
-CV32E40P, as it is a machine mode only implementation, this difference is not noticeable. 
+CV32E40P, as it is a machine mode only implementation, this difference is not noticeable.
 
 Machine Status (``mstatus``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -781,7 +748,7 @@ Since native triggers are not supported, writes to this register from M-Mode wil
    **match**, **m**, **s**, **u**,  **store** and  **load** bitfields of this CSR, which are marked as R/W in Debug Specification
    0.13.2, are therefore implemented as WARL bitfields (corresponding to how these bitfields will be specified in the forthcoming
    Debug Specification 0.14.0).
- 
+
 +-------+----------+------------------------------------------------------------------+
 | Bit#  | Mode     | Description                                                      |
 +=======+==========+==================================================================+
