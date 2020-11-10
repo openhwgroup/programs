@@ -31,9 +31,3 @@ floating-point status and control register (:ref:`csr-fcsr`) which contains the
 exceptions that occurred since it was last reset and the rounding mode.
 :ref:`csr-fflags` and :ref:`csr-frm` can be accessed directly or via :ref:`csr-fcsr` which is mapped to
 those two registers.
-
-Floating-point Performance Counters:
-------------------------------------
-
-Some specific performance counters have been implemented to profile
-FP-kernels.
