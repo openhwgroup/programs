@@ -97,7 +97,14 @@ html_logo = '../images/openhw-landscape.svg'
 #
 # Set html_static_path to null on the advice of RTDs:
 #https://github.com/readthedocs/readthedocs.org/issues/1776
-html_static_path = []
+#html_static_path = []
+html_static_path = ['_static']
+
+html_context = {
+    'css_files' : [
+        '_static/theme_overrides.css', # Fix wide tables in RTD theme
+        ],
+    }
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
