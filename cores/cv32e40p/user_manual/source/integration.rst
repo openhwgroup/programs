@@ -78,7 +78,6 @@ Parameters
 ----------
 
 .. note::
-
    The non-default (i.e. non-zero) settings of ``FPU``, ``PULP_CLUSTER``, ``PULP_XPULP`` and ``PULP_ZFINX`` have not
    been verified yet. The default parameter value for ``PULP_XPULP`` will be changed to 1 once it has been verified.
    The default configuration reflected below is currently under verification and this verification effort will be
@@ -88,31 +87,31 @@ Parameters
    The instruction encodings for the PULP instructions is expected to change in a non-backward-compatible manner, 
    see https://github.com/openhwgroup/cv32e40p/issues/452.
 
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
-| Name                         | Type/Range  | Default    | Description                                                     |
-+==============================+=============+============+=================================================================+
-| ``FPU``                      | bit         | 0          | Enable Floating Point Unit (FPU) support, see :ref:`fpu`        |
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``NUM_MHPMCOUNTERS``         | int (0..29) | 1          | Number of MHPMCOUNTER performance counters, see                 |
-|                              |             |            | :ref:`performance-counters`                                     |
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``PULP_CLUSTER``             | bit         | 0          | Enable PULP Cluster support, see :ref:`pulp_cluster`            |
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``PULP_XPULP``               | bit         | 0          | Enable all of the custom PULP ISA extensions (except **p.elw**) |
-|                              |             |            | (see :ref:`custom-isa-extensions`) and all custom CSRs          |
-|                              |             |            | (see :ref:`cs-registers`).                                      |
-|                              |             |            |                                                                 |
-|                              |             |            | Examples of PULP ISA                                            |
-|                              |             |            | extensions are post-incrementing load and stores                |
-|                              |             |            | (see :ref:`pulp_load_store`) and hardware loops                 |
-|                              |             |            | (see :ref:`pulp_hardware_loop`).                                |
-|                              |             |            |                                                                 |
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``PULP_ZFINX``               | bit         | 0          | Enable Floating Point instructions to use the General Purpose   |
-|                              |             |            | register file instead of requiring a dedicated Floating Point   |
-|                              |             |            | register file, see :ref:`fpu`. Only allowed to be set to 1      |
-|                              |             |            | if ``FPU`` = 1                                                  |
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
++------------------------------+-------------+------------+------------------------------------------------------------------+
+| Name                         | Type/Range  | Default    | Description                                                      |
++==============================+=============+============+==================================================================+
+| ``FPU``                      | bit         | 0          | Enable Floating Point Unit (FPU) support, see :ref:`fpu`         |
++------------------------------+-------------+------------+------------------------------------------------------------------+
+| ``NUM_MHPMCOUNTERS``         | int (0..29) | 1          | Number of MHPMCOUNTER performance counters, see                  |
+|                              |             |            | :ref:`performance-counters`                                      |
++------------------------------+-------------+------------+------------------------------------------------------------------+
+| ``PULP_CLUSTER``             | bit         | 0          | Enable PULP Cluster support, see :ref:`pulp_cluster`             |
++------------------------------+-------------+------------+------------------------------------------------------------------+
+| ``PULP_XPULP``               | bit         | 0          | Enable all of the custom PULP ISA extensions (except **cv.elw**) |
+|                              |             |            | (see :ref:`custom-isa-extensions`) and all custom CSRs           |
+|                              |             |            | (see :ref:`cs-registers`).                                       |
+|                              |             |            |                                                                  |
+|                              |             |            | Examples of PULP ISA                                             |
+|                              |             |            | extensions are post-incrementing load and stores                 |
+|                              |             |            | (see :ref:`corev_load_store`) and hardware loops                 |
+|                              |             |            | (see :ref:`corev_hardware_loop`).                                |
+|                              |             |            |                                                                  |
++------------------------------+-------------+------------+------------------------------------------------------------------+
+| ``PULP_ZFINX``               | bit         | 0          | Enable Floating Point instructions to use the General Purpose    |
+|                              |             |            | register file instead of requiring a dedicated Floating Point    |
+|                              |             |            | register file, see :ref:`fpu`. Only allowed to be set to 1       |
+|                              |             |            | if ``FPU`` = 1                                                   |
++------------------------------+-------------+------------+------------------------------------------------------------------+
 
 Interfaces
 ----------
