@@ -56,9 +56,11 @@ and zero stall on the data-side memory interface.
   |                       |                                      | with a 32-bit result. The multiplications with upper-word   |
   |                       | 5 (mulh, mulhsu, mulhu)              | result take 5 cycles to compute.                            |
   +-----------------------+--------------------------------------+-------------------------------------------------------------+
-  | Division              |                                      | The number of cycles depends on the operand values.         |
-  |                       |                                      |                                                             |
-  | Remainder             |                                      |                                                             |
+  | Division              | 3 - 35                               | The number of cycles depends on the divider operand value   |
+  |                       |                                      | (operand b), i.e. in the number of leading bits at 0.       |
+  | Remainder             | 3 - 35                               | The minimum number of cycles is 3 when the divider has zero |
+  |                       |                                      | leading bits at 0 (e.g., 0x8000000).                        |
+  |                       |                                      | The maximum number of cycles is 35 when the divider is 0    |
   +-----------------------+--------------------------------------+-------------------------------------------------------------+
   | Jump                  | 2                                    | Jumps are performed in the ID stage. Upon a jump the IF     |
   |                       |                                      | stage (including prefetch buffer) is flushed. The new PC    |
