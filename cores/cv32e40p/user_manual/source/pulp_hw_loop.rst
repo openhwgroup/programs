@@ -40,7 +40,7 @@ The HWLoop constraints are:
 -  No coditional branch instructions allowed in the HWLoop body.
    An illegal exception is raised otherwise.
 
--  No privileged instructions (mret, ecall, wfi) allowed in the HWLoop body, except for ebreak.
+-  No privileged instructions (mret, dret, ecall, wfi) allowed in the HWLoop body, except for ebreak.
    An illegal exception is raised otherwise.
 
 -  No memory ordering instructions (fence, fence.i) allowed in the HWLoop body.
