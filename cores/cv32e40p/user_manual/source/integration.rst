@@ -64,6 +64,9 @@ Instantiation Template
 
       // Debug interface
       .debug_req_i              (),
+      .debug_havereset_o        (),
+      .debug_running_o          (),
+      .debug_halted_o           (),
 
       // Special control signals
       .fetch_enable_i           (),
