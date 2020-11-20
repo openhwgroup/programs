@@ -58,9 +58,13 @@ Interface
 
 ``debug_req_i`` is the "debug interrupt", issued by the debug module when the core should enter Debug Mode. The ``debug_req_i`` is synchronous to ``clk_i`` and requires a minimum assertion of one clock period to enter Debug Mode. The instruction being decoded during the same cycle that ``debug_req_i`` is first asserted shall not be executed before entering Debug Mode.
 
-``debug_havereset_o`` is used to signal that the CV32E40P has been reset. ``debug_havereset_o`` = 1 during assertion of ``rst_ni``. It will only go to 0 some (not further specified number of) cycles after ``rst_ni`` has been deasserted and ``fetch_enable_i`` has been sampled high.
+``debug_havereset_o``, ``debug_running_o``, and ``debug_mode_o`` signals provide the operational status of the core to the debug module. The assertion of these
+signals is mutually exclusive.
 
-``debug_running_o`` is used to signal that the CV32E40P is running normally, i.e. it is no longer in its reset state as signaled via ``debug_havereset_o`` nor is it in debug mode as signaled via ``debug_halted_o``.
+``debug_havereset_o`` is used to signal that the CV32E40P has been reset. ``debug_havereset_o`` is set high during the assertion of ``rst_ni``. It will be
+cleared low a few (unspecified) cycles after ``rst_ni`` has been deasserted **and** ``fetch_enable_i`` has been sampled high.
+
+``debug_running_o`` is used to signal that the CV32E40P is running normally.
 
 ``debug_halted_o`` is used to signal that the CV32E40P is in debug mode.
 
@@ -84,12 +88,7 @@ Debug state
 -----------
 
 As specified in `RISC-V Debug Specification <https://riscv.org/specifications/debug-specification/>`_ every hart that can be selected by
-the Debug Module is in exactly one of four states: ``nonexistent``, ``unavailable``, ``running`` or ``halted``. Harts are ``nonexistent`` if
-they will never be part of the system, no matter how long a user waits. Harts are ``unavailable`` if they might become available at a later
-time, or if there are other harts with higher indexes than this one. Harts may be ``unavailable`` for a variety of reasons including being
-reset or temporarily being powered down.  Harts are ``running`` when they are executing normally, as if no debugger was attached. This
-includes being in a low power mode or waiting for an interrupt, as long as a halt request will result in the hart being ``halted``.
-Harts are ``halted`` when they are in Debug Mode, only performing tasks on behalf of the debugger.
+the Debug Module is in exactly one of four states: ``nonexistent``, ``unavailable``, ``running`` or ``halted``.
 
 The remainder of this section assumes that the CV32E40P will not be classified as ``nonexistent`` by the integrator.
 
@@ -119,7 +118,7 @@ Exactly one of the ``debug_havereset_o``, ``debug_running_o``, ``debug_halted_o`
 The key properties of the debug states are:
 
  * The CV32E40P can remain in its ``unavailable`` state for an arbitrarily long time (depending on ``rst_ni`` and ``fetch_enable_i``).
- * If ``debug_req_i`` is asserted after ``rst_ni`` deassertion and latest at the time of ``fetch_enable_i`` assertion, then the CV32E40P
+ * If ``debug_req_i`` is asserted after ``rst_ni`` deassertion and before or coincident with the assertion of ``fetch_enable_i``, then the CV32E40P
    is guaranteed to transition straight from its ``unavailable`` state into its ``halted`` state. If ``debug_req_i`` is asserted at a later
    point in time, then the CV32E40P might transition through the ``running`` state on its ways to the ``halted`` state.
  * If ``debug_req_i`` is asserted during the ``running`` state, the core will eventually transition into the ``halted`` state (typically after a couple of cycles).
