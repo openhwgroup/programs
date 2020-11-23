@@ -124,7 +124,12 @@ Interfaces
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``rst_ni``              | 1                       | in  | Active-low asynchronous reset              |
 +-------------------------+-------------------------+-----+--------------------------------------------+
-| ``scan_cg_en_i``        | 1                       | in  | Scan clock gate enable                     |
+| ``scan_cg_en_i``        | 1                       | in  | Scan clock gate enable. Design for test    |
+|                         |                         |     | (DfT) related signal. Can be used during   |
+|                         |                         |     | scan testing operation to force            |
+|                         |                         |     | instantiated clock gate(s) to be enabled.  |
+|                         |                         |     | This signal should be 0 during normal /    |
+|                         |                         |     | functional operation.                      |
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``boot_addr_i``         | 32                      | in  | Boot address. First program counter after  |
 |                         |                         |     | reset = ``boot_addr_i``. Must be half-word |
