@@ -51,9 +51,9 @@ The tables below capture the current status of the Verification Plan for the CV3
 
 | Feature | Capture | Review | Comment |
 |---------|---------|--------|---------|
-| OBI     | Ready for Review | | |
-| Sleep Unit | Not started | | Partially covered by other Vplans, needs review to ensure no holes |
-| Pipelines | Not started | | |
+| OBI     | Complete | Reviewed | |
+| Sleep Unit | Complete | Reviewed | Updates pending based on review feedback |
+| Pipelines | Complete | Reviewed | Updates pending based on review feedback|
 
 ### Xpulp instruction extensions
 **Note**: Xpulp instructions are "exercised, but not fully verified" in CV32E40P.
