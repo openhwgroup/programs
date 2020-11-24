@@ -45,7 +45,7 @@ and zero stall on the data-side memory interface.
   |                       | mcountinhibit, mhpmevent*, dscr,     |                                                             |
   |                       | dpc, dscratch0, dscratch1, privlv)   |                                                             |
   |                       |                                      |                                                             |
-  |                       | 1 (all the other cs registers)       |                                                             |
+  |                       | 1 (all the other CSRs)               |                                                             |
   +-----------------------+--------------------------------------+-------------------------------------------------------------+
   | Load/Store            | 1                                    | Load/Store is handled in 1 bus transaction using both EX    |
   |                       |                                      | and WB stages for 1 cycle each. For misaligned word         |
