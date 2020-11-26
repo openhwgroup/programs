@@ -1,4 +1,4 @@
-Introduction 
+Introduction
 =============
 
 CV32E40P is a 4-stage in-order 32-bit RISC-V
@@ -11,7 +11,7 @@ ISA. :numref:`blockdiagram` shows a block diagram of the core.
 .. figure:: ../images/CV32E40P_Block_Diagram.png
    :name: blockdiagram
    :align: center
-   :alt: 
+   :alt:
 
    Block Diagram of CV32E40P RISC-V Core
 
@@ -110,8 +110,18 @@ CV32E40P currently supports the following features according to the RISC-V Privi
 * Hardware Performance Counters as described in :ref:`performance-counters` based on ``NUM_MHPMCOUNTERS`` parameter
 * Trap handling supporting direct mode or vectored mode as described at :ref:`exceptions-interrupts`
 
+
+Synthesis guidelines
+--------------------
+
+The CV32E40P core has been taped-out in several nodes (from 130nm to 22nm)
+and tested on silicon many times.
+
+The ``constraints/cv32e40p_core.sdc`` file provides an example of synthesis
+constraints.
+
 ASIC Synthesis
---------------
+^^^^^^^^^^^^^^
 
 ASIC synthesis is supported for CV32E40P. The whole design is completely
 synchronous and uses positive-edge triggered flip-flops, except for the
@@ -124,13 +134,13 @@ of a clock gating cell as described in :ref:`clock-gating-cell` needs to
 be provided.
 
 FPGA Synthesis
---------------
+^^^^^^^^^^^^^^^
 
 FPGA synthesis is supported for CV32E40P when the flip-flop based register
 file is used. Since latches are not well supported on FPGAs, it is
 crucial to select the flip-flop based register file. The user needs to provide
-a technology specific implementation of a clock gating cell as described 
-in :ref:`clock-gating-cell`. 
+a technology specific implementation of a clock gating cell as described
+in :ref:`clock-gating-cell`.
 
 Verification
 ------------
