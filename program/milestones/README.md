@@ -14,5 +14,5 @@ The OpenHW Group provides the following open source collateral (licensed under S
 - Verification Plans and Reports
 - Verification Environment source code
 
-### A note out Physical Implementations
+### A note about Physical Implementations
 OpenHW IP that achieves the Functional RTL Freeze milestone is subject to a minimal set of lint checks.  It may or may not have been synthesized and implemented into a physical gate model.
