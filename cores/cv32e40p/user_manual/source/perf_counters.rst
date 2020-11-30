@@ -18,7 +18,7 @@ Unimplemented counters always read 0.
 .. note::
 
    All performance counters are using the gated version of ``clk_i``. The **wfi** instruction, the
-   **p.elw** instruction, and ``pulp_clock_en_i`` impact the gating of ``clk_i`` as explained
+   **cv.elw** instruction, and ``pulp_clock_en_i`` impact the gating of ``clk_i`` as explained
    in :ref:`sleep_unit` and can therefore affect the counters.
 
 .. _event_selector:

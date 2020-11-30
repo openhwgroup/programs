@@ -1,7 +1,7 @@
 .. _hwloop-specs:
 
-PULP Hardware Loop Extensions
-=============================
+CORE-V Hardware Loop Extensions
+===============================
 
 To increase the efficiency of small loops, CV32E40P supports hardware
 loops optionally. They can be enabled by setting the ``PULP_XPULP`` parameter.
@@ -45,8 +45,8 @@ to be saved in the interrupt routine together with the general purpose
 registers. The CS HWLoop registers are described in the :ref:`cs-registers`
 section.
 
-The PULP GCC compiler uses HWLoop automatically without the need of assembly.
-The mainline GCC does not generate any PULP instructions as for the other custom extensions.
+The CORE-V GCC compiler uses HWLoop automatically without the need of assembly.
+The mainline GCC does not generate any CORE-V instructions as for the other custom extensions.
 
 Below an assembly code example of an nested HWLoop that computes
 a matrix addition.
@@ -58,12 +58,12 @@ a matrix addition.
        ".option norvc;"
        "add %[j],x0, x0;"
        "add %[j],x0, x0;"
-       "lp.count  x1, %[N];"
-       "lp.endi   x1, endO;"
-       "lp.starti x1, startO;"
-           "startO:   lp.count  x0, %[N];"
-           "lp.endi   x0, endZ;"
-           "lp.starti x0, startZ;"
+       "cv.count  x1, %[N];"
+       "cv.endi   x1, endO;"
+       "cv.starti x1, startO;"
+           "startO:   cv.count  x0, %[N];"
+           "cv.endi   x0, endZ;"
+           "cv.starti x0, startZ;"
                "startZ: addi %[i], x0, 1;"
                "        addi %[i], x0, 1;"
                "endZ:   addi %[i], x0, 1;"

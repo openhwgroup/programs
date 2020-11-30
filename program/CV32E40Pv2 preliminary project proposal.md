@@ -46,6 +46,13 @@ The debug trigger implementation should be extended with the following additiona
 * Load/store address breakpoints (break when you access a certain memory address with a load/store instruction)
 * Option to configure the triggers to throw an exception instead of halting the core
 
+#### Debug Module (Documentation, RTL and Verification)
+
+The CV32E40P supports a a debug request input to place the core into debug mode.  The scope of the CV32E40P v2 could be expanded to include a Debug Module compliant with the RISC-V debug specification (v0.13.1 or higher).
+An obvious source for such a DM is the [PULP RISCV-dbg](https://github.com/pulp-platform/riscv-dbg) project.  Other implementation options are also available dependent upon member interest and contributions.
+
+The DM could be tighly integrated into CV32E40P v2 or loosely coupled.
+
 ### FPU (RTL, Verification, Documentation)
 
 The CV32E40P has RTL to instantiate the FPU from the `fpnew` project from ETH. This project remains in the ETH GitHub. It is an implementation of the RISC-V standard FPU extension specification (F extension). It is not supported in the current version of the CV32E40P. The RTL may have become stale; however, the majority of the work will be in the verification and documentation.

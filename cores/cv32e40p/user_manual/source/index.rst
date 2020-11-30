@@ -17,7 +17,7 @@ Editor: **Davide Schiavone**
    apu
    fpu
    sleep
-   pulp_hw_loop
+   corev_hw_loop
    control_status_registers
    perf_counters
    exceptions_interrupts
