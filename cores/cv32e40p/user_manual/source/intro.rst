@@ -90,7 +90,7 @@ The following custom instruction set extensions are available.
      - Version
      - Configurability
 
-   * - **Xpulp**: PULP ISA Extensions (excluding **p.elw**)
+   * - **Xcorev**: CORE-V ISA Extensions (excluding **cv.elw**)
      - 1.0
      - optionally enabled based on ``PULP_XPULP`` parameter
 

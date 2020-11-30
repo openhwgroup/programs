@@ -48,16 +48,14 @@ Instantiation Template
       .data_rdata_i             (),
 
       // Auxiliary Processing Unit (APU) interface
-      .apu_master_req_o         (),
-      .apu_master_ready_o       (),
-      .apu_master_gnt_i         (),
-      .apu_master_operands_o    (),
-      .apu_master_op_o          (),
-      .apu_master_type_o        (),
-      .apu_master_flags_o       (),
-      .apu_master_valid_i       (),
-      .apu_master_result_i      (),
-      .apu_master_flags_i       (),
+      .apu_req_o                (),
+      .apu_gnt_i                (),
+      .apu_operands_o           (),
+      .apu_op_o                 (),
+      .apu_flags_o              (),
+      .apu_rvalid_i             (),
+      .apu_result_i             (),
+      .apu_flags_i              (),
 
        // Interrupt interface
       .irq_i                    (),
@@ -66,6 +64,9 @@ Instantiation Template
 
       // Debug interface
       .debug_req_i              (),
+      .debug_havereset_o        (),
+      .debug_running_o          (),
+      .debug_halted_o           (),
 
       // Special control signals
       .fetch_enable_i           (),
@@ -77,7 +78,6 @@ Parameters
 ----------
 
 .. note::
-
    The non-default (i.e. non-zero) settings of ``FPU``, ``PULP_CLUSTER``, ``PULP_XPULP`` and ``PULP_ZFINX`` have not
    been verified yet. The default parameter value for ``PULP_XPULP`` will be changed to 1 once it has been verified.
    The default configuration reflected below is currently under verification and this verification effort will be
@@ -87,31 +87,31 @@ Parameters
    The instruction encodings for the PULP instructions is expected to change in a non-backward-compatible manner, 
    see https://github.com/openhwgroup/cv32e40p/issues/452.
 
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
-| Name                         | Type/Range  | Default    | Description                                                     |
-+==============================+=============+============+=================================================================+
-| ``FPU``                      | bit         | 0          | Enable Floating Point Unit (FPU) support, see :ref:`fpu`        |
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``NUM_MHPMCOUNTERS``         | int (0..29) | 1          | Number of MHPMCOUNTER performance counters, see                 |
-|                              |             |            | :ref:`performance-counters`                                     |
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``PULP_CLUSTER``             | bit         | 0          | Enable PULP Cluster support, see :ref:`pulp_cluster`            |
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``PULP_XPULP``               | bit         | 0          | Enable all of the custom PULP ISA extensions (except **p.elw**) |
-|                              |             |            | (see :ref:`custom-isa-extensions`) and all custom CSRs          |
-|                              |             |            | (see :ref:`cs-registers`).                                      |
-|                              |             |            |                                                                 |
-|                              |             |            | Examples of PULP ISA                                            |
-|                              |             |            | extensions are post-incrementing load and stores                |
-|                              |             |            | (see :ref:`pulp_load_store`) and hardware loops                 |
-|                              |             |            | (see :ref:`pulp_hardware_loop`).                                |
-|                              |             |            |                                                                 |
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
-| ``PULP_ZFINX``               | bit         | 0          | Enable Floating Point instructions to use the General Purpose   |
-|                              |             |            | register file instead of requiring a dedicated Floating Point   |
-|                              |             |            | register file, see :ref:`fpu`. Only allowed to be set to 1      |
-|                              |             |            | if ``FPU`` = 1                                                  |
-+------------------------------+-------------+------------+-----------------------------------------------------------------+
++------------------------------+-------------+------------+------------------------------------------------------------------+
+| Name                         | Type/Range  | Default    | Description                                                      |
++==============================+=============+============+==================================================================+
+| ``FPU``                      | bit         | 0          | Enable Floating Point Unit (FPU) support, see :ref:`fpu`         |
++------------------------------+-------------+------------+------------------------------------------------------------------+
+| ``NUM_MHPMCOUNTERS``         | int (0..29) | 1          | Number of MHPMCOUNTER performance counters, see                  |
+|                              |             |            | :ref:`performance-counters`                                      |
++------------------------------+-------------+------------+------------------------------------------------------------------+
+| ``PULP_CLUSTER``             | bit         | 0          | Enable PULP Cluster support, see :ref:`pulp_cluster`             |
++------------------------------+-------------+------------+------------------------------------------------------------------+
+| ``PULP_XPULP``               | bit         | 0          | Enable all of the custom PULP ISA extensions (except **cv.elw**) |
+|                              |             |            | (see :ref:`custom-isa-extensions`) and all custom CSRs           |
+|                              |             |            | (see :ref:`cs-registers`).                                       |
+|                              |             |            |                                                                  |
+|                              |             |            | Examples of PULP ISA                                             |
+|                              |             |            | extensions are post-incrementing load and stores                 |
+|                              |             |            | (see :ref:`corev_load_store`) and hardware loops                 |
+|                              |             |            | (see :ref:`corev_hardware_loop`).                                |
+|                              |             |            |                                                                  |
++------------------------------+-------------+------------+------------------------------------------------------------------+
+| ``PULP_ZFINX``               | bit         | 0          | Enable Floating Point instructions to use the General Purpose    |
+|                              |             |            | register file instead of requiring a dedicated Floating Point    |
+|                              |             |            | register file, see :ref:`fpu`. Only allowed to be set to 1       |
+|                              |             |            | if ``FPU`` = 1                                                   |
++------------------------------+-------------+------------+------------------------------------------------------------------+
 
 Interfaces
 ----------
@@ -123,7 +123,12 @@ Interfaces
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``rst_ni``              | 1                       | in  | Active-low asynchronous reset              |
 +-------------------------+-------------------------+-----+--------------------------------------------+
-| ``scan_cg_en_i``        | 1                       | in  | Scan clock gate enable                     |
+| ``scan_cg_en_i``        | 1                       | in  | Scan clock gate enable. Design for test    |
+|                         |                         |     | (DfT) related signal. Can be used during   |
+|                         |                         |     | scan testing operation to force            |
+|                         |                         |     | instantiated clock gate(s) to be enabled.  |
+|                         |                         |     | This signal should be 0 during normal /    |
+|                         |                         |     | functional operation.                      |
 +-------------------------+-------------------------+-----+--------------------------------------------+
 | ``boot_addr_i``         | 32                      | in  | Boot address. First program counter after  |
 |                         |                         |     | reset = ``boot_addr_i``. Must be half-word |
