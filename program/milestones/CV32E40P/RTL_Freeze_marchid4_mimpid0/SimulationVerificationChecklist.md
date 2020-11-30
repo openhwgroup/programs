@@ -1,7 +1,8 @@
 ## Simulation Verification Checklist for Functional RTL Freeze
-An item is "signed off" once the `Owner` and `Completed` cells are filled in.  `Owner` should be an email address and `Completed` is the date the work was done.  If there is an Exception or Waiver, it should be captured as a GitHub issue in core-v-verif and the issue number recorded in the `Exceptions/Waiver/Comment` cell.
+An item is "signed off" once the `Signed-off By` and `Sign-off Date` cells are filled in. `Signed-off By` should be an email address.  If there is an Exception or Waiver, it should be captured as a GitHub issue in core-v-verif and the issue number recorded in the `Exceptions/Waiver/Comment` cell.
 
-| Category              | Item                                            | Sign-off Criteria                                           | Owner                                          | Completed  | Exceptions/Waiver                                            |
+
+| Category              | Item                                            | Sign-off Criteria                                           | Signed-off By                                          | Signed-off Date  | Exceptions/Waiver                                            |
 | --------------------- | ----------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------- | ---------- | ------------------------------------------------------------ |
 | Verification Planning | Top-level Verification Plan                     | Top-level plan is complete                                  | mike@openhwgroup.org                           | 2020-10-01 | None allowed                                                 |
 | Verification Planning | Per-functional Category Verification Plan       | Completed, reviewed and up-issued per review                | mike@openhwgroup.org                           | 2020-11-20 | Captured as core-v-docs issues                               |
