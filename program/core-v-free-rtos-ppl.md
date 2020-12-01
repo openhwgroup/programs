@@ -29,7 +29,7 @@ The major components of this project are
 - **Component 1:** to build or adapt from available open source code drivers suitable for the Core-V-MCU FPGA board
 - **Component 2:** to integrate Component 1 with the kernel, and test with a simple application which excercises the basic elements of FreeRTOS
 - **Component 3:** Build a demo application that excercises this functionality
-- **Component 4 (TBC):** Model support by Imperas OVPSim.
+- **Component 4:** Model support by Imperas OVPSim, based on the design used for the FPGA board.
 - **Component 5 (TBC):** Support for the MCU SoC being developed by QuickLogic
 
 Related projects in OpenHW will be impacted to some extent:
@@ -69,7 +69,7 @@ We identify the following stages
 5. (Component 1) Hello World application (via termina/UART)
 6. (Component 2) Integration of further drivers
 7. (Component 3) Demo application implemented, details TBD
-8. (Component 4) OVPSim environment for FreeRTOS (TBD)
+8. (Component 4) OVPSim environment for FreeRTOS
 9. (Component 9) Variant FreeRTOS for MCU-SoC (TBD)
 
 For the purpose of this preliminary proposal, the objective is to achieve Stage 3 by end 2020, with a stretch goal of achieving Stage 5 in the same time period.  We shall seek full project approval after Stage 3.
@@ -81,11 +81,11 @@ The following have committed to the project
 - **ETH Zürich:** technical leadership, implementation of drivers/kernel
 - **Embecosm:** initial implementation of drivers/kernel, development of task aware GDB.
 - **CMC :** implementation of drivers/kernel and bring up application on target
+- **Imperas:** OVPsim support
 
 The following have indicated interest, but have not yet made a formal commitment
 
 - **Ashling:** potential openOCD involvement/IDE awareness
-- **Imperas:** OVPsim support
 - **QuickLogic:** variant for MCU-SoC
 - **Alexander Fedorov:** RTOS aware IDE
 
@@ -125,7 +125,7 @@ The implementation must be flexible, to use CORE-V extensions where they are ava
 ### Future enhancements
 
 1. Support within the OVPSim environment
-2. Variant of to support the QuickLogic MCU-SoC
+2. Variant to support the QuickLogic MCU-SoC
 
 ## Explanation of why OpenHW should do this project
 
