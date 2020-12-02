@@ -48,15 +48,16 @@ Current issues:
 * The Pulpissimo FreeRTOS work needs to be made available via the legal office. Offer from Rick to work with ETHZ to facilitate this. However, if this is not made available, the FreeRTOS port could start from scratch.
 * Development board needs to be supplied to Shteryana – board has been sent to Bulgaria
 * Simon noted that Imperas has already supported FreeRTOS for other platforms and plans to support for OpenHW when it is running on the FPGA board. So he will be added as a supporter.
- * Q? why do we need the Imperas modelling if actual boards are available?
- * Typically you need a s/w environment for development because of timelag, but also virtual platform has cost advantages
- * Part of the testing work will be lockstep testing to ensure that simulator and platform are working identically 
+  * Q? why do we need the Imperas modelling if actual boards are available?
+  * Typically you need a s/w environment for development because of timelag, but also virtual platform has cost advantages
+  * Part of the testing work will be lockstep testing to ensure that simulator and platform are working identically 
 * From Thales people, it was noted that they have already done implementations of FreeRTOS ON CVA6
- * Jeremy: at full project launch, we can consider extending this project to 32 bit version of A6
- * Sebastian can also contribute drivers for this 
+  * Jeremy: at full project launch, we can consider extending this project to 32 bit version of A6
+  * Sebastian can also contribute drivers for this 
 * A key issue is that before PL, a project manager needs to be identified
- * Requested CMC to review if Olive can possibly take this role
-PPL Approved by TWG consensus
+  * Requested CMC to review if Olive can possibly take this role
+  
+This PPL request was approved by TWG consensus
 
 
 
@@ -75,4 +76,6 @@ PPL presented by André Sintzoff
 * We could upstream potentially both CV32 and CVA6 in first release milestone
 * Discussion about need for virtual customer to design initial applications - as per many of our SW work.
 * Zbigniew will get back involved in the project prior to PL
-The PPL was approved by TWG consensus
+
+This PPL request was approved by TWG consensus
+
