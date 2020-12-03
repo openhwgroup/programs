@@ -1,9 +1,9 @@
 ## Formal Verification Checklist for Functional RTL Freeze
 An item is "signed off" once the `Signed-off By` and `Sign-off Date` cells are filled in. `Signed-off By` should be an email address.  If there is an Exception or Waiver, it should be captured as a GitHub issue in core-v-verif and the issue number recorded in the `Exceptions/Waiver/Comment` cell.
 
-| Category              | Item                             | Sign-off Criteria                                      | Signed-off By               | Sign-off Date | Exceptions/Waivers                         |
+| Category              | Item                             | Sign-off Criteria                                      | Signed-off By               | Sign-off Date | Exceptions/Waivers/Comment                 |
 | --------------------- | -------------------------------- | ------------------------------------------------------ | --------------------------- | ------------- | ------------------------------------------ |
-| Verification Planning | Axiomise RISC-V Formal Toolkit   | Posted to GitHub                                       | ashish.darbari@axiomise.com | yyyy-mm-dd    | Captured as cv32e40p GitHub issue          |
+| Verification Planning | Axiomise RISC-V Formal Toolkit   | Axiomise__Key_Deliverables_Summary__2__Dec__2020.pdf   | ashish.darbari@axiomise.com | 2020-12-02    | See "Reports" directory          |
 | Regression            | Final Report                     | Posted to GitHub                                       | ashish.darbari@axiomise.com | yyyy-mm-dd    | Captured as cv32e40p GitHub issues         |
 | Verification Planning | RV32I Vplan                      | Completed, reviewed and up-issued per review           | sven.beyer@onespin.com      | yyyy-mm-dd    | Captured as cv32e40p GitHub issues         |
 | Verification Planning | RV32C Vplan                      | Completed, reviewed and up-issued per review           | sven.beyer@onespin.com      | yyyy-mm-dd    | Captured as cv32e40p GitHub issues         |
