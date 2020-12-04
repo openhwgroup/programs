@@ -26,7 +26,7 @@ Hardware Loop constraints
 
 The HWLoop constraints are:
 
--  Start address of an HWLoop must be word aligned
+-  Start and End address of an HWLoop must be word aligned
 
 -  HWLoop body must contain at least 3 instructions.
    An illegal exception is raised otherwise.
