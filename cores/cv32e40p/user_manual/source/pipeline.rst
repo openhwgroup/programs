@@ -39,18 +39,23 @@ and zero stall on the data-side memory interface.
   | Integer Computational | 1                                    | Integer Computational Instructions are defined in the       |
   |                       |                                      | RISCV-V RV32I Base Integer Instruction Set.                 |
   +-----------------------+--------------------------------------+-------------------------------------------------------------+
-  | CSR Access            | 1                                    | CSR Access Instruction are defined in 'Zicsr' of the        |
-  |                       |                                      | RISC-V specification.                                       |
+  | CSR Access            | 4 (mstatus, mepc, mtvec, mcause,     | CSR Access Instruction are defined in 'Zicsr' of the        |
+  |                       | mcycle, minstret, mhpmcounter*,      | RISC-V specification.                                       |
+  |                       | mcycleh, minstreth, mhpmcounter*h,   |                                                             |
+  |                       | mcountinhibit, mhpmevent*, dscr,     |                                                             |
+  |                       | dpc, dscratch0, dscratch1, privlv)   |                                                             |
+  |                       |                                      |                                                             |
+  |                       | 1 (all the other CSRs)               |                                                             |
   +-----------------------+--------------------------------------+-------------------------------------------------------------+
   | Load/Store            | 1                                    | Load/Store is handled in 1 bus transaction using both EX    |
   |                       |                                      | and WB stages for 1 cycle each. For misaligned word         |
   |                       | 2 (non-word aligned word             | transfers and for halfword transfers that cross a word      |
   |                       | transfer)                            | boundary 2 bus transactions are performed using EX and WB   |
   |                       |                                      | stages for 2 cycles each.                                   |
-  |                       | 2 (halfword transfer crossing        | A **p.elw** takes 4 cycles.                                 |
+  |                       | 2 (halfword transfer crossing        | A **cv.elw** takes 4 cycles.                                |
   |                       | word boundary)                       |                                                             |
   |                       |                                      |                                                             |
-  |                       | 4 (p.elw)                            |                                                             |
+  |                       | 4 (cv.elw)                           |                                                             |
   +-----------------------+--------------------------------------+-------------------------------------------------------------+
   | Multiplication        | 1 (mul)                              | CV32E40P uses a single-cycle 32-bit x 32-bit multiplier     |
   |                       |                                      | with a 32-bit result. The multiplications with upper-word   |
