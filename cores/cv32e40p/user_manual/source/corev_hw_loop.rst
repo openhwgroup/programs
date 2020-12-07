@@ -4,7 +4,8 @@ CORE-V Hardware Loop Extensions
 ===============================
 
 To increase the efficiency of small loops, CV32E40P supports hardware
-loops optionally. They can be enabled by setting the ``PULP_XPULP`` parameter.
+loops (HWLoop) optionally. They can be enabled by setting
+the ``PULP_XPULP`` parameter.
 Hardware loops make executing a piece of code
 multiple times possible, without the overhead of branches or updating a counter.
 Hardware loops involve zero stall cycles for jumping to the first
@@ -20,17 +21,35 @@ mapped in the CSR address space.
 Loop number 0 has higher priority than loop number 1 in a nested loop
 configuration, meaning that loop 0 represents the inner loop.
 
-The HWloop constraints are:
+Hardware Loop constraints
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  Start address of an HWLoop must be word aligned
+The HWLoop constraints are:
 
--  HWLoop body must contain at least 3 instructions
+-  Start and End address of an HWLoop must be word aligned
 
--  No Compressed instructions (RVC) allowed in the HWLoop body
+-  HWLoop body must contain at least 3 instructions.
+   An illegal exception is raised otherwise.
+
+-  No Compressed instructions (RVC) allowed in the HWLoop body.
+   An illegal exception is raised otherwise.
+
+-  No uncoditional jump instructions allowed in the HWLoop body.
+   An illegal exception is raised otherwise.
+
+-  No coditional branch instructions allowed in the HWLoop body.
+   An illegal exception is raised otherwise.
+
+-  No privileged instructions (mret, dret, ecall, wfi) allowed in the HWLoop body, except for ebreak.
+   An illegal exception is raised otherwise.
+
+-  No memory ordering instructions (fence, fence.i) allowed in the HWLoop body.
+   An illegal exception is raised otherwise.
 
 -  The End address of the outermost HWLoop (#1) must be at least 2
-   instructions further than the End address innermost HWloop (#0),
+   instructions further than the End address innermost HWLoop (#0),
    i.e. HWLoop[1].endaddress >= HWLoop[0].endaddress + 8
+   An illegal exception is raised otherwise.
 
 In order to use hardware loops, the compiler needs to setup the loop
 beforehand with the following instructions. Note that the minimum loop
