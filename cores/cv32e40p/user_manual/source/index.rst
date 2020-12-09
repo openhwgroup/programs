@@ -24,4 +24,5 @@ Editor: **Davide Schiavone**
    debug
    tracer
    instruction_set_extensions
+   core_versions
    glossary
