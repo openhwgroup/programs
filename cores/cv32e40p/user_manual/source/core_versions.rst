@@ -21,7 +21,7 @@ the RTL changes required to fix such bug are non-logically equivalent by definit
 Therefore, the RTL changes are applied only on a different  ``mimpid``
 value and the bug and the fix must be documented.
 These changes are visible by software as the ``mimpid`` has a different value.
-Every bug found must be followed by another RTL Freeze release and a new GitHub tag.
+Every bug or set of bugs found must be followed by another RTL Freeze release and a new GitHub tag.
 
 RTL changes on non-verified yet parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -29,7 +29,7 @@ RTL changes on non-verified yet parameters
 If changes affecting the core on a non-frozen parameter set are required,
 as for example, to fix bugs found in the communication to the FPU (e.g., affecting the core only if ``FPU=1``),
 or to change the ISA Extensions decoding of PULP instructions (e.g., affecting the core only if ``PULP_XPULP=1``),
-then such changes must be logically equivalent to the already frozen set of parameters, and they must be applied on a different ``mimpid`` value. They can be non-logically equivalent to a non-frozen set of parameters.
+then such changes must remain logically equivalent for the already frozen set of parameters (except for the required mimpid update), and they must be applied on a different ``mimpid`` value. They can be non-logically equivalent to a non-frozen set of parameters.
 These changes are visible by software as the ``mimpid`` has a different value.
 Once the new set of parameters is verified and achieved the sign-off for RTL freeze,
 a new GitHub tag and version of the core is released.
