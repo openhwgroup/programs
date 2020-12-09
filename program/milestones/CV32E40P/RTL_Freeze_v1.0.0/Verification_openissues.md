@@ -1,5 +1,9 @@
-At the time of applying the cv32e40p_v1.0.0 tag, there were the following open issues on https://github.com/openhwgroup/core-v-verif:
-
+At the time of applying the cv32e40p_v1.0.0 tag the most recent issue in https://github.com/openhwgroup/core-v-verif was:
+<br><br>
+`#432 <https://github.com/openhwgroup/core-v-verif/issues/432>`,
+<br><br>
+and there were the following open issues:
+<br><br>
 `#432 <https://github.com/openhwgroup/core-v-verif/issues/432>`
 `#425 <https://github.com/openhwgroup/core-v-verif/issues/425>`
 `#424 <https://github.com/openhwgroup/core-v-verif/issues/424>`
