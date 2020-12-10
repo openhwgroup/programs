@@ -1,4 +1,8 @@
-At the time of applying the cv32e40p_v1.0.0 tag, there were the following open issues.
+At the time of applying the cv32e40p_v1.0.0 tag the most recent issue in https://github.com/openhwgroup/cv32e40p was:
+
+[#598](https://github.com/openhwgroup/cv32e40p/issues/598),
+
+and there were the following open issues:
 
 [#598](https://github.com/openhwgroup/cv32e40p/issues/598)
 [#595](https://github.com/openhwgroup/cv32e40p/issues/595)
