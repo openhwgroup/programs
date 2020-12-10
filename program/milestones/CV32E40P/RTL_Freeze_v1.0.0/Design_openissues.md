@@ -5,13 +5,6 @@ At the time of applying the cv32e40p_v1.0.0 tag the most recent issue in https:/
 and there were the following open issues:
 
 [#598](https://github.com/openhwgroup/cv32e40p/issues/598)
-[#595](https://github.com/openhwgroup/cv32e40p/issues/595)
-[#594](https://github.com/openhwgroup/cv32e40p/issues/594)
-[#593](https://github.com/openhwgroup/cv32e40p/issues/593)
-[#592](https://github.com/openhwgroup/cv32e40p/issues/592)
-[#591](https://github.com/openhwgroup/cv32e40p/issues/591)
-[#590](https://github.com/openhwgroup/cv32e40p/issues/590)
-[#586](https://github.com/openhwgroup/cv32e40p/issues/586)
 [#585](https://github.com/openhwgroup/cv32e40p/issues/585)
 [#584](https://github.com/openhwgroup/cv32e40p/issues/584)
 [#583](https://github.com/openhwgroup/cv32e40p/issues/583)
