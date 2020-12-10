@@ -14,40 +14,43 @@ The clock gating in the Sleep Unit is impacted by the following:
  * ``rst_ni``
  * ``fetch_enable_i``
  * **wfi** instruction (only when ``PULP_CLUSTER`` = 0)
- * **p.elw** instruction (only when ``PULP_CLUSTER`` = 1)
+ * **cv.elw** instruction (only when ``PULP_CLUSTER`` = 1)
  * ``pulp_clock_en_i`` (only when ``PULP_CLUSTER`` = 1)
 
-The following table describes the Sleep Unit interface.
+:numref:`Sleep Unit interface signals` describes the Sleep Unit interface.
 
-+--------------------------------------+-----------+--------------------------------------------------+
-| Signal                               | Direction | Description                                      |
-+======================================+===========+==================================================+
-| ``pulp_clock_en_i``                  | input     | ``PULP_CLUSTER`` = 0: ``pulp_clock_en_i`` is not |
-|                                      |           | used. Tie to 0.                                  |
-|                                      |           +--------------------------------------------------+
-|                                      |           | ``PULP_CLUSTER`` = 1: ``pulp_clock_en_i``        |
-|                                      |           | can be used to gate ``clk_i`` internal to        |
-|                                      |           | the core when ``core_sleep_o`` = 1. See          |
-|                                      |           | :ref:`pulp_cluster` for details.                 |
-+--------------------------------------+-----------+--------------------------------------------------+
-| ``core_sleep_o``                     | output    | ``PULP_CLUSTER`` = 0: Core is sleeping because   |
-|                                      |           | of a **wfi** instruction. If                     |
-|                                      |           | ``core_sleep_o`` = 1, then ``clk_i`` is gated    |
-|                                      |           | off internally and it is allowed to gate off     |
-|                                      |           | ``clk_i`` externally as well. See                |
-|                                      |           | :ref:`wfi` for details.                          |
-|                                      |           +--------------------------------------------------+
-|                                      |           | ``PULP_CLUSTER`` = 1: Core is sleeping because   |
-|                                      |           | of a **p.elw** instruction.                      |
-|                                      |           | If ``core_sleep_o`` = 1,                         |
-|                                      |           | then the ``pulp_clock_en_i`` directly            |
-|                                      |           | controls the internally instantiated clock gate  |
-|                                      |           | and therefore ``pulp_clock_en_i`` can be set     |
-|                                      |           | to 0 to internally gate off ``clk_i``. If        |
-|                                      |           | ``core_sleep_o`` = 0, then it is not allowed     |
-|                                      |           | to set ``pulp_clock_en_i`` to 0.                 |
-|                                      |           | See :ref:`pulp_cluster` for details.             |
-+--------------------------------------+-----------+--------------------------------------------------+
+.. table:: Sleep Unit interface signals
+  :name: Sleep Unit interface signals
+
+  +--------------------------------------+-----------+--------------------------------------------------+
+  | Signal                               | Direction | Description                                      |
+  +======================================+===========+==================================================+
+  | ``pulp_clock_en_i``                  | input     | ``PULP_CLUSTER`` = 0: ``pulp_clock_en_i`` is not |
+  |                                      |           | used. Tie to 0.                                  |
+  |                                      |           +--------------------------------------------------+
+  |                                      |           | ``PULP_CLUSTER`` = 1: ``pulp_clock_en_i``        |
+  |                                      |           | can be used to gate ``clk_i`` internal to        |
+  |                                      |           | the core when ``core_sleep_o`` = 1. See          |
+  |                                      |           | :ref:`pulp_cluster` for details.                 |
+  +--------------------------------------+-----------+--------------------------------------------------+
+  | ``core_sleep_o``                     | output    | ``PULP_CLUSTER`` = 0: Core is sleeping because   |
+  |                                      |           | of a **wfi** instruction. If                     |
+  |                                      |           | ``core_sleep_o`` = 1, then ``clk_i`` is gated    |
+  |                                      |           | off internally and it is allowed to gate off     |
+  |                                      |           | ``clk_i`` externally as well. See                |
+  |                                      |           | :ref:`wfi` for details.                          |
+  |                                      |           +--------------------------------------------------+
+  |                                      |           | ``PULP_CLUSTER`` = 1: Core is sleeping because   |
+  |                                      |           | of a **cv.elw** instruction.                     |
+  |                                      |           | If ``core_sleep_o`` = 1,                         |
+  |                                      |           | then the ``pulp_clock_en_i`` directly            |
+  |                                      |           | controls the internally instantiated clock gate  |
+  |                                      |           | and therefore ``pulp_clock_en_i`` can be set     |
+  |                                      |           | to 0 to internally gate off ``clk_i``. If        |
+  |                                      |           | ``core_sleep_o`` = 0, then it is not allowed     |
+  |                                      |           | to set ``pulp_clock_en_i`` to 0.                 |
+  |                                      |           | See :ref:`pulp_cluster` for details.             |
+  +--------------------------------------+-----------+--------------------------------------------------+
 
 .. note::
 
@@ -110,7 +113,7 @@ This extension is enabled by setting the ``PULP_CLUSTER`` parameter to 1. The PU
 multiple (typically 4 or 8) CV32E40P cores that share a tightly-coupled data memory, aimed at running digital signal processing
 applications efficiently.
 
-The mechanism via which CV32E40P cores in a PULP Cluster synchronize with each other is implemented via the custom **p.elw** instruction
+The mechanism via which CV32E40P cores in a PULP Cluster synchronize with each other is implemented via the custom **cv.elw** instruction
 that performs a read transaction on an external Event Unit (which for example implements barriers and semaphores). This
 read transaction to the Event Unit together with the ``core_sleep_o`` signal inform the Event Unit that the CV32E40P is not busy and 
 ready to go to sleep. Only in that case the Event Unit is allowed to set ``pulp_clock_en_i`` to 0, thereby gating off ``clk_i``
@@ -119,9 +122,9 @@ set to 1 thereby enabling the CV32E40P to run again.
 
 If the PULP Cluster extension is not used (``PULP_CLUSTER`` = 0), the ``pulp_clock_en_i`` signal is not used and should be tied to 0.
 
-Execution of a **p.elw** instructions causes ``core_sleep_o`` = 1 only if all of the following conditions are met:
+Execution of a **cv.elw** instructions causes ``core_sleep_o`` = 1 only if all of the following conditions are met:
  
- * The **p.elw** did not yet complete (which can be achieved by witholding ``data_gnt_i`` and/or ``data_rvalid_i``)
+ * The **cv.elw** did not yet complete (which can be achieved by witholding ``data_gnt_i`` and/or ``data_rvalid_i``)
  * No debug request is pending
  * The core is not in debug mode
  * The core is not single stepping (debug)
@@ -138,10 +141,10 @@ in case ``PULP_CLUSTER`` = 1:
  * If ``pulp_clock_en_i`` = 0, then ``data_rvalid_i`` must be 0  
  * If ``pulp_clock_en_i`` = 0, then ``data_gnt_i`` must be 0
 
-:numref:`load_event-example` shows an example waveform for sleep mode entry because of a **p.elw** instruction.
+:numref:`load_event-example` shows an example waveform for sleep mode entry because of a **cv.elw** instruction.
 
 .. figure:: ../images/load_event.svg
    :name: load_event-example
    :align: center
 
-   **p.elw** example
+   **cv.elw** example

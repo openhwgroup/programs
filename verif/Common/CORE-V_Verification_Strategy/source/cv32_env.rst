@@ -1,3 +1,21 @@
+..
+   Copyright (c) 2020 OpenHW Group
+   
+   Licensed under the Solderpad Hardware Licence, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+  
+   https://solderpad.org/licenses/
+  
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  
+   SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
+
+
 .. _cv32_env:
 
 CV32E40P Simulation Testbench and Environment
@@ -270,6 +288,18 @@ which contains the address and value of any GPR which will be updated. It is
 assumed and checked that this queue is never greater than 1 which implies that
 only 0 or 1 GPR registers change as a result of a retired instruction. 
 
+`Illustration 7`_ demonstrates that for a *lw x11, -730(x11)* instruction the GPR value 
+is updated one clock cycle after the RTL retire signal. The load to *x11* is retired but 
+RTL value *riscy_GPR[11]* has not updated to *0x075BCD15* yet. However, the queue *insn_regs_write* 
+has been updated and is used for the compare. It is assumed that all other RTL GPR 
+registers are static for this instruction and can be compared directly.  
+ 
+.. figure:: ../images/insn_regs_write_queue.png
+   :name: Illustration 7
+   :align: center
+
+   Illustration 7: Purpose of queue insn_regs_write
+
 If the size of queue *insn_regs_write* is 1 the GPR at the specified address is
 compared to that predicted by the RM.  The remaining 31 registers are then
 compared. For these 31 registers, *<gpr>_q* will not update due to the current
@@ -277,6 +307,8 @@ retired instruction so *<gpr>_q* is used instead of *insn_regs_write*.
 
 If the size of queue *insn_regs_write* is 0 all 32 registers are compared,
 *<gpr>_q* is used for the observed value. 
+
+
 
 CSR Comparison
 ______________
@@ -300,7 +332,7 @@ master to access instruction and data memory.  Details of this Subsystem can be
 found in the Architecture Specification for the
 `Open  Bus Interface <https://github.com/openhwgroup/core-v-docs/blob/master/cores/cv32e40p/OBI-v1.0.pdf>`__.
 
-`Illustration 7`_ shows a simple (?) change to the **uvmt_cv32_tb** that allows
+`Illustration 8`_ shows a simple (?) change to the **uvmt_cv32_tb** that allows
 the testbench (and thereby the UVM enviroment) to switch between a Core-level
 DUT and a Subsystem-level DUT.
 
@@ -313,13 +345,13 @@ standard is a super-set of the Core's interfaces.  Any difference in operation
 between these interfaces is controlled at compile time [11]_.
 
 .. figure:: ../images/MemoryModelTestbench.png
-   :name: Illustration 7
+   :name: Illustration 8
    :align: center
    :alt: 
 
-   Illustration 7: Moving Memory Model to the Testbench
+   Illustration 8: Moving Memory Model to the Testbench
 
-In `Illustration 8`_ the **uvmt_cv32_dut_wrap** (or core wrapper) is replaced with
+In `Illustration 9`_ the **uvmt_cv32_dut_wrap** (or core wrapper) is replaced with
 **uvmt_cv32_ss_wrap** (subsystem wrapper).  This subsystem wrapper has the same
 SystemVerilog interfaces as the core wrapper and instantiates the CV32E40*
 Subsystem directly.  For Core-level testing, the the OBI XBAR and DM_TOP modules
@@ -343,11 +375,11 @@ been compiled to instantiate just the Core, these AHB Agents are configured to
 be inactive.
 
 .. figure:: ../images/SubsystemWrapper.png
-   :name: Illustration 8
+   :name: Illustration 9
    :align: center
    :alt: 
 
-   Illustration 8: Subsystem Wrapper (compiled for Core-level verification)
+   Illustration 9: Subsystem Wrapper (compiled for Core-level verification)
 
 File Structure and Organization
 -------------------------------

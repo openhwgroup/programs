@@ -1,3 +1,21 @@
+..
+   Copyright (c) 2020 OpenHW Group
+   
+   Licensed under the Solderpad Hardware Licence, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+  
+   https://solderpad.org/licenses/
+  
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  
+   SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
+
+
 Introduction
 ============
 
@@ -186,18 +204,14 @@ language, UVM-1.2, SVA, plus code, functional and assertion coverage.
 For these reasons users of CORE-V verification environments will need to
 have access to commercial simulation and/or formal verification tools.
 
-For historical reasons, the “core” testbench of the CV32E40P runs
+The “core” testbench of the CV32E40P can be compiled/simulated
 using Verilator, an open-source software tool which translates a subset
 of the SystemVerilog language to a C++ or SystemC cycle-accurate
-behavioural model. Continued support for Verilator will be on a
-best-effort basis, and the "core" testbench is not considered a production
+behavioural model. Note that "core" testbench is not considered a production
 verification environment that is capable of fully verifying the CV32E40(P) cores.
+The purpose of the "core" testbench is to support software teams wishing to
+run test-programs in a simulation environment.
 
-The specific SystemVerilog simulators used by OpenHW are Metrics
-**dsim** and Cadence **Xcelium**, so its a very safe bet that the
-Makefiles will always support rules to compile/simulate with these
-tools. Use of other commercial tools is predicated on community interest
-and support.
 
 .. [1]
    Memory interfaces, Debug&Trace capability, Interrupts, etc.

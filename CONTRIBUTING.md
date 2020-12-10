@@ -1,3 +1,4 @@
+<!--- SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0 --->
 # Contributing
 Contributors are required to be a [member](https://www.openhwgroup.org/membership/) of the OpenHW Group.  New members are always welcome.
 

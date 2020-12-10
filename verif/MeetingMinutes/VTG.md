@@ -1,3 +1,79 @@
+November 5, 2020 - VTG Meeting
+
+==============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson, Duncan Bees, Rick O'Connor<br>
+**Imperas:** Simon Davidmann<br>
+**Silicon Labs:** Steve Richmond, Arjan Bink<br>
+**EM-Micro:** John Martin<br>
+
+Notes:
+----------
+
+Topics:
+
+1. Announcement of Papers
+
+- Steve announced RISCV Summit and DVCON 2021 papers presented by OpenHW members and partners.
+- Announced that Leo will also present on FORCE-RISCV
+
+** Action: Steve to add some information to slides on general OpenHW activities at RISCV Summit.
+
+2. Introduction of the Improvements Repo
+
+- Steve presented Phase 1 of Improvements project to gather, track and refine suggestions for improvements to core-v-verif.<br>
+  - Phase 1 will be brainstorming (i.e. gathering) of issues only via Github issues.  Separate Github issues will be created for deeper discussion.
+  - If issue requires more discusssion unique Github issues will be generated
+  - Phase 2 will use meeting to rank and filter list of issues.  Those will be moved to actionable Issues for implementation.
+- Will announce to Mattermost for more publicity.  
+
+** Action: General research on Github projects or alternative ways to manage _Issues_ in core-v-verif.
+
+3. Mike asked question about measuring engagement
+
+- Available statistics from github: number of users star'ing the project and number of forks
+
+** Action: Look into better ways to measure, track and communicate general engagements with cores and testbench repos.
+
+4. Rick asked that we continue to remind folks to say Core **5** and not Core **V** to get our branding right!
+
+September 24, 2020 - VTG Meeting
+
+==============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson, Duncan Bees<br>
+**Futurewei:** Jingliang Leo Wang<br>
+**Imperas:** Simon Davidmann, Lee Moore<br>
+**Embecosm:** Jeremy Bennett<br>
+**EM-Micro:** John Martin<br>
+**Symbiotic EDA:** Nina Engelhardt<br>
+
+Notes:
+----------
+
+Topics:
+
+1. FORCE-RISCV Preliminary Project Launch.
+
+- Jingliang (Leo) Wang presented PPL draft.
+- A few timeline and details updates are suggested and adopted.
+- Some technical details are discussed.
+- Jeremy Bennett is interested in using the ISG to verify assembler.
+
+** Action: Jingliang (Leo) Wang to update the PPL and submit to GitHub for broader publishing.
+
+2. Definition of RTL freeze
+
+- Mike Thompson presented RTL freeze definition details document.
+- No feedback or concerns.
+
+
 August 13, 2020 - VTG Meeting
 
 ==============
