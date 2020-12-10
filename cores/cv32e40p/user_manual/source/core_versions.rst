@@ -83,9 +83,11 @@ Following, all the GitHub tags related to ``mimpid=0``.
 +--------------------+-------------------+------------+--------------------+---------+
 | Git Tag            | Tagged By         | Date       | Reason for Release | Comment |
 +====================+===================+============+====================+=========+
-| cv32e40p_v1.0.0    |                   | yyyy-mm-dd |                    |         |
+| cv32e40p_v1.0.0    | Arjan Bink        | 2020-12-10 | RTL Freeze         |         |
 +--------------------+-------------------+------------+--------------------+---------+
 
+The list of open (waived) issues at the time of applying the cv32e40p_v1.0.0 tag can be found at:
 
-At the time of applying the cv32e40p_v1.0.0 tag, there are 284 closed issues and 41 WAIVED open-issues for the given parameters, and the most recent known github issue was https://github.com/openhwgroup/cv32e40p/issues/598.
-The list of open-issues can be found at https://github.com/openhwgroup/core-v-docs/blob/master/program/milestones/CV32E40P/RTL_Freeze_v1.0.0/Design_openissues.md .
+* https://github.com/openhwgroup/core-v-docs/blob/master/program/milestones/CV32E40P/RTL_Freeze_v1.0.0/Design_openissues.md
+* https://github.com/openhwgroup/core-v-docs/blob/master/program/milestones/CV32E40P/RTL_Freeze_v1.0.0/Verification_openissues.md
+* https://github.com/openhwgroup/core-v-docs/blob/master/program/milestones/CV32E40P/RTL_Freeze_v1.0.0/Documentation_openissues.md
