@@ -42,7 +42,7 @@ The name of the project release is used as the checklist subdirectory name, e.g.
 
 Each checklist has a series of rows and columns, with rows containing checklist item to be reviewed, and columns for:
 
-Category	
+* Category	
 * Item	
 * Sign-off Criteria	
 * Signed-off By	
@@ -80,8 +80,8 @@ The
 
 Updating the Checklist is done by any project member or OpenHW Staff member, in coordination with the Technical Project Leader or Project Manager.
 
-The "Signed-off By" field is filled in the email address of the person verifying that the task has been done.
-There is no quality metric associated with the sign-off.
+The "Signed-off By" field is filled in the email address of the person verifying that the task has been done and specified criterion is met.
+As stated above, there is no specific quality metric associated with the sign-off.
 
 The "Signed-off Date", when filled in together with the "Signed-off By", verifies that the item has been signed off.
 
