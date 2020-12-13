@@ -31,11 +31,11 @@ For example, the first RTL Freeze for cv32e40p is named  cv32e40p_v1.0.0.
 ### Establishing and Storing the Checklist
 
 The checklist is established either at Project Plan Approved (PPA) Gate or at another early stage of the project. 
-Templates are available in the /program/milestones/templates subdirectory.
+Templates are available in the https://github.com/openhwgroup/core-v-docs/program/milestones/templates subdirectory.
 
 To create a set of checklists for a project, the templates are reviewed and adapted for a particular project.
 
-Project specific checklists are created and stored in a project-specific subdirectory of the the /program/milestones directory.
+Project specific checklists are created and stored in a project-specific subdirectory of the https://github.com/openhwgroup/core-v-docs/program/milestones directory.
 The name of the project release is used as the checklist subdirectory name, e.g. cv32e40p_v1.0.0
 
 ### Checklist(s) Description
@@ -43,16 +43,16 @@ The name of the project release is used as the checklist subdirectory name, e.g.
 Each checklist has a series of rows and columns, with rows containing checklist item to be reviewed, and columns for:
 
 Category	
-Item	
-Sign-off Criteria	
-Signed-off By	
-Sign-off Date	
-Exceptions/Waivers/Comments
+* Item	
+* Sign-off Criteria	
+* Signed-off By	
+* Sign-off Date	
+* Exceptions/Waivers/Comments
 
 When created, the "Sign-off Date" column is left blank. When both "Signed-off By" and "Sign-off Date" are filled in, that row has been signed off.
 
 ### Meaning of Sign-off
-The sign-off each row item means that the person who has signed it off verifies that the task for that row has been done. There is no specific quality metric associated with sign-off. 
+The sign-off of each row item means that the person who has signed it off verifies that the task for that row has been done and the sign-off criterion is met. There is no specific quality metric associated with sign-off. 
 
 
 
@@ -76,7 +76,7 @@ Each Checklist File Issue is assigned to a project member by the TPL or PM.
 The 
 
 
-### Sign-Off the Checklist(s)
+## Sign-Off the Checklist(s)
 
 Updating the Checklist is done by any project member or OpenHW Staff member, in coordination with the Technical Project Leader or Project Manager.
 
@@ -88,7 +88,7 @@ The "Signed-off Date", when filled in together with the "Signed-off By", verifie
 The Checklist is updated by pull request.
 
 
-### Create the Github Tag(s)
+## Create the Github Tag(s)
 
 The Technical Project Leader or Project Manager for the project verifies that the checklist(s) 
 have all been signed off. He or she then creates a tag on each repository associated with the release.
