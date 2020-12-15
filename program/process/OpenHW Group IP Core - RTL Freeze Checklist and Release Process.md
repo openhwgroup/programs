@@ -25,6 +25,10 @@ The following aspects of the release process are described in this document:
 
 The RTL Freeze release is named with an alphanumberic string incorporating the version number. This name is used in release documentation, tag creation, checklist subdirectory name, and user documentation.
 For example, the first RTL Freeze for cv32e40p is named  cv32e40p_v1.0.0. 
+The numberic part of the string is inspired from https://semver.org/, i.e.
+"MAJOR version when you make incompatible API changes,
+MINOR version when you add functionality in a backwards compatible manner, and
+PATCH version when you make backwards compatible bug fixes."
 
 ## RTL Freeze Checklist Creation
 
@@ -73,7 +77,7 @@ The RTL Freeze Milestone Issue is assigned to the Technical Project Leader (TPL)
 
 In addition to the RTL Freeze Milestone Issue, one Github issue per Checklist File is opened.
 Each Checklist File Issue is assigned to a project member by the TPL or PM. 
-The 
+
 
 
 ## Sign-Off the Checklist(s)
