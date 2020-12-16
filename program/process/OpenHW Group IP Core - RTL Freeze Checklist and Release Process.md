@@ -16,11 +16,6 @@ The following aspects of the release process are described in this document:
 * Close Github issue
 * Publish the release description and the Github tag(s)
 
-
-
-
-
-
 ## Naming the release
 
 The RTL Freeze release is named with an alphanumberic string incorporating the version number. This name is used in release documentation, tag creation, checklist subdirectory name, and user documentation.
@@ -131,4 +126,3 @@ The project release is published on the OpenHW website. The following informatio
 * Release Name
 * Release Description
 * Associated Github tags on project repository(ies)
-
