@@ -15,10 +15,10 @@ The following aspects of the release process are described in this document:
 * Close Github issue
 * Publish the release description and the Github tag(s)
 
-## Naming the release
+## Naming the Release
 
 The RTL Freeze release is named with an alphanumberic string incorporating the version number. This name is used in release documentation, tag creation, checklist subdirectory name, and user documentation.
-For example, the first RTL Freeze for cv32e40p is named  cv32e40p_v1.0.0. 
+For example, the first RTL Freeze for 'cv32e40p' is named  'cv32e40p_v1.0.0'. 
 The numberic part of the string is inspired from https://semver.org/, i.e.
 "MAJOR version when you make incompatible API changes,
 MINOR version when you add functionality in a backwards compatible manner, and
@@ -29,7 +29,7 @@ PATCH version when you make backwards compatible bug fixes."
 ### Establishing and Storing the Checklist
 
 The checklist is established either at Project Plan Approved (PPA) Gate or at another early stage of the project. 
-Templates are available in the https://github.com/openhwgroup/core-v-docs/program/milestones/templates subdirectory.
+Templates are available in the [https://github.com/openhwgroup/core-v-docs/program/milestones/templates subdirectory](https://github.com/openhwgroup/core-v-docs/program/milestones/templates subdirectory).
 
 To create a set of checklists for a project, the templates are reviewed and adapted for a particular project.
 
@@ -90,7 +90,7 @@ The Checklist is updated by pull request.
 
 The Technical Project Leader or Project Manager for the project verifies that the checklist(s) 
 have all been signed off. He or she then creates a tag on each repository associated with the release.
-Therefore , in a multiple repository project, multiple tags are required. 
+Therefore, in a multiple repository project, multiple tags are required. 
 
 For example, the following three repositories tagged for cv32e40p:
 
@@ -120,8 +120,8 @@ he or she closes the RTL Freeze issue.
 
 ## Publish the Project Release
 
-The project release is published on the OpenHW website. The following information is published to enable users of the release to access the appropriate code
+The project release is published on the OpenHW website. The following information is published to enable users of the release to access the appropriate code:
 
 * Release Name
-* Release Description
+* Release description
 * Associated Github tags on project repository(ies)
