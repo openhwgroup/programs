@@ -1,6 +1,5 @@
 # OpenHW Group IP Core - RTL Freeze Checklist and Release Process
 
-
 This document describes the release process used by OpenHW Group for IP cores projects.
 
 In this process, OpenHW validates that a set of RTL Freeze checklist tasks have been completed prior to release.
