@@ -9,22 +9,23 @@ A Verification Plan should focus on the **_what_**, and not the **_how_** of ver
 
 The “how” part is captured in the [Verification Strategy](https://core-v-docs-verif-strat.readthedocs.io/en/latest/) document.  That document exists to support the Verification Plan. For example the CV32E40P testplan specifies that all RV32I instructions be generated and their results checked.  Obviously, the testbench needs to have these capabilities and its a goal of the Verification Strategy document to explain how that is done.
 ## A Trivial Example: the RV32I ADDI Instruction
-Let's assume your task is to verify the CV32E40P's implementation of the RV32I ADDI instruction.  Simple right?  Create a simple assembler program with a few **_addi_** instructions check the results and we're done.  Of course, checking for the correct result (rd = rs1 + imm), is insufficent.  We also need to check:
+Let's assume your task is to verify the CV32E40P's implementation of the RV32I ADDI instruction.  Simple right?  Create a simple assembler program with a few **_addi_** instructions check the results and we're done.  Of course, simply checking for the correct result (rd = rs1 + imm), of a few instructions is insufficent.  We also need to check:
 * Overflow is detected and flagged correctly
 * Underflow is detected and flagged correctly
 * No instruction execution side-effects (e.g. unexpected GPR changes, unexpected condition codes)
 * Program counter updates appropriately
 
-Its also important that the instruction is fully exercised, so we also need to cover the following cases:
+Doing this exhaustively is impractical.  With one 32-bit and one 12-bit operand there are approximately 1.8\*10^13 unique sums that can be calculated. In [big-oh](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/) notation that is O(13). Including the cross-products of source and destination register yields O(16) unique instructions simply to fully verify addi.  Obviously this is impractical and one of the things that makes Verification an art is determing the minimal amount of coverage to have confidence that a feature is sufficiently tested.  If we make a few simplifying assumptions we can reduce the problem to a managible size: for example we could say that addi is fully verified by covering the following cases:
+
 * Use x0..x31 as rs1
 * Use x0..x31 as rd (Note: the result of this operation will always be 0x00000000 when rd is x0)
 * Set/Clear all bits of immediate
 * Set/Clear all bits of rs1
 * Set/Clear all bits of rd
 
-Note the simplifying assumptions made here.  With one 32-bit and one 12-bit operand there are 2,244 unique sums that can be calculated.  Including the cross-products of source and destination register yields O(10^6) unique instruction calls.  The RV32I ISA specifies 40 instructions so this gives us O(10^7) instruction executions simply to fully verify the most basic instructions in a CORE-V design.  Obviously this is impractical and one of the things that makes Verification an art is determing the minimal amount of coverage to have confidence that a feature is sufficiently tested.  It is the opinion of the author that the above coverage is sufficient for the addi instruction.  You may see it as overkill or underkill depending on your understanding of the micro-architecture or your level of risk adversion.
+It is the opinion of the author that the list above is sufficient for the addi instruction.  You may see it as overkill or underkill depending on your understanding of the micro-architecture or your level of risk adversion.
 
-So, specifying the Testplan for the addi instruction forces us to think about what the feature-under-test does, what we need to check to ensure its done properly and what stimulus and configuration needs to be covered to ensure the feature is tested under all penitent conditions.
+The key point is that taking the time to specify a Testplan for each feature in the device-under-test forces us to think about what the feature does, what we need to check to ensure its functions correctly and what stimulus and configuration needs to be covered to ensure the feature is tested under all penitent conditions.
 
 The template used for this project attempts to provide an easy-to-use format to capture and review this information for every feature in the design.
 ## HOWTO: The CORE-V Verification Plan Template
