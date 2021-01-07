@@ -60,6 +60,7 @@ cores currently in development:
 - `CV32E40P RTL source <https://github.com/openhwgroup/cv32e40p>`_
 - `CV32E40P user manual <https://core-v-docs-verif-strat.readthedocs.io/projects/cv32e40p_um/en/latest/index.html>`_
 - `CVA6 RTL source <https://github.com/openhwgroup/cva6>`_
+- `CVA6 user manual <https://cva6.readthedocs.io/en/latest/intro.html>`_
 
 The OpenHW Group also maintains multiple repositories for stand-alone verification
 components.  At the time of this writing two are up and running (more are planned):
