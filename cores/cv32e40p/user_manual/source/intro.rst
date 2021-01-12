@@ -238,7 +238,7 @@ A classification of the issues themselves:
   | Invalid                      |  1    |                                                                                        |
   +------------------------------+-------+----------------------------------------------------------------------------------------+
 
-Additional details are available as part of the `CV32E40P_v1.0.0 Report <https://github.com/openhwgroup/core-v-docs/tree/master/program/milestones/CV32E40P/RTL_Freeze_v1.0.0>_`
+Additional details are available as part of the `CV32E40P v1.0.0 Report <https://github.com/openhwgroup/core-v-docs/tree/master/program/milestones/CV32E40P/RTL_Freeze_v1.0.0>_`
 
 Contents
 --------
