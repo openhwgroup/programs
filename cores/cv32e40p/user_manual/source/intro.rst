@@ -175,12 +175,11 @@ core can be found at  `core-v-verif <https://github.com/openhwgroup/core-v-verif
 It is recommended that you start by reviewing the
 `CORE-V Verification Strategy <https://core-v-docs-verif-strat.readthedocs.io/en/latest/>`_.
 
-On 2020-12-11, OpenHW declared that the CV32E40P achieved
-`Functional RTL Freeze <https://eclipsefdn-openhwgroup.netlify.app/news/2020/12/10/core-v-cve4-rtl-freeze-milestone-achieved/>`_,
-meaning that is has been fully verified as per its
+In early 2021 the CV32E40P achieved Functional RTL Freeze, meaning that is has
+been fully verified as per its
 `Verification Plan <https://github.com/openhwgroup/core-v-docs/blob/master/verif/CV32E40P/README.md>`_.
-The top-level `README <https://github.c om/openhwgroup/core-v-verif#cv32e40p-coverage-data>`_
-in core-v-verif has a link to the final functional, code and test coverage reports.
+The top-level `README in core-v-verif <https://github.com/openhwgroup/core-v-verif#cv32e40p-coverage-data>`_
+has a link to the final functional, code and test coverage reports.
 
 The unofficial start date for the CV32E40P verification effort is 2020-02-27,
 which is the date the core-v-verif environment "went live".  Between then and
