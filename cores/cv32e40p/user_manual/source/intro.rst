@@ -1,4 +1,21 @@
-Introduction 
+..
+   Copyright (c) 2020 OpenHW Group
+   
+   Licensed under the Solderpad Hardware Licence, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+  
+   https://solderpad.org/licenses/
+  
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  
+   SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
+
+Introduction
 =============
 
 CV32E40P is a 4-stage in-order 32-bit RISC-V
@@ -11,7 +28,7 @@ ISA. :numref:`blockdiagram` shows a block diagram of the core.
 .. figure:: ../images/CV32E40P_Block_Diagram.png
    :name: blockdiagram
    :align: center
-   :alt: 
+   :alt:
 
    Block Diagram of CV32E40P RISC-V Core
 
@@ -110,8 +127,26 @@ CV32E40P currently supports the following features according to the RISC-V Privi
 * Hardware Performance Counters as described in :ref:`performance-counters` based on ``NUM_MHPMCOUNTERS`` parameter
 * Trap handling supporting direct mode or vectored mode as described at :ref:`exceptions-interrupts`
 
+
+Synthesis guidelines
+--------------------
+
+The CV32E40P core is fully synthesizable.
+It has been designed mainly for ASIC designs, but FPGA synthesis
+is supported as well.
+
+All the files in the ``rtl`` and ``rtl/include`` folders are synthesizable.
+The user should first decide whether to use the flip-flop or latch-based register-file ( see :ref:`register-file`).
+Secondly, the user must provide a clock-gating module that instantiates the clock-gating cells of the target technology. This file must have the same interface and module name of the one provided for simulation-only purposes
+at ``bhv/cv32e40p_sim_clock_gate.sv`` (see :ref:`clock-gating-cell`).
+The  ``rtl/cv32e40p_pmp.sv`` should not be included in the synthesis scripts as it is not supported.
+This file is kept in the repository as a starting-point for users that want to implement their own.
+
+The ``constraints/cv32e40p_core.sdc`` file provides an example of synthesis constraints.
+
+
 ASIC Synthesis
---------------
+^^^^^^^^^^^^^^
 
 ASIC synthesis is supported for CV32E40P. The whole design is completely
 synchronous and uses positive-edge triggered flip-flops, except for the
@@ -124,13 +159,13 @@ of a clock gating cell as described in :ref:`clock-gating-cell` needs to
 be provided.
 
 FPGA Synthesis
---------------
+^^^^^^^^^^^^^^^
 
 FPGA synthesis is supported for CV32E40P when the flip-flop based register
 file is used. Since latches are not well supported on FPGAs, it is
 crucial to select the flip-flop based register file. The user needs to provide
-a technology specific implementation of a clock gating cell as described 
-in :ref:`clock-gating-cell`. 
+a technology specific implementation of a clock gating cell as described
+in :ref:`clock-gating-cell`.
 
 Verification
 ------------
@@ -139,6 +174,70 @@ The verification environment (testbenches, testcases, etc.) for the CV32E40P
 core can be found at  `core-v-verif <https://github.com/openhwgroup/core-v-verif>`_.
 It is recommended that you start by reviewing the
 `CORE-V Verification Strategy <https://core-v-docs-verif-strat.readthedocs.io/en/latest/>`_.
+
+In early 2021 the CV32E40P achieved Functional RTL Freeze, meaning that is has
+been fully verified as per its
+`Verification Plan <https://github.com/openhwgroup/core-v-docs/blob/master/verif/CV32E40P/README.md>`_.
+The top-level `README in core-v-verif <https://github.com/openhwgroup/core-v-verif#cv32e40p-coverage-data>`_
+has a link to the final functional, code and test coverage reports.
+
+The unofficial start date for the CV32E40P verification effort is 2020-02-27,
+which is the date the core-v-verif environment "went live".  Between then and
+RTL Freeze, a total of 47 RTL issues and 38 User Manual issues were identified
+and resolved [1]_.  A breakdown of the RTL issues is as follows:
+
+.. table:: How RTL Issues Were Found
+  :name: How RTL Issues Were Found
+
+  +---------------------+-------+----------------------------------------------------+
+  | "Found By"          | Count | Note                                               |
+  +=====================+=======+====================================================+
+  | Simulation          | 18    | See classification below                           |
+  +---------------------+-------+----------------------------------------------------+
+  | Inspection          | 13    | Human review of the RTL                            |
+  +---------------------+-------+----------------------------------------------------+
+  | Formal Verification | 13    | This includes both Designer and Verifier use of FV |
+  +---------------------+-------+----------------------------------------------------+
+  | Lint                |  2    |                                                    |
+  +---------------------+-------+----------------------------------------------------+
+  | Unknown             |  1    |                                                    |
+  +---------------------+-------+----------------------------------------------------+
+
+A classification of the simulation issues by method used to identify them is informative:
+
+.. table:: Breakdown of Issues found by Simulation
+  :name: Breakdown of Issues found by Simulation
+
+  +------------------------------+-------+----------------------------------------------------------------------------------------+
+  | Simulation Method            | Count | Note                                                                                   |
+  +==============================+=======+========================================================================================+
+  | Directed, self-checking test | 10    | Many test supplied by Design team and a couple from the Open Source Community at large |
+  +------------------------------+-------+----------------------------------------------------------------------------------------+
+  | Step & Compare               |  6    | Issues directly attributed to S&C against ISS                                          |
+  +------------------------------+-------+----------------------------------------------------------------------------------------+
+  | Constrained-Random           |  2    | Test generated by corev-dv (extension of riscv-dv)                                     |
+  +------------------------------+-------+----------------------------------------------------------------------------------------+
+
+A classification of the issues themselves:
+
+.. table:: Issue Classification
+  :name: Issue Classification
+
+  +------------------------------+-------+----------------------------------------------------------------------------------------+
+  | Issue Type                   | Count | Note                                                                                   |
+  +==============================+=======+========================================================================================+
+  | RTL Functional               | 40    | A bug!                                                                                 |
+  +------------------------------+-------+----------------------------------------------------------------------------------------+
+  | RTL coding style             |  4    | Linter issues, removing TODOs, removing `ifdefs, etc.                                  |
+  +------------------------------+-------+----------------------------------------------------------------------------------------+
+  | Non-RTL functional           |  1    | Issue related to behavioral tracer (not part of the core)                              |
+  +------------------------------+-------+----------------------------------------------------------------------------------------+
+  | Unreproducible               |  1    |                                                                                        |
+  +------------------------------+-------+----------------------------------------------------------------------------------------+
+  | Invalid                      |  1    |                                                                                        |
+  +------------------------------+-------+----------------------------------------------------------------------------------------+
+
+Additional details are available as part of the `CV32E40P v1.0.0 Report <https://github.com/openhwgroup/core-v-docs/tree/master/program/milestones/CV32E40P/RTL_Freeze_v1.0.0>`_.
 
 Contents
 --------
@@ -193,3 +292,9 @@ Paul Zavalney (`*paul.zavalney@silabs.com* <mailto:paul.zavalney@silabs.com>`__)
 
 | Integrated Systems Lab
 | ETH Zürich, Switzerland
+
+
+.. [1]
+   It is a testament on the quality of the work done by the PULP platform team
+   that it took a team of professonal verification engineers more than 9 months
+   to find all these issues.
