@@ -1,5 +1,5 @@
 # core-v-doc
-Program and porject level documentation for the OpenHW Group's set of CORE-V RISC-V cores.
+Program and project level documentation for the OpenHW Group's set of CORE-V RISC-V cores.
 <br><br>
 Directory contents...
 ### cores
