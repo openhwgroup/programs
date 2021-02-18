@@ -121,13 +121,13 @@ General purpose eXtension itf
 * F+Zfinx support (only) via extension interface (FPU is not part of this project)
 * Aim for compatibility with https://github.com/ganoam/accelerator-interface
 
-Code size reduction extension (Zce)
+Code size reduction extension (Zce) (see https://lists.riscv.org/g/tech-code-size/ for details)
 
-Bound RVFI interface
+Bound RVFI interface (see https://github.com/SymbioticEDA/riscv-formal/blob/master/docs/rvfi.md for details)
 * Formal verification
 * Enable standard ISS lock step compare
 
-Extended Debug Trigger (0.14)
+Extended Debug Trigger (0.14) (see https://lists.riscv.org/g/tech-debug for details)
 * Multiple breakpoints, 
 * Data interface related breakpoints
 * Support for etrigger
@@ -183,7 +183,7 @@ Cores TG, Verification TG, Software TG. Resource requirements covered within Sil
 
 * Consultancy (answering questions from Project Team on existing RTL or verification infrastructure; likely very minimal)
 * Metrics CI support (in principle Project Team will stick mostly to the Cadence world; here we request any Metrics CI work as was done for the 40P)
-* Core independent ISS adapter (design of the RVFI->RVVI scoreboard/adapter. The assumption is that a bound RVFI interface is added to the CV32E40P first and that the RVFI->RVVI scoreboard/adapter is specified and designed in the CV32E40P project as well. ). The RVFI->RVVI scoreboard/adapter should then be re-usable as-is for the CV32E40X and the Project Team only needs to add a bound RVFI interface to the CV32E40X)
+* Core independent ISS adapter (design of the RVFI->RVVI scoreboard/adapter. The assumption is that a bound RVFI interface is added to the CV32E40P first and that the RVFI->RVVI scoreboard/adapter is specified and designed in the CV32E40P project as well.). The RVFI->RVVI scoreboard/adapter should then be re-usable as-is for the CV32E40X and the Project Team only needs to add a bound RVFI interface to the CV32E40X)
 * X interface implementation (optionally to be done by OpenHW Staff, if not by Project Team)
 
 ## Engineering resource supplied by members - requirement and availability
@@ -201,9 +201,9 @@ Henrik (verification)
 
 Embecosm (Jeremy, Jessica) 
 
-Approving commits within https://github.com/openhwgroup/core-v-verif/tree/*/cv32e40x can be approved by Steve Richmond, Mike Thompson, Oystein Knauserud or Arjan Bink. Marton Teilgard will be added to this list as soon as he can be elected as committer. Approving commits outside of cv32e40x can be done by Steve Richmond or Mike Thompson.
+Approving commits within https://github.com/openhwgroup/core-v-verif/tree/*/cv32e40x can be done by Steve Richmond, Mike Thompson, Oystein Knauserud or Arjan Bink. Marton Teilgard will be added to this list as soon as he can be elected as committer. Approving commits outside of cv32e40x can be done by Steve Richmond or Mike Thompson.
 
-Approving commits within https://github.com/openhwgroup/cv32e40x can be approved by Steve Richmond, Oystein Knauserud or Arjan Bink. Oivind Ekelund will be added to this list as soon as he can be elected as committer.
+Approving commits within https://github.com/openhwgroup/cv32e40x can be done by Steve Richmond, Oystein Knauserud or Arjan Bink. Oivind Ekelund will be added to this list as soon as he can be elected as committer.
 
 ## OpenHW marketing resource - requirement and availability
 

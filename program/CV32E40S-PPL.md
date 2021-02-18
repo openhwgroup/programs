@@ -107,10 +107,10 @@ CV32E40S: Standard RISC-V security related features (user mode + ePMP), anti-tam
 ### Detailed Feature Requirements
 
 CV32E40S key features
-* RV32IMC**Xsecure**Zicsr_Zifencei**_Zce**
+* RV32IMCXsecureZicsr_Zifencei_Zce
 * 4-stage pipeline
 * M/U-mode
-* **Enhanced PMP (ePMP)** (see https://lists.riscv.org/g/tech-tee/ for details)
+* Enhanced PMP (ePMP) (see https://lists.riscv.org/g/tech-tee/ for details)
 * CLINT
 * OBI
 
@@ -127,7 +127,8 @@ Security features (Xsecure)
 * Reduction of profiling infrastructure
 * Etc.
 
-Code size reduction extension (Zce) (see https://lists.riscv.org/g/tech-code-size/ for details)risc-v rvfi interfac
+Code size reduction extension (Zce) (see https://lists.riscv.org/g/tech-code-size/ for details)
+
 Bound RVFI interface (see https://github.com/SymbioticEDA/riscv-formal/blob/master/docs/rvfi.md for details)
 * Formal verification
 * Enable standard ISS lock step compare
@@ -149,6 +150,7 @@ Performance, area and power optimizations
 * Register file optimization
   * Remove 2nd registerfile write port
   * Remove 3rd read port
+* Faster (mulh*) multiply
 * ALU/MUL clean up
 
 Other improvements
@@ -190,7 +192,7 @@ Resource requirements covered within Silicon Labs.
 
 * Consultancy (answering questions from Project Team on existing RTL or verification infrastructure; likely very minimal)
 * Metrics CI support (in principle Project Team will stick mostly to the Cadence world; here we request any Metrics CI work as was done for the 40P)
-* Core independent ISS adapter (design of the RVFI->RVVI scoreboard/adapter. The assumption is that a bound RVFI interface is added to the CV32E40P first and that the RVFI->RVVI scoreboard/adapter is specified and designed in the CV32E40P project as well. ). The RVFI->RVVI scoreboard/adapter should then be re-usable as-is for the CV32E40S and the Project Team only needs to add a bound RVFI interface to the CV32E40S)
+* Core independent ISS adapter (design of the RVFI->RVVI scoreboard/adapter. The assumption is that a bound RVFI interface is added to the CV32E40P first and that the RVFI->RVVI scoreboard/adapter is specified and designed in the CV32E40P project as well.). The RVFI->RVVI scoreboard/adapter should then be re-usable as-is for the CV32E40S and the Project Team only needs to add a bound RVFI interface to the CV32E40S)
 
 ## Engineering resource supplied by members - requirement and availability
 
@@ -205,9 +207,9 @@ Marton Teilgard (verification)
 Robin (verification) 
 Henrik (verification)
 
-Approving commits within https://github.com/openhwgroup/core-v-verif/tree/*/cv32e40s can be approved by Steve Richmond, Mike Thompson, Oystein Knauserud or Arjan Bink. Marton Teilgard will be added to this list as soon as he can be elected as committer. Approving commits outside of cv32e40s can be done by Steve Richmond or Mike Thompson.
+Approving commits within https://github.com/openhwgroup/core-v-verif/tree/*/cv32e40s can be done by Steve Richmond, Mike Thompson, Oystein Knauserud or Arjan Bink. Marton Teilgard will be added to this list as soon as he can be elected as committer. Approving commits outside of cv32e40s can be done by Steve Richmond or Mike Thompson.
 
-Approving commits within https://github.com/openhwgroup/cv32e40s can be approved by Steve Richmond, Oystein Knauserud or Arjan Bink. Oivind Ekelund will be added to this list as soon as he can be elected as committer.
+Approving commits within https://github.com/openhwgroup/cv32e40s can be done by Steve Richmond, Oystein Knauserud or Arjan Bink. Oivind Ekelund will be added to this list as soon as he can be elected as committer.
 
 ## OpenHW marketing resource - requirement and availability
 ## Marketing resource supplied by members - requirement and availability
