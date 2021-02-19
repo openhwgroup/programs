@@ -38,17 +38,19 @@ The scope of project is similar to CV32E40P. It consists of design enhancements,
 
 Software compiler support will be handled in related OpenHW projects, not yet defined. No custom instructions will be added and as such software compiler support is expected to be minimal (if not zero). Tool chain support is however required for the deliverable in which we will show how an example instruction can be added in an accelerator connected to the extension interface; this example will also describe and provide the related modifications to assembler/disassembler, etc.
 
+Support for the (not-yet-ratified) Zce extension would be very welcome from the Software TG, but this PPL/PL does not assume that this will happen.
+
 As of yet any plans to develop OpenHW hardware reference designs such as FPGA or SoC have not been defined.
 
 #### Component 1 - RTL design
 
 The following design aspects of the project are required:
 
-* PMA
+* PMA (configurable number of regions)
 * Zce extension
 * A extension
-* B extension
-* P extension
+* B extension (configurable all or nothing)
+* P extension (configurable all or nothing)
 * X interface
 * Extended debug functionality
 * Simplified pipeline and controller
@@ -67,7 +69,7 @@ The following design aspects of the project are required:
 
 The verification approach is based on that developed for the CV32E40P.
 
-The same verification approach as for the CV32E40P will be used (UVM, lock step ISS, formal techniques, random code generation, etc.) with the major improvement being a bound RVFI interface to ease the integration of the core with the verification environment (the RVVI->RVFI scoreboard/adapter is outside the scope of this project).
+A similar verification approach as for the CV32E40P will be used (UVM, lock step ISS, formal techniques, random code generation, etc.) with the major improvement being a bound RVFI interface to the RTL and an RVVI interface towards the ISS to ease the integration of the core with the verification environment (the RVFI->RVVI scoreboard/adapter is outside the scope of this project). The Imperas ISS will be extended with the new (software visible) features once ratified or deemed stable enough (e.g. User mode, ePMP, Zce, bus error support).
 
 #### Component 3 - Documentation
 See "Project Documents" section
@@ -142,8 +144,8 @@ Simplified pipeline and controller
 Performance, area and power optimizations 
 * Smarter prefetch
 * Register file optimization (if P, B excluded)
- * Remove 2nd registerfile write port
- * Remove 3rd read port
+  * Remove 2nd registerfile write port
+  * Remove 3rd read port
 * Faster divide
 * Faster (mulh*) multiply
 * ALU/MUL clean up
@@ -175,6 +177,11 @@ Zce, P, B, 0.14 Debug specifications have not been ratified yet by RISC-V. Will 
 
 ## List of project outputs
 
+* Verified RTL
+* Verification environment including test cases
+* Instruction Set Simulator (ISS)
+* Documentation (See Project Documents)
+
 ## TGs Impacted/Resource requirements
 
 Cores TG, Verification TG, Software TG. Resource requirements covered within Silicon Labs and Embecosm.
@@ -188,18 +195,20 @@ Cores TG, Verification TG, Software TG. Resource requirements covered within Sil
 
 ## Engineering resource supplied by members - requirement and availability
 
-Silicon Labs  
-
-Arjan Bink (architecture) 
-Oivind Ekelund (TPL, PM) 
-Oystein (design) 
-Halfdan (design)
-Steve (verification architecture) 
-Marton Teilgard (verification) 
-Robin (verification) 
-Henrik (verification)
-
-Embecosm (Jeremy, Jessica) 
+* Silicon Labs  
+  * Arjan Bink (architecture) 
+  * Oivind Ekelund (TPL, PM) 
+  * Oystein (design) 
+  * Halfdan (design)
+  * Steve (verification architecture) 
+  * Marton Teilgard (verification) 
+  * Robin (verification) 
+  * Henrik (verification)
+* Embecosm
+  * Jeremy
+  * Jessica
+* Imperas
+  * (names to be provided)
 
 Approving commits within https://github.com/openhwgroup/core-v-verif/tree/*/cv32e40x can be done by Steve Richmond, Mike Thompson, Oystein Knauserud or Arjan Bink. Marton Teilgard will be added to this list as soon as he can be elected as committer. Approving commits outside of cv32e40x can be done by Steve Richmond or Mike Thompson.
 
