@@ -14,9 +14,9 @@ Compared to CV32E40P, CV32E40S adds the following key features
 * Enhanced PMP (ePMP)
 * PMA
 * Anti-tampering features
- * Protection against glitch attacks
- * Control flow integrity
- * Autonomous (hardware-based, low latency) response mechanisms
+  * Protection against glitch attacks
+  * Control flow integrity
+  * Autonomous (hardware-based, low latency) response mechanisms
 * Reduction of side channel leakage
 
 ### Components of the Project
@@ -40,6 +40,8 @@ The scope of project is similar to CV32E40P. It consists of design enhancements,
 
 Software compiler support will be handled in related OpenHW projects, not yet defined. However, apart for some custom CSRs, no custom instructions will be added and as such software compiler support is expected to be minimal (if not zero).
 
+Support for the (not-yet-ratified) Zce extension would be very welcome from the Software TG, but this PPL/PL does not assume that this will happen.
+
 As of yet any plans to develop OpenHW hardware reference designs such as FPGA or SoC have not been defined.
 
 #### Component 1 - RTL design
@@ -47,14 +49,14 @@ As of yet any plans to develop OpenHW hardware reference designs such as FPGA or
 The following design aspects of the project are required:
 
 * User mode
-* Xsecure
+* Xsecure (configurable all or nothing)
   * Anti-tampering features
     * Protection against glitch attacks
     * Control flow integrity
     * Autonomous (hardware-based, low latency) response mechanisms
   * Reduction of side channel leakage
-* ePMP
-* PMA
+* ePMP (configurable number of regions)
+* PMA (configurable number of regions)
 * Zce extension
 * Extended debug functionality
 * Simplified pipeline and controller
@@ -70,7 +72,7 @@ The following design aspects of the project are required:
 
 The verification approach is based on that developed for the CV32E40P.
 
-The same verification approach as for the CV32E40P will be used (UVM, lock step ISS, formal techniques, random code generation, etc.) with the major improvement being a bound RVFI interface to ease the integration of the core with the verification environment (the RVVI->RVFI scoreboard/adapter is outside the scope of this project).
+A similar verification approach as for the CV32E40P will be used (UVM, lock step ISS, formal techniques, random code generation, etc.) with the major improvement being a bound RVFI interface to the RTL and an RVVI interface towards the ISS to ease the integration of the core with the verification environment (the RVFI->RVVI scoreboard/adapter is outside the scope of this project). The Imperas ISS will be extended with the new (software visible) features once ratified or deemed stable enough (e.g. User mode, ePMP, Zce, bus error support).
 
 #### Component 3 - Documentation
 See "Project Documents" section
@@ -115,16 +117,16 @@ CV32E40S key features
 * OBI
 
 Security features (Xsecure)
-* Security alert outputs
-* Data independent timing
-* Dummy instruction insertion
-* Register file ECC
-* Hardened PC
-* Hardened CSRs
-* Control flow hardening
-* Functional unit hardening
-* Bus interface hardening
-* Reduction of profiling infrastructure
+* Security alert outputs (Minor and major alert pins that hardware can use e.g. to trigger reset or erase. See https://ibex-core.readthedocs.io/en/latest/03_reference/security.html)
+* Data independent timing (Branches and div/divu/rem/remu will be made fixed latency. See https://ibex-core.readthedocs.io/en/latest/03_reference/security.html)
+* Dummy instruction insertion (Randomly insert dummy instructions without functional impact to disrupt timing and power profiles. See https://ibex-core.readthedocs.io/en/latest/03_reference/security.html)
+* Register file ECC (Add checksum or parity to register file words to detect (not correct) certain errors. See https://ibex-core.readthedocs.io/en/latest/03_reference/security.html)
+* Hardened PC (Check that PC increments as expected for sequential code. See https://ibex-core.readthedocs.io/en/latest/03_reference/security.html)
+* Hardened CSRs (Add shadow registers for critical CSRs to detect certain glitch attacks. See https://ibex-core.readthedocs.io/en/latest/03_reference/security.html)
+* Control flow hardening (Sanity check that branches are (not) taken as they should)
+* Functional unit and FSM hardening (Encode critical signals and FSM state such that certain glitch attacks can be detected)
+* Bus interface hardening (Check that bus protocol is not violated)
+* Reduction of profiling infrastructure (Prevent User mode from seeing Machine mode statistics)
 * Etc.
 
 Code size reduction extension (Zce) (see https://lists.riscv.org/g/tech-code-size/ for details)
@@ -179,7 +181,8 @@ Zce, ePMP, 0.14 Debug specifications have not been ratified yet by RISC-V. Will 
 ## List of project outputs
 
 * Verified RTL
-* Verification environment including test cases 
+* Verification environment including test cases
+* Instruction Set Simulator (ISS)
 * Documentation (See Project Documents)
 
 ## TGs Impacted/Resource requirements
@@ -196,16 +199,17 @@ Resource requirements covered within Silicon Labs.
 
 ## Engineering resource supplied by members - requirement and availability
 
-Silicon Labs  
-
-Arjan Bink (architecture) 
-Oivind Ekelund (TPL, PM) 
-Oystein (design) 
-Halfdan (design)
-Steve (verification architecture) 
-Marton Teilgard (verification) 
-Robin (verification) 
-Henrik (verification)
+* Silicon Labs  
+  * Arjan Bink (architecture) 
+  * Oivind Ekelund (TPL, PM) 
+  * Oystein (design) 
+  * Halfdan (design)
+  * Steve (verification architecture) 
+  * Marton Teilgard (verification) 
+  * Robin (verification) 
+  * Henrik (verification)
+* Imperas
+  * (names to be provided)
 
 Approving commits within https://github.com/openhwgroup/core-v-verif/tree/*/cv32e40s can be done by Steve Richmond, Mike Thompson, Oystein Knauserud or Arjan Bink. Marton Teilgard will be added to this list as soon as he can be elected as committer. Approving commits outside of cv32e40s can be done by Steve Richmond or Mike Thompson.
 
