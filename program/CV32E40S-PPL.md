@@ -83,7 +83,8 @@ RTL Freeze and release of this core is expected by end of Q4 2021
 
 ## OpenHW Members/Participants committed to participate 
 
-Silicon Laboratories
+* Silicon Laboratories
+* Imperas 
 
 ## Technical Project Leader(s) (TPLs)
 
@@ -187,9 +188,10 @@ Zce, ePMP, 0.14 Debug specifications have not been ratified yet by RISC-V. Will 
 
 ## TGs Impacted/Resource requirements
 
-Cores TG 
-Verification TG. 
-Resource requirements covered within Silicon Labs.
+* Cores TG 
+* Verification TG. 
+
+Resource requirements covered within Silicon Labs, Imperas.
 
 ## OpenHW engineering staff resource plan: requirement and availability
 
@@ -209,7 +211,8 @@ Resource requirements covered within Silicon Labs.
   * Robin (verification) 
   * Henrik (verification)
 * Imperas
-  * (names to be provided)
+  * Simon Davidmann (Imperas project lead)
+  * Lee Moore (Imperas technical lead)
 
 Approving commits within https://github.com/openhwgroup/core-v-verif/tree/*/cv32e40s can be done by Steve Richmond, Mike Thompson, Oystein Knauserud or Arjan Bink. Marton Teilgard will be added to this list as soon as he can be elected as committer. Approving commits outside of cv32e40s can be done by Steve Richmond or Mike Thompson.
 
