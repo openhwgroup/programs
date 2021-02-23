@@ -38,7 +38,7 @@ The scope of project is similar to CV32E40P. It consists of design enhancements,
 
 Software compiler support will be handled in related OpenHW projects, not yet defined. No custom instructions will be added and as such software compiler support is expected to be minimal (if not zero). Tool chain support is however required for the deliverable in which we will show how an example instruction can be added in an accelerator connected to the extension interface; this example will also describe and provide the related modifications to assembler/disassembler, etc.
 
-Support for the (not-yet-ratified) Zce extension would be very welcome from the Software TG, but this PPL/PL does not assume that this will happen.
+Support for the (not-yet-ratified) Zce extension would be very welcome from the Software TG, but this PPL/PL does not assume that this will happen. Similarly it is understood that especially for the (also not-yet-ratified) P extension no compiler support is existing.
 
 As of yet any plans to develop OpenHW hardware reference designs such as FPGA or SoC have not been defined.
 
@@ -80,8 +80,11 @@ RTL Freeze and release of this core is expected in 2022.
 
 ## OpenHW Members/Participants committed to participate 
 
-Silicon Labs
-Embecosm 
+* Silicon Labs
+* Embecosm 
+* Imperas 
+* University of Bologna
+* ETH Zurich
 
 ## Technical Project Leader(s) (TPLs)
 
@@ -184,7 +187,11 @@ Zce, P, B, 0.14 Debug specifications have not been ratified yet by RISC-V. Will 
 
 ## TGs Impacted/Resource requirements
 
-Cores TG, Verification TG, Software TG. Resource requirements covered within Silicon Labs and Embecosm.
+* Cores TG
+* Verification TG
+* Software TG
+
+Resource requirements covered within Silicon Labs, Embecosm, Imperas, University of Bologna, ETH Zurich.
 
 ## OpenHW engineering staff resource plan: requirement and availability
 
@@ -208,7 +215,10 @@ Cores TG, Verification TG, Software TG. Resource requirements covered within Sil
   * Jeremy
   * Jessica
 * Imperas
-  * (names to be provided)
+  * Simon Davidmann (Imperas project lead)
+  * Lee Moore (Imperas technical lead)
+* University of Bologna (contribution to X interface specification; similar work in CV32E40P branch)
+* ETH Zurich (contribution to X interface specification; similar work in CV32E40P branch)
 
 Approving commits within https://github.com/openhwgroup/core-v-verif/tree/*/cv32e40x can be done by Steve Richmond, Mike Thompson, Oystein Knauserud or Arjan Bink. Marton Teilgard will be added to this list as soon as he can be elected as committer. Approving commits outside of cv32e40x can be done by Steve Richmond or Mike Thompson.
 
