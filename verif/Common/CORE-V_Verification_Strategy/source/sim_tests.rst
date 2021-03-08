@@ -164,8 +164,7 @@ new test programs developed for CORE-V is strongly discouraged.
 | Virtual Peripheral       | VP Address            | Action on Write/Read                                           |
 |                          | (MNEMONIC)            |                                                                |
 +==========================+=======================+================================================================+
-| Address Range Check      | >= 2**16, but not one | Terminate simulation                                           |
-|                          |                       | TODO: make this a \`uvm_fatal()                                |
+| Address Range Check      | addr >= 2**16         | Terminate simulation                                           |
 +--------------------------+-----------------------+----------------------------------------------------------------+
 | Virtual Printer          | 32’h1000_0000         | $write("%c", wdata[7:0]);                                      |
 |                          | MMADDR_PRINT          |                                                                |
