@@ -1,3 +1,30 @@
+March 8, 2021 - VTG Meeting
+
+==============
+
+Attendees: See Master Attendance sheet in program/TGVerification_Attendance_2021.md
+
+Notes:
+----------
+
+Topics:
+
+
+1. RVVI/RVCI Scoreboard 
+
+- Reviewed proposal and code fork in term
+
+2. Revised schedule of meetings
+
+- Hold a single VTG meeting per month (First Thursday) - targeted to strategic initiatives and reviews - Lead by Steve/Robert
+- Hold a single E* core verification meeting per month (Second Thursday) - Status/execution/collaboration meeting for CV32E40X/CV32E40S/CV32E40P_V2 - Lead by Steve
+- A* core meeting - Status/execution/collaboration meeting for CVA6
+
+3. Project boards for collaboration
+
+- Reviewed 3 boards (40X,40S, Common) 
+- Reviewed improvements being implemented by Silicon Labs
+
 November 5, 2020 - VTG Meeting
 
 ==============
