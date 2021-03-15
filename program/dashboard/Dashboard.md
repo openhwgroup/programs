@@ -45,7 +45,7 @@ Last Update March 5, 2021
 | cv32e40pv2  	|  PC | Cores, Verification              | [John Martin](https://github.com/orgs/openhwgroup/people/jm4rtin)   |       		| TBD       	  | CORE-V Cores 	| NONE       	| TBD	| TBD 		| TBD		| [cv32e40pv2 ppl](https://github.com/openhwgroup/core-v-docs/blob/master/program/CV32E40Pv2%20preliminary%20project%20proposal.md)						 	|
 | Verilator Model  	|  PC | HW, dotted line to SW             | [Alfredo Herrera](https://github.com/alfredoh1234) |      		| TBD       	  | CORE-V Cores 	| NONE       	| TBD	| TBD 		| TBD		| 	[Verilator Modeling PPL](https://github.com/openhwgroup/core-v-docs/blob/master/program/verilator-modeling-ppl.md)				 	|
 
-## Potential Projects (have not passed PPL)
+## Potential Projects (have not passed PC)
 | Name     	  | Status 	| Task Group                     | Technical Project Leader(s)                   |  PM (if designated)  	| OpenHW repo(s)  | EF Project 		| ECLIPSE CQ   	|  PC 		| PL 		|PA 		| Project Proposal (or Readme File) 						|
 |----------	  |--------	|-----------------------------	|----------------------------------------------	|--------------------	|--------------	  | -----------------  	|-------------- |------------ 	|-------------- |-------------- |---------------------------------------------------------------------- |
 | cve2  	|  NONE | Cores, Verification              | Joe Circello  |  Joe Circello    		| TBD       	  | CORE-V Cores 	|        	| TBD	| TBD 		| TBD		| 					 	|
