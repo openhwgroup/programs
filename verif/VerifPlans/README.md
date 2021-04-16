@@ -11,5 +11,5 @@ Any plans for Privileged Specification, Debug Specification or other core-specif
 |Directory|Description|
 |---------|-----------|
 |ISA      | Common ISA functionality verification plans|
-|CV32E40P | Verification plans for the CV32E40P RV32IMCZifencei processor |
-|CV32E40X | Verification plans for the CV32E40X RV32IMCZifencei processor |
+|CV32E40P | Verification plans for the CV32E40P RV32IMCZicsr_Zifencei processor |
+|CV32E40X | Verification plans for the CV32E40X RV32IMACBPXZce_Zicount_Zicsr_Zifencei processor |
