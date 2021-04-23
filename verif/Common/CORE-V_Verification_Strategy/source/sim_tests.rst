@@ -198,8 +198,9 @@ new test programs developed for CORE-V is strongly discouraged.
 |                          |                       | simulator's random number generator.                           |
 |                          |                       | Writes have no effect.                                         |
 +--------------------------+-----------------------+----------------------------------------------------------------+
-| Cycle Counter            | 32'h1500_1004         | Reads return the value of the cycle counter                    |
-|                          |                       | Writes resets the cycle counter to 0                           |
+| Cycle Counter            | 32'h1500_1004         | Reads return the value of the cycle counter.                   |
+|                          |                       |                                                                |
+|                          |                       | Writes resets the cycle counter to 0.                          |
 |                          +-----------------------+----------------------------------------------------------------+
 |                          | 32'h1500_1008         | Write this address to print the cycle counter value to log     |
 +--------------------------+-----------------------+----------------------------------------------------------------+
