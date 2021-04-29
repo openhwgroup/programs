@@ -15,8 +15,9 @@
   
    SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 
+.. _corev_dv:
 
-CORE-V FPGA Prototyping
-=======================
+COREV-DV
+========
 
 ToDo. This may be captured in a separate document.

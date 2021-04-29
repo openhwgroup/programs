@@ -21,11 +21,9 @@
 PULP-Platform Simulation Verification
 =====================================
 
-Before discussing the verification strategy of the CV32E and CVA6, we
-need to consider the starting point provided to OpenHW by the RI5CY
-(CV32E) and Ariane (CVA6) cores from PULP-Platform. It is also
-informative to consider the on-going Ibex project, another open-source
-RISC-V project derived from the ‘zero-riscy’ PULP-Platform core.
+OpenHW's starting point was the RI5CY (CV32E40) and Ariane (CVA6) cores from PULP-Platform.
+The structure of the testbenches for these projects had a direct influence on the architecture of CORE-V-VERIF, so it's help to review these.
+It is also informative to consider the on-going Ibex project, another open-source RISC-V project derived from the ‘zero-riscy’ PULP-Platform core.
 
 For those without the need or interest to delve into history of these
 projects, the Executive Summary below provides a (very) quick summary.
