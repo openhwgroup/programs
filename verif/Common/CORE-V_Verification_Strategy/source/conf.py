@@ -38,7 +38,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u'CORE-V Verification Strategy'
-copyright = u'2020, OpenHW Group'
+copyright = u'2020, 2021, OpenHW Group'
 author = u'Mike Thompson'
 
 # The short X.Y version
