@@ -1,18 +1,18 @@
 ..
-   Copyright (c) 2020 OpenHW Group
-   
+   Copyright (c) 2020, 2021 OpenHW Group
+
    Licensed under the Solderpad Hardware Licence, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
-  
+
    https://solderpad.org/licenses/
-  
+
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-  
+
    SPDX-License-Identifier: Apache-2.0 WITH SHL-2.0
 
 
@@ -34,7 +34,7 @@ of these techniques will be applied to both CV32E and CVA6.
 License
 -------
 
-Copyright 2020 OpenHW Group.
+Copyright 2020, 2021 OpenHW Group.
 
 The document is licensed under the Solderpad Hardware License, Version
 2.0 (the "License"); you may not use this document except in compliance
@@ -58,15 +58,15 @@ repositories.  Below are links to the RTL sources and documentation for CORE-V
 cores currently in development:
 
 - `CV32E40P RTL source <https://github.com/openhwgroup/cv32e40p>`_
-- `CV32E40P user manual <https://core-v-docs-verif-strat.readthedocs.io/projects/cv32e40p_um/en/latest/index.html>`_
+- `CV32E40P user manual <https://cv32e40p.readthedocs.io/en/latest/>`_
+- `CV32E40X RTL source <https://github.com/openhwgroup/cv32e40x>`_
+- `CV32E40X user manual <https://cv32e40x.readthedocs.io/en/latest/>`_
 - `CVA6 RTL source <https://github.com/openhwgroup/cva6>`_
 - `CVA6 user manual <https://cva6.readthedocs.io/en/latest/intro.html>`_
 
-The OpenHW Group also maintains multiple repositories for stand-alone verification
-components.  At the time of this writing two are up and running (more are planned):
+The OpenHW Group also maintains multiple repositories for stand-alone verification components.
 
 - `FORCE-RISCV <https://github.com/openhwgroup/force-riscv>`_ Instruction stream generator denotated by Futurewei.
-- `core-v-isg <https://github.com/openhwgroup/core-v-isg>`_ Instruction stream generator denotated by NVIDIA.
 
 Definition of Terms
 -------------------
@@ -108,12 +108,12 @@ Definition of Terms
 |             | on the simulated RTL model of a core.  Test-Programs may be        |
 |             | manually written or machine generated (e.g. riscv-dv).             |
 +-------------+--------------------------------------------------------------------+
-| TPE         | Test-Program Envionment. A set of support files, such as a C       |
+| BSP         | Board Support Package. A set of support files, such as a C         |
 |             | runtime configuration (crt0.S), linker control script (link.ld),   |
 |             | etc. that are used to define the software envrionment used by a    |
 |             | test-program.                                                      |
 +-------------+--------------------------------------------------------------------+
-| BSP         | Board Support Package.  A more widely used term for BSP.           |
+| TPE         | Test Program Environment.  A less widely used term for BSP.        |
 +-------------+--------------------------------------------------------------------+
 | Verification| Code, scripts, configuration files and Makefiles used in           |
 | Environment | pre-silicon verification. Typically a testbench is a               |
@@ -151,35 +151,26 @@ Conventions Used in this Document
 
 **Bold** type is used for emphasis.
 
-Filenames and filepaths are in italics: *./cv32/README.md*.
+Filenames and filepaths are in italics: *./cv32e40p/README.md*.
 
 CORE-V Genealogy
 ----------------
 
 The first two projects within the OpenHW Group’s CORE-V family of RISC-V cores
-are the CV32E4 and CVA6. Currently, two variants of the CV32E4 are
-defined: the CV32E40P and CV32E40. The OpenHW Group’s work builds on
+are the CV32E40P and CVA6. Currently, two variants of the CV32E40P are
+defined: the CV32E40X and CV32E40S. The OpenHW Group’s work builds on
 several RISC-V open-source projects, particularly the RI5CY and Ariane
-projects from PULP-Platform. CV32E40(P) is a derived of the RI5CY
+projects from PULP-Platform. CV32E40P is a derived of the RI5CY
 project [2]_, and CVA6 is derived from Ariane [3]_. In addition, the
 verification environment for CORE-V leverages previous work done by
 lowRISC and others for the Ibex project, which is a fork of the
 PULP-Platform’s zero-riscy core.
 
 This is germane to this discussion because the architecture and
-implement of the verification environments for both CV32E40(P) and CVA6 are
+implement of the verification environments for both CV32E40P and CVA6 are
 strongly influenced by the development history of these cores. This is
 discussed in more detailed in :ref:`pulp-verif`.
 
-Unless otherwise noted, the “previous generation” verification
-environments discussed in this document come from one of the following
-master branches in GitHub:
-
-**RI5CY**:https://github.com/pulp-platform/riscv/tree/master/tb/core
-
-**Ariane**:https://github.com/pulp-platform/ariane/tree/master/tb
-
-**Ibex**:https://github.com/lowRISC/ibex/tree/master/dv
 
 A Note About EDA Tools
 ----------------------
@@ -209,7 +200,7 @@ The “core” testbench of the CV32E40P can be compiled/simulated
 using Verilator, an open-source software tool which translates a subset
 of the SystemVerilog language to a C++ or SystemC cycle-accurate
 behavioural model. Note that "core" testbench is not considered a production
-verification environment that is capable of fully verifying the CV32E40(P) cores.
+verification environment that is capable of fully verifying the CORE-V cores.
 The purpose of the "core" testbench is to support software teams wishing to
 run test-programs in a simulation environment.
 
