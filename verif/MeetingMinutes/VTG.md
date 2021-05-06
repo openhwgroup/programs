@@ -1,3 +1,39 @@
+May 6, 2021 - VTG Meeting
+
+==============
+
+Attendees: See Master Attendance sheet in program/TGVerification_Attendance_2021.md
+
+Notes:
+----------
+
+Topics:
+
+
+1. RVFI/RVVI Checker 
+
+- Reviewed forks and general progress on the RVFI implementation and UVM testbench in CV32E40X
+- Mike mentioned that Barcelona Supercomputer team is interested.  Once GPR + PC checks are working with stalls would be good time to introduce.  That could occur as early as next week.
+
+2. Open Source ISS Update
+
+- Introduced Handcar slides and capabilities.
+
+3. OBI UVM agent
+
+- Showed issue and fork of updates from Dave Poulin
+
+4. Vplan Restructing
+
+- Showed new plan locations in master branch
+- Mike will delete core-v-docs once merge completes (awaiting Davide E40P PR merge)
+
+5. Coverage ISACOV
+
+- Presented some introductions and features
+- Discussed pros and cons of generating functional coverage versus coding.  Once P and V extensions start to come into play (100s of new instructions) may be time to look at that.  For now will continue hand-coding covergroups and configurability.
+
+
 March 8, 2021 - VTG Meeting
 
 ==============
