@@ -17,6 +17,7 @@
 | Embecosm            | Craig Blackmore    |        |        |        |        |        |        |        |        |
 | Embecosm            | Maxim              |        |        |        |        |        |        |        |        |
 | Futurewei Tech. Inc | Robert Chu         | Y      |    Y   |        |    Y   |    Y   |    Y   |    Y   |        |
+| IIT-Madras          | Lavanya Jagan      |        |        |        |        |        |        |    Y   |        |
 | Imperas Sw. Ltd     | Simon Davidmann    | Y      |    Y   |    Y   |    Y   |    Y   |    Y   |    Y   |        |
 | Imperas Sw. Ltd     | Lee Moore          | Y      |        |    Y   |        |        |        |        |        |
 | Metrics             | Aimee Sutton       |        |    Y   |        |        |        |        |        |        |
