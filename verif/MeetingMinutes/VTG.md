@@ -1,3 +1,35 @@
+June 3, 2021 - VTG Meeting
+
+==============
+
+Attendees: See Master Attendance sheet in program/TGVerification_Attendance_2021.md
+
+Notes:
+----------
+
+Topics and Action Items
+
+
+1. RVFI/RVVI Checker 
+
+- RVFI/RVVI on the E40P is lagging due to lack of resource (but E40X is proceeding).  Assigning #524 for the E40P's RVFI/RVVI to Mike Thompson for further delegation.
+
+2. OBI UVM Agent
+
+- Engage in discussion for the memory model to implement storage for the OBI memory model.
+- Meet later with Steve, David, and Mike to determine integration strategy.
+- Steve will provide some guidance and examples to David to document the OBI UVM Agent in the Verif strategy guide.
+- Mike will get an issue () to port the core-v-docs source of the verification strategy doc to core-v-verif
+  - https://github.com/openhwgroup/core-v-verif/issues/649
+
+
+3. ISACOV
+
+- Steve will look into making ISACOV the default coverage tool soon.
+- Steve will create an issue (and initially assign to Mike) to analyze coverage on the CV32E40P
+  - https://github.com/openhwgroup/core-v-verif/issues/650
+
+
 May 6, 2021 - VTG Meeting
 
 ==============
