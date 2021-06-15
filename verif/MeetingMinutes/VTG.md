@@ -1,3 +1,71 @@
+June 3, 2021 - VTG Meeting
+
+==============
+
+Attendees: See Master Attendance sheet in program/TGVerification_Attendance_2021.md
+
+Notes:
+----------
+
+Topics and Action Items
+
+
+1. RVFI/RVVI Checker 
+
+- RVFI/RVVI on the E40P is lagging due to lack of resource (but E40X is proceeding).  Assigning #524 for the E40P's RVFI/RVVI to Mike Thompson for further delegation.
+
+2. OBI UVM Agent
+
+- Engage in discussion for the memory model to implement storage for the OBI memory model.
+- Meet later with Steve, David, and Mike to determine integration strategy.
+- Steve will provide some guidance and examples to David to document the OBI UVM Agent in the Verif strategy guide.
+- Mike will get an issue () to port the core-v-docs source of the verification strategy doc to core-v-verif
+  - https://github.com/openhwgroup/core-v-verif/issues/649
+
+
+3. ISACOV
+
+- Steve will look into making ISACOV the default coverage tool soon.
+- Steve will create an issue (and initially assign to Mike) to analyze coverage on the CV32E40P
+  - https://github.com/openhwgroup/core-v-verif/issues/650
+
+
+May 6, 2021 - VTG Meeting
+
+==============
+
+Attendees: See Master Attendance sheet in program/TGVerification_Attendance_2021.md
+
+Notes:
+----------
+
+Topics:
+
+
+1. RVFI/RVVI Checker 
+
+- Reviewed forks and general progress on the RVFI implementation and UVM testbench in CV32E40X
+- Mike mentioned that Barcelona Supercomputer team is interested.  Once GPR + PC checks are working with stalls would be good time to introduce.  That could occur as early as next week.
+
+2. Open Source ISS Update
+
+- Introduced Handcar slides and capabilities.
+
+3. OBI UVM agent
+
+- Showed issue and fork of updates from Dave Poulin
+
+4. Vplan Restructing
+
+- Showed new plan locations in master branch
+- Mike will delete core-v-docs once merge completes (awaiting Davide E40P PR merge)
+
+5. Coverage ISACOV
+
+- Presented some introductions and features
+- Discussed pros and cons of generating functional coverage versus coding.  Once P and V extensions start to come into play (100s of new instructions) may be time to look at that.  For now will continue hand-coding covergroups and configurability.
+
+
 March 8, 2021 - VTG Meeting
 
 ==============
