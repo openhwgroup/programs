@@ -7,7 +7,7 @@
 ## Author(s) - Olivier Montfort (Dolphin Design), Pascal Gouedo (Dolphin Design), Yoann Pruvost (Dolphin Design)
 
 ## High Level Summary of project, project components, and deliverables
-This proposal is about verifying PULP basic instructions disabled during CV32E40P v1 phase improving performances, power consumption and even code size depending of application programs.
+This proposal is about verifying XPULP, RVF, and Zfinx ISA extensions that were disabled during CV32E40P v1 phase improving performances, power consumption and even code size depending of application programs.
 
 ## Summary of market or input requirements
 
@@ -44,7 +44,7 @@ Floating Point Unit
 * Add bus attributes and errors.
 
 ## Who would make use of OpenHW output
-Companies needing more performances, less power consumption or smaller code size for standard control or DSP-like computing applications.
+Companies needing more performances, less energy consumption or smaller code size for standard control or DSP-like computing applications.
 
 
 ## Initial Estimate of Timeline
