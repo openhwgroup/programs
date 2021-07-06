@@ -46,7 +46,7 @@ By defining a HAL specification applicable to Core-V cores, we can benefit from 
 | *Implementation Rqmtns* 	| IM-1     	|A complete open source reference implementation of the HAL for CORE-V MUST be a project deliverable |
 | 				| IM-2     	|FreeRTOS SHOULD be supported in the open source reference implementation of HAL for CORE-V |
 | 				| IM-3     	|Newlib SHOULD be supported in the open source reference implementation  of HAL for CORE-V |
-| 				| IM-3     	|The HAL reference implementation for CORE-V SHOULD be published by the body publishing the Specification (previous page) |
+| 				| IM-3     	|The HAL reference implementation for CORE-V SHOULD be published by the body publishing the Specification (see above) |
   	
 
 
@@ -61,14 +61,18 @@ It will be a key component of a Core-V MCU SDK.
 
  
 ## Initial Estimate of Timeline
-The project will be last for 3 Months and have below output at different stage.
+HALs take many years to develop. For example, Arm's CMSIS is around 15 years old. At this stage we propose a 3-month period to agree the approach and develop detailed plans for Project Launch. At that time we shall have a more accurate understanding of the deliverables and the timescale over which they can be completed.
 
-- To agree the key technical requirements, approach, and specification for a Core-V HAL that will be re-used for all Core-V Cores
+During this 3-month period, objectives are:
 
-Once the HAL approach is agreed
-   - To implement basic peripherals (UART, TIME, INT...) on Core-V MCU.
-   - To have FreeRTOS run  on Core-V MCU in conjunction with HAL SDK support 
-   - To implement support other peripherals and meet application requirement.
+- To agree the key technical requirements for a CORE-V HAL that will be re-used for all CORE-V Cores
+- To agree the technical approach
+- To agree the approach for specification 
+
+Once the HAL approach is agreed, Project Launch will be sought.  Steps that will then be taken include:
+   - To implement basic peripherals (UART, TIME, INT...) on CORE-V MCU.
+   - To have FreeRTOS run  on CORE-V MCU in conjunction with HAL
+
 
 ## Explanation of why OpenHW should do this project
 
@@ -85,8 +89,14 @@ Once the HAL approach is agreed
 ## Industry landscape: description of competing, alternative, or related efforts in the industry
 There are also some similar standards in market currently, the most representative HAL is below:
    1. CMSIS for ARM cortex A and M architecture
+   https://www.arm.com/why-arm/technologies/cmsis
+   
    2. NMSIS for RISC-V architecture
+   https://doc.nucleisys.com/nmsis/
+   
    3. CSI for RISC-V architecture
+   English translation is in progress
+   
    4. FreeRTOS CommonIO specification https://developer.amazon.com/acs-devices
 
 ### Table showing how existing solutions map against requirements at Project Concept gate
