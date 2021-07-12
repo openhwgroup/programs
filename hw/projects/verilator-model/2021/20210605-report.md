@@ -1,10 +1,12 @@
-# Hardware TG monthly meeting - Verilator modeling update (June 2021)
+# Hardware TG monthly meeting - Verilator modeling update (5 June 2021)
 
 ## Overview
 
-We can create a Verilator model of the CORE-V MCU.  This requires a wrapper to remove tristates from the top level module, since these are not supported by Verilator.  These will be replaced shortly by a top level module with explicit input and output ports and an output enable port.
+The TAP driver is proving rather more complex than originally planned, with a
+need to model the DTM as well as the TAP leading to delays in milestones.
 
-The current work is to drive the JTAG TAP interface from the Verilator testbench.
+We have the software TAP drivers, and can read and write DTM registers. This
+is leading to questions about unexpected behavior of some registers.
 
 The [detailed plan](https://docs.google.com/spreadsheets/d/1Sl_GIklam3redWNj_DRVRVVBD49LvLD8k1zeFsJXllc) has been created as a Google Doc.  In due course the high level data will be presented as a GitHub project board (aka Kanban board).
 
