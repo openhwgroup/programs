@@ -6,7 +6,7 @@
 # Title of Project - "CORE-V HAL"
 # Project Concept Proposal
 ## Date of proposal - 2021-06-28
-## Author(s) - Vincent Cui (Alibaba)
+## Author(s) - Vincent Cui (Alibaba) with help from Duncan Bees, OpenHW staff
 
 
 ## High Level Summary of project, project components, and deliverables
@@ -53,6 +53,13 @@ By defining a HAL specification applicable to Core-V cores, we can benefit from 
 ### Potential future design enhancements
 - Support new peripherals or other Hardware components.
 - Create and provide reference designs on application areas such as Neural Network, DSP, Debug & Trace and Security.
+
+
+## Architecture diagram at PC gate
+![](./HAL-diagram-PC.png)
+
+
+
 
 ## Who would make use of OpenHW output
 CORE-V HAL will be used by firmware, middleware and application developers who are developing code supporting Core-V based hardware designs.
@@ -101,52 +108,41 @@ There are also some similar standards in market currently, the most representati
 
 ### Table showing how existing solutions map against requirements at Project Concept gate
 
-| Items | CMSIS | NMSIS | CSI | CommonIO | 
-| --- | --- | --- | --- | --- |
-| Core | Support | Support | Support | Support |
-| Driver | Device x13 | - | Device x 23 | |
-| RTOS | FreeRTOS | - | FreeRTOS, Rhino | |
-| NN | Support | Support | Support | |
-| DSP | Support | Support | Support | |
-| Coding Rule | MISRA | MISRA | MISRA, TUeV61508 | |
-| Validation | Support | Support | Support | |
-| License | Apache 2.0 | Apache 2.0 | Apache 2.0 | |
-| Software pack | Support | Support | Support | |
-| **Numbered Requirements**| Y/N/Maybe |  |  | |
-| T1 |  |  |  |  |
-| T2 |  |  |  |  |
-| T3 |  |  |  |  |
-| T4 |  |  |  |  |
-| T5 |  |  |  |  |
-| T6 |  |  |  |  |
-| T7 |  |  |  |  |
-| T8 |  |  |  |  |
-| T9 |  |  |  |  |
-| IA1 |  |  |  |  |
-| S1 |  |  |  |  |
-| S2 |  |  |  |  |
-| S3 |  |  |  |  |
-| S4 |  |  |  |  |
-| IM1 |  |  |  |  |
-| IM2 |  |  |  |  |
-| IM3 |  |  |  |  |
-| IM4 |  |  |  |  |
+| Category     	  		| Req #		| CMSIS | NMSIS | CSI |FreeRTOS | Requirement descriptions                 |
+|----------	  		    |------		| ----- | ----- |---- |----  | ------------------------	|
+| *Technical Reqmtns*	| T-1     	|  N    | Y     | Y   | TBD  |HAL MUST support API for core features | 
+| 			  	        | T-2     	|  Y    | N     | Y   | TBD  |HAL MUST support API for on-chip peripheral features | 
+| 			  	        | T-3     	|  Y    | Y     | Y   | TBD  |HAL MUST support both RTOS and bare-metal scenarios |
+| 			  	        | T-4     	|  Y    | Y     | Y   | TBD  |HAL MUST be able to support bare metal libc |
+| 			  	        | T-5     	|  Y    | Y     | Y   | TBD  |HAL MUST be able to be extended to support all CORE-V cores for the purpose of RTOS (not Linux) support |
+| 			  	        | T-6     	|  Y    | N     | N   | TBD   |HAL MUST support a description of the chip using a standardized syntax |
+| 			  	        | T-7     	|  Y    | N     | N   | TBD   |HAL SHOULD define a configuration file that can indicate to the IDE low level chip parameters such as memory space and allow it to display/read/write the registers of peripherals |
+| 			  	        | T-8     	| maybe | maybe |maybe| TBD   |HAL MAY be able to be extended to support the CORE-V X Coprocessor Interface (CV-X-IF) |
+| 			  	        | T-9     	| maybe | maybe |maybe| TBD   |HAL MAY be able to be extended to support the CV-VEC coprocessor | 
+| *Industry Adoption*	| IA-1     	|  N    | maybe | Y   | TBD   |HAL SHOULD be adopted/implemented for other RISC-V devices | 	
+| *Specification Rqmtns*| S-1     	|  Y    | Y     | Y   | TBD   |HAL Specification License for CORE-V MUST be open-source or freely licensed | 			  	| T-2     		| 
+| 				        | S-2     	|  Y    | Y     | Y   | TBD   |Proprietary extensions to the HAL Specification and Implementation, such as for custom ISA extensions or proprietary chip, MUST be supportable/allowable under open-source license|
+| 				        | S-3     	|  Y    | Y     | Y   | TBD   |HAL Specification, user documentation, and system implementation documentation for CORE-V HAL MUST be available in English |
+| 				        | S-4     	|  N    | N     | N   | TBD   |HAL Specification MUST be published and managed by an industry open source or standards body, such as OpenHW, RISC-V International, or FOSSi |
+| *Implementation Rqmtns*| IM-1    	|  -    | -     | -   | TBD   |A complete open source reference implementation of the HAL for CORE-V MUST be a project deliverable |
+| 				        | IM-2     	|  -    | -     | -   | TBD   |FreeRTOS SHOULD be supported in the open source reference implementation of HAL for CORE-V |
+| 				        | IM-3     	|  -    | -     | -   | TBD   |Newlib SHOULD be supported in the open source reference implementation  of HAL for CORE-V |
+| 				        | IM-3     	|  -    | -     | -   | TBD   |The HAL reference implementation for CORE-V SHOULD be published by the body publishing the Specification |
 
 ## OpenHW Members/Participants committed to participate
 | Company | Participants or Contributor |
 | --- | --- |
 | Alibaba | Vincent Cui, Yunhai Shang, Linfei Chen, Zhixing Chen, Wenmeng Zhang, Devid Chen |
-| CMC | Olive |
+| CMC | Olive Zhao |
 
 
 ## Project Leader(s)
 ### Technical Project Leader(s)
 * Vincent Cui
-* Can we write Olive Zhao?
-
+* Yunhai Shang
 
 ### Project Manager, if a PM is designated
-* Can we write Yunhai Shang?
+* Olive Zhao
 
 
 ## Next steps/Investigation towards Project Launch
@@ -155,11 +151,12 @@ There are also some similar standards in market currently, the most representati
 * Selection of approach
 * Feature specification (for S/W projects, we create Feature Specification at Project Launch)
 * High level schedule/component map, assessing if initial 3 month estimate can be met
-* repository needs
+* Repository needs
 * Discussion of initial contribution
 * Selection of industry group to publish the specification and open source reference codes
 * Selection of Open Source license for both specifation and open source reference codes
 * Discussion of project methodology for specification
 * HAL Implementation considerations/timelinefor CORE-V MCU project SDK
 * Clarification of how HAL forms a component of SDK
+* By Project Launch stage, we shall have decided which peripherals and core features will be developed in the first phase of the project
 
