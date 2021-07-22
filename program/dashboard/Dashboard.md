@@ -1,7 +1,7 @@
 
 # OpenHW Project Dashboard
 
-Last Update March 23, 2021
+Last Update July 22, 2021
 
 ## Status Key
 **PC = Project Concept** (*formerly Preliminary Project Launch, PPL*)  
@@ -20,8 +20,6 @@ Last Update March 23, 2021
 | CV32E40P 	  | 5     	| PF     	| Verification,  Cores 		| [Mike Thompson](https://github.com/orgs/openhwgroup/people/MikeOpenHWGroup),  [Davide Schiavone](https://github.com/orgs/openhwgroup/people/davideschiavone), [Arjan Binks](https://github.com/orgs/openhwgroup/people/Silabs-ArjanB)  	| [Mike Thompson](https://github.com/orgs/openhwgroup/people/MikeOpenHWGroup) (verif) | [cv32e40p](https://github.com/openhwgroup/cv32e40p)        | CORE-V Cores      	| [22444](https://dev.eclipse.org/ipzilla/show_bug.cgi?id=22444), [22415](https://dev.eclipse.org/ipzilla/show_bug.cgi?id=22415), [22867](http://dev.eclipse.org/ipzilla/show_bug.cgi?id=22867). [22987](https://dev.eclipse.org/ipzilla/show_bug.cgi?id=22987) 	| grandfathered | grandfathered	| grandfathered	|RTL Freeze [REL 1.0.0](https://projects.eclipse.org/projects/openhw.corev/downloads) 2021.01.20(A)	| [core-v cv32e40p readme](https://github.com/openhwgroup/cv32e40p/blob/master/README.md)		|
 
 
-
-
 ## Active Projects which have passed Project Launch, PL
 
 | Name     	  | TRL Target | Status 	| Task Group                          | Technical Project Leader(s)                   |  PM (if designated)  	| OpenHW repo(s)  | EF Project 		| ECLIPSE CQ   	|  PC 		| PL 		|PA 		| Project Proposal (or Readme File) 						| Project Plan |
@@ -32,6 +30,7 @@ Last Update March 23, 2021
 | FORCE-RISCV  		| TBD     	|  PL | Verification                  | Robert Chu					|      		| [force-riscv](https://github.com/openhwgroup/force-riscv)     |  	|        	| 20.09.28 (A)	| 20.10.26 (A) 		| TBD		| [force-riscv pl](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/FORCE-RISCV/FORCE-RISCV%20ISG%20project%20proposal.md)								|                 |
 | CORE-V MCU   	| 5     	|  PC | HW              | [Tim Saxe](https://github.com/timsaxe), [Davide Schiavone](https://github.com/orgs/openhwgroup/people/davideschiavone), 	[Hugh Pollitt-Smith](https://github.com/orgs/openhwgroup/people/hpollittsmith)   |       		| [core-v-mcu](https://github.com/openhwgroup/core-v-mcu)          	  |  	|        	| 20.10.05 (A)	| 21.04.26 (A) 		| TBD		| [core-v-mcu-soc PL](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/CORE-V%20MCU%20SoC/MCU%20PL%20Document.md)						 	| [core-v-mcu planning spreadsheet](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/CORE-V%20MCU%20SoC/MCU%20SoC%20Project%20Plan%20at%20PL.xlsx)	|
 | VERILATOR MODEL  	| TBD     	|  PL | HW, dotted line to SW             | [Jeremy Bennett](https://github.com/jeremybennett) |      		| [core-v-mcu](https://github.com/openhwgroup/core-v-mcu)     	  |  	|        	| 21.03.22 (A)	| 21.05.24 (A) 		| TBD		| 	[Verilator Modeling PL](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/Verilator%20Model/verilator-modeling-pl.md)				 	|
+
 
 
 ## Active Projects which have passed Project Concept, PC
@@ -52,7 +51,9 @@ Last Update March 23, 2021
 
 
 ## Potential Projects (have not passed PC)
+
 | Name     	  | TRL Target | Status 	| Task Group                     | Technical Project Leader(s)                   |  PM (if designated)  	| OpenHW repo(s)  | EF Project 		| ECLIPSE CQ   	|  PC 		| PL 		|PA 		| Project Proposal (or Readme File) 						|
 |----------	 |--------  |--------	|-----------------------------	|----------------------------------------------	|--------------------	|--------------	  | -----------------  	|-------------- |------------ 	|-------------- |-------------- |---------------------------------------------------------------------- |
 | CVA5 (Taiga)  	| 3     	| NONE | Cores, Verification             | Eric Matthews |      		|     	  |  	|        	| 	|  		| TBD		| 	[Taiga TWG pres.](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/CVA5/SFU_taiga_formal_overview_openhw-2021-28jun.pdf)		 	|
+
 
