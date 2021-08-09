@@ -1,3 +1,171 @@
+July 1, 2021 - VTG Meeting
+
+==============
+
+Attendees: See Master Attendance sheet in program/TGVerification_Attendance_2021.md
+
+Notes:
+----------
+
+Topics and Action Items
+
+
+1. RVFI/RVVI Checker 
+
+- RVFI/RVVI on the E40X is largely feature complete, but going through bug fixes
+- Active on the E40X wb_controller_e40x branch of core-v-verif
+
+2. ISACOV
+
+- Integrated with core configuration object
+- Connected to RVFI
+
+3. Imperas ISS Restructuring
+
+- Lee has reorganized the Imperas ISS into a single model installaton at core-v-verif/vendor_lib/imperas
+- Integrators will set a string parameter to select a core (VARIANT)
+
+4. Core config object
+
+- Presented common core configuration agent and object
+
+June 3, 2021 - VTG Meeting
+
+==============
+
+Attendees: See Master Attendance sheet in program/TGVerification_Attendance_2021.md
+
+Notes:
+----------
+
+Topics and Action Items
+
+
+1. RVFI/RVVI Checker 
+
+- RVFI/RVVI on the E40P is lagging due to lack of resource (but E40X is proceeding).  Assigning #524 for the E40P's RVFI/RVVI to Mike Thompson for further delegation.
+
+2. OBI UVM Agent
+
+- Engage in discussion for the memory model to implement storage for the OBI memory model.
+- Meet later with Steve, David, and Mike to determine integration strategy.
+- Steve will provide some guidance and examples to David to document the OBI UVM Agent in the Verif strategy guide.
+- Mike will get an issue () to port the core-v-docs source of the verification strategy doc to core-v-verif
+  - https://github.com/openhwgroup/core-v-verif/issues/649
+
+
+3. ISACOV
+
+- Steve will look into making ISACOV the default coverage tool soon.
+- Steve will create an issue (and initially assign to Mike) to analyze coverage on the CV32E40P
+  - https://github.com/openhwgroup/core-v-verif/issues/650
+
+
+May 6, 2021 - VTG Meeting
+
+==============
+
+Attendees: See Master Attendance sheet in program/TGVerification_Attendance_2021.md
+
+Notes:
+----------
+
+Topics:
+
+
+1. RVFI/RVVI Checker 
+
+- Reviewed forks and general progress on the RVFI implementation and UVM testbench in CV32E40X
+- Mike mentioned that Barcelona Supercomputer team is interested.  Once GPR + PC checks are working with stalls would be good time to introduce.  That could occur as early as next week.
+
+2. Open Source ISS Update
+
+- Introduced Handcar slides and capabilities.
+
+3. OBI UVM agent
+
+- Showed issue and fork of updates from Dave Poulin
+
+4. Vplan Restructing
+
+- Showed new plan locations in master branch
+- Mike will delete core-v-docs once merge completes (awaiting Davide E40P PR merge)
+
+5. Coverage ISACOV
+
+- Presented some introductions and features
+- Discussed pros and cons of generating functional coverage versus coding.  Once P and V extensions start to come into play (100s of new instructions) may be time to look at that.  For now will continue hand-coding covergroups and configurability.
+
+
+March 8, 2021 - VTG Meeting
+
+==============
+
+Attendees: See Master Attendance sheet in program/TGVerification_Attendance_2021.md
+
+Notes:
+----------
+
+Topics:
+
+
+1. RVVI/RVCI Scoreboard 
+
+- Reviewed proposal and code fork in term
+
+2. Revised schedule of meetings
+
+- Hold a single VTG meeting per month (First Thursday) - targeted to strategic initiatives and reviews - Lead by Steve/Robert
+- Hold a single E* core verification meeting per month (Second Thursday) - Status/execution/collaboration meeting for CV32E40X/CV32E40S/CV32E40P_V2 - Lead by Steve
+- A* core meeting - Status/execution/collaboration meeting for CVA6
+
+3. Project boards for collaboration
+
+- Reviewed 3 boards (40X,40S, Common) 
+- Reviewed improvements being implemented by Silicon Labs
+
+November 5, 2020 - VTG Meeting
+
+==============
+
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson, Duncan Bees, Rick O'Connor<br>
+**Imperas:** Simon Davidmann<br>
+**Silicon Labs:** Steve Richmond, Arjan Bink<br>
+**EM-Micro:** John Martin<br>
+
+Notes:
+----------
+
+Topics:
+
+1. Announcement of Papers
+
+- Steve announced RISCV Summit and DVCON 2021 papers presented by OpenHW members and partners.
+- Announced that Leo will also present on FORCE-RISCV
+
+** Action: Steve to add some information to slides on general OpenHW activities at RISCV Summit.
+
+2. Introduction of the Improvements Repo
+
+- Steve presented Phase 1 of Improvements project to gather, track and refine suggestions for improvements to core-v-verif.<br>
+  - Phase 1 will be brainstorming (i.e. gathering) of issues only via Github issues.  Separate Github issues will be created for deeper discussion.
+  - If issue requires more discusssion unique Github issues will be generated
+  - Phase 2 will use meeting to rank and filter list of issues.  Those will be moved to actionable Issues for implementation.
+- Will announce to Mattermost for more publicity.  
+
+** Action: General research on Github projects or alternative ways to manage _Issues_ in core-v-verif.
+
+3. Mike asked question about measuring engagement
+
+- Available statistics from github: number of users star'ing the project and number of forks
+
+** Action: Look into better ways to measure, track and communicate general engagements with cores and testbench repos.
+
+4. Rick asked that we continue to remind folks to say Core **5** and not Core **V** to get our branding right!
+
 September 24, 2020 - VTG Meeting
 
 ==============
