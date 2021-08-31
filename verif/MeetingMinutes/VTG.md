@@ -1,3 +1,34 @@
+July 1, 2021 - VTG Meeting
+
+==============
+
+Attendees: See Master Attendance sheet in program/TGVerification_Attendance_2021.md
+
+Notes:
+----------
+
+Topics and Action Items
+
+
+1. RVFI/RVVI Checker 
+
+- RVFI/RVVI on the E40X is largely feature complete, but going through bug fixes
+- Active on the E40X wb_controller_e40x branch of core-v-verif
+
+2. ISACOV
+
+- Integrated with core configuration object
+- Connected to RVFI
+
+3. Imperas ISS Restructuring
+
+- Lee has reorganized the Imperas ISS into a single model installaton at core-v-verif/vendor_lib/imperas
+- Integrators will set a string parameter to select a core (VARIANT)
+
+4. Core config object
+
+- Presented common core configuration agent and object
+
 June 3, 2021 - VTG Meeting
 
 ==============
