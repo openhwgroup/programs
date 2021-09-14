@@ -1,9 +1,9 @@
-# Cores TG Meeting, July 5, 2021
+# Cores TG Meeting, August 2, 2021
 
 ## Attendees
 * Jérôme Quevremont (Thales)
 * Arjan Bink (Silicon Labs)
-* Oystein Knauserud Bink (Silicon Labs)
+* Oystein Knauserud (Silicon Labs)
 * Steve Richmond (Silicon Labs)
 * Pascal Gouedo (Dolphin)
 * Yoann Pruvost (Dolphin)
