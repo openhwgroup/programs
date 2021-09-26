@@ -13,20 +13,31 @@ The key objectives are:
 
 The SDK is a sub-project of the overall Development Kit project, which will be responsible for delivery of the complete product, including the SoC, the physical development board, its manufacture, marketing and distribution.
 
-This Concept Proposal addresses version 1 of the SDK only. It will not include the Hardware Abstraction Layer (HAL), nor the CORE-V GNU compiler tool chain, since neither of these will be complete in time. There is no proposal to support the Clang/LLVM compiler tool chain.
+This Concept Proposal addresses version 1 of the SDK only. It will not include the Hardware Abstraction Layer (HAL), since this component, which will in turn require changes to the compiler tool chain, FreeRTOS kernel and FreeRTOS drivers, will not be ready in time.  We shall include the standard upstream GNU compiler tool chain, since the CORE-V specific GNU compiler tool chain is unlikely to be complete in time.  There is no proposal to support the Clang/LLVM compiler tool chain.
 
 ##  Components
 
-All the components which make up the SDK are shown in light green in the following image:
-![diagram showing the SDK components](./images/sdk-overview.png)
+The SDK runs on a _host_ computer (typically a PC running Windows, MacOS or Linux), connected via USB to the CORE-V MCU reference board, as shown in the following diagram:
 
-Note that some of the software potentially ends up on the board: libraries, HAL (not in version 1), FreeRTOS kernel and drivers.
+![diagram showing host connected to reference board](./images/devkit.jpg)
+
+The SDK consists of some components which run on the host computer, and some which are loaded on to the CORE-V MCU reference board.  The components which are on the host are shown in the following diagram:
+
+![diagram showing host sided SDK components](./images/sdk.jpg)
+
+The components which may be loaded on to the CORE-V MCU reference board include the HAL (although not in versions 1), the FreeRTOS kernel and drivers, the compiler and operating system libraries, and the applications, which may be derived from the examples within the SDK.  These are shown in the following diagram:
+
+![diagram showing reference board  SDK components](./images/refbrdsw.jpg)
 
 See the [Summary of requirements](#summary-of-requirements) for the requirements driving each of these components.
 
 ### Component 1 - OpenHW IDE and debugger
 
-This is based on Eclipse CDT
+This is based on Eclipse CDT.  It is divided into two sub-components:
+
+* The **IDE** component comprising  "ready-to-launch" application examples for the list of supported boards, tool chains, debuggers, and libraries; and
+
+* The **Debugger** component, which will supply corresponding binaries plus connection and initialization parameters.
 
 **Current status:** Initial development by Alexander Fedorov operational, with minimal examples and using the upstream compiler tool chain. Debugger integration for the development board will be required, and cannot be started until this is fully specified, nor tested until hardware is available. Symbiflow tooling (see [Component 5](#component-5---symbiflow-tooling)) support will require additional work
 
@@ -44,7 +55,7 @@ The first version of the SDK will not include the HAL, since it will not be read
 
 ### Component 4 - FreeRTOS
 
-This is a combination of the kernel and drivers for the various devices on the develpment kit board (UART, WiFi, LEDs). The first version will be a direct port to the hardware, subsequent versions will sit on top of the HAL.
+This is a combination of the kernel and drivers for the various devices on the development kit board (UART, WiFi, LEDs). The first version will be a direct port to the hardware, subsequent versions will sit on top of the HAL.
 
 **Current status:** The FreeRTOS kernel for PULP has been ported to CORE-V MCU, but has been blocked by hardware issues. No CORE-V MCU drivers have been written. Note that development of drivers will require the specification of the devices to be finalized, and testing of drivers will require physical hardware.
 
@@ -76,7 +87,7 @@ This is one the critical components to the out-of-box experience. Tutorials must
 - blinking LEDs;
 - examples of driving all the devices on the board from bare metal;
 - minimal FreeRTOS example;
-- FreeRTOS examples showing all device drivers; and
+- FreeRTOS examples showing all device drivers (particularly the WiFi driver); and
 - Symbiflow example.
 
 The examples are both a tutorial resource and a starting point for the user's own products. Each tutorial will require comprehensive documentation in both written and video forms.
@@ -85,17 +96,13 @@ The examples are both a tutorial resource and a starting point for the user's ow
 
 ### Component 8 - Overall SDK integration and installer
 
-The SDK _is_ the integration of all the previous components combined with its installer. Goal is a single download that the user runs and everything is set up.
-
-Versions will be needed for Windows, Linux (various), MacOS, each of which have different formats (`.msi`, `.deb`, `.rpm`, ...)
-
-There wil be be some overlap with the IDE component, since Eclipse CDT has its own installer.
+The SDK _is_ the integration of all the previous components combined with an installer.  The goal for the _installer_ is that it is provided as a single, binary executable file which when executed installs everything ready-to-run. Everything will be included in the single installer binary (including the IDE, debugger, tool chains, documentation and examples etc.). The user simply downloads the file from the OpenHW SDK web page and executes it to install everything. Specific flavors will be needed for Windows, Linux (various) and MacOS host operating systems.
 
 **Current status:** Not started
 
 ## Why Open Hardware Group should do this project
 
-The SDK is the "shop window" for the CORE-V project. It is the vehicle through which uses will experience CORE-V for the first time. The user must be able to install software seamlessly and be able to get started with their first project easily.  This will require a set of "starter" example projects, getting started guides, tutorials, user manuals and refeference documentation, much provided both as physical text and via video and online help systems.
+The SDK is the "shop window" for the CORE-V project. It is the vehicle through which uses will experience CORE-V for the first time. The user must be able to install software seamlessly and be able to get started with their first project easily.  This will require a set of "starter" example projects, getting started guides, tutorials, user manuals and reference documentation, much provided both as physical text and via video and online help systems.
 
 ### Summary of Development
 
@@ -103,7 +110,7 @@ The Platform Development Kit is the parent project and will provide:
 
 - overall program management;
 - MCU design, development and manufacturer;
-- prototype and final board development and manufacture including certification;
+- prototype and final reference board development and manufacture including certification and silkscreen;
 - documentation of hardware components in all formats (printed text, online text, online help, video); and
 - complete product packaging, marketing and distribution.
 
@@ -112,16 +119,17 @@ The following diagram shows the relationship of the SDK to the parent project.
 
 The SDK project is one of the components that feeds into the complete product. In summary:
 
-| Task                    | Lead organization  | Gap analysis       |
-|-------------------------|--------------------|------------------- |
-| OpenHW IDE and debugger | Alexander Fedorov? | 4 eng. months      |
-| GNU compiler tool chain | Embecosm           | -                  |
-| HAL                     | Alibaba T-Head     | N/A for release 1  |
-| FreeRTOS                | ?                  | 7 eng. months      |
-| Symbiflow tooling       | ?                  | -                  |
-| Documentation           | ?                  | 6 - 12 eng. months |
-| Examples/applications   | ?                  | 12 eng. months     |
-| Integration & installer | Ashling (lead)     | 6 eng. months      |
+| Task                       | Lead organization  | Gap analysis           |
+|----------------------------|--------------------|----------------------- |
+| OpenHW IDE and debugger    | Alexander Fedorov? | 4 engineer months      |
+| GNU compiler tool chain    | Embecosm           | -                      |
+| HAL                        | Alibaba T-Head     | N/A for release 1      |
+| FreeRTOS                   | ?                  | 7 engineer months      |
+| Symbiflow tooling          | ?                  | ?                      |
+| Documentation              | ?                  | 6 - 12 engineer months |
+| Examples/applications      | ?                  | 12 engineer months     |
+| Integration & installer    | Ashling (lead)     | 6 engineer months      |
+| Overall project management | Ashling (lead)     | 12 engineer months     |
 
 **Note.** The engineering effort is based on using experienced staff as documented in [Components](#components).
 
@@ -133,7 +141,7 @@ Milestones:
 
 1. OpenHW IDE and debugger:
 
-   - CORE-V MCU dev board integrated for Eclipse CDT debugging.
+   - CORE-V MCU development board integrated for Eclipse CDT debugging.
 
 2. Generic upstream compiler tool chain:
 
@@ -143,8 +151,8 @@ Milestones:
 3. Hardware Abstraction Layer (HAL): N/A
 4. FreeRTOS:
 
-   - kernel working on dev board; and
-   - drivers for dev board devices complete.
+   - kernel working on development board; and
+   - drivers for development board devices complete.
 
 5. Symbiflow: N/A (part of other areas)
 
@@ -172,11 +180,10 @@ Milestones:
 
 - Ashling: Project leadership, leadership of integration & installer.
 - Embecosm: packaged GCC compiler tool chain.
-- ...
 
 ## Project manager (PM)
 
-Hugh O'Keeffe, Ashling (TBC)
+Hugh O'Keeffe, Ashling will provide leadership, but this will require a full-time experienced project manager to see the project through to completion.
 
 ## Technical project leader(s) (TPLs)
 
@@ -223,7 +230,7 @@ Key requirements are:
   - examples of bare metal interaction with all peripheral devices on the board;
   - Minimal FreeRTOS example;
   - Advanced FreeRTOS example using device drivers to drive all peripherals on the board; and
-  - example of how software can interfact with the on-board user programmable FPGA.
+  - example of how software can interact with the on-board user programmable FPGA.
 
 ## Industry landscape: description of competing, alternative, or related efforts in the industry
 
@@ -231,14 +238,13 @@ The SDK is inherently tied to the product.  Examples of other SDK's for other RI
 
 - Freedom SDK (for SiFve boards);
 - Open-ISA (for NXP Vega board); and
-- RiscFree (proprietary Ashling SDK).
 
 ## External dependencies
 
 ### Open source technology and licensing
 
 - Eclipse C Development Toolkit (CDT): Eclipse Public License v2.0
-- GNU Toolchain:
+- GNU tool chain:
 
   - **binutils/GDB** - GNU Public License v3 (code), GNU Free Documentation License 1.2 (documentation);
   - **GCC** - GNU Public License v3 with exception (code), GNU Free Documentation License 1.2 (documentation); and
@@ -264,9 +270,9 @@ Standard FreeRTOS documentation as noted above is proprietary.
 
 ## Other task groups impacted and associated resource requirements
 
-Upward dependency on the Platform Development Kit, run by the Hardware TG.
+Upward dependency on the Platform Development Kit, run by the Hardware Task Group.
 
-Downward dependency on the following Software TG projects:
+Downward dependency on the following Software Task Group projects:
 
 - CORE-V IDE;
 - GNU tools; and
@@ -289,7 +295,7 @@ Unless **otherwise indicated in bold**, resource is not yet available. In summar
   - specification of the debugger interface;
   - hardware for testing;
   - 1 engineer month expertise in Eclipse CDT debugger integration;
-  - 1 engineer month exertise in Eclipse CDT third party tool integration (Symbiflow); and
+  - 1 engineer month expertise in Eclipse CDT third party tool integration (Symbiflow); and
   - 2 engineer months expertise in example integration within Eclipse CDT.
 
 - Component 2 - Compiler tool chain
@@ -325,6 +331,8 @@ Unless **otherwise indicated in bold**, resource is not yet available. In summar
   - hardware on which to develop and validate the tutorials; and
   - 6 engineer months specialist in multi-platform installed development, for which **Ashling can contribute leadership**, but will require third party provision of the specialist resource.
 
+In addition the whole project will need a full time overall project manager, estimated at 12 engineer months for the first version of the SDK.  Again, **Ashling can contribute leadership**, but will require third party provision of the specialist resource.
+
 ## Marketing resource
 
 This belongs with the parent project, the Platform Development Kit.
@@ -351,11 +359,7 @@ Skills needed are in the software members of OpenHW, which form a minority of th
 
 ## Architecture diagram
 
-The green components make up the SDK. Note that for version 1 there is no HAL.
-
-![diagram showing the SDK components](./images/sdk-overview.png)
-
-<see Hugh's slides>
+The architecture was shown in the introduction to the [Components](#components) section above.
 
 ## Who would make use of OpenHW output
 
