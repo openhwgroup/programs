@@ -102,7 +102,7 @@ The examples are both a tutorial resource and a starting point for the user's ow
 
 ### Component 8 - Overall SDK integration and installer
 
-The SDK _is_ the integration of all the previous components combined with an installer.  The goal for the _installer_ is that it is provided as a single, binary executable file which when executed installs everything ready-to-run. Everything will be included in the single installer binary (including the IDE, debugger, tool chains, documentation and examples etc.). The user simply downloads the file from the OpenHW SDK web page and executes it to install everything. Specific flavors will be needed for Windows, Linux (various) and MacOS host operating systems.
+The SDK _is_ the integration of all the previous components combined with an installer.  The goal for the _installer and updater_ is that it is provided as a single, binary executable file which when executed installs everything ready-to-run. Everything will be included in the single installer binary (including the IDE, debugger, tool chains, documentation and examples etc.). The user simply downloads the file from the OpenHW SDK web page and executes it to install everything. Specific flavors will be needed for Windows, Linux (various) and MacOS host operating systems.
 
 **Status as of September 2021:** Not started
 
@@ -127,7 +127,7 @@ The SDK project is one of the components that feeds into the complete product. I
 
 | Task                       | Lead organization  | Gap analysis           |
 |----------------------------|--------------------|----------------------- |
-| OpenHW IDE and debugger    | Alexander Fedorov? | 4 engineer months      |
+| OpenHW IDE and debugger    | ArSysOp?           | 4 engineer months      |
 | GNU compiler tool chain    | Embecosm           | -                      |
 | HAL                        | Alibaba T-Head     | N/A for release 1      |
 | FreeRTOS                   | ?                  | 7 engineer months      |
