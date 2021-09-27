@@ -2,16 +2,20 @@
 
 ## Summary of project
 
-This project aims to create and maintain a production quality SDK as part of the CORE-V Development Kit.
+This project aims to create and maintain a production quality SDK as part of
+the CORE-V Development
+Kit. [Wikipedia](https://en.wikipedia.org/wiki/Software_development_kit) provides a good description of a SDK
+
+This Concept Proposal focuses on the first version of a SDK for the CORE-V MCU development kit project based on the CV32E40P core. Work to support other platforms in the future will be the subject of separate proposals.
 
 The key objectives are:
 
-- the SDK must be a positive "out-of-the-box" experience for end users;
+- the SDK must be a positive ["out-of-the-box"](https://en.wikipedia.org/wiki/Out_of_the_box_%28feature%29) experience for end users;
 - The SDK must include example programs that can run immediately and then be modified to act as starting points for user code;
 - the SDK must support both bare metal and FreeRTOS based development; and
 - the SDK must support use of Symbiflow hardware design tools to support the on-board programmable FPGA.
 
-The SDK is a sub-project of the overall Development Kit project, which will be responsible for delivery of the complete product, including the SoC, the physical development board, its manufacture, marketing and distribution.
+The SDK is a deliverable into the overall Development Kit project, which will be responsible for delivery of the complete product, including the SoC, the physical development board (which may include a prototype for early testing purposes), its manufacture, marketing and distribution.
 
 This Concept Proposal addresses version 1 of the SDK only. It will not include the Hardware Abstraction Layer (HAL), since this component, which will in turn require changes to the compiler tool chain, FreeRTOS kernel and FreeRTOS drivers, will not be ready in time.  We shall include the standard upstream GNU compiler tool chain, since the CORE-V specific GNU compiler tool chain is unlikely to be complete in time.  There is no proposal to support the Clang/LLVM compiler tool chain.
 
@@ -39,37 +43,39 @@ This is based on Eclipse CDT.  It is divided into two sub-components:
 
 * The **Debugger** component, which will supply corresponding binaries plus connection and initialization parameters.
 
-**Current status:** Initial development by Alexander Fedorov operational, with minimal examples and using the upstream compiler tool chain. Debugger integration for the development board will be required, and cannot be started until this is fully specified, nor tested until hardware is available. Symbiflow tooling (see [Component 5](#component-5---symbiflow-tooling)) support will require additional work
+**Status as of September 2021:** Initial development by Alexander Fedorov operational, with minimal examples and using the upstream compiler tool chain. Debugger integration for the development board will be required, and cannot be started until this is fully specified, nor tested until hardware is available. Symbiflow tooling (see [Component 5](#component-5---symbiflow-tooling)) support will require additional work
 
 ### Component 2 - Compiler tool chain
 
 For the first version of the tool chain, this will be the standard upstream GNU tool chain, combined with the upstream newlib library for bare metal use.
 
-The first version of the newlib library will work directly to the board hardware. A small amount of work to specialize newlib for the hardware (C start up code, variants to drive output to the UART) will be required. Future versions of the SDK will drive the hardware via the HAL. Hardware will be required to allow the tool chain to be regression tested for the CORE-V MCU.
+The first version of the newlib library will work directly to the board hardware. A small amount of work to specialize newlib for the hardware (C start up code, variants to drive output to the UART) will be required. Future releases of the SDK will drive the hardware via the HAL. Hardware will be required to allow the tool chain to be regression tested for the CORE-V MCU.
 
-**Current status:** The standard upstream GNU tool chain for RISC-V is available from [Embecosm](https://www.embecosm.com/). This includes the upstream newlib, which is intended for QEMU simulator use and includes compilation for the proposed RISC-V semihosting protocol.
+**Status as of September 2021:** The standard upstream GNU tool chain for RISC-V is available from [Embecosm](https://www.embecosm.com/). This includes the upstream newlib, which is intended for QEMU simulator use and includes compilation for the proposed RISC-V semihosting protocol.
 
 ### Component 3 - Hardware Abstraction Layer (HAL)
 
-The first version of the SDK will not include the HAL, since it will not be ready in time.
+The first version of the SDK will not include the HAL, since it will not be ready in time.  It is not just the timing of HAL availability, since this component will in turn require changes to the compiler tool chain, FreeRTOS kernel and FreeRTOS drivers.
+
+It is worth noting that HAL development is difficult, and has to be right first time. This requires extensive testing with many different communities of potential users.
 
 ### Component 4 - FreeRTOS
 
 This is a combination of the kernel and drivers for the various devices on the development kit board (UART, WiFi, LEDs). The first version will be a direct port to the hardware, subsequent versions will sit on top of the HAL.
 
-**Current status:** The FreeRTOS kernel for PULP has been ported to CORE-V MCU, but has been blocked by hardware issues. No CORE-V MCU drivers have been written. Note that development of drivers will require the specification of the devices to be finalized, and testing of drivers will require physical hardware.
+**Status as of September 2021:** The FreeRTOS kernel for PULP has been ported to CORE-V MCU, but has been blocked by hardware issues. No CORE-V MCU drivers have been written. Note that development of drivers will require the specification of the devices to be finalized, and testing of drivers will require physical hardware.
 
 ### Component 5 - Symbiflow tooling
 
 Support for Symbiflow tooling will require work in the IDE to allow access to the tools.  This proposal assumes that standard upstream tools will be used.
 
-No work is required specifically for this component. It forms part of [Component 1](#component-1---openhw-ide-and-debugger), [Component 6](#component-6---documentation) and [Component 7](#component-7---examplesapplications).
+This is a "virtual" component. The tasks to deliver it form part of [Component 1](#component-1---openhw-ide-and-debugger), [Component 6](#component-6---documentation) and [Component 7](#component-7---examplesapplications).
 
 ### Component 6 - Documentation
 
 This is one of the critical components to the out-of-box experience.
 
-This includes getting started guides, user manuals, and the wiki for user contributions.  It includes documentation in a range of formats:
+This includes getting started guides, user manuals, and the wiki for user contributions.  Whilst it is documentation of the SDK, like all SDK components it is intimately connected to the physical product of which it is part.  It includes documentation in a range of formats:
 
 - printed text;
 - online text;
@@ -78,7 +84,7 @@ This includes getting started guides, user manuals, and the wiki for user contri
 
 Documentation of tutorials is a separate component (see [Component 7](#component-7---examplesapplications)). Likely a specific Internet domain to support all this material online will be required.
 
-**Current status:** Standard GNU tool chain manuals for RISC-V are available.
+**Status as of September 2021:** Standard GNU tool chain manuals for RISC-V are available.
 
 ### Component 7 - Examples/applications
 
@@ -92,13 +98,13 @@ This is one the critical components to the out-of-box experience. Tutorials must
 
 The examples are both a tutorial resource and a starting point for the user's own products. Each tutorial will require comprehensive documentation in both written and video forms.
 
-**Current status:** Not started.
+**Status as of September 2021:** Not started.
 
 ### Component 8 - Overall SDK integration and installer
 
 The SDK _is_ the integration of all the previous components combined with an installer.  The goal for the _installer_ is that it is provided as a single, binary executable file which when executed installs everything ready-to-run. Everything will be included in the single installer binary (including the IDE, debugger, tool chains, documentation and examples etc.). The user simply downloads the file from the OpenHW SDK web page and executes it to install everything. Specific flavors will be needed for Windows, Linux (various) and MacOS host operating systems.
 
-**Current status:** Not started
+**Status as of September 2021:** Not started
 
 ## Why Open Hardware Group should do this project
 
@@ -106,7 +112,7 @@ The SDK is the "shop window" for the CORE-V project. It is the vehicle through w
 
 ### Summary of Development
 
-The Platform Development Kit is the parent project and will provide:
+The Platform Development Kit is the linked receiving project for the SDK and will provide:
 
 - overall program management;
 - MCU design, development and manufacturer;
@@ -114,7 +120,7 @@ The Platform Development Kit is the parent project and will provide:
 - documentation of hardware components in all formats (printed text, online text, online help, video); and
 - complete product packaging, marketing and distribution.
 
-The following diagram shows the relationship of the SDK to the parent project.
+The following diagram shows the relationship of the SDK to the Platform Development Kit project.
 ![diagram showing the platform development kit components](./images/project-structure.png)
 
 The SDK project is one of the components that feeds into the complete product. In summary:
@@ -135,7 +141,7 @@ The SDK project is one of the components that feeds into the complete product. I
 
 ### Summary of Timeline
 
-Not possible at Concept Phase, needs to wait for planning at Launch phase
+This project requires a full-time project manager and at last 3 engineer years of currently unresourced specialist effort. Were such resource to be available, it would be reasonable to deliver the project in around 12 months, subject to timing of prerequisites from the Platform Development Kit project.
 
 Milestones:
 
@@ -236,7 +242,7 @@ Key requirements are:
 
 The SDK is inherently tied to the product.  Examples of other SDK's for other RISC-V products include:
 
-- Freedom SDK (for SiFve boards);
+- Freedom SDK (for SiFive boards);
 - Open-ISA (for NXP Vega board); and
 
 ## External dependencies
@@ -288,7 +294,7 @@ None, beyond routine sysadmin support.
 
 It cannot be emphasized too much that the requirement here is for **experienced specialist software engineering**.  This is the shop front for OpenHW and the qualify of the SDK will be the perceived quality of OpenHW.
 
-Unless **otherwise indicated in bold**, resource is not yet available. In summary at present there is a shortfall of 35 - 41 specialist engineer months.
+Unless **otherwise indicated in bold**, resource is not yet available. In summary at present there is a shortfall of 35 - 41 specialist engineer months and 12 engineer months of project manager. These figures exclude work to support Symbiflow.
 
 - Component 1 - OpenHW IDE and debugger
 
@@ -335,7 +341,7 @@ In addition the whole project will need a full time overall project manager, est
 
 ## Marketing resource
 
-This belongs with the parent project, the Platform Development Kit.
+This belongs with the linked project, the Platform Development Kit.
 
 ### OpenHW marketing resource - requirement and availability
 
@@ -379,7 +385,7 @@ We shall need a `core-v-sdk` repository for the integration materials/installed,
 
 ## Project distribution model
 
-Supplied to the parent project, the Platform Development Kit.
+Supplied as a deliverable to the linked project, the Platform Development Kit.
 
 ## Preliminary Project plan
 

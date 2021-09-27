@@ -2,6 +2,7 @@ Alibaba
 Ashling
 binutils
 BSP
+CV32E40P
 Embecosm
 Fedorov
 FPGA
@@ -21,12 +22,13 @@ RHEL
 SDK
 semihosting
 ShareAlike
-SiFve
+SiFive
 SoC
 Symbiflow
 TBC
 TPLs
 UART
+unresourced
 v2
 v3
 Verilator
