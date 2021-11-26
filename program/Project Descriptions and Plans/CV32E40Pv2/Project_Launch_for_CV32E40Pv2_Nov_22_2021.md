@@ -15,8 +15,8 @@ The goal of these instructions is to improve performance, power consumption and 
 
 This project will start from CV32E40P RTL freeze tag cv32e40p_v1.0.0 made in December 10, 2020.
 
-1. To be fully compliant with RISC-V ISA, re-encode all PULP instructions in custom-0 to 3 RISC-V extensions (today disseminated in standard extensions).
-2. Verification of all re-encoded [PULP instructions](https://github.com/openhwgroup/cv32e40p/blob/master/docs/source/instruction_set_extensions.rst):
+To be fully compliant with RISC-V ISA, re-encode all PULP instructions in custom-0 to 3 RISC-V extensions (today disseminated in standard extensions)
+and verify all re-encoded [PULP instructions](https://github.com/openhwgroup/cv32e40p/blob/master/docs/source/instruction_set_extensions.rst):
 * Post-increment and register-register indexed load/store
 * Hardware loops
 * General ALU extensions
@@ -142,12 +142,12 @@ Planning tools will be setup using OpenHW Group recommendations and Dolphin prac
 
 ### Engineering resource supplied by members - requirement and availability
 Dolphin Design  
-* Pascal Gouedo (architecture/documentation)  - xxx %
-* Yoann Pruvost (design/documentation)        - xxx %
-*               (design)                      - xxx %
-* Yoann Pruvost (verification lead)           - xxx %
-*               (verification)                - 100 %
-*               (verification)                - 100 %
+* Pascal Gouedo (architecture/documentation) - xxx %
+* Yoann Pruvost (design/documentation) - xxx %
+*               (design) - xxx %
+* Yoann Pruvost (verification lead) - xxx %
+*               (verification) - 100 %
+*               (verification) - 100 %
 
 ### OpenHW engineering staff resource plan: requirement and availability
 * Davide Schiavone - Technical support
@@ -175,8 +175,8 @@ FPU RTL
 Verification based on core-v-verif uvm environment.
 
 ## Repository Requirements
-Design and Documentation will use https://github.com/openhwgroup/cv32e40p
-Verification and Reports will use https://github.com/openhwgroup/core-v-verif
+* Design and Documentation will use https://github.com/openhwgroup/cv32e40p
+* Verification and Reports will use https://github.com/openhwgroup/core-v-verif
 
 ## Project distribution model
 * OpenHW GitHub Repository
@@ -186,13 +186,13 @@ Verification and Reports will use https://github.com/openhwgroup/core-v-verif
 
 ## Plan toward PA gate
 When are the planned milestones?
-* PA – Plan approved – a fully detailed project plan and an agreed requirements specification as component of the User Manual
+* PA â€“ Plan approved â€“ a fully detailed project plan and an agreed requirements specification as component of the User Manual
 e/o Q4 2021
 
-* PF – Project Freeze – Code released, all project checklists completed , and project completed
+* PF â€“ Project Freeze â€“ Code released, all project checklists completed , and project completed
 e/o Q2 2022
 
 ## Risk Register
-Avaibility of SW toolchain supporting all PULP instructions and PULP Zfinx
-Avaibility of ISS supporting all PULP instructions and PULP Zfinx
-Avaibility of OneSpin RISC-V app supporting Zfinx
+* Avaibility of SW toolchain supporting all PULP instructions and PULP Zfinx
+* Avaibility of ISS supporting all PULP instructions and PULP Zfinx
+* Avaibility of OneSpin RISC-V app supporting Zfinx
