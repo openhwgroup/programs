@@ -1,5 +1,4 @@
 # OpenHW Project Launch Proposal: CV32E40Pv2
-*The PL proposal explains the "what". Some of it can be updated directly from the PC proposal* 
 
 # Title of Project - "CV32E40Pv2"
 # Project Launch Proposal
