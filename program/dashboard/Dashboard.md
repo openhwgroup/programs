@@ -1,7 +1,7 @@
 
 # OpenHW Project Dashboard
 
-Last Update July 22, 2021
+Last Update Nov 5, 2021
 
 ## Status Key
 **PC = Project Concept** (*formerly Preliminary Project Launch, PPL*)  
@@ -48,12 +48,10 @@ Last Update July 22, 2021
 | CV32E41  	| 3     	|  PC | Cores              | [Tariq Hurd](https://github.com/tariqkurd-repo)  |     		| [cv32e41p](https://github.com/openhwgroup/cv32e41p)       	  | 	|   	     	| 21.06.28 (A)	| TBD 		| 	TBD	| 	[CVE32E41 PC](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/CV32E41P/CV32E41P%20project%20proposal.md)| 
 | CV-X-IF  	| TBD     	|  PC | Cores              |   |  [Trefor Southwell](https://github.com/treforsouthwell)   		|     [core-v-xif](https://github.com/openhwgroup/core-v-xif)   	  | 	|   	     	| 21.06.28 (A)	| TBD 		| 	TBD	| 	[CV-X-IF PC](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/CV-X-IF/CV_X_Interface_project_concept.pdf)| 
 | CVA5 (Taiga)  	| 3     	| PC | Cores, Verification             | Eric Matthews |      		|     TBD	  |  	|        	| 21.07.23 (A)	|  	TBD	| TBD		| 	[Taiga PC](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/CORE-V%20CVA5/PC-Taiga-CVA5.md)  [Taiga TWG pres.](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/CVA5/SFU_taiga_formal_overview_openhw-2021-28jun.pdf)		 	|
-
+| CORE-V  SDK  	| TBD     	| PC | SW             |  |   Hugh O'Keeffe, [Jeremy Bennett](https://github.com/jeremybennett)  		|     TBD	  |  	|        	| 21.09.27 (A)	|  	TBD	| TBD		| 	  [SDK Project Concept](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/SDK/sdk-project-concept.md)		 	|
 
 
 ## Potential Projects (have not passed PC)
 
 | Name     	  | TRL Target | Status 	| Task Group                     | Technical Project Leader(s)                   |  PM (if designated)  	| OpenHW repo(s)  | EF Project 		| ECLIPSE CQ   	|  PC 		| PL 		|PA 		| Project Proposal (or Readme File) 						|
 |----------	 |--------  |--------	|-----------------------------	|----------------------------------------------	|--------------------	|--------------	  | -----------------  	|-------------- |------------ 	|-------------- |-------------- |---------------------------------------------------------------------- |
-
-
