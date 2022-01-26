@@ -5,20 +5,35 @@
 
 ## High Level Summary of project, project components, and deliverables
 Create a platform to attract existing, new and potential members of the OpenHW Group to participate in the development of an "Industrial Grade" verification environment for core-v-mcu.
-The verification environment will follow the verification process developed for core-v-verif, including verification plans and the use of SV-UVM.
+
+The verification environment will follow the verification process developed for core-v-verif, including verification plans and the use of SV-UVM. This will produce an extensible UVM environment that can fully verify any single-core SoCs and as a result verify the core-v MCU to TRL-5 (production ready).
+
 
 ![COREV-MCU-UVM-Environment](./MCU_UVM_Simplified.png)
 
 ## Summary of market or input requirements
 
 ### Known market/project requirements at PC gate
-* Develop an extensible UVM verification environment able to perform software-driven verification
-* Able to replace the core with a UVM agent to run stimulus and capable of running full verification of peripherals.
+* Develop an extensible UVM verification environment able to perform sequence-based, contrained-random verification
+* Able to replace the core with a UVM agent to run stimulus and capable of running full verification of peripherals using UVM components for prediction and scoreboarding:
+> * uDMA
+> * SPI
+> * QSPI
+> * UART
+> * I2C
+> * JTAG
+> * CPI
+> * SDIO
 * Ability to simulate and synthesize in Xilinx Vivado
 
 ### Potential future enhancements
 * Ability to verify the embedded FPGA
-* Ability to support integration of new peripherals
+* Ability to support integration of new peripherals for future versions of core-v MCU. Ex:
+> * Ethernet MAC
+> * Memory Controller
+> * WiFi
+> * Bluetooth
+> * etc.
 
 ## Who would make use of OpenHW output
 Companies or academic organizations wanting to create their own intermediate-scale, single core SoC/micro-controller.
@@ -47,7 +62,7 @@ David Poulin
 * Re-create the ability to run the existing CORE-V MCU test suite with coverage enabled
 
 ### Target Date for PL
-TBD
+April 26th 2022
 
 <hr/>
 
