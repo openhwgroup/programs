@@ -14,8 +14,13 @@ The verification environment will follow the verification process developed for 
 ## Summary of market or input requirements
 
 ### Known market/project requirements at PC gate
-* Develop an extensible UVM verification environment able to perform sequence-based, contrained-random verification
-* Able to replace the core with a UVM agent to run stimulus and capable of running full verification of peripherals using UVM components for prediction and scoreboarding:
+* A UVM verification environment that can:
+> * Fully verify the CORE-V MCU peripherals and connectivity to TRL-5.
+> * Be extended to verify future versions of the MCU including devices with new/different peripherals and topology.
+> * Support a self-checking environment using extensible prediction and scoreboarding components.
+> * Replace the core with UVM bus agent(s) (e.g. OBI) to drive stimulus and collect responses sufficient to achieve above.
+* Ability to simulate with Xilinx Vivado.
+* Verification (to TRL-5) of the following CORE-V MCU peripherals:
 > * uDMA
 > * SPI
 > * QSPI
@@ -24,7 +29,7 @@ The verification environment will follow the verification process developed for 
 > * JTAG
 > * CPI
 > * SDIO
-* Ability to simulate and synthesize in Xilinx Vivado
+
 
 ### Potential future enhancements
 * Ability to verify the embedded FPGA
