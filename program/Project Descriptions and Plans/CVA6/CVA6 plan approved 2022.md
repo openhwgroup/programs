@@ -72,19 +72,19 @@ After approval by the TWG, it will be converted to AsciiDoc and managed in OpenH
 
 As a summary, CVA6 contains:
 
-|                     | CV64A6                            | CV32A6                       |
-| :------------------ | :-------------------------------: | :--------------------------: |
-| ISA                 | RV64IMA\[F\[D\]\]C_Zicsr_Zifencei | RV32IMA\[F\]C_Zicsr_Zifencei |
-| Privilege levels    | M/S/U\*                           | M/S/U\*                      |
-| Virtual memory      | \[Sv39\]                          | \[Sv32\]                     |
+|                     | CV64A6                                | CV32A6                           |
+| :------------------ | :-----------------------------------: | :------------------------------: |
+| ISA                 | RV64IMA\[F\[D\]\]\[C\]_Zicsr_Zifencei | RV32IMA\[F\]\[C\]_Zicsr_Zifencei |
+| Privilege levels    | M/S/U\*                               | M/S/U\*                          |
+| Virtual memory      | \[Sv39\]                              | \[Sv32\]                         |
 
 \[\] denotes a configurable feature.
 
-* In addition, CV64A6 will optionally support RISC-V Hypervisor extension.
+\* In addition, CV64A6 will optionally support RISC-V Hypervisor extension.
 
 `FENCE.T` is supported and might become a standard RISC-V instruction in the future.
 
-The CV-X-IF interface will allow to extend CVA6 instruction set with an external co-processor.
+The **CV-X-IF** interface will allow to extend CVA6 instruction set with an external co-processor.
 It will either support proprietary extensions or RISC-V extensions that are not natively supported by CVA6.
 
 ### License scheme
@@ -109,7 +109,7 @@ To foster cooperation and efficiency within OpenHW Group, CVA6 will use and cont
 
 Gateways between OpenHW core-v-verif repositories and Thales internal environment (GitLab, CI...) will be set up.
 
-## Future enhancements:
+## Future enhancements (off project):
 
 Increasing the core architectural performance (dual issue...), adding RISC-V extensions, delivering a larger subsystem (SMP multi-core, peripherals, accelerators...)
 
@@ -243,6 +243,7 @@ Grants are expected to fuel 2023 workplan with more resources, especially on ver
 ### Marketing resource - requirement and availability
 
 The project needs support from:
+
 - Rick O'Connor, OpenHW CEO
 - Michelle Clancy, Director of Marketing
 
@@ -291,7 +292,7 @@ Contributions before or off the project:
 - ARIANE (CV64A6), ETH Zürich and University of Bologna
 - CV32A6 pipeline, INVIA
 - `FENCE.T`, Hensoldt Cyber/ETH Zürich
-- CV54A6 Hypervisor extension, University of Minho
+- CV64A6 Hypervisor extension, University of Minho
 
 ## Repository Structure
 
@@ -305,9 +306,9 @@ https://github.com/openhwgroup/core-v-verif: the verification home<br>
 	
 https://github.com/openhwgroup/cva6-sdk: RISC-V tools and Linux
 
-https://github.com/openhwgroup/core-v-docs/tree/master/program/Project%20Descriptions%20and%20Plans/CVA6: PC, PL and PA gates.
+https://github.com/openhwgroup/core-v-docs/tree/master/program/Project%20Descriptions%20and%20Plans/CVA6: project gates.
 
-In addition, Thales develops a mirror of these repositories to their internal countinuous integration environment.
+In addition, Thales has set up an internal mirror of GitHub repositories to trigger their countinuous integration environment.
 
 ## Project distribution model
 
