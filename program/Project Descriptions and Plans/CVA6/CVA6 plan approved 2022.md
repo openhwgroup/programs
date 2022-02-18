@@ -336,15 +336,19 @@ A waterfall method is used.
 | Core            | +50% frequency and -50% FPGA resource used for the CV32A6 soft-core                                                            | 2022-09-30    | TRT         |
 | Core            | Implementation gap: CSR fixes: performance counters size...                                                                    | 2022-10-31    | ECC         |
 | Core            | Implementation gap: Footprint optimisation of performance counters                                                             | 2022-10-31    | ECC         |
-| Core            | **TBC:** Implementation gap: Cache features, explore the compliance with RISC-V recent cache ops specs                         | **TBD**       | ECC         |
+| Core            | L1D feature to support datasize extension to store EDC, ECC or other information.                                              | 2022-12-31    | ECC          |
+| Core            | invalidate L1WTD content with the FENCE.T command.                                                                             | TBD           | ECC?        |
+| Core            | Feature to transform cache ways into a scratchpad                                                                              | 2022-12-31    | ECC         |
+| Core            | L1I feature to support datasize extension to store EDC, ECC or other information                                               | 2022-12-31    | ECC         |
 | Core            | Add H extension as an option to CV64A6                                                                                         | 2022-07-31    | U. Minho    |
-| Core            | Add custom temporal fence (`fence.t`) instruction on CV64A6 and CV32A6                                                           | 2022-05-31    | ETH         |
+| Core            | Add custom temporal fence (`fence.t`) instruction on CV64A6 and CV32A6                                                         | 2022-05-31    | ETH         |
 | Software        | Linux Yocto up and running on CVA6                                                                                             | 2022-06-30    | TRT         |
 | Verification    | Trigger Thales CI from github/openhwgroup repository and maintain it                                                           | 2022-03-31    | INVIA       |
 | Verification    | CV-X-IF: VPlan, coprocessor UVM agent and verification                                                                         | 2022-06-30    | INVIA       |
 | Verification    | CV32E4\* verification environment reuse                                                                                        | 2022-12-31    | INVIA       |
-| Verification    | First verification steps: RV32F DIV and SQRT simulation in CVA6 DV environment (to be reused by CVE40Pv2)                      | **TBD**       | ECC         |
-| Verification    | **TBC:** Placeholder to complete ECC verification activity                                                                     | **TBD**       | ECC         |
+| Verification    | First verification steps: RV32F DIV and SQRT simulation in CVA6 DV environment (to be reused by CVE40Pv2)                      | 2022-12-31    | ECC         |
+| Verification    | Implementation and execution of Virtual Peripheral                                                                             | 2022-09-30    | ECC         |
+| Verification    | Add riscv-arch-test suite to existing CVA6 core-v-verif CI (32-bit and 64-bit)                                                 | 2022-06-30    | ECC         |
 | Verification    | CVA6 complete verification pending new grants                                                                                  | 2023 activity | INVIA       |
 |                 | _For information:_                                                                                                             |               |             |
 | Related project | FreeRTOS developments - maturing the boot sequence, driver eco-system for peripherals, synchronize with SW TG and MCU FreeRTOS | 2022-10-31    | ECC         |
