@@ -16,7 +16,7 @@ The **CVA6** core is a configurable mid-range application RISC-V core able to bo
 From a single RTL source, several flavors can be configured: 32- or 64-bit architecture (**CV32A6** / **CV64A6**),
 with or without FPU, with or without MMU...
 
-CVA6 will target **ASIC** implementations. It also aims at being a foundry-independent softcore optimized for **FPGA** targets.
+CVA6 targets both **ASIC** and **FPGA soft-core** implementations.
 
 The ability to have very similar 32- and 64-bit cores should make the transition between both quite seamless.
 
@@ -289,10 +289,12 @@ OVPSim licences will be provided by Imperas.
 ## Description of initial code contribution, if required
 
 Contributions before or off the project:
-- ARIANE (CV64A6), ETH Zürich and University of Bologna
-- CV32A6 pipeline, INVIA
+- ARIANE (CV64A6) and debug, ETH Zürich and University of Bologna
+- CV32A6 bare mode, INVIA
 - `FENCE.T`, Hensoldt Cyber/ETH Zürich
 - CV64A6 Hypervisor extension, University of Minho
+- ASIC PPA assessment, INVIA
+- FPGA PPA assessment, TRT
 
 ## Repository Structure
 
@@ -319,10 +321,12 @@ OpenHW GitHub repository
 ### 2021 contributions (between the PL and PA gates)
 
 - CVA6 specification, joint work
-- CV32A6 MMU, TRT
+- CV32A6 MMU and debug, TRT
 - Complete CV32A6 release
+- Several bug fixes, various teams
 - Continuous integration environment, INVIA
-- Operational Linux (BBL, Buildroot), TRT
+- Operational Linux 1 (BBL, Buildroot), TRT
+- Operational Linux 2 (U-Boot, OpenSBI, Buildroot), TRT
 - Operational FreeRTOS, ECC
 - Embench-IoT benchmarks, ICP/stall analysis environment, U. Bologna
 - Various contributions (design fixes, documentation...)
