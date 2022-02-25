@@ -161,7 +161,8 @@ The project relies on:
 - Open-source hardware: fpnew (ETH Zürich, soon migrated to OpenHW)
 - Eclipse Foundation, GitHub
 - Digilent Genesys 2 board
-- Simulators: Verilator (open-source), Siemens Questa, Synopsys VCS
+- JADE Design Automation's Register Manager
+- Simulators: Verilator (open-source), Siemens Questa, Synopsys VCS, Imperas OVPSim
 - Synthesis: Vivado (Xilinx), Synopsys Design Compiler (ASIC)
 
 CVA6 can be integrated in the OpenPiton framework to build an SMP multi/many-core CPU.
@@ -323,13 +324,12 @@ OpenHW GitHub repository
 - CVA6 specification, joint work
 - CV32A6 MMU and debug, TRT
 - Complete CV32A6 release
-- Several bug fixes, various teams
 - Continuous integration environment, INVIA
 - Operational Linux 1 (BBL, Buildroot), TRT
 - Operational Linux 2 (U-Boot, OpenSBI, Buildroot), TRT
 - Operational FreeRTOS, ECC
 - Embench-IoT benchmarks, ICP/stall analysis environment, U. Bologna
-- Various contributions (design fixes, documentation...)
+- Various contributions (bug fixes, documentation...)
 
 ### 2022 workplan
 
@@ -353,6 +353,7 @@ A waterfall method is used.
 | Verification    | First verification steps: RV32F DIV and SQRT simulation in CVA6 DV environment (to be reused by CVE40Pv2)                      | 2022-12-31    | ECC         |
 | Verification    | Implementation and execution of Virtual Peripheral                                                                             | 2022-09-30    | ECC         |
 | Verification    | Add riscv-arch-test suite to existing CVA6 core-v-verif CI (32-bit and 64-bit)                                                 | 2022-06-30    | ECC         |
+| Project-wide    | Raise a CQ (Eclipse contribution questionnaire)                                                                                | 2022-06-30    | Jérôme, Mike |
 | Verification    | CVA6 complete verification pending new grants                                                                                  | 2023 activity | INVIA       |
 |                 | _For information:_                                                                                                             |               |             |
 | Related project | FreeRTOS developments - maturing the boot sequence, driver eco-system for peripherals, synchronize with SW TG and MCU FreeRTOS | 2022-10-31    | ECC         |
@@ -372,8 +373,8 @@ The meetings are well suited for East Coast, Europe and India timezones. Once a 
 
 These topics will be defined in CVA6 meetings at the relevant time:
 - Overall approach for Github issues and label
-- Project release version approach and estimated schedule
 
+No release plan is defined in 2022 as this PA gate is interim.
 No Project Freeze (PF) checklist is planned in 2022.
 
 ### Risk register
