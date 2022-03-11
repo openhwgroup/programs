@@ -16,7 +16,7 @@ The **CVA6** core is a configurable mid-range application RISC-V core able to bo
 From a single RTL source, several flavors can be configured: 32- or 64-bit architecture (**CV32A6** / **CV64A6**),
 with or without FPU, with or without MMU...
 
-CVA6 will target **ASIC** implementations. It also aims at being a foundry-independent softcore optimized for **FPGA** targets.
+CVA6 targets both **ASIC** and **FPGA soft-core** implementations.
 
 The ability to have very similar 32- and 64-bit cores should make the transition between both quite seamless.
 
@@ -161,7 +161,8 @@ The project relies on:
 - Open-source hardware: fpnew (ETH Zürich, soon migrated to OpenHW)
 - Eclipse Foundation, GitHub
 - Digilent Genesys 2 board
-- Simulators: Verilator (open-source), Siemens Questa, Synopsys VCS
+- JADE Design Automation's Register Manager
+- Simulators: Verilator (open-source), Siemens Questa, Synopsys VCS, Imperas OVPSim
 - Synthesis: Vivado (Xilinx), Synopsys Design Compiler (ASIC)
 
 CVA6 can be integrated in the OpenPiton framework to build an SMP multi/many-core CPU.
@@ -289,10 +290,12 @@ OVPSim licences will be provided by Imperas.
 ## Description of initial code contribution, if required
 
 Contributions before or off the project:
-- ARIANE (CV64A6), ETH Zürich and University of Bologna
-- CV32A6 pipeline, INVIA
+- ARIANE (CV64A6) and debug, ETH Zürich and University of Bologna
+- CV32A6 bare mode, INVIA
 - `FENCE.T`, Hensoldt Cyber/ETH Zürich
 - CV64A6 Hypervisor extension, University of Minho
+- ASIC PPA assessment, INVIA
+- FPGA PPA assessment, TRT
 
 ## Repository Structure
 
@@ -319,13 +322,14 @@ OpenHW GitHub repository
 ### 2021 contributions (between the PL and PA gates)
 
 - CVA6 specification, joint work
-- CV32A6 MMU, TRT
+- CV32A6 MMU and debug, TRT
 - Complete CV32A6 release
 - Continuous integration environment, INVIA
-- Operational Linux (BBL, Buildroot), TRT
+- Operational Linux 1 (BBL, Buildroot), TRT
+- Operational Linux 2 (U-Boot, OpenSBI, Buildroot), TRT
 - Operational FreeRTOS, ECC
 - Embench-IoT benchmarks, ICP/stall analysis environment, U. Bologna
-- Various contributions (design fixes, documentation...)
+- Various contributions (bug fixes, documentation...)
 
 ### 2022 workplan
 
@@ -336,15 +340,20 @@ A waterfall method is used.
 | Core            | +50% frequency and -50% FPGA resource used for the CV32A6 soft-core                                                            | 2022-09-30    | TRT         |
 | Core            | Implementation gap: CSR fixes: performance counters size...                                                                    | 2022-10-31    | ECC         |
 | Core            | Implementation gap: Footprint optimisation of performance counters                                                             | 2022-10-31    | ECC         |
-| Core            | **TBC:** Implementation gap: Cache features, explore the compliance with RISC-V recent cache ops specs                         | **TBD**       | ECC         |
+| Core            | L1D feature to support datasize extension to store EDC, ECC or other information.                                              | 2022-12-31    | ECC          |
+| Core            | invalidate L1WTD content with the FENCE.T command.                                                                             | TBD           | ECC?        |
+| Core            | Feature to transform cache ways into a scratchpad                                                                              | 2022-12-31    | ECC         |
+| Core            | L1I feature to support datasize extension to store EDC, ECC or other information                                               | 2022-12-31    | ECC         |
 | Core            | Add H extension as an option to CV64A6                                                                                         | 2022-07-31    | U. Minho    |
-| Core            | Add custom temporal fence (`fence.t`) instruction on CV64A6 and CV32A6                                                           | 2022-05-31    | ETH         |
+| Core            | Add custom temporal fence (`fence.t`) instruction on CV64A6 and CV32A6                                                         | 2022-05-31    | ETH         |
 | Software        | Linux Yocto up and running on CVA6                                                                                             | 2022-06-30    | TRT         |
 | Verification    | Trigger Thales CI from github/openhwgroup repository and maintain it                                                           | 2022-03-31    | INVIA       |
 | Verification    | CV-X-IF: VPlan, coprocessor UVM agent and verification                                                                         | 2022-06-30    | INVIA       |
 | Verification    | CV32E4\* verification environment reuse                                                                                        | 2022-12-31    | INVIA       |
-| Verification    | First verification steps: RV32F DIV and SQRT simulation in CVA6 DV environment (to be reused by CVE40Pv2)                      | **TBD**       | ECC         |
-| Verification    | **TBC:** Placeholder to complete ECC verification activity                                                                     | **TBD**       | ECC         |
+| Verification    | First verification steps: RV32F DIV and SQRT simulation in CVA6 DV environment (to be reused by CVE40Pv2)                      | 2022-12-31    | ECC         |
+| Verification    | Implementation and execution of Virtual Peripheral                                                                             | 2022-09-30    | ECC         |
+| Verification    | Add riscv-arch-test suite to existing CVA6 core-v-verif CI (32-bit and 64-bit)                                                 | 2022-06-30    | ECC         |
+| Project-wide    | Raise a CQ (Eclipse contribution questionnaire)                                                                                | 2022-06-30    | Jérôme, Mike |
 | Verification    | CVA6 complete verification pending new grants                                                                                  | 2023 activity | INVIA       |
 |                 | _For information:_                                                                                                             |               |             |
 | Related project | FreeRTOS developments - maturing the boot sequence, driver eco-system for peripherals, synchronize with SW TG and MCU FreeRTOS | 2022-10-31    | ECC         |
@@ -364,8 +373,8 @@ The meetings are well suited for East Coast, Europe and India timezones. Once a 
 
 These topics will be defined in CVA6 meetings at the relevant time:
 - Overall approach for Github issues and label
-- Project release version approach and estimated schedule
 
+No release plan is defined in 2022 as this PA gate is interim.
 No Project Freeze (PF) checklist is planned in 2022.
 
 ### Risk register
