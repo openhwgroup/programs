@@ -5,7 +5,7 @@ CORE-V Documentation
    :description lang=en: continuous CORE-V documentation development on Read the Docs.
 
 
-`CORE-V Docs` is the OpenHW Group documenation project for its family of CORE-V processors.
+`CORE-V Docs` is the OpenHW Group documenation project for the CORE-V family of open-source RISC-V processor cores.
 
 .. toctree::
    :maxdepth: 2
