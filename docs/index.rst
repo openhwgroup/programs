@@ -14,7 +14,6 @@ CORE-V Documentation
    :caption: Contents:
 
    cores
-   platform
    verification
 
 .. _OpenHW Group: https://www.openhwgroup.org
