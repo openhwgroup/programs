@@ -1,7 +1,9 @@
 CORE-V Cores
 ============
 
-Functional specifications for the family of CORE-V cores
+User Manuals for the family of CORE-V cores
 ---------------------------------------
+
+'CORE-V CV32E40P User Manual <https://docs.openhwgroup.org/projects/cv32e40p-user-manual/>'
 
 * :ref:`cv32e40p-doc` contains the functional specification of the CV32E40P core.
