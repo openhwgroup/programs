@@ -1,7 +1,7 @@
 CORE-V Cores
 ============
 
-CORE-V is a family of open-source RISC-V processor cores development by open-source developers from around the world and collaborating within the `OpenHW Group ecosystem <https//openhwgroup.org/>`_.  As shown in the CORE-V roabmap below, there are several cores under active development.
+CORE-V is a family of open-source RISC-V processor cores created and maintained by open-source developers from around the world who collaborate within the `OpenHW Group ecosystem <https//openhwgroup.org/>`_.  As shown in the CORE-V roabmap below, there are several cores under active development.
 
 .. image:: images/CORE-V_Roadmap_April_2022.jpg
 
