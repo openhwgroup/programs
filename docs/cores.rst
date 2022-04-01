@@ -1,9 +1,13 @@
 CORE-V Cores
 ============
 
-User Manuals for the family of CORE-V cores
--------------------------------------------
+RTL Frozen CORE-V Cores User Manuals
+------------------------------------
 
-`CORE-V CV32E40P User Manual <https://docs.openhwgroup.org/projects/cv32e40p-user-manual/>`_.
+`Released CORE-V CV32E40P User Manual <https://docs.openhwgroup.org/projects/cv32e40p-user-manual/>`_.
 
-* :ref:`cv32e40p-doc` contains the functional specification of the CV32E40P core.
+RTL In Development CORE-V Cores User Manuals
+------------------------------------
+
+`Draft CORE-V CV32E40S User Manual <https://docs.openhwgroup.org/projects/cv32e40s-user-manual/en/latest/>`_.
+
