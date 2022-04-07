@@ -4,7 +4,7 @@
 | ------------------------------------ | ---------------------------------------------------------- |
 | PC gate: Project Concept             | Approved on 2020-09-28 as Preliminary Project Launch (PPL) |
 | PL gate: Project Launch              | Approved on 2021-01-25                                     |
-| PA gate: Plan Approved               | Seeking approval on 2022-02-28 for **2022 workplan**       |
+| PA gate: Plan Approved               | Presented on 2022-02-28 for **2022 workplan**, approved on 2022-03-28 |
 | PA gate: Plan Approved               | 2023 and beyond workplan in future PA gate                 |
 
 Author: Jérôme Quévremont, Thales Research & Technology
