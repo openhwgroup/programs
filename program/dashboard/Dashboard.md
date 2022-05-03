@@ -1,7 +1,7 @@
 
 # OpenHW Project Dashboard
 
-Last Update May 4, 2022
+Last Updated May 4, 2022
 
 ## Status Key
 **PC = Project Concept** (*formerly Preliminary Project Launch, PPL*)  
