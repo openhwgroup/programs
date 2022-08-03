@@ -18,6 +18,8 @@ RTL In Development CVE4 User Manuals
 
 `Draft CORE-V CV32E40S User Manual <https://docs.openhwgroup.org/projects/cv32e40s-user-manual/en/latest/>`_.
 
+`Draft CORE-V CV32E40X User Manual <https://docs.openhwgroup.org/projects/cv32e40x-user-manual/en/latest/>`_.
+
 CVA6 Series of CORE-V Cores User Manuals
 ----------------------------------------
 
@@ -25,3 +27,8 @@ RTL In Development CVA6 User Manuals
 ------------------------------------
 
 `Draft CORE-V CVA6 User Manual <https://docs.openhwgroup.org/projects/cva6-user-manual/>`_.
+
+RTL In Development CVE2 User Manuals
+------------------------------------
+
+`Draft CORE-V CVE2 User Manual <https://ibex-core.readthedocs.io/en/latest/>`_.
