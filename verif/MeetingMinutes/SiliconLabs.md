@@ -1,4 +1,35 @@
-2022.08.22
+2022.08.31
+==============
+Attendees:
+----------
+**OpenHW:** Mike Thompson
+**Silabs:** Kristine Dosvik, Henrik Fegran, Robin Pedersen, Marton Teilgaard
+**Imperas:** Lee Moore
+
+Topics:
+----------
+1. Dev-to-Rel merge
+- Mike: Thanks to Robin for getting dev to rel merge sterted. "No good deed goes unpunished"
+
+2. Metrics issue with parameterization
+- Mike: Metrics commited to fixing the issue
+
+3. ImperasDV
+- Mike: In a position to merge in ImperasDV
+- Lee: All tests passing (with regards to comparisons), will provide a test release to Silabs. Private github repository with cut-down ISS, with instructions to run tests. This should be a quick and easy way to verify new system without the delays of having a full installation in place. This is only a stopgap solution to expedite verification of the new sertup. Currently 4 tests failing, mhpmcounters, debug trigger tests.
+- Silabs: Expected issues, Imperas should not take these into account.
+
+4. Virtual peripherals
+- Mike: Two ways interrupts/debug can be signaled, either through memory mapped virtual peripheral sequence or by directly manipulating the driver. The result of these are ored together, this is in place for legacy reasons. Should this be changed?
+- **Action item: Change this to be more consistent, but low priority at the moment**
+
+5. Walkthrough of core-v-verif
+- Mike: Plan to do a walkthrough of core-v-verif, particularly aimed at new people working on this project. Probably in the next week or two as I do not want to wait too long. This is basically going through the slide decs that was mentioned a while back.
+
+6. Cochairs
+- Mike: Two new cochairs of the VTGs have been chosen to replace Steve Richmond and Robert Chu as Steve is no longer qualified and Robert chose not to continue. The new cochairs will be Simon Davidman, Imperas and Jean-Roch Coulon, Thales.
+
+2022.08.24
 ==============
 Attendees:
 ----------
