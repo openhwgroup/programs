@@ -1,6 +1,6 @@
 # OpenHW Project Dashboard																												
 																												
-Last Updated September 30 2022																												
+Last Updated October 4 2022																												
 																												
 ## Status Key																												
 **PC = Project Concept** 																												
@@ -11,7 +11,7 @@ Last Updated September 30 2022
 &nbsp; &#8595;  																												
 **PF = Project Freeze**																												
 																												
-				<br /> +																								
+				 +																								
 ## Completed Projects with Status = PF																												
 |	Name	|	TRL Achieved	|	Status	|	TPL or PM	|	Repo	|	PC	|	PL	|	PA	|	PF	|	PF Estimate	|	Project Docs	|	RTD	|	Project Plan	|	Project Board	|
 |	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|
