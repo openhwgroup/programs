@@ -1,3 +1,117 @@
+2022.08.31
+==============
+Attendees:
+----------
+**OpenHW:** Mike Thompson
+**Silabs:** Kristine Dosvik, Henrik Fegran, Robin Pedersen, Marton Teilgaard
+**Imperas:** Lee Moore
+
+Topics:
+----------
+1. Dev-to-Rel merge
+- Mike: Thanks to Robin for getting dev to rel merge sterted. "No good deed goes unpunished"
+
+2. Metrics issue with parameterization
+- Mike: Metrics commited to fixing the issue
+
+3. ImperasDV
+- Mike: In a position to merge in ImperasDV
+- Lee: All tests passing (with regards to comparisons), will provide a test release to Silabs. Private github repository with cut-down ISS, with instructions to run tests. This should be a quick and easy way to verify new system without the delays of having a full installation in place. This is only a stopgap solution to expedite verification of the new sertup. Currently 4 tests failing, mhpmcounters, debug trigger tests.
+- Silabs: Expected issues, Imperas should not take these into account.
+
+4. Virtual peripherals
+- Mike: Two ways interrupts/debug can be signaled, either through memory mapped virtual peripheral sequence or by directly manipulating the driver. The result of these are ored together, this is in place for legacy reasons. Should this be changed?
+- **Action item: Change this to be more consistent, but low priority at the moment**
+
+5. Walkthrough of core-v-verif
+- Mike: Plan to do a walkthrough of core-v-verif, particularly aimed at new people working on this project. Probably in the next week or two as I do not want to wait too long. This is basically going through the slide decs that was mentioned a while back.
+
+6. Cochairs
+- Mike: Two new cochairs of the VTGs have been chosen to replace Steve Richmond and Robert Chu as Steve is no longer qualified and Robert chose not to continue. The new cochairs will be Simon Davidman, Imperas and Jean-Roch Coulon, Thales.
+
+2022.08.24
+==============
+Attendees:
+----------
+
+**OpenHW:** Mike Thompson<br>
+**Silabs:** Kristine Dosvik, Henrik Fegran, Robin Pedersen, Marton Teilgaard
+**Imperas:** Simon Davidman, Lee Moore
+
+Topics:
+----------
+
+1. ImperasDV Status
+
+- Henrik: What is the status on the ImperasDV work?
+- Mike: From my perspective, I think we have achieved the original goal, and it is time to move over and commit to it
+- Lee: Two issues in testing, issue #325 due to RTL bug, the other issue pertains to the case of irq closely followed by debug request, causing the first instruction of the handler not to execute. Older model had this resolved with a hard coded hack, scheduled from two different events. Currently working on resolving this. Furthermore there are some issues with documentation, RTL does not match supplied specification. Not sure what documentation to look at.
+- Marton: As mentioned per email, there are parameterized functionality that is currently turned off (Zc)
+- Lee: Previously the (ISS) configuration was constructed statically, now dynamically created.
+- Marton: Two possible issues causing these mismatches, old model did not support Zc, or this functionality has been disabled in the ISS configuration due to lack of support in previous RTL.
+- **Action Items: Add IDV, disable Zc in ISS until enabled in RTL.**
+
+2. Near-simultaneous double event reported to ISS
+
+- Lee: Need to revisit how two asynchronous events are compressed into one
+- Mike & Marton: Agrees with keeping single transaction reported on RVFI. `rvfi_intr` is not set for debug traps, unless a debug entry has happened in the first instruction (...)
+- **Action items: Lee will reproduce for new model and document.**
+
+- Simon: All sorted if the above is resolved?
+- Lee: As far as we can see, yes, apart from load/store after intr or interrupt + halt, also present in old environment.
+- Mike: Present in 40pv1? (No answer, unknown)
+- Lee: Hopefully looking at getting this done by the end of this week.
+
+3. Meeting minutes
+
+- Henrik: We would like to keep meeting minutes for our meetings, to better our communication channels, where should these reside? Github? Google docs?
+- Mike: Should be visible to every OpenHW members. Google docs: expressive tools, good history tracking but not every member has convenient access. Previously core-v-docs was used, rarely updated but stored for access (https://github.com/openhwgroup/core-v-docs/tree/master/verif
+
+4. File duplication, discussion on PR
+
+- Robin: Manifest files duplicates not a good idea. Dummy packages existe to enable reuse of testbench code in formal that does not support UVM constructs otherwise there are too many dependencies and references to resolve.
+- Mike: No way for us to have a common manifest file for formal and simulation? Split manifests possible?
+- Robin: Could work for things like `uvm_package`. The reason for `dummy_package.sv` is that it cherry-picks some parts of the uvm infrastructure combined with skeleton structures that are formal tools compatible.
+- Mike & Robin: Agrees that we would like to remove this package eventually.
+- Mike: There is always some tool that is unable to handle these files in a correct manner.
+- Robin: Could use additional manifest files, but if you add and existing one you get problems, issue is to remove, not to add (code) for formal.
+- Mike: Top level + formal and sim manifests can work. Will approve PR, proper solution will be discussed offline.
+- **Action item: Robin: fix github issue.**
+
+5. RTL bugs found in 40p
+
+- Mike: Dolphin team working with onespin on floating point and PULP; might be interested in the fact that 25 bugs have been found, some very interesting corner cases. ALU bugs, datapath bugs, FPU bugs (multiplier), OBI spec issues that do not occur unless the FPU is used.
+- Robin: Does Onespin do most of the work?
+- Mike: Dolphin hired Onespin to do the bulk of the work, while dolphin provides contractors at dolphin's expense. Contractors are doing knowledge transfer at the end to engineering team at Dolphin
+
+6. Feature branches
+
+- Henrik: How feasible are feature branches on core-v-verif?
+- Mike: Feature branches OK, no issues and they should feed into core/dev. Inexpensive solution.
+
+7. Loopback to ISS
+
+- Robin: ISS has seen several releases, could any in principle be used with the latest RTL?
+- Lee: In case of standard configuration parameters yes, but not necessarily in the case of bespoke changes, e.g. WARL specification change is not covered by the ISA, so it might not be possible to go back.
+- **Action items: Lee: Consolidated PR and release of product**
+- **Action items: Silabs: Validate (Regressions)**
+
+8. RVFI interface
+
+- Marton: Question on how the ISS is driven by the RVFI interface
+- Lee: RVFI, pins of core periphery (interrupts and halt requests) is all that is used to drive the reference model. Mostly resolved, `tamper_fencei` rearranges memory under the feet of the processor. This has to be communicated to ISS memory. There is a simple fix in place to keep the RTL in sync with the reference model.
+- Mike: Concerned that equivalent logic is expressed in two different places in the verification infrastructure, requires fixes in multiple locations. Wants to exploit helper functions in the RVFI interface to avoid these issues, such that both ISS and tb can use.
+- Marton: There is the issue of UVM class item vs interface "Accessibility" issue - uses environment and not arguments.
+- Mike: Important to create maintainable verification environments for both formal and simulation.
+- Marton: Either results in cumbersome usage or two variants.
+
+9. Virtual peripherals
+
+- Marton: Brings up the topic of poorly documented virtual peripherals.
+- Mike: Implemented as sequence items, either core-specific or generic items in agent. E.g. could potentially implement different vprinters for 40s and 40x
+- **Action item: Documentation, figure out how this works**
+
+
 May 20, 2020
 ==============
 
