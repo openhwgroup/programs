@@ -71,7 +71,7 @@ See "Project Documents" section
 Companies needing more performances, less power consumption or smaller code size for standard control or DSP-like computing applications.
 
 ## Summary of Timeline
-All tasks and their estimated workload are listed in [CV32E40pv2 task list](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project%20Descriptions%20and%20Plans/CV32E40Pv2/CV32E40P%20v2%20task%20list.xlsx).
+All tasks and their estimated workload are listed in [CV32E40pv2 task list](https://github.com/openhwgroup/core-v-docs/blob/master/program/Project-Descriptions-and-Plans/CV32E40Pv2/CV32E40Pv2-task-list.xlsx).
 
 Whole project is estimated between 14 and 20 person.months
 
