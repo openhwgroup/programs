@@ -1,24 +1,33 @@
-# core-v-doc
-Program and project level documentation for the OpenHW Group's set of CORE-V RISC-V cores.
+# programs
+Program and project level documentation for all of OpenHW Group's projects including CORE-V RISC-V cores.
 <br><br>
 Directory contents...
+
 ### TWG
 Technical Working Group meeting minutes and presentations.
 
-### cores
-Architecture and Design documentation for the CORE-V cores.
+### TG
+Task Group monthly reports, meeting minutes and presentations. This comprises
+#### cores-task-group
+#### hw-task-group
+#### verification-task-group
 
-### hw
-Information about the hardware and software of the physical platforms built to demonstrate
-the capabilities of the CORE-V cores.
+Currently the sw-task-grouped is tracked in the core-v-sw repo.
 
-### program
-Program Management.  Check out the [Program Dashboard](https://github.com/openhwgroup/core-v-docs/blob/master/program/dashboard/Dashboard.md) to see what the OpenHW Group is up to.
+### OpenHW-Project-Descriptions-and-Plans
+This contains one directory per OpenHW project. Each directory should contain gate materials for the project (Project Concept, Project Launch, Plan Approve, and Project Freeze)
+Readers can use this information to see all OpenHW projects at a glance
 
-### verif
-Verification meeting slides and minutes, plus non-core-specific DV plans.
+### OpenHW-dashboard
+This contains a markdown file with project dashboard information for OpenHW. This file is linked from the OpenHW website.
+
+### process
+This contains OpenHW process and template documents, such as gate templates and RTL Freeze template.
+
+### Attendance-tracking
+This contains attendance tracking for all OpenHW meetings.
 
 ## Issues and Troubleshooting
-If you find any problems or issues with the documentation, please check out the [issue
- tracker](https://github.com/openhwgroup/core-v-docs/issues) and create a new issue if your problem is
+If you find any problems or issues with the structure or content of this repo, please check out the [issue
+ tracker](https://github.com/openhwgroup/programs/issues) and create a new issue if your problem is
 not yet tracked.
