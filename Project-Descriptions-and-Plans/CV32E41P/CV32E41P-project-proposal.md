@@ -1,30 +1,27 @@
 
-# OpenHW Preliminary Project Proposal: CV32E41P TRL3 prototype
+# OpenHW Project Plan: CV32E41P TRL3 prototype
 
-## Summary of project
+# Summary of project
 
-This proposal is for a new core based on the CV32E40P. The modifications are small and as it is only a prototype it will not require full verification. The primary purpose for CV32E41P is to be a proof-of-concept (PoC) for the Zce extension, and it is also a proof of concept for the (soon to be) FROZEN Zfinx specification.
+This proposal is for a new core based on the CV32E40P. The modifications are small and as it is only a prototype it will not require full verification. The primary purpose for CV32E41P is to be a proof-of-concept (PoC) for the [Zc\*](https://github.com/riscv/riscv-code-size-reduction/) extension, and it is also a proof of concept for the frozen Zfinx specification.
 
-Zce offers better code-size reduction than only using the C extension. It includes 16-bit and 32-bit encodings.
-Zfinx shares the integer and floating point register files, primarily to save area but also to reduce context switch time.
+Zce offers better code-size reduction than only using the C extension. It includes 16-bit and 32-bit encodings. Zfinx shares the integer and floating point register files, primarily to save area but also to reduce context switch time.
 
-It will not require full verification as it targets TRL-3.
+The project will not require full verification as it targets TRL-3, the intention is to assess the area, timing, power and complexity of implementing these two extensions in RTL.
 
-The intention is to assess the area, timing, power and complexity of implementing these two extensions in RTL.
+## Summary of the project goals 
+### Stage 1  (Complete)
 
-What follows is a description of the different work items to be included in the CV32E41P.
+1. Implement Zc\* [version 0.50.x](https://github.com/riscv/riscv-code-size-reduction/releases/download/V0.50.1-TOOLCHAIN-DEV/Zce_spec.v0.50.1.toolchain.release.pdf) matching the current prototype toolchains (LLVM and GCC) and simulators (QEmu and Spike)
+2. Write targeted tests for Zc\* and verify the implementation functionality
+3. Update PULP_Zfinx to the standard RISC-V Zfinx
+### Stage 2
+1. Update the implementation of Zc\* to [version 0.70.x](https://github.com/riscv/riscv-code-size-reduction/releases/download/V0.70.1-TOOLCHAIN-DEV/Zc_0_70_1.pdf) tracking the specs and the toolchain implementation
+2. Measure the Area, Timing and Power Overhead
 
-### Add prototype Zce extension
+## Summary of Timeline
 
-Implement Zce v0.41.x which is the version also used for the prototype toolchain (LLVM and GCC) and simulators (QEmu and Spike) work by the PLCT group in the China Academy of Science. This work was commissioned by RISC-V International.
-
-### Change from PULP_Zfinx to standard RISC-V Zfinx
-
-Update the Zfinx implementation to match the (soon to be) FROZEN standard specification. This is expected to be a very simple task.
-
-### Summary of Timeline
-
-The work should happen during Q3 2021.
+Stage 1 of the work was completed during Q4 2021, and stage 2 should be completed during Q2 of 2022.
 
 ## OpenHW Members/Participants committed to participate in CV32E41P project
 
@@ -32,11 +29,11 @@ Huawei, Bristol (UK)
 
 ## Technical Project Leader(s) (TPLs)
 
-Tariq Kurd, Huawei
+Mark Hill, Huawei
 
 ## Project Manager (PM)
 
-Tariq Kurd (if required)
+Mark Hill, Huawei
 
 ## Project Documents
 
@@ -52,7 +49,7 @@ Implement Zce and Zfinx, and measure the difference in timing, area, power and c
 
 ## Explanation of why OpenHW should do this project
 
-Zce is critically important for the success of RISC-V in the embedded space. Building a proof-of-concept is a requirement for ratification, and the feedback it will give will be invaluable.
+Zc\* is critically important for the success of RISC-V in the embedded space. Building a proof-of-concept is a requirement for ratification, and the feedback it will give will be invaluable.
 
 OpenHW allows the implementation relative to an already verified core (the CV32E40P) and allows the resulting core to be available as open source, which will be a huge advantage in promoting the adoption of Zce (and to a lesser extent Zfinx).
 
