@@ -12,4 +12,4 @@ The CORE-V verification strategy is an overview of the strategy used to verify C
 It has been moved to [core-v-verif](https://github.com/openhwgroup/core-v-verif.git).
 
 ## Looking for the verification planning information?
-The CORE-V verification planning document can be found: [VerificationPlanning101.md](https://github.com/openhwgroup/verification-task-group/projects/core-v-verif/documents/VerificationPlanning101.md).
+The CORE-V verification planning document can be found: [VerificationPlanning101.md](projects/core-v-verif/documents/VerificationPlanning101.md).
