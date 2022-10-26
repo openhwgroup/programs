@@ -1,0 +1,19 @@
+OpenHW: VTG Meeting 17th Oct
+----------------------------
+Intro by new chair
+5 min update for each project from leaders of verification for each core undergoing verification:
+	CV32E40X
+	CV32E40S
+	CV32E40Pv2
+	CVA6
+	CV32E20
+update on core-v-verif projects: Mike
+Introduction to first 3 Advanced RISC-V Verification Methodologies projects
+	ARVM-FunctionalCoverage
+		developing open-source VIPs (such as functional coverage) that can be used for many different core configurations/implementations
+	ARVM-Standards
+		defining and implementing evolving interface standards for test bench components to enable better test bench component reuse and potentially stimulate availability of compatible VIPs
+	ARVM-TestbenchQuality
+		developing quality measurement of test benches - so quality of cores can be predicted (for example defining fault models and tests and relating those to TRL levels)
+
+#
