@@ -38,20 +38,15 @@ The PL proposal explains the "what". Some of it can be updated directly from the
 
 This proposal is for a Clang/LLVM compiler tool chain for CORE-V.  Under the new program structure, this is the overall framework for all Clang/LLVM tool chain development for CORE-V.  Separate "Plan Approved" proposals will address individual target development.  As such there is minimal work directly associated with this Project Launch proposal.
 
-Support for the Software TG's primary goal of developing a thriving commercial ecosystem is a matter for the detailed planning of individual "Plan Approved proposals".
-
 In order to support the Software TG secondary goal of upstreaming all open source tool developments:
 
 - all Clang/LLVM development will be kept compliant with the LLVM Foundation coding and quality assurance standards;
-- the implementation will follow the upstream tool design and coding conventions; and
+- the implementation will follow the upstream tool (that is llvm-project) design and coding conventions; and
 - any vendor-specific modifications or additions will be duly isolated into extensions, so as to maintain a fully functional common open source code base.
 
 Finished LLVM-related work will be contributed to the LLVM community and maintained upstream.
 
-This project requires the modification of a set of existing public open source
-code bases maintained as projects of the LLVM Foundation.  Therefore, the
-processes used within OpenHW will reflect the processes of those upstream
-projects.
+This project requires the modification of a set of existing public open source code bases maintained as projects of the LLVM Foundation.  Therefore, the processes used within OpenHW will reflect the processes of those upstream projects.
 
 The code base of LLVM is of substantial size:
 
@@ -59,7 +54,7 @@ The code base of LLVM is of substantial size:
 
 The LLVM code base includes substantial regression test suites (1.5 MLOC including `libc++` C++ library tests), and success with these test suites is a pre-requisite of upstream acceptance of any patch.
 
-LLVM only has unit tests up to IR level, the LLVM Integrated Tester (_lit_). There is a LLVM execution test suite, but it is of applications to run under an operating system, so only of use to tool chains targeting OS applications. For bare metal applications, the GCC regression tests are used. Execution tests in turn require availability of implementation targets against which the code can be run.
+LLVM only has unit tests up to LLVM Intermediate Representation (IR) level, the LLVM Integrated Tester (_lit_). There is a LLVM execution test suite, but it tests applications running under an operating system. For bare metal applications, the GCC regression tests are used. Execution tests in turn require availability of implementation targets against which the code can be run.
 
 For the project, successful _lit_, LLVM test suite and GCC regression tests are necessary prior to code being committed.  The tests must be extended where necessary to cover new features being added for CORE-V.
 
@@ -80,8 +75,8 @@ The LLVM project is monorepo based, with all tools in the project within the sin
 
 In this context it makes more sense to treat components as the class of target being addressed.  Individual PA proposals may be limited as follows
 
-- they may not support all the components
-- not not all tools in the tool chain may be supported.
+- they may not support all the components (i.e. targets)
+- not all tools in the tool chain may be supported.
 - they may support only one of 32-bit or 64-bit CORE-V targets
 - not all CORE-V ISA extensions may be supported
 
@@ -124,6 +119,9 @@ Any software developer targeting CORE-V processors and wishing to take advantage
 
 ## Summary of Timeline
 <!-- High level view of timeline, for example timeframe for each component -->
+Compiler development is an ongoing process, as the upstream project adopts new features, new language standards, bug fixes and optimizations.  Overall the CORE-V project will mirror the upstream 6-monthly release cycle.
+
+Detailed timelines will be associated with specific Plan Approved (PA) proposals.
 
 ## Explanation of why OpenHW should do this project
 <!--- What is the impact of doing/not doing this project on the OpenHW ecosystem. Why is OpenHW best suited to do this project -->
@@ -136,7 +134,7 @@ In work done a few years ago, code generated for Embench tests by LLVM 11.0 was 
 
 ## Industry landscape: description of competing, alternative, or related efforts in the industry
 
-The "original" compiler used for the development of RISC-V cores is GCC licensed under the GNU General Public License, requiring vendors to make source code available.  LLVM offers a "permissive" licensing scheme which some customers find more attractive, since it does not require the source to be made available. As a result LLVM-based compiler chains appear to be at the basis (in whole or in part) of a number of proprietary compilers.
+The "original" compiler used for the development of RISC-V cores is GCC, licensed under the GNU General Public License, requiring vendors to make source code available.  LLVM offers a "permissive" licensing scheme which some customers find more attractive, since it does not require the source to be made available. As a result LLVM-based compiler chains appear to be at the basis (in whole or in part) of a number of proprietary compilers.
 
 The downside is that there is less pressure on companies to contribute back to LLVM development.  This project will give OpenHW Group members a choice over which approach to adopt (make their toolchain code available or not).
 
@@ -178,7 +176,9 @@ None required.
 
 ### Project Output Documents
 
-None required.
+There are no explicit engineering documents. However comprehensive documentation, including Doxygen commenting of the source code is integral to the LLVM process and will therefore be part of this project.
+
+The only output documents specific to OpenHW Group come under marketing, to inform users of what is available.
 
 ## List of project technical outputs
 <!--- This is a list of technical artifacts produced by the project -->
@@ -226,8 +226,9 @@ Others are likely to be defined in the future. Individual PA proposals will defi
 Prequisites:
 
 - all the upstream tool sources,
-- a suitable implementation platform for regression testing the compiler,
+- a suitable implementation platform for regression testing the compiler (i.e hardware or models to test the compiler against),
 - agreement on the instruction set encodings to be compliant with the RISC-V standard.
+- agreement on the builtin (intrinsic) function prototypes to be used.
 
 External dependencies:
 - ongoing tracking of upstream LLVM development until the CORE-V tool chain is accepted upstream.
@@ -248,7 +249,7 @@ The Software TG will be responsible for oversight of the planning and delivery o
 
 - The Programming Languages and Compiler Technology (PLCT) group at the Chinese Academy of Sciences are providing support for specific PA proposals.
 
-Details of resource required for the various specific releases will be a matter for individual PA propsoals.
+Details of resource required for the various specific releases will be a matter for individual PA proposals.
 
 ### OpenHW engineering staff resource plan: requirement and availability
 
@@ -278,27 +279,30 @@ The standard LLVM tool chain components are shown in the following diagram.
 
 ## Project license model
 
-Each component will use the license of the corresponding upstream RISC-V component.
+Each component will use the license of the corresponding upstream RISC-V version of the component.  Most of the LLVM project is now licensed under the Apache 2 license.  However some included components, such as Google Test and Autoconf use their own imported licenses and some legacy code remains under the old LLVM-UIUC license.  Full details are in the [Developer Policy](https://llvm.org/docs/DeveloperPolicy.html) on the LLVM project website.
+
+Some components are not from LLVM project. For example GNU ld and the GNU Debugger are covered by the GNU General Public License version 3, glibc is covered by the GNU Lesser General Public License, and newlib is covered by a huge range of licenses.  In all these cases the `COPYING` files in the top level directory of the repository detail the licensing requirements.
 
 ## Description of initial code contribution, if required
 
-Not applicable - the initial contribution is the freely available upstream code base.
+Not applicable - the initial contribution is the freely available upstream
+code base.
 
 ## Repository Requirements
 
-The respositories are mirrors of the upstream repositories, with a single branch mirroring upstream top of tree.
+The OpenHW respositories are mirrors of the upstream repositories, with a single branch mirroring upstream top of tree.  These have a limted lifetime until the CORE-V vendor specific code is accepted upstream, thereby allowing all work to be done external to CORE-V.
 
 ## Project distribution model
 
-The delivered code will be distributed as part of the upstream projects.
+The delivered code will be distributed as part of the upstream projects, allowing users to build the tool chain from source code.
 
 Pending upstream adoption, the source code for the components will be available through mirror repositories under OpenHW Group GitHub.
 
-Binaries are provided through the [Embecosm resource download page](https://www.embecosm.com/resources/tool-chain-downloads/#corev)
+For convenience, pre-built binaries for a range of operating systems are provided through the [Embecosm resource download page](https://www.embecosm.com/resources/tool-chain-downloads/#corev).
 
 ## Preliminary Project plan
 <!--- A full project plan is not required at PL. A preliminary plan, which can be for instance the schedule for completion of component or feature list, together with responsible resource, should be provided. Full details should be provided at PA gate. -->
-
+All project plans will appear as part of the Plan Approved proposal.
 
 ## Risk Register
 <!--- A list of known risks, for example external dependencies, and any mitigation strategy -->
