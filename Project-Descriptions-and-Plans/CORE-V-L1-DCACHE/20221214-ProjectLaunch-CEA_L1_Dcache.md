@@ -270,7 +270,10 @@ NA
 NA
 
 ## Architecture and/or context diagrams 
-*Architecture (internal blocks and interconnections), and context (depiction of the the project content within its operational context), are both encouraged where appropriate to depict functionality to both subject matter experts and to non-experts*
+
+![Top-Level View of the HPDC](./top_level_hpdc.png)
+
+![High-Level View of the Micro-Architecture of the HPDC](./hpdc_core.png)
 
 ## Project license model
 
