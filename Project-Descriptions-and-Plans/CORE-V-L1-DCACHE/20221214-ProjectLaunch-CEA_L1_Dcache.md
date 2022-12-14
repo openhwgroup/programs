@@ -129,13 +129,16 @@ for memory accesses.
 ## Summary of Timeline
 
   - Feature specification document
-    - First draft released on November, 2022
-    - Another release after external review on Q1, 2023.
-  - HPDC IP - Could be delivered in multiple phases
-    - First delivery, not fully verified, in Q2, 2023
-    - Final delivery, fully verified according to the testplan, in Q3, 2023
-  - Hardware Memory Prefetcher IP - Same plan that for the HPDC
-  - UVM dedicated testbench - Same plan that for the HPDC
+    - November, 2022 - First draft released.
+    - Q1, 2023 - Another release after external review.
+  -	HPDC, Hardware Memory Prefetcher and UVM testbench
+    -	Q2, 2023 – Cache + Prefetcher + Initial UVM TB,
+      initial test-plan, limited design configurations, no performance testing.
+    -	Q4, 2023 – Cache + Prefetcher + updated test-plan, with verification
+      90% testplan complete (including assertions, performance testing),
+      operating in multiple configurations
+    -	Q1, 2024 - Cache + Prefetcher + final test-plan,
+      with 100% verification, broad set of design configurations
 
 ## Explanation of why OpenHW should do this project
   
