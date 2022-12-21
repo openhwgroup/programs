@@ -4,7 +4,7 @@
 
 This proposal is for a new core based on the CV32E40P. The modifications are small and as it is only a prototype it will not require full verification. The primary purpose for CV32E41P is to be a proof-of-concept (PoC) for the [Zc\*](https://github.com/riscv/riscv-code-size-reduction/) extension (1.0.0), and it is also a proof of concept for the ratified Zfinx (1.0.0) specification.
 
-Zce offers better code-size reduction than only using the C extension. It includes 16-bit and 32-bit encodings. Zfinx shares the integer and floating point register files, primarily to save area but also to reduce context switch time.
+The Zc\* specification is a set of 16-bit instruction encodings which offer a better code-size reduction than using only the C extension. Zfinx shares the integer and floating point register files, primarily to save area but also to reduce context switch time.
 
 The project will not require full verification as it targets TRL-3, the intention is to assess the area, timing, power and complexity of implementing these two extensions in RTL.
 
@@ -49,7 +49,7 @@ The User Manual is available at https://docs.openhwgroup.org/projects/openhw-gro
 
 ## Summary of requirements
 
-The requirements strictly concern ratification of the specifications. Hence they are to implement Zce and Zfinx, and measure the difference in timing, area and complexity compared to CV32E40P.
+The requirements strictly concern ratification of the specifications. Hence they are to implement Zc\* and Zfinx, and measure the difference in timing, area and complexity compared to CV32E40P.
 
 ### Introduction
 
@@ -69,7 +69,7 @@ There is no plan as of PL for the future enhancement of this core beyond the TRL
 
 Zc\* is critically important for the success of RISC-V in the embedded space. Building a proof-of-concept is a requirement for ratification, and the feedback it will give will be invaluable.
 
-OpenHW allows the implementation relative to an already verified core (the CV32E40P) and allows the resulting core to be available as open source, which will be a huge advantage in promoting the adoption of Zce (and to a lesser extent Zfinx).
+OpenHW allows the implementation relative to an already verified core (the CV32E40P) and allows the resulting core to be available as open source, which will be a huge advantage in promoting the adoption of Zc\* (and to a lesser extent Zfinx).
 
 As mentioned above under Future Enhancements, the prototype implementation can be directly reused in other open sourced projects, either in OpenHW or elsewhere.
 
@@ -77,7 +77,7 @@ As mentioned above under Future Enhancements, the prototype implementation can b
 
 Huawei have a proprietary code-size reduction extension. Andes have CoDense. PULP has many custom instructions, some of which reduce code size. Alibaba also have custom instructions for performance and code-size.
 
-The purpose of Zce is to have a standard extension for everyone to use.
+The purpose of Zc\* is to have a standard extension for everyone to use.
 
 ### Related efforts to be described
 
