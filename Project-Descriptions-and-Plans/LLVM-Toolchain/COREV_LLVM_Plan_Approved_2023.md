@@ -29,7 +29,7 @@ Therefore, in order to keep the project under control, the project plan is defin
 ## Project Leader(s)
 
 - Charlie Keaney (overall LLVM project lead)
-- Chunyu Liao (project lead for this project)
+- Chunyu Liao (project lead for the project to support LLVM on the CV32E40Pv2 processor)
 
 ## Project Planning Documents
 
@@ -58,7 +58,7 @@ The LLVM project mostly uses Apache licensing. The full details of all licenses 
 
 ### Verification
 
-Github Continuous Integration and Test (CI) will be set up.
+Github Continuous Integration and Test (CI) will be set up. Initial support for CI: https://github.com/openhwgroup/corev-llvm-project/pull/23
 
 ## Explanation of why OpenHW should do this project
 
@@ -75,7 +75,7 @@ This document should be read in the context of the overall CORE-V LLVM project p
     + agreement on the instruction set encodings to be compliant with the RISC-V standard.
        * draft is currently in [this spreadsheet](https://github.com/openhwgroup/cv32e40p/files/9949531/pulp_encoding_blocks-OPHW-2022-10-07.xlsx).
 + External dependencies:
-    + ongoing tracking of upstream LLVM development until the CORE-V tool chain is accepted upstream.
+    + ongoing tracking of upstream LLVM development until the CORE-V tool chain is accepted upstream. eg: rebase upstream code
     + OVPSim licenses from Imperas if this is chosen for regression testing.
 
 ## List of project outputs
@@ -127,22 +127,29 @@ See License Scheme above.
 ## Description of initial code contribution, if required
 
 embecosm - V1
+The embecosm contribution is already [in the repo](https://github.com/openhwgroup/corev-llvm-project/commits/development), from [e96fda8](https://github.com/openhwgroup/corev-llvm-project/commit/e96fda82f1e93050f413ed1c13640c93dfb80921) to [6c12852](https://github.com/openhwgroup/corev-llvm-project/commit/6c128521db382f74eaf78b5268e6256606c564ff). This contains support for some of the directives, but they may not apply to CV32E40PV2 and will need to be modified.
 
 ## Repository Structure
 
 The full code will initially be stored in the following github repository:
-https://github.com/openhwgroup/corev-llvm-project
+https://github.com/openhwgroup/corev-llvm-project/CV32E40PV2
 
 The upstream code which is the eventual target for this project is in the following repository:
 https://github.com/llvm/llvm-project
 
 ## Project distribution model
 
-OpenHW GitHub repository
+This document should be read in the context of the overall CORE-V LLVM project project launch proposal.  It does not duplicate information from that document.
 
 ## Project plan
 
 ### 2023 workplan
+
+All instructions for the final CV32E40PV2 should be identified in [this issue](https://github.com/openhwgroup/cv32e40p/issues/452). Currently it is following [this spreadsheet](https://github.com/openhwgroup/cv32e40p/files/9949531/pulp_encoding_blocks-OPHW-2022-10-07.xlsx) to implement.
+
+[This document](https://github.com/openhwgroup/cv32e40p/blob/master/docs/source/instruction_set_extensions.rst) can be consulted, but it does not prevail.
+
+The builtin doc is not documented yet, try to refer to the gcc implementation.
 
 | Related TG         | Milestone                                                                                                                      | Target        | Contributor |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------- | ----------- |
@@ -158,7 +165,7 @@ OpenHW GitHub repository
 
 ### Project tracking and meetings
 
-The progress towards 2023 milestones will be tracked in progress meetings. Slides will be updated during the meeting and posted on LLVM Tools Mattermost channel.
+The progress towards 2023 milestones will be tracked in progress meetings. Slides will be updated during the meeting and posted on LLVM Tools and Kanban Board Mattermost channels.
 
 The various activities are led in a unified project way and reported to the relevant task groups.
 
