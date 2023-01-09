@@ -100,7 +100,7 @@ This will follow the upstream project structure.
 This will follow the upstream project structure.
  
 ### Verification:
-This will follow the upsream project structure.  In addition the project will use a subset of the GCC regression tests to verify execution behavior.
+This will follow the upsream project structure. In addition the project will use a subset of the GCC regression tests to verify execution behavior.
 
 ### OpenHW engineering staff resource plan: requirement and availability
 
@@ -139,7 +139,7 @@ https://github.com/llvm/llvm-project
 
 ## Project distribution model
 
-This document should be read in the context of the overall CORE-V LLVM project project launch proposal.  It does not duplicate information from that document.
+This document should be read in the context of the overall CORE-V LLVM project project launch proposal. It does not duplicate information from that document.
 
 ## Project plan
 
@@ -149,18 +149,18 @@ All instructions for the final CV32E40PV2 should be identified in [this issue](h
 
 [This document](https://github.com/openhwgroup/cv32e40p/blob/master/docs/source/instruction_set_extensions.rst) can be consulted, but it does not prevail.
 
-The builtin doc is not documented yet, try to refer to the gcc implementation.
+CORE-V builtin names in [this doc](https://github.com/openhwgroup/core-v-sw/blob/master/specifications/corev-builtin-spec.md)
 
 | Related TG         | Milestone                                                                                                                      | Target        | Contributor |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------- | ----------- |
-| Assembler          | re-encode the existing CV32E40Pv1 instructions                                                                                 | 2023-02-28    | ISCAS       |
-| Assembler          | SIMD instructions                                                                                                              | 2023-03-30    | ISCAS       |
-| Assembler          | Bitmanip                                                                                                                       | 2023-04-30    | ISCAS       |
-| Compiler options   | CV32E40Pv2 has its own compilation options, support it. (eg: xcvhwlp,xcvsimd…)                                                 | 2023-05-30    | ISCAS       |
-| Codegen            | SIMD builtins                                                                                                                  | 2023-07-30    | ISCAS       |
-| Codegen            | Bitmanip builtins                                                                                                              | 2023-09-30    | ISCAS       |
-| Codegen            | General ALU                                                                                                                    | 2023-10-30    | ISCAS       |
-| Codegen            | General load/store                                                                                                             | 2023-11-30    | ISCAS       |
+| Assembler          | re-encode the existing CV32E40Pv1 instructions(alu, hwlp, mac, mem already have the first version, if the code is not consistent, re-encoding to make it suitable for CV32E40P)                                                                                 | 2023-02-28    | ISCAS       |
+| Assembler          | SIMD instructions(According to the above document, SIMD ALU Encoding, SIMD Comparison Encoding and SIMD Complex-numbers Encoding should be included)                                                                                                              | 2023-03-30    | ISCAS       |
+| Assembler          | Bit Manipulation Encoding, Event Load Instructions, etc. This time should contain all assembly instructions.                       | 2023-04-30    | ISCAS       |
+| Compiler options   | CV32E40Pv2 has its own compilation options, support it. (xcvhwlp,xcvsimd,xcvbi,xcvmem,xcvalu,xcvmac,xcvbitmanip,xcvelw )                                                 | 2023-05-30    | ISCAS       |
+| Codegen            | SIMD builtins(Please see corev-builtin-spec.md for more details)                                                               | 2023-07-30    | ISCAS       |
+| Codegen            | Bitmanip builtins(Please see corev-builtin-spec.md for more details)                                                           | 2023-09-30    | ISCAS       |
+| Codegen            | ALU builtins(Please see corev-builtin-spec.md for more details)                                                                | 2023-10-30    | ISCAS       |
+| Codegen            | Post-indexed and register-indexed memory access builtins. This time should contain all builtins.                               | 2023-11-30    | ISCAS       |
 | Hardware loop      | CV32E40Pv1 has already implemented version 1, and new features will be added to it later                                       | 2023-12-30    | ISCAS       |
 
 ### Project tracking and meetings
