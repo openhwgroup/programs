@@ -56,7 +56,7 @@ The LLVM code base includes substantial regression test suites (1.5 MLOC includi
 
 LLVM only has unit tests up to LLVM Intermediate Representation (IR) level, the LLVM Integrated Tester (_lit_). There is a LLVM execution test suite, but it tests applications running under an operating system. For bare metal applications, the GCC regression tests are used. Execution tests in turn require availability of implementation targets against which the code can be run.
 
-For the project, successful _lit_, LLVM test suite and GCC regression tests are necessary prior to code being committed.  The tests must be extended where necessary to cover new features being added for CORE-V.
+For the project, successful _lit_, LLVM test suite and GCC regression tests are necessary prior to code being merged.  The tests must be extended where necessary to cover new features being added for CORE-V.
 
 Until CORE-V related contributions are accepted upstream, code will be developed in narrow mirrors of upstream repositories, featuring a single branch based on upstream top of tree.  This will be used as the basis of the patches to be submitted for upstreaming.
 
@@ -85,6 +85,10 @@ Because of the scale of the project and the current maturity level of LLVM for R
 1. Support for bare metal use of C with CVA6 (64-/32-bit) and with CV32E40P together with the _Newlib_ C library;
 2. Support for Linux application use of C and C++ with CVA6 (32-/64-bit) together with the _GlibC_ C library; and
 3. Support for other RTOSes.
+
+**Note.** At the time of writing, coordination with the CVA6 team is at an early stage.
+
+**Note.** At the time of writing, we do not believe any custom library or compiler work is needed to support FreeRTOS.
 
 #### Component 1 Bare metal Clang/LLVM tool chain
 
@@ -151,7 +155,7 @@ Other toolchains available for RISC-V are:
 
 The GNU tool chain project within OpenHW Group mirrors this project in its suport for CORE-V archhitecture.
 
-An OpenHW Group architecture project devoted to the CVA6 (Ariane) family of cores has passed the project concept gate.  There is a clear synergy between this project and the CVA6 project:
+An OpenHW Group architecture project devoted to the CVA6 (Ariane) family of cores has passed the plan approved gate.  There is a clear synergy between this project and the CVA6 project:
 
 - CVA6 hardware design and verification will directly benefit from the LLVM work;
 - in return, the CVA6 project will directly provide inputs (specifications, documentation) for the compiler- and simulator-related activities in the present project.
@@ -223,7 +227,7 @@ Others are likely to be defined in the future. Individual PA proposals will defi
 
 ## External dependencies
 <!--- These are external factors on which the project depends, such as external standards ratification, external technology input, etc. -->
-Prequisites:
+Prerequisites:
 
 - all the upstream tool sources,
 - a suitable implementation platform for regression testing the compiler (i.e hardware or models to test the compiler against),
@@ -279,7 +283,7 @@ The standard LLVM tool chain components are shown in the following diagram.
 
 ## Project license model
 
-Each component will use the license of the corresponding upstream RISC-V version of the component.  Most of the LLVM project is now licensed under the Apache 2 license.  However some included components, such as Google Test and Autoconf use their own imported licenses and some legacy code remains under the old LLVM-UIUC license.  Full details are in the [Developer Policy](https://llvm.org/docs/DeveloperPolicy.html) on the LLVM project website.
+Each component of the tool chain (compiler, assembler, linker, library etc) will use the license of the corresponding upstream RISC-V version of the component.  Most of the LLVM project is now licensed under the Apache 2 license.  However some included components, such as Google Test and Autoconf use their own imported licenses and some legacy code remains under the old LLVM-UIUC license.  Full details are in the [Developer Policy](https://llvm.org/docs/DeveloperPolicy.html) on the LLVM project website.
 
 Some components are not from LLVM project. For example GNU ld and the GNU Debugger are covered by the GNU General Public License version 3, glibc is covered by the GNU Lesser General Public License, and newlib is covered by a huge range of licenses.  In all these cases the `COPYING` files in the top level directory of the repository detail the licensing requirements.
 
