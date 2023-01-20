@@ -148,14 +148,14 @@ The embecosm contribution is already [in the repo](https://github.com/openhwgrou
 ## Repository Structure
 
 The full code will initially be stored in the following github repository:
-https://github.com/openhwgroup/corev-llvm-project/CV32E40PV2
+https://github.com/openhwgroup/corev-llvm-project/tree/development
 
 The upstream code which is the eventual target for this project is in the following repository:
 https://github.com/llvm/llvm-project
 
 ## Project distribution model
 
-This document should be read in the context of the overall CORE-V LLVM project project launch proposal. It does not duplicate information from that document.
+See the Project Launch document for details.
 
 ## Project plan
 
