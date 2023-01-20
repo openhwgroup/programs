@@ -19,7 +19,9 @@ This plan is to deliver Clang/LLVM compiler support for all of the CV32E40P vers
 
 CORE-V LLVM project is a long-run project. It is therefore difficult to plan the complete project.
 
-Therefore, in order to keep the project under control, the project plan is defined for 2023 activity. 
+Therefore, in order to keep the project under control, the project plan is defined for 2023 activity.
+
+During 2023 we plan to support all ISA extensions in the assembler (H1/2023) and all ISA extensions through builtins in the compiler H2/2023). A detailed timeline is provided in this document. 
 
 ## OpenHW Members/Participants committed to participate in CORE-V LLVM project
 
@@ -50,7 +52,20 @@ As a summary, contains:
     + compiler
     + support for ISA extensions
 
-The project will use the existing GNU linker and debugger. The standard RISC-V newlib and compilerRT libraries will be used unchanged.
++ The components being supported
+    + support CV32E40Pv2 target
+    + support 32-bit CORE-V target
+    + support ISA extension
+        + xcvhwlp (hardware loops)
+        + xcvmac (multiply-accumulate)
+        + xcvbi (immediate branch)
+        + xcvmem (post-indexed and register-indexed memory access)
+        + xcvalu (miscellaneous ALU operations)
+        + xcvsimd (PULP 8/16-bit SIMD)
+        + xcvbitmanip (PULP bit manipulation)
+        + xcvelw (event load word) 
+
+The project will use the existing GNU linker and debugger. The standard RISC-V newlib and compilerRT libraries will be used unchanged. The newlib library will be used on bare metal.
 
 ### License scheme
 
@@ -80,11 +95,12 @@ This document should be read in the context of the overall CORE-V LLVM project p
 
 ## List of project outputs
 + Final deliverables
-    + extensions to upstream LLVM compiler tools to support CORE-V in the upstream llvm-project repository; and
+    + extensions to upstream LLVM compiler tools to support CORE-V in the upstream llvm-project repository;
     + revisions to the CORE-V design specifications to clarify ambiguities.
 
 + Interim deliverables
-    + Reports on progress to the monthly SW TG:
+    + The Corev-llvm-project meets every week;
+    + Reports on progress to the monthly SW TG, Slides will be updated during the meeting and posted on LLVM Tools and Kanban Board Mattermost channels;
     + progress against work packages;
     + regression test results;
     + updates to the project plan; and
@@ -163,18 +179,10 @@ CORE-V builtin names in [this doc](https://github.com/openhwgroup/core-v-sw/blob
 | Codegen            | Post-indexed and register-indexed memory access builtins. This time should contain all builtins.                               | 2023-11-30    | ISCAS       |
 | Hardware loop      | CV32E40Pv1 has already implemented version 1, and new features will be added to it later                                       | 2023-12-30    | ISCAS       |
 
-### Project tracking and meetings
-
-The progress towards 2023 milestones will be tracked in progress meetings. Slides will be updated during the meeting and posted on LLVM Tools and Kanban Board Mattermost channels.
-
-The various activities are led in a unified project way and reported to the relevant task groups.
-
-The Corev-llvm-project meets every week.
-
 ### Risk register
 
-|                           | Likelihood (1-10) | Impact (1-3) | Avoidance&nbsp;/ Mitigation                                                   |
-| ------------------------- | :---------------: | :----------: | ----------------------------------------------------------------------------- |
-| Not enough resources      | 8                 | 3            | 24 More technical participants are welcome. Prioritize most important features first.                                       |
-| Insufficient coordination | 5                 | 2            | 10 Weekly meetings                                                               |
-| Conflicting contributions | 5                 | 2            | 10 Weekly meetings                                                               |
+|                           | Likelihood (1-10) | Impact (1-3) | Overall |  Avoidance&nbsp;/ Mitigation                                                   |
+| ------------------------- | :---------------: | :----------: | :-----: | --------------------------------------------------------------------------- |
+| Not enough resources      | 8                 | 3            | 24      | More technical participants are welcome. Prioritize most important features first.                                       |
+| Insufficient coordination | 5                 | 2            | 10      | Weekly meetings                                                               |
+| Conflicting contributions | 5                 | 2            | 10      | Weekly meetings                                                               |
