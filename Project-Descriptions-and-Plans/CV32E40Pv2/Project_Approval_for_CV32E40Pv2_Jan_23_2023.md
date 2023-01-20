@@ -138,28 +138,29 @@ Supporting all v2 features.
 
 | Related TG      | Milestone                                                                                                                      | Target        | Contributor            |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------- | ---------------------- |
+| Core            | Initial User Manual version with PULP instructions re-encoding                                                                 | 2022-12-15    | Dolphin                |
 | Core            | User Manual final version                                                                                                      | 2023-03-31    | Dolphin                |
 | Core            | CV32E40Pv1 RTL re-encoded to v2                                                                                                | 2022-12-15    | Dolphin                |
-| Core            | Correction of CV32E40Pv1 remaining bugs                                                                                        | 2023-02-28    | Dolphin                |
 | Core            | Remaining v2 RTL updates (Zfinx, HWLoops CSR remapping...)                                                                     | 2023-02-28    | Dolphin                |
-| Core            | Correction of CV32E40Pv2 bugs found by Formal Verification                                                                     | 2023-03-28    | Dolphin                |
+| Core            | Correction of CV32E40Pv1 remaining bugs                                                                                        | 2023-03-31    | Dolphin                |
+| Core            | Correction of CV32E40Pv2 bugs found by Formal Verification                                                                     | 2023-03-31    | Dolphin                |
 | Core            | Correction of CV32E40Pv2 bugs found by Verification                                                                            | 2023-04-30    | Dolphin                |
-| Core            | Code Coverage analysis for verification scenario improvment                                                                    | 2023-06-15    | Dolphin                |
+| Core            | Code Coverage analysis for verification scenario improvment                                                                    | 2023-05-31    | Dolphin                |
 | Core            | Checklist for Project Freeze                                                                                                   | 2023-06-30    | Dolphin                |
-| Software        | Initial version of GNU GCC binutils supporting v2 instructions (Hardware Loops not supported)                                  | 2023-01-15    | Embecosm               |
+| Software        | Initial version of GNU GCC binutils supporting v2 instructions (except Hardware Loops)                                         | 2023-01-15    | Embecosm               |
 | Software        | Final version GNU GCC compiler, binutils, gdb supporting v2                                                                    | 2023-03-31    | Embecosm               |
-| Verification    | Initial version of Reference Model supporting v2 instructions (Hardware Loops not supported)                                   | 2023-01-31    | Imperas                |
-| Verification    | Final version of Reference Model supporting v2 instructions                                                                    | 2023-02-28    | Imperas                |
+| Verification    | Initial version of Reference Model supporting v2 instructions (except Hardware Loops)                                          | 2023-01-31    | Imperas                |
+| Verification    | Final version of Reference Model supporting v2 instructions                                                                    | 2023-02-15    | Imperas                |
 | Verification    | Addition of all X instructions to corev-dv instructions generator                                                              | 2022-12-15    | Dolphin                |
 | Verification    | core-v-verif verification environment conversion to RVFI                                                                       | 2022-12-15    | Dolphin                |
-| Verification    | core-v-verif verification environment conversion to ImperasDV support                                                          | 2023-01-31    | Dolphin                |
+| Verification    | core-v-verif verification environment conversion to ImperasDV support                                                          | 2023-02-15    | Dolphin                |
 | Verification    | Formal Verification Plan                                                                                                       | 2022-12-15    | Dolphin / OneSpin      |
 | Verification    | Simulation Verification Plan                                                                                                   | 2023-01-31    | Dolphin                |
-| Verification    | Add Imperas Floating Point test suite to core-v-verif for simulation non-regression                                            | 2023-02-28    | Dolphin                |
+| Verification    | Add Imperas Floating Point test suite to core-v-verif for compliance checking                                                  | 2023-02-28    | Dolphin                |
 | Verification    | Floating Point DIV and SQRT specific scenario generation and verification                                                      | 2023-02-28    | Dolphin                |
 | Verification    | SIMD X Instructions scenario for operands coverage                                                                             | 2023-03-15    | Dolphin                |
-| Verification    | Interrupt and Debug on new instructions (except HWLoop)                                                                        | 2023-04-31    | Dolphin                |
-| Verification    | Interrupt and Debug on HWLoop                                                                                                  | 2023-05-15    | Dolphin                |
+| Verification    | Interrupt and Debug on new instructions (except Hardware Loops)                                                                | 2023-04-31    | Dolphin                |
+| Verification    | Interrupt and Debug on Hardware Loops                                                                                          | 2023-05-15    | Dolphin                |
 | Verification    | Functional Coverage analysis for scenario improvment                                                                           | 2023-06-15    | Dolphin                |
 | Verification    | Formal Verification runs on final RTL                                                                                          | 2023-05-15    | Dolphin / OneSpin      |
 | Verification    | Checklist for Project Freeze                                                                                                   | 2023-06-30    | Dolphin                |
