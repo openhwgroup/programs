@@ -107,8 +107,8 @@ and how we know when it is verified (coverage).
 
 ### Design 
 * Configurable RTL at TRL5 level with parameters allowing v1 and v2 configurations plus FPU instructions latencies.
-* Implementation Reports<br>
-  PPA analysis on different use cases (e.g. either targetting low area or high frequency)
+* Benchmarking results (coremark, EmBench 1.0, ...) of different configurations.
+* Implementation Reports (PPA analysis on different use cases e.g. either targetting high frequency or low area).
 
 ### Verification
 * State-of-the-art core-v-verif uvm verification environment
@@ -176,5 +176,6 @@ Slides will be updated and posted on OpenHW programs repository.
 | ---------------------------------- | :--------: | :----: | -------------------------------- |
 | SW toolchain avaibility in time    | Mid / Low  | Major  | Weekly meetings                  |
 | Reference Model avaibility in time | Mid / Low  | Major  | Weekly meetings                  |
+| CV-FPU DIV/SQRT IEEE-754 compliant | Mid        | Major  | Close coordination with ETHZ     |
 | Insufficient coordination          | Low        | Mid    | Weekly meetings                  |
 | Lack of resources                  | Mid        | Major  | More participants are welcome!!! |
