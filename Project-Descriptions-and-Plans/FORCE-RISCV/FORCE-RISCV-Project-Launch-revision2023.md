@@ -90,6 +90,8 @@ Binguang.Zhao/Ethan
 - Duncan Bees / Mike Thompson  - program management oversight
 
 ## Next steps/Investigation towards Project Launch (**PC only**)
+### To investigate the project maintain policy
+TODO:
 ### To investigate what document categories should be added
 1. Usage guides (a usage guide is ready, though updates are necessary)
 2. Developers guide (some tutorial for adding new instructions, memory/register file guide are ready, but more force internal or basic flow is needed)
