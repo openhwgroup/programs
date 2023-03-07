@@ -57,10 +57,10 @@ TODO:
 
 ## Explanation of why OpenHW should do this project
 The following strengths of FORCE-RISCV are in comparison to other open source ISGs where FORCE-RISCV does it better: 
-      �    High degree of test configurability via extensive Python front-end APIs.
-      �    High quality of randomness with generate-and-step using the linked ISS library, able to achieve high density of interesting test features and reach high micro-architecture coverage requirements.
-      �    Generates ELF files directly, no dependency on external toolchain compilation, simplifies the simulation work-flow.
-      �    Great test generation speed, able to scale well for heavy MP/MT processor verification.  Due to the origin of FORCE-RISCV from server-class CPU projects.
+- High degree of test configurability via extensive Python front-end APIs.
+- High quality of randomness with generate-and-step using the linked ISS library, able to achieve high density of interesting test features and reach high micro-architecture coverage requirements.
+- Generates ELF files directly, no dependency on external toolchain compilation, simplifies the simulation work-flow.
+- Great test generation speed, able to scale well for heavy MP/MT processor verification.  Due to the origin of FORCE-RISCV from server-class CPU projects.
 
 Additional advanced features like MP/MT and resource dependency will meet the need of more complicated processor design that OpenHW Group might tackle in the future.
 
