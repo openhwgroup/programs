@@ -4,8 +4,8 @@
 | ------------------------------------ | ---------------------------------------------------------- |
 | PC gate: Project Concept             | Approved on 2021-06-28                                     |
 | PL gate: Project Launch              | Approved on 2021-11-22                                     |
-| PA gate: Plan Approved proposal      | Presented on 2023-01-23                                    |
-| PF gate: Project Freeze              |                                                            |
+| PA gate: Plan Approved proposal      | Approved on 2023-02-27                                     |
+| PF gate: Project Freeze              | Target is 2023-06-31                                       |
 
 Author: Pascal Gou&eacute;do (Dolphin Design)
 
