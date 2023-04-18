@@ -63,13 +63,13 @@
 *The high level project deliverables (e.g. code, verification, user document, and other deliverables) should be listed. I.e. what are the open-source deliverables? Don't list detailed features here.*
 *The following table is provided as an example*
 
-| Deliverable		    | Description			| Leader				| 
+| Deliverable		    | Description			| Technical Leader		| 
 | --------------------- | --------------------- | ---------------------	| 
 | Item1	    			| RTL code				|						|
 | Item2	    			| Verification of RTL	|						|
 | Item3	    			| User Manual			|						|
 
-
+*All major deliverables require a Technical Project Leader.*
 
 ## Feature List 
 
@@ -79,15 +79,18 @@
 
 
  
-## Resources
+## Resources/ Resource Plan
 *Members (organizations) and individuals committed to work on the project should be listed in this section*
 *The following table is provided as an example*
 
-| Organization					| Person							| Area of focus							|      
+| Organization					| Person							| Project deliverable focus 			|      
 | --------------------    		| --------------------    			| -------------------- 					|
 | Organization1	    			| Person1					  		|	RTL									|
 | Organization2	    			| Person2					  		|	RTL									|
-| Organization2	    			| Person3					  		|	Verification									|
+| Organization2	    			| Person3					  		|	Verification						|
+ 
+*Every project deliverable must have at least one resource assigned at PA*.
+*View of resources needed/available to be added*
  
  
  ## Project Leadership Roles
@@ -97,15 +100,15 @@
  - *Committers on project repos*
 * Often these roles would be taken the same person(s).*
 
-| Role									| Person							| Organization							|      
-| --------------------    				| --------------------    			| -------------------- 					|
-| Project Manager(s) (if applicable)	| 					  				|										|
-| Technical Project Leader(s)	    	| 					  				|										|
-| Committer(s) on project repo			!									|										| 
+| Role									| Person							| Organization							| Committer Status						|       
+| --------------------    				| --------------------    			| -------------------- 					|										| 
+| Project Manager(s) (if applicable)	| 					  				|										|										| 
+| Technical Project Leader(s)	    	| 					  				|										|										| 
+| Committer1 on project repo			!									|										| Elected								| 
+| Committer2 on project repo			!									|										| Election to be held					| 
 
 
-*There needs to be at least one CORE-V CORES committer who can review and merge pull requests on the project repos. The committers should be elected as CORE-V Committers before the PA gate*.
-
+*There needs to be at least one CORE-V CORES committer already elected who can review and merge pull requests on the project repos. 
 
 
 
@@ -119,7 +122,7 @@
 - *For agile projects, tasks can be assigned to individuals during project execution. If so, initial task backlog without assignment to individual can be created.*
 - *Format of the WBS can be github project board, spreadsheet, or other*.
 
-
+- *Examples to be provided in a future version*
 
 
 ## Schedule
@@ -128,6 +131,21 @@
 - *The schedule should indicate the planned date of major milestones and the first release for the project*
 - *Remaining uncertainties or issues to be resolved should be described*
 - *How the schedule will be maintained following PA should be described*
+
+- *Examples to be provided in a future version*
+
+## Project Repo 
+*The project repo(s) should be setup and listed here*
+*The repos should have README.MD and LICENSE.MD created*
+*The LICENSE.MD file should specify the project license*
+
+## Regular Project Meeting 
+*The project should have a regular project meeting established and included on the OpenHW calendar. Send a recurring meeting request to meetings@openhwgroup.org*
+
+## Regular Project Report
+*The project should have a regular project meeting report agreed. The format of the report should follow the suggestion in the programs/template repo. Consult OpenHW staff as meeting report location*.
+
+
 
 ## Risk Register
 *Risks towards completion of the project for the given target should be listed and risk mitigation plan should be stated*
@@ -167,11 +185,15 @@
 | HL Project deliverables identified| 					  			|										|
 | Feature list available|		| 					  				|										|
 | Resource plan available|		| 					  				|										|
+| Repo setup|					| 					  				|										|
+| License.md file in place		| 					  				|										|
 | Project Manager identified	| 					  				|										|
-| Technical Project Leader identified| 					  			|										|
-| At least 1 project committer identified| 					  		|										|
+| Technical Project Leader per deliverable identified| 					  			|										|
+| At least 1 project committer elected| 					  		|										|
 | Work Breakdown Structure available | 					  			|										|
 | Baseline schedule available	| 					  				|										|
-| Ongoing schedule tracking 	| 	e.g. Github project board			|									|
-| Risk Reister available | 					  			|										|
-| Set of Project Freeze/Release Checklists available| 					  		|							|
+| Ongoing schedule tracking identified 	| 				|		e.g. Github project board							|
+| Regular project meeting setup	| 					  				|										|
+| Project Monthly report format agreed	| 					  				|										|
+| Risk Register available | 					  			|										|
+| Set of Project Freeze/Release Checklists identified | 					  		|							|
