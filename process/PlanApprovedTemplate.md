@@ -30,30 +30,32 @@
 
 
 ## (*For SW Projects*) Target Platform
-*Specify the specific target platform from within the target family for this project. The target family is specified in the PC/PL document. For example, the PC/PL might address CV32E4 family of embedded processors. The PA might target the CV32E40P MCU.*
+*Specify the specific target platform from within the target family for this project. The target family is specified in the PC/PL document. For example, the PC/PL might address CV32E4 family of embedded processors, while the PA might target the CV32E40P MCU*
 
 ## (*For Cores Projects*) Part Numbers
-*Write down the CORE-V part number assigned for each of the output cores produced/verified by this project plan
+*Write down the CORE-V part number assigned for each of the output cores produced/verified by this project plan*
 
 | Core produced/verified in this project		    | Part Number			| Comment				| 
-| --------------------- | --------------------- | ---------------------	| 
+| --------------------- 							| --------------------- | ---------------------	| 
+| Core CV...												  |						|						| 
 
 ## (*For Cores Projects*) TRL target
 
-*Write down the TRL target for each of the output cores produced/verified by this project plan
+*Write down the TRL target for each of the output cores produced/verified by this project plan*
 
 | Core produced/verified in this project		    | TRL Target			| Comment				| 
-| --------------------- | --------------------- | ---------------------	| 
-
+| --------------------- 							| --------------------- | ---------------------	| 
+| Core CV...										|						|						| 
 
 ## Release plan
 
 *Write down the anticipated release number and release schedule for the work covered by this project plan. For example, Release 1.0.0 in 2024-12-01*
 
 | Release number		    | Planned date						| Description															| 
-| 1.0.0--------------------- | 2024-12-01--------------------- | Initial fully verified TRL5 release including X,Y,Z					|
+| --------------------- 	| --------------------- 			| ---------------------													| 
+| 1.0.0						| 2024-12-01						| Initial fully verified TRL5 release including X,Y,Z					|
 
-*Add any comment about release strategy or timing *
+*Add any comment about release strategy or timing such as follow-on releases *
  
 
 
@@ -104,8 +106,8 @@
 | --------------------    				| --------------------    			| -------------------- 					|										| 
 | Project Manager(s) (if applicable)	| 					  				|										|										| 
 | Technical Project Leader(s)	    	| 					  				|										|										| 
-| Committer1 on project repo			!									|										| Elected								| 
-| Committer2 on project repo			!									|										| Election to be held					| 
+| Committer1 on project repo			|									|										| Elected								| 
+| Committer2 on project repo			|									|										| Election to be held					| 
 
 
 *There needs to be at least one CORE-V CORES committer already elected who can review and merge pull requests on the project repos. 
@@ -155,7 +157,7 @@
 | --------------------    		| --------------------    			| -------------------- 					|
 | Risk1	    					| 					  				|										|
 | Risk2	    					| 					  				|										|
-| Risk3	    					| 					  				!										|
+| Risk3	    					| 									|										|
 
 
 
@@ -166,8 +168,8 @@
 | --------------------    		| --------------------    			| -------------------- 					|
 | RTL Freeze	    			| 					  				|										|
 | Verification Complete	    	| 					  				|										|
-| Documentation Complete    	| 					  				!										|
-| IP Checklist complete    	    | 					  				!										|
+| Documentation Complete    	| 					  				|										|
+| IP Checklist complete    	    | 					  				|										|
 
 
 ## PA Checklist
