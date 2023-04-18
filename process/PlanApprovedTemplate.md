@@ -103,7 +103,7 @@
 * Often these roles would be taken the same person(s).*
 
 | Role									| Person							| Organization							| Committer Status						|       
-| --------------------    				| --------------------    			| -------------------- 					|										| 
+| --------------------    				| --------------------    			| -------------------- 					| -------------------- 					| 
 | Project Manager(s) (if applicable)	| 					  				|										|										| 
 | Technical Project Leader(s)	    	| 					  				|										|										| 
 | Committer1 on project repo			|									|										| Elected								| 
