@@ -56,7 +56,9 @@
      \begin{picture}(0,0) 
        \put(0.4,0.4){
          \makebox(0,0)[bl]{
-           \includegraphics[height=0.5cm]{./images/Logo-OpenHW-H}
+           \includegraphics[height=0.4cm]{./images/Logo-OpenHW-H}\hspace*{0.1cm}
+           \includegraphics[height=0.4cm]{./images/Logo-SU}\hspace*{0.1cm}
+           \includegraphics[height=0.4cm]{./images/GFonly-ORANGE-letters}
        }}%
      \end{picture}%
    }{}
@@ -208,10 +210,11 @@
   %\subtitle{\raisebox{-0.1cm}{\includegraphics[height=0.4cm]{./images/osda2023-logo}}
   %          \quad \DATEXXIII}
 
-   \author[J.-P. \Chaput]{Sorbonne Université \& Global Foundries \\*[0.5cm]
+   \author[J.-P. \Chaput]{Sorbonne Université/LIP6 \& Global Foundries \\*[0.5cm]
                           \includegraphics[height=1.0cm]{./images/Logo-LIP6-bleugris}\hspace{0.5cm}
                           \includegraphics[height=0.9cm]{./images/Logo-SU}           \hspace{0.5cm}
-                          \includegraphics[height=1.0cm]{./images/Logo-CNRS}%        \hspace{0.5cm}
+                          \includegraphics[height=1.0cm]{./images/GFonly-ORANGE-letters}% \hspace{0.5cm}
+                         %\includegraphics[height=1.0cm]{./images/Logo-CNRS}%        \hspace{0.5cm}
                          }
    
    \institute[SU-LIP6]{ \texttt{Jean-Paul.Chaput@lip6.fr} }
@@ -226,6 +229,8 @@
 
    \begin{frame}
      \frametitle{Overview}
+     This project is jointly proposed by \textbf{Sorbonne Université}\ \& \textbf{Global Foundries}.
+     \vspace*{\baselineskip}
      \begin{itemize}
        \setlength\itemsep{1.0\baselineskip}
        \item Design a CORE-V MCU on Global Foundries 180nm.
@@ -247,6 +252,8 @@
        \item A CORE-V MCU chip usable for small applications. 
        \item A CORE-V MCU design tutorial for academics and teaching,
              along with at least a basic test PCB board.
+       \item A CORE-V 180 DevKit may also be developped either part of this
+             project or as a follow up proposal.
        \item A free, CORE-V MCU readily customizable platform for all
              industrial partners.
      \end{itemize}
@@ -257,14 +264,13 @@
      \frametitle{Contributions}
      \begin{itemize}
        \setlength\itemsep{1.0\baselineskip}
-       \item GF will provide the shuttle to fabricate the design.
-       \item SU/LIP6 may punctually contact GF to clarify points on the design kit.
+       \item GF will support the GDSII physical design and supply the 180nm die.
+       \item GF will define the MCU market requirements.
        \item SU/LIP6 will provides the RTL-to-GDSII toolchain, configure it,
              and build the design tutorial.
        \item In addition SU/LIP6 will provides simple analog blocs, like a PLL.
        \item Various Standard cells library, SRAM and I/O cells will be tested.
-       \item The OpenHW Group will provide a scaled down version of the
-             CORE-V MCU.
+       \item A scaled down version of the CORE-V MCU will be used.
      \end{itemize}
    \end{frame}
 
@@ -322,6 +328,12 @@
                \item The GF library, supplied with the design kit.
                \item The portable cells, supplied by Chips4Makers (\url{https://chips4makers.io}).
                \item The SU/LIP6 portable cells (symbolic).
+             \end{enumerate}
+       \item And two SRAMs:
+             \begin{enumerate}
+               \setlength\itemsep{1.0\baselineskip}
+               \item The GF SRAM, supplied with the design kit.
+               \item The portable SRAM supplied by Chips4Makers.
              \end{enumerate}
        \item The version to be send to the foundry will be choosen according
              to overall area and timing results.
