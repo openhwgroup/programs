@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<title>project-concept-proposal.rst</title>
+<link rel="stylesheet" href="openhw.css" type="text/css" />
+</head>
+<body>
+<div class="document">
+
+
+<div class="section" id="openhw-project-concept-and-project-launch-markdown-template-instructions">
+<h1>OpenHW Project Concept And Project Launch Markdown Template: Instructions</h1>
+<p><em>This template is divided into two parts:</em> - <em>The</em><strong>Project Concept
+(PC)</strong><em>required fields are shown in the first part.</em> - <em>The
+additional</em><strong>Project Launch (PL)</strong><em>required and optional fields are
+shown in the second part.</em></p>
+<p><em>Delete any sections not needed for your proposal</em></p>
+<p><em>The normal proposal flow is:</em> - <strong>The PC proposal</strong> <em>is prepared and
+presented to TWG. The PC proposal introduces the project and explains
+the market drivers and the “why”</em> - <em>TWG grants PC gate with feedback,
+or rejects PC gate with feedback</em> - <em>If PC granted, additional work is
+carried out to prepare the</em><strong>PL proposal</strong>. - <em>The</em><strong>PL
+proposal</strong><em>contains updates to the PC fields and adds additional
+fields. The PL proposal explains the “what” of the project.</em> - <em>For
+software porting projects, the PL should contain the feature list</em> -
+<em>For IP core or other complex projects, the PL should contain a high
+level feature list (the user manual with feature specification is
+developed for the Plan Approved gate).</em></p>
+<hr/><p><strong>Part 1, PC fields:</strong> <em>The PC proposal introduces the project and
+explains the market drivers and the “why”</em></p>
+</div>
+<div class="section" id="title-of-project-core-v-180-mcu">
+<h1>Title of Project - “CORE-V-180-MCU”</h1>
+</div>
+<div class="section" id="project-concept-proposal">
+<h1>Project Concept Proposal</h1>
+<div class="section" id="date-of-proposal-2023-04-24">
+<h2>Date of proposal - 2023-04-24</h2>
+</div>
+<div class="section" id="author-s-jean-paul-chaput-marie-minerve-louerat-karthik-chandrasekaran">
+<h2>Author(s) - Jean-Paul Chaput, Marie-Minerve Louerat, Karthik Chandrasekaran</h2>
+</div>
+<div class="section" id="high-level-summary-of-project-project-components-and-deliverables">
+<h2>High Level Summary of project, project components, and deliverables</h2>
+<p>This project is the creation of an updated version of the CORE-V-MCU in
+a different process technology. The process is the GF-180 which is an
+open-source PDK process. The flow from RTL to GSDII will use entirely
+open source tooling with back-end (place and route, clock tree analysis,
+etc.) developed by LIP6. Key outputs of the project include</p>
+<ul class="simple">
+<li>Revision/simplification of the CORE-V-MCU design so as to enable the
+chip to fit within the area allowed under the GF180 shuttle process.</li>
+<li>Verification goals to be determined</li>
+<li>Digital synthesis using open-source (Yosys) tools</li>
+<li>PLL will be developed/supplied by LIP6</li>
+<li>Back-end design into the GF-180 process using open-source tools
+developed and published by Sorbonne LIP6</li>
+<li>Back-end design tool input (including scripts) as a minimum will be
+part of the open-source project output</li>
+<li>Layout can be published</li>
+<li>The project will serve as a validation of the LIP6 tools. Specific
+output (white paper, publication…) of the tool validation to be
+determined.</li>
+<li>Fabrication of the device</li>
+<li>PCB creation for test purposes</li>
+<li>Documentation of the device</li>
+<li>Documentation of the open-source design/implementation process (to be
+determined the role of OpenHW and LIP6 in this)</li>
+</ul>
+<p>Further development of software or applications on the PCB is for
+further study.</p>
+<p>The open-source tools utilized in the project will include: - tool1 ….</p>
+</div>
+<div class="section" id="summary-of-market-or-input-requirements">
+<h2>Summary of market or input requirements</h2>
+<div class="section" id="known-market-project-requirements-at-pc-gate">
+<h3>Known market/project requirements at PC gate</h3>
+</div>
+<div class="section" id="potential-future-enhancements">
+<h3>Potential future enhancements</h3>
+<p>see Industry landscape section for project drivers. The key point is
+that this project is a demonstration and validation of an open design
+process that will greatly assist smaller companies.</p>
+</div>
+</div>
+<div class="section" id="who-would-make-use-of-openhw-output">
+<h2>Who would make use of OpenHW output</h2>
+<p>First and foremost, we believe that the chip can be used by universities
+for teaching purposes.</p>
+<p>Second, the device may be adopted or used as the basis of designs for
+commerical purposes (e.g.&nbsp;small appliances or IoT applications). Small
+business could adopt the chip baseline design together with the open
+source scripts and easily modify the chip as needed.</p>
+<p>To support the second goal, obviously documentation of the “how-to” for
+the design tools is very important.</p>
+<p>As described in “why”</p>
+</div>
+<div class="section" id="initial-estimate-of-timeline">
+<h2>Initial Estimate of Timeline</h2>
+<p>At the project concept phase, an initial target of 1 year to undertake
+the following:</p>
+<ul class="simple">
+<li>tradeoff of features and available space, understanding potential
+applications</li>
+<li>design exploration of IP blocks and sources: – GF external SRAM –
+LIP6 SRAM – chips4makers</li>
+<li>Implement the CORE-V-MCU</li>
+<li>Layout &amp; layout verification/signoff</li>
+<li>Fabrication</li>
+</ul>
+</div>
+<div class="section" id="explanation-of-why-openhw-should-do-this-project">
+<h2>Explanation of why OpenHW should do this project</h2>
+<p>This project is an ecosystem-enabling effort. From the perspective of
+small companies needing to design and fabricate a chip, cost barriers
+include (i) Design tools and design costs (ii) IP licensing costs (iii)
+fabrication costs</p>
+<p>While OpenHW is already providing open-source cores and related IP which
+are free of license costs, implementation costs can be very high,
+particularly EDA tools. This project validates the use of open-source
+back-end tools from LIP6 which can potentially be a game-changer. This
+complements OpenHW’s open-source mission.</p>
+</div>
+<div class="section" id="industry-landscape-description-of-competing-alternative-or-related-efforts-in-the-industry">
+<h2>Industry landscape: description of competing, alternative, or related efforts in the industry</h2>
+<p>See the Global Foundries github site describing the GF180 program
+<a class="reference external" href="https://github.com/google/gf180mcu-pdk">https://github.com/google/gf180mcu-pdk</a> In short</p>
+<p>“The GF180MCU open source PDK is a collaboration between Google and
+GlobalFoundries to provide a fully open source process design kit (PDK)
+and related resources to enable the creation of designs manufacturable
+at GlobalFoundries’s facility on their 0.18um 3.3V/6V MCU process
+technology.” As of April 2023, the GF180 is targetted at test chips.</p>
+</div>
+<div class="section" id="openhw-members-participants-committed-to-participate">
+<h2>OpenHW Members/Participants committed to participate</h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Aspect</th>
+<th class="head">Organization</th>
+<th class="head">Individual if known</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>tradeoff of features,
+space, applications</td>
+<td>LIP6</td>
+<td>Jean-Paul
+(particularly
+back-end</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>GF</td>
+<td>Karthik or other
+staff from GF</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>OpenHW staff</td>
+<td>TBD for consultation</td>
+</tr>
+<tr><td>design exploration of
+IP blocks and sources</td>
+<td>LIP6</td>
+<td>Jean-Paul</td>
+</tr>
+<tr><td>Implement the
+CORE-V-MCU (yosys)</td>
+<td>LIP6</td>
+<td>Jean-Paul</td>
+</tr>
+<tr><td>Implement the
+CORE-V-MCU (back-end)</td>
+<td>LIP6</td>
+<td>Jean-Paul</td>
+</tr>
+<tr><td>Ongoing engineering
+consultation</td>
+<td>GF</td>
+<td>TBD</td>
+</tr>
+</tbody>
+</table>
+<p>Sorbonne LIP6 will drive</p>
+<ul class="simple">
+<li>the back-end design</li>
+</ul>
+</div>
+<div class="section" id="project-leader-s">
+<h2>Project Leader(s)</h2>
+<div class="section" id="technical-project-leader-s">
+<h3>Technical Project Leader(s)</h3>
+<p>Jean-Paul will act as project leader.</p>
+</div>
+<div class="section" id="project-manager-if-a-pm-is-designated">
+<h3>Project Manager, if a PM is designated</h3>
+</div>
+</div>
+<div class="section" id="next-steps-investigation-towards-project-launch-pc-only">
+<h2>Next steps/Investigation towards Project Launch (<strong>PC only</strong>)</h2>
+<div class="section" id="item1-to-investigate">
+<h3>Item1 to investigate</h3>
+<ul class="simple">
+<li>Initiate a regular project meeting to start discussing tradeoffs,
+clarifying the applications targeted</li>
+<li>Put an architecture diagram together with list of IP blocks</li>
+<li>Put more detail on the project timeline and steps</li>
+<li>Establish a project repo in OpenHW and choose a project license</li>
+<li>Create project slide deck to drive interest inside/outside OpenHW</li>
+<li>Create initial document outline for the user manual</li>
+<li>target TWG meeting at end of July 2023 for Project Launch</li>
+</ul>
+<hr/><p><strong>Part 2, PL fields:</strong></p>
+<p><em>The PL proposal explains the “what”. Some of it can be updated directly
+from the PC proposal</em></p>
+</div>
+</div>
+</div>
+<div class="section" id="title-of-project-core-v-coresproject-xyz">
+<h1>Title of Project - “CORE-V CoresProject XYZ”</h1>
+</div>
+<div class="section" id="project-launch-proposal">
+<h1>Project Launch Proposal</h1>
+<div class="section" id="date-of-proposal-2021-01-01">
+<h2>Date of proposal - 2021-01-01</h2>
+</div>
+<div class="section" id="author-s-joe-smith-mary-jones">
+<h2>Author(s) - Joe Smith, Mary Jones</h2>
+</div>
+<div class="section" id="summary-of-project">
+<h2>Summary of project</h2>
+<div class="section" id="components-of-the-project">
+<h3>Components of the Project</h3>
+<p><em>Components are major project components or groups of features.</em> - <em>A
+project may have, for example, 1-10 components.</em> - <em>Components detail
+the “The what” at high level, not detailed level</em> - <em>Components don’t
+consider timeline.</em> - <em>For example</em> - <em>Component 1 “Compiler changes for
+standard instructions.”</em> - <em>Component 2 “Compiler changes for custom
+instructions”</em> - <em>Component 3 “Updates to compiler tools”.</em></p>
+<div class="section" id="component-1-description">
+<h4>Component 1 Description</h4>
+</div>
+<div class="section" id="component-2-description">
+<h4>Component 2 Description</h4>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<span id="summary-of-market-or-input-requirements-1"></span><h2>Summary of market or input requirements</h2>
+<div class="section" id="known-market-project-requirements-at-pl-gate">
+<h3>Known market/project requirements at PL gate</h3>
+</div>
+<div class="section" id="potential-future-enhancements-for-future-project-phases">
+<h3>Potential future enhancements for future project phases</h3>
+</div>
+</div>
+<div class="section" id="id2">
+<span id="who-would-make-use-of-openhw-output-1"></span><h2>Who would make use of OpenHW output</h2>
+</div>
+<div class="section" id="summary-of-timeline">
+<h2>Summary of Timeline</h2>
+<p><em>High level view of timeline, for example timeframe for each component</em></p>
+</div>
+<div class="section" id="id3">
+<span id="explanation-of-why-openhw-should-do-this-project-1"></span><h2>Explanation of why OpenHW should do this project</h2>
+<p><em>What is the impact of doing/not doing this project on the OpenHW
+ecosystem. Why is OpenHW best suited to do this project</em></p>
+</div>
+<div class="section" id="id4">
+<span id="industry-landscape-description-of-competing-alternative-or-related-efforts-in-the-industry-1"></span><h2>Industry landscape: description of competing, alternative, or related efforts in the industry</h2>
+</div>
+<div class="section" id="id5">
+<span id="openhw-membersparticipants-committed-to-participate-1"></span><h2>OpenHW Members/Participants committed to participate</h2>
+</div>
+<div class="section" id="id6">
+<span id="project-leaders-1"></span><h2>Project Leader(s)</h2>
+<div class="section" id="id7">
+<span id="technical-project-leaders-1"></span><h3>Technical Project Leader(s)</h3>
+</div>
+<div class="section" id="id8">
+<span id="project-manager-if-a-pm-is-designated-1"></span><h3>Project Manager, if a PM is designated</h3>
+</div>
+</div>
+<div class="section" id="project-documents">
+<h2>Project Documents</h2>
+<div class="section" id="project-planning-documents">
+<h3>Project Planning Documents</h3>
+</div>
+<div class="section" id="project-output-documents">
+<h3>Project Output Documents</h3>
+</div>
+</div>
+<div class="section" id="list-of-project-technical-outputs">
+<h2>List of project technical outputs</h2>
+<p><em>This is a list of technical artifacts produced by the project</em></p>
+<div class="section" id="feature-requirements">
+<h3>Feature Requirements</h3>
+<p><em>Features are more granular than Components.</em> <em>For SW porting projects,
+this list serves as the detailed project reference for features</em> <em>For IP
+Cores or more complext projects, a user manual with requirements
+specification is produced at the PA gate, which may supercede this list
+of features</em></p>
+<div class="section" id="feature-1">
+<h4>Feature 1</h4>
+</div>
+<div class="section" id="feature-2">
+<h4>Feature 2</h4>
+</div>
+</div>
+</div>
+<div class="section" id="external-dependencies">
+<h2>External dependencies</h2>
+<p><em>These are external factors on which the project depends, such as
+external standards ratification, external technology input, etc.</em></p>
+</div>
+<div class="section" id="openhw-tgs-involved">
+<h2>OpenHW TGs Involved</h2>
+<p><em>Which TG will be involved, such as SW, HW, Verification, etc.</em></p>
+</div>
+<div class="section" id="resource-requirements">
+<h2>Resource Requirements</h2>
+<p><em>This is a list of major resources/people required to implement the
+project and indication of whether the resources are available</em></p>
+<div class="section" id="engineering-resource-supplied-by-members-requirement-and-availability">
+<h3>Engineering resource supplied by members - requirement and availability</h3>
+</div>
+<div class="section" id="openhw-engineering-staff-resource-plan-requirement-and-availability">
+<h3>OpenHW engineering staff resource plan: requirement and availability</h3>
+</div>
+<div class="section" id="marketing-resource-requirement-and-availability">
+<h3>Marketing resource - requirement and availability</h3>
+</div>
+<div class="section" id="funding-for-project-aspects-requirement-and-availability">
+<h3>Funding for project aspects - requirement and availability</h3>
+</div>
+</div>
+<div class="section" id="architecture-and-or-context-diagrams">
+<h2>Architecture and/or context diagrams</h2>
+<p><em>Architecture (internal blocks and interconnections), and context
+(depiction of the the project content within its operational context),
+are both encouraged where appropriate to depict functionality to both
+subject matter experts and to non-experts</em></p>
+</div>
+<div class="section" id="project-license-model">
+<h2>Project license model</h2>
+</div>
+<div class="section" id="description-of-initial-code-contribution-if-required">
+<h2>Description of initial code contribution, if required</h2>
+</div>
+<div class="section" id="repository-requirements">
+<h2>Repository Requirements</h2>
+</div>
+<div class="section" id="project-distribution-model">
+<h2>Project distribution model</h2>
+</div>
+<div class="section" id="preliminary-project-plan">
+<h2>Preliminary Project plan</h2>
+<p><em>A full project plan is not required at PL. A preliminary plan, which
+can be for instance the schedule for completion of component or feature
+list, together with responsible resource, should be provided. Full
+details should be provided at PA gate.</em></p>
+</div>
+<div class="section" id="risk-register">
+<h2>Risk Register</h2>
+<p><em>A list of known risks, for example external dependencies, and any
+mitigation strategy</em></p>
+</div>
+</div>
+</div>
+</body>
+</html>
