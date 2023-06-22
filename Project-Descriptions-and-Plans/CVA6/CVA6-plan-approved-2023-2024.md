@@ -383,6 +383,7 @@ A waterfall method is used.
 | Core            | Corrections related to verification activities                                                                                 | Continuous    | TSS and MU-Electronics                          |
 | Verification    | Verification step 1: DVPlans                                                                                                   | 2023-Q3       | TSS (lead), 10xEngineers, MU-Electronics, ECC   |
 | Verification    | Verification step 1: CV32A60X is verified at programmer's view level                                                           | 2023-Q4       | TSS (lead), 10xEngineers, MU-Electronics, ECC   |
+| Verification    | Verification step 1: Create Spike tandem                                                                                       | 2023-Q3       | TSS (lead)                                      |
 | Verification    | Verification step 2: DVPlans                                                                                                   | 2024-Q3       | TSS (lead), 10xEngineers, MU-Electronics, ECC   |
 | Verification    | Verification step 2: CV32A60X is fully verified (programmer's view level + microarchitecture)                                  | 2024-Q4       | TSS (lead), 10xEngineers, MU-Electronics, ECC   |
 | Verification    | CV32A60X released, Project Freeze (PF) checklist                                                                               | 2024-Q4       | TSS (lead) and verification team                |
