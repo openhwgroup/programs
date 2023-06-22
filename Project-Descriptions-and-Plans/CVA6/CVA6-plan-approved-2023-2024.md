@@ -58,12 +58,12 @@ Therefore, we first got a project plan for **2022 activity**. Then it is updated
 ## Project Leader(s)
 
 - Project Manager (PM) and Technical project leader (TPL): Jérôme Quévremont, TRT
-- Verification leader and main committer: Jean-Roch Coulon, INVIA
+- Verification leader and main committer: Jean-Roch Coulon, TSS
 - FPGA softcore leader: Sébastien Jacq, TRT
 
 ## Project Planning Documents
 
-The 2022 and 2023-2024 workplans, are below.
+The 2022 and 2023-2024 workplans are below.
 
 The progress towards the milestones will be tracked during CVA6 meetings, usually once a month.
 
@@ -93,7 +93,7 @@ In addition, this sustainable open-source solution, lowers barriers for newcomer
 
 ### Verification
 
-To foster cooperation and efficiency within OpenHW Group, CVA6 will use and contribute to **core-v-verif**. Spike will be used as a reference ISS and Imperas OVPSim is considered too.
+To foster cooperation and efficiency within OpenHW Group, CVA6 will use and contribute to **core-v-verif**. Spike will be used as a reference ISS. Imperas OVPSim could be considered in the future.
 
 Gateways between OpenHW core-v-verif repositories and Thales internal environment (GitLab, CI...) will be set up.
 
@@ -168,14 +168,14 @@ The document structure has been defined at the PL gate:
 - Requirement specification
     - Identifies features agreed upon
     - “What” defined as requirements with identifiers
-    - Some sections are short (references to RISC-V ISA, AXI specs…)
+    - Can be seen as a datasheet
 - Users’ guide
     - Includes more details than the specification
     - For CVA6 integrators and users: HW, SW, ASIC, FPGA… viewpoints
 - Design document
     - Explains the “How”: design choices…
     - Not prescriptive, written during or after the design
-	- Useful for next projects and certain certification schemes
+    - Useful for next projects and certain certification schemes
 - Verification Environment Specification
     - User manual for the verification environment testbenches, testcases, verification components, etc.
     - Description of the testbench structure and theory of operation
@@ -245,7 +245,7 @@ to promote CVA6 and attract new participants to the project.
 On the members' side, promotion activities (presentations, demos...) will mainly be addressed by the engineering team.
 
 Results obtained by the engineering team in 2021 (CV32A6 release, FreeRTOS support, Linux support...) and in 2022
-(Yocto support, CV-X-IF addition, FPGA optimizations...) can be used to promote the CVA6 project.
+(Yocto support, CV-X-IF addition, FPGA optimizations, continuous integration in place...) can be used to promote the CVA6 project.
 
 ### Funding for project aspects - requirement and availability
 
