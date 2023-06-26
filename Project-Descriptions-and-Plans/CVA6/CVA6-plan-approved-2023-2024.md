@@ -18,12 +18,13 @@ with or without FPU, with or without MMU...
 
 CVA6 targets both **ASIC** and **FPGA soft-core** implementations.
 
-The ability to have very similar 32- and 64-bit cores should make the transition between both quite seamless.
+The ability to have very similar 32- and 64-bit cores should allow to quite seamlessly switch between them in a SoC architecture:
+same core interface, a few compiler directives to change.
 
 The goal of the project is to bring **CVA6** to an industrial maturity known as **TRL5** (technical readiness level):
 - Quality documentation
 - Add a few features desired by participating members
-- High-coverage verification
+- High-coverage verification for some given CVA6 configurations (= set of parameters)
 - Optimizations for FPGA-based products
 - SW tools (GCC, GDB, LLVM\*...)
 - FPGA prototype and development board
@@ -31,7 +32,7 @@ The goal of the project is to bring **CVA6** to an industrial maturity known as 
 
 \* FreeRTOS and LLVM support are developed in related OpenHW projects.
 
-In addition to these industrial goals, a sustainable open-source solution, presumably a subset of outputs, will be maintained for researchers,
+Additional goal: A sustainable open-source solution, presumably a subset of outputs, will be maintained for researchers,
 engineers seeking to evaluate CVA6 and industrial domains that need to support their products for decades.
 
 ### Summary of Timeline
@@ -204,11 +205,11 @@ The specification and users' guide are inputs for design verification plans.
 
 ### Software:
 
-- Baremetal BSP for FPGA boards featuring CVA6
-- Linux ports (based on UBoot, OpenSBI and Yocto)
-- Toolchains (compiler...)
+- Baremetal BSP for Genesys 2 FPGA board featuring CVA6
+- Linux ports for CV32A6 and CV64A6 on the Genesys 2 board, based on UBoot bootloader, OpenSBI firmware and Yocto embedded Linux distribution builder
+- Toolchains (parameters for GCC compilation...)
 
-LLVM and FreeRTOS are products of related OpenHW projects.
+FreeRTOS is a products of a related OpenHW project, that will be kept in sync with the CVA6 project.
 
 
 ## TGs Impacted/Resource requirements
@@ -227,7 +228,7 @@ The OpenHW staff are expected to support the project on their scope:
 - Davide Schiavone, Director of Engineering, Cores Task Group
 - Duncan Bees, Director, Technical Programs
 
-Florian's experience as the creator of ARIANE is also expected.
+Florian's experience as the creator of ARIANE is also required for technical guidance.
 
 ### Engineering resource supplied by members - requirement and availability
 
@@ -395,9 +396,11 @@ A waterfall method is used.
 
 ### Project tracking and meetings
 
-The progress will be tracked in CVA6 meetings.
+The progress will be tracked in CVA6 meetings: specific Gantt for step 1 and 2 verification, GitHub project board for non-verification activities.
+Short minutes and informal documents will be posted to Mattermost's CVA6 channel, to keep the whole team updated
+(and taking into account that such information is not long-lived).
 
-The various activities (core, verification, software) are reported to the relevant task groups.
+The various activities (core, verification, software) are reported to the relevant task groups, based on their respective reporting format.
 
 The CVA6 usually meets every week, the agenda contains progress and technical topics.
 The meetings are well suited for East Coast, Europe and India timezones. Once a month, the meeting starts later to accomodate participants from the West Coast.
@@ -418,3 +421,31 @@ The release plan and Project Freeze (PF) checklist for CV32A60X need to be defin
 | Hard to merge contributions | High       | Mid    | Updated CONTRIBUTING.md                                                          |
 | Export control              | Low        | Major  | Apply OpenHW membership agreement (carefully review non-OpenHW contributions)    |
 | Lack of market appeal       | Mid        | Major  | Marketing/dissemination + CV32A60X is expected to be fully verified in 2024.     |
+
+## PA Checklist
+
+*Confirm in the table below that each listed item is completed, or explain the exception/waiver*
+
+| Item                                                | Completion (Y/N/In progress/NA) | Comment |      
+| --------------------------------------------------- | --------------------------------| --------|
+| Project Concept Complete                            | Y                               |         |
+| Project Launch Complete                             | Y                               |         |
+| SW Target platform identified                       | Y                               |         |
+| Cores Part Number identified	                      | Y                               | CV32A60X for steps 1 and 2 |
+| Cores TRL Target identified	                      | Y                               |         |
+| Project release plan identified                     | N                               | Activity for step 2 |
+| HL Project deliverables identified                  | Y                               |         |
+| Feature list available                              | Y                               | See requirement specification |
+| Resource plan available                             | Y                               | Team in place for steps 1 and 2 |
+| Repo setup                                          | Y                               |         |
+| License.md file in place                            | Y                               |         |
+| Project Manager identified                          | Y                               |         |
+| Technical Project Leader per deliverable identified | Y                               | For verification and FPGA activities |
+| At least 1 project committer elected                | Y                               |         |
+| Work Breakdown Structure available                  | Y                               |         |
+| Baseline schedule available                         | Y                               |         |
+| Ongoing schedule tracking identified                | Y                               |         |
+| Regular project meeting setup                       | Y                               |         |
+| Project Monthly report format agreed                | Y                               |         |
+| Risk Register available                             | Y                               |         |
+| Set of Project Freeze/Release Checklists identified | N                               | Activity for step 2 |
