@@ -5,6 +5,8 @@ CSS = openhw.css
 pdf:           CORE-V-180-MCU-TWG-20230424.pdf
 pdf-1x2:       CORE-V-180-MCU-TWG-20230424-1x2.pdf
 
+update-1:      CORE-V-180-MCU-TWG-20230626.pdf
+
 proposal-html:  project-concept-proposal.html
 proposal-clean: clean-md-Project-proposal-COVE-V-180-MCU
 
