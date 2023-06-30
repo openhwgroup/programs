@@ -381,6 +381,8 @@ A waterfall method is used.
 | Core            | Note to requirement ISA-110                                                                                                    | December 2023 | ECC                                             |
 | Core            | FPGA optimizations: finish committing existing optimizations                                                                   | 2023-Q3       | TRT                                             |
 | Core            | FPGA optimizations: focus on frequency increase                                                                                | 2023-Q4       | TRT                                             |
+| Core            | ASIC design flow: implement Synopsys synthesis and place and route                                                             | 2023-Q4       | TSS                                             |
+| Core            | Parametrization                                                                                                                | 2023-Q3       | TSS                                             |
 | Core            | Corrections related to verification activities                                                                                 | Continuous    | TSS and MU-Electronics                          |
 | Verification    | Verification step 1: DVPlans                                                                                                   | 2023-Q3       | TSS (lead), 10xEngineers, MU-Electronics, ECC   |
 | Verification    | Verification step 1: CV32A60X is verified at programmer's view level                                                           | 2023-Q4       | TSS (lead), 10xEngineers, MU-Electronics, ECC   |
