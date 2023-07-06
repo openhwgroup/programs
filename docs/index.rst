@@ -13,7 +13,7 @@ CORE-V Documentation
 `CORE-V Docs` is the top level Read the Docs project for OpenHW Group's CORE-V family of open-source RISC-V processor cores and related projects.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
    cores

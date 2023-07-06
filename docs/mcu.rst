@@ -15,12 +15,15 @@
 
    SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
    
-CORE-V-MCU Projects
-===================
-
-The CORE-V-MCU is the first of a family of ASICs built around OpenHW Group's family of CORE-V Cores. 
+CORE-V ASIC Projects Documentation
+======================================
 
 
-CORE-V MCU
-----------
+CORE-V-MCU and Related Projects
+-------------------------------
+
+The CORE-V-MCU is the first of a family of MCUs built around OpenHW Group's family of CORE-V Cores. 
+
+CORE-V-MCU
+##########
 `OpenHW Group CORE-V-MCU User Manual <https://docs.openhwgroup.org/projects/core-v-mcu/>`_.
