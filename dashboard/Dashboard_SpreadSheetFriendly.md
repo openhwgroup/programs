@@ -8,18 +8,21 @@ Last Updated Aug 14, 2023
 **PF = Project Freeze**																																																						
 																																																						
 ## Cores Verified to TRL5 (project status = PF)																																																						
+
 |	Name					|	TRL Achieved	|	Status	|	TPL or PM																																							|	Repo												|	PC		|	PL		|	PA		|	PF			|	Project Docs																			|	RTD																							|																										
 |	--------------------	|	-----------		|	-------	|	-----------																																							|	--------------------								|	----	|	-----	|	----	|	-----		|	------																					|	--------------------																		|																										
 |	CORE-V CV32E40P        	|	TRL 5			|	PF		|	[David Schiavone](https://github.com/orgs/openhwgroup/people/davideschiavone) <br /> + [Arjan Binks](https://github.com/orgs/openhwgroup/people/Silabs-ArjanB)		|	[cv32e40p](https://github.com/openhwgroup/cv32e40p)	|	n/a		|	n/a		|	n/a		|	2021.01.20	|	[CV32E40P Readme](https://github.com/openhwgroup/cv32e40p/blob/master/README.md)		|	[CV32E40P User Manual](https://readthedocs.com/projects/openhw-group-cv32e40p-user-manual/)	|
 
 
 ## Cores completed to TRL3 (project status = PF)																																																																																																											
+
 |	Name					|	TRL Achieved	|	Status	|	TPL or PM																																							|	Repo												|	PC		|	PL		|	PA		|	PF			|	Project Docs																			|	RTD																							|																										
 |	--------------------	|	-----------		|	-------	|	-----------																																							|	--------------------								|	----	|	-----	|	----	|	-----		|	------																					|	--------------------																		|																										
 |	CORE-V CV32E41P  		|	TRL 3			|	PL		|	[Mark Hill](https://github.com/MarkHillHuawei)  																													|	[cv32e41p](https://github.com/openhwgroup/cv32e41p)	| 21.06.28 	| 23.02.27 	|			|	23.08.12	|	[Project Launch](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CV32E41P/CV32E41P-Project-Launch-Proposal.md)	|		|																										
 |	CORE-V CVA5 			|	TRL 3			|	PC		|	[Eric Matthews](https://github.com/e-matthews)																														|	[cva5](https://github.com/openhwgroup/cva5)			| 21.07.26 	|			|			|	23.08.12	|	[CVA5 PC](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-CVA5/PC-Taiga-CVA5.md)  <br /> + [Taiga TWG pres.](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-CVA5/SFU_taiga_formal_overview_openhw-2021-28jun2.pdf)	|		|		|																											
 	
 ## Active CORES TG Projects																																																						
+
 |	Name				|	TRL Target	|	Status	|	TPL or PM																		|	Repo													|	PC			|	PL			|	PA		| PF Estimate 	|	Project Docs	|	RTD	|	Project Plan	|	Project Board	|																										
 |	------------		|	-------		|	-------	|	-----------																		|	--------------------									|	-------		|  -----		|	----	|	----	  	|	--------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|																										
 |	CORE-V CV32E40S 	|	TRL 5		|	PA		|	[Oystein Knauserud](https://github.com/silabs-oysteink) 						|	[cv32e40s](https://github.com/openhwgroup/cv32e40s)		|	21.02.22    |	21.02.22  	| 21.03.22 	| 2023 Q4		|	[CV32E40S Combined PPL/PL](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CV32E40S/CV32E40S-PPL.md) <br /> +  [PA Slides](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CV32E40S/CV32E40X_CV32E40S_project_plan.pdf)	|	[CV32E40S User Manual](https://docs.openhwgroup.org/projects/cv32e40s-user-manual/en/latest/)	|	[PA Checklist](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CV32E40S/CV32E40X_CV32E40S_PA.xlsx) 	|		|																										
@@ -32,18 +35,19 @@ Last Updated Aug 14, 2023
 |	CORE-V CVA6-H		|	TRL 5		|	PC		|	"Bruno Sa, Sandro Pinto"														|	integrated within CVA6									|	23.02.27 	|				|			|				|	[CVA6-H PC presentation](https://docs.google.com/presentation/d/1mkl5KSRtpkGT18YbUadwtFZjMNdz3euX/edit#slide=id.g1b965471e2e_0_515)	|		|		|		|																										
 |	CORE-V TCCache		|	TRL 5		|	PC		|	[Max Giacometti](https://github.com/openhwgroup/core-v-mcu-demo/commits?author=suppamax) | 													|	23.06.26 	|				|			|				|	[TC Cache PC ](https://drive.google.com/file/d/1e4i5IJWn5AbQZ1puO6QwY8jwgOan-HSd/view)	|		|		|		|																										
 
-																																																						
+
 ## Active HW TG Projects	
-																																																					
+
 |	Name				| Status	|	TPL or PM																																|	Repo																	|	PC		|	PL		|	PA		|	PF Estimate	|	Project Docs																																																																						|	RTD																				|	Project Plan			|	Project Board	|																										
-|	-----				|	-------	|	------																																	|	----------																																|	------																	|	---		|	---		|	---		|	---------	|	-------																																																																								|	------------																	|	------------------		|	--------------------	|																										
+|	-----				|	-------	|	------																																	|	----------																|	------	|	---		|	---		|	---			|	---------																																																																							|	-------																			|	------------			|	--------------	|																										
 |	CORE-V-MCU			|	PA		|	[Greg Martin](https://github.com/gmartin102) <br /> +  [Hugh Pollitt-Smith](https://github.com/orgs/openhwgroup/people/hpollittsmith) 	|	[core-v-mcu](https://github.com/openhwgroup/core-v-mcu) 				| 20.10.05  | 21.04.26  | 21.12.12 	|	2023 Q4		|	[Project Launch](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-MCU-SoC/MCU-PL-Document.md)  <br /> +      [Plan Approved](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-MCU-SoC/PA-document-Oct-25-2021.md)	|	[CORE-V MCU User Manual](https://docs.openhwgroup.org/projects/core-v-mcu/)		|	[CORE-V MCU Project Libre Plan at PA](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-MCU-SoC/Core-V-MCU-SoC-Plan.pod)	|	[CV MCU Documentation Project Board](https://github.com/orgs/openhwgroup/projects/4)	|																										
 |	CORE-V-MCU-DEVKIT	|	PL		|	[Joseph Julicher](https://github.com/n9wxu)																								|	[core-v-mcu devkit](https://github.com/openhwgroup/core-v-mcu-devkit)	| 21.12.12 	| 22.06.27 	|			|	2023 Q4		|	[Project Concept](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-MCU-DEV-KIT/CORE-V_DEV-KIT_project_concept_approved.md) <br /> + [Project Launch](https://docs.google.com/document/d/15v-1zsUEahpGljZNWOrmNEDTp1RlQCiLntFuJ-Hcw0I/edit)					|																					|	[DevKit project plan](https://docs.google.com/spreadsheets/d/1_ZNuUTWRcsXSrK5P65c8eD6A9smef_kPlVBQ3d4o1sU/edit#gid=0)						|		|																										
 |	CORE-V-TRUSTED-MCU	|	PC		|	Abdoulaye Berthe																														|																			| 22.07.25 	|			|			|				|	[CORE-V-MCU2 Project Concept](https://docs.google.com/document/d/1nW9rFAFHhNkNi53khY3hhynXaHIm4OqJ/edit)	|		|		|		|																										
 |	CORE-V-180-MCU		|	PC		|	[Jean-Paul Chaput](https://github.com/jpc-lip6)																							|																			| 23.04.24 	|			|			|				|	[CORE-V-180-MCU Project Concept](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-180-MCU/project-concept-proposal.md)	[June 2023 update](https://drive.google.com/drive/u/1/folders/1HnUBYWknyvzqUWm3VCjcmhFatosRgBd2)									|								|							|						|																										
 
-																																																						
+
 ## Active VERIFICATION TG Projects																																																						
+
 |	Name				|	Status		|	TPL or PM													|	Repo																|	PC		| PL		|	PA	|	PF Estimate	|	Project Docs																																																																													|	RTD	|	Project Plan	|	Project Board	|																										
 |	------				|	-------		|	--------													| -------																|	---		| ---		|	---	|	----------	|	------------																																																																													|	---	|	---------		|	--------------------	|																										
 |	FORCE-RISCV  		|	PL			|	[Binguan Zhao](https://github.com/hanfeng0114) + Robert Chu |	[force-riscv](https://github.com/openhwgroup/force-riscv) 			| 20.09.28 	| 20.10.26 	|		|				| [Force-Riscv PC](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/FORCE-RISCV/FORCE-RISCV-ISG-preliminary-project-proposal.md) <br /> + [Force-Riscv PL](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/FORCE-RISCV/FORCE-RISCV-ISG-project-proposal.md)	|		|	[Force-RiscV Feature List and Project Plan](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/FORCE-RISCV/FORCE-RISCV-ISG-Feature-Descriptions-and-Project-Plan.md)	|		|																										
@@ -51,6 +55,7 @@ Last Updated Aug 14, 2023
 |	CORE-V-COPRO VERIF	|	PC			|	[Morris Imfeld](https://github.com/moimfeld)				|																		| 22.06.27 	|			|		|				| [CORE-V-COPRO-VERIF PC](https://drive.google.com/drive/u/1/folders/1aKna8CIDdPWyBN8dTXdAlBUSOiGUj7LW)	|		|		|		|																										
 																																																						
 ## Active SW TG Projects																																																						
+
 |	Name									|	Project Goal 	|	Status		|	TPL or PM																								|	Repo																																							|	PC			|	PL			|	PA			| PF Estimate	|	Project Docs																																					|	RTD			|	Project Plan																																					|	Project Board			|																										
 |	-----------------						|	-----------	 	|	--------	----------																									|	-------																																							|	----		|	--------	|	----		|	--------	|	---------																																						|	--------	|	----------																																						|	--------------------	|																										
 |	CORE-V LLVM TOOLS  						|	Upstream		|	PL			|	[Jeremy Bennett](https://github.com/jeremybennett)	[Charley Keaney](https://github.com/CharKeaney)  	|	[corev-llvm-project](https://github.com/openhwgroup/corev-llvm-project)   																						|				|	23.02.27 	|	23.02.27 	|				| [LLVM Tools PL](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/LLVM-Toolchain/llvm-toolchain-pl.md)							|				|																																									|							|																										
@@ -67,11 +72,13 @@ Last Updated Aug 14, 2023
 
 																																																						
 ## Active UNIVERSITY OUTREACH TG Projects																																																						
+
 |	Name					|	TRL Target 	|	Status	|	TPL or PM													|	Repo												|	PC	|	PL	|	PA	|	PF	|	PF Estimate	|	Project Docs	|	RTD	|	Project Plan	|	Project Board	|																										
 |	------------			|	-----------	|	-------	|	-----------													|	------												|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|																										
 |	CORE-V VEC RESEARCH  	|	TRL 3		|	PC		|	[Hugh Pollitt Smith](https://github.com/hpollittsmith)   	|														|		|		|		|		|		|	[core-v-VEC research ppl](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-VEC-Research/PPL%20proposal%20for%20Core-V-VEC%20Research%20Project.md)	|		|		|		|																										
 																																																						
 ## Closed or Inactive Projects																																																						
+
 |	Name	|	TRL Target	|	Status	|	TPL or PM	|	Repo	|	PC	|	PL	|	PA	|	PF	|	PF Estimate	|	Project Docs	|	RTD	|	Project Plan	|	Project Board	|																										
 |	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|	--------------------	|																										
 |	CORE-V-IDE-CDT  	|		|	Discontinued (merged into CORE-V SDK)	|		|	[core-v-ide-cdt](https://github.com/openhwgroup/core-v-ide-cdt) 	|		|		|		|		|		|		|		|		|		|																										
@@ -84,7 +91,7 @@ Last Updated Aug 14, 2023
 **In Development** 																														
 **In Review**  																																		
 **Released**																																		
-																																																							
+
 |	Name								|	Status			|	TPL or PM	|	Repo														|	Estimate for release	|	Project Docs																																																																											|	RTD	|	Project Plan	|																										
 |	---------							|	------			|	-------		|	----														|	----------				|	-------------																																																																											|	--- |   --------------	|															
 |	CORE-V-BUILTIN-SPECIFCATION			|	Released		|				|																|							|																																																																															| 		|   				|
