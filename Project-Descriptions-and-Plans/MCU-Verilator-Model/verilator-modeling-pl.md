@@ -1,69 +1,96 @@
-# OpenHW Project Launch Proposal: Verilator Modeling for CORE-V MCU and FPGA SoC
+# OpenHW Project Launch Proposal: Verilator Modeling for CORE-V for Software Applications
+
+| Gate                     | Status                                                     |
+| -------------------------| ---------------------------------------------------------- |
+| PC gate: Project Concept | Approved on 2021-02-078as Preliminary Project Launch (PPL) |
+| PL gate: Project Launch  | Presented to Software TG on 2023-06-05                     |
+
+Author: Jeremy Bennett
 
 ## Summary of project
-This project aims to provide a Verilator system model for the CORE-V MCU SoC. The purposes are
 
-a. Predominantly, to be capable of supporting software development flows for which cycle accurate modeling of the target is appropriate, such as OS bring up and tool chain testing and optimization.
-b. A supplemental purpose is to be capable of a kicking the tires verification of the CORE-V MCU SoC RTL, including within continuous integration (CI) flows.
+This project aims to provide a Verilator system model CORE-V processors. The purpose is to support software development flows for which cycle accurate modeling of the target **implementation** is appropriate, such as OS bring up and tool chain testing and optimization.
+
+Plan Approval reviews will be required for individual cores as targets.
 
 From the Verilator Wikipedia entry:
 (https://www.veripool.org/wiki/verilator)
 
 Verilator is a free and open-source software tool capable of converting Synthesizable Verilog/SystemVerilog to a cycle-accurate cycle-accurate, 2-state behavioral model in C++ or SystemC.
 
+### Changes since Project Concept
+
+The overall focus has changed to purely software centric uses.
+
+The following are the key changes:
+
+1. the role of "kick-the-tires verification model" is dropped;
+2. the use as a software debug target is given priority;
+3. the scope is widened to all CORE-V processors;
+4. the Verilator model is created through X-Heep, rather than CORE-V MCU; and
+5. the project is moved to be purely under the Software Task Group.
+
 ## Components
-The project has three parts.
+The project has two parts.
 
-### Component 1 - standalone system model
-Creation of a standalone executable taking a software program as argument, running to completion, and returning the return code of the program.
+### Component 1 - software debug target
 
-### Component 2 - software debug target
 Creation of a component usable as either a standalone debug program or library implementing the remote serial protocol for connection by GDB or LLDB. The library version would be suitable for integration within an IDE.
 
-### Component 3 - kick the tires verification model
-Not meant for a full verification, but to allow to run sanity tests in-step with the verilator verification functionality available in the core-v-verification environment.
+### Component 2 - standalone system model
+
+A secondary goal is creation of a standalone executable taking a software program as argument, running to completion, and returning the return code of the program.  Not all targets will implement this second component.
 
 ## Why openhw group should do this project
-The main reason is that software tool chain and operating system developers working with Core-V reference MCU (both SoC and FPGA) need a system model. This allows people to begin development without having physical hardware, expanding the potential reach of software development on the MCU platform.
 
-OpenHW is best placed to do this project due to our obvious knowledge of the MCU and the requirements.
+The main reason is that software tool chain and operating system developers working with Core-V processors need a cycle accurate model of the core implementation.  In particular, optimization requires an exact model of the microarchitecture behavior, and an **implementation** model is essential for sign-off of such optimizations.
 
-The rapidity of creating Verilator models makes them highly suitable for "smoke test" verification. This is in addition to the conventional full chip verification flow.
-* quality and predictability of initial results for novice users of RISC-V-based processors.
-* repeatability of results between users and across environment.
-* linting for use in environments where a full event-driven simulation is not available.
+This work complements other **design** models, both high-level and cycle-accurate, which are available far earlier in the design cycle.
 
-The Verilator model is useful for validating software components such as the Hardware Abstraction Layer (HAL).
+OpenHW is best placed to do this project due to our obvious knowledge of the processors and the requirements.
 
 ### Summary of development
 
-1. (Component 1) creating flow to generate model from RTL (in prototype as of 21 May 2021).
-2. (Component 1) providing modified RTL files for non-synthesizable elements (in prototype as of 21 May 2021).
-3. (Component 2) implementing a debug server for GDB/LLDB (started as of 21 May 2021).
-4. (Component 3) creating flow to run verification using the Verilator model.
-5. (Component 1) creating standalone executable for software use.
-6. (Component 3) software models of UART, LED (may be several types, e.g simple loopback of UART or connection to system UART pins).
+The focus is on the processor core.  However, to be useable, this must be combined with a debug unit and memory, connected by a system bus.  For this reason, the work is based on the X-Heep project.
+
+The overall framework for the debug interface is as follows.
+
+```
++-------------+           +---------------+             +-------------+
+|             |           |               |           +-+             |
+|     GDB     |    RSP    |   Embdebug    |           |J|    X-Heep   |
+|     or      |<--------->|---------------|   JTAG    |T|    Model    |
+|     LLDB    |           |   Embdebug    |<--------->|A|             |
+|             |           | target module |  S/W I/F  |G|             |
++-------------+           +---------------+           +-+-------------+
+```
+The standalone model is a wrapper around this.
+
+The key development stages are:
+
+1. (Component 1) implmentation of a GDB/LLDB server interface to the CORE-V debug unit modeled in Verilator (complete);
+2. (Component 1) creation of a Verilator model of the target core(s) with associated debug unit and memory subsystem (in progress for CV32E40Pv2);
+3. (Component 1) integration of the Verilator model with the GDB/LLDB server interface to create a fully functional debug server (in progress for CV32E40Pv2);
+4. (Component 1) validation of the debug server;
+5. (Component 1) accelleration of the debug server through use of DPI for direct memory writing;
+6. (Component 2) creation of a standalone executable for general software use; and
+7. (Component 2) validation of the standalone executable.
 
 ### Summary of timeline
 
-To support software development on the CORE-V MCU project (independent of changes to MCU)
-1. (component 1) initial Verilator model by end of May 2021 (was end of March 2021 at preliminary proposal)
-2. (Component 2) initial debug server by end of June 2021
-3. (Component 2) final debug server by end of July 2021 (was May 2021 in preliminary proposal)
-4. (Component 1) initial standalone executable model by wrapping debug server by end of June 2021
-5. (Component 1) optimized standalone executable model by end of August 2021 (was April 2021 in preliminary proposal).
-6. (Component 3) software models of peripherals (timing TBD)
+The majority of the timeline is dependent on the specific core chosen, and thus appears in the Plan Approved document.  The following is however generic.
+
+1. (component 1) implementation of a GDB/LLDB server interface to the CORE-V debug unit modeled in Verilator. Status: **COMPLETE**
 
 ## OpenHW members/participants committed to participate
 
-- aLean-Tec - initial development of the Verilator model.
-- Florian Zaruba - completion of the Verilator model.
 - Embecosm - debug server, standalone model and initial customer using for tool chain CI.
-- QuickLogic - loop back tests and initial customer for "smoke test" verification.
+- Dolphin Design - support for Embecosm for use with the CV32E40Pv2.
+- Davide Schiavione - provision of X-Heep infrastruture.
 
 ## Technical Project Leader(s) (TPLs)
 
-"Virtual" TPL of Florian Zaruba, Jeremy Bennett & Randy Oyadomari
+Jeremy Bennett
 
 ## Project Manager (PM)
 
@@ -73,12 +100,10 @@ Separate PM not required, managed by TPL.
 
 The following project documents will be created:
 
-User Manual in 3 components:
-1. Standalone software model;
-2. Debug server; and
-3. Creation of Verilator verification model included in the CORE-V MCU documentation.
-
-**Note:** All manual components include a section on installation.
+User Manual in 3 sections:
+1. creation of Verilator verification model using X-Heep;
+2. debug server; and
+3. standalone software model.
 
 ## Summary of requirements
 
@@ -98,11 +123,6 @@ User Manual in 3 components:
 
   - VCD generation.
 
-- peripheral simulation
-
-  - LEDs as visual graphics
-  - UART to physical interface on host
-
 ### Feature list: standalone model
 
 - standard GNU style simulator.
@@ -115,11 +135,6 @@ User Manual in 3 components:
   - stack dump; and
   - memory dump.
 
-### Feature list: "smoke test" verification
-
-- loop back model of UART
-- loop back model of GPIO
-
 ### Software
 
 The model will be used in development of the following tool chains and operating system
@@ -130,21 +145,22 @@ The model will be used in development of the following tool chains and operating
 
 ###  Debug
 
-Component 2 will use the Embecosm Debug Server, Embdebug. **Note:** There is no plan to use OpenOCD.
-
-### Peripherals
-
-- LED
-- UART
-- GPIO
+Component 1 will use the Embecosm Debug Server, Embdebug. **Note:** There is no plan to use OpenOCD.
 
 ## Industry landscape: description of competing, alternative, or related efforts in the industry
 
-Fast models which are not cycle accurate
+Fast design models with varying degrees of cycle accuracy.
 
 - QEMU
 - OVPSim
 - Renode
+
+Implementation models, all of which are event driven simulations
+
+- Cadence Incisive
+- Synopsys VCS
+- Siemens Questasim
+- Icarus Verilog
 
 ## External dependencies
 
@@ -152,29 +168,32 @@ External open source technology:
 
 - Verilator (GPL or Perl Artistic License), which license does not impinge on generated models.
 - Embdebug (GPL license with exception)
-- Open Hardware Group CORE-V MCU
+- Open Hardware Group cores (Eclipse Public License)
+- X-Heep (Solderpad Hardware License)
+
+These projects in turn will build on other open source tools.
 
 ## List of project outputs
 
-1. Debug server (program) suitable for connection to GDB or LLDB
-2. Standalone simulator, capable of taking an executable and simulating it to completion.
-3. Set of scripts to produce Verilator model library for the CORE-V MCU
-4. A process flow for "smoke test" verification.
+1. Guidance on producing a Verilator model library for the core using X-Heep.
+2. Debug server (program) suitable for connection to GDB or LLDB
+3. Standalone simulator, capable of taking an executable and simulating it to completion.
+
+All components include software, test framework, system documentation and user documentation.
 
 ## Task Groups impacted/resource requirements
 
-This project is under the auspices of the Hardware Task Group, with dotted line visibility to the Software Task Group.
+This project is under the auspices of the Software Task Group.
 
 ## OpenHW engineering staff resource plan: requirement and availability
 
 - Duncan Bees for general program support
-- Florian Zaruba to complete Verilator modeling
+- Davide Schiavione for X-Heep and SystemVerilog advice
 
 ## Engineering resource supplied by members - requirement and availability
 
-- Embecosm staff to create components 1/2
-- QuickLogic staff to create component 3
-- TBD UART, GPIO & LED models
+- Embecosm staff to create components
+- Dolphin design staff to evaluate components
 
 ## OpenHW marketing resource - requirement and availability
 
@@ -204,20 +223,22 @@ See [WHY OPENHW GROUP SHOULD DO THIS PROJECT](#why-openhw-group-should-do-this-p
 
 See [External dependencies](#external-dependencies).
 
-All components created for this project will use Apache 2 license.
+All components created standalone for this project will use Apache 2 license.  All components which build on existing open source software will use the license of the source software.
 
-- Generated Verilator models.
-- Standalone model software wrapping the Verilator model.
-- Target module for Embdebug.
-- UART, LED and GPIO models.
-- Scripts to drive "smoke test" flow and create Verilator models.
+- Generated Verilator models (Eclipse Public Licene).
+- Standalone model software wrapping the Verilator model (Apache 2 License)
+- Embdebug (GPLv3 with exception)
+- Target module for Embdebug (Apache 2 License).
 
 ## Description of initial code contribution, if required
 
+Embedebug is an open source debug server capable of supporting both GDB and LLDB and written by Embecosm.
+
 ## Repository structure
 
-- Verilator modeling is part of the [`core-v-mcu`](https://github.com/openhwgroup/core-v-mcu) repository.
-- Embdebug target will need a separate repository.
+- X-Heep is a standalone project from the Embedded Systems Laboratory (ESL) at École Polytechnique Fédérale de Lausanne (EPFL) ([`x-heep`](https://github.com/esl-epfl/x-heep) repository).
+- Embdebug is a standalone project from Embecosm ([`embdebug`](https://github.com/embecosm/embdebug) repository
+- the Embedebug target modules for CORE-V are hosted by the OpenHW Group ([`embdebug-target-core-v`](https://github.com/openhwgroup/embdebug-target-core-v) repository).
 
 ## Project distribution model
 
@@ -229,16 +250,17 @@ Option for binary downloads to be provided by member companies
 
 - cf OVPSim and Embecosm public buildbot for CORE-V tool chains
 
-## Preliminary project plan
+## Project plan
 
 See [Summary of Development](#summary-of-development) above
 
-## Preliminary risk register
+Detailed project plans are target specific and provided in the Plan Approval document for the target.
 
-Risk is scored as likelihood (1-10) x impact (1-3) with mitigation required for any risk with score of 10 or more, of with an impact of 3 (project killer).
+## Risk register
+
+Risk is scored as likelihood (1-10) x impact (1-3) with mitigation required for any risk with score of 10 or more, of with an impact of 3 (project killer).  These are generic risks, there will be more detailed risks for specific cores in the target Plan Approval document.
 
 | Risk                          |   L |   I |   R | Mitigation                 |
 |:----------------------------- | ---:| ---:| ---:|:---------------------------|
-| Insufficient resource available (LED/UART/GPIO models) | 5 | 2 | 10 | Socialize around OpenHW members to find expertise or funding. |
-| Extent of rewriting RTL for Verilator is larger than expected |2|2|4| |
-| Verilator does not support a particular construct (e.g. 2D arrays in interfaces) |2|2|4| |
+| Extent of rewriting RTL for Verilator for a particular target is larger than expected |2|2|4| |
+| Verilator does not support a particular construct used in the code for a particular target (e.g. 2D arrays in interfaces) |2|2|4| |
