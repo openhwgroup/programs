@@ -19,8 +19,8 @@ Here is a brief description of our development workflow:
 3. Synchronize the remote fork and bring it up to date:
 ```
 $ git fetch --all
-$ git checkout master
-$ git pull upstream master
+$ git checkout main # or "master" (depending on the name of the main branch for that repo)
+$ git pull upstream main # or "master"
 ```
 4. Clone your forked repository (xxx is the username you have forked the repository to in step 2.):
 ```
@@ -48,7 +48,7 @@ $ git push origin feature/add-new-cpu
 
 11. Iterate on the pull request interface until all code quality checks are passed and the maintainer is happy with the contribution. You can simply change files and repeat step 7 - 9. Your pull request will automatically be updated and the maintainer notified.
 
-12. The maintainer will merge your changes into the master branch. You can now finish and delete your branch (if you want). For the next feature go back to 3.
+12. The maintainer will merge your changes into the main branch. You can now finish and delete your branch (if you want). For the next feature go back to 3.
 
 ## ECA and Signing Commits
 We programmatically enforce signing all your commits and check your email against the Eclipse Contributor Agreement database. Be sure to sign-up with the right email address and add it to either the global or local repository setting. For example to add it to the local settings execute the following in the local repository:
