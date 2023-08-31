@@ -34,11 +34,11 @@ The normal proposal flow is:
 ## High Level Summary of project, project components, and deliverables
 
 The goal is to provide a faster version of CVA6, with an opt-in configuration
-option to enable double-issue.
+option to enable dual-issue.
 
 - The project should not impact other configurations: each characteristic of
-  CVA6 without double-issue must be the same or better than before
-  modifications. Specifically, no area should be added at all if double-issue is
+  CVA6 without dual-issue must be the same or better than before
+  modifications. Specifically, no area should be added at all if dual-issue is
   disabled.
 - The performance gain is not ISA-specific and does not require compiler
   changes: the exact same code must be executed faster.
@@ -86,7 +86,7 @@ Interested entities include:
 ## Initial Estimate of Timeline
 
 1. Fetch 64 bits (frontend): September 2023
-2. Double-issue (issue stage): October 2023
+2. Dual-issue (issue stage): October 2023
 3. Added ALU (EX stage): December 2023
 
 ## Explanation of why OpenHW should do this project
