@@ -79,6 +79,7 @@ The current estimations for this change are:
 ## Who would make use of OpenHW output
 
 Everyone interested in implementing a fast CVA6.
+A use-case would be to run Linux faster.
 
 Interested entities include:
 
