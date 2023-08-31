@@ -43,7 +43,9 @@ option to enable dual-issue.
 - The performance gain is not ISA-specific and does not require compiler
   changes: the exact same code must be executed faster.
 - The project, as a CVA6 configuration option, will benefit from CVA6
-  verification work.
+  verification work. The current CI shall pass (including Linux boot).
+  The goal is not to reach TRL5 yet, but if the result of this project is good,
+  it will be ready to be verified by CVA6 project.
 
 The current estimations are:
 
