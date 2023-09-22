@@ -37,7 +37,7 @@ performance core.
 
 ### Known market/project requirements at PL gate
 
-TBD
+The performance targer is +40% Coremark/MHz.
 
 ### Potential future enhancements for future project phases
 
@@ -85,7 +85,7 @@ Improve CVA6 performance without impacting too much power/area.
 
 ## Industry landscape: description of competing, alternative, or related efforts in the industry
 
-TBD
+Competitive cores similar to CVA6 also increase performance by adopting dual issue.
 
 ## OpenHW Members/Participants committed to participate
 
@@ -155,6 +155,9 @@ Côme Allart, Thales DIS
 ### OpenHW engineering staff resource plan: requirement and availability
 ### Marketing resource  - requirement and availability
 ### Funding for project aspects - requirement and availability
+
+This activity is supported by the TRISTAN project, which receives funding from the Key Digital Technologies Joint Undertaking (KDT JU),  Austria, Belgium, Finland, France, Germany, Italy, the Netherlands, Poland, Romania, Switzerland and Turkey under grant agreement 101095947. The JU receives support from the European Union’s Horizon Europe research and innovation program.
+
 ## Architecture and/or context diagrams
 
 ![](CVA6_superscalar.png)
