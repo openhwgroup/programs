@@ -72,8 +72,7 @@ Interested entities include:
 
 ## Summary of Timeline
 
-To ease debugging and as there will not be many people working on this project,
-the timeline is made of the several components in the pipeline order:
+The timeline is made of the several components in the pipeline order:
 
 1. Fetch 64 bits (frontend): September 2023
 2. Double-issue (issue stage): October 2023
