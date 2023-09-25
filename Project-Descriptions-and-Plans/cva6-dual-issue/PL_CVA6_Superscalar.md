@@ -37,7 +37,7 @@ performance core.
 
 ### Known market/project requirements at PL gate
 
-The performance targer is +40% Coremark/MHz.
+The performance target is +40% Coremark/MHz.
 
 ### Potential future enhancements for future project phases
 
