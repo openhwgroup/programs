@@ -76,7 +76,8 @@ The timeline is made of the several components in the pipeline order:
 
 1. Fetch 64 bits (frontend): September 2023
 2. Double-issue (issue stage): October 2023
-3. Added ALU (EX stage): December 2023
+3. Additional ALU (EX stage): December 2023
+4. Superscalar pipeline documentation (RST documentation): January 2023
 
 ## Explanation of why OpenHW should do this project
 
@@ -104,16 +105,20 @@ None
 ### Project Planning Documents
 ### Project Output Documents
 
+The documentation of the superscalar pipeline will be integrated as ReStructured
+Text files into the Read the Docs documentation of CVA6.
+
 ## List of project technical outputs
 
-The project technical outputs will be provided as contributions to the CVA6
-project with an opt-in configuration option to enable dual-issue.
-
-The goal is not to reach TRL5 yet, but if the result of this project is good, it
-will be ready to be verified by CVA6 project.
-
-However the modifications must not impact single-issue CVA6 and the current test
-suites must pass on double-issue CVA6.
+- The project technical outputs will be provided as contributions to the CVA6
+  RTL with an opt-in configuration option to enable dual-issue.
+- The goal is not to reach TRL5 yet, but if the result of this project is good,
+  it will be ready to be verified by CVA6 project.
+- The project will be considered as done when the expected +40% performance
+  improvement is reached (measured in CoreMark/MHz) or the reasons why this goal
+  is not reached are known.
+- However the modifications must not impact single-issue CVA6 and the current
+  test suites must pass on double-issue CVA6.
 
 ### Feature Requirements
 
@@ -173,6 +178,8 @@ As this project will be integrated to CVA6 repository, the chosen licence is Sol
 1. Fetch 64 bits (frontend): September 2023
 2. Double-issue (issue stage): October 2023
 3. Added ALU (EX stage): December 2023
+3. Additional ALU (EX stage): December 2023
+4. Superscalar pipeline documentation (RST documentation): January 2023
 
 ## Risk Register
 
