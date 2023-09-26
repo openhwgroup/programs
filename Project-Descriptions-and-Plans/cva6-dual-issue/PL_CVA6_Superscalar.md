@@ -108,6 +108,10 @@ None
 The documentation of the superscalar pipeline will be integrated as ReStructured
 Text files into the Read the Docs documentation of CVA6.
 
+- The configuration parameter to enable dual-issue will be added into *CVA6 Requirement Specification*.
+- This new parameted will be documented in *CVA6 User Manual*.
+- A design document will contain updated definition of the modules and their interfaces.
+
 ## List of project technical outputs
 
 - The project technical outputs will be provided as contributions to the CVA6
