@@ -33,7 +33,7 @@ Templates are available in the [process](https://github.com/openhwgroup/programs
 
 To create a set of checklists for a project, the templates are reviewed and adapted for a particular project.
 
-Project specific checklists are created and stored in a project-specific subdirectory of the [Project-Description-and-Plans](https://github.com/openhwgroup/programs/tree/master/roject-Description-and-Plans) subdirectory.
+Project specific checklists are created and stored in a project-specific subdirectory of the [Project-Description-and-Plans](https://github.com/openhwgroup/programs/tree/master/Project-Description-and-Plans) subdirectory.
 The name of the project release is used as the checklist subdirectory name, e.g. cv32e40p_v1.0.0
 
 ### Checklist(s) Description
