@@ -29,11 +29,11 @@ PATCH version when you make backwards compatible bug fixes."
 ### Establishing and Storing the Checklist
 
 The checklist is established either at Project Plan Approved (PPA) Gate or at another early stage of the project. 
-Templates are available in the [core-v-docs/program/milestones/templates](https://github.com/openhwgroup/core-v-docs/tree/master/program/milestones/templates) subdirectory.
+Templates are available in the [process](https://github.com/openhwgroup/programs/tree/master/process) subdirectory.
 
 To create a set of checklists for a project, the templates are reviewed and adapted for a particular project.
 
-Project specific checklists are created and stored in a project-specific subdirectory of the [core-v-docs/program/milestones](https://github.com/openhwgroup/core-v-docs/tree/master/program/milestones) subdirectory.
+Project specific checklists are created and stored in a project-specific subdirectory of the [Project-Description-and-Plans](https://github.com/openhwgroup/programs/tree/master/roject-Description-and-Plans) subdirectory.
 The name of the project release is used as the checklist subdirectory name, e.g. cv32e40p_v1.0.0
 
 ### Checklist(s) Description
