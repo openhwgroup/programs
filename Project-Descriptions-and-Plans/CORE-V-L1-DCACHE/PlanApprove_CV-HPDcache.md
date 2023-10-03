@@ -26,10 +26,10 @@ César Fuguet - Research-Engineer at CEA List (Grenoble) - <cesar.fuguettortoler
 | 1.0.0                  | 2023-28-02            | Initial release                                         |
 | 2.0.0                  | 2023-18-09            | Current version in OpenHW Github                        |
 | 3.0.0                  | 2023-31-10            | Add VIPT support                                        |
-| 4.0.0                  | 2024-31-03            | Add write-through/write-back hybrid write policy        |
-|                        |                       | First release of the HPDcache's  UVM testbench          |
-| 4.1.0                  | 2024-30-06            | Add scratchpad mode. Final release, TRL7 fully-verified |
-|                        |                       | Second release of the HPDcache's UVM testbench          |
+| 4.0.0                  | 2024-31-03            | First release of the HPDcache's  UVM testbench          |
+| 4.1.0                  | 2024-31-05            | Add write-through/write-back hybrid write policy        |
+| 4.2.0                  | 2024-31-10            | Add scratchpad mode.                                    |
+| 4.3.0                  | 2025-31-08            | Final release, TRL7 fully-verified                      |
 
 *VIPT: virtually-indexed, physically-tagged addressing*
 
