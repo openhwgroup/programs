@@ -1,0 +1,343 @@
+%% !TEX encoding = UTF-8 Unicode
+%\documentclass[10pt,aspectratio=169,notes=only]{beamer}
+ \documentclass[10pt,aspectratio=169,presentation]{beamer}
+%\documentclass[10pt,aspectratio=169,presentation,notes]{beamer}
+%\documentclass[10pt,aspectratio=169,handout,nonotes]{beamer}
+   \usepackage[utf8]{inputenc} 
+   \usepackage[T1]{fontenc}
+   \usepackage{fontspec}
+  %\usepackage{tabular}
+   \usepackage{pifont}
+   \usepackage{bbding}
+   \usepackage{fontawesome}
+   \usepackage{eurosym}
+  %\usepackage[default,scale=0.95]{opensans}
+  %\usepackage{fetamont}
+   \usepackage{multicol}
+   \usepackage{color}
+   \usepackage{colortbl}
+   \usepackage{xspace}
+   \usepackage{hyperref}
+   \usepackage[super]{nth}
+   \usepackage{ifthen}
+
+  %% XFig colors...
+   \definecolor{red4}           {HTML}{900000}
+   \definecolor{cyan4}          {HTML}{009090}
+   \definecolor{advanced}       {HTML}{99479B}
+   \definecolor{violetcolor}    {HTML}{58429B}
+   \definecolor{bluecolor}      {HTML}{2D2F92}
+   \definecolor{datebluecolor}  {HTML}{046496}
+   \definecolor{dateredcolor}   {HTML}{FF6961}
+   \definecolor{darkgreen}      {HTML}{006400}
+   \definecolor{chartreuse4}    {HTML}{458b00}
+   \definecolor{darkolivegreen4}{HTML}{6e8b3d}
+   \definecolor{greenX}         {HTML}{bbdcbc}
+
+   \newcommand{\violet}[1]{\color{violetcolor}#1}
+   \newcommand{\blue}  [1]{\color{bluecolor}#1}
+
+   \usetheme{Boadilla}
+   \usecolortheme[named=darkgreen]{structure}
+
+   \setbeamertemplate{enumerate items}[square]
+   \setbeamertemplate{itemize items}{\ding{'057}}
+   \setbeamertemplate{itemize subitem}{\ding{111}}
+   \setbeamertemplate{bibliography item}{\faFileO}
+   \setbeamercolor{bibliography entry author}{fg=black}
+
+   \mode<handout>{
+     \usepackage{pgfpages}
+     \pgfpagesuselayout{resize to}[a4paper,border shrink=5mm,landscape]
+   }
+
+  %\logo{\includegraphics[width=.1\textwidth]{./images/Logo-OpenHW-H}}
+
+   \addtobeamertemplate{footline}{%
+     \setlength\unitlength{1cm}%
+     \begin{picture}(0,0) 
+       \put(0.4,0.4){
+         \makebox(0,0)[bl]{
+           \includegraphics[height=0.4cm]{./images/Logo-OpenHW-H}\hspace*{0.1cm}
+           \includegraphics[height=0.4cm]{./images/Logo-SU}\hspace*{0.1cm}
+           \includegraphics[height=0.4cm]{./images/GFonly-ORANGE-letters}
+       }}%
+     \end{picture}%
+   }{}
+
+   \setmainfont{QTEurotype}
+   \setsansfont{QTEurotype}
+  %\setmainfont{Fetamont}
+  %\setsansfont{Fetamont}
+
+   \newcommand*{\vcenteredhbox}[1]{\begin{tabular}{@{}c@{}}#1\end{tabular}}
+
+   \newcommand {\nonote}  {\note{\vfill\center\fbox{\LARGE No annotation for this slide.}\vfill}}
+
+   \newcommand{\stopframe}[3]{
+     \begin{frame}<presentation=0|handout>
+       \frametitle{#1}
+       \begin{center}#2\end{center}
+       \note{#3}
+     \end{frame}
+   }
+
+  %% Acronyms.
+   \newcommand {\OpenHardware}  {\textit{Open Hardware}\xspace}
+   \newcommand {\SME}           {\textsc{SME}\xspace}
+   \newcommand {\SMEs}          {\textsc{SME}s\xspace}
+   \newcommand {\FOSS}          {\textsc{FOSS}\xspace}
+   \newcommand {\GNU}           {\textsc{GNU}\xspace}
+   \newcommand {\CAO}           {\textsc{CAO}\xspace}
+   \newcommand {\EDA}           {\textsc{EDA}\xspace}
+   \newcommand {\NDA}           {\textsc{NDA}\xspace}
+   \newcommand {\ISA}           {\textsc{ISA}\xspace}
+   \newcommand {\DSM}           {\textsc{DSM}\xspace}
+   \newcommand {\ELF}           {\textsc{ELF}\xspace}
+   \newcommand {\RTL}           {\textsc{RTL}\xspace}
+   \newcommand {\STA}           {\textsc{STA}\xspace}
+   \newcommand {\HDL}           {\textsc{HDL}\xspace}
+   \newcommand {\GHDL}          {\textsc{GHDL}\xspace}
+   \newcommand {\Yosys}         {\textsc{YOSYS}\xspace}
+   \newcommand {\nMigen}        {\textsc{nMIGEN}\xspace}
+   \newcommand {\VHDL}          {\textsc{VHDL}\xspace}
+   \newcommand {\SV}            {SystemVerilog\xspace}
+   \newcommand {\Verilog}       {Verilog\xspace}
+   \newcommand {\VLSI}          {\textsc{VLSI}\xspace}
+   \newcommand {\FIFO}          {\textsc{FIFO}\xspace}
+   \newcommand {\FIFOs}         {\textsc{FIFO}s\xspace}
+   \newcommand {\FPGA}          {\textsc{FPGA}\xspace}
+   \newcommand {\FPGAs}         {\textsc{FPGA}s\xspace}
+   \newcommand {\DesignKit}     {\textit{design kit}\xspace}
+   \newcommand {\vlsiLayout}    {\textit{layout}\xspace}
+   \newcommand {\ASIC}          {\textsc{ASIC}\xspace}
+   \newcommand {\DRC}           {\textsc{DRC}\xspace}
+   \newcommand {\LVS}           {\textsc{LVS}\xspace}
+   \newcommand {\LVX}           {\textsc{LVX}\xspace}
+
+  %% Brands, trademarks, ...
+   \newcommand {\Python}        {\textsc{PYTHON}\xspace}
+   \newcommand {\DLX}           {\textsc{DLX}\xspace}
+   \newcommand {\MIPS}          {\textsc{MIPS}\xspace}
+   \newcommand {\ARMii}         {\textsc{ARM2}\xspace}
+   \newcommand {\RISC}          {\textsc{RISC}\xspace}
+   \newcommand {\RISCV}         {\textsc{RISC-V}\xspace}
+   \newcommand {\SPARC}         {\textsc{SPARC}\xspace}
+   \newcommand {\PowerPC}       {\textsc{POWERPC}\xspace}
+   \newcommand {\Sun}           {\textsc{SUN}\xspace}
+   \newcommand {\Sparc}         {\textsc{SPARC}\xspace}
+   \newcommand {\IBM}           {\textsc{IBM}\xspace}
+   \newcommand {\AMS}           {\textsc{AMS}\xspace}
+   \newcommand {\EDF}           {\textsc{EDF}\xspace}
+   \newcommand {\NASA}          {\textsc{NASA}\xspace}
+   \newcommand {\Synopsys}      {\textsc{SYNOPSYS}\xspace}
+   \newcommand {\ROHM}          {\textsc{ROHM}\xspace}
+   \newcommand {\TSMC}          {\textsc{TSMC}\xspace}
+   \newcommand {\Bull}          {\textsc{BULL}\xspace}
+   \newcommand {\SESI}          {\textsc{SESI}\xspace}
+   \newcommand {\CIAN}          {\textsc{CIAN}\xspace}
+   \newcommand {\LIPvi}         {\textsc{LIP6}\xspace}
+   \newcommand {\SU}            {\textsc{SU}\xspace}
+   \newcommand {\CNRS}          {\textsc{CNRS}\xspace}
+   \newcommand {\MOSIS}         {\textsc{MOSIS}\xspace}
+   \newcommand {\MyCMP}         {\textsc{MyCMP}\xspace}
+   \newcommand {\FreePDK}       {\textsc{FreePDK}\xspace}
+   \newcommand {\SimPL}         {\textsc{SimPL}\xspace}
+   \newcommand {\Alliance}      {\textsc{Alliance}\xspace}
+   \newcommand {\AllianceCTK}   {\texttt{Alliance Check Toolkit}\xspace}
+   \newcommand {\Coriolis}      {\textsc{Coriolis}\xspace}
+   \newcommand {\Hurricane}     {\textsc{Hurricane}\xspace}
+   \newcommand {\SXLIB}         {\textsc{Sxlib}\xspace}
+   \newcommand {\NSXLIB}        {\textsc{NSxLib}\xspace}
+   \newcommand {\MicrosoftWord} {\textsc{Microsoft Word}\xspace}
+   \newcommand {\Chisel}        {\textsc{Chisel}\xspace}
+   \newcommand {\SpinalHDL}     {\textsc{SpinalHDL}\xspace}
+   \newcommand {\Migen}         {\textsc{Migen}\xspace}
+   \newcommand {\KLayout}       {\textsc{KLayout}\xspace}
+   \newcommand {\Flexlib}       {\textsc{Flexlib}\xspace}
+   \newcommand {\GDSII}         {\textsc{GDSII}\xspace}
+   \newcommand {\DATEXXIII}     {\textsf{\textbf{\color{datebluecolor}DATE20\color{dateredcolor}23}}\xspace}
+   \newcommand {\CoreVRisc}     {\textsc{c32e40p}\xspace}
+
+  %% Last names.
+   \newcommand {\Dijktra}       {\textsc{Dijkstra}\xspace}
+   \newcommand {\Hennessy}      {\textsc{Henessy}\xspace}
+   \newcommand {\Asanovic}      {\textsc{Asanović}\xspace}
+   \newcommand {\Patterson}     {\textsc{Patterson}\xspace}
+   \newcommand {\Wolf}          {\textsc{Wolf}\xspace}
+   \newcommand {\Gingold}       {\textsc{Gingold}\xspace}
+   \newcommand {\Mead}          {\textsc{Mead}\xspace}
+   \newcommand {\Conway}        {\textsc{Conway}\xspace}
+   \newcommand {\Chaput}        {\textsc{Chaput}\xspace}
+   \newcommand {\Chotin}        {\textsc{Chotin}\xspace}
+   \newcommand {\Louerat}       {\textsc{Louërat}\xspace}
+   \newcommand {\Shimizu}       {\textsc{Shimizu}\xspace}
+   \newcommand {\Verhaegen}     {\textsc{Verhaegen}\xspace}
+   \newcommand {\Koefferlein}   {\textsc{Koefferlein}\xspace}
+   \newcommand {\Satin}         {\textsc{Satin}\xspace}
+
+  %% Tools & binaries.
+   \newcommand {\ToolEngine}    {\texttt{ToolEngine}\xspace}
+   \newcommand {\ToolEngines}   {\texttt{ToolEngines}\xspace}
+   \newcommand {\make}          {\texttt{make}\xspace}
+   \newcommand {\sToR}          {\textsc{s2r}\xspace}
+   \newcommand {\blif}          {\texttt{blif}\xspace}
+   \newcommand {\vst}           {\texttt{vst}\xspace}
+   \newcommand {\HiTas}         {\texttt{HiTas}\xspace}
+   \newcommand {\katana}        {\texttt{katana}\xspace}
+   \newcommand {\cougar}        {\texttt{cougar}\xspace}
+   \newcommand {\dotlib}        {\texttt{.lib}\xspace}
+   \newcommand {\Makefile}      {\texttt{Makefile}\xspace}
+   \newcommand {\Makefiles}     {\texttt{Makefile}s\xspace}
+   \newcommand {\layout}        {\textit{layout}\xspace}
+   \newcommand {\layouts}       {\textit{layouts}\xspace}
+   \newcommand {\layer}         {\textit{layer}\xspace}
+   \newcommand {\Layers}        {\textit{Layers}\xspace}
+   \newcommand {\METALI}        {\texttt{METAL1}\xspace}
+   \newcommand {\METALII}       {\texttt{METAL2}\xspace}
+   \newcommand {\METALIII}      {\texttt{METAL3}\xspace}
+   \newcommand {\METALIV}       {\texttt{METAL4}\xspace}
+   \newcommand {\METALV}        {\texttt{METAL5}\xspace}
+   \newcommand {\VIA}           {\texttt{VIA}\xspace}
+   \newcommand {\VIAs}          {\texttt{VIAs}\xspace}
+   \newcommand {\GCell}         {\texttt{GCell}\xspace}
+   \newcommand {\pitch}         {\textit{pitch}\xspace}
+   \newcommand {\doDesign}      {\textit{doDesign.py}\xspace}
+   \newcommand {\git}           {\texttt{git}\xspace}
+
+   \newcommand {\lbd}[1]        {$\mathtt{#1}\lambda$\xspace}
+   \newcommand{\paperpen}       {\ding{'057}}
+
+   \addtobeamertemplate{title page}{\centering \vspace*{0.5cm}\includegraphics[height=2.0cm]{./images/Logo-OpenHW}}{}
+  %\titlegraphic{\includegraphics[height=1.0cm]{./images/Coriolis-logo-black-4}}
+   \title{CORE-V 180 MCU Update of October 23, 2023} 
+  %\subtitle{\raisebox{-0.1cm}{\includegraphics[height=0.4cm]{./images/osda2023-logo}}
+  %          \quad \DATEXXIII}
+
+   \author[J.-P. \Chaput]{Sorbonne Université/LIP6 \& Global Foundries \\*[0.5cm]
+                          \includegraphics[height=1.0cm]{./images/Logo-LIP6-bleugris}\hspace{0.5cm}
+                          \includegraphics[height=0.9cm]{./images/Logo-SU}           \hspace{0.5cm}
+                          \includegraphics[height=1.0cm]{./images/GFonly-ORANGE-letters}% \hspace{0.5cm}
+                         %\includegraphics[height=1.0cm]{./images/Logo-CNRS}%        \hspace{0.5cm}
+                         }
+   
+   \institute[SU-LIP6]{ \texttt{Jean-Paul.Chaput@lip6.fr} }
+
+   \date[October 23, 2023]{October 23, 2023 @Internet}
+
+
+ \begin{document}
+
+   \titlepage
+
+
+  \begin{frame}
+    \frametitle{First Experiment}
+     \begin{minipage}[c]{.48\textwidth}
+       \includegraphics[height=.80\textheight]{images/chip_cv32e40p_white.png}
+     \end{minipage}
+     \begin{minipage}[c]{.5\textwidth}
+       \begin{itemize}
+         \item The \texttt{cv32e40p}\ chip.
+         \item Global Foundries 180nm.
+         \item 50984 gates.
+         \item 3.4 $\times$ 3.4 mm.
+         \item {\footnotesize\url{https://github.com/lip6/core-v-180-mcu.git}} \\
+               Can be reproduced with the \texttt{"cv34e40p~layout~(GDS)"}\ workflow (action).
+       \end{itemize}
+     \end{minipage}
+  \end{frame}
+
+
+   \begin{frame}
+     \frametitle{Basic Design Flow}
+     \begin{center}
+       \includegraphics[width=.95\textwidth]{images/design-flow-sv2v-1} \\
+       \vfill
+       \begin{tabular}{ll}
+         \hline
+         \texttt{\cite{SVase}}  & Not working \\
+         \texttt{\cite{sv2v}}   & Work on whole \CoreVRisc \\
+         \texttt{\cite{synlig}} & Work on sub-blocks of \CoreVRisc \\
+         \hline
+       \end{tabular}
+     \end{center}
+   \end{frame}
+
+
+   \begin{frame}
+     \frametitle{Design Kit Components}
+     \begin{center}
+       \rowcolors{3}{white}{greenX}
+       \vfill
+       \begin{tabular}{l|c|c|c|}
+         \cline{2-4}
+         & \multicolumn{3}{c|}{Components} \\
+         \hline
+         \multicolumn{1}{|l|}{Provider} & Standard Cells & I/O lib  & SRAM  \\
+         \hline
+         \multicolumn{1}{|l|}{\texttt{\cite{ChipsForMakers}} (c4m)} & \Checkmark & --  & --  \\
+         \multicolumn{1}{|l|}{\texttt{\cite{GF180MCU}}}             & --  & \Checkmark & --  \\
+         \multicolumn{1}{|l|}{\texttt{LSxLib} (symbolic)}           & --  & --  & --  \\
+         \hline
+       \end{tabular} \\
+       \vfill
+       Coriolis can use any combination of the above components.
+       \vfill
+     \end{center}
+   \end{frame}
+
+
+   \begin{frame}
+     \frametitle{First Findings}
+     \vspace*{\baselineskip}
+     \begin{itemize}
+       \setlength\itemsep{1.0\baselineskip}
+       \item The translation from \SV to \Verilog~:
+       \begin{itemize}
+         \item The problem of the subset of translatable \SV construct for each tool.
+         \item Adapting the code so that it use the valid subset ?
+         \item Waiting for the tools to complete their features, maybe directly
+               reaching to them ?
+       \end{itemize}
+       \item Design size evaluation~:
+       \begin{itemize}
+         \item The \CoreVRisc doesn't fit in a $3 \times 3$ mm area.
+         \item The standard cells are not optimized (yet), and their areas are
+               around 50\% too big.
+         \item So, in any case, we need to drastically reduce the number of
+               peripherals
+       \end{itemize}
+     \end{itemize}
+   \end{frame}
+
+
+   \begin{frame}
+     \frametitle{Questions \& Next Steps}
+     \begin{itemize}
+       \setlength\itemsep{1.0\baselineskip}
+       \item The design flow, for now, is only a generative one. Checks must be
+             performed, especially at the \SV to \Verilog step.
+       \item The set of peripherals needs to be redefined, it must be done in
+             accordance with the kind of applications that is targeted.
+       \item Support for GF 180 MCU standard cells in Coriolis, to get more
+             accurate area estimations.
+     \end{itemize}
+   \end{frame}
+
+   \begin{frame}
+     \frametitle{Références}
+     \begin{thebibliography}{10}
+     \bibitem[GF180MCU]    {GF180MCU}       GF 180 MCU   \quad \url{https://github.com/google/gf180mcu-pdk.git}.
+     \bibitem[Chips4Makers]{ChipsForMakers} Chips4Makers \quad \url{https://chips4makers.io/}.
+     \bibitem[SVase]       {SVase}          SVase        \quad \url{https://github.com/pulp-platform/svase.git}.
+     \bibitem[sv2v]        {sv2v}           sv2v         \quad \url{https://github.com/zachjs/sv2v.git}.
+     \bibitem[synlig]      {synlig}         synlig       \quad \url{https://github.com/chipsalliance/synlig.git}.
+     \end{thebibliography}
+     \nonote
+   \end{frame}
+
+
+
+ \end{document}   
+
