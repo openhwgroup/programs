@@ -1,0 +1,1190 @@
+
+html, body, th, td, tr, p, li, h1, h2, h3, h4, h5, h6 {
+  font-size:                   100%;
+  font-family:                 "Open Sans", verdana, sans-serif;
+}
+
+p, li {
+  text-align:                  justify;
+}
+
+.sc {
+  font-variant:                small-caps;
+  font-size:                   120%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+/*font-family:                 "Open Sans", verdana, sans-serif;*/
+  font-family:                 "URW Bookman L", serif;
+}
+
+h1.title           { text-align:     center;
+/*
+                     border-top:     2px solid #09550b; 
+                     border-bottom:  2px solid #09550b; 
+ */
+                     border-top:     2px solid black; 
+                     border-bottom:  2px solid black; 
+                     padding-top:    7pt;
+                     padding-bottom: 7pt;
+                     margin-bottom:  40pt;
+                   }
+h2, h3, h4, h5, h6 { text-align:   left; }
+h1                 { font-weight:  bold;       font-size: 170%; padding-top: 7pt; margin-top: 25pt; }
+h2                 { font-weight:  bold;       font-size: 140%; padding-top: 7pt; margin-top: 25pt; }
+h3                 { font-weight:  bold;       font-size: 118%; padding-top: 7pt; margin-top: 25pt; }
+h4                 { font-weight:  bold;       font-size: 100%; }
+h5                 { font-style:   italic;     font-size: 100%; }
+h6                 { font-variant: small-caps; font-size: 100%; }
+
+body {
+  color:                       black;
+  background:                  white;
+  /*
+  background:                  #09550B;
+  background-color:            white;
+  */
+  background-position:         top left;
+  background-attachment:       fixed;
+  background-repeat:           no-repeat;
+  margin:                      0 0 0 0;
+  padding:                     20pt;
+  width:                       595pt;
+  margin-right:                auto;
+  margin-left:                 auto;
+  margin-top:                  20pt;
+  margin-bottom:               20pt;
+  -moz-box-shadow:             4px 4px 5px 3px #ccc;
+  -webkit-box-shadow:          4px 4px 5px 3px #ccc;
+  box-shadow:                  4px 4px 5px 3px #ccc;
+}
+
+hr {
+  color:                       #09550b;
+  border:                      1px dotted #09550b;
+  border-style:                none none dotted;
+  padding-top:                 10pt;
+  padding-bottom:              10pt;
+}
+
+.sc {
+  font-variant:       small-caps;
+  font-size:          120%;
+}
+
+span.red {
+  color:              red;
+}
+
+span.italic, span.comment, span.name {
+  font-style:         italic;
+}
+
+span.keyword, span.name {
+  font-weight:        bold;
+}
+
+span.title {
+  font-family:        "URW Bookman L", serif;
+  font-weight:        bold;
+  font-size:          120%;
+  text-align:         center;
+  display:            block;
+}
+
+span.header2 {
+  font-size:          140%;
+  font-weight:        bold;
+}
+
+div.mail {
+  font-family:        "courrier", "andale mono", monospace;
+  white-space:        pre;
+}
+
+hr {
+  color:              #09550b;
+  border:             1px dotted #09550b;
+  border-style:       none none dotted;
+  padding-top:        10pt;
+  padding-bottom:     10pt;
+}
+
+h1, h2, h3 {
+  text-align:         left;
+}
+
+div.contents, div.subcontents {
+  margin:             30pt;
+/*
+  padding:            0pt 10pt;
+  border-left:        6px solid black;
+ */
+
+/*  Shadow explanation:
+ *  The shadow is a rectangle the same size as the box. It is then shifted
+ *  blurred according to the following parameters.
+ *
+ *  1. The horizontal offset of the shadow, positive means the shadow will be
+ *     on the right of the box, a negative offset will put the shadow on the
+ *     left of the box.
+ *  2. The vertical offset of the shadow, a negative one means the box-shadow
+ *     will be above the box, a positive one means the shadow will be below
+ *     the box.
+ *  3. The blur radius (optional), if set to 0 the shadow will be sharp,
+ *     the higher the number, the more blurred it will be.
+ *  4. The spread radius (optional), positive values increase the size of the
+ *     shadow, negative values decrease the size. Default is 0 (the shadow is
+ *     same size as blur).
+ *  5. Color
+ */
+
+  padding:            1pt 5pt 5pt 20pt;
+  background-color:   #ffdd66;
+  -moz-box-shadow:    4px 4px 5px 2px #ccc;
+  -webkit-box-shadow: 4px 4px 5px 2px #ccc;
+  box-shadow:         4px 4px 5px 2px #ccc;
+
+}
+
+div.contents p.first {
+  font-size:          160%;
+  font-weight:        bold;
+}
+
+
+div#centered {
+  margin-left:        auto;
+  margin-right:       auto;
+  text-align:         center;
+}
+
+pre, tt, code {
+  font-family:        "courrier", "andale mono", monospace;
+  font-size:          100%;
+  white-space:        pre;
+}
+
+tt {
+  color:              #09550b;
+}
+
+pre.wiki, pre code, div.code, pre.literal-block {
+  font-size:          90%;
+  padding:            5pt;
+  margin-left:        4%;
+  margin-right:       4%;
+/*
+  border:             dashed;
+  border-width:       thin;
+  border-color:       #FC8676;
+ */
+  background-color:   #FCFCE1;
+ 
+}
+
+a:link, a:active {
+  font-weight:        normal;
+  text-decoration:    none;
+  color:              black;
+  border-bottom:      1px solid black; 
+/*
+  border-bottom:      1px dotted #09550b; 
+  border-bottom:      1px dotted #09550b; 
+ */
+}
+
+a:hover,
+a:focus,
+a:visited
+{
+  font-weight:        normal;
+  text-decoration:    none;
+  color:              black;
+  border-bottom:      2px solid black; 
+/*
+  font-style:         italic;
+  color:              #A40010;
+  border-bottom:      1px dotted #A40010; 
+  color:              #09550b;
+  border-bottom:      1px dotted #09550b; 
+ */
+}
+
+a.toc-backref {
+  font-family:        "URW Bookman L", serif;
+  font-size:          100%;
+  font-weight:        bold;
+}
+
+a.toc-backref:link,
+a.toc-backref:active,
+a.toc-backref:hover,
+a.toc-backref:focus,
+a.toc-backref:visited
+{
+  border-bottom:      0px; 
+  text-align:         left;
+}
+
+p.credit {
+  margin-left:        10%;
+  margin-right:       10%;
+  font-size:          110%;
+}
+
+p.credit span.left {
+  float:              left;
+  white-space:        nowrap;
+}
+
+p.credit span.right {
+  float:              right;
+  white-space:        nowrap;
+}
+
+img.addborder {
+  border:             1px solid black; 
+}
+
+img.align-center {
+  display:            block;
+/*
+  clear:              both;
+ */
+  margin-left:        auto;
+  margin-right:       auto;
+  width:              99%;
+  text-align:         center;
+}
+
+img.align-top {
+  float:              left;
+  padding:            0pt 20pt 20pt 0pt;
+  text-align:         center;
+}
+
+img.align-bottom {
+  float:              right;
+  padding:            0pt 20pt 20pt 0pt;
+  text-align:         center;
+}
+
+div.code * {
+  background-color:   #FCFCE1;
+}
+
+div.note {
+  margin:             8px 2% 0px 2%;
+  border:             1px none #ffbb44;
+  border-left-width:  4px;
+  border-left-style:  solid;
+  padding:            1px 10pt 1px 55px;
+  background:         #ffdd66 url('/dsk/l1/jpc/pictures/ReST/clipboard.png') no-repeat 0% 50%;
+/*background:         #ffdd66 url('../images/ReST/clipboard.png') no-repeat 0% 50%;*/
+  font-size:          90%
+}
+
+div.error {
+  margin:             8px 2% 0px 2%;
+  border:             1px none #dd0000;
+  border-left-width:  4px;
+  border-left-style:  solid;
+  padding:            1px 10pt 1px 55px;
+/*background:         #ffddcc url('../images/ReST/i-core.png') no-repeat 0% 50%;*/
+  background:         #ffdd66 url('/dsk/l1/jpc/pictures/ReST/i-core.png') no-repeat 0% 50%;
+  font-size:          90%
+}
+
+p.admonition-title {
+  font-weight:        bold;
+}
+
+div.problematic {
+  margin:             5pt;
+  padding:            1pt 10pt;
+  background-color:   #ffdd66;
+}
+
+div.problematic p.first {
+  font-size:          160%;
+  font-weight:        bold;
+}
+
+div.problematic ul, div.contents ul, div.subcontents ul {
+  padding-left:       15pt;
+}
+
+div.backlink {
+  text-align:         center;
+}
+
+div.backlink a {
+  font-size:          120%;
+  font-weight:        bold;
+  text-align:         center;
+  padding:            4pt;
+  border:             2px solid black;
+}
+
+div.publications ul li {
+  margin-bottom:      10pt;
+}
+
+div.publications a {
+  font-weight:        bold;
+}
+
+div.tools {
+  display:            flex;
+  flex-direction:     row;
+  flex-wrap:          wrap;
+  justify-content:    center;
+  align-content:      space-around;
+}
+
+div.toolblock {
+  -moz-box-shadow:    4px 4px 5px 2px #ccc;
+  -webkit-box-shadow: 4px 4px 5px 2px #ccc;
+  box-shadow:         4px 4px 5px 2px #ccc;
+  padding:            5pt;
+  margin:             10pt;
+  flex:               none;
+  text-align:         center;
+  font-size:          120%;
+  font-weight:        bold;
+}
+
+div.toolblock a {
+  font-family:        "URW Bookman L", serif;
+  font-size:          200%;
+  border-bottom:      none;
+}
+
+div.two-columns {
+  display:            flex;
+  flex-direction:     row;
+  flex-wrap:          wrap;
+  justify-content:    center;
+  align-content:      space-around;
+}
+
+div.two-columns ul {
+  padding-left:       10pt;
+}
+
+div[class^="reliefblock"] {
+  -moz-box-shadow:    4px 4px 5px 2px #ccc;
+  -webkit-box-shadow: 4px 4px 5px 2px #ccc;
+  box-shadow:         4px 4px 5px 2px #ccc;
+  -moz-border-radius: 5px;
+  border-radius:      10px;
+  width:              30%;
+  padding:            5pt;
+  margin:             10pt;
+  flex:               none;
+}
+
+div[class^="reliefblock"] a {
+  font-family:        "URW Bookman L", serif;
+  font-weight:        bold;
+  font-size:          120%;
+  text-align:         center;
+  display:            block;
+  border-bottom:      none;
+}
+
+div.reliefblock-green  { background-color:   #a3c090; }
+div.reliefblock-blue   { background-color:   #b2ccdd; }
+div.reliefblock-yellow { background-color:   #F0e5b4; }
+div.reliefblock-orange { background-color:   #f1d1b5; }
+
+div.line-block {
+  font-family:        "courrier", "andale mono", monospace;
+  font-size:          100%;
+/*white-space:        pre;*/
+}
+
+table.wiki th, table th {
+  color:              black;
+  background:         #FFFFCC;
+}
+
+table.docutils {
+  margin-left:        5%;
+  margin-right:       5%;
+}
+
+table.wiki, table.wiki th, table.wiki td { border:          1px solid black; }
+table.wiki th * p                        { text-align:      center; }
+table.wiki * p                           { margin:          0pt; }
+table.wiki * blockquote                  { margin:          0pt; }
+table                                    { border-collapse: collapse; }
+table th, table td                       { border:          1px solid black;
+                                           padding:         2px 10px 2px 10px; }
+
+table.docinfo {
+  margin-top:         10pt;
+  margin-left:        auto;
+  margin-right:       0pt;
+  border:             10px solid #303030;
+  border-collapse:    collapse;
+  background:         #303030;
+  font-size:          90%;
+  font-family:        sans-serif;
+}
+
+table.docinfo tr {
+  border-bottom:      1px dotted white;
+}
+
+th.docinfo-name,
+table.docinfo td,
+table.docinfo td a:link,
+table.docinfo td a:active,
+table.docinfo td a:visited,
+table.docinfo td a:focus,
+table.docinfo td a:hover
+{
+  border:             0px solid white;
+  background:         #303030;
+  color:              white;
+  text-align:         left;
+  font-weight:        bold;
+}
+
+th.docinfo-name {
+  font-weight:        normal;
+}
+
+table.docinfo td {
+  font-weight:        bold;
+}
+
+span.ul {
+  text-decoration:    underline;
+}
+
+* span.smallcaps {
+/*font-variant:       "small-caps";*/
+  text-transform:     "uppercase";
+  font-size:          "smaller";
+}
+
+
+span.cb {
+  font-family:        "andale mono", monospace;
+  font-weight:        bold;
+  white-space:        pre;
+}
+
+span.fboxtt {         
+  border:             1px solid black;
+  padding:            0px 4px;
+  font-family:        "andale mono", monospace;
+  font-weight:        bold;
+  white-space:        pre;  
+} 
+
+#notice.system-message, .notice.system-message {
+  color:              black;
+  background:         #DDFFDD;
+  padding-top:        5pt;
+  padding-bottom:     5pt;
+  border:             1px none  #55BB55;
+  border-top-width:   4px;
+  border-top-style:   solid;
+}
+
+#content.error .message, div.system-message {
+  color:              #550000;
+  background:         #ffddcc;
+  border:             2px none #dd0000;
+  border-top-width:   4px;
+  border-top-style:   solid;
+  padding:            .5em;
+  margin:             1em 0;
+}
+
+#main {
+  float:              right;
+  width:              70%;
+  padding:            0pt;
+  margin:             0pt;
+  min-height:         700px;
+  background:         white;
+}
+
+div#main h1 {
+  border-bottom:      2px solid #09550b;
+}
+
+div#main div.section h1 {
+  border-bottom:      none;
+}
+
+#cmscontent {
+  padding:            0pt 4% 10pt 4%;
+  margin:             0pt;
+}
+
+div#htmlerrorcontents {
+  padding:            10pt 4% 10pt 4%;
+  margin:             0pt;
+}
+
+div#htmlerrorcontents span.cs {
+  font-size:          80%;
+  font-family:        "andale mono", monospace;
+  white-space:        pre;
+}
+
+div#htmlerrorcontents hr.lang_separator {
+  border:             1px dotted black;
+  border-style:       none none dotted;
+  margin-top:         20pt;
+  margin-bottom:      10pt;
+}
+
+#embedcontent {
+  border:             0pt;
+  padding:            0pt;
+  margin:             0pt;
+}
+
+table.citation, table.footnote {
+  border:             none;
+  padding-left:       5pt;
+  margin-left:        5pt;
+  margin-bottom:      5pt;
+  background-color:   #eeeeee;
+}
+
+table.citation th, table.citation td, table.footnote th, table.footnote td {
+  border:             none;
+}
+
+table.citation td.label, table.footnote td.label {
+  width:              50pt;
+}
+
+/*
+div#centered {
+  margin-left:                 auto;
+  margin-right:                auto;
+  text-align:                  center;
+}
+
+pre, tt, code {
+  font-family:                 "courrier", "andale mono", monospace;
+  font-size:                   100%;
+  white-space:                 pre;
+}
+
+tt {
+  color:                       #09550b;
+}
+
+pre.wiki, div.code, pre.literal-block {
+  font-size:                   90%;
+  padding:                     5pt;
+  margin-left:                 4%;
+  margin-right:                4%;
+  border:                      dashed;
+  border-width:                thin;
+  border-color:                #FC8676;
+  background-color:            #FCFCE1;
+}
+
+a:link, a:active {
+  font-weight:                 normal;
+  text-decoration:             none;
+  color:                       #09550b;
+  border-bottom:               1px dotted #09550b; 
+}
+
+a:hover, a:focus, a:visited {
+  font-weight:                 normal;
+  font-style:                  italic;
+  text-decoration:             none;
+  color:                       #09550b;
+  border-bottom:               1px dotted #09550b; 
+}
+
+h1 a:link {
+  border-bottom:               0px; 
+}
+
+p.credit {
+  margin-left:                 10%;
+  margin-right:                10%;
+  font-size:                   110%;
+}
+
+p.credit span.left {
+  float:                       left;
+  white-space:                 nowrap;
+}
+
+p.credit span.right {
+  float:                       right;
+  white-space:                 nowrap;
+}
+
+img.addborder {
+  border:                      1px solid black; 
+}
+
+div#header {
+  margin:                      0px;
+  padding:                     0pt;
+  background-color:            white;
+  display:                     inline-block;
+  width:                       100%;
+}
+
+div#header_logo {
+  margin:                      0px;
+  padding:                     10px 0px 10px 12pt;
+  background-color:            white;
+  width:                       40%;
+  float:                       left;
+}
+
+div#header_menus {
+  background-color:            white;
+  width:                       55%;
+  float:                       right;
+  padding-top:                 60pt;
+  padding-right:               10pt;
+  text-align:                  right;
+  font-size:                   80%;
+}
+
+div#header_menus ul {
+  padding-top:                 45pt;
+  list-style:                  none;
+  text-align:                  right;
+  font-size:                   80%;
+}
+
+div#header_menus li {
+  padding:                     0pt;
+  margin:                      0pt;
+  display:                     inline;
+  white-space:                 nowrap;
+}
+
+div#header a:link, div#header a:active, div#header a:visited {
+  margin:                      0pt;
+  padding:                     0pt 5pt;
+  font-weight:                 normal;
+  color:                       black;
+  text-decoration:             none;
+  border-bottom:               1px solid black; 
+  border-left:                 0px;
+  border-right:                0px;
+}
+
+div#header a:hover, div#header a:focus {
+  margin:                      0pt;
+  padding:                     0pt 5pt;
+  font-weight:                 normal;
+  color:                       black;
+  text-decoration:             none;
+  border-bottom:               4px solid #09550b; 
+  border-left:                 0px;
+  border-right:                0px;
+}
+
+div#header a.current:link, div#header a.current:active, div#header a.current:visited {
+  margin:                      0pt;
+  padding:                     0pt 5pt;
+  font-weight:                 bold;
+  font-style:                  normal;
+  font-size:                   120%;
+  color:                       white;
+  text-decoration:             none;
+  border-bottom:               4px solid #09550b; 
+  border-left:                 0px;
+  border-right:                0px;
+  background-color:            #09550b;
+}
+
+div#header a.current:hover, div#header a.current:focus {
+  margin:                      0pt;
+  padding:                     0pt 5pt;
+  font-weight:                 bold;
+  font-style:                  normal;
+  font-size:                   120%;
+  color:                       white;
+  text-decoration:             none;
+  border-bottom:               4px solid #09550b; 
+  border-left:                 0px;
+  border-right:                0px;
+  background-color:            #09550b;
+}
+
+div#header_ancestors {
+  padding:                     4px 0px 4px 12pt;
+  background-color:            #09550B;
+  color:                       white;
+}
+
+div#header_ancestors ul, div#header_ancestors * li {
+  display:                     inline;
+  list-style-type:             none;
+  padding:                     0px 0px 0px 0pt;
+}
+
+div#header_ancestors a:link, div#header_ancestors a:active, div#header_ancestors a:visited {
+  font-weight:                 bold;
+  color:                       white;
+  text-decoration:             none;
+  border-bottom:               0px;
+}
+
+div#header_ancestors a:hover, div#header_ancestors a:focus {
+  font-weight:                 bold;
+  color:                       white;
+  text-decoration:             underline;
+}
+
+div#footer {
+  margin:                      0px;
+  padding:                     0px;
+  border-top:                  1px dotted #09550b; 
+  background-color:            white;
+  display:                     inline-block;
+  width:                       100%;
+  text-align:                  right;
+}
+
+div#searchform {
+  width:                       80%;
+  background-color:            #ccffcd;
+  padding:                     15pt 10pt 15pt 10pt;
+  margin-top:                  50pt;
+  margin-bottom:               50pt;
+  margin-left:                 auto;
+  margin-right:                auto;
+  text-align:                  center;
+}
+
+div#searchform input#id_q {
+  background-color:            white;
+  border:                      1px solid #09550b;
+  padding:                     2pt;
+  width:                       80%;
+  font-size:                   110%;
+  font-weight:                 bold;
+}
+
+span.queryref {
+  font-weight:                 bold;
+}
+
+div#searchform ul {
+  list-style:                  none;
+}
+
+div#searchform li {
+  display:                     inline;
+}
+
+hr#search_vs_results {
+  color:                       #09550b;
+  border:                      2px dotted #09550b;
+  border-style:                none none dotted;
+  margin-top:                  0pt;
+  margin-bottom:               20pt;
+}
+
+div#search_results {
+  width:                       85%;
+  margin:                      auto;
+}
+
+div#sidebar hr#separator {
+  color:                       white;
+  border:                      0px;
+  margin-top:                  0pt;
+  margin-bottom:               20pt;
+}
+
+img.footer-logo {
+  height:                      24px;
+  padding:                     0px 2px;
+}
+
+hr#site_vs_page {
+  color:                       white;
+  border:                      3px dotted white;
+  border-style:                none none dotted;
+  margin-top:                  20pt;
+  margin-bottom:               20pt;
+}
+
+div#sidebar {
+  background:                  white;
+}
+
+div#sidebar div#sitemenu, div#sidebar div#pagemenu {
+  background:                  #09550b;
+  width:                       85%;
+  margin:                      auto;
+  padding:                     5pt 10pt;
+}
+
+div#sidebar * li {
+  text-align:                  left;
+}
+
+div#sidebar * ul {
+  list-style-type:             square;
+  padding-left:                12pt;
+}
+
+div#sitemenu ul {
+  list-style-type:             none;
+  padding-left:                0pt;
+}
+
+div#sitemenu ul ul {
+  list-style-type:             none;
+  padding-left:                0pt;
+}
+
+div#sitemenu ul ul ul {
+  list-style-type:             square;
+  padding-left:                12pt;
+}
+
+div#sitemenu ul li ul li {
+  padding-top:                 3pt;
+  padding-bottom:              5pt;
+  border-top:                  1px dotted white;
+}
+
+div#sitemenu ul li ul li ul li {
+  border-top:                  none;
+  padding-top:                 1pt;
+  padding-bottom:              1pt;
+}
+
+div#sitemenu ul li a:link,
+div#sitemenu ul li a:active,
+div#sitemenu ul lu a:visited
+{
+  font-size:                   140%;
+  font-weight:                 bold;
+  border-bottom:               none;
+}
+
+div#sitemenu ul li a:focus,
+div#sitemenu ul lu a:hover
+{
+  font-size:                   140%;
+  font-weight:                 bold;
+  font-style:                  italic;
+  border-bottom:               none;
+}
+
+div#sitemenu ul ul li a:link,
+div#sitemenu ul ul li a:active,
+div#sitemenu ul ul lu a:visited,
+div#sitemenu ul ul li a:focus,
+div#sitemenu ul ul lu a:hover
+{
+  font-size:                   90%;
+  font-weight:                 normal;
+  border-bottom:               none;
+}
+
+div#pagemenu ul {
+  list-style-type:             none;
+  padding-left:                0pt;
+}
+
+div#pagemenu ul ul {
+  list-style-type:             none;
+  padding-left:                0pt;
+}
+
+div#pagemenu ul ul ul {
+  padding-left:                12pt;
+}
+
+div#pagemenu ul li ul li {
+  padding-top:                 3pt;
+  padding-bottom:              5pt;
+  border-top:                  1px dotted white;
+}
+
+div#pagemenu ul li ul li ul li {
+  border-top:                  none;
+  padding-top:                 1pt;
+  padding-bottom:              1pt;
+}
+
+div#pagemenu ul li a:link,
+div#pagemenu ul li a:active,
+div#pagemenu ul lu a:visited
+{
+  font-size:                   120%;
+  font-weight:                 bold;
+  border-bottom:               none;
+}
+
+div#pagemenu ul li a:focus,
+div#pagemenu ul lu a:hover
+{
+  font-size:                   120%;
+  font-weight:                 bold;
+  font-style:                  italic;
+  border-bottom:               none;
+}
+
+div#pagemenu ul ul li a:link,
+div#pagemenu ul ul li a:active,
+div#pagemenu ul ul lu a:visited,
+div#pagemenu ul ul li a:focus,
+div#pagemenu ul ul lu a:hover
+{
+  font-size:                   90%;
+  font-weight:                 normal;
+  border-bottom:               none;
+}
+
+
+div#sidebar ul.ancestor * li {
+  padding-top:                 0pt;
+}
+
+div#sidebar ul {
+  padding-bottom:              8pt;
+}
+
+div#sidebar a:link, div#sidebar a:active, div#sidebar a:visited {
+  color:                       white;
+  text-align:                  left;
+  text-decoration:             none;
+  border-bottom:               1px dotted white; 
+}
+
+div#sidebar a:hover, div#sidebar a:focus {
+  color:                       white;
+  text-align:                  left;
+  text-decoration:             none;
+  border-bottom:               1px dotted white; 
+}
+
+div#main {
+  border-left:                 1px solid #09550b; 
+}
+
+div#main ul#summary {
+  list-style-type:             square;
+  padding-left:                12pt;
+  font-size:                   14pt;
+}
+
+div#main ul#summary * ul {
+  padding-left:                12pt;
+  padding-bottom:              14pt;
+  font-size:                   95%;
+}
+
+div.code * {
+  background-color:            #FCFCE1;
+}
+
+div.note {
+  margin:             8px 2% 0px 2%;
+  border:             1px none #ffbb44;
+  border-left-width:  4px;
+  border-left-style:  solid;
+  padding:            1px 10pt 1px 55px;
+  background:         #ffdd66 url('/dsk/l1/jpc/pictures/ReST/clipboard.png') no-repeat 0% 50%;;
+  font-size:          90%
+}
+
+div.error {
+  margin:             8px 2% 0px 2%;
+  border:             1px none #dd0000;
+  border-left-width:  4px;
+  border-left-style:  solid;
+  padding:            1px 10pt 1px 55px;
+  background:         #ffddcc url('/dsk/l1/jpc/pictures/ReST/i-core.png') no-repeat 0% 50%;;
+  font-size:          90%
+}
+
+p.admonition-title {
+  font-weight:        bold;
+}
+
+div.topic {
+  margin:             5pt;
+  padding:            2pt 10pt;
+  background-color:   fff676;
+}
+
+div.topic p.first {
+  font-weight:        bold;
+}
+
+table.wiki th, table th {
+  color:                       black;
+  background:                  #FFFFCC;
+}
+
+table.docutils {
+  margin-left:    10%;
+  margin-right:   10%;
+}
+
+table.wiki, table.wiki th, table.wiki td { border:          1px solid black; }
+table.wiki th * p                        { text-align:      center; }
+table.wiki * p                           { margin:          0pt; }
+table.wiki * blockquote                  { margin:          0pt; }
+table                                    { border-collapse: collapse; }
+table th, table td                       { border:          1px solid black;
+                                           padding:         2px 10px 2px 10px; }
+
+table.docinfo {
+  margin-top:      10pt;
+  margin-left:     auto;
+  margin-right:    0pt;
+  border:          10px solid #303030;
+  border-collapse: collapse;
+  background:      #303030;
+  font-size:       90%;
+  font-family:     sans-serif;
+}
+
+table.docinfo tr {
+  border-bottom:   1px dotted white;
+}
+
+th.docinfo-name,
+table.docinfo td,
+table.docinfo td a:link,
+table.docinfo td a:active,
+table.docinfo td a:visited,
+table.docinfo td a:focus,
+table.docinfo td a:hover
+{
+  border:                      0px solid white;
+  background:                  #303030;
+  color:                       white;
+  text-align:                  left;
+  font-weight:                 bold;
+}
+
+th.docinfo-name {
+  font-weight:                 normal;
+}
+
+table.docinfo td {
+  font-weight:                 bold;
+}
+
+span.ul {
+  text-decoration:             underline;
+}
+
+* span.smallcaps {
+  text-transform:                "uppercase";
+  font-size:                     "smaller";
+}
+
+
+span.cb {
+  font-family:                 "andale mono", monospace;
+  font-weight:                 bold;
+  white-space:                 pre;
+}
+
+span.fboxtt {                  
+  border:                      1px solid black;
+  padding:                     0px 4px;
+  font-family:                 "andale mono", monospace;
+  font-weight:                 bold;
+  white-space:                 pre;  
+} 
+
+#notice.system-message, .notice.system-message {
+  color:                       black;
+  background:                  #DDFFDD;
+  padding-top:                 5pt;
+  padding-bottom:              5pt;
+  border:                      1px none  #55BB55;
+  border-top-width:            4px;
+  border-top-style:            solid;
+}
+
+#content.error .message, div.system-message {
+  color:                       #550000;
+  background:                  #ffddcc;
+  border:                      2px none #dd0000;
+  border-top-width:            4px;
+  border-top-style:            solid;
+  padding:                     .5em;
+  margin:                      1em 0;
+}
+
+#main {
+  float:                       right;
+  width:                       70%;
+  padding:                     0pt;
+  margin:                      0pt;
+  min-height:                  700px;
+  background:                  white;
+}
+
+div#main h1 {
+  border-bottom:               2px solid #09550b;
+}
+
+div#main div.section h1 {
+  border-bottom:               none;
+}
+
+#cmscontent {
+  padding:                     0pt 4% 10pt 4%;
+  margin:                      0pt;
+}
+
+div#htmlerrorcontents {
+  padding:                     10pt 4% 10pt 4%;
+  margin:                      0pt;
+}
+
+div#htmlerrorcontents span.cs {
+  font-size:                   80%;
+  font-family:                 "andale mono", monospace;
+  white-space:                 pre;
+}
+
+div#htmlerrorcontents hr.lang_separator {
+  border:                      1px dotted black;
+  border-style:                none none dotted;
+  margin-top:                  20pt;
+  margin-bottom:               10pt;
+}
+
+#embedcontent {
+  border:                      0pt;
+  padding:                     0pt;
+  margin:                      0pt;
+}
+
+#sidebar {
+  float:                       left;
+  width:                       29.9%;
+  padding:                     0 0 0 0;
+  margin:                      0 0 0 0;
+  color:                       white;
+  background:                  #09550B;
+}
+*/
