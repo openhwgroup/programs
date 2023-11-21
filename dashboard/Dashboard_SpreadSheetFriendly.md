@@ -1,6 +1,6 @@
 
 # OpenHW Project Dashboard																															
-Last Updated Oct 2, 2023																																																						
+Last Updated Nov 20, 2023																																																						
 ### Status Key																																																						
 **PC = Project Concept** 																														
 **PL = Project Launch**  																																		
@@ -41,12 +41,13 @@ Last Updated Oct 2, 2023
 ## Active INTERCONNECT TG Projects																																																						
 
 
-|	Name				|	TRL Target	|	Status	|	TPL or PM																		|	Repo													|	PC			|	PL			|	PA		| PF Estimate 	|	Project Docs	|	RTD	|	Project Plan	|	Project Board	|																										
-|	------------		|	-------		|	-------	|	-----------																		|	--------------------									|	-------		|  -----		|	----	|	----	  	|	--------		| ---- 	|	-------------	|	-------------	|																										
-|	CORE-V-HPDCACHE		|	TRL 5		|	PA		|	[César Fuguet](https://github.com/cfuguet) 										|	[cv-hpdcache](https://github.com/openhwgroup/cv-hpdcache) | 22.06.27 	|	23.02.27 	| 23.09.25	| 2025 Q3				|	[HPDACHE PC](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-L1-DCACHE/20220523-OHG-ProjectConcept-CEA_L1_Dcache.md) [HPDCACHE PL](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-L1-DCACHE/20221214-ProjectLaunch-CEA_L1_Dcache.md)	| 														| [HPDCache PA Plan](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-L1-DCACHE/PlanApprove_CV-HPDcache.md)		|		|																									
-|	CV-MESH				| 	TRL 5		|	PL		|	[Jonathan Balkind](https://github.com/jbalkind) 								| 	TBD														|	23.07.25	|	23.07.25	|			| 2024 Q4		|	[CV-MESH PC & PL](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CV-MESH/CV-MESH-PC-PL.md	| 		|		|		|
-|	CORE-V TCCache		|	TRL 5		|	PC		|	[Max Giacometti](https://github.com/openhwgroup/core-v-mcu-demo/commits?author=suppamax) | 													|	23.06.26 	|				|			|				|	[TC Cache PC ](https://drive.google.com/file/d/1e4i5IJWn5AbQZ1puO6QwY8jwgOan-HSd/view)	|		|		|		|																										
-
+|	Name					|	TRL Target	|	Status	|	TPL or PM																		|	Repo													|	PC			|	PL			|	PA		| PF Estimate 	|	Project Docs	|	RTD	|	Project Plan	|	Project Board	|																										
+|	------------			|	-------		|	-------	|	-----------																		|	--------------------									|	-------		|  -----		|	----	|	----	  	|	--------		| ---- 	|	-------------	|	-------------	|																										
+|	CORE-V-HPDCACHE			|	TRL 5		|	PA		|	[César Fuguet](https://github.com/cfuguet) 										|	[cv-hpdcache](https://github.com/openhwgroup/cv-hpdcache) | 22.06.27 	|	23.02.27 	| 23.09.25	| 2025 Q3				|	[HPDACHE PC](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-L1-DCACHE/20220523-OHG-ProjectConcept-CEA_L1_Dcache.md) [HPDCACHE PL](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-L1-DCACHE/20221214-ProjectLaunch-CEA_L1_Dcache.md)	| 														| [HPDCache PA Plan](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-L1-DCACHE/PlanApprove_CV-HPDcache.md)		|		|																									
+|	CV-MESH					| 	TRL 5		|	PL		|	[Jonathan Balkind](https://github.com/jbalkind) 								| 	TBD														|	23.07.25	|	23.07.25	|			| 2024 Q4		|	[CV-MESH PC & PL](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CV-MESH/CV-MESH-PC-PL.md	| 		|		|		|
+|	CORE-V TCCache			|	TRL 5		|	PC		|	[Max Giacometti](https://github.com/openhwgroup/core-v-mcu-demo/commits?author=suppamax) | 													|	23.06.26 	|				|			|				|	[TC Cache PC ](https://drive.google.com/file/d/1e4i5IJWn5AbQZ1puO6QwY8jwgOan-HSd/view)	|		|		|		|																										
+|	CORE-V-Polara DevKit	|	TRL 3		|	PC		|	[François Leduc-Primeau ](https://github.com/francoislp)						|															| 23.10.23 		|				|			|				| [CORE-V Polara DevKit PC](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-POLARA-DEVKIT/POLARA-DEVKIT_project_concept_approved.md)																		|										|																					|							|																														
+|	CVA6-Platform			|	n/a			|	PC		|	[Jonathan Balkind](https://github.com/jbalkind) 						| [cva6-platform](https://github.com/openhwgroup/cva6-platform)		| 23.10.23		|				|			|				|	pull request pending																											| | | | |
 
 
 ## Active HW TG Projects	
@@ -58,6 +59,8 @@ Last Updated Oct 2, 2023
 |	CORE-V-TRUSTED-MCU	|	PC		|	Abdoulaye Berthe																														|																			| 22.07.25 	|			|			|				|	[CORE-V-MCU2 Project Concept](https://docs.google.com/document/d/1nW9rFAFHhNkNi53khY3hhynXaHIm4OqJ/edit)																																															|																					|							|					|																										
 | 	CORE-V-VISION-APU	|	PC		| 	Mike Aronson																															|																	`		| 23.03.27	|			|			|				|	[CORE-V-VISION-APU Project Concept](https://drive.google.com/drive/u/1/folders/1SuQJaPVZrHH2rreb5TAIhgZU9zfDGsQa) +  [CORE-V-VISION-APU Project Concept PDF](https://drive.google.com/file/d/1OqtX_dW4hJwJJMMxfbllhSSbM7ufBoT4/view?usp=drive_link)														|																					|							|					|
 |	CORE-V-180-MCU		|	PC		|	[Jean-Paul Chaput](https://github.com/jpc-lip6)																							|																			| 23.04.24 	|			|			|				|	[CORE-V-180-MCU Project Concept](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CORE-V-180-MCU/project-concept-proposal.md)	[June 2023 update](https://drive.google.com/drive/u/1/folders/1HnUBYWknyvzqUWm3VCjcmhFatosRgBd2)									|																					|							|					|																										
+
+
 
 ## Active VERIFICATION TG Projects																																																						
 
