@@ -16,9 +16,9 @@ Additionnal features may also be considered, like:
 * CLIC support
 * Improved OBI interface support (bus error in particular)
 
-This new project will keep functionnal backward compatibility with CV32E40Pv2,
-but with relaxed rules compared to previous project. In particular, formal equivalence
-with previous design will not be required to make design work easier.
+This new project will keep functional backward compatibility with CV32E40Pv2,
+but with relaxed rules on changes compared to the previous project (CV32E40Pv2). In particular, formal equivalence
+with the previous design will not be required to make design work easier.
 
 Due to the strict backward compatibility rules of CV32E40Pv2, this new core is not
 named CV32E40Pv3 and a new naming should be found.
@@ -28,7 +28,7 @@ named CV32E40Pv3 and a new naming should be found.
 
 ### Known market/project requirements at PC gate
 
-**Madatory features and design changes**
+**Mandatory features and design changes**
 
 Keep XPULP custom extensions that improve address manipulations and flow control:
 * Post-increment and register-register indexed load/store
