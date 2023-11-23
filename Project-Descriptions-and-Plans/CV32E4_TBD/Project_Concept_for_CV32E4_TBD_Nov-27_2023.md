@@ -66,7 +66,7 @@ Add CV-X-IF interface:
 * End user product may require additionnal appliance-specific custom instructions, these instructions should be implemented in a co-processor.
 
 Floating Point Unit:
-* keep current CV-FPU integration or move it to CV-X-IF?
+* keep current CV-FPU integration unchanged as much as possible. If a design modification is envisioned, sequential equivalence with CV32E40Pv2 is required.
 
 Add CLIC support:
 * Core-local interrupt controller fits better with embedded real-time requirements than PLIC or any other (non RISC-V compliant)
