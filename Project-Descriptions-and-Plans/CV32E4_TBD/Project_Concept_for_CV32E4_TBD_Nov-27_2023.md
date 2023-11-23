@@ -1,4 +1,4 @@
-# OpenHW Project Concept Proposal: CV32E4_TBD
+# OpenHW Project Concept Proposal: CV32E40PX
 *The PC proposal introduces the project and explains the market drivers and the "why"*
 
 # Title of Project - "CV32E4_TBD"
