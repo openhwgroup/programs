@@ -7,9 +7,8 @@
 ## Author(s) - Manuel PEZZIN (CEA)
 
 ## High Level Summary of project, project components, and deliverables
-This proposal is a continuation of CV32E40Pv2 project.
-Main goal is to support official RVB (and a part of RVK) and (upcoming) RVP
-extensions while keeping backward compatibility with CV32E40Pv1/v2 (eg XPULP
+Main goal of this project is to provide a new CPU core that supports official RVB (and a part of RVK) and (upcoming) RVP
+extensions while keeping functional backward compatibility with CV32E40Pv1/v2 (eg XPULP
 custom extensions are kept and even extended).
 Additionnal features may also be considered, like:
 * CV-X-IF support
