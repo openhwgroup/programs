@@ -92,7 +92,7 @@ Companies needing more performances, less energy consumption or smaller code siz
 
 ## Initial Estimate of Timeline
 At Project Concept:
-* Preliminary RTL release expected in 2024 Q1
+* Preliminary RTL code drop expected in 2024 Q1
 * RTL feature-complete expected in end of 2024 Q4
 * RTL freeze and verification completed expected in 2025 Q4
 
