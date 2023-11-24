@@ -1,125 +1,103 @@
 ﻿## Title of Project 
-
+CORE-V MCU UVM Environment & Test Bench
 
 ## Date of proposal
-
+2023-11-24
 ## Author(s)
-
-
-## (*For SW Projects*) Target Platform
-*Specify the specific target platform from within the target family for this project. The target family is specified in the PC/PL document. For example, the PC/PL might address CV32E4 family of embedded processors, while the PA might target the CV32E40P MCU*
-
-## (*For Cores Projects*) Part Numbers
-*Write down the CORE-V part number assigned for each of the output cores produced/verified by this project plan*
-
-| Core produced/verified in this project		    | Part Number			| Comment				| 
-| --------------------- 							| --------------------- | ---------------------	| 
-| Core CV...												  |						|						| 
-
-## (*For Cores Projects*) TRL target
-
-*Write down the TRL target for each of the output cores produced/verified by this project plan*
-
-| Core produced/verified in this project		    | TRL Target			| Comment				| 
-| --------------------- 							| --------------------- | ---------------------	| 
-| Core CV...										|						|						| 
+David Poulin - Datum Technology Corporation
 
 ## Release plan
 
-*Write down the anticipated release number and release schedule for the work covered by this project plan. For example, Release 1.0.0 in 2024-12-01*
 
 | Release number		    | Planned date						| Description															| 
 | --------------------- 	| --------------------- 			| ---------------------													| 
-| 1.0.0						| 2024-12-01						| Initial fully verified TRL5 release including X,Y,Z					|
-
-*Add any comment about release strategy or timing such as follow-on releases *
- 
+| 1.0.0						| 2024-03-01						| UVM Environment and Test Bench ready for testing MCU on all commercial simulators.					|
 
 
 
 ## Project deliverables (high level)
 
-*The high level project deliverables (e.g. code, verification, user document, and other deliverables) should be listed. I.e. what are the open-source deliverables? Don't list detailed features here.*
-*The following table is provided as an example*
+![MCU UVM Environment and Test Bench](./cvmcu_uvm_block_diagram.png)
 
 | Deliverable		    | Description			| Technical Leader		| 
 | --------------------- | --------------------- | ---------------------	| 
-| Item1	    			| RTL code				|						|
-| Item2	    			| Verification of RTL	|						|
-| Item3	    			| User Manual			|						|
+| uvme_cvmcu	    			| CORE-V-MCU UVM Environment including Register Model				|		David Poulin				|
+| uvmt_cvmcu	    			| CORE-V-MCU UVM Test Bench	|			David Poulin			|
+| uvma_cvmcu_io	    			| CORE-V-MCU IO Pad Agent	|			David Poulin			|
+| uvma_cvmcu_cpi	    			| CORE-V-MCU Camera Port Interface UVM Agent			|			David Poulin			|
+| uvma_cvmcu_event	    			| CORE-V-MCU Core Event Agent	|			David Poulin			|
+| uvma_cvmcu_dbg	    			| CORE-V-MCU Core Debug Agent	|			David Poulin			|
 
-*All major deliverables require a Technical Project Leader.*
 
-## Feature List 
-
-
-*This section provides the detailed feature list of the project.*
-*If the features are outlined in detail in the PL, or within a User Manual or other document, refer to that document. If not, the feature list should be provided here*
+## Feature List
+* An industrial-grade UVM verification environment & test bench that can:
+> * Fully verify the CORE-V MCU peripherals and connectivity to TRL-5.
+> * Be extended to verify future versions of the MCU including devices with new/different peripherals and topology.
+> * Support a self-checking environment using extensible prediction and scoreboarding components.
+> * Replace the core with UVM bus agent(s) (e.g. OBI) to drive stimulus and collect responses sufficient to achieve above.
+* Ability to simulate with all commercial simulators.
+* Ability to drive and receive data from both the core and IO pins for all MCU peripherals:
+> * SPI
+> * QSPI
+> * UART
+> * I2C
+> * JTAG
+> * CPI
+> * SDIO
 
 
  
 ## Resources/ Resource Plan
-*Members (organizations) and individuals committed to work on the project should be listed in this section*
-*The following table is provided as an example*
 
 | Organization					| Person							| Project deliverable focus 			|      
 | --------------------    		| --------------------    			| -------------------- 					|
-| Organization1	    			| Person1					  		|	RTL									|
-| Organization2	    			| Person2					  		|	RTL									|
-| Organization2	    			| Person3					  		|	Verification						|
- 
-*Every project deliverable must have at least one resource assigned at PA*.
-*View of resources needed/available to be added*
+| Datum Technology Corporation	    			| David Poulin					  		|	Verification						|
+
  
  
  ## Project Leadership Roles
-*The person or persons responsible for project planning/ management should be listed* 
- - *Project Manager(s)*
- - *Technical Project Leader(s)*
- - *Committers on project repos*
-* Often these roles would be taken the same person(s).*
 
 | Role									| Person							| Organization							| Committer Status						|       
 | --------------------    				| --------------------    			| -------------------- 					| -------------------- 					| 
-| Project Manager(s) (if applicable)	| 					  				|										|										| 
-| Technical Project Leader(s)	    	| 					  				|										|										| 
-| Committer1 on project repo			|									|										| Elected								| 
-| Committer2 on project repo			|									|										| Election to be held					| 
-
-
-*There needs to be at least one CORE-V CORES committer already elected who can review and merge pull requests on the project repos. 
+| Project Manager(s) (if applicable)	| 				Mike Thompson	  				|				OpenHW Group						|										| 
+| Technical Project Leader(s)	    	| 					David Poulin  				|					Datum Technology Corporation					|										| 
 
 
 
 ## Work Breakdown Structure
 
-
-*The project work is broken down starting from high level to low level.*
-- *At high level, work can be broken down by technical component, project phase, area of focus or other method.*
-- *At low level, specific tasks are enumerated with estimated time durations (e.g. 1 person for 2 weeks)* 
-- *If appropriate, tasks are assigned to individuals*
-- *For agile projects, tasks can be assigned to individuals during project execution. If so, initial task backlog without assignment to individual can be created.*
-- *Format of the WBS can be github project board, spreadsheet, or other*.
-
-- *Examples to be provided in a future version*
+* Write Verification Plan
+* Capture MCU Register Model using Datum UVMxGen spreadsheet notation
+* Capture DV specs using Datum UVMxGen spreadsheet notation
+* Generate UVM code using UVMxGen
+* Run automated register tests via OBI frontdoor access using Metrics DSim
+> * Hardware Reset values checks (reg_hw_reset)
+> * Register model vs. RTL equivalency check (reg_bit_bash)
+> * Memory consistency check (mem_walk)
+* Generate Doxygen reference documentation of all UVM code using Datum's Moore.io CLI
 
 
 ## Schedule
-*A timeline view is created by considering the WBS breakdown, dependencies among tasks, resource availability, and schedule requirements. The format of the timeline view can be github project board with milestones, a spreadsheet, or gantt chart.*
 
-- *The schedule should indicate the planned date of major milestones and the first release for the project*
-- *Remaining uncertainties or issues to be resolved should be described*
-- *How the schedule will be maintained following PA should be described*
+* Verification Plan: Finished
+* DV Specs: 2023/12/08
+* Register Model capture: 2023/12/15
+* Generate UVM code: 2023/12/15
+* Run automated register tests: 2023/12/15
+* Implement IO agent sequences: 2024/01/12
+* Implement CPI agent sequences: 2024/01/19
+* Implement Event agent sequences: 2024/01/26
+* Implement Debug agent sequences: 2024/01/26
+* Code review and bug creations: 2024/01/31
+* Generate Doxygen documentation: 2024/02/02
+* Review with OpenHW Group members: 2024/02/16
 
-- *Examples to be provided in a future version*
 
 ## Project Repo 
-*The project repo(s) should be setup and listed here*
-*The repos should have README.MD and LICENSE.MD created*
-*The LICENSE.MD file should specify the project license*
+https://github.com/openhwgroup/core-v-mcu-uvm
 
 ## Regular Project Meeting 
-*The project should have a regular project meeting established and included on the OpenHW calendar. Send a recurring meeting request to meetings@openhwgroup.org*
+Wednesdays at 2pm EST
 
 ## Regular Project Report
 *The project should have a regular project meeting report agreed. The format of the report should follow the suggestion in the programs/template repo. Consult OpenHW staff as meeting report location*.
@@ -127,14 +105,10 @@
 
 
 ## Risk Register
-*Risks towards completion of the project for the given target should be listed and risk mitigation plan should be stated*
-
 
 | Risk							| Description						| Plan to Mitigate Risk					|      
 | --------------------    		| --------------------    			| -------------------- 					|
-| Risk1	    					| 					  				|										|
-| Risk2	    					| 					  				|										|
-| Risk3	    					| 									|										|
+| MCU register model inaccuracies	    					| 					RTL vs. User Manual description  				|										|
 
 
 
@@ -143,10 +117,8 @@
 
 | Checklist						| Description						| Plan to Develop Checklist					|      
 | --------------------    		| --------------------    			| -------------------- 					|
-| RTL Freeze	    			| 					  				|										|
-| Verification Complete	    	| 					  				|										|
-| Documentation Complete    	| 					  				|										|
-| IP Checklist complete    	    | 					  				|										|
+| Verification Components Complete	    	| 				All UVM components are simulating using DSim and checked in.	  				|										|
+| Documentation Complete    	| 					  				|					Verification Plan and reference documentation complete and checked in.					|
 
 
 ## PA Checklist
@@ -155,7 +127,7 @@
 
 | Item							| Completion (Y/N/In progress/NA)	| Comment							|      
 | --------------------    		| --------------------    			| -------------------- 					|
-| Project Concept Complete	    | 					  				|										|
+| Project Concept Complete	    | 				Y  				|										|
 | Project Launch Complete	    | 					  				|										|
 | SW Target platform identified	| 					  				|										|
 | Cores Part Number identified	| 					  				|										|
@@ -164,7 +136,7 @@
 | HL Project deliverables identified| 					  			|										|
 | Feature list available|		| 					  				|										|
 | Resource plan available|		| 					  				|										|
-| Repo setup|					| 					  				|										|
+| Repo setup|					| 					Y 				|										|
 | License.md file in place		| 					  				|										|
 | Project Manager identified	| 					  				|										|
 | Technical Project Leader per deliverable identified| 					  			|										|
