@@ -35,7 +35,7 @@ David Poulin - Datum Technology Corporation
 > * Be extended to verify future versions of the MCU including devices with new/different peripherals and topology.
 > * Support a self-checking environment using extensible prediction and scoreboarding components.
 > * Replace the core with UVM bus agent(s) (e.g. OBI) to drive stimulus and collect responses sufficient to achieve above.
-* Ability to simulate with all commercial simulators.
+* Ability to simulate with Metrics DSim
 * Ability to drive and receive data from both the core and IO pins for all MCU peripherals:
 > * SPI
 > * QSPI
