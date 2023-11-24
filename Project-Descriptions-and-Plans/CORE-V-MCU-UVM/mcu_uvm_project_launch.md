@@ -21,8 +21,8 @@ David Poulin - Datum Technology Corporation
 
 | Deliverable		    | Description			| Technical Leader		| 
 | --------------------- | --------------------- | ---------------------	| 
-| uvme_cvmcu	    			| CORE-V-MCU UVM Environment including Register Model				|		David Poulin				|
-| uvmt_cvmcu	    			| CORE-V-MCU UVM Test Bench	|			David Poulin			|
+| uvme_cvmcu_chip	    			| CORE-V-MCU UVM Environment including Register Model				|		David Poulin				|
+| uvmt_cvmcu_chip	    			| CORE-V-MCU UVM Test Bench	|			David Poulin			|
 | uvma_cvmcu_io	    			| CORE-V-MCU IO Pad Agent	|			David Poulin			|
 | uvma_cvmcu_cpi	    			| CORE-V-MCU Camera Port Interface UVM Agent			|			David Poulin			|
 | uvma_cvmcu_event	    			| CORE-V-MCU Core Event Agent	|			David Poulin			|
