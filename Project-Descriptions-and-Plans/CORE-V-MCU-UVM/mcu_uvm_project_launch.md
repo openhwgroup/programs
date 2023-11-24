@@ -118,7 +118,7 @@ Wednesdays at 2pm EST
 | Checklist						| Description						| Plan to Develop Checklist					|      
 | --------------------    		| --------------------    			| -------------------- 					|
 | Verification Components Complete	    	| 				All UVM components are simulating using DSim and checked in.	  				|										|
-| Documentation Complete    	| 					  				|					Verification Plan and reference documentation complete and checked in.					|
+| Documentation Complete    	| 				Verification Plan and reference documentation complete and checked in.	  				|										|
 
 
 ## PA Checklist
