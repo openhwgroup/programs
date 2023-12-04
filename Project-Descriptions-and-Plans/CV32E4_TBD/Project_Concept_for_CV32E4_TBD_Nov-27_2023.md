@@ -1,23 +1,34 @@
 # OpenHW Project Concept Proposal: CV32E40PX
 *The PC proposal introduces the project and explains the market drivers and the "why"*
 
-# Title of Project - "CV32E4_TBD"
+# Title of Project - "CV32E40PX"
 # Project Concept Proposal
-## Date of proposal - 2023-11-27
+## Date of proposal - 2023-11-27 (updated 2023-12-04)
 ## Author(s) - Manuel PEZZIN (CEA)
 
 ## High Level Summary of project, project components, and deliverables
-Main goal of this project is to provide a new CPU core that supports official RVB (and a part of RVK) and (upcoming) RVP
-extensions while keeping functional backward compatibility with CV32E40Pv1/v2 (eg XPULP
-custom extensions are kept and even extended).
+The objective of this project is to have a new CPU core tailored for deeply embedded
+real-time control/DSP workloads.
+
+Target TRL is TRL4 or TRL5 (idealy TRL5 if we are able to find enough verification resources).
+
+Main goal of this project is to provide a new CPU core that supports official RVB
+(and a part of RVK) and (upcoming) RVP extensions while keeping functional backward
+compatibility with CV32E40Pv1/v2 (eg XPULP custom extensions are kept and even extended).
+
 Additionnal features may also be considered, like:
 * CV-X-IF support
 * CLIC support
 * Improved OBI interface support (bus error in particular)
 
-This new project will keep functional backward compatibility with CV32E40Pv2,
-but with relaxed rules on changes compared to the previous project (CV32E40Pv2). In particular, formal equivalence
-with the previous design will not be required to make design work easier.
+Thus, it will extend existing features from CV32E40P with a subset of CV32E40X ones,
+and will extend them further with RVP support in particular.
+
+This new project will keep functional backward compatibility with CV32E40P (v1/v2),
+but with relaxed rules on changes compared to the previous project.
+In particular, formal logic equivalence with the previous design will not be required
+to make design work easier. We will try as much as possible to maintain a formal
+sequential equivalence for backward-compatible configurations.
 
 Due to the strict backward compatibility rules of CV32E40Pv2, this new core is not
 named CV32E40Pv3 and a new naming should be found.
@@ -27,7 +38,7 @@ named CV32E40Pv3 and a new naming should be found.
 
 ### Known market/project requirements at PC gate
 
-**Mandatory features and design changes**
+**Priority 1 features and design changes (Mandatory, will be implemented)**
 
 Keep XPULP custom extensions that improve address manipulations and flow control:
 * Post-increment and register-register indexed load/store
@@ -35,24 +46,46 @@ Keep XPULP custom extensions that improve address manipulations and flow control
 * Immediate branch
 * Event load
 
+Add support for RISC-V official bit manipulation instructions (RVB/RVK):
+* RVB zba (address manipulation) will be supported
+* RVB zbb (basic bit manipulations) will be supported
+* RVB zbs (single bit instructions) will be supported
+* RVB zbc (carry-less multiplications) : may be supported, to be confirmed if
+  relevant for DSP applications
+* RVK zbkb (Bitmanip instructions for Cryptography) : pack, packh, packw, brev8,
+  zip, unzip additionnal instructions may be supported, if relevant for DSP applications
+* RVK zbkx (Crossbar permutation instructions) : xpem4 and xperm8 additionnal
+  instructions may be supported, if relevant for DSP applications
+* RVK zkn, zks, zkr and zkt are specific to cryptographic computations and will not be supported
+
+Add support for RISC-V official DSP instructions (RVP):
+* Q-format
+* Result averaging/rounding/saturation
+* SIMD (8, 16 and 32-bit data)
+  * Parrallel addition/subtraction/...
+  * Multiply and multiply-accumulate
+  * Crossed operations
+  * Dot product
+  * Register pair operands
+* Widening operations (full result stored in register pair)
+* 64 bits addition/subtraction
+
+note: Since RVP extensions are not ratified yet, this list is not exhaustive.
+
 Introduce a dual opcode scheme for XPULP ALU instructions that have a strict RVB/RVP equivalent:
 * Multiply-accumulate
 * General ALU extensions
 * Bit manipulation
 * SIMD (16 and 8-bit data)
+
 note : this dual opcode scheme allows backard compatibility and open the door to smooth transition
 of existing programs from XPULP to RVB/RVP, if needed/relevant.
 
-Add support for RISC-V official bit manipulation instructions:
-* RVB zba (address manipulation) will be supported
-* RVB zbb (basic bit manipulations) will be supported
-* RVB zbs (single bit instructions) will be supported
-* RVB zbc (carry-less multiplications) : may be supported, to be confirmed if relevant for DSP applications
-* RVK zbkb (Bitmanip instructions for Cryptography) : pack, packh, packw, brev8, zip, unzip additionnal instructions may be supported, if relevant for DSP applications.
-* RVK zbkx (Crossbar permutation instructions) : xpem4 and xperm8 additionnal instructions may be supported, if relevant for DSP applications.
-* RVK zkn, zks, zkr and zkt are specific to cryptographic computations and will not be supported
+Floating Point Unit:
+* keep current CV-FPU integration unchanged as much as possible. If a design modification is envisioned,
+sequential equivalence with CV32E40Pv2 is required.
 
-**Optionnal design changes**
+**Priority 2 features and design changes (Optionnal, would be implemented if we have enough design/verification resources)**
 
 Introduce XPULPv3 custom extentions (preliminary, feature list may evolve):
 * ALU instructions that have a strict RVB/RVP equivalent opcode will be deprecated, new XPULPv3 opcodes will be RVB/RVP ones instead
@@ -64,9 +97,6 @@ Introduce XPULPv3 custom extentions (preliminary, feature list may evolve):
 
 Add CV-X-IF interface:
 * End user product may require additionnal appliance-specific custom instructions, these instructions should be implemented in a co-processor.
-
-Floating Point Unit:
-* keep current CV-FPU integration unchanged as much as possible. If a design modification is envisioned, sequential equivalence with CV32E40Pv2 is required.
 
 Add CLIC support:
 * Core-local interrupt controller fits better with embedded real-time requirements than PLIC or any other (non RISC-V compliant)
@@ -81,20 +111,20 @@ Design Portability:
 
 ### Potential future design enhancements
 * remove deprecated features
-* Add Zce extension for further code-size reduction (not required for Multicore cluster).
+* Add Zce extension for further code-size reduction.
 * Add bus attributes support.
-* move bitmanip, SIMD and complex number subsets of XPULP, RVB and RVP to a CV-X-IF compliant co-processor IP
+* move bitmanip, SIMD and complex number subsets of XPULP, RVB/RVK and RVP to a CV-X-IF compliant co-processor IP
   * pros : this will make these features available to other processors, and would simplify verification work.
   * cons : a performance loss is expected on instructions that use register pairs.
 
 ## Who would make use of OpenHW output
-Companies needing more performances, less energy consumption or smaller code size for real-time control and/or DSP applications.
+Companies needing performant, energy-efficient (deeply) embedded real-time control and/or DSP applications with code size constrains.
 
 ## Initial Estimate of Timeline
 At Project Concept:
-* Preliminary RTL code drop expected in 2024 Q1
-* RTL feature-complete expected in end of 2024 Q4
-* RTL freeze and verification completed expected in 2025 Q4
+* Preliminary RTL code drop expected in 2024-Q1
+* RTL feature-complete expected in end of 2024-Q4 / 2025-Q1
+* RTL freeze and verification completed expected end of 2025-Q4
 
 ## Explanation of why OpenHW should do this project
 This proposal is a continuation of CV32E40P project.
