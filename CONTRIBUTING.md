@@ -12,9 +12,6 @@ covered by the terms of the [Eclipse Contributor Agreement](https://www.eclipse.
 framework for a Contributor's technical contributions to the OpenHW Group,
 including provisions for grant of copyright license and a Developer
 Certificate of Origin on contributions merged into OpenHW Group repositories.
-<br><br>
-All pull-requests to OpenHW Group git repositories must be signed-off using the
-`--signoff` (or `-s`) option to the git commit command (see below).
 
 ## The Mechanics
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the [OpenHW Group programs](https://github.com/openhwgroup/programs) repository
