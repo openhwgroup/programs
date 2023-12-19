@@ -17,9 +17,9 @@ All pull-requests to OpenHW Group git repositories must be signed-off using the
 `--signoff` (or `-s`) option to the git commit command (see below).
 
 ## The Mechanics
-1. [Fork](https://help.github.com/articles/fork-a-repo/) the [core-v-docs](https://github.com/openhwgroup/core-v-docs) repository
-2. Clone repository: `git clone https://github.com/[your_github_username]/core-v-docs`
+1. [Fork](https://help.github.com/articles/fork-a-repo/) the [OpenHW Group programs](https://github.com/openhwgroup/programs) repository
+2. Clone repository: `git clone https://github.com/[your_github_username]/programs`
 3. Create your feature branch: `git checkout -b <my_branch>.`<br> Please uniquify your branch name.  See the [Git Cheats](https://github.com/openhwgroup/core-v-verif/blob/master/GitCheats.md) for a useful nominclature.
-4. Commit your changes: `git commit -m 'Add some feature' --signoff`<br>...remember to **--signoff**. We cannot accept your pull-request without it.
+4. Commit your changes: `git commit -m 'Add some feature'
 5. Push feature branch: `git push origin <my_branch>`
 6. Submit a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork).
