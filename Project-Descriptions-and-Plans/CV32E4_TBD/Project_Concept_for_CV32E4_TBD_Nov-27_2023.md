@@ -30,9 +30,6 @@ In particular, formal logic equivalence with the previous design will not be req
 to make design work easier. We will try as much as possible to maintain a formal
 sequential equivalence for backward-compatible configurations.
 
-Due to the strict backward compatibility rules of CV32E40Pv2, this new core is not
-named CV32E40Pv3 and a new naming should be found.
-
 ## Summary of market or input requirements
 
 
@@ -93,7 +90,7 @@ Introduce XPULPv3 custom extentions (preliminary, feature list may evolve):
 * Deprecate single operand *cv.cplxconj* instruction in favor of dual operand *pas* (RVP parallel add-sub)
 * Deprecate *cv.cplxmul.r* and *cv.cplxmul.i* in favor of a single instruction *cv.cplxmul* that computes both parts of complex multiplication
 * Introduce hermitian form of *cv.cplxmul* (rs1 x conj(rs2)) ? (widely used in DSP computation for telecom applications)
-* *list to be completed / updated*
+* *this list may be completed / updated during design phase, if useful contributions are proposed*
 
 Add CV-X-IF interface:
 * End user product may require additionnal appliance-specific custom instructions, these instructions should be implemented in a co-processor.
