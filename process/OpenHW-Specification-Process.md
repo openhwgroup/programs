@@ -3,13 +3,13 @@
 ## Revision History
 
 This document desbribes OpenHW's specification process and format.
-It was adopted by consensus in the TWG meeting of July 2023.
+The overall approach was adopted by consensus in the TWG meeting of July 2023 based on power point presentations and other documents.
 
 The V1.0 of this document reflects the agreements made at that meeting and adds additional details. 
 
-| Date        | Version | Notes                                                 |
-| :---------- | :------ | :---------------------------------------------------- |
-| 22 Jan 2024 | 1.0     | Formal draft reflecting July 2023 google docs			|
+| Date        | Version | Notes                                                     |
+| :---------- | :------ | :-------------------------------------------------------- |
+| 22 Jan 2024 | 1.0     | Formal draft reflecting July 2023 TWG meeting materials	|
                                   
 ## Specification Process
 
@@ -24,7 +24,7 @@ OpenHW uses a lightweight specification development process to produce specifica
 
 | Number 	| Issue 									| Comment                                               							|
 | :---		| :------ 									| :-------------------------------------------------------------------------------- |
-| 1 		| Nature of the specification				| A collective derivative work from the individual member contributions, together with staff contributions	|																			
+| 1 		| Nature of an OpenHW Group specification	| A collective derivative work from the individual member contributions, together with staff contributions	|																			
 | 2 		| Editors of the specification				| OpenHW via its members and staff													|
 | 3 		| Contributions by non-members				| For further study				|
 | 4 		| Eclipse Specification Process				| Not used				|
@@ -33,16 +33,20 @@ OpenHW uses a lightweight specification development process to produce specifica
 
 | Number 	| Issue 									| Comment                                               							|
 | :---		| :------ 									| :-------------------------------------------------------------------------------- |
-| 1    		| License options for contributions: 		|																					|
-| 1.1		| Apache 2.0								| As per OpenHW Member Agreement 													|
-| 1.2		| Solderpad 2.1								| As per OpenHW Member Agreement 													|
+| 1    		| Licenses accepted for contributions to OpenHW Specs 		|																	|
+| 1.1		| Apache 2.0								| As per OpenHW Member Agreement, contributions can be made using this license 		|
+| 1.2		| Solderpad 2.1								| As per OpenHW Member Agreement, contributions can be made using this license  	|
 | 1.3		| Commons Attribution Share Alike 4.0 International license | Agreed by OpenHW CEO April 2023									| 
-| 2			| Patent Grant included in contribution license:  | 																				|
-| 2.1		| Apache 2.0								| Yes 																				|
-| 2.2		| Solderpad 2.1								| Yes																				|
-| 2.3		| Commons Attribution Share Alike 4.0 International license | No																| 
-| 3			| Essential patents must be disclosed by contributor | No 																		| 
-| 4			| Contribution Process 						| EDP/ Committers merging pull requests	/ Contributors sign ECA or MCCA				| 			 
+| 2			| Patent Grant included in contribution license:  | 																			|
+| 2.1		| Apache 2.0								| Yes, patent grant included in contributions 										|
+| 2.2		| Solderpad 2.1								| Yes, patent grant included in contributions										|
+| 2.3		| Commons Attribution Share Alike 4.0 International | No patent grant included													| 
+| 3			| Essential patents must be disclosed by contributor | No, Contributors are not required to disclose essential patents 			| 
+| 4			| Copyright Grant included in contribution license:  | 																			|
+| 4.1		| Apache 2.0								| Yes, copyright grant included in contributions 									|
+| 4.2		| Solderpad 2.1								| Yes, copyright grant included in contributions 									|
+| 4.3		| Commons Attribution Share Alike 4.0 International | Yes, copyright grant included	in contributions							| 
+| 4			| Contribution Process 						| Follows EDP/ Committers merging pull requests	/ Contributors sign ECA or MCCA		| 			 
 
 
 #### Publication of the Specification
@@ -52,49 +56,63 @@ OpenHW uses a lightweight specification development process to produce specifica
 | 1 		| Specification published by				| OpenHW on Github and/or ReadtheDocs and/or website								|
 | 2 		| Copyright holder on specification			| OpenHW on behalf of contributors (member), who hold the copyright jointly. 		|
 | 3			| License used for publication 				| Same license as used for contributions 											|
-| 4			| Copyright Grant included in specification publication 	 | As per publication license:										}	
-| 5.1		| Apache 2.0								| Yes 																				|
-| 5.2		| Solderpad 2.1								| Yes 																				|
-| 5.3		| Commons Attribution Share Alike 4.0 International license | Yes																|								
+| 4			| Copyright Grant included in specification publication 	 | As per publication license:										|	
+| 5.1		| Apache 2.0								| Yes, copyright grant included with OpenHW publication 							|
+| 5.2		| Solderpad 2.1								| Yes, copyright grant included with OpenHW publication 							|
+| 5.3		| Commons Attribution Share Alike 4.0 International license | Yes, copyright grant included with OpenHW publication 			|								
 | 6			| Patent Grant included in specification publication 	|	As per publication license											|
-| 6.1		| Apache 2.0								| Yes 																				|
-| 6.2		| Solderpad 2.1								| Yes 																				|
-| 6.3		| Commons Attribution Share Alike 4.0 International license | No 																|								
+| 6.1		| Apache 2.0								| No patent grant provided by OpenHW but patents rights granted under contribution	|
+| 6.2		| Solderpad 2.1								| No patent grant provided by OpenHW but patents rights granted under contribution	|
+| 6.3		| Commons Attribution Share Alike 4.0 International license | No patent grant included with OpenHW publication					|								
 | 7			| Essential patents disclosed by OpenHW		| No																				|
 | 8 		| License text included within the specification text |  No - referall only 													|
 | 0			| "No-warranty" or disclaimer				| Required																|
 
 
+### Specification Version numbers
+
+OpenHW Specifications shall use semantic versioning https://semver.org/ with the version in the form X.Y.Z.
+The version number is combined with the Specification State (below), for example "1.0.0 - Released" to indicate both the version number and state.
+
+
+
 ### Specification States
 
-The ratification or completion state ais meant to be written in each OpenHW specification so that a reader will be aware of the state of completion of the Specification
+The ratification or completion state is meant to be written in each OpenHW specification so that a reader will be aware of the state of completion of the Specification
 These are the OpenHW Specification States:
 
 - “OpenHW Specification - In Development"
 - "OpenHW Specification - In Review"
+- "OpenHW Specification - Release Candidate"
 - "OpenHW Specification - Released"
 
 #### "OpenHW Specification - In Development"
 
 When the specification is initiated, all drafts will be labelled as “OpenHW Specification - In Development"
+(During initial development of the spec before first release, the version number is of the form X.Y.Z with X=0.) 
 
-Revision numbers should be of the form 0.Y.Z
+This state is also used when a released spec is subsequently revised. 
 
+During revision of a released specifiation, the version number increments as appropriate depending on whether the revision is a major or minor update. 
 
 #### "OpenHW Specification - In Review"
 
-When the specification is frozen for technical review, all drafts will be labelled as "OpenHW Specification - In Review"
+When the specification is frozen for technical review by a Task Group, all drafts will be labelled as "OpenHW Specification - In Review"
 
-Revision numbers should be of the form 0.Y.Z
+When the TG(s) has completed its review, the reviewed and stable version will be relabelled as "Release Candidate" - see next section.
+
+#### "OpenHW Specification - Release Candidate"
+
+When the specification is proposed as a candidate for release, drafts will be labelled as "OpenHW Specification - Release Candidate"
+
+The complete descriptor of the spec at this stage will be "X.Y.Z - Release Candidate", where X.Y.Z is the proposed release number.
+
 
 #### "OpenHW Specification - Released"
 
-When the specification is published, the publication copy will be labelled as "OpenHW Specification - Released"
-Revision numbers should be of the form X.Y.Z, starting with 1.0.0 as the initially released version.
+When a Release Candidate specification has completed ratification (through a TWG vote), the released copy will be labelled as "OpenHW Specification - Released"
+Revision numbers should be of the form X.Y.Z, normally starting with X=1 as the initially released version.
 
-#### "OpenHW Specification Revision"
-
-Process for labelling and numbering released specifications in revision to be decided.
 
 
 ## Specification Format
@@ -109,7 +127,7 @@ The Title should be of the form "OpenHW Specifciation: Title"
 
 Prior to release a table of draft revisions should be included, which can included description of content in each draft
 
-Upon release and subsequently, the Revision History should list only released specification versions, starting with 1.0.0.
+Upon release, the Revision History should list only released specification versions. That is, intermediate revisisions used during development and review don't need to be listed.
 The table should include Revision, Date, and Description. The Description should include a high level description of the content.
 
 ### Specification States
@@ -143,7 +161,7 @@ The following opyright text is included:
 
 ### Footer
 
-In cases where the specification is rendered in PDF format, a footer should be included on each page, including OpenHW “Specification Title” and "Copyright © YEAR OF PUBLICATION OpenHW Group"		
+In cases where the specification is rendered in PDF format, a footer should be included on each page, including OpenHW “Specification Title”, Revision Number/State, and "Copyright © YEAR OF PUBLICATION OpenHW Group"		
 
 
 
