@@ -100,9 +100,6 @@ Add CLIC support:
   external interrupt controller that requires a 2-step interrupt handling code.
 
 Design Portability:
-* Replace global clock gate by equivalent global enable signal
-  * this will make the design more "FPGA-friendly", or compliant with ASIC design rules that forbid any logic addition on clock tree
-  * clock gate cell model and/or simulator behaviour may introduce delta cycles on clock tree, leading to RTL/GL simulation mismatch
 * EDA tools parser bug work-arounds: current design coding style is standard-compliant, but EDA tools may
   have bugs that prevent proper reading. Design should be parsed with several EDA tools and offending RTL code should be fixed.
 
