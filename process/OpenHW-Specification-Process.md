@@ -15,10 +15,17 @@ The V1.0 of this document reflects the agreements made at that meeting and adds 
 
 ### Overview
 
-OpenHW uses a lightweight specification development process to produce specification documents that are developed and frozen in a designated Task Group, then ratified and released by TWG.
+OpenHW uses a lightweight specification development process to produce specification documents (which are similar to standards documents). Such "specifications" convey, for instance: 
+ - Protocol/functionality of an interface to ensure interopability across the interface
+ - Naming convention such as mmemonic for an instruction class
+ 
+This type of specification is developed and frozen in a Task Group designated by the Techinical Working Group (TWG) to this task, then ratified and released (published) by TWG.
 
-### Requirements for OpenHW Specification Process
+Note that this process does not refer to a requirements specification for an OpenHW project such as an open-source Core or Hardware or Software project. In that context, requirements specification is a list of the required features of the open-source project.  
 
+### Characteristics of the OpenHW Specification Process
+
+This section describes the characteristics of the Specification Process. This is background information that explains how the process was designed. Those looking to use the process are free to skip reading this section.
 
 #### Basics
 
