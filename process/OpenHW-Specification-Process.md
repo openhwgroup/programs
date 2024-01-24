@@ -2,7 +2,7 @@
 
 ## Revision History
 
-This document desbribes OpenHW's specification process and format.
+This document describes OpenHW's specification process and format.
 The overall approach was adopted by consensus in the TWG meeting of July 2023 based on power point presentations and other documents.
 
 The V1.0 of this document reflects the agreements made at that meeting and adds additional details. 
@@ -16,10 +16,10 @@ The V1.0 of this document reflects the agreements made at that meeting and adds 
 ### Overview
 
 OpenHW uses a lightweight specification development process to produce specification documents (which are similar to standards documents). Such "specifications" convey, for instance: 
- - Protocol/functionality of an interface to ensure interopability across the interface
- - Naming convention such as mmemonic for an instruction class
+ - Protocol/functionality of an interface to ensure interoperability across the interface
+ - Naming convention such as mnemonic for an instruction class
  
-This type of specification is developed and frozen in a Task Group designated by the Techinical Working Group (TWG) to this task, then ratified and released (published) by TWG.
+This type of specification is developed and frozen in a Task Group designated by the Technical Working Group (TWG) to this task, then ratified and released (published) by TWG.
 
 Note that this process does not refer to a requirements specification for an OpenHW project such as an open-source Core or Hardware or Software project. In that context, requirements specification is a list of the required features of the open-source project.  
 
@@ -72,7 +72,7 @@ This section describes the characteristics of the Specification Process. This is
 | 6.2		| Solderpad 2.1								| No patent grant provided by OpenHW but patents rights granted under contribution	|
 | 6.3		| Commons Attribution Share Alike 4.0 International license | No patent grant included with OpenHW publication					|								
 | 7			| Essential patents disclosed by OpenHW		| No																				|
-| 8 		| License text included within the specification text |  No - referall only 													|
+| 8 		| License text included within the specification text |  No - referral only 													|
 | 0			| "No-warranty" or disclaimer				| Required																|
 
 
@@ -100,7 +100,7 @@ When the specification is initiated, all drafts will be labelled as “OpenHW Sp
 
 This state is also used when a released spec is subsequently revised. 
 
-During revision of a released specifiation, the version number increments as appropriate depending on whether the revision is a major or minor update. 
+During revision of a released specification, the version number increments as appropriate depending on whether the revision is a major or minor update. 
 
 #### "OpenHW Specification - In Review"
 
@@ -128,13 +128,13 @@ The following sections must be included in the OpenHW Specification
 
 ### Title
 
-The Title should be of the form "OpenHW Specifciation: Title"
+The Title should be of the form "OpenHW Specification: Title"
 
 ### Revision History
 
 Prior to release a table of draft revisions should be included, which can included description of content in each draft
 
-Upon release, the Revision History should list only released specification versions. That is, intermediate revisisions used during development and review don't need to be listed.
+Upon release, the Revision History should list only released specification versions. That is, intermediate revisions used during development and review don't need to be listed.
 The table should include Revision, Date, and Description. The Description should include a high level description of the content.
 
 ### Specification States
@@ -162,7 +162,7 @@ The following no-warranty text is included:
 "Unless required by applicable law or agreed to in writing, this Specification and any accompanying software or hardware distributed under the License are distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License."
 
 ### Copyright
-The following opyright text is included:
+The following copyright text is included:
 
 "Copyright ©  YEAR OF PUBLICATION OpenHW Group. You may use, copy, modify, and distribute this work under the terms of the License, subject to the conditions specified in the License."
 
