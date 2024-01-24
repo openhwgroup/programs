@@ -1,15 +1,15 @@
 # OpenHW Group Process Document: Specification Process, States and Format
 
-## Revision History
+## Revision History of This Document
 
 This document describes OpenHW Group's specification process and format.
 
 The overall approach was adopted by consensus in the TWG meeting of July 2023 based on power point presentations and other documents.
 The V1.0 of this document reflects the agreements made at that meeting and adds additional details. 
 
-| Date        | Version | Notes                                                     |
+| Date        | Revision | Notes                                                     |
 | :---------- | :------ | :-------------------------------------------------------- |
-| 22 Jan 2024 | 1.0     | Formal draft reflecting July 2023 TWG meeting materials	|
+| 24 Jan 2024 | 1.0.0     | Reflecting July 2023 TWG meeting materials	and subsequent review on Github|
                                   
 ## Specification Process
 
@@ -21,7 +21,7 @@ OpenHW uses a lightweight specification development process to produce specifica
  
 This type of specification is developed and frozen in a Task Group designated by the Technical Working Group (TWG) to this task, then ratified and released (published) by TWG.
 
-Note that this process does not refer to a requirements specification for an OpenHW Group project such as an open-source Core or Hardware or Software project. In that context, requirements specification is a list of the required features of the open-source project.  
+Note that this process does not refer to a "requirements specification" for an OpenHW Group project such as an open-source Core or Hardware or Software project. In that context, "requirements specification" is a list of the required features of the open-source project.  
 
 ### Characteristics of the OpenHW Group Specification Process
 
@@ -61,7 +61,7 @@ This section describes the characteristics of the Specification Process. This is
 | Number 	| Issue 									| Comment                                               							|
 | :---		| :------ 									| :-------------------------------------------------------------------------------- |
 | 1 		| Specification published by				| OpenHW Group on Github and/or ReadtheDocs and/or website								|
-| 2 		| Copyright holder on specification			| OpenHW Group on behalf of contributors (member), who hold the copyright jointly. 		|
+| 2 		| Copyright holder on specification			| OpenHW Group on behalf of contributors (members), who hold the copyright jointly. 		|
 | 3			| License used for publication 				| Same license as used for contributions 											|
 | 4			| Copyright Grant included in specification publication 	 | As per publication license:										|	
 | 5.1		| Apache 2.0								| Yes, copyright grant included with OpenHW Group publication 							|
@@ -76,50 +76,59 @@ This section describes the characteristics of the Specification Process. This is
 | 9			| "No-warranty" or disclaimer				| Required																|
 
 
-### Specification Version numbers
+### Specification Revision Numbers
 
-OpenHW Group Specifications shall use semantic versioning https://semver.org/ with the version in the form X.Y.Z.
-The version number is combined with the Specification State (below), for example "1.0.0 - Released" to indicate both the version number and state.
+OpenHW Group Specifications shall use semantic versioning https://semver.org/ with the Revision in the form X.Y.Z.
+The Revision number is combined with the Specification State (below), for example "1.0.0 - Released" to indicate both the Revision number and State.
 
 
 
 ### Specification States
 
-The ratification or completion state is meant to be written in each OpenHW Group specification so that a reader will be aware of the state of completion of the Specification
+The ratification or completion State is meant to be written together with the Title and Revision in each OpenHW Group specification so that a reader will be aware of the state of completion of the Specification.
 These are the OpenHW Group Specification States:
 
 - “OpenHW Group Specification - In Development"
-- "OpenHW Group Specification - In Review"
+- "OpenHW Group Specification - In Review" (optional)
 - "OpenHW Group Specification - Release Candidate"
 - "OpenHW Group Specification - Released"
 
 #### "OpenHW Group Specification - In Development"
 
-When the specification is initiated, all drafts will be labelled as “OpenHW Group Specification - In Development"
-(During initial development of the spec before first release, the version number is of the form X.Y.Z with X=0.) 
+When the specification is initiated, all drafts will be entitled  "OpenHW Group Specification: Title : VX.Y.Z : In Development"
+(During initial development of the spec before first release, the Revision number is of the form X.Y.Z with X=0.) 
 
 This state is also used when a released spec is subsequently revised. 
 
-During revision of a released specification, the version number increments as appropriate depending on whether the revision is a major or minor update. 
+During revision of a released specification, the Revision number increments as appropriate depending on whether the revision is a major or minor update. 
 
 #### "OpenHW Group Specification - In Review"
 
-When the specification is frozen for technical review by a Task Group, all drafts will be labelled as "OpenHW Group Specification - In Review"
+This state is optional; see the note below.
 
-When the TG(s) has completed its review, the reviewed and stable version will be relabelled as "Release Candidate" - see next section.
+When the specification is frozen for technical review by a Task Group, all drafts will be entitled "OpenHW Group Specification: Title : VX.Y.Z : In Review"
+When the TG(s) has completed its review, the reviewed and stable Revision will be relabelled as "Release Candidate" - see next section.
+
+NOTE: This state can be bypassed if a Task Group does not require a review stage. That is, the TG can move the spec from "In Development" to "Release Candidate".
+
 
 #### "OpenHW Group Specification - Release Candidate"
 
-When the specification is proposed as a candidate for release, drafts will be labelled as "OpenHW Group Specification - Release Candidate"
+When the specification is proposed as a candidate for release, drafts will be entitled "OpenHW Group Specification: Title : VX.Y.Z  : Release Candidate"
 
-The complete descriptor of the spec at this stage will be "X.Y.Z - Release Candidate", where X.Y.Z is the proposed release number.
+The Revision number used at this stage would normally be same as the proposed Revision to be released. 
+
+The Release Candidate specification will be notified as open for review to the OpenHW TWG.  
+Although technical comments are expected to have been resolved by the TG, comments may still be accepted at this stage.
+After a suitable review period, the TWG Chair/Co-Chair will determine that the Specification is ready for ballot. 
 
 
 #### "OpenHW Group Specification - Released"
 
-When a Release Candidate specification has completed ratification (through a TWG vote), the released copy will be labelled as "OpenHW Group Specification - Released"
+When a Release Candidate specification has completed ratification (through a TWG vote), the released copy will be entitled "OpenHW Group Specification: Title : VX.Y.Z  : Released"
 Revision numbers should be of the form X.Y.Z, normally starting with X=1 as the initially released version.
 
+The Github commit corresponding to the Released spec will be listed on the Github page of the specification repo together with the "OpenHW Group Specification: Title : VX.Y.Z : Released" string
 
 
 ## Specification Format
@@ -128,20 +137,14 @@ The following sections must be included in the OpenHW Group Specification
 
 ### Title
 
-The Title should be of the form "OpenHW Specification: Title"
+The Title should be of the form "OpenHW Group Specification: Title : VX.Y.Z : State"
 
 ### Revision History
 
 Prior to release a table of draft revisions should be included, which can included description of content in each draft
 
-Upon release, the Revision History should list only released specification versions. That is, intermediate revisions used during development and review don't need to be listed.
-The table should include Revision, Date, and Description. The Description should include a high level description of the content.
-
-### Specification States
-
-The specification state must be listed, e.g. 
-
-'The state of this specification is "OpenHW Group Specification - Released"'
+Upon release, the Revision History should list only released specification Revisions. That is, intermediate revisions used during development and review don't need to be listed.
+The table should include Revision, State, Date, and Description. The Description should include a high level description of the content.
 
 
 ### License
@@ -168,7 +171,7 @@ The following copyright text is included:
 
 ### Footer
 
-In cases where the specification is rendered in PDF format, a footer should be included on each page, including OpenHW Group “Specification Title”, Revision Number/State, and "Copyright © YEAR OF PUBLICATION OpenHW Group"		
+In cases where the specification is rendered in PDF format, a footer should be included on each page, including "OpenHW Group Specification: Title : VX.Y.Z : State", and "Copyright © YEAR OF PUBLICATION OpenHW Group"		
 
 
 
