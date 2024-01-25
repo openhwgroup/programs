@@ -1,4 +1,4 @@
-# Copyright 2020 OpenHW Group
+# Copyright 2023 OpenHW Group
 # Solderpad Hardware License, Version 2.1, see LICENSE.md for details.
 # SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
 
@@ -8,12 +8,16 @@
 # Required
 version: 2
 
-# Build documentation in the docs/ directory with Sphinx
-sphinx:
-   configuration: docs/conf.py
+build:
+  os: "ubuntu-20.04"
+  tools:
+    python: "3.9"
 
-# Optionally set the version of Python and requirements required to build your docs
+# Build from the docs directory with Sphinx
+sphinx:
+  configuration: docs/conf.py
+
+# Explicitly set the Python requirements
 python:
-   version: 3.8
-   install:
-   - requirements: docs/requirements.txt
+  install:
+    - requirements: docs/requirements.txt
