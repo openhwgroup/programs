@@ -2,13 +2,9 @@
 
 ## Prerequisites
 
-You need to install the following Sphinx extensions (in addition to the
-requirements in `../python-requirements.txt`).
-
+You need to install Sphinx and the extensions listed in `./requirements.txt`:
 ```
-pip3 install --user recommonmark
-pip3 install --user sphinx_markdown_tables
-pip3 install --user sphinx_rtd_theme
+python -m pip install --exists-action=w --no-cache-dir -r ./requirements.txt
 ```
 
 ## Build the documentation
@@ -16,5 +12,5 @@ pip3 install --user sphinx_rtd_theme
 To locally build the documentation as HTML run:
 
 ```
-make
+make html
 ```
