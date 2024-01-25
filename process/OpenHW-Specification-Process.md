@@ -141,7 +141,7 @@ The Title should be of the form "OpenHW Group Specification: Title : VX.Y.Z : St
 
 ### Revision History
 
-Prior to release a table of draft revisions should be included, which can included description of content in each draft
+Prior to release a table of draft revisions should be included, which can include description of content in each draft
 
 Upon release, the Revision History should list only released specification Revisions. That is, intermediate revisions used during development and review don't need to be listed.
 The table should include Revision, State, Date, and Description. The Description should include a high level description of the content.
