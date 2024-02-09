@@ -95,8 +95,11 @@ These are the OpenHW Group Specification States:
 
 #### "OpenHW Group Specification - In Development"
 
-When the specification is initiated, all drafts will be entitled  "OpenHW Group Specification: Title : VX.Y.Z : In Development"
+When the specification is initiated, all drafts will be entitled  "OpenHW Group Specification: Title : vX.Y.Z : In Development"
 (During initial development of the spec before first release, the Revision number is of the form X.Y.Z with X=0.) 
+
+NOTE: if the specific template used for publication would repeat the version number if vX.Y.Z is included as part of the title, it may be omitted, as long as the version number is prominently visible in the specification front matter. 
+
 
 This state is also used when a released spec is subsequently revised. 
 
@@ -106,15 +109,19 @@ During revision of a released specification, the Revision number increments as a
 
 This state is optional; see the note below.
 
-When the specification is frozen for technical review by a Task Group, all drafts will be entitled "OpenHW Group Specification: Title : VX.Y.Z : In Review"
+When the specification is frozen for technical review by a Task Group, all drafts will be entitled "OpenHW Group Specification: Title : vX.Y.Z : In Review"
 When the TG(s) has completed its review, the reviewed and stable Revision will be relabelled as "Release Candidate" - see next section.
+
+See note above about version numbering as part of the title. 
 
 NOTE: This state can be bypassed if a Task Group does not require a review stage. That is, the TG can move the spec from "In Development" to "Release Candidate".
 
 
 #### "OpenHW Group Specification - Release Candidate"
 
-When the specification is proposed as a candidate for release, drafts will be entitled "OpenHW Group Specification: Title : VX.Y.Z  : Release Candidate"
+When the specification is proposed as a candidate for release, drafts will be entitled "OpenHW Group Specification: Title : vX.Y.Z  : Release Candidate"
+
+See note above about version numbering as part of the title. 
 
 The Revision number used at this stage would normally be same as the proposed Revision to be released. 
 
@@ -128,7 +135,20 @@ After a suitable review period, the TWG Chair/Co-Chair will determine that the S
 When a Release Candidate specification has completed ratification (through a TWG vote), the released copy will be entitled "OpenHW Group Specification: Title : VX.Y.Z  : Released"
 Revision numbers should be of the form X.Y.Z, normally starting with X=1 as the initially released version.
 
+See note above about version numbering as part of the title. 
+
 The Github commit corresponding to the Released spec will be listed on the Github page of the specification repo together with the "OpenHW Group Specification: Title : VX.Y.Z : Released" string
+
+
+## File Name for specification
+
+The following file name should be used for the PDF version of the specification file
+
+OpenHW_Group_Specification{title_with_underscores}_vX.Y.Z
+
+An example is as follows:
+
+OpenHW_Group_Specification_Core-V_eXtension_interface_(CV-X-IF)v1.0.0, i.e. OpenHW_Group_Specification{title_with_underscores}_vX.Y.Z
 
 
 ## Specification Format
@@ -137,7 +157,7 @@ The following sections must be included in the OpenHW Group Specification
 
 ### Title
 
-The Title should be of the form "OpenHW Group Specification: Title : VX.Y.Z : State"
+The Title should be of the form "OpenHW Group Specification: Title : vX.Y.Z : State"
 
 ### Revision History
 
@@ -151,18 +171,58 @@ The table should include Revision, State, Date, and Description. The Description
 
 The Publication License is listed, together with a URL link to the source of the license. 
 
+The following are examples of appropriate license statement. 
 
-The following is an example of an appropriate license statement:
+#### Solderpad 0.51
 
-"
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+Include "SPDX SHL-0.51"
+Include the following license statement taken from https://spdx.org/licenses/SHL-0.51.html:
 
-### No-warranty
-The following no-warranty text is included:
 
-"Unless required by applicable law or agreed to in writing, this Specification and any accompanying software or hardware distributed under the License are distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License."
+Copyright [yyyy] [OpenHW Group] Copyright and related rights are licensed under the Solderpad Hardware License, Version 0.51 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://solderpad.org/licenses/SHL-0.51. Unless required by applicable law or agreed to in writing, software, hardware and materials distributed under this License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+#### Apache 2.0
+
+Include "SPDX Apache-2.0"
+Include the following license statement taken from https://spdx.org/licenses/Apache-2.0.html:
+
+
+Copyright [yyyy] [OpenHW Group]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License."
+
+
+#### Creative Commons Attribution Share Alike 4.0 International 
+
+Include "SPDX CC-BY-SA-4.0"
+Include the following license statement (note that no standard license header is provided by https://spdx.org/licenses/CC-BY-SA-4.0.html):
+
+Copyright [yyyy] [OpenHW Group]
+
+Licensed under the Creative Commons Attribution Share Alike 4.0 International, (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+https://spdx.org/licenses/CC-BY-SA-4.0.html
+
+As stated in the License: Disclaimer of Warranties and Limitation of Liability.
+
+a. Unless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.
+b. To the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.
+c. The disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.
+
 
 ### Copyright
 The following copyright text is included:
@@ -171,7 +231,7 @@ The following copyright text is included:
 
 ### Footer
 
-In cases where the specification is rendered in PDF format, a footer should be included on each page, including "OpenHW Group Specification: Title : VX.Y.Z : State", and "Copyright © YEAR OF PUBLICATION OpenHW Group"		
+In cases where the specification is rendered in PDF format, a footer should be included, if practical in the documentation template used, on each page, including "OpenHW Group Specification: Title : VX.Y.Z : State", and "Copyright © YEAR OF PUBLICATION OpenHW Group"		
 
 
 
