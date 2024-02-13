@@ -12,7 +12,7 @@ Author: Jérôme Quévremont, Thales Research & Technology
 
 ## Summary of project
 
-**CVA6** is a configurable family of mid-range application RISC-V cores able to boot a rich OS like Linux.
+**CVA6** is a family of configurable mid-range application RISC-V cores able to boot rich OSes like Linux.
 Its origin is the ARIANE core from the PULP team (ETH Zürich & University of Bologna).
 
 From a single RTL source, several flavors can be configured: 32- or 64-bit architecture (**CV32A6** / **CV64A6** sub-families),
@@ -23,7 +23,7 @@ CVA6 targets both **ASIC** and **FPGA soft-core** implementations.
 The ability to have very similar 32- and 64-bit cores should allow to quite seamlessly switch between them in a SoC architecture:
 same core interface, a few compiler directives to change.
 
-The goal of the project is to bring **CVA6** to an industrial maturity known as **TRL5** (technical readiness level):
+The amin goal of the project is to bring **CVA6** configurations to an industrial maturity known as **TRL5** (technical readiness level):
 - Quality documentation
 - Add a few features desired by participating members
 - High-coverage verification for some given CVA6 configurations (= set of parameters)
@@ -41,7 +41,7 @@ engineers seeking to evaluate CVA6 and industrial domains that need to support t
 ### Summary of Project Structure
 
 As the list of CVA6 configurations targetting TRL5 is growing,
-the maturing of specific CVA6 configurations, mostly with verification, will be spun off to **sub-projects**,
+the maturing of specific CVA6 configurations, mostly based on verification, will be spun off to **sub-projects**,
 while this **main project** will host joint activities and maintenance of the CVA6 repository.
 
 In addition, **sister projects** host developments that closely relate with CVA6.
@@ -51,7 +51,7 @@ In addition, **sister projects** host developments that closely relate with CVA6
 The CVA6 main project has indeed evolved to become an umbrella project for several CVA6 configurations.
 It is not possible at this point in time to identify an end date for the project.
 
-The first verification configuration is expected at the end of 2024. Several other TRL5 configurations will follow.
+The first verified configuration is expected at the end of 2024. Several other TRL5 configurations will follow.
 
 ## OpenHW Members/Participants committed to participate in CORE-V CVA6 main and sub-projects
 
@@ -75,11 +75,11 @@ The CVA6 project has evolved to a main project and several sub-projects as more 
 
 ### Common goals
 
-Despite the number of sub-projects, the following goals will be pursued between the main and sub-projects:
-- Optimize the effort sharing and reuse between configuraitons
+Despite the number of sub-projects, the following goals will be pursued by the main and sub-projects:
+- Optimize the effort sharing and reuse between configurations
 - Keep a common RTL database (with parameters)
-- Still be able to accept relevant evolutions (but be more selective than in the past)
 - Manage a common documentation
+- Still be able to accept relevant evolutions (but be more selective than in the past)
 
 The scopes of the main, sub-, and sister projects are described below:
 
@@ -89,8 +89,8 @@ The main CVA6 project includes:
 - The synchronization with the sub-projects
 - The review and selection of proposed CVA6 evolutions<sup>2</sup>
 - The review of pull requests (PRs) from sister projects and the external world
-- The 2<sup>nd</sup> level review of PRs from sub-projects: check that the PR integrates well in CVA6 repository
-- The maintenance of the GitHub-triggered CI flow, the CVA6 GitHub repository , the triage of external issue
+- The 2<sup>nd</sup> level review of PRs from sub-projects, mostly to check that the PR integrates well in CVA6 repository
+- The maintenance of the GitHub-triggered CI flow, the CVA6 GitHub repository , the triage of external issues
 - Design activities that are not hosted in a sub- or sister project (MMU unification, FPGA optimizations...)
 - The definition of a release process, that is needed by sub-projects.
 
@@ -105,30 +105,27 @@ The sub-projects mostly include verification activities.
 They also host design and documentation activities that are specific to the configuration.
 
 The PA gates of sub-projects include:
-- Quality target (coverage targets, certification if any...)
+- Quality targets (coverage targets, certification if any...)
 - Additions to the RTL freeze checklist as deemed necessary
-- Identification of reused/joint/new verification building blocks (DV plans, agents, sequences)
+- Identification of reused/joint/new verification building blocks (DV plans, agents, sequences...)
 - Doc/Design/DVPlan/sequences creation/updates in synchronization with other configurations
-- 1<sup>st</sup> level review of PRs from the sub-project: check that the PR meets the sub-project goals and quality targets
+- 1<sup>st</sup> level review of PRs from the sub-project, mostly to check that the PR meets the sub-project goals and quality targets
 - Fix issues discovered in the sub-project
 - Release plan for the configuration, based on the release process
-
-The goal of the 2<sup>nd</sup> level review is to verify that the PR integrates well in CVA6 common repository.
 
 The sub-project PA gates are prepared and presented by their respective leaders.
 Prior to presenting the gate to the TWG, it is recommended to review the sub-project and PA gate document in a CVA6 meeting.
 
 At the time of writing, the envisioned sub-projects are:
-- CV32A60AX<sup>3</sup>, a 32-bit application core, led 10xEngineers
-- CV32A60X<sup>4</sup>, a 32-bit embedded core, led by TSS
-- CV32A65X<sup>4</sup>, a 32-bit embedded core with dual issue, led by TSS
+- CV32A60AX<sup>3</sup>, a 32-bit application core, led by 10xEngineers
+- CV32A65X, a 32-bit embedded core with dual issue<sup>4</sup>, led by TSS
 - CV64A60AV, a 64-bit application core with an interface to a vector coprocessor, led by Axelera
 - a 32-bit real-time core with safety features, led by a TRISTAN project partner<sup>5</sup>
 - a 64-bit application core with safety features, led by a TRISTAN project partner<sup>5</sup>
 
 Notes:<br>
-<sup>3</sup> CV32A60AX was previously named CV32A60X or step1/step2 (in the 2023-06-26 PA gate).
-<sup>4</sup> TSS might eventually decide to only deliver one configuration (CV32A60X or CV32A65X).<br>
+<sup>3</sup> CV32A60AX was previously named CV32A60X or step1/step2 (in the 2023-06-26 PA gate).<br>
+<sup>4</sup> The dual issue will likely be selected by TSS. If the single issue is finally selected, the part number will become CV32A60X.<br>
 <sup>5</sup> This partner considers joining the OpenHW Group.
 
 Refer to OpenHW [Dashboard](https://github.com/openhwgroup/programs/tree/master/dashboard) for the current list of sub-projects.
@@ -211,7 +208,7 @@ On the core side, for ASIC targets, these are the most comparable competitors (p
 - SiFive: U54
 - CHIPS Alliance&nbsp;/ Western Digital: CVA6 between the smaller SweRV  EL2 and the larger EH1.
 - ANDES: A25 (32-bit) and AX25 (64-bit)
-- Gaisler NOEL-V
+- Frontgrade Gaisler: NOEL-V
 
 On the FPGA side, CV32A6 is a technology-independent alternative to these proprietary cores:
 - Xilinx: Microblaze
@@ -240,7 +237,7 @@ To differentiate from the competition, marketing can stress:
 The project relies on:
 - Related and sister OpenHW projects (joint with other cores): LLVM, FreeRTOS, core-v-verif, CV-X-IF specification, OpenPiton...
 - Open-source software: GCC, GDB, LLVM, Linux (Yocto, BuildRoot), OpenSBI, UBoot, BBL...
-- Open-source verification: Google Riscv-dv, Spike, riscv-arch-test(https://github.com/riscv-non-isa/riscv-arch-test)
+- Open-source verification: Google Riscv-dv, Spike, [riscv-arch-test](https://github.com/riscv-non-isa/riscv-arch-test)
 - Open-source hardware: fpnew (ETH Zürich), first verified in CV32E40Pv2
 - Eclipse Foundation, GitHub
 - Digilent Genesys 2 board
@@ -252,7 +249,7 @@ The project relies on:
 
 ### Documentation:
 
-The CVA6 document structure has been defined at the PL gate:
+The CVA6 document structure is:
 - Requirement specification
     - Identifies features agreed upon
     - “What” defined as requirements with identifiers
@@ -262,7 +259,7 @@ The CVA6 document structure has been defined at the PL gate:
     - For CVA6 integrators and users: HW, SW, ASIC, FPGA… viewpoints
 - Design document
     - Explains the “How”: design choices…
-    - Useful for design maintenance, next projects and certain certification schemes
+    - Useful for verification, maintenance, next projects and certain certification schemes
 - Design Verification Plans
     - DVplan, Verification Plan, Vplan: same meaning
     - Feature-by-feature listing of the Device Under Test
@@ -290,7 +287,7 @@ All CVA6 configurations share the same source code and are differentiated thanks
 - Verification results
      - Including code coverage and functional coverage
 
-The sub-projects will provide more details. They will also identify what then can share between different configurations.
+The sub-projects will provide more details. They will also identify what then can reuse between different configurations.
 
 ### Software:
 
@@ -394,7 +391,8 @@ https://github.com/openhwgroup/core-v-docs/tree/master/program/Project%20Descrip
 
 A Google Drive [folder](https://drive.google.com/drive/folders/1DWXTVgLJnOn6DfoYHyy45QGZUfAkfHbI) is available for shared documents that do not fit the GitHub structure above (presentations...).
 
-In addition, Thales has set up an internal mirror of GitHub repositories to trigger their countinuous integration environment.
+In addition, Thales has set up an internal mirror of GitHub repositories to trigger the
+countinuous integration environment they host.
 
 ## Project distribution model
 
@@ -414,31 +412,31 @@ Sub-projects activities will be detailed in their respective PA documents: speci
 
 These activities are hosted in the main project. They can also relate to the integration of sister projects' results.
 
-| Related TG      | Milestone                                                                                                                      | Target        | Contributor                     |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------- | ------------------------------- |
-| Project-wide    | Customize the release process for CVA6                                                                                         | 2024-Q1       | Project and sub-project leaders |
-| Project-wide    | Review proposed CVA6 evolutions                                                                                                | Continuous    | All, coordinated by Jérôme      |
-| Project-wide    | Maintain and upgrade User Manual                                                                                               | Continuous    | All, coordinated by Jérôme      |
-| Project-wide    | Maintain and upgrade Design Document                                                                                           | Continuous    | All, coordinated by Jean-Roch   |
-| Project-wide    | Triage of PR (including 2<sup>nd</sup> level reviews from sub-projects) and issues                                             | Continuous    | Jean-Roch, with Mike's support  |
-| Project-wide    | Reviews of PR (including 2<sup>nd</sup> level reviews from sub-projects), handling of issues                                   | Continuous    | As per triage                   |
-| Cores           | Unify three MMU (Sv32, Sv39, Sv39x4) in a single source code, as a prerequisite to the hypervisor mode integration             | 2024-Q1       | PlanV                           |
-| Cores           | Integrate the hypervisor mode to the master branch                                                                             | 2024-Q2       | Zero-Day Labs, with TSS support |
-| Cores           | Add support of Microchip PolarFire FPGA (port FPGA optimizations)                                                              | 2024          | TRT                             |
-| Cores           | Add support of Microchip PolarFire FPGA (APU adaptation)                                                                       | 2024          | Undisclosed new member          |
-| Cores           | Add support of Intel FPGA (port FPGA optimizations, APU adaptation)                                                            | 2024          | TRT                             |
-| Cores           | Define and add memory protection for harsh environments (error detection and correction)                                       | 2024          | Interested stakeholders         |
-| Cores           | Integrate in-order dual-issue                                                                                                  | 2024-Q2       | TSS                             |
-| Cores           | Integrate instruction and data scratchpads                                                                                     | 2024-Q2       | TRISTAN partner                 |
-| Cores           | Parametrization (replace configuration packages and `directives by top-level SV parameters)                                    | 2024-Q2       | TSS                             |                     |
-| Cores           | Evaluate HPDCache as L1 data cache, decide if it's the project default L1 date cache                                           | 2024-Q1       | Interested stakeholders         |
-| Cores           | _To be confirmed:_ Upgrade CV-X-IF to the newly ratified version                                                               |               | TSS                             |
-| Cores           | _To be confirmed:_ Evolutions for the tightly-coupled cache coherence project                                                  |               | PlanV                           |
-| Cores           | _To be confirmed:_ Configurable reset                                                                                          |               | ECC                             |
-| Verification    | Maintain GitHub-triggered CI flow                                                                                              | Continuous    | TSS                             |
-| Verification    | Maintain tandem mode                                                                                                           | Continuous    | OpenHW staff                    |
-| Verification    | Add Mentor Questa support to the verification flow                                                                             | 2024          | OpenHW staff                    |
-| Verification    | Add Cadence Xcelium support to the verification flow                                                                           | 2024          | TRISTAN partner                 |
+| Related TG      | Milestone                                                                                                                      | Target        | Contributor                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------    |
+| Project-wide    | Customize the release process for CVA6                                                                                         | 2024-Q1       | Project and sub-project leaders, OpenHW staff |
+| Project-wide    | Review proposed CVA6 evolutions                                                                                                | Continuous    | All, coordinated by Jérôme                    |
+| Project-wide    | Maintain and upgrade User Manual                                                                                               | Continuous    | All, coordinated by Jérôme                    |
+| Project-wide    | Maintain and upgrade Design Document                                                                                           | Continuous    | All, coordinated by Jean-Roch                 |
+| Project-wide    | Triage of PR (including 2<sup>nd</sup> level reviews from sub-projects) and issues                                             | Continuous    | Jean-Roch, with Mike's support                |
+| Project-wide    | Reviews of PR (including 2<sup>nd</sup> level reviews from sub-projects), handling of issues                                   | Continuous    | As per triage                                 |
+| Cores           | Unify three MMU (Sv32, Sv39, Sv39x4) in a single source code, as a prerequisite to the hypervisor mode integration             | 2024-Q1       | PlanV                                         |
+| Cores           | Integrate the hypervisor mode to the master branch                                                                             | 2024-Q2       | Zero-Day Labs, with TSS support               |
+| Cores           | Add support of Microchip PolarFire FPGA (port FPGA optimizations)                                                              | 2024          | TRT                                           |
+| Cores           | Add support of Microchip PolarFire FPGA (APU adaptation)                                                                       | 2024          | Undisclosed new member                        |
+| Cores           | Add support of Intel FPGA (port FPGA optimizations, APU adaptation)                                                            | 2024          | TRT                                           |
+| Cores           | Define and add memory protection for harsh environments (error detection and correction)                                       | 2024          | Interested stakeholders                       |
+| Cores           | Integrate in-order dual-issue                                                                                                  | 2024-Q2       | TSS                                           |
+| Cores           | Integrate instruction and data scratchpads                                                                                     | 2024-Q2       | TRISTAN partner                               |
+| Cores           | Parametrization (replace configuration packages and `directives by top-level SV parameters)                                    | 2024-Q2       | TSS                                           |
+| Cores           | Evaluate HPDCache as L1 data cache, decide if it's the project default L1 date cache                                           | 2024-Q1       | Interested stakeholders                       |
+| Cores           | _To be confirmed:_ Upgrade CV-X-IF to the newly ratified version                                                               |               | TSS                                           |
+| Cores           | _To be confirmed:_ Evolutions for the tightly-coupled cache coherence project                                                  |               | PlanV                                         |
+| Cores           | _To be confirmed:_ Configurable reset                                                                                          |               | ECC                                           |
+| Verification    | Maintain GitHub-triggered CI flow                                                                                              | Continuous    | TSS                                           |
+| Verification    | Maintain tandem mode                                                                                                           | Continuous    | OpenHW staff                                  |
+| Verification    | Add Mentor Questa support to the verification flow                                                                             | 2024          | OpenHW staff                                  |
+| Verification    | Add Cadence Xcelium support to the verification flow                                                                           | 2024          | TRISTAN partner                               |
 
 ### Project tracking and meetings
 
