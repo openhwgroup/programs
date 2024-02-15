@@ -12,7 +12,7 @@ Author: Jérôme Quévremont, Thales Research & Technology
 
 ## Summary of project
 
-**CVA6** is a family of configurable mid-range application RISC-V cores able to boot rich OSes like Linux.
+**CVA6** is a family of configurable mid-range application and embedded RISC-V cores.
 Its origin is the ARIANE core from the PULP team (ETH Zürich & University of Bologna).
 
 From a single RTL source, several flavors can be configured: 32- or 64-bit architecture (**CV32A6** / **CV64A6** sub-families),
@@ -66,8 +66,8 @@ The first verified configuration is expected at the end of 2024. Several other T
 - MU-Electronics
 - CEA
 - PlanV
-- Axelera
 - A partner of the TRISTAN project
+- A start up company
 
 ## Project Structure
 
@@ -117,16 +117,15 @@ The sub-project PA gates are prepared and presented by their respective leaders.
 Prior to presenting the gate to the TWG, it is recommended to review the sub-project and PA gate document in a CVA6 meeting.
 
 At the time of writing, the envisioned sub-projects are:
-- CV32A60AX<sup>3</sup>, a 32-bit application core, led by 10xEngineers
-- CV32A65X, a 32-bit embedded core with dual issue<sup>4</sup>, led by TSS
-- CV64A60AV, a 64-bit application core with an interface to a vector coprocessor, led by Axelera
-- a 32-bit real-time core with safety features, led by a TRISTAN project partner<sup>5</sup>
-- a 64-bit application core with safety features, led by a TRISTAN project partner<sup>5</sup>
+- CV32A60AX<sup>3</sup>, a 32-bit application core with the CV-X-IF, led by 10xEngineers
+- CV32A65X, a 32-bit embedded core with dual issue<sup>4</sup> and CV-X-IF, led by TSS
+- a 64-bit application core with an interface to a vector coprocessor, led by a start-up company
+- a 32-bit real-time core with safety features and CV-X-IF, led by a TRISTAN project partner
+- a 64-bit application core with safety features and CV-X-IF, led by a TRISTAN project partner
 
 Notes:<br>
 <sup>3</sup> CV32A60AX was previously named CV32A60X or step1/step2 (in the 2023-06-26 PA gate).<br>
 <sup>4</sup> The dual issue will likely be selected by TSS. If the single issue is finally selected, the part number will become CV32A60X.<br>
-<sup>5</sup> This partner considers joining the OpenHW Group.
 
 Refer to OpenHW [Dashboard](https://github.com/openhwgroup/programs/tree/master/dashboard) for the current list of sub-projects.
 
@@ -136,12 +135,15 @@ The sister projects are led independently. They synchronize with the CVA6 main a
 
 At the time of writing, the sister projects are:
 - [CVA6-H](https://github.com/openhwgroup/programs/tree/master/Project-Descriptions-and-Plans/CORE-V-CVA6-H) (CVA6 Hypervisor Extension Support)
-- [CORE-V L1 DCACHE](https://github.com/openhwgroup/programs/tree/master/Project-Descriptions-and-Plans/CORE-V-L1-DCACHE) (High Performance Data Cache)
+- [HPDCache](https://github.com/openhwgroup/programs/tree/master/Project-Descriptions-and-Plans/CORE-V-L1-DCACHE) (High Performance Data Cache)
 - [CORE-V-VEC](https://github.com/openhwgroup/programs/tree/master/Project-Descriptions-and-Plans/CORE-V-VEC-Research)  (vector coprocessor)
 - [CORE-V CV-Mesh](https://github.com/openhwgroup/programs/tree/master/Project-Descriptions-and-Plans/CV-MESH) (multi-core coherence system)
 - [Tightly-coupled cache coherence for CVA6](https://github.com/openhwgroup/programs/tree/master/Project-Descriptions-and-Plans/CVA6_tightly_coupled_cache_coherence)
 - [CVA6 Free-RTOS](https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/FreeRTOS/PA%20for%20CVA6%20FreeRTOS%20support.md)
-- [Superscalar CVA6](https://github.com/openhwgroup/programs/tree/master/Project-Descriptions-and-Plans/cva6-dual-issue)
+- [Dual issue CVA6](https://github.com/openhwgroup/programs/tree/master/Project-Descriptions-and-Plans/cva6-dual-issue)
+- [CVA6 Platform](https://docs.google.com/document/d/1lpMdyBCXY6m8kyTkqF7p_UGQywGA52e4kp10wFhpgfw)
+
+If the links above are outdated, please check the https://github.com/openhwgroup/programs/tree/master/Project-Descriptions-and-Plans folder.
 
 ## Project Leader(s)
 
@@ -164,15 +166,15 @@ The CVA6 specification was prepared for the 2022-02-28 PA gate and approved by t
 
 To avoid duplications and inconsistencies, it is not copied here.
 
-### License scheme
+### Open-source approach
 
-Because of the nature of its business, Thales expectation is to contribute and get a **sustainable open-source solution**
+The team's expectation is to contribute and get a **sustainable open-source solution**
 - to integrate CVA6 in new ASIC and FPGA projects for a long period and to maintain/upgrade them for several decades for industrial domains (avionic, satellite, railways, energy...);
 - to permit audit and reviews of verification and tools in the context of certifiable security and functional safety;
 - to permit public review to improve the quality of the core and its ecosystem;
 - to foster cooperative projects and connections with academy and research.
 
-Thereforce, Thales expects:
+Thereforce, the team expects:
 - Not only the core RTL, but also a version of the verification environment and the SW tools are available as open-source.
 - Commercial tools can be added to this basic set to deliver additional value (improved quality, coverage...).
     - But the project shall not depend on a single-source commercial tool.
@@ -199,7 +201,10 @@ Increasing the core architectural performance (out-of-order...), adding RISC-V e
 
 Like RI5CY, the ARIANE core donated by ETH Zürich and U. Bologna was at the heart of the OpenHW Group creation. We need an application processor core in our portfolio.
 
-Also, there are very few FPGA technology-independent softcores and CV32A6 is an alternative to proprietary cores.
+In addition, an embedded configuration with the same interfaces is relevant for teams who need both embedded and application cores
+while keeping a common infrastructure (bus interfaces...) and leveraging commonalities between configurations (e.g. for verification, toolchains...)
+
+Also, there are very few vendor-neutral FPGA softcores and CV32A6 is an alternative to proprietary cores.
 
 ## Industry landscape: description of competing, alternative, or related efforts in the industry
 
@@ -210,7 +215,7 @@ On the core side, for ASIC targets, these are the most comparable competitors (p
 - ANDES: A25 (32-bit) and AX25 (64-bit)
 - Frontgrade Gaisler: NOEL-V
 
-On the FPGA side, CV32A6 is a technology-independent alternative to these proprietary cores:
+On the FPGA side, CV32A6 is a vendor-neutral alternative to these proprietary cores:
 - Xilinx: Microblaze
 - MicroChip: Mi-V
 - Intel: Nios-II, Nios-V
@@ -223,19 +228,18 @@ On the tool side, CHIPS Alliance has plans to make their tools open-source
 To differentiate from the competition, marketing can stress:
 - Source code written in **SystemVerilog**, a widely accepted language;
 - **Open-source** availability of the cores;
-- Open-source availability of verification artefacts, which is a great step towards certification for security- and safety-critical applications;
+- Open-source availability of verification artefacts, which is a great step towards certification for security- and safety-critical domains;
 - The availability of a family of **technology-independent cores optimized for ASIC and FPGA targets**;
 - The ability to **extend the instruction** set thanks to the CV-X-IF interface;
 - The **SW ecosystem** running on CVA6, with FreeRTOS and Linux already demonstrated;
 - The ability to scale to SMP multi/many-core CPUs thanks to the OpenPiton framework;
 - The permissive licence scheme that allows the integration in open-source or closed-source projects or the addition of a "secret sauce";
-- The low exposition to export control
-([OpenHW Group Membership Agreement](https://www.openhwgroup.org/membership/openhw-group-membership-agreement-2019-10-16.pdf), section 4.1).
+- The low risk of export control restrictions as OpenHW members are bound by the member agreement to avoid contribution of export-controlled technology ([OpenHW Group Membership Agreement](https://www.openhwgroup.org/membership/openhw-group-membership-agreement-2019-10-16.pdf), section 4.1).
 
 ## External dependencies
 
 The project relies on:
-- Related and sister OpenHW projects (joint with other cores): LLVM, FreeRTOS, core-v-verif, CV-X-IF specification, OpenPiton...
+- Related and sister OpenHW projects (joint with other cores): LLVM, FreeRTOS, core-v-verif, CV-X-IF specification, OpenPiton/CV-MESH...
 - Open-source software: GCC, GDB, LLVM, Linux (Yocto, BuildRoot), OpenSBI, UBoot, BBL...
 - Open-source verification: Google Riscv-dv, Spike, [riscv-arch-test](https://github.com/riscv-non-isa/riscv-arch-test)
 - Open-source hardware: fpnew (ETH Zürich), first verified in CV32E40Pv2
@@ -243,7 +247,7 @@ The project relies on:
 - Digilent Genesys 2 board
 - Linter: verible
 - Simulators: Verilator (open-source), Siemens Questa, Synopsys VCS, Cadence Xcelium
-- Synthesis: Vivado (AMD, ex Xilinx), Libero (Microchip), Quartus (Intel, ex Altera), Synopsys Design Compiler (ASIC)
+- Synthesis: Vivado (AMD, ex Xilinx), Libero (Microchip), Quartus (Intel, ex Altera), Synopsys Design Compiler (ASIC), other ASIC CAD suites...
 
 ## List of project outputs
 
@@ -255,8 +259,9 @@ The CVA6 document structure is:
     - “What” defined as requirements with identifiers
     - Can be seen as a datasheet
 - User Manual
-    - Includes more details than the requirement specification
     - For CVA6 integrators and users: HW, SW, ASIC, FPGA… viewpoints
+	- Includes more details than the requirement specification
+    - Includes among others: list of parameters of the configurations, list of CSRs, supported RISC-V instructions, interfaces...
 - Design document
     - Explains the “How”: design choices…
     - Useful for verification, maintenance, next projects and certain certification schemes
@@ -349,7 +354,7 @@ Refer to the acknowledgements at the bottom of this document for Horizon Europe 
 
 ## Who would make use of OpenHW output
 
-Any entity needing a mid-range verified open-source RISC-V application processing core for ASIC and FPGA technologies:
+Any entity needing a mid-range verified open-source RISC-V application and/or embedded processing core for ASIC and FPGA technologies:
 - OpenHW members
 - Large and small businesses
 - Academy and research
@@ -392,7 +397,7 @@ https://github.com/openhwgroup/core-v-docs/tree/master/program/Project%20Descrip
 A Google Drive [folder](https://drive.google.com/drive/folders/1DWXTVgLJnOn6DfoYHyy45QGZUfAkfHbI) is available for shared documents that do not fit the GitHub structure above (presentations...).
 
 In addition, Thales has set up an internal mirror of GitHub repositories to trigger the
-countinuous integration environment they host.
+continuous integration environment they host.
 
 ## Project distribution model
 
@@ -444,6 +449,9 @@ These activities are hosted in the main project. They can also relate to the int
 
 The progress is tracked in CVA6 meetings and sub-project meetings, with a joint GitHub based [Kanban board](https://github.com/orgs/openhwgroup/projects/3).
 Labels are used to differentiate configuration-specific tasks.
+
+A monthly reporting will be provided using the [project report template](https://github.com/openhwgroup/programs/blob/master/process/Project-Monthly-Report-Template.md)
+in the [CVA6 reporting directory](https://github.com/openhwgroup/programs/tree/master/TGs/cores-task-group/cva6).
 
 Short minutes and short-lived documents will be posted to Mattermost's CVA6 channel, to keep the whole team updated. Longer-lived documents can be posted to the Google Drive folder.
 
