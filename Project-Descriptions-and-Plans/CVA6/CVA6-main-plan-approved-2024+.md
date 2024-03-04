@@ -88,10 +88,11 @@ The scopes of the main, sub-, and sister projects are described below:
 The main CVA6 project includes:
 - The synchronization with the sub-projects
 - The review and selection of proposed CVA6 evolutions<sup>2</sup>
-- The review of pull requests (PRs) from sister projects and the external world
-- The 2<sup>nd</sup> level review of PRs from sub-projects, mostly to check that the PR integrates well in CVA6 repository
+- The review of pull requests (PRs) modifying CVA6 repository, mostly to check that the PR meets the project goals and quality targets
 - The maintenance of the GitHub-triggered CI flow, the CVA6 GitHub repository , the triage of external issues
-- Design activities that are not hosted in a sub- or sister project (MMU unification, FPGA optimizations...)
+- Design and verification activities that are not hosted in a sister project (MMU unification, FPGA optimizations...)
+- Identification of reused/joint/new verification building blocks (DV plans, agents, sequences...)
+- Creation/updates of Doc/Design/DVPlan/sequences
 - The definition of a release process, that is needed by sub-projects.
 
 Note:<br>
@@ -101,15 +102,11 @@ Note:<br>
 
 Each CVA6 configuration targetting the TRL5 maturity will launch a sub-project with a PA gate presented at a TWG meeting.
 
-The sub-projects mostly include verification activities.
-They also host design and documentation activities that are specific to the configuration.
+The sub-projects goal is to sign-off the CVA6 configuration.
 
 The PA gates of sub-projects include:
 - Quality targets (coverage targets, certification if any...)
 - Additions to the RTL freeze checklist as deemed necessary
-- Identification of reused/joint/new verification building blocks (DV plans, agents, sequences...)
-- Doc/Design/DVPlan/sequences creation/updates in synchronization with other configurations
-- 1<sup>st</sup> level review of PRs from the sub-project, mostly to check that the PR meets the sub-project goals and quality targets
 - Fix issues discovered in the sub-project
 - Release plan for the configuration, based on the release process
 
@@ -191,7 +188,7 @@ Synopsys/Imperas OVPSim can be considered for other configurations.
 
 Gateways between OpenHW core-v-verif repositories and Thales internal environment (GitLab, CI...) will be set up.
 
-The verification sub-projects plans will provide more insight into the verification methods.
+The verification plans will provide more insight into the verification methods.
 
 ## Future enhancements (off project):
 
@@ -287,12 +284,11 @@ All CVA6 configurations share the same source code and are differentiated thanks
 ### Verification:
 
 - Versatile generic testbench with adaptation layers for CVA6
-    - Subset compliant with _sustainable open-source solution_ expectactions
+    - Subset compliant with _sustainable open-source solution_ expectations
 - Test sequences
 - Verification results
      - Including code coverage and functional coverage
 
-The sub-projects will provide more details. They will also identify what then can reuse between different configurations.
 
 ### Software:
 
@@ -411,7 +407,7 @@ Past plans are available in the [2023-06-26 PA document](https://github.com/open
 
 ### Sub-projects
 
-Sub-projects activities will be detailed in their respective PA documents: specific RTL modifications, DVplans, verification, fix issues, 1<sup>st</sup> level review, release...
+Sub-projects activities will be detailed in their respective PA documents: specific RTL configuration, quality target and sign-off results, release...
 
 ### Main project
 
@@ -423,8 +419,8 @@ These activities are hosted in the main project. They can also relate to the int
 | Project-wide    | Review proposed CVA6 evolutions                                                                                                | Continuous    | All, coordinated by Jérôme                    |
 | Project-wide    | Maintain and upgrade User Manual                                                                                               | Continuous    | All, coordinated by Jérôme                    |
 | Project-wide    | Maintain and upgrade Design Document                                                                                           | Continuous    | All, coordinated by Jean-Roch                 |
-| Project-wide    | Triage of PR (including 2<sup>nd</sup> level reviews from sub-projects) and issues                                             | Continuous    | Jean-Roch, with Mike's support                |
-| Project-wide    | Reviews of PR (including 2<sup>nd</sup> level reviews from sub-projects), handling of issues                                   | Continuous    | As per triage                                 |
+| Project-wide    | Triage of PR and issues                                                                                                        | Continuous    | Jean-Roch, with Mike's support                |
+| Project-wide    | Reviews of PR , handling of issues                                                                                             | Continuous    | As per triage                                 |
 | Cores           | Unify three MMU (Sv32, Sv39, Sv39x4) in a single source code, as a prerequisite to the hypervisor mode integration             | 2024-Q1       | PlanV                                         |
 | Cores           | Integrate the hypervisor mode to the master branch                                                                             | 2024-Q2       | Zero-Day Labs, with TSS support               |
 | Cores           | Add support of Microchip PolarFire FPGA (port FPGA optimizations)                                                              | 2024          | TRT                                           |
@@ -442,12 +438,15 @@ These activities are hosted in the main project. They can also relate to the int
 | Verification    | Maintain tandem mode                                                                                                           | Continuous    | OpenHW staff                                  |
 | Verification    | Add Mentor Questa support to the verification flow                                                                             | 2024          | OpenHW staff                                  |
 | Verification    | Add Cadence Xcelium support to the verification flow                                                                           | 2024          | TRISTAN partner                               |
+| Verification    | Edit DVplans                                                                                                                   | 2024          | OpenHW members                                |
+| Verification    | Develop UVM environment (covergroups, random test generation, UVM agents,...)                                                  | 2024          | OpenHW members                                |
+| Verification    | MMU architectural tests and UVM agent development                                                                              | 2024          | 10xEngineers                                  |
 
 ### Project tracking and meetings
 
 #### Project tracking
 
-The progress is tracked in CVA6 meetings and sub-project meetings, with a joint GitHub based [Kanban board](https://github.com/orgs/openhwgroup/projects/3).
+The progress is tracked in CVA6 meetings, with a joint GitHub based [Kanban board](https://github.com/orgs/openhwgroup/projects/3).
 Labels are used to differentiate configuration-specific tasks.
 
 A monthly reporting will be provided using the [project report template](https://github.com/openhwgroup/programs/blob/master/process/Project-Monthly-Report-Template.md)
@@ -463,7 +462,7 @@ The CVA6 main project meets
 - three times a month at a time suited for ET, WET, CET, PST, IST timezones;
 - once a month in the "West shifted meeting" at a time suited for PT, ET, WET, CET timezones.
 
-The verification teams meet once a week. They might decide in the sub-project plans to split these meetings between the various sub-projects.
+The verification teams meet once a week.
 
 The synchronisation between sub-projects can be hosted in the CVA6 main project meetings or in verification meetings.
 
