@@ -18,15 +18,19 @@ Its origin is the ARIANE core from the PULP team (ETH Zürich & University of Bo
 From a single RTL source, several flavors can be configured: 32- or 64-bit architecture (**CV32A6** / **CV64A6** sub-families),
 with or without FPU, with or without MMU...
 
+An instance of CVA6 with a defined list of parameter values is called a **configuration**.
+Configurations that target the industrial maturity known as **TRL5** (technical readiness level)
+are given a **part number** beginning with CV32A6 or CV64A6 (e.g. CV32A60AX).
+
 CVA6 targets both **ASIC** and **FPGA soft-core** implementations.
 
 The ability to have very similar 32- and 64-bit cores should allow to quite seamlessly switch between them in a SoC architecture:
 same core interface, a few compiler directives to change.
 
-The amin goal of the project is to bring **CVA6** configurations to an industrial maturity known as **TRL5** (technical readiness level):
+The main goal of the project is to bring **CVA6** configurations to **TRL5**:
 - Quality documentation
 - Add a few features desired by participating members
-- High-coverage verification for some given CVA6 configurations (= set of parameters)
+- High-coverage verification for some given CVA6 configurations
 - Optimizations for FPGA-based products
 - SW tools (GCC, GDB, LLVM<sup>1</sup>...)
 - FPGA prototype and development board
@@ -116,13 +120,17 @@ Prior to presenting the gate to the TWG, it is recommended to review the sub-pro
 At the time of writing, the envisioned sub-projects are:
 - CV32A60AX<sup>3</sup>, a 32-bit application core with the CV-X-IF, led by 10xEngineers
 - CV32A65X, a 32-bit embedded core with dual issue<sup>4</sup> and CV-X-IF, led by TSS
-- a 64-bit application core with an interface to a vector coprocessor, led by a start-up company
-- a 32-bit real-time core with safety features and CV-X-IF, led by a TRISTAN project partner
-- a 64-bit application core with safety features and CV-X-IF, led by a TRISTAN project partner
 
 Notes:<br>
 <sup>3</sup> CV32A60AX was previously named CV32A60X or step1/step2 (in the 2023-06-26 PA gate).<br>
 <sup>4</sup> The dual issue will likely be selected by TSS. If the single issue is finally selected, the part number will become CV32A60X.<br>
+
+Future considered configurations for TRL5 are:
+- a 64-bit application core with an interface to a vector coprocessor, led by a start-up company
+- a 32-bit real-time core with safety features and CV-X-IF, led by a TRISTAN project partner
+- a 64-bit application core with safety features and CV-X-IF, led by a TRISTAN project partner
+
+For these future configurations, the scope of the sub-projects might be wider than for CV32A60AX and CV32A65X.
 
 Refer to OpenHW [Dashboard](https://github.com/openhwgroup/programs/tree/master/dashboard) for the current list of sub-projects.
 
@@ -288,7 +296,6 @@ All CVA6 configurations share the same source code and are differentiated thanks
 - Test sequences
 - Verification results
      - Including code coverage and functional coverage
-
 
 ### Software:
 
@@ -462,7 +469,7 @@ The CVA6 main project meets
 - three times a month at a time suited for ET, WET, CET, PST, IST timezones;
 - once a month in the "West shifted meeting" at a time suited for PT, ET, WET, CET timezones.
 
-The verification teams meet once a week.
+The verification teams meet once a week in a specific meeting.
 
 The synchronisation between sub-projects can be hosted in the CVA6 main project meetings or in verification meetings.
 
@@ -500,7 +507,7 @@ None
 | Project Concept Complete                            | Y                               |                                                                               |
 | Project Launch Complete                             | Y                               |                                                                               |
 | SW Target platform identified                       | Y                               |                                                                               |
-| Cores Part Number identified	                      | Y                               | For four identified configurations. Others expected later.                    |
+| Cores Part Number identified	                      | Y                               |                                                                               |
 | Cores TRL Target identified	                      | Y                               |                                                                               |
 | Project release plan identified                     | N                               | Process to define in the main project. Plans to define in the sub-projects    |
 | HL Project deliverables identified                  | Y                               |                                                                               |
