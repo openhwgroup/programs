@@ -11,7 +11,7 @@ David Poulin - Datum Technology Corporation
 
 | Release number		    | Planned date						| Description															| 
 | --------------------- 	| --------------------- 			| ---------------------													| 
-| 1.0.0						| 2024-03-01						| UVM Environment and Test Bench ready for testing MCU with Metrics DSim.					|
+| 1.0.0						| 2024-06-05						| UVM Environment and Test Bench ready for testing MCU with Metrics DSim.					|
 
 
 
