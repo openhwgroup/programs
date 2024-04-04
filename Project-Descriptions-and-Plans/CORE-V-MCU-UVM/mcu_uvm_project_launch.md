@@ -2,7 +2,7 @@
 CORE-V MCU UVM Environment & Test Bench
 
 ## Date of proposal
-2023-11-24
+2024-04-04
 ## Author(s)
 David Poulin - Datum Technology Corporation
 
@@ -23,7 +23,6 @@ David Poulin - Datum Technology Corporation
 | --------------------- | --------------------- | ---------------------	| 
 | uvme_cvmcu_chip	    			| CORE-V-MCU UVM Environment including Register Model				|		David Poulin				|
 | uvmt_cvmcu_chip	    			| CORE-V-MCU UVM Test Bench	|			David Poulin			|
-| uvma_cvmcu_io	    			| CORE-V-MCU IO Pad UVM Agent	|			David Poulin			|
 | uvma_cvmcu_cpi	    			| CORE-V-MCU Camera Port Interface UVM Agent			|			David Poulin			|
 | uvma_cvmcu_event	    			| CORE-V-MCU Core Event UVM Agent	|			David Poulin			|
 | uvma_cvmcu_dbg	    			| CORE-V-MCU Core Debug UVM Agent	|			David Poulin			|
@@ -36,13 +35,7 @@ David Poulin - Datum Technology Corporation
 > * Support a self-checking environment using extensible prediction and scoreboarding components.
 > * Replace the core with UVM bus agent(s) (e.g. OBI) to drive stimulus and collect responses sufficient to achieve above.
 * Ability to simulate with Metrics DSim
-* Ability to drive and receive data from both the core and IO pins for all MCU peripherals:
-> * QSPI
-> * UART
-> * I2C
-> * JTAG
-> * CPI
-> * SDIO
+* Ability to drive and receive data from both the core and IO pins for UART peripherals
 
 
  
@@ -79,17 +72,18 @@ David Poulin - Datum Technology Corporation
 ## Schedule
 
 * Verification Plan: Finished
-* DV Specs: 2023/12/08
-* Register Model capture: 2023/12/15
-* Generate UVM code: 2023/12/15
-* Run automated register tests: 2023/12/15
-* Implement IO agent sequences: 2024/01/12
-* Implement CPI agent sequences: 2024/01/19
-* Implement Event agent sequences: 2024/01/26
-* Implement Debug agent sequences: 2024/01/26
-* Code review and bug creations: 2024/01/31
-* Generate Doxygen documentation: 2024/02/02
-* Review with OpenHW Group members: 2024/02/16
+* DV Specs: 2024/04/10
+* Register Model capture: 2024/04/24
+* Generate UVM code: 2024/04/24
+* Run automated register tests: 2024/05/01
+* UART egress sequences: 2024/05/08
+* UART ingress sequences: 2024/05/15
+* Implement CPI agent sequences: 2024/05/22
+* Implement Event agent sequences: 2024/05/22
+* Implement Debug agent sequences: 2024/05/22
+* Code review and bug creations: 2024/05/29
+* Generate Doxygen documentation: 2024/05/29
+* Review with OpenHW Group members: 2024/06/05
 
 
 ## Project Repo 
