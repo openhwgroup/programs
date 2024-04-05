@@ -70,6 +70,7 @@ The first verified configuration is expected at the end of 2024. Several other T
 - MU-Electronics
 - CEA
 - PlanV
+- Kalray (to be confirmed)
 - A partner of the TRISTAN project
 - A start up company
 
@@ -301,7 +302,7 @@ All CVA6 configurations share the same source code and are differentiated thanks
 
 - Baremetal BSP for Genesys 2 FPGA board featuring CVA6
 - Linux ports for CV32A6 and CV64A6 on the Genesys 2 board, based on UBoot bootloader, OpenSBI firmware and Yocto embedded Linux distribution builder
-- Toolchains (parameters for GCC compilation...)
+- Toolchains (architecture description for GCC compilation...)
 
 FreeRTOS is a product of a sister project, that has been kept in sync with the CVA6 project.
 
@@ -441,6 +442,7 @@ These activities are hosted in the main project. They can also relate to the int
 | Cores           | _To be confirmed:_ Upgrade CV-X-IF to the newly ratified version                                                               |               | TSS                                           |
 | Cores           | _To be confirmed:_ Evolutions for the tightly-coupled cache coherence project                                                  |               | PlanV                                         |
 | Cores           | _To be confirmed:_ Configurable reset                                                                                          |               | ECC                                           |
+| SW              | _To be confirmed:_ CVA6 architecture description for GCC compiler                                                              |               | Kalray
 | Verification    | Maintain GitHub-triggered CI flow                                                                                              | Continuous    | TSS                                           |
 | Verification    | Maintain tandem mode                                                                                                           | Continuous    | OpenHW staff                                  |
 | Verification    | Add Mentor Questa support to the verification flow                                                                             | 2024          | OpenHW staff                                  |
