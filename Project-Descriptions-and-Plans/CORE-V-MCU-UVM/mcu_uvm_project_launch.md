@@ -76,14 +76,14 @@ David Poulin - Datum Technology Corporation
 * Register Model capture: 2024/04/24
 * Generate UVM code: 2024/04/24
 * Run automated register tests: 2024/05/01
-* UART egress sequences: 2024/05/08
-* UART ingress sequences: 2024/05/15
-* Implement CPI agent sequences: 2024/05/22
-* Implement Event agent sequences: 2024/05/22
-* Implement Debug agent sequences: 2024/05/22
-* Code review and bug creations: 2024/05/29
-* Generate Doxygen documentation: 2024/05/29
-* Review with OpenHW Group members: 2024/06/05
+* UART egress sequences: 2024/06/08
+* UART ingress sequences: 2024/06/15
+* Implement CPI agent sequences: 2024/06/22
+* Implement Event agent sequences: 2024/06/22
+* Implement Debug agent sequences: 2024/06/22
+* Code review and bug creations: 2024/06/29
+* Generate Doxygen documentation: 2024/06/29
+* Review with OpenHW Group members: 2024/07/05
 
 
 ## Project Repo 
