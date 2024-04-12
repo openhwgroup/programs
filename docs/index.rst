@@ -7,7 +7,7 @@ CORE-V Documentation
 .. meta::
    :description lang=en: continuous CORE-V documentation development on Read the Docs.
    
-.. image:: ../images/CORE-V-landscape.png   
+.. image:: ./images/CORE-V-landscape.png   
 
 
 `CORE-V Docs` is the top level Read the Docs project for OpenHW Group's CORE-V family of open-source RISC-V processor cores and related projects.
@@ -16,9 +16,9 @@ CORE-V Documentation
    :maxdepth: 3
    :caption: Contents:
 
-   cores
-   verification
-   mcu
+   source/cores
+   source/verification
+   source/mcu
 .. comment:    devkit
 
 .. _OpenHW Group: https://www.openhwgroup.org
