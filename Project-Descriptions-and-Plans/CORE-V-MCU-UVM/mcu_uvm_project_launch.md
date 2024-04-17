@@ -11,7 +11,7 @@ David Poulin - Datum Technology Corporation
 
 | Release number		    | Planned date						| Description															| 
 | --------------------- 	| --------------------- 			| ---------------------													| 
-| 1.1.0						| 2024-07-05						| UVM Environment and Test Bench ready for testing MCU with Metrics DSim.					|
+| 1.1.0						| 2024-07-05						| Deliver MCU UVM Environment & Test Bench as well as UART tests simulating with Metrics DSim.					|
 
 
 
@@ -121,22 +121,22 @@ Wednesdays at 2pm EST
 | Item							| Completion (Y/N/In progress/NA)	| Comment							|      
 | --------------------    		| --------------------    			| -------------------- 					|
 | Project Concept Complete	    | 				Y  				|										|
-| Project Launch Complete	    | 					  				|										|
-| SW Target platform identified	| 					  				|										|
-| Cores Part Number identified	| 					  				|										|
-| Cores TRL Target identified	| 					  				|										|
+| Project Launch Complete	    | 					 Y 				|										|
+| SW Target platform identified	| 					N/A  				|										|
+| Cores Part Number identified	| 					N/A  				|										|
+| Cores TRL Target identified	| 				N/A  				|										|
 | Project release plan identified | 					  			|										|
-| HL Project deliverables identified| 					  			|										|
-| Feature list available|		| 					  				|										|
-| Resource plan available|		| 					  				|										|
-| Repo setup|					| 					Y 				|										|
+| HL Project deliverables identified| 				Y	  			|										|
+| Feature list available|	Y	| 					  				|										|
+| Resource plan available|	Y	| 					  				|										|
+| Repo setup|		Y			| 					 				|										|
 | License.md file in place		| 					  				|										|
-| Project Manager identified	| 					  				|										|
-| Technical Project Leader per deliverable identified| 					  			|										|
+| Project Manager identified	| 				Y  				|										|
+| Technical Project Leader per deliverable identified| 				Y  			|										|
 | At least 1 project committer elected| 					  		|										|
-| Work Breakdown Structure available | 					  			|										|
-| Baseline schedule available	| 					  				|										|
-| Ongoing schedule tracking identified 	| 				|		e.g. Github project board							|
+| Work Breakdown Structure available | 				Y  			|										|
+| Baseline schedule available	| 				Y  				|										|
+| Ongoing schedule tracking identified 	| 			|		Github project board							|
 | Regular project meeting setup	| 					  				|										|
 | Project Monthly report format agreed	| 					  				|										|
 | Risk Register available | 					  			|										|
