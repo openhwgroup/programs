@@ -2,7 +2,7 @@
 CORE-V MCU UVM Environment & Test Bench
 
 ## Date of proposal
-2024-04-04
+2024-04-22
 ## Author(s)
 David Poulin - Datum Technology Corporation
 
@@ -72,18 +72,15 @@ David Poulin - Datum Technology Corporation
 ## Schedule
 
 * Verification Plan: Finished
-* DV Specs: 2024/04/10
-* Register Model capture: 2024/04/24
-* Generate UVM code: 2024/04/24
-* Run automated register tests: 2024/05/01
-* UART egress sequences: 2024/06/08
-* UART ingress sequences: 2024/06/15
-* Implement CPI agent sequences: 2024/06/22
-* Implement Event agent sequences: 2024/06/22
-* Implement Debug agent sequences: 2024/06/22
-* Code review and bug creations: 2024/06/29
-* Generate Doxygen documentation: 2024/06/29
-* Review with OpenHW Group members: 2024/07/05
+* DV Specs: 2024/04/24
+* Register Model capture: 2024/06/15
+* Generate UVM code: 2024/06/15
+* Run automated register access tests for UART & uDMA: 2024/06/22
+* UART egress sequences: 2024/08/15
+* UART ingress sequences: 2024/09/31
+* Implement CPI agent sequences: 2024/10/31
+* Generate Doxygen documentation: 2024/12/01
+* Review with OpenHW Group members: 2024/12/05
 
 
 ## Project Repo 
