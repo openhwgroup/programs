@@ -1,7 +1,7 @@
 # CORE-V MCU UVM Environment & Test Bench
 # Project Launch Proposal
 ## Date of proposal - 2024-04-22
-## Author(s) - David Poulin
+## Author(s) - David Poulin (Datum Technology Corporation)
 
 
 ## Summary of project
