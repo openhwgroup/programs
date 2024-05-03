@@ -1,12 +1,12 @@
 # OpenHW Project: CVA6 core (main project)
 
-| Gate                                 | Status                                                                     |
-| ------------------------------------ | -------------------------------------------------------------------------- |
-| PC gate: Project Concept             | Approved on 2020-09-28 as Preliminary Project Launch (PPL)                 |
-| PL gate: Project Launch              | Approved on 2021-01-25                                                     |
-| PA gate: Plan Approved               | Presented on 2022-02-28 for **2022 workplan**, approved on 2022-03-28      |
-| PA gate: Plan Approved               | Presented on 2023-06-26 for **2023-2024 workplan**, approved on 2023-08-12 |
-| PA gate: Plan Approved               | To be resented on 2024-03-25 to **address several CVA6 configurations**    |
+| Gate                                 | Status                                                                                     |
+| ------------------------------------ | ------------------------------------------------------------------------------------------ |
+| PC gate: Project Concept             | Approved on 2020-09-28 as Preliminary Project Launch (PPL)                                 |
+| PL gate: Project Launch              | Approved on 2021-01-25                                                                     |
+| PA gate: Plan Approved               | Presented on 2022-02-28 for **2022 workplan**, approved on 2022-03-28                      |
+| PA gate: Plan Approved               | Presented on 2023-06-26 for **2023-2024 workplan**, approved on 2023-08-12                 |
+| PA gate: Plan Approved               | Presented on 2024-03-25 to **address several CVA6 configurations**, approved on 2024-05-01 |
 
 Author: Jérôme Quévremont, Thales Research & Technology
 
