@@ -105,7 +105,7 @@ For overall experience, from the survey
 - Ease of use for SDK.
 - A clear on-boarding experience to inform a user how their SOC will operate when using the MCU-V2 IP.
 
-The DevKitv1 feature set below will be used as the basis for DevKit v2, but may be refined or simplified. 
+The DevKit v1 feature set below will be used as the basis for DevKit v2, but may be refined or simplified. 
 
 - CORE-V MCU
   - CV32E40P processor core
@@ -151,14 +151,45 @@ It will be important to estimate the quantity needed and to estimate DevKit cost
 
 Rough schedule for planning purpose
 
-- MCU Tapeout/handoff to Foundry August 2024
-- Receive parts from Foundry 
-- Parts tested and packaged
-- SDK Integration with FreeRTOS
-- MCU User Manual
-- DevKit User manual
-- DevKit first articles
-- DevKit to end customer (OpenHW members).
+ Item										| Responsible						| Target date							|      
+| --------------------    					| --------------------    			| -------------------- 					|
+| RTL Design Start	    					| 	QL			  					|		July 1							|
+| RTL integration eFPGA2, FCB, and E40	    | 	QL			  					|										|
+| Simplification of TCDM if for eFPGA   	| 	QL		  						|										|
+| Pinout map to SoC   	 					| 	QL		  						|										|
+| Clocking/timing closure eFPGA /entire SoC | 	QL		  						|										|
+| RTL-level integration testing	complete   	| 	QL		  						|										|
+| RTL Synthesis	    						| (QL for V1)	  					|										|
+| Handoff of Netlist to back-end team	    | (QL did for V1)  					|	end September						|
+| LEC 1	(RTL vs synthesis)					| CMC								|									|
+| Floorplanning	(FP)						| CMC								|										|
+| Initial Place and Route	(PnR)			| CMC								|										|
+| Revisit Floorplanning						| CMC								|										|
+| LEC3 (FP vs PnR)							| CMC								|										|
+| Initial Static Timing Analysis (STA)		| CMC								|										|
+| Initial Clock Tree Synthesis (CTS)		| CMC								|										|
+| Back-annotated timing simulation			| (QL did for V1)  					|										|
+| LEC4 (PnR vs CTS)							| CMC								|										|
+| Timing-driven PnR							| CMC								|										|
+| LEC5 (CTS vs TD-PnR)						| CMC								|										|
+| EMIR										| CMC								|										|
+| LVS										| CMC								|										|
+| PEX										| CMC								|										|
+| Final STA									| CMC								|										|
+| ECO Checkpoint							| CMC								|										|
+| Preliminary GDS submission				| CMC								|										|
+| DRC/DP									| CMC								|										|
+| Dummy Fill								| CMC								|										|
+| DRC/DFM									| CMC								|										|
+| Final GDS Submission						| CMC								|										|
+| Receive parts from Foundry 				| 									|										|
+| Parts tested and packaged					| 									|										|
+| SDK Integration with FreeRTOS				| 									|										|
+| MCU User Manual							| 									|										|
+| DevKit User manual						| 									|										|
+| DevKit first articles						| 									|										|
+| DevKit to end customer (OpenHW members).	| 									|										|
+
 
 
 ## Explanation of why OpenHW should do this project
@@ -275,5 +306,7 @@ MCU Features will not change - consult MCU User Manual
 
 - As there are many different components, we are vulnerable if a member decided to pull out and work on a major component like DevKit board design or SDK integration with FreeRTOS
   - Ideally we should forma  bigger team of interested OpenHW members to mitigate this risk.
+  
+ - Identification of Synthesis Design owner
   
   
