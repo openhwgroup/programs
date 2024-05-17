@@ -1,0 +1,907 @@
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_core.sv \
+-code b -line 362 -comment {No user mode in this configuration. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_core.sv \
+-code c -line 362 -comment {No user mode in this configuration.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_if_stage.sv \
+-code s -line 134 -comment {We dont use USER mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_if_stage.sv \
+-code s -line 140 -comment {We dont use USER mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_if_stage.sv \
+-code s -line 165 -comment {We dont use USER mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_if_stage.sv \
+-code b -line 134 -comment {We dont use USER mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_if_stage.sv \
+-code b -line 140 -comment {We dont use USER mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_if_stage.sv \
+-code b -line 165 -comment {We dont use USER mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/prefetch_controller_sva \
+-code b -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/prefetch_controller_sva/gen_pulp_xpulp_assertions \
+-code b
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/fifo_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_fifo.sv \
+-code s -line 81 -comment {We never overflow the fifo.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/fifo_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_fifo.sv \
+-code s -line 90 -comment {We never underflow the fifo.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/fifo_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_fifo.sv \
+-code b -line 81 -comment {We never overflow the fifo.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/fifo_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_fifo.sv \
+-code b -line 90 -comment {We never underflow the fifo.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/fifo_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_fifo.sv \
+-code b -line 126-128 -comment {flush_but_first is dependent on !fifo_empty so this \
+is unreachable.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/fifo_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_fifo.sv \
+-code c -line 81 -comment {We never overflow the fifo.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/fifo_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_fifo.sv \
+-code c -line 87 -comment {We never pop an element from the fifo while the fifo \
+is empty}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/fifo_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_fifo.sv \
+-code c -line 90 -comment {We never underflow the fifo.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/fifo_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_fifo.sv \
+-code c -line 97 -comment {Fifo never empty when trying to push and pop at the same \
+time.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/if_stage_i/prefetch_buffer_i/fifo_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_fifo.sv \
+-code c -line 127-128 -comment {flush_but_first is dependent on !fifo_empty so this \
+is unreachable.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_id_stage.sv \
+-code s -line 528 -comment {reg_c = S1 never exist in the decoder. This is unreachable.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_id_stage.sv \
+-code s -line 645 -comment {IMB_S3 never exists in the decoder. This is unreachable.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_id_stage.sv \
+-code b -line 528 -comment {reg_c = S1 never exist in the decoder. This is unreachable.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_id_stage.sv \
+-code b -line 645 -comment {IMB_S3 never exists in the decoder. This is unreachable.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_id_stage.sv \
+-code b -line 724 -comment {scalar_replication_c is never asserted. Can olny be \
+asserted for vector float instruction. Unreachable in all conf we verify for v2. \
+Reachable only in vector conf.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/gen_apu \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_id_stage.sv \
+-item 1 -fcr 872 5 -comment {one specific combination is unreachable. Proven with \
+Formal. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code s -line 1265-1266 -comment {Unreachable since C_XF16ALT is unsupported}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code s -line 1274-1275 -comment {Unreachable since C_XF16ALT is unsupported}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code s -line 1296-1297 -comment {Unreachable since C_XF16ALT is unsupported}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code s -line 2784 -comment {Unreacheable code as cur_priv_lvl_i is at maximum value.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code b -line 1264 -comment {Unreachable since C_XF16ALT is unsupported}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code b -line 1273 -comment {Unreachable since C_XF16ALT is unsupported}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code b -line 1295 -comment {Unreachable since C_XF16ALT is unsupported}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code b -line 1353 -comment {Default cannot be reached.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code b -line 1362 -comment {Default cannot be reached.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code b -line 1440 -comment {Default cannot be reached.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code b -line 1483 -comment {Default cannot be reached.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code b -line 2782 -comment {Unreacheable code as cur_priv_lvl_i is at maximum value.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/decoder_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_decoder.sv \
+-code c -line 2782 -comment {Unreacheable code as cur_priv_lvl_i is at maximum value.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 419 -comment {No Secure interrupt line. irq_sec_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 451-460 -comment {No OBI Data error. data_err_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 469-478 -comment {No OBI Instr error. instr_err_i tied to 0.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 520 -comment {No Secure interrupt line. irq_sec_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 614-615 -comment {No cv.elw}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 752 -comment {No Secure interrupt line. irq_sec_i tied to 0.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 818-819 -comment {No cv.elw.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 913-921 -comment {No OBI data error.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 1026-1031 -comment {No OBI data error.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 1036-1039 -comment {No OBI Instr error. instr_err_i tied to 0. }  \
+-nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 1040 -comment {No OBI Instr error. instr_err_i tied to 0.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 1081-1082 -comment {Can't be reached as uret instruction is illegal \
+instruction.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 1131-1133 -comment {No User Privilege Mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code s -line 1233-1238 -comment {No OBI data error. data_err_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 418 -comment {No Secure interrupt line. irq_sec_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 421 -comment {No User Privilege Mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 447-459 -comment {No OBI Data error. data_err_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 464 -comment {No OBI Instr error. instr_err_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 519 -comment {No Secure interrupt line. irq_sec_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 522 -comment {No User Privilege Mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 613-614 -comment {No cv.elw.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 675 -item 1 -allfalse -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 751 -comment {No Secure interrupt line. irq_sec_i tied to 0.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 754 -comment {No User Privilege Mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 817-818 -comment {No cv.elw.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 910-917 -comment {No OBI Data error. data_err_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 941 -comment {No User Privilege Mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 950-990 -comment {No cv.elw.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 1024-1031 -comment {No OBI Data error. data_err_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 1034-1039 -comment {No OBI Instr error. instr_err_i tied to 0. }  \
+-nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 1080 -comment {Can't be reached as uret instruction is illegal instruction.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 1111 -comment {Unreacheable default code.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 1129-1131 -comment {No User Privilege Mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 1142 -comment {Unreacheable default code.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 1230-1237 -comment {No OBI Data error. data_err_i tied to 0. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code c -line 399 -comment {No interrupt during debug mode. To waive corner case \
+to happen during FIRST_FETCH 1 clk cycle. }  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code c -line 421 -comment {No User Privilege Mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code c -line 522 -comment {No User Privilege Mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code c -line 640 -comment {HWLoop1 cannot be nested in HWLoop0.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code c -line 754 -comment {No User Privilege Mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code c -line 941 -comment {No User Privilege Mode.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code c -line 1051-1072 -comment {Single-step not possible during debug mode.}  \
+-nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/int_controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_int_controller.sv \
+-code s -line 114-120 -comment {All uncovered irq are unreachable. This is set by \
+IRQ_MASK in cv32e40p_pkg.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/int_controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_int_controller.sv \
+-code s -line 127-145 -comment {All uncovered irq are unreachable. This is set by \
+IRQ_MASK in cv32e40p_pkg.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/int_controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_int_controller.sv \
+-code b -line 113-119 -comment {All uncovered irq are unreachable. This is set by \
+IRQ_MASK in cv32e40p_pkg.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/int_controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_int_controller.sv \
+-code b -line 126-144 -comment {All uncovered irq are unreachable. This is set by \
+IRQ_MASK in cv32e40p_pkg.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_ex_stage.sv \
+-item 1 -fcr 211 4 -comment {one specific condition (row4) is unreachable. Proven \
+with Formal. We never apu_en_1 and regfile_alu_we at the same time.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_ex_stage.sv \
+-item 1 -fcr 237 5 -comment {one specific condition (Row5) is unreachable. Proven \
+with Formal.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_ex_stage.sv \
+-item 1 -fcr 241 5 -comment {one specific condition (Row5) is unreachable. Proven \
+with Formal.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_ex_stage.sv \
+-code c -line 460 -comment {We dont support OBI error.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_ex_stage.sv \
+-item 1 -fcr 387 22 -comment {unreachable in FPU config. It only could be hit with \
+Z config for apu_read_dep_for_jalr.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/alu_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_alu.sv \
+-code b -line 549 -comment {Default part of uniqu_case for vector mode never reached.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/alu_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_alu.sv \
+-code b -line 579 -comment {Default part of uniqu_case for vector mode never reached.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/alu_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_alu.sv \
+-code b -line 608 -comment {Default part of uniqu_case for vector mode never reached.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/alu_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_alu.sv \
+-code b -line 628 -comment {Default part of uniqu_case for vector mode never reached.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/alu_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_alu.sv \
+-code b -line 648 -comment {Default part of uniqu_case for vector mode never reached.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/alu_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_alu.sv \
+-code b -line 667 -comment {Default part of uniqu_case for vector mode never reached.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu/apu_disp_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_apu_disp.sv \
+-code s -line 126-127 -comment {we cannot have req_accepted in valid_inflight}  \
+-nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu/apu_disp_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_apu_disp.sv \
+-code s -line 130-131 -comment {we never have returned_waiting}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu/apu_disp_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_apu_disp.sv \
+-code s -line 140-141 -comment {we never have returned_waiting}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu/apu_disp_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_apu_disp.sv \
+-code s -line 220 -comment {we never have returned_waiting}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu/apu_disp_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_apu_disp.sv \
+-code b -line 125 -comment {we cannot have req_accepted in valid_inflight}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu/apu_disp_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_apu_disp.sv \
+-code b -line 129 -comment {we never have returned_waiting}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu/apu_disp_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_apu_disp.sv \
+-code b -line 139 -comment {we never have returned_waiting}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu/apu_disp_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_apu_disp.sv \
+-code b -line 220 -comment {we never have returned_waiting}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu/apu_disp_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_apu_disp.sv \
+-code c -line 125 -comment {we cannot have req_accepted in valid_inflight}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/load_store_unit_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_load_store_unit.sv \
+-code s -line 135 -comment {Case 2'b00 has been added for completion but is never \
+used.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/load_store_unit_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_load_store_unit.sv \
+-code b -line 135 -comment {Case 2'b00 has been added for completion but is never \
+used.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/load_store_unit_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_load_store_unit.sv \
+-code b -line 120-135 -item 1-2 -comment {2'b11 choice that never exists in the \
+decoder.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/load_store_unit_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_load_store_unit.sv \
+-code b -line 142 -item 1 -comment {Case 2'b00 has been added for completion but \
+is never used.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/load_store_unit_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_load_store_unit.sv \
+-code b -line 292 -item 1-2 -comment {2'b11 choice that never exists in the decoder.} \
+ -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/load_store_unit_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_load_store_unit.sv \
+-code b -line 295 -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/cs_registers_i/gen_no_pulp_secure_write_logic \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_cs_registers.sv \
+-code s -line 1047 -comment {Never save exception pc in ex because no data error \
+from PMP.} 
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/cs_registers_i/gen_no_pulp_secure_write_logic \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_cs_registers.sv \
+-code b -line 1047 -comment {Never save exception pc in ex because no data error \
+from PMP.} 
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/cs_registers_i/gen_no_pulp_secure_write_logic \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_cs_registers.sv \
+-code b -line 1048 -comment {Default of unique case not covered} 
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/interrupt_assert_i \
+-code sbc -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-code s -line 209 -comment {No float to float conversion. We are using only on format.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-code b -line 207-208 -comment {No float to float conversion. We are using only \
+on format.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-code b -line 213 -comment {We never use cast and pack.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-code c -line 207-208 -comment {No float to float conversion. We are using only \
+on format.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/conv_target} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[2]/g_last_level/g_level[1]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[2]/g_last_level/g_level[0]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[1]/g_not_last_level/g_level[1]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[1]/g_not_last_level/g_level[0]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[0]/g_not_last_level/g_level[0]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_lower/gen_lzc/g_levels[2]/g_last_level/g_level[1]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_lower/gen_lzc/g_levels[1]/g_not_last_level/g_level[1]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[2]/g_last_level/g_level[1]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[2]/g_last_level/g_level[0]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[1]/g_not_last_level/g_level[1]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[1]/g_not_last_level/g_level[0]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[0]/g_not_last_level/g_level[0]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_lower/gen_lzc/g_levels[2]/g_last_level/g_level[1]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_lower/gen_lzc/g_levels[1]/g_not_last_level/g_level[1]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[2]/g_last_level/g_level[1]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[2]/g_last_level/g_level[0]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[1]/g_not_last_level/g_level[1]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[1]/g_not_last_level/g_level[0]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[0]/g_not_last_level/g_level[0]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_lower/gen_lzc/g_levels[2]/g_last_level/g_level[1]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_lower/gen_lzc/g_levels[1]/g_not_last_level/g_level[1]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_fma_multi/i_lzc/gen_lzc/g_levels[4]/g_not_last_level/g_level[15]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_fma_multi/i_lzc/gen_lzc/g_levels[4]/g_not_last_level/g_level[14]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_fma_multi/i_lzc/gen_lzc/g_levels[4]/g_not_last_level/g_level[13]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_fma_multi/i_lzc/gen_lzc/g_levels[3]/g_not_last_level/g_level[7]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[2]/g_last_level/g_level[1]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[2]/g_last_level/g_level[0]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[1]/g_not_last_level/g_level[1]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[1]/g_not_last_level/g_level[0]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[0]/g_not_last_level/g_level[0]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_lower/gen_lzc/g_levels[2]/g_last_level/g_level[1]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used. } 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_lower/gen_lzc/g_levels[1]/g_not_last_level/g_level[1]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 101 -comment {this part of leading zero counter is not used. } 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[1]/g_last_level/g_level[0]/g_reduce} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
+-code b -line 82 -comment {this part of leading zero counter is not used.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_cast_multi/i_fpnew_rounding} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_rounding.sv \
+-code s -line 59 -comment {Round towards odd does not exist in RISCV}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_cast_multi/i_fpnew_rounding} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_rounding.sv \
+-code b -line 59 -comment {Round towards odd does not exist in RISCV}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_fma_multi/i_fpnew_rounding} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_rounding.sv \
+-code s -line 59 -comment {Round towards odd does not exist in RISCV}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_fma_multi/i_fpnew_rounding} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_rounding.sv \
+-code b -line 59 -comment {Round towards odd does not exist in RISCV}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_levels[2]/gen_level[1]/gen_first_level/gen_reduce} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_levels[1]/gen_level[1]/gen_other_levels} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 299-301 -comment {we only have 1 master generating 1 request per cycle, \
+so do not use the round robin. The arbiter is only used for switching matrix. } \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code s -line 243 -comment {We never flush. Flush is stuck to 0.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 242 -comment {We never flush. Flush is stuck to 0.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 230 -comment {we only have 1 master generating 1 request per cycle, \
+so do not use the round robin. The arbiter is only used for switching matrix. } \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[4]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[3]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[2]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[1]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[0]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_levels[2]/gen_level[1]/gen_first_level/gen_reduce} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_levels[1]/gen_level[1]/gen_other_levels} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 299-301 -comment {we only have 1 master generating 1 request per cycle, \
+so do not use the round robin. The arbiter is only used for switching matrix. } \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code s -line 243 -comment {We never flush. Flush is stuck to 0.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 242 -comment {We never flush. Flush is stuck to 0.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 230 -comment {we only have 1 master generating 1 request per cycle, \
+so do not use the round robin. The arbiter is only used for switching matrix. } \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[4]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[3]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[2]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[1]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[0]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_levels[2]/gen_level[1]/gen_first_level/gen_reduce} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_levels[1]/gen_level[1]/gen_other_levels} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 299-301 -comment {we only have 1 master generating 1 request per cycle, \
+so do not use the round robin. The arbiter is only used for switching matrix. } \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code s -line 243 -comment {We never flush. Flush is stuck to 0.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 242 -comment {We never flush. Flush is stuck to 0.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 230 -comment {we only have 1 master generating 1 request per cycle, \
+so do not use the round robin. The arbiter is only used for switching matrix. } \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[4]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[3]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[2]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[1]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[0]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_levels[2]/gen_level[1]/gen_first_level/gen_reduce} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_levels[1]/gen_level[1]/gen_other_levels} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 299-301 -comment {we only have 1 master generating 1 request per cycle, \
+so do not use the round robin. The arbiter is only used for switching matrix. } \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code s -line 243 -comment {We never flush. Flush is stuck to 0.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 242 -comment {We never flush. Flush is stuck to 0.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 230 -comment {we only have 1 master generating 1 request per cycle, \
+so do not use the round robin. The arbiter is only used for switching matrix. } \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[4]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[3]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[2]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[1]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[0]} \
+-code b
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/i_arbiter/gen_arbiter/gen_int_rr \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code s -line 243 -comment {We never flush. Flush is stuck to 0.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/i_arbiter/gen_arbiter/gen_int_rr \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/rr_arb_tree.sv \
+-code b -line 242 -comment {We never flush. Flush is stuck to 0.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb \
+-code c -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/gen_mask[0]} \
+-code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code s -line 197-198 -comment {No new work coming in while we are busy.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code s -line 202-217 -comment {out_ready is stuck to 1. We never go to hold state.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code s -line 227-229 -comment {flush_i set to 1'b0}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code s -line 288 -comment {Specific combination is unreachable. Proven with Formal.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code b -line 196 -comment {No new work coming in while we are busy.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code b -line 201-215 -comment {out_ready is stuck to 1. We never go to hold state.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code b -line 226 -comment {flush_i set to 1'b0}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code b -line 287 -comment {Specific combination is unreachable. Proven with Formal.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code b -line 415-425 -comment {out_ready is stuck to 1. We never go to hold state.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code c -line 181 -comment {we are in sigle master mode. The core wont push more \
+instruction. }  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code c -line 196 -comment {No new work coming in while we are busy.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code c -line 215 -comment {out_ready is stuck to 1. We never go to hold state.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code c -line 287 -comment {Specific combination is unreachable. Proven with Formal.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-item 1 -fcr 292 4 -comment {flush_i set to 1'b0}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/gen_output_pipeline[0]} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_divsqrt_th_32.sv \
+-code b -line 458 -comment {flush_i set to 1'b0} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_special} \
+-code c
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_special} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_special.v \
+-code s -line 282-302 -comment {cp0_fpu_xx_dqnan stuck to 0. Can never have the \
+non masking condition.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_special} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_special.v \
+-code b -line 280-298 -comment {cp0_fpu_xx_dqnan stuck to 0. Can never have the \
+non masking condition.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_prepare/x_frac_expnt} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ff1.v \
+-code s -line 63-91 -comment {This can only be reached when using double precision} \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_prepare/x_frac_expnt} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ff1.v \
+-code s -line 93 -comment {Default is unreachble. Case is already complete.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_prepare/x_frac_expnt} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ff1.v \
+-code s -line 125-153 -comment {This can only be reached when using double precision} \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_prepare/x_frac_expnt} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ff1.v \
+-code s -line 155 -comment {Default is unreachble. Case is already complete.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_prepare/x_frac_expnt} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ff1.v \
+-code b -line 63-91 -comment {This can only be reached when using double precision} \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_prepare/x_frac_expnt} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ff1.v \
+-code b -line 93 -comment {Default is unreachble. Case is already complete.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_prepare/x_frac_expnt} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ff1.v \
+-code b -line 125-153 -comment {This can only be reached when using double precision} \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_prepare/x_frac_expnt} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ff1.v \
+-code b -line 155 -comment {Default is unreachble. Case is already complete.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_round} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_round_single.v \
+-code s -line 412-415 -comment {Default case never reached. This is looking at rounding \
+mode. We always have 3'b000, 3'b001, 3'b010, 3'b011, 3'b100. Those are all the legal \
+value.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_round} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_round_single.v \
+-code s -line 437-438 -comment {Default is unreachable. Case is already complete.} \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_round} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_round_single.v \
+-code b -line 410 -comment {Default case never reached. This is looking at rounding \
+mode. We always have 3'b000, 3'b001, 3'b010, 3'b011, 3'b100. Those are all the legal \
+value.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_round} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_round_single.v \
+-code b -line 435 -comment {Default is unreachable. Case is already complete.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_pack} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_pack_single.v \
+-code s -line 139 -comment {Default is unreachable. Case is already complete.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_pack} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_pack_single.v \
+-code s -line 218 -comment {Default is unreachable. Case is already complete.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_pack} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_pack_single.v \
+-code b -line 139 -comment {Default is unreachable. Case is already complete.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_pack} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_pack_single.v \
+-code b -line 218 -comment {Default is unreachable. Case is already complete.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code s -line 360 -comment {Never flush. Related to expression line 637.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code s -line 399-401 -comment {Never ctrl_sm_start when in PACK state. We start \
+when operand is ready. Core is waiting for result before sending new instruction \
+and new operand.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code s -line 405 -comment {fdsu_wb_grant always asserted in PACK state. With the \
+way things are looped back, we will always have this asserted during PACK. We will \
+never go to WFWB state.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code s -line 412-418 -comment {WFWB state never reached. Caused by fdsu_wb_grant \
+always asserted during PACK state.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code s -line 444 -comment {Never flush. Related to expression line 637.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code s -line 465 -comment {Never flush. Related to expression line 637.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code s -line 484 -comment {Never flush. Related to expression line 637.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code s -line 513-515 -comment {never ctrl_fdsu_wb_vld when in WB_EX2 state.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code s -line 521 -comment {never ctrl_iter_start when in WB_CMPLT state.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code b -line 359 -comment {Never flush. Related to expression line 637.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code b -line 397-400 -comment {Never ctrl_sm_start when in PACK state. We start \
+when operand is ready. Core is waiting for result before sending new instruction \
+and new operand.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code b -line 404 -comment {fdsu_wb_grant always asserted in PACK state. With the \
+way things are looped back, we will always have this asserted during PACK. We will \
+never go to WFWB state.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code b -line 407-417 -comment {WFWB state never reached. Caused by fdsu_wb_grant \
+always asserted during PACK state.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code b -line 443 -comment {Never flush. Related to expression line 637.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code b -line 464 -comment {Never flush. Related to expression line 637.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code b -line 483 -comment {Never flush. Related to expression line 637.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code b -line 511-514 -comment {never ctrl_fdsu_wb_vld when in WB_EX2 state.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code b -line 520 -comment {never ctrl_iter_start when in WB_CMPLT state.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-item 1 -fcr 501 6 -comment {unreachable. Never fdsu_dn_stall during WB_IDLE state.} \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code c -line 512 -comment {never ctrl_fdsu_wb_vld when in WB_EX2 state.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/i_divsqrt_thead/x_pa_fdsu_ctrl} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fdsu/rtl/pa_fdsu_ctrl.v \
+-code c -line 520 -comment {never ctrl_iter_start when in WB_CMPLT state.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-code c
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code s -line 240 -comment {ex1_special_sel[8:5] never 0001. ex1_result_qnan_op0. \
+This is always 0, comes from fdsu_special lines 282 and 294.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code s -line 241 -comment {ex1_special_sel[8:5] never 0010. ex1_result_qnan_op1. \
+This is always 0, comes from fdsu_special lines 289 and 301.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code s -line 242 -comment {ex1_special_sel[8:5] never 0100. ex1_special_sel[7] \
+is stuck to 0.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code s -line 282 -comment {Missing some ex2_special_sel. This is ex1_special_sel[0] \
+which is stuck to 0.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code s -line 285 -comment {Missing some ex2_special_sel. This is ex1_special_sel[3] \
+ex1_result_lfn which is stuck to 0 in fdsu_special.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code s -line 287 -comment {Missing some ex2_special_sel. This is |ex1_special_sel[7:5]. \
+7 is stuck to 0. 6 is ex1_result_qnan_op1. 5 is ex1_result_qnan_op0. This will always \
+be 0.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code s -line 288 -comment {Missing some ex2_special_sel. This is ex1_special_sel[8] \
+which is stuck to 0.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code b -line 149 -comment {ex1_decode_rm is never 7. This correspond to DYN rounding \
+mode.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code b -line 155 -comment {ex1_src2_vld never asserted. This is expression 151.} \
+
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code b -line 240 -comment {ex1_special_sel[8:5] never 0001. ex1_result_qnan_op0. \
+This is always 0, comes from fdsu_special lines 282 and 294.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code b -line 241 -comment {ex1_special_sel[8:5] never 0010. ex1_result_qnan_op1. \
+This is always 0, comes from fdsu_special lines 289 and 301.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code b -line 242 -comment {ex1_special_sel[8:5] never 0100. ex1_special_sel[7] \
+is stuck to 0.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code b -line 282 -comment {Missing some ex2_special_sel. This is ex1_special_sel[0] \
+which is stuck to 0.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code b -line 285 -comment {Missing some ex2_special_sel. This is ex1_special_sel[3] \
+ex1_result_lfn which is stuck to 0 in fdsu_special.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code b -line 287 -comment {Missing some ex2_special_sel. This is |ex1_special_sel[7:5]. \
+7 is stuck to 0. 6 is ex1_result_qnan_op1. 5 is ex1_result_qnan_op0. This will always \
+be 0.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/genblk1/i_fpnew_divsqrt_multi_th/x_pa_fpu_dp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/vendor/opene906/E906_RTL_FACTORY/gen_rtl/fpu/rtl/pa_fpu_dp.v \
+-code b -line 288 -comment {Missing some ex2_special_sel. This is ex1_special_sel[8] \
+which is stuck to 0.} 
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/gen_parallel_slices[0]/active_format/i_fmt_slice} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_fmt_slice.sv \
+-code b -line 279 -comment {No vector floating point.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/gen_parallel_slices[0]/active_format/i_fmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_noncomp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_noncomp.sv \
+-code s -line 193 -comment {we never have is_boxed=0. TOP level parameter EnableNanBox \
+is always 1. }  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[2]/i_opgroup_block/gen_parallel_slices[0]/active_format/i_fmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_noncomp} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_noncomp.sv \
+-code b -line 193 -comment {we never have is_boxed=0. TOP level parameter EnableNanBox \
+is always 1. }  -nosubscopes

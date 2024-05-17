@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="../../img/openhw-landscape.svg">
+    <title>CV32E40P v2 Coverage Reports</title>
+    <h1>Documentation for RTL Code Coverage, Functional Coverage, Waiver Reports</h1>
+    <p>Below are links for CV32E40P v2 RTL Code Coverage and Functional Coverage reports.</p>
+    <p>And because waivers are specific to configurations, thus waiver reports are also presented per configuration respectively.</p>
+</head>
+
+<br><br>
+
+<!-- <body style="background-color:powderblue;"> -->
+    <h3>Quick links to individual reports</h3>
+    <h4>CV32E40P v2 RTL Code Coverage Reports</h4>
+    <ul>
+    <li>CFG_P</li>
+        <ul><li><a href="Code_coverage/CFG_P/htmlcovreport/index.html">CFG_P Code Coverage</a></li></ul>
+        <ul><li><a href="Code_coverage/CFG_P/waivers/CFG_P_code_cov_waivers_report.txt">CFG_P Code Coverage Waivers Report</a></li></ul>
+    <br><br>
+    <li>CFG_P_F0</li>
+        <ul><li><a href="Code_coverage/CFG_P_F0/htmlcovreport/index.html">CFG_P_F0 Code Coverage</a></li></ul>
+        <ul><li><a href="Code_coverage/CFG_P_F0/waivers/CFG_P_F0_code_cov_waivers_report.txt">CFG_P_F0 Code Coverage Waivers Report</a></li></ul>
+    <br><br>
+    <table border="1">
+      <tr> 
+        <th></th>
+        <th>Statement Coverage</th>
+        <th>Branch Coverage</th>
+        <th>Condition Coverage</th>
+      </tr>
+      <tr>
+        <th>CFG_P</th>
+        <td>99.80%</td>
+        <td>99.48%</td>
+        <td>98.73%</td>
+      </tr>
+      <tr> 
+        <th>CFG_P_F0</th>
+        <td>99.87%</td>
+        <td>99.51%</td>
+        <td>98.48%</td>
+      </tr>
+    </table>
+    </ul>
+
+    <br><br>
+
+    <h4>CV32E40P v2 Functional Coverage Reports</h4>
+    <ul>
+    <li>CFG_P_F0: Coverage result is the merged of all 7 configurations, using F0 as master</li>
+        <ul><li><a href="Function_coverage/CFG_P_F0/htmlcovreport/index.html">CFG_P_F0 Function Coverage</a></li></ul>
+        <ul><li><a href="Function_coverage/CFG_P_F0/waivers/CFG_P_F0_func_cov_waivers_report.txt">CFG_P_F0 Function Coverage Waivers Report</a></li></ul>
+    <br><br>
+    <li>CFG_P_Z0 (here it is zfinx covergroup that is of interest): Coverage result is the merged of Z0/Z1/Z2 configurations, using Z0 as master</li>
+        <ul><li><a href="Function_coverage/CFG_P_Z0/htmlcovreport/index.html">CFG_P_Z0 Function Coverage</a></li></ul>
+        <ul><li>no waiver</li></ul>
+    <br><br>
+    <li> Other results are presented also in the table below for reference only: FPU covergroup in CFG_P_F1/F2, Zfinx covergroup in CFG_P_Z1/Z2.</p>
+    <table border="1">
+      <tr> 
+        <th></th>
+        <th>FPU Covergroups</th>
+        <th>HWLOOP Covergroups</th>
+        <th>Debug Covergroups</th>
+        <th>Interrupt Covergroups</th>
+        <th>OBI Covergroups</th>
+        <th>RISCV ISA Covergroups</th>
+        <th>Assertion</th>
+        <th>Directive</th>
+        <th>Zfinx Covergroups</th>
+      </tr>
+      <tr> 
+        <th>CFG_P_F0</th>
+        <td><span style="background: green">100%</span></td>
+        <td><span style="background: green">100%</span></td>
+        <td><span style="background: green">100%</span></td>
+        <td><span style="background: green">100%</span></td>
+        <td><span style="background: green">100%</span></td>
+        <td>94.93%</td>
+        <td><span style="background: green">100%</span></td>
+        <td><span style="background: green">100%</span></td>
+        <td></td>
+      </tr>
+      <tr> 
+        <th>CFG_P_Z0</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>99.99%</td>
+      </tr>
+      <tr> 
+        <th>CFG_P_F1</th>
+        <td>99.74%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr> 
+        <th>CFG_P_F2</th>
+        <td>99.70%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr> 
+        <th>CFG_P_Z1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>99.91%</td>
+      </tr>
+      <tr> 
+        <th>CFG_P_Z2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>99.89%</td>
+      </tr>
+    </table>
+    </ul>
+
+
+</body>
+
+</html>

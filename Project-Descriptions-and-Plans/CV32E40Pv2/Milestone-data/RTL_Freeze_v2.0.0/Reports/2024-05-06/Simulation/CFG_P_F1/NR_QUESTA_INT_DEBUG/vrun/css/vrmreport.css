@@ -1,0 +1,220 @@
+
+/*
+ * Base colors (id's are assigned to 'body' tag)
+ */
+
+#ucdb2html_index {
+	color:            black;
+	background-color: white;
+}
+
+#ucdb2html_summary {
+	color:            black;
+	background-color: white;
+}
+
+#ucdb2html_detail {
+	color:            black;
+	background-color: white;
+}
+
+/*
+ * Common styles (summary and detail pages)
+ *
+ * To override a style for just one of the page types:
+ *   ucdb2html_index    Top-level index and title pages
+ *   ucdb2html_summary  Scope/testplan summary pages
+ *   ucdb2html_detail   Coverage detail pages
+ * add the page id designator to the style statement.
+ *
+ * Example:
+ *
+ *   To change the background of "yellow" coverage percent
+ *   cells, add the following style to the stylesheet:
+ *
+ *     #ucdb2html_detail td.bgGreen {
+ *       color:            white;
+ *       background-color: silver;
+ *       font-weight:      bold;
+ *     }
+ */
+
+table, th, td {
+	border-width:     1px;
+	border-style:     solid;
+}
+
+th {
+	font-weight:      bold;
+}
+
+th.odd {
+	background-color: #80CCCC;
+}
+
+th.even {
+	background-color: #90CCCC;
+}
+
+td.invisible {
+	border-width:     0;
+}
+
+td.odd, td.odd_r {
+	color:            black;
+	background-color: #EEEEEE;
+}
+
+td.even, td.even_r {
+	color:            black;
+	background-color: #FAFAFA;
+}
+
+td.bgOdd, td.bgOdd_r, td.bgEven, td.bgEven_r {
+	text-align:       center;
+	font-weight:      bold;
+}
+
+td.odd_r, td.even_r, td.bgOdd_r, td.bgEven_r {
+	text-align:       right;
+	font-weight:      bold;
+}
+
+td.red {
+	color:            red;
+	text-align:       center;
+	font-weight:      bold;
+}
+
+td.green {
+	color:            green;
+	text-align:       center;
+	font-weight:      bold;
+}
+
+td.bgRed, td.bgRed_r {
+	color:            white;
+	background-color: red;
+	font-weight:      bold;
+}
+
+td.bgYellow, td.bgYellow_r {
+	color:            black;
+	background-color: yellow;
+	font-weight:      bold;
+}
+
+td.bgGreen, td.bgGreen_r {
+	color:            white;
+	background-color: green;
+	font-weight:      bold;
+}
+
+td.bgRed, td.bgYellow, td.bgGreen {
+	text-align:       center;
+}
+
+td.bgRed_r, td.bgYellow_r, td.bgGreen_r {
+	text-align:       right;
+}
+
+/*
+ * Coverage detail source listings (based on hdl2html)
+ */
+
+table.src {
+	table-layout:     fixed;
+	border-width:     0;
+}
+
+td.srcLine {
+	border-width:     0;
+	width:            5%;
+	padding-right:    10px;
+	color:            red;
+	text-align:       right;
+	font-family:      monospace;
+}
+
+td.srcStat {
+	border-width:     0;
+	width:            5%;
+	padding-right:    10px;
+	text-align:       right;
+	font-family:      monospace;
+}
+
+td.srcNorm {
+	border-width:     0;
+	font-family:      monospace;
+}
+
+td.srcRed {
+	border-width:     0;
+	background-color: red;
+	font-family:      monospace;
+}
+
+td.srcYellow {
+	border-width:     0;
+	background-color: yellow;
+	font-family:      monospace;
+}
+
+td.srcGreen {
+	border-width:     0;
+	background-color: green;
+	font-family:      monospace;
+}
+
+/*
+ * Hovering tooltips (for toggle detail page)
+ */
+
+a:hover {
+	position:         relative;
+}
+
+a span {
+	display:          none;
+}
+
+a:hover span {
+	display:          block;
+	position:         absolute;
+	top:              10px;
+	left:             0;
+	padding:          5px;
+	margin:           10px;
+	z-index:          100;
+	background:       #f0f0f0;
+	border:           1px dotted #c0c0c0;
+	opacity:          0.9;
+}
+
+/*
+ * Buttons to show/hide detailed coverage items
+ */
+
+table.buttons {
+	border-style:     none;
+	background-color: white;
+}
+
+td.button_on,
+td.button_off {
+	border-style:     outset;
+	font-weight:      bold;
+	text-align:       center;
+}
+
+td.button_on {
+	color:            white;
+	background-color: blue;
+}
+
+td.button_off {
+	color:            #a9a9a9;
+	background-color: #696969;
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title> </title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  JavaScript Libs -->
+    <!-- <script type="text/javascript" src="vendor/es5-shim-v4.5.9/es5-shim.min.js"></script> -->
+    <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="global.js"></script>
+
+    <script type="text/javascript" src="scripts/shared/utils.js"></script>
+
+    <script type="text/javascript" src="scripts/index.js"></script>
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<frameset cols="20%,80%" rows="100%">
+    <frame id="menuFrame" name="menu" src="menu.html"
+    scrolling="auto" marginwidth="1" marginheight="1"/>
+    <frame id="mainFrame" name="main" src="covSummary.html" scrolling="auto"/>
+    <noframes>
+        <body onload="setTimeout('redirect()', 5000);">
+            <h1>Your browser does not support frames!</h1>
+            <p>
+            This report works best when viewed in a browser which supports frames. If you have any questions, please
+            contact Mentor Customer Support.</p>
+        </body>
+    </noframes>
+</frameset>
+</html>

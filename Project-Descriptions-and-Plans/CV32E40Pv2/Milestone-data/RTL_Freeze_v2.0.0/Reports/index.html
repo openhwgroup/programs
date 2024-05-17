@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="img/openhw-landscape.svg">
+    <title>CORE-V-VERIF Documentation Home</title>
+    <h1>Documentation for CORE-V verification</h1>
+    <p>The place to start is the <a href="https://docs.openhwgroup.org/projects/core-v-verif/en/latest/quick_start.html">CORE-V Verification Strategy</a>.</p>
+    <p>Documentation for the various CORE-V cores are maintained in <a href="https://github.com/openhwgroup/core-v-docs">core-v-docs</a>, the OpenHW Group's CORE-V documentation repo.</p>
+    <p></p>
+    <p>As much as is practical, we try to add documentation where you actually use it.  Most directories in this repository will have a <b>README.md</b> and GitHub
+    will automatically render it into something readable.  So, if you want to "dive right in", start with the README at the top of this repo and go from there.
+    If that does not answer you question(s), please do raise an issue.</p>
+</head>
+
+<br><br>
+
+<!-- <body style="background-color:powderblue;"> -->
+    <h2>CV32E40P v2 database</h2>
+    <p>Database for the cv32e40p_v2.0.0 release.</p>
+    <ul>
+    <li>RTL git repository: <a href="https://github.com/openhwgroup/cv32e40p">cv32e40p</a> <mark> TODO: provide v2 TAG link instead. </mark></li>
+    <li>Verification git repository: <a href="https://github.com/openhwgroup/core-v-verif/tree/cv32e40p/release">core-v-verif</a> <mark> TODO: provide v2 TAG link instead. </mark></li>
+    <li>Embecosm Toolchain: <a href="https://www.embecosm.com/resources/tool-chain-downloads/#corev">CORE-V top-of-tree compilers for CentOS 7 (corev-openhw-gcc-centos7-20240407)</a></li>
+    <li>Imperas DV / Reference Model: eng.20240501.0</li>
+    </ul>
+
+    <br><br>
+
+    <h2>CV32E40P v2 RISCOF Reports</h2>
+    <ul>
+    <li>CFG_P: <a href="2024-05-06/RISCOF/CFG_P/report.html">CFG_P RISC Report</a></li>
+    <li>CFG_P_F0: <a href="2024-05-06/RISCOF/CFG_P_F0/report.html">CFG_P_F0 RISC Report</a></li>
+    <li>CFG_P_F1: <a href="2024-05-06/RISCOF/CFG_P_F1/report.html">CFG_P_F1 RISC Report</a></li>
+    <li>CFG_P_F2: <a href="2024-05-06/RISCOF/CFG_P_F2/report.html">CFG_P_F2 RISC Report</a></li>
+    </ul>
+
+    <br><br>
+
+    <h2>CV32E40P v2 Verifiction Plan(s) (aka Test Plans)</h2>
+    <p>DVPlans could be found in core-v-verif git repositories <a href="https://github.com/openhwgroup/core-v-verif/tree/72660aea6c528c986886e90692317bb0849373d9/cv32e40p/docs/VerifPlans/Simulation">VerifPlans</a></p>
+
+    <br><br>
+
+    <h2>CV32E40P v2 Simulation Results</h2>
+    <p>Results for the cv32e40p_v2.0.0 release.</p>
+    <ul>
+    <li>1. This is the result presented at Cores Task Group meeting on 2024-05-06: <a href="2024-05-06">cv32e40p_v1.8.1</a></li>
+        <ul><li>Jump to RTL Code Coverage & Functional Coverage results <a href="2024-05-06/Coverage/index.html">here</a></li></ul>
+        <ul><li>Jump to Simulation regression results <a href="2024-05-06/Simulation/index.html">here</a></li></ul>
+        <ul><li>Jump to riscvISACOV results <a href="2024-05-06/riscvISACOV/htmlcovreport/index.html">here</a></li></ul>
+        <ul><li>Jump to Formal (OneSpin) results <a href="2024-05-06/Formal/index.html">here</a></li></ul>
+    </ul>
+    <ul>
+    <li>2. Final RTL freeze: <a href="cv32e40p_v2.0.0">cv32e40p_v2.0.0</a></li>
+    <p><mark>TODO</mark></p>
+    </ul>
+
+    <br><br>
+
+    <h2>Declarations</h2>
+    <p>1) Full test suites and verifications are executed on 7 configurations listed below. </p>
+    <ul>
+        <p> XPULP instruction are xcvhwlp_xcvmem_xcvmac_xcvbi_xcvalu_xcvsimd_xcvbitmanip </p>
+        <li>CFG_P   : supports RV32IMCZicsr_Zifencei + XPULP </li>
+        <li>CFG_P_F0: supports RV32IMFCZicsr_Zifencei + XPULP </li>
+        <li>CFG_P_F1: supports RV32IMFCZicsr_Zifencei + XPULP </li>
+        <li>CFG_P_F2: supports RV32IMFCZicsr_Zifencei + XPULP </li>
+        <li>CFG_P_Z0: supports RV32IMC_Zfinx_Zicsr_Zifencei_XPULP </li>
+        <li>CFG_P_Z1: supports RV32IMC_Zfinx_Zicsr_Zifencei_XPULP </li>
+        <li>CFG_P_Z2: supports RV32IMC_Zfinx_Zicsr_Zifencei_XPULP </li>
+    </ul>
+    <p>2) COREV_CLUSTER configuration is not verified. </p>
+    <p>3) ci_check are run and all v1 legacy tests are run also in v2 regression. They were enhanced to be v1 and v2 compliant tests.</p>
+    <p>4) All the waivers applied are documented in this excel. <mark> Link: TODO </mark> </p>
+    <p>5) Uncovered RTL Code Coverage are analyzed and documented in this excel (core-v-verif issues filed). <mark> Link: TODO </mark> </p>
+    <p>6) Known regression failures are analyzed and documented in this excel (core-v-verif issues filed). <mark> Link: TODO </mark> </p>
+
+</body>
+
+</html>
