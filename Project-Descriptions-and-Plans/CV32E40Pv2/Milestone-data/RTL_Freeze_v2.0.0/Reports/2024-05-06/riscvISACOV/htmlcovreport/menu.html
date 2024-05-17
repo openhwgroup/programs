@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title> </title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  JavaScript Libs -->
+    <!-- <script type="text/javascript" src="vendor/es5-shim-v4.5.9/es5-shim.min.js"></script> -->
+    <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/ag-grid/ag-grid.min.noStyle.js"></script>
+    <script type="text/javascript" src="vendor/jstree/jstree.min.js"></script>
+
+    <script type="text/javascript" src="global.js"></script>
+
+    <script type="text/javascript" src="scripts/shared/routing.js"></script>
+    <script type="text/javascript" src="scripts/shared/utils.js"></script>
+
+    <script type="text/javascript" src="scripts/menu.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/ag-grid/styles/ag-grid.css">
+    <link rel="stylesheet" type="text/css" href="css/ag-grid-theme.css">
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/jstree/themes/default/style.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body style="background: white;">
+
+    <div class="card card-tabs">
+        <ul class="nav nav-tabs nav-justified" role="tablist" id="menu-tabs">
+            <li role="presentation" id="instancesTab">
+                <button id="instances-tab" onclick="viewTab('#instances')"  role="tab" aria-controls="instances" data-toggle="tab">
+                    <i class="fa fa-sitemap" aria-hidden="true"></i>
+                    <span class="menu-title-text">Instances</span>
+                </button>
+            </li>
+            <li role="presentation" id="designUnitsTab" >
+                <button id="design-units-tab" onclick="viewTab('#design-units')" role="tab" aria-controls="design-units" data-toggle="tab">
+                    <i class="fa fa-th" aria-hidden="true"></i>
+                    <span class="menu-title-text">Design Units</span>
+                </button>
+            </li>
+
+        </ul>
+        <div class="tab-content">
+            <div id="instances" role="tabpanel" class="tab-pane ">
+                <div class="menu-container">
+                        <div class="menu-toolbar pull-right btn-group grid-group-btn" style="margin-right: 0px;margin-top: 9px;">
+                                <button id="collapseTree" type="button" title="Collapse All" class="btn btn-questa btn-default dropdown-toggle">
+                                    <img src="icons/collapse-all.png" alt="Collapse All" height="14" width="14">
+                                </button>
+                            </div>
+                            <div class="menu-toolbar pull-right btn-group grid-group-btn" style="margin-right: 10px;margin-top: 9px;">
+                                    <i id= "menuspin" class="fa fa-spinner fa-spin" style="position: absolute;margin-left: 22px;display: none;font-size: 15px;color: #2b6da5 !important;z-index: 30;"></i>
+                                <button id="expandTree" type="button" title="Expand All" class="btn btn-questa btn-default dropdown-toggle">
+                                    <img src="icons/expand-all.png" alt="Expand All" height="14" width="14">
+                                </button>
+                            </div>
+                    <button type="button" id="instances-menu-search-btn" class="btn btn-primary pull-right menu-filter disabled" disabled onclick="filterMenu()" style="margin-right: 10px;">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                    <div style="overflow: hidden; padding-right: .5em;">
+                        <input type="search" id="instances-menu-search" value="" class="input menu-input" style="width: 100%;" placeholder="Search..." onsearch="filterMenu()" oninput="enableSearchBtn(this.id)">
+                        <!-- <button class="close-icon" onclick="clearInput('instances-menu-search')"></button> -->
+                    </div>
+                    <div id="instances-menu"> </div>
+                </div>
+            </div>
+            <div id="design-units" role="tabpanel" class="tab-pane">
+                <div class="menu-container">
+                    <button type="button" id="design-units-menu-search-btn" class="btn btn-primary pull-right menu-filter disabled" disabled onclick="filterMenu()">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                    <div style="overflow: hidden; padding-right: .5em;">
+                        <input type="search" id="design-units-menu-search" value="" class="input menu-input" style="width: 100%;" placeholder="Search..." onsearch="filterMenu()" oninput="enableSearchBtn(this.id)">
+                    </div>
+                    <div id="design-units-menu"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
