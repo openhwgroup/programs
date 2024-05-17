@@ -8,5 +8,7 @@ The directories and files below this point store the completed checklists, repor
     |- CV32E40Pv2_uncovered_coverage_explanation.xls\
     |- CV32E40Pv2_waiver_list.xls\
     |- Reports : RTL Code Coverage, Functional coverage, Formal, RISCOF and Simulation Regression reports in support of RTL Freeze.\
+    <ul>
         |- index.html : start from this file. It presents all quick links to directly jump to information.\
         |- 2024-05-06 : contains the reports for RTL tag cv32e40p_v1.8.1\
+    </ul>
