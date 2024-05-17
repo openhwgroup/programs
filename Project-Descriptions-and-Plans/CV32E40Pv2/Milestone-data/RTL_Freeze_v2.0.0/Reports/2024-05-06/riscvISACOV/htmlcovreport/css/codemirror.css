@@ -1,0 +1,106 @@
+.cm-s-questa.CodeMirror { background: #ffffff; color: #d6d5d4; font-size: 15px;}
+.cm-s-questa div.CodeMirror-selected { background: #3a3432; }
+.cm-s-questa .CodeMirror-line::selection, .cm-s-questa .CodeMirror-line > span::selection, .cm-s-questa .CodeMirror-line > span > span::selection { background: rgba(58, 52, 50, .99); }
+.cm-s-questa .CodeMirror-line::-moz-selection, .cm-s-questa .CodeMirror-line > span::-moz-selection, .cm-s-questa .CodeMirror-line > span > span::-moz-selection { background: rgba(58, 52, 50, .99); }
+.cm-s-questa .CodeMirror-gutters { background: transparent;; border-right: 0px; }
+.cm-s-questa .CodeMirror-guttermarker { color: #db2d20; }
+.cm-s-questa .CodeMirror-guttermarker-subtle { color: #5c5855; }
+.cm-s-questa .CodeMirror-linenumber { color: black; }
+.cm-s-questa .CodeMirror-linenumbers { background:rgb(223, 223, 223); }
+
+.cm-s-questa .CodeMirror-cursor { border-left: 1px solid #807d7c; }
+
+.cm-s-questa span.cm-comment { color: #cdab53; }
+.cm-s-questa span.cm-atom { color: #a16a94; }
+.cm-s-questa span.cm-number { color: #a16a94; }
+
+.cm-s-questa span.cm-property, .cm-s-questa span.cm-attribute { color: #01a252; }
+.cm-s-questa span.cm-keyword { color: #db2d20; }
+.cm-s-questa span.cm-string { color: #fded02; }
+
+.cm-s-questa span.cm-variable { color: #01a252; }
+.cm-s-questa span.cm-variable-2 { color: #01a0e4; }
+.cm-s-questa span.cm-def { color: #e8bbd0; }
+.cm-s-questa span.cm-bracket { color: #d6d5d4; }
+.cm-s-questa span.cm-tag { color: #db2d20; }
+.cm-s-questa span.cm-link { color: #a16a94; }
+.cm-s-questa span.cm-error { background: #db2d20; color: #807d7c; }
+
+.cm-s-questa .CodeMirror-matchingbracket { text-decoration: underline; color: white !important; }
+
+.cm-s-questa .CodeMirror-line:hover { background: rgb(193, 155, 155) !important; }
+.cm-s-questa .CodeMirror-activeline-gutter { color: black !important; background: rgb(193, 155, 155) !important; }
+.cm-s-questa .CodeMirror-activeline-background { background: rgb(193, 155, 155) !important; }
+
+.CodeMirror-activeline-background { background: #abcef8 !important;  }
+/* .CodeMirror-activeline-gutter { background: #abcef8 !important; } */
+.CodeMirror-line:hover { background: rgba(170, 207, 248, 0.19) !important;  }
+
+.CodeMirror {
+    border: 1px solid #eee;
+    height: auto;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.CodeMirror-search-match {
+    background: gold;
+    border-top: 1px solid orange;
+    border-bottom: 1px solid orange;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: .5;
+}
+
+.CodeMirror-dialog {
+    position: absolute;
+    left: 0; right: 0;
+    background: inherit;
+    z-index: 15;
+    padding: .1em .8em;
+    overflow: hidden;
+    color: inherit;
+}
+
+.CodeMirror-dialog-top {
+    border-bottom: 1px solid #eee;
+    top: 0;
+}
+
+.CodeMirror-dialog-bottom {
+    border-top: 1px solid #eee;
+    bottom: 0;
+}
+
+.CodeMirror-dialog input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 20em;
+    color: inherit;
+    font-family: monospace;
+}
+
+.CodeMirror-dialog button {
+    font-size: 70%;
+}
+
+.CodeMirror-foldmarker {
+    color: blue;
+    text-shadow: #b9f 1px 1px 2px, #b9f -1px -1px 2px, #b9f 1px -1px 2px, #b9f -1px 1px 2px;
+    font-family: arial;
+    line-height: .3;
+    cursor: pointer;
+}
+.CodeMirror-foldgutter {
+    width: .7em;
+}
+.CodeMirror-foldgutter-open, .CodeMirror-foldgutter-folded {
+    cursor: pointer;
+}
+.CodeMirror-foldgutter-open:after {
+    content: "\25BE";
+}
+.CodeMirror-foldgutter-folded:after {
+    content: "\25B8";
+}
