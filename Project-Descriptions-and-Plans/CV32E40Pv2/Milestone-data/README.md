@@ -6,6 +6,7 @@ The OpenHW Group asserts that the documentation, implementation and verification
 The directories and files below this point store the completed checklists, reports (and waivers) in support of this claim.
 
 **RTL_Freeze_v2.0.0** :
+- RTL_Freeze_v2.0.0_summary.md : short summary table for the RTL Freeze results
 - OpenHWGroup_TRL5_for_COREV_RTL_Cheklist-CV32E40P.xls: checklists for the v2.0.0 tag of CV32E40P.
 - CV32E40Pv2_regression_known_failure.xls
 - CV32E40Pv2_uncovered_coverage_explanation.xls
