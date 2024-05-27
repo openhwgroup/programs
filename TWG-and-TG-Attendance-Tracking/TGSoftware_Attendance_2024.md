@@ -30,13 +30,13 @@ odd-numbered months.
 | CMC Microsystems           | Hugh Pollitt-Smith    |        |        |        |        |        |        |        |
 | CMC Microsystems           | Olive Zhao            |        |        |        |        |        |        |        |
 | Codeplay                   | Michael Wong          |        |        |        |        |        |        |        |
-| Dolphin Design             | Pascal Gouedo         |        |      Y |        |        |        |        |        |
-| Embecosm                   | Jeremy Bennett        |        |      Y |        |        |        |        |        |
+| Dolphin Design             | Pascal Gouedo         |        |      Y |      Y |        |        |        |        |
+| Embecosm                   | Jeremy Bennett        |        |      Y |      Y |        |        |        |        |
 | Embecosm                   | Mary Bennett          |        |        |        |        |        |        |        |
 | Embecosm                   | Hélène Chelin         |        |        |        |        |        |        |        |
 | Embecosm                   | Nandni Jamnadas       |        |        |        |        |        |        |        |
 | Embecosm                   | Charlie Keaney        |        |        |        |        |        |        |        |
-| Embecosm                   | Paolo Savini          |        |      Y |        |        |        |        |        |
+| Embecosm                   | Paolo Savini          |        |      Y |      Y |        |        |        |        |
 | Embecosm                   | Shane Slattery        |        |        |        |        |        |        |        |
 | Embecosm                   | Shteryana Shopova     |        |        |        |        |        |        |        |
 | EMUS                       | John Martin           |        |        |        |        |        |        |        |
@@ -82,9 +82,9 @@ odd-numbered months.
 
 | Company                |  Person               |24.01.08|24.03.11|24.05.13|24.07.08|24.09.09|24.11.24|24.MM.DD|
 |------------------------|-----------------------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-| OpenHW                 | Duncan Bees           |        |      Y |        |        |        |        |        |
+| OpenHW                 | Duncan Bees           |        |      Y |      Y |        |        |        |        |
 | OpenHW                 | Rick O'Connor         |        |        |        |        |        |        |        |
 | OpenHW                 | Davide Schiavone      |        |        |        |        |        |        |        |
-| OpenHW                 | Mike Thompson         |        |      Y |        |        |        |        |        |
+| OpenHW                 | Mike Thompson         |        |      Y |      Y |        |        |        |        |
 | OpenHW                 | Florian Zaruba        |        |        |        |        |        |        |        |
-| OpenHW                 | Flo Wohlrab           |        |      Y |        |        |        |        |        |
+| OpenHW                 | Flo Wohlrab           |        |      Y |      Y |        |        |        |        |
