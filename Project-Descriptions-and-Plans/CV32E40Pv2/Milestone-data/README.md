@@ -7,10 +7,11 @@ The directories and files below this point store the completed checklists, repor
 
 **RTL_Freeze_v2.0.0** :
 - README.md : overview summary tables for RTL Freeze results
-- OpenHWGroup_TRL5_for_COREV_RTL_Cheklist-CV32E40P.xls: checklists for the v2.0.0 tag of CV32E40P.
-- CV32E40Pv2_regression_known_failure.xls
-- CV32E40Pv2_uncovered_coverage_explanation.xls
-- CV32E40Pv2_waiver_list.xls
+- OpenHWGroup_TRL5_for_COREV_RTL_Cheklist-CV32E40P.xls : checklists for the v2.0.0 tag of CV32E40P.
+- CV32E40Pv2_Design_Issue_Summary.xls : summary for total RTL bugs found and resolved.
+- CV32E40Pv2_regression_known_failure.xls : summary for known regression failure (due to tools/set-up limitation).
+- CV32E40Pv2_uncovered_coverage_explanation.xls : summary for any remaining coverage holes.
+- CV32E40Pv2_waiver_list.xls : summary for the waivers applied to RTL Code Coverage and/or Functional Coverage.
 - Reports : RTL Code Coverage, Functional coverage, Formal, RISCOF and Simulation Regression reports in support of RTL Freeze.
   - index.html : start from this file. It presents all quick links to directly jump to information.
   - 2024-05-06 : contains the reports for RTL tag cv32e40p_v1.8.1

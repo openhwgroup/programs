@@ -35,7 +35,7 @@ Seeking help from Openhwgroup community*
 | Configurations               | Statement | Branch | Condition | 
 -------------------------------|-----------|--------|-----------|
 PULP Configuration             | 99.8%     | 99.5%  | 98.7%     | 
-PULP_FPU_0CYCLAT configuration | 99.9%     | 99.5%  | 98.5%     |
+PULP_FPU_0CYCLAT configuration | 99.9%     | 99.7%  | 99.0%     |
 
 ### Functional Coverage
 (1) **Combined from all 7 configurations** using PULP_FPU_0CYCLAT as master  
