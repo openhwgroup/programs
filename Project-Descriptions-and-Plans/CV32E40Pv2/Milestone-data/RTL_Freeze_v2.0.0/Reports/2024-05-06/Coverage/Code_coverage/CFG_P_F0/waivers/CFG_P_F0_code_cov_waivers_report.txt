@@ -292,8 +292,16 @@ coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40
 -code c -line 460 -comment {We dont support OBI error.}  -nosubscopes
 coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu \
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_ex_stage.sv \
+-item 1 -fcr 387 17 -comment {one specific condition (Row17) is unreachable. Proven \
+with Formal.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_ex_stage.sv \
 -item 1 -fcr 387 22 -comment {unreachable in FPU config. It only could be hit with \
 Z config for apu_read_dep_for_jalr.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/gen_apu \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_ex_stage.sv \
+-item 1 -fcr 396 15 -comment {one specific condition (Row15) is unreachable. Proven \
+with Formal.}  -nosubscopes
 coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/ex_stage_i/alu_i \
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_alu.sv \
 -code b -line 549 -comment {Default part of uniqu_case for vector mode never reached.} \
@@ -399,6 +407,37 @@ coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e4
 on format.}  -nosubscopes
 coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/conv_target} \
 -code b
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-code b -line 131 -comment {We never have dst_fmt_is_int for this op group. This \
+is the DIVSQRT opGroup and dst_fmt_is_int can only be asserted for the CONV opGroup.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-code b -line 503 -comment {We never have result_fmt_is_int for this op group. This \
+is the DIVSQRT opGroup and result_fmt_is_int can only be asserted for the CONV opGroup.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-code s -line 195 -comment {Statement hidden by previous line.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-code b -line 194 -comment {This is use to manage all operands. In the DIVSQRT op \
+group we have only 2 operands.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[1]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-item 1 -fcr 194 2 -comment {This is use to manage all operands. In the DIVSQRT \
+op group we have only 2 operands.}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/gen_merged_slice/i_multifmt_slice} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-code b -line 131 -comment {We never have dst_fmt_is_int for this op group. This \
+is the ADMUL opGroup and dst_fmt_is_int can only be asserted for the CONV opGroup.} \
+ -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/gen_merged_slice/i_multifmt_slice} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_opgroup_multifmt_slice.sv \
+-code b -line 503 -comment {We never have result_fmt_is_int for this op group. This \
+is the ADMUL opGroup and result_fmt_is_int can only be asserted for the CONV opGroup.} \
+ -nosubscopes
 coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/i_arbiter/gen_arbiter/gen_int_rr/gen_fair_arb/i_lzc_upper/gen_lzc/g_levels[2]/g_last_level/g_level[1]/g_reduce} \
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_common_cells/src/lzc.sv \
 -code b -line 82 -comment {this part of leading zero counter is not used.} 
@@ -504,6 +543,9 @@ coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e4
 coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_cast_multi/i_fpnew_rounding} \
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_rounding.sv \
 -code b -line 59 -comment {Round towards odd does not exist in RISCV}  -nosubscopes
+coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[3]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_cast_multi/i_fpnew_rounding} \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_rounding.sv \
+-code b -line 73 -comment {effective_substraction_i is stuck at 0.}  -nosubscopes
 coverage exclude -scope {/uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/fpu_gen/fp_wrapper_i/i_fpnew_bulk/gen_operation_groups[0]/i_opgroup_block/gen_merged_slice/i_multifmt_slice/gen_num_lanes[0]/active_lane/lane_instance/i_fpnew_fma_multi/i_fpnew_rounding} \
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P_F0/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/vendor/pulp_platform_fpnew/src/fpnew_rounding.sv \
 -code s -line 59 -comment {Round towards odd does not exist in RISCV}  -nosubscopes
