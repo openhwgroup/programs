@@ -1,32 +1,25 @@
-#Summary#
+# Summary
 - CV32E20
 - Date of report (2024-06-03)
 - Prepared by Duncan Bees
 
-
-#Activities and progress since last report#
+## Activities and progress since last report
 
 - PA was ratified and merged in to https://github.com/openhwgroup/programs/blob/master/Project-Descriptions-and-Plans/CVE20/CVE20-PA-2024.md
+- Work proceeds driven mainly by Mario
+- Interrupts and debug working in the Spike reference model
+- Weekly meetings on Thursday 11:00 Eastern time
 
-  - Work proceeds driven mainly by Mario
-  - Interrupts and debug working in the Spike reference model
-  - Weekly meetings on Thursday 11:00 Eastern time
-
-
-- Unplanned
- - n/a
-
-#Issues and Difficulties#
+## Issues and Difficulties
 - We still lack a resource for RTL tasks that have been identified in the project plan.
 
-
-#Actions #
+## Actions
 - Review previously defined tasks (prior to 2024) and ensure any outstanding task that should migrate to project board, does migrate
 - Work to find resource for RTL tasks
 
-#Timeline and statistics#
+## Timeline and statistics
 
-Refering to E20 project board Milestone 1 (MS1) due at end of June 2024:
+Refering to [E20 project board](https://github.com/orgs/openhwgroup/projects/5/views/1) Milestone 1 (MS1) due at end of June 2024:
 
 |	Task Category 					| May 5 2024	| June 3 2024	|				
 |	---								| -----------	| -----------	|
@@ -44,7 +37,7 @@ Refering to E20 project board Milestone 1 (MS1) due at end of June 2024:
  - End of MS1 scheduled for end of June 2024
  - As of latest status meeting May 31 2024, MS1 is looking "green"
 
-#Gate status & schedule#
+## Gate status & schedule#
 
 |	Gate	| Original plan	| Current plan	| Achieved  	| Link to last gate document  	|
 |	---	| ----------	| ----------	| ----------		| ----------------------		|
