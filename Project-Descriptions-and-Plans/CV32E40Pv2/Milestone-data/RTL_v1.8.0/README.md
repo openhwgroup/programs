@@ -30,12 +30,12 @@ PULP_FPU_1CYCLAT configuration | Pass   |
 PULP_FPU_2CYCLAT configuration | Pass   |
 
 ### RTL Code Coverage
-*Only left with holes in cv32e40p_controller (12 causes resulting in 24 holes).
+*Only left with holes in cv32e40p_controller (6 causes resulting in 17 holes).
 Seeking help from Openhwgroup community*
 | Configurations               | Statement | Branch | Condition | 
 -------------------------------|-----------|--------|-----------|
-PULP Configuration             | 99.8%     | 99.5%  | 98.7%     | 
-PULP_FPU_0CYCLAT configuration | 99.9%     | 99.7%  | 99.0%     |
+PULP Configuration             | 99.8%     | 99.6%  | 99.2%     | 
+PULP_FPU_0CYCLAT configuration | 99.9%     | 99.8%  | 99.4%     |
 
 ### Functional Coverage
 (1) **Combined from all 7 configurations** using PULP_FPU_0CYCLAT as master  
