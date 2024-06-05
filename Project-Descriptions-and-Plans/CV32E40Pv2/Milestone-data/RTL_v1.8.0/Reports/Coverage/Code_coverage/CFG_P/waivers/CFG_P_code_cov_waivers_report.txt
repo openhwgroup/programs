@@ -175,6 +175,12 @@ coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40
 -code b -line 613-614 -comment {No cv.elw.}  -nosubscopes
 coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 632 -item 1 -allfalse -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 642 -item 1 -allfalse -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
 -code b -line 675 -item 1 -allfalse -nosubscopes
 coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
@@ -216,6 +222,12 @@ coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40
 -code b -line 1142 -comment {Unreacheable default code.}  -nosubscopes
 coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 1187 -item 1 -allfalse -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-code b -line 1210 -item 1 -allfalse -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
 -code b -line 1230-1237 -comment {No OBI Data error. data_err_i tied to 0. }  -nosubscopes
 coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
@@ -240,6 +252,13 @@ coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
 -code c -line 1051-1072 -comment {Single-step not possible during debug mode.}  \
 -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-item 1 -fcr 1241 5 -comment {Specific condition proven as unreacheable with a specific \
+assertion using Siemens EDA QuestaFormal.}  -nosubscopes
+coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/controller_i \
+-src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_controller.sv \
+-item 1 -fcr 1241 10 -comment {No cv.elw}  -nosubscopes
 coverage exclude -scope /uvmt_cv32e40p_tb/dut_wrap/cv32e40p_tb_wrapper_i/cv32e40p_top_i/core_i/id_stage_i/int_controller_i \
 -src /shark0/processing/cv32e40p/users/processing/PRODUCTS_DIGITAL_DESIGN/PANTHER/PANTHER_1.0/CV32/NR/CFG_P/NR_QUESTA_INT_DEBUG_LONG/workdir/core-v-cores/cv32e40p/rtl/cv32e40p_int_controller.sv \
 -code s -line 114-120 -comment {All uncovered irq are unreachable. This is set by \
