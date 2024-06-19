@@ -1,0 +1,488 @@
+QuestaSim-64 vcover 2023.2_1 Coverage Utility 2023.05 May 12 2023
+Start time: 14:35:04 on Jun 19,2024
+vcover report -instance=/RISCV_coverage_pkg -cvg -hidecvginsts -details -below 100 -nocvgbin /kagao0/LocalStock/bnl/cv32/ucdb/all_cfg_merged/ww25/all_cfg_manual_merged_ww25_F0_mstr_assert_directive_cvg_only_w_exclusion.ucdb 
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /RISCV_coverage_pkg
+=== Design Unit: work.RISCV_coverage_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                    238        na        na    91.32%
+            Covergroup Bins      60445     59252      1193    98.02%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/addi_cg 
+                                                       96.96%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/auipc_cg 
+                                                       83.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/beq_cg     99.06%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/bge_cg     98.75%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/bgeu_cg 
+                                                       99.68%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/blt_cg     99.06%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/bne_cg     99.37%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/jal_cg     65.62%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/jalr_cg 
+                                                       87.84%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/lb_cg      91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/lbu_cg     88.88%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/lh_cg      91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/lhu_cg     88.88%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/lui_cg     86.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/sb_cg      91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/slt_cg     94.90%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/slti_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/sltiu_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/sltu_cg 
+                                                       95.42%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/sub_cg     99.21%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/mulh_cg 
+                                                       97.50%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/mulhsu_cg 
+                                                       99.16%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/mulhu_cg 
+                                                       99.16%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/fclass_s_cg 
+                                                       86.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/fcvt_s_w_cg 
+                                                       90.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/fcvt_s_wu_cg 
+                                                       90.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/fcvt_w_s_cg 
+                                                       98.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/fcvt_wu_s_cg 
+                                                       96.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/feq_s_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/fle_s_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/flt_s_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/fsgnj_s_cg 
+                                                       90.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/fsgnjn_s_cg 
+                                                       90.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/fsgnjx_s_cg 
+                                                       90.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/fsqrt_s_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_add_cg 
+                                                       99.47%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_addi16sp_cg 
+                                                       83.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_addi4spn_cg 
+                                                       77.77%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_beqz_cg 
+                                                       87.50%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_bnez_cg 
+                                                       87.50%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_jal_cg 
+                                                       75.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_jalr_cg 
+                                                       61.71%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_jr_cg 
+                                                       65.62%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_li_cg 
+                                                       87.50%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_lui_cg 
+                                                       98.43%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_lw_cg 
+                                                       87.50%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_lwsp_cg 
+                                                       98.43%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_mv_cg 
+                                                       99.47%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_flw_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/c_fsw_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_abs_b_cg 
+                                                       98.75%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_abs_h_cg 
+                                                       97.91%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_add_div2_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_add_div4_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_add_div8_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avg_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avg_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avg_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avg_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avg_sci_b_cg 
+                                                       92.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avg_sci_h_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avgu_b_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avgu_h_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avgu_sc_b_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avgu_sc_h_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avgu_sci_b_cg 
+                                                       85.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_avgu_sci_h_cg 
+                                                       85.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_bclr_cg 
+                                                       98.48%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_bclrr_cg 
+                                                       98.61%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_bitrev_cg 
+                                                       98.48%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_clb_cg 
+                                                       87.03%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_clip_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_clipu_cg 
+                                                       88.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_clipur_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpeq_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpeq_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpeq_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpeq_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpeq_sci_b_cg 
+                                                       92.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpeq_sci_h_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpge_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpge_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpge_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpge_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpge_sci_b_cg 
+                                                       92.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpge_sci_h_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgeu_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgeu_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgeu_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgeu_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgeu_sci_b_cg 
+                                                       87.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgeu_sci_h_cg 
+                                                       88.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgt_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgt_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgt_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgt_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgt_sci_b_cg 
+                                                       92.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgt_sci_h_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgtu_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgtu_h_cg 
+                                                       94.18%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgtu_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgtu_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgtu_sci_b_cg 
+                                                       87.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpgtu_sci_h_cg 
+                                                       88.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmple_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmple_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmple_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmple_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmple_sci_b_cg 
+                                                       92.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmple_sci_h_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpleu_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpleu_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpleu_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpleu_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpleu_sci_b_cg 
+                                                       87.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpleu_sci_h_cg 
+                                                       88.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmplt_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmplt_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmplt_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmplt_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmplt_sci_b_cg 
+                                                       92.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmplt_sci_h_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpltu_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpltu_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpltu_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpltu_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpltu_sci_b_cg 
+                                                       87.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpltu_sci_h_cg 
+                                                       88.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpne_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpne_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpne_sc_b_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpne_sc_h_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpne_sci_b_cg 
+                                                       92.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cmpne_sci_h_cg 
+                                                       93.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cnt_cg 
+                                                       87.03%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_count_cg 
+                                                       88.75%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cplxmul_i_cg 
+                                                       97.22%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cplxmul_i_div2_cg 
+                                                       98.61%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cplxmul_i_div4_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_cplxmul_i_div8_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotsp_b_cg 
+                                                       96.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotsp_sc_b_cg 
+                                                       96.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotsp_sci_b_cg 
+                                                       94.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotsp_sci_h_cg 
+                                                       96.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotup_b_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotup_sc_b_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotup_sci_b_cg 
+                                                       85.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotup_sci_h_cg 
+                                                       85.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotusp_b_cg 
+                                                       96.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotusp_sc_b_cg 
+                                                       96.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotusp_sci_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_dotusp_sci_h_cg 
+                                                       96.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_end_cg 
+                                                       83.54%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_extbs_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_extbz_cg 
+                                                       87.03%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_exths_cg 
+                                                       94.44%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_exthz_cg 
+                                                       87.03%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_extract_cg 
+                                                       98.48%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_extract_b_cg 
+                                                       90.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_extract_h_cg 
+                                                       90.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_extractr_cg 
+                                                       98.61%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_extractu_cg 
+                                                       98.48%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_extractu_b_cg 
+                                                       83.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_extractu_h_cg 
+                                                       83.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_extractur_cg 
+                                                       98.61%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_ff1_cg 
+                                                       87.03%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_fl1_cg 
+                                                       87.03%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_insert_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_insert_h_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lb_ii_cg 
+                                                       85.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lb_r_cg 
+                                                       87.23%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lb_ri_cg 
+                                                       87.50%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lbu_ii_cg 
+                                                       78.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lbu_r_cg 
+                                                       81.94%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lbu_ri_cg 
+                                                       81.68%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lh_ii_cg 
+                                                       85.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lh_r_cg 
+                                                       87.50%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lh_ri_cg 
+                                                       87.50%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lhu_ii_cg 
+                                                       78.33%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lhu_r_cg 
+                                                       81.94%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lhu_ri_cg 
+                                                       81.94%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lw_ii_cg 
+                                                       90.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lw_r_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_lw_ri_cg 
+                                                       91.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_machhsn_cg 
+                                                       96.15%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_machhun_cg 
+                                                       92.30%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_macsn_cg 
+                                                       96.15%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_macun_cg 
+                                                       92.30%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_max_sci_b_cg 
+                                                       96.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_max_sci_h_cg 
+                                                       96.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_maxu_sci_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_maxu_sci_h_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_min_sci_b_cg 
+                                                       96.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_min_sci_h_cg 
+                                                       96.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_minu_sci_b_cg 
+                                                       81.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_minu_sci_h_cg 
+                                                       81.66%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_mulhhsn_cg 
+                                                       96.15%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_mulhhsrn_cg 
+                                                       96.15%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_mulhhun_cg 
+                                                       91.02%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_mulhhurn_cg 
+                                                       94.87%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_mulsn_cg 
+                                                       96.15%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_mulsrn_cg 
+                                                       96.15%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_mulun_cg 
+                                                       91.02%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_mulurn_cg 
+                                                       94.87%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sb_ii_cg 
+                                                       82.70%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sb_r_cg 
+                                                       82.46%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sb_ri_cg 
+                                                       85.59%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sdotup_sci_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sdotup_sci_h_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_setup_cg 
+                                                       86.87%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sh_ii_cg 
+                                                       84.37%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sh_r_cg 
+                                                       80.90%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sh_ri_cg 
+                                                       84.20%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_shuffle_sci_h_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_shufflei0_sci_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_shufflei1_sci_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_shufflei2_sci_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_shufflei3_sci_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sle_cg 
+                                                       90.27%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sleu_cg 
+                                                       90.27%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sll_sci_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sll_sci_h_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sra_sci_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sra_sci_h_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_srl_sci_b_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_srl_sci_h_cg 
+                                                       95.00%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_start_cg 
+                                                       80.20%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sub_div2_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sub_div4_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sub_div8_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_subrotmj_div2_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_subrotmj_div4_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_subrotmj_div8_cg 
+                                                       95.83%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_subun_cg 
+                                                       99.75%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sw_ii_cg 
+                                                       82.70%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sw_r_cg 
+                                                       80.81%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_sw_ri_cg 
+                                                       85.59%        100          -    Uncovered            
+ TYPE /RISCV_coverage_pkg/RISCV_coverage__1/cv_elw_cg 
+                                                        0.00%        100          -    ZERO                 
+
+
+TOTAL COVERGROUP COVERAGE: 91.32%  COVERGROUP TYPES: 238
+
+Total Coverage By Instance (filtered view): 91.32%
+
+End time: 14:35:51 on Jun 19,2024, Elapsed time: 0:00:47
+Errors: 0, Warnings: 0
