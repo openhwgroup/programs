@@ -153,35 +153,35 @@ Rough schedule for planning purpose
 
  Item										| Responsible						| Target date							|      
 | --------------------    					| --------------------    			| -------------------- 					|
-| RTL Design Start	    					| 	QL			  					|		July 1							|
+| RTL Design Start	    					| 	QL			  					|	July 1 2024							|
 | RTL integration eFPGA2, FCB, and E40	    | 	QL			  					|										|
 | Simplification of TCDM if for eFPGA   	| 	QL		  						|										|
 | Pinout map to SoC   	 					| 	QL		  						|										|
 | Clocking/timing closure eFPGA /entire SoC | 	QL		  						|										|
 | RTL-level integration testing	complete   	| 	QL		  						|										|
 | RTL Synthesis	    						| (QL for V1)	  					|										|
-| Handoff of Netlist to back-end team	    | (QL did for V1)  					|	end September						|
+| Handoff of Netlist to back-end team	    | (QL did for V1)  					|	end September 2024						|
 | LEC 1	(RTL vs synthesis)					| CMC								|									|
 | Floorplanning	(FP)						| CMC								|										|
 | Initial Place and Route	(PnR)			| CMC								|										|
 | Revisit Floorplanning						| CMC								|										|
 | LEC3 (FP vs PnR)							| CMC								|										|
 | Initial Static Timing Analysis (STA)		| CMC								|										|
-| Initial Clock Tree Synthesis (CTS)		| CMC								|										|
+| Initial Clock Tree Synthesis (CTS)		| CMC								|	end October 2024									|
 | Back-annotated timing simulation			| (QL did for V1)  					|										|
 | LEC4 (PnR vs CTS)							| CMC								|										|
 | Timing-driven PnR							| CMC								|										|
 | LEC5 (CTS vs TD-PnR)						| CMC								|										|
-| EMIR										| CMC								|										|
 | LVS										| CMC								|										|
 | PEX										| CMC								|										|
 | Final STA									| CMC								|										|
 | ECO Checkpoint							| CMC								|										|
-| Preliminary GDS submission				| CMC								|										|
+| LVS with IO								| CMC								|										|					
+| Preliminary GDS submission				| CMC								|	end November 2024									|
 | DRC/DP									| CMC								|										|
 | Dummy Fill								| CMC								|										|
 | DRC/DFM									| CMC								|										|
-| Final GDS Submission						| CMC								|										|
+| Final GDS Submission						| CMC								|	mid December 2024									|
 | Receive parts from Foundry 				| 									|										|
 | Parts tested and packaged					| 									|										|
 | SDK Integration with FreeRTOS				| 									|										|
