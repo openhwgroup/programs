@@ -25,7 +25,7 @@
     <p>Database for the cv32e40p_v1.8.3 release.</p>
     <ul>
     <li>RTL git repository: <a href="https://github.com/openhwgroup/cv32e40p">cv32e40p</a> <mark> TODO: provide v1.8.3 TAG link instead. </mark></li>
-    <li>Verification git repository: <a href="https://github.com/openhwgroup/core-v-verif/tree/cv32e40p/release">core-v-verif</a> <mark> TODO: provide v1.8.3 TAG link instead. </mark></li>
+    <li>Verification git repository: <a href="https://github.com/openhwgroup/core-v-verif/tree/cv32e40p/dev">core-v-verif</a> <mark> TODO: provide v1.8.3 TAG link instead. </mark></li>
     <li>Embecosm Toolchain: <a href="https://www.embecosm.com/resources/tool-chain-downloads/#corev">corev-openhw-gcc-centos7-20240530</a></li>
     <li>Synopsys Imperas Reference Model: eng.20240530.0</li>
     </ul>
@@ -48,11 +48,10 @@
     <p>Then Simulation verification was used to verify what can't be modelized and verified using Formal, like Hardware Loops, Prefetch and Fetch pipeline stages...</p>
     <ul>
         <li>RISC-V ISA Formal Verification Plan:<br>
-            The formal verification plan (excel file) could be found <a href="https://github.com/openhwgroup/core-v-verif/tree/cv32e40p/dev/cv32e40p/docs/VerifPlans/RISC-V_ISA_Formal">here</a>.<br>
+            The formal verification plan could be found <a href="https://github.com/openhwgroup/core-v-verif/tree/cv32e40p/dev/cv32e40p/docs/VerifPlans/RISC-V_ISA_Formal/CV32E40Pv2_Formal_VerificationPlans.xlsx">here</a>.<br>
         </li>
         <li>Simulation Verification Plans:<br>
             Overall description of simulation verification plans can be found <a href="https://github.com/openhwgroup/core-v-verif/blob/cv32e40p/dev/cv32e40p/docs/VerifPlans/README.md">here</a>.<br>
-            All the DVPlans could be found in core-v-verif git repositories <a href="https://github.com/openhwgroup/core-v-verif/tree/cv32e40p/dev/cv32e40p/docs/VerifPlans/Simulation">Simulation</a>.<br>
             A file listing all the tests is available <a href="https://github.com/openhwgroup/core-v-verif/blob/cv32e40p/dev/cv32e40p/docs/VerifPlans/Simulation/CV32E40Pv2_test_list.xlsx">here</a>.
         </li>
         <br>
@@ -63,7 +62,9 @@
     <h2>CV32E40P v1.8.3 Verification Results</h2>
     <p>Results for the cv32e40p_v1.8.3 release:</p>
     <ul>
-        <li>RISC-V ISA Formal verification results are <a href="Reports/RISC-V_ISA_Formal/Property_Status-v1_8_0.xlsx">here</a>.</li>
+        <li>RISC-V ISA Formal verification results are <a href="Reports/RISC-V_ISA_Formal/Property_Status-v1_8_3.xlsx">here</a>.<br>
+            Bug reports are <a href="Reports/RISC-V_ISA_Formal/Bug_Report-v1_8_3.xlsx">here</a>.
+        </li>
         <li>Simulation regression results are <a href="Reports/Simulation/index.html">here</a>.</li>
         <li>RTL Code Coverage & Functional Coverage results are <a href="Reports/Coverage/index.html">here</a>.</li>
         <li>riscvISACOV results are available either in <a href="Reports/riscvISACOV/htmlcovreport/index.html">html</a> or in <a href="Reports/riscvISACOV/textcovreport">text</a> reports.<br>
