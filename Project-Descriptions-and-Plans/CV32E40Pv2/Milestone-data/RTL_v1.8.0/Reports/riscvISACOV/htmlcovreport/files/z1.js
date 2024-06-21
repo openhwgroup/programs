@@ -1,2 +1,0 @@
-var g_data = {"106":{"st":"inst","pa":0,"n":"/RISCV_coverage_pkg","l":"SystemVerilog","sn":50,"ln":0,"du":{"n":"work.RISCV_coverage_pkg","s":19,"b":1},"bc":[{"n":"RISCV_coverage_pkg","s":106,"z":1}],"loc":{"cp":94.93,"data":{"gb":[60445,59043,0,1],"cvpc":[4525,0,1],"g":[420,94.93,0,1]}}},"19":{"st":"du","pa":0,"n":"work.RISCV_coverage_pkg","l":"SystemVerilog","sn":50,"ln":10,"one_inst":106,"loc":{"cp":94.93,"data":{"gb":[60445,59043,0,1],"cvpc":[4525,0,1],"g":[420,94.93,0,1]}}}};
-processSummaryData(g_data);

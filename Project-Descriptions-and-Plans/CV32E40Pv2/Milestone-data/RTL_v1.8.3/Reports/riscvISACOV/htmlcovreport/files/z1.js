@@ -1,0 +1,2 @@
+var g_data = {"249":{"st":"inst","pa":0,"n":"/RISCV_coverage_pkg","l":"SystemVerilog","sn":51,"du":{"n":"work.RISCV_coverage_pkg"},"bc":[{"n":"RISCV_coverage_pkg","s":249,"z":1}],"loc":{"cp":95.08,"data":{"gb":[60445,59252,1],"cvpc":[4525,1],"g":[420,95.08,1]}}}};
+processSummaryData(g_data);
