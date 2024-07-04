@@ -17,7 +17,7 @@ cv32e40pv2_fpu_instr        | NA   | NA   | 1504 | 0    | 1504 | 0            | 
 cv32e40pv2_interrupt_debug	| 1701 | 0    | 1951 | 0    | 1950 | 1            | 1951 | 1            | 1952 | 0       | 1952  | 0              | 1951 | 1                | 13408    | 3        |
 cv32e40pv2_xpulp_instr      | 1433 | 0    | 1433 | 0    | 1433 | 0            | 1433 | 0            | 1433 | 0       | 1433  | 0              | 1433 | 0                | 10031    | 0        |
 cv32e40pv2_legacy_v1        | 29   | 0    | 29   | 0    | 29   | 0            | 29   | 0            | 29   | 0       | 29    | 0              | 29   | 0                | 203      | 0        |
-**Total number of tests**   | 3134 | 0    | 4888 | 0    | 4887 | 1            | 4888 | 1            | 4889 | 0       | 4889  | 0              | 4888 | 1                | 32666    | 3        |
+**Total number of tests**   | 3163 | 0    | 4917 | 0    | 4916 | 1            | 4917 | 1            | 4918 | 0       | 4918  | 0              | 4917 | 1                | 32666    | 3        |
 
 The 3 failing tests are going in time-out. Generally they just require much longer time-out setup to successfully run but which can not be applied systematically on all tests.
 
