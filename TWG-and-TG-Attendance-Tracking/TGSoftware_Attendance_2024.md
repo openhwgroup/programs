@@ -15,8 +15,8 @@ odd-numbered months.
 | Amazon                     | Joseph Julicher       |        |        |        |        |        |        |        |
 | Amazon                     | Richard Barry         |        |        |        |        |        |        |        |
 | Ashling Micro. Ltd         | Hugh O'Keeffe         |        |        |        |        |        |        |        |
-| Ashling Micro. Ltd         | Promodkumar CM        |        |        |        |        |        |        |        |
-| Ashling Micro. Ltd         | Rejeesh SB            |        |        |        |        |        |        |        |
+| Ashling Micro. Ltd         | Promodkumar CM        |        |        |        |      Y |        |        |        |
+| Ashling Micro. Ltd         | Rejeesh SB            |        |        |        |      Y |        |        |        |
 | CAS PLCT Lab               | Chunyu Liao           |        |        |        |        |        |        |        |
 | CAS PLCT Lab               | Jiawei Chen           |        |        |        |        |        |        |        |
 | CAS PLCT Lab               | Liao Shihua           |        |        |        |        |        |        |        |
@@ -31,12 +31,12 @@ odd-numbered months.
 | CMC Microsystems           | Olive Zhao            |        |        |        |        |        |        |        |
 | Codeplay                   | Michael Wong          |        |        |        |        |        |        |        |
 | Dolphin Design             | Pascal Gouedo         |        |      Y |      Y |        |        |        |        |
-| Embecosm                   | Jeremy Bennett        |        |      Y |      Y |        |        |        |        |
+| Embecosm                   | Jeremy Bennett        |        |      Y |      Y |      Y |        |        |        |
 | Embecosm                   | Mary Bennett          |        |        |        |        |        |        |        |
 | Embecosm                   | Hélène Chelin         |        |        |        |        |        |        |        |
 | Embecosm                   | Nandni Jamnadas       |        |        |        |        |        |        |        |
 | Embecosm                   | Charlie Keaney        |        |        |        |        |        |        |        |
-| Embecosm                   | Paolo Savini          |        |      Y |      Y |        |        |        |        |
+| Embecosm                   | Paolo Savini          |        |      Y |      Y |      Y |        |        |        |
 | Embecosm                   | Shane Slattery        |        |        |        |        |        |        |        |
 | Embecosm                   | Shteryana Shopova     |        |        |        |        |        |        |        |
 | EMUS                       | John Martin           |        |        |        |        |        |        |        |
@@ -71,9 +71,10 @@ odd-numbered months.
 | Company                |  Person               |24.01.08|24.03.11|24.05.13|24.07.08|24.09.09|24.11.24|24.MM.DD|
 |------------------------|-----------------------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | Eclipse project        | Alexander Fedorov     |        |        |        |        |        |        |        |
-| Eclipse project        | Frédŕic Desbiens      |        |        |        |        |        |        |        |
+| Eclipse project        | Frédŕic Desbiens      |        |        |        |      Y |        |        |        |
 | Eclipse project        | Brian King            |        |        |        |        |        |        |        |
-| Individual contributor | Victor Lu             |        |        |        |        |        |        |        |
+| EclipseSource          | Philip Langer         |        |        |        |      Y |        |        |        |
+| Individual contributor | Victor Lu             |        |        |        |      Y |        |        |        |
 | Publitek               | Andrea Barnard        |        |        |        |        |        |        |        |
 | University Tübingen    | Christoph Gerum       |        |        |        |        |        |        |        |
 | University Tübingen    | Serkan Muhcu          |        |        |        |        |        |        |        |
@@ -86,5 +87,5 @@ odd-numbered months.
 | OpenHW                 | Rick O'Connor         |        |        |        |        |        |        |        |
 | OpenHW                 | Davide Schiavone      |        |        |        |        |        |        |        |
 | OpenHW                 | Mike Thompson         |        |      Y |      Y |        |        |        |        |
-| OpenHW                 | Florian Zaruba        |        |        |        |        |        |        |        |
+| OpenHW                 | Florian Zaruba        |        |        |        |      Y |        |        |        |
 | OpenHW                 | Flo Wohlrab           |        |      Y |      Y |        |        |        |        |
