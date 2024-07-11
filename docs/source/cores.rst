@@ -32,10 +32,10 @@ RTL Frozen Cores
 
 `(Released) CORE-V CV32E40Pv1 User Manual <https://docs.openhwgroup.org/projects/cv32e40p-user-manual/en/cv32e40p_v1.0.0_doc/>`_.
 
+`(v1.8.3) CORE-V CV32E40Pv2 User Manual <https://docs.openhwgroup.org/projects/cv32e40p-user-manual/en/cv32e40p_v1.8.3`_.
+
 RTL In Development
 ##################
-
-`(Draft) CORE-V CV32E40Pv2 User Manual <https://docs.openhwgroup.org/projects/cv32e40p-user-manual/en/latest/>`_.
 
 `(Draft) CORE-V CV32E40S User Manual <https://docs.openhwgroup.org/projects/cv32e40s-user-manual/en/latest/>`_.
 
