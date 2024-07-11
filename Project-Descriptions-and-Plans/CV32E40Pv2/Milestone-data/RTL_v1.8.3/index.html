@@ -8,7 +8,7 @@
     <title>CORE-V-VERIF Documentation Home</title>
     <h1>Documentation for CORE-V verification</h1>
     <p><b>Simulation verification</b> methodology used for all CORE-V cores is described in following document:  <a href="https://docs.openhwgroup.org/projects/core-v-verif/en/latest/quick_start.html">CORE-V Verification Strategy</a></p>
-    <p>For CV32E40Pv2, <b>RISC-V ISA Formal Verification</b> methodology was used and is described <a href="https://github.com/openhwgroup/core-v-verif/tree/cv32e40p/dev/cv32e40p/docs/VerifPlans/RISC-V_ISA_Formal/CV32E40Pv2_RISCV_vPlan_v1.1.pdf">here</a>.</p>
+    <p>For CV32E40Pv2, <b>RISC-V ISA Formal Verification</b> methodology was used and is described <a href="https://github.com/openhwgroup/core-v-verif/blob/cv32e40p_v1.8.3/cv32e40p/docs/VerifPlans/RISC-V_ISA_Formal/CV32E40Pv2_RISCV_vPlan_v1.1.pdf">here</a>.</p>
     <p>Documentation for the various CORE-V cores are maintained in <a href="https://github.com/openhwgroup/core-v-docs">core-v-docs</a>, the OpenHW Group's CORE-V documentation repo.</p>
     <p></p>
     <p>As much as is practical, we try to add documentation where you actually use it.<br>
@@ -22,8 +22,8 @@
     <h2>CV32E40P v1.8.3 database</h2>
     <p>Database for the cv32e40p_v1.8.3 release.</p>
     <ul>
-    <li>RTL git repository: <a href="https://github.com/openhwgroup/cv32e40p/tree/dev">cv32e40p</a></li>
-    <li>Verification git repository: <a href="https://github.com/openhwgroup/core-v-verif/tree/cv32e40p/dev">core-v-verif</a></li>
+    <li>RTL git repository: <a href="https://github.com/openhwgroup/cv32e40p/tree/cv32e40p_v1.8.3">cv32e40p</a></li>
+    <li>Verification git repository: <a href="https://github.com/openhwgroup/core-v-verif/tree/cv32e40p_v1.8.3">core-v-verif</a></li>
     <li>Embecosm Toolchain: <a href="https://www.embecosm.com/resources/tool-chain-downloads/#corev">corev-openhw-gcc-centos7-20240530</a></li>
     <li>Synopsys Imperas Reference Model: eng.20240530.0</li>
     <li>Siemens Questa Processor: 2024.2</li>
@@ -57,12 +57,12 @@
     <p>Then Simulation verification was used to verify what can't be modelized and verified using Formal, like Hardware Loops, Prefetch and Fetch pipeline stages...</p>
     <ul>
         <li>RISC-V ISA Formal Verification Plan:<br>
-            The formal verification plan could be found <a href="https://github.com/openhwgroup/core-v-verif/tree/cv32e40p/dev/cv32e40p/docs/VerifPlans/RISC-V_ISA_Formal/CV32E40Pv2_Formal_VerificationPlans.xlsx">here</a>.<br>
+            The formal verification plan could be found <a href="https://github.com/openhwgroup/core-v-verif/blob/cv32e40p_v1.8.3/cv32e40p/docs/VerifPlans/RISC-V_ISA_Formal/CV32E40Pv2_Formal_VerificationPlans.xlsx">here</a>.<br>
         </li>
         <li>Simulation Verification Plans:<br>
-            Overall description of simulation verification plans can be found <a href="https://github.com/openhwgroup/core-v-verif/blob/cv32e40p/dev/cv32e40p/docs/VerifPlans/README.md">here</a>.<br>
+            Overall description of simulation verification plans can be found <a href="https://github.com/openhwgroup/core-v-verif/blob/cv32e40p_v1.8.3/cv32e40p/docs/VerifPlans/README.md">here</a>.<br>
             ci_check are run and all v1 legacy tests are run in v2 regression as well. They were enhanced to be v1 and v2 compliant.<br>
-            A file listing all the tests is available <a href="https://github.com/openhwgroup/core-v-verif/blob/cv32e40p/dev/cv32e40p/docs/VerifPlans/Simulation/CV32E40Pv2_test_list.xlsx">here</a>.<br>
+            A file listing all the tests is available <a href="https://github.com/openhwgroup/core-v-verif/blob/cv32e40p_v1.8.3/cv32e40p/docs/VerifPlans/Simulation/CV32E40Pv2_test_list.xlsx">here</a>.<br>
             Full test suites are executed on the 7 configurations listed above.
         </li>
     </ul>
