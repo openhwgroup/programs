@@ -113,9 +113,12 @@ A comparable study was done for CODASIP A70 (not an open source project) which h
  - AXI-4 64-bit interface
 
 ## OpenHW Members/Participants committed to participate
+10xEngineers
+ETH eXpect 
+Thales 
 
 ## Principal responsible of verification
-Tanuj Khandelwal (CEA List, Grenoble) ?
+Tanuj Khandelwal (CEA List, Grenoble)
 
 Support of Thales is expected in some way.
 Additional participation for specification and verification plan
