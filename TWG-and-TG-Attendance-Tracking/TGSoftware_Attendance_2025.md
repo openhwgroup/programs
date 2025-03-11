@@ -26,20 +26,20 @@ odd-numbered months.
 | CAS PLCT Lab               | Wei Wu                |        |        |        |        |        |        |        |        |
 | CAS PLCT Lab               | Weiwei Li             |        |        |        |        |        |        |        |        |
 | CAS PLCT Lab               | Wu Xinlong            |        |        |        |        |        |        |        |        |
-| CircuitSutra Tech. Pvt Ltd | Rameez Syed           |        |        |        |        |        |        |        |        |
-| CircuitSutra Tech. Pvt Ltd | Umesh Sisodia         |        |        |        |        |        |        |        |        |
-| CircuitSutra Tech. Pvt Ltd | Adiyta Tiwari         |      Y |        |        |        |        |        |        |        |
-| CircuitSutra Tech. Pvt Ltd | Ayush Mewati          |        |        |        |        |        |        |        |        |
+| CircuitSutra Tech. Pvt Ltd | Rameez Syed           |        |      Y |        |        |        |        |        |        |
+| CircuitSutra Tech. Pvt Ltd | Umesh Sisodia         |        |      Y |        |        |        |        |        |        |
+| CircuitSutra Tech. Pvt Ltd | Adiyta Tiwari         |      Y |      Y |      Y |        |        |        |        |        |
+| CircuitSutra Tech. Pvt Ltd | Ayush Mewati          |        |      Y |        |        |        |        |        |        |
 | CMC Microsystems           | Hugh Pollitt-Smith    |        |        |        |        |        |        |        |        |
 | CMC Microsystems           | Olive Zhao            |        |        |        |        |        |        |        |        |
 | Codeplay                   | Michael Wong          |        |        |        |        |        |        |        |        |
 | Dolphin Design             | Pascal Gouedo         |        |        |        |        |        |        |        |        |
-| Embecosm                   | Jeremy Bennett        |      Y |        |        |        |        |        |        |        |
+| Embecosm                   | Jeremy Bennett        |      Y |      Y |      Y |        |        |        |        |        |
 | Embecosm                   | Mary Bennett          |        |        |        |        |        |        |        |        |
 | Embecosm                   | Hélène Chelin         |        |        |        |        |        |        |        |        |
 | Embecosm                   | Nandni Jamnadas       |        |        |        |        |        |        |        |        |
 | Embecosm                   | Charlie Keaney        |        |        |        |        |        |        |        |        |
-| Embecosm                   | Paolo Savini          |      Y |        |        |        |        |        |        |        |
+| Embecosm                   | Paolo Savini          |      Y |      Y |      Y |        |        |        |        |        |
 | Embecosm                   | Shane Slattery        |        |        |        |        |        |        |        |        |
 | Embecosm                   | Shteryana Shopova     |        |        |        |        |        |        |        |        |
 | EMUS                       | John Martin           |        |        |        |        |        |        |        |        |
@@ -64,7 +64,7 @@ odd-numbered months.
 | Thales                     | Sébastien Jacq        |        |        |        |        |        |        |        |        |
 | Thales                     | André Sintzoff        |        |        |        |        |        |        |        |        |
 | Thales                     | Zbigniew Chamski      |        |        |        |        |        |        |        |        |
-| Thales                     | Jérôme Quévremont     |      Y |        |        |        |        |        |        |        |
+| Thales                     | Jérôme Quévremont     |      Y |      Y |      Y |        |        |        |        |        |
 | Univeristy Bologna         | Nazareno Bruschi      |        |        |        |        |        |        |        |        |
 | Univeristy Bologna         | Gianmarco Ottavi      |        |        |        |        |        |        |        |        |
 | Univeristy Bologna         | Giuseppe Tagliavini   |        |        |        |        |        |        |        |        |
@@ -88,6 +88,6 @@ odd-numbered months.
 |------------------------|-----------------------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | OpenHW                 | Rick O'Connor         |        |        |        |        |        |        |        |        |
 | OpenHW                 | Davide Schiavone      |        |        |        |        |        |        |        |        |
-| OpenHW                 | Mike Thompson         |        |        |        |        |        |        |        |        |
+| OpenHW                 | Mike Thompson         |        |      Y |      Y |        |        |        |        |        |
 | OpenHW                 | Florian Zaruba        |        |        |        |        |        |        |        |        |
 | OpenHW                 | Flo Wohlrab           |        |        |        |        |        |        |        |        |
