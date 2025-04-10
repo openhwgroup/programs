@@ -1,11 +1,8 @@
 ---
 author: Cesar Fuguet
-title: INTG - HPDcache Report (April 10th, 2025)
+title: INTG - HPDcache Report
+date: April 10th, 2025
 ...
-**April 10th, 2025**
-
-**Prepared by: Cesar Fuguet**
-
 # CV-HPDCACHE
 
 ## Summary
