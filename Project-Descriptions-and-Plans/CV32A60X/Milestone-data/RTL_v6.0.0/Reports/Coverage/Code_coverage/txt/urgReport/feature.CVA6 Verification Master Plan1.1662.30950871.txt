@@ -1,0 +1,110 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.CV-X-IF.Protocol
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 87.24 --     --      92.31  82.18 
+
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+ 87.24 --     --      92.31  82.18 
+
+
+-------------------------------------------------------------------------------
+
+Measure Protocol: 
+
+Metrics: Group, Assert
+SCORE  LINE   COND   ASSERT GROUP  
+ 87.24 --     --      92.31  82.18 
+
+
+Sources:
+
+group instance: uvma_cvxif_pkg.uvma_cvxif_pkg.request_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                     
+ 69.44 --     --     --      69.44 uvma_cvxif_pkg.uvma_cvxif_pkg.request_cg 
+
+
+group instance: uvma_cvxif_pkg.uvma_cvxif_pkg.response_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                      
+100.00 --     --     --     100.00 uvma_cvxif_pkg.uvma_cvxif_pkg.response_cg 
+
+
+group instance: uvma_cvxif_pkg.uvma_cvxif_pkg.result_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                    
+ 77.08 --     --     --      77.08 uvma_cvxif_pkg.uvma_cvxif_pkg.result_cg 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_for_issue
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                         
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_for_issue 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_one_cycle
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                         
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_one_cycle 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_compressed_instr
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                         
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_compressed_instr 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_reject_issue_req
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                         
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_reject_issue_req 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_for_commit
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                          
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_for_commit 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_stable
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                      
+  0.00 --     --       0.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_stable 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_trn_end
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                       
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_trn_end 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_stable_issue
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                     
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_stable_issue 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_uncompressed_resp
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                          
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_uncompressed_resp 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs_valid
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                         
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs_valid 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs_valid
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                         
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs_valid 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                   
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs 
+
+
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                   
+100.00 --     --     100.00 --     uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs 
+
+
+
+

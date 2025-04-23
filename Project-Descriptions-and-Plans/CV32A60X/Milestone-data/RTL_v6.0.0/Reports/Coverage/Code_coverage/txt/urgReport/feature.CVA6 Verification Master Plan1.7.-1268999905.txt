@@ -1,0 +1,31 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 94.94 --     --      92.31  97.58 
+
+Attribute/Annotation values:
+  description: CVA6 features for programmer view
+
+
+-------------------------------------------------------------------------------
+
+Sub-features:
+
+SCORE  LINE   COND   ASSERT GROUP  NAME       
+ 99.74 --     --     --      99.74 ISA        
+100.00 --     --     --     100.00 CSR access 
+ 99.57 --     --     --      99.57 TRAPs      
+ 91.66 --     --      92.31  91.01 CV-X-IF    
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+--     --     --     --     --     
+
+
+

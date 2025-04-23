@@ -1,0 +1,39 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.ISA.RV32ZCB
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.95 --     --     --      99.95 
+
+Attribute/Annotation values:
+  weight: 1
+  description: ZCB extension
+
+
+-------------------------------------------------------------------------------
+
+Sub-features:
+
+SCORE  LINE   COND   ASSERT GROUP  NAME   
+100.00 --     --     --     100.00 MUL    
+100.00 --     --     --     100.00 ZEXT_B 
+100.00 --     --     --     100.00 ZEXT_H 
+100.00 --     --     --     100.00 SEXT_B 
+100.00 --     --     --     100.00 SEXT_H 
+100.00 --     --     --     100.00 NOT    
+100.00 --     --     --     100.00 SB     
+ 99.80 --     --     --      99.80 SH     
+100.00 --     --     --     100.00 LBU    
+ 99.83 --     --     --      99.83 LHU    
+ 99.83 --     --     --      99.83 LH     
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+--     --     --     --     --     
+
+
+
