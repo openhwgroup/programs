@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: issue_read_operands</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_issue_read_operands'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_issue_read_operands')">issue_read_operands</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod9.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod9.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/issue_read_operands.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/issue_read_operands.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod9.html#inst_tag_12"  onclick="showContent('inst_tag_12')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.issue_stage_i.i_issue_read_operands</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod9.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod9.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_issue_read_operands'>
+<hr>
+<a name="inst_tag_12"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_12" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.issue_stage_i.i_issue_read_operands</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod9.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod9.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 97.46</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 94.92</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod98.html#inst_tag_249" >issue_stage_i</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod1.html#inst_tag_1" id="tag_urg_inst_1">gen_asic_regfile.i_ariane_regfile</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod43.html#inst_tag_188" id="tag_urg_inst_188">genblk5[0].i_sel_rs1</a></td>
+<td class="s9 cl rt"> 94.19</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 94.19</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod43.html#inst_tag_189" id="tag_urg_inst_189">genblk5[0].i_sel_rs2</a></td>
+<td class="s9 cl rt"> 94.19</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 94.19</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod43.html#inst_tag_190" id="tag_urg_inst_190">genblk5[0].i_sel_rs3</a></td>
+<td class="s9 cl rt"> 94.19</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 94.19</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod49.html#inst_tag_196" id="tag_urg_inst_196">i_cvxif_issue_register_commit_if_driver</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_issue_read_operands'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod9.html" >issue_read_operands</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>192</td><td>192</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>284</td><td>15</td><td>15</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>382</td><td>12</td><td>12</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>417</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>639</td><td>22</td><td>22</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>722</td><td>19</td><td>19</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>776</td><td>28</td><td>28</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>836</td><td>19</td><td>19</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>861</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>880</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>891</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">ALWAYS</td><td>928</td><td>0</td><td>0</td><td></td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>928</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>1024</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>1107</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>1130</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">INITIAL</td><td>1158</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">INITIAL</td><td>1173</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<pre class="code"><br clear=all>
+283                       always_comb begin : structural_hazards
+284        1/1              fus_busy = '0;
+285                         // CVXIF is always ready to try a new transaction on 1st issue port
+286                         // If a transaction is already pending then we stall until the transaction is done.(issue_ack_o[0] = 0)
+287                         // Since we can not have two CVXIF instruction on 1st issue port, CVXIF is always ready for the pending instruction.
+288        1/1              if (!flu_ready_i) begin
+289        1/1                fus_busy[0].alu = 1'b1;
+290        1/1                fus_busy[0].ctrl_flow = 1'b1;
+291        1/1                fus_busy[0].csr = 1'b1;
+292        1/1                fus_busy[0].mult = 1'b1;
+293                         end
+                        MISSING_ELSE
+294                     
+295                         // after a multiplication was issued we can only issue another multiplication
+296                         // otherwise we will get contentions on the fixed latency bus
+297        1/1              if (|mult_valid_q) begin
+298        1/1                fus_busy[0].alu = 1'b1;
+299        1/1                fus_busy[0].ctrl_flow = 1'b1;
+300        1/1                fus_busy[0].csr = 1'b1;
+301                         end
+                        MISSING_ELSE
+302                     
+303        1/1              if (CVA6Cfg.FpPresent &amp;&amp; !fpu_ready_i) begin
+304        <font color = "grey">unreachable  </font>      fus_busy[0].fpu = 1'b1;
+305        <font color = "grey">unreachable  </font>      fus_busy[0].fpu_vec = 1'b1;
+306        <font color = "grey">unreachable  </font>      if (CVA6Cfg.SuperscalarEn) fus_busy[0].alu2 = 1'b1;
+                   <font color = "red">==>  MISSING_ELSE</font>
+307                         end
+                        MISSING_ELSE
+308                     
+309        1/1              if (!lsu_ready_i) begin
+310        1/1                fus_busy[0].load  = 1'b1;
+311        1/1                fus_busy[0].store = 1'b1;
+312                         end
+                        MISSING_ELSE
+313                     
+314        1/1              if (CVA6Cfg.SuperscalarEn) begin
+315        <font color = "grey">unreachable  </font>      fus_busy[1] = fus_busy[0];
+316                     
+317                           // Never issue CSR instruction on second issue port.
+318        <font color = "grey">unreachable  </font>      fus_busy[1].csr = 1'b1;
+319                           // Never issue CVXIF instruction on second issue port.
+320        <font color = "grey">unreachable  </font>      fus_busy[1].cvxif = 1'b1;
+321                     
+322        <font color = "grey">unreachable  </font>      unique case (issue_instr_i[0].fu)
+323        <font color = "grey">unreachable  </font>        NONE: fus_busy[1].none = 1'b1;
+324                             CTRL_FLOW: begin
+325        <font color = "grey">unreachable  </font>          if (CVA6Cfg.SpeculativeSb) begin
+326                                 // Issue speculative instruction, will be removed on BMISS
+327        <font color = "grey">unreachable  </font>            fus_busy[1].alu = 1'b1;
+328        <font color = "grey">unreachable  </font>            fus_busy[1].ctrl_flow = 1'b1;
+329        <font color = "grey">unreachable  </font>            fus_busy[1].csr = 1'b1;
+330                                 // Speculative non-idempotent loads are not supported yet
+331        <font color = "grey">unreachable  </font>            fus_busy[1].load = 1'b1;
+332                                 // The store buffer cannot be partially flushed yet
+333        <font color = "grey">unreachable  </font>            fus_busy[1].store = 1'b1;
+334                               end else begin
+335                                 // There are no branch misses on a JAL
+336        <font color = "grey">unreachable  </font>            if (issue_instr_i[0].op == ariane_pkg::ADD) begin
+337        <font color = "grey">unreachable  </font>              fus_busy[1].alu = 1'b1;
+338        <font color = "grey">unreachable  </font>              fus_busy[1].ctrl_flow = 1'b1;
+339        <font color = "grey">unreachable  </font>              fus_busy[1].csr = 1'b1;
+340                                 end else begin
+341                                   // Control hazard
+342        <font color = "grey">unreachable  </font>              fus_busy[1] = '1;
+343                                 end
+344                               end
+345                             end
+346                             ALU: begin
+347        <font color = "grey">unreachable  </font>          if (CVA6Cfg.SuperscalarEn &amp;&amp; !fus_busy[0].alu2) begin
+348        <font color = "grey">unreachable  </font>            fus_busy[1].alu2 = 1'b1;
+349                                 // TODO is there a minimum float execution time?
+350                                 // If so we could issue FPU &amp; ALU2 the same cycle
+351        <font color = "grey">unreachable  </font>            fus_busy[1].fpu = 1'b1;
+352        <font color = "grey">unreachable  </font>            fus_busy[1].fpu_vec = 1'b1;
+353                               end else begin
+354        <font color = "grey">unreachable  </font>            fus_busy[1].alu = 1'b1;
+355        <font color = "grey">unreachable  </font>            fus_busy[1].ctrl_flow = 1'b1;
+356        <font color = "grey">unreachable  </font>            fus_busy[1].csr = 1'b1;
+357                               end
+358                             end
+359                             CSR: begin
+360                               // Control hazard
+361        <font color = "grey">unreachable  </font>          fus_busy[1] = '1;
+362                             end
+363        <font color = "grey">unreachable  </font>        MULT: fus_busy[1].mult = 1'b1;
+364                             FPU, FPU_VEC: begin
+365        <font color = "grey">unreachable  </font>          fus_busy[1].fpu = 1'b1;
+366        <font color = "grey">unreachable  </font>          fus_busy[1].fpu_vec = 1'b1;
+367                             end
+368                             LOAD, STORE: begin
+369        <font color = "grey">unreachable  </font>          fus_busy[1].load  = 1'b1;
+370        <font color = "grey">unreachable  </font>          fus_busy[1].store = 1'b1;
+371                             end
+372        <font color = "grey">unreachable  </font>        CVXIF: ;
+373        <font color = "grey">unreachable  </font>        default: ;
+374                           endcase
+375                         end
+                        MISSING_ELSE
+376                       end
+377                     
+378                       // select the right busy signal
+379                       // this obviously depends on the functional unit we need
+380                       for (genvar i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+381                         always_comb begin
+382        1/1                unique case (issue_instr_i[i].fu)
+383        1/1                  NONE: fu_busy[i] = fus_busy[i].none;
+384                             ALU: begin
+385        1/1                    if (CVA6Cfg.SuperscalarEn &amp;&amp; !fus_busy[i].alu2) begin
+386        <font color = "grey">unreachable  </font>            fu_busy[i] = fus_busy[i].alu2;
+387                               end else begin
+388        1/1                      fu_busy[i] = fus_busy[i].alu;
+389                               end
+390                             end
+391        1/1                  CTRL_FLOW: fu_busy[i] = fus_busy[i].ctrl_flow;
+392        1/1                  CSR: fu_busy[i] = fus_busy[i].csr;
+393        1/1                  MULT: fu_busy[i] = fus_busy[i].mult;
+394        1/1                  LOAD: fu_busy[i] = fus_busy[i].load;
+395        1/1                  STORE: fu_busy[i] = fus_busy[i].store;
+396        1/1                  CVXIF: fu_busy[i] = fus_busy[i].cvxif;
+397                             default:
+398        1/1                  if (CVA6Cfg.FpPresent) begin
+399        <font color = "grey">unreachable  </font>          unique case (issue_instr_i[i].fu)
+400        <font color = "grey">unreachable  </font>            FPU: fu_busy[i] = fus_busy[i].fpu;
+401        <font color = "grey">unreachable  </font>            FPU_VEC: fu_busy[i] = fus_busy[i].fpu_vec;
+402        <font color = "grey">unreachable  </font>            default: fu_busy[i] = 1'b0;
+403                               endcase
+404                             end else begin
+405        1/1                    fu_busy[i] = 1'b0;
+406                             end
+407                           endcase
+408                         end
+409                       end
+410                     
+411                       // -------------------
+412                       // RD clobber process
+413                       // -------------------
+414                       // rd_clobber output: output currently clobbered destination registers
+415                     
+416                       always_comb begin : clobber_assign
+417        1/1              gpr_clobber_vld = '0;
+418        1/1              fpr_clobber_vld = '0;
+419                     
+420                         // default (highest entry hast lowest prio in arbiter tree below)
+421        1/1              clobber_fu[CVA6Cfg.NR_SB_ENTRIES] = ariane_pkg::NONE;
+422        1/1              for (int unsigned i = 0; i &lt; 2 ** ariane_pkg::REG_ADDR_SIZE; i++) begin
+423        1/1                gpr_clobber_vld[i][CVA6Cfg.NR_SB_ENTRIES] = 1'b1;
+424        1/1                fpr_clobber_vld[i][CVA6Cfg.NR_SB_ENTRIES] = 1'b1;
+425                         end
+426                     
+427                         // check for all valid entries and set the clobber accordingly
+428                     
+429        1/1              for (int unsigned i = 0; i &lt; CVA6Cfg.NR_SB_ENTRIES; i++) begin
+430        1/1                gpr_clobber_vld[fwd_i.sbe[i].rd][i] = fwd_i.still_issued[i] &amp; ~(CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+431                               fwd_i.sbe[i].op));
+432        1/1                fpr_clobber_vld[fwd_i.sbe[i].rd][i] = fwd_i.still_issued[i] &amp; (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+433                               fwd_i.sbe[i].op));
+434        1/1                clobber_fu[i] = fwd_i.sbe[i].fu;
+435                         end
+436                     
+437                         // GPR[0] is always free
+438        1/1              gpr_clobber_vld[0] = '0;
+439                       end
+440                     
+441                       for (genvar k = 0; k &lt; 2 ** ariane_pkg::REG_ADDR_SIZE; k++) begin : gen_sel_clobbers
+442                         // get fu that is going to clobber this register (there should be only one)
+443                         rr_arb_tree #(
+444                             .NumIn(CVA6Cfg.NR_SB_ENTRIES + 1),
+445                             .DataType(ariane_pkg::fu_t),
+446                             .ExtPrio(1'b1),
+447                             .AxiVldRdy(1'b1)
+448                         ) i_sel_gpr_clobbers (
+449                             .clk_i  (clk_i),
+450                             .rst_ni (rst_ni),
+451                             .flush_i(1'b0),
+452                             .rr_i   ('0),
+453                             .req_i  (gpr_clobber_vld[k]),
+454                             .gnt_o  (),
+455                             .data_i (clobber_fu),
+456                             .gnt_i  (1'b1),
+457                             .req_o  (),
+458                             .data_o (rd_clobber_gpr[k]),
+459                             .idx_o  ()
+460                         );
+461                         if (CVA6Cfg.FpPresent) begin
+462                           rr_arb_tree #(
+463                               .NumIn(CVA6Cfg.NR_SB_ENTRIES + 1),
+464                               .DataType(ariane_pkg::fu_t),
+465                               .ExtPrio(1'b1),
+466                               .AxiVldRdy(1'b1)
+467                           ) i_sel_fpr_clobbers (
+468                               .clk_i  (clk_i),
+469                               .rst_ni (rst_ni),
+470                               .flush_i(1'b0),
+471                               .rr_i   ('0),
+472                               .req_i  (fpr_clobber_vld[k]),
+473                               .gnt_o  (),
+474                               .data_i (clobber_fu),
+475                               .gnt_i  (1'b1),
+476                               .req_o  (),
+477                               .data_o (rd_clobber_fpr[k]),
+478                               .idx_o  ()
+479                           );
+480                         end else begin
+481                           assign rd_clobber_fpr[k] = NONE;
+482                         end
+483                       end
+484                     
+485                       // ----------------------------------
+486                       // Read Operands (a.k.a forwarding)
+487                       // ----------------------------------
+488                       // read operand interface: same logic as register file
+489                     
+490                       // WB ports have higher prio than entries
+491                       for (genvar i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+492                         for (genvar k = 0; unsigned'(k) &lt; CVA6Cfg.NrWbPorts; k++) begin : gen_rs_wb
+493                     
+494                           assign rs1_fwd_req[i][k] = (fwd_i.sbe[fwd_i.wb[k].trans_id].rd == issue_instr_i[i].rs1) &amp; (fwd_i.still_issued[fwd_i.wb[k].trans_id]) &amp; fwd_i.wb[k].valid &amp; (~fwd_i.wb[k].ex_valid) &amp; ((CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+495                               fwd_i.sbe[fwd_i.wb[k].trans_id].op
+496                           )) == (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rs1_fpr(
+497                               issue_instr_i[i].op
+498                           )));
+499                     
+500                           assign rs2_fwd_req[i][k] = (fwd_i.sbe[fwd_i.wb[k].trans_id].rd == issue_instr_i[i].rs2) &amp; (fwd_i.still_issued[fwd_i.wb[k].trans_id]) &amp; fwd_i.wb[k].valid &amp; (~fwd_i.wb[k].ex_valid) &amp; ((CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+501                               fwd_i.sbe[fwd_i.wb[k].trans_id].op
+502                           )) == (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rs2_fpr(
+503                               issue_instr_i[i].op
+504                           )));
+505                     
+506                           assign rs3_fwd_req[i][k] = (fwd_i.sbe[fwd_i.wb[k].trans_id].rd == issue_instr_i[i].result[ariane_pkg::REG_ADDR_SIZE-1:0]) &amp; (fwd_i.still_issued[fwd_i.wb[k].trans_id]) &amp; fwd_i.wb[k].valid &amp; (~fwd_i.wb[k].ex_valid) &amp; ((CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+507                               fwd_i.sbe[fwd_i.wb[k].trans_id].op
+508                           )) == (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_imm_fpr(
+509                               issue_instr_i[i].op
+510                           )));
+511                     
+512                           assign rs_data[i][k] = fwd_i.wb[k].data;
+513                         end
+514                     
+515                         for (genvar k = 0; unsigned'(k) &lt; CVA6Cfg.NR_SB_ENTRIES; k++) begin : gen_rs_entries
+516                     
+517                           assign rs1_fwd_req[i][k+CVA6Cfg.NrWbPorts] = (fwd_i.sbe[k].rd == issue_instr_i[i].rs1) &amp; fwd_i.still_issued[k] &amp; fwd_i.sbe[k].valid &amp; ((CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+518                               fwd_i.sbe[k].op
+519                           )) == (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rs1_fpr(
+520                               issue_instr_i[i].op
+521                           )));
+522                     
+523                           assign rs2_fwd_req[i][k+CVA6Cfg.NrWbPorts] = (fwd_i.sbe[k].rd == issue_instr_i[i].rs2) &amp; fwd_i.still_issued[k] &amp; fwd_i.sbe[k].valid &amp; ((CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+524                               fwd_i.sbe[k].op
+525                           )) == (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rs2_fpr(
+526                               issue_instr_i[i].op
+527                           )));
+528                     
+529                           assign rs3_fwd_req[i][k+CVA6Cfg.NrWbPorts] = (fwd_i.sbe[k].rd == issue_instr_i[i].result[ariane_pkg::REG_ADDR_SIZE-1:0]) &amp; fwd_i.still_issued[k] &amp; fwd_i.sbe[k].valid &amp; ((CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+530                               fwd_i.sbe[k].op
+531                           )) == (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_imm_fpr(
+532                               issue_instr_i[i].op
+533                           )));
+534                     
+535                           assign rs_data[i][k+CVA6Cfg.NrWbPorts] = fwd_i.sbe[k].result;
+536                         end
+537                     
+538                         // use fixed prio here
+539                         // this implicitly gives higher prio to WB ports
+540                         rr_arb_tree #(
+541                             .NumIn(CVA6Cfg.NR_SB_ENTRIES + CVA6Cfg.NrWbPorts),
+542                             .DataWidth(CVA6Cfg.XLEN),
+543                             .ExtPrio(1'b1),
+544                             .AxiVldRdy(1'b1)
+545                         ) i_sel_rs1 (
+546                             .clk_i  (clk_i),
+547                             .rst_ni (rst_ni),
+548                             .flush_i(1'b0),
+549                             .rr_i   ('0),
+550                             .req_i  (rs1_fwd_req[i]),
+551                             .gnt_o  (),
+552                             .data_i (rs_data[i]),
+553                             .gnt_i  (1'b1),
+554                             .req_o  (rs1_available[i]),
+555                             .data_o (rs1_res[i]),
+556                             .idx_o  ()
+557                         );
+558                     
+559                         rr_arb_tree #(
+560                             .NumIn(CVA6Cfg.NR_SB_ENTRIES + CVA6Cfg.NrWbPorts),
+561                             .DataWidth(CVA6Cfg.XLEN),
+562                             .ExtPrio(1'b1),
+563                             .AxiVldRdy(1'b1)
+564                         ) i_sel_rs2 (
+565                             .clk_i  (clk_i),
+566                             .rst_ni (rst_ni),
+567                             .flush_i(1'b0),
+568                             .rr_i   ('0),
+569                             .req_i  (rs2_fwd_req[i]),
+570                             .gnt_o  (),
+571                             .data_i (rs_data[i]),
+572                             .gnt_i  (1'b1),
+573                             .req_o  (rs2_available[i]),
+574                             .data_o (rs2_res[i]),
+575                             .idx_o  ()
+576                         );
+577                     
+578                     
+579                         rr_arb_tree #(
+580                             .NumIn(CVA6Cfg.NR_SB_ENTRIES + CVA6Cfg.NrWbPorts),
+581                             .DataWidth(CVA6Cfg.XLEN),
+582                             .ExtPrio(1'b1),
+583                             .AxiVldRdy(1'b1)
+584                         ) i_sel_rs3 (
+585                             .clk_i  (clk_i),
+586                             .rst_ni (rst_ni),
+587                             .flush_i(1'b0),
+588                             .rr_i   ('0),
+589                             .req_i  (rs3_fwd_req[i]),
+590                             .gnt_o  (),
+591                             .data_i (rs_data[i]),
+592                             .gnt_i  (1'b1),
+593                             .req_o  (rs3_available[i]),
+594                             .data_o (rs3[i]),
+595                             .idx_o  ()
+596                         );
+597                     
+598                         if (CVA6Cfg.NrRgprPorts == 3) begin : gen_gp_three_port
+599                           assign rs3_res[i] = rs3[i][riscv::XLEN-1:0];
+600                         end else begin : gen_fp_three_port
+601                           assign rs3_res[i] = rs3[i][CVA6Cfg.FLen-1:0];
+602                         end
+603                     
+604                         assign rs1_has_raw[i] = !issue_instr_i[i].use_zimm &amp;&amp; ((CVA6Cfg.FpPresent &amp;&amp; is_rs1_fpr(
+605                             issue_instr_i[i].op
+606                         )) ? rd_clobber_fpr[issue_instr_i[i].rs1] != NONE :
+607                             rd_clobber_gpr[issue_instr_i[i].rs1] != NONE);
+608                     
+609                         assign rs1_valid[i] = rs1_available[i] &amp;&amp; (CVA6Cfg.FpPresent &amp;&amp; is_rs1_fpr(
+610                             issue_instr_i[i].op
+611                         ) ? 1'b1 : ((rd_clobber_gpr[issue_instr_i[i].rs1] != CSR) ||
+612                                     (CVA6Cfg.RVS &amp;&amp; issue_instr_i[i].op == SFENCE_VMA)));
+613                     
+614                         assign rs2_has_raw[i] = ((CVA6Cfg.FpPresent &amp;&amp; is_rs2_fpr(
+615                             issue_instr_i[i].op
+616                         )) ? rd_clobber_fpr[issue_instr_i[i].rs2] != NONE :
+617                             rd_clobber_gpr[issue_instr_i[i].rs2] != NONE);
+618                     
+619                         assign rs2_valid[i] = rs2_available[i] &amp;&amp; (CVA6Cfg.FpPresent &amp;&amp; is_rs2_fpr(
+620                             issue_instr_i[i].op
+621                         ) ? 1'b1 : ((rd_clobber_gpr[issue_instr_i[i].rs2] != CSR) ||
+622                                     (CVA6Cfg.RVS &amp;&amp; issue_instr_i[i].op == SFENCE_VMA)));
+623                     
+624                         assign rs3_has_raw[i] = ((CVA6Cfg.FpPresent &amp;&amp; is_imm_fpr(
+625                             issue_instr_i[i].op
+626                         )) ? rd_clobber_fpr[issue_instr_i[i].result[REG_ADDR_SIZE-1:0]] != NONE : 0);
+627                     
+628                         assign rs3_valid[i] = rs3_available[i];
+629                         assign rs3_fpr[i] = (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_imm_fpr(issue_instr_i[i].op));
+630                     
+631                       end
+632                     
+633                       // ---------------
+634                       // Register stage
+635                       // ---------------
+636                       // check that all operands are available, otherwise stall
+637                       // forward corresponding register
+638                       always_comb begin : operands_available
+639        1/1              stall_raw   = '{default: stall_i};
+640        1/1              stall_rs1   = '{default: stall_i};
+641        1/1              stall_rs2   = '{default: stall_i};
+642        1/1              stall_rs3   = '{default: stall_i};
+643                         // operand forwarding signals
+644        1/1              forward_rs1 = '0;
+645        1/1              forward_rs2 = '0;
+646        1/1              forward_rs3 = '0;  // FPR only
+647                     
+648        1/1              for (int unsigned i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+649        1/1                if (rs1_has_raw[i]) begin
+650        1/1                  if (rs1_valid[i]) begin
+651        1/1                    forward_rs1[i] = 1'b1;
+652                             end else begin  // the operand is not available -&gt; stall
+653        1/1                    stall_raw[i] = 1'b1;
+654        1/1                    stall_rs1[i] = 1'b1;
+655                             end
+656                           end
+                        MISSING_ELSE
+657                     
+658        1/1                if (rs2_has_raw[i]) begin
+659        1/1                  if (rs2_valid[i]) begin
+660        1/1                    forward_rs2[i] = 1'b1;
+661                             end else begin  // the operand is not available -&gt; stall
+662        1/1                    stall_raw[i] = 1'b1;
+663        1/1                    stall_rs2[i] = 1'b1;
+664                             end
+665                           end
+                        MISSING_ELSE
+666                     
+667        1/1                if (CVA6Cfg.NrRgprPorts == 3 &amp;&amp; rs3_has_raw[i] &amp;&amp; rs3_fpr[i]) begin
+668        <font color = "grey">unreachable  </font>        if (rs3_valid[i]) begin
+669        <font color = "grey">unreachable  </font>          forward_rs3[i] = 1'b1;
+670                             end else begin  // the operand is not available -&gt; stall
+671        <font color = "grey">unreachable  </font>          stall_raw[i] = 1'b1;
+672        <font color = "grey">unreachable  </font>          stall_rs3[i] = 1'b1;
+673                             end
+674                           end
+                        MISSING_ELSE
+675                     
+676        1/1                if (CVA6Cfg.CvxifEn) begin
+677        1/1                  stall_raw[0] = x_transaction_rejected ? 1'b0 : stall_rs1[0] || stall_rs2[0] || (CVA6Cfg.NrRgprPorts == 3 &amp;&amp; stall_rs3[0]);
+678                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+679                         end
+680                     
+681        1/1              if (CVA6Cfg.SuperscalarEn) begin
+682        <font color = "grey">unreachable  </font>      if (!issue_instr_i[1].use_zimm &amp;&amp; (!CVA6Cfg.FpPresent || (is_rs1_fpr(
+683                                   issue_instr_i[1].op
+684                               ) == is_rd_fpr(
+685                                   issue_instr_i[0].op
+686                               ))) &amp;&amp; issue_instr_i[1].rs1 == issue_instr_i[0].rd &amp;&amp; issue_instr_i[1].rs1 != '0) begin
+687        <font color = "grey">unreachable  </font>        stall_raw[1] = 1'b1;
+688                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+689                     
+690        <font color = "grey">unreachable  </font>      if ((!CVA6Cfg.FpPresent || (is_rs2_fpr(
+691                                   issue_instr_i[1].op
+692                               ) == is_rd_fpr(
+693                                   issue_instr_i[0].op
+694                               ))) &amp;&amp; issue_instr_i[1].rs2 == issue_instr_i[0].rd &amp;&amp; issue_instr_i[1].rs2 != '0) begin
+695        <font color = "grey">unreachable  </font>        stall_raw[1] = 1'b1;
+696                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+697                     
+698                           // Only check clobbered gpr for OFFLOADED instruction
+699        <font color = "grey">unreachable  </font>      if ((CVA6Cfg.FpPresent &amp;&amp; is_imm_fpr(
+700                                   issue_instr_i[1].op
+701                               )) ? is_rd_fpr(
+702                                   issue_instr_i[0].op
+703                               ) &amp;&amp; issue_instr_i[0].rd == issue_instr_i[1].result[REG_ADDR_SIZE-1:0] :
+704                                   issue_instr_i[1].op == OFFLOAD &amp;&amp; OPERANDS_PER_INSTR == 3 ?
+705                                   issue_instr_i[0].rd == issue_instr_i[1].result[REG_ADDR_SIZE-1:0] : 1'b0) begin
+706        <font color = "grey">unreachable  </font>        stall_raw[1] = 1'b1;
+707                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+708                         end
+                        MISSING_ELSE
+709                       end
+710                     
+711                       // third operand from fp regfile or gp regfile if NR_RGPR_PORTS == 3
+712                       if (OPERANDS_PER_INSTR == 3) begin : gen_gp_rs3
+713                         assign imm_forward_rs3 = rs3_res[0];
+714                       end else begin : gen_fp_rs3
+715                         assign imm_forward_rs3 = {{CVA6Cfg.XLEN - CVA6Cfg.FLen{1'b0}}, rs3_res[0]};
+716                       end
+717                     
+718                       // Forwarding/Output MUX
+719                       for (genvar i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+720                         always_comb begin : forwarding_operand_select
+721                           // default is regfiles (gpr or fpr)
+722        1/1                fu_data_n[i].operand_a = operand_a_regfile[i];
+723        1/1                fu_data_n[i].operand_b = operand_b_regfile[i];
+724                     
+725                           // immediates are the third operands in the store case
+726                           // for FP operations, the imm field can also be the third operand from the regfile
+727        1/1                if (OPERANDS_PER_INSTR == 3) begin
+728        <font color = "grey">unreachable  </font>        fu_data_n[i].imm = (CVA6Cfg.FpPresent &amp;&amp; is_imm_fpr(issue_instr_i[i].op)) ?
+729                                 {{CVA6Cfg.XLEN - CVA6Cfg.FLen{1'b0}}, operand_c_regfile[i]} :
+730                                 issue_instr_i[i].op == OFFLOAD ? operand_c_regfile[i] : issue_instr_i[i].result;
+731                           end else begin
+732        1/1                  fu_data_n[i].imm = (CVA6Cfg.FpPresent &amp;&amp; is_imm_fpr(issue_instr_i[i].op)) ?
+733                                 {{CVA6Cfg.XLEN - CVA6Cfg.FLen{1'b0}}, operand_c_regfile[i]} : issue_instr_i[i].result;
+734                           end
+735        1/1                fu_data_n[i].trans_id  = issue_instr_i[i].trans_id;
+736        1/1                fu_data_n[i].fu        = issue_instr_i[i].fu;
+737        1/1                fu_data_n[i].operation = issue_instr_i[i].op;
+738        1/1                if (CVA6Cfg.RVH) begin
+739        <font color = "grey">unreachable  </font>        tinst_n[i] = issue_instr_i[i].ex.tinst;
+740                           end
+                        MISSING_ELSE
+741                     
+742                           // or should we forward
+743        1/1                if (forward_rs1[i]) begin
+744        1/1                  fu_data_n[i].operand_a = rs1_res[i];
+745                           end
+                        MISSING_ELSE
+746        1/1                if (forward_rs2[i]) begin
+747        1/1                  fu_data_n[i].operand_b = rs2_res[i];
+748                           end
+                        MISSING_ELSE
+749        1/1                if ((CVA6Cfg.FpPresent || (CVA6Cfg.CvxifEn &amp;&amp; OPERANDS_PER_INSTR == 3)) &amp;&amp; forward_rs3[i]) begin
+750        <font color = "grey">unreachable  </font>        fu_data_n[i].imm = imm_forward_rs3;
+751                           end
+                        MISSING_ELSE
+752                     
+753                           // use the PC as operand a
+754        1/1                if (issue_instr_i[i].use_pc) begin
+755        1/1                  fu_data_n[i].operand_a = {
+756                               {CVA6Cfg.XLEN - CVA6Cfg.VLEN{issue_instr_i[i].pc[CVA6Cfg.VLEN-1]}}, issue_instr_i[i].pc
+757                             };
+758                           end
+                        MISSING_ELSE
+759                     
+760                           // use the zimm as operand a
+761        1/1                if (issue_instr_i[i].use_zimm) begin
+762                             // zero extend operand a
+763        1/1                  fu_data_n[i].operand_a = {{CVA6Cfg.XLEN - 5{1'b0}}, issue_instr_i[i].rs1[4:0]};
+764                           end
+                        MISSING_ELSE
+765                           // or is it an immediate (including PC), this is not the case for a store, control flow, and accelerator instructions
+766                           // also make sure operand B is not already used as an FP operand
+767        1/1                if (issue_instr_i[i].use_imm &amp;&amp; (issue_instr_i[i].fu != STORE) &amp;&amp; (issue_instr_i[i].fu != CTRL_FLOW) &amp;&amp; (issue_instr_i[i].fu != ACCEL) &amp;&amp; !(CVA6Cfg.FpPresent &amp;&amp; is_rs2_fpr(
+768                                   issue_instr_i[i].op
+769                               ))) begin
+770        1/1                  fu_data_n[i].operand_b = issue_instr_i[i].result;
+771                           end
+                        MISSING_ELSE
+772                         end
+773                       end
+774                     
+775                       always_comb begin
+776        1/1              alu_valid_n    = '0;
+777        1/1              lsu_valid_n    = '0;
+778        1/1              mult_valid_n   = '0;
+779        1/1              fpu_valid_n    = '0;
+780        1/1              fpu_fmt_n      = '0;
+781        1/1              fpu_rm_n       = '0;
+782        1/1              alu2_valid_n   = '0;
+783        1/1              csr_valid_n    = '0;
+784        1/1              branch_valid_n = '0;
+785        1/1              for (int unsigned i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+786        1/1                if (!issue_instr_i[i].ex.valid &amp;&amp; issue_instr_valid_i[i] &amp;&amp; issue_ack_o[i]) begin
+787        1/1                  case (issue_instr_i[i].fu)
+788                               ALU: begin
+789        1/1                      if (CVA6Cfg.SuperscalarEn &amp;&amp; !fus_busy[i].alu2) begin
+790        <font color = "grey">unreachable  </font>              alu2_valid_n[i] = 1'b1;
+791                                 end else begin
+792        1/1                        alu_valid_n[i] = 1'b1;
+793                                 end
+794                               end
+795                               CTRL_FLOW: begin
+796        1/1                      branch_valid_n[i] = 1'b1;
+797                               end
+798                               MULT: begin
+799        1/1                      mult_valid_n[i] = 1'b1;
+800                               end
+801                               LOAD, STORE: begin
+802        1/1                      lsu_valid_n[i] = 1'b1;
+803                               end
+804                               CSR: begin
+805        1/1                      csr_valid_n[i] = 1'b1;
+806                               end
+807                               default: begin
+808        1/1                      if (issue_instr_i[i].fu == FPU &amp;&amp; CVA6Cfg.FpPresent) begin
+809        <font color = "grey">unreachable  </font>              fpu_valid_n[i] = 1'b1;
+810        <font color = "grey">unreachable  </font>              fpu_fmt_n      = orig_instr.rftype.fmt;  // fmt bits from instruction
+811        <font color = "grey">unreachable  </font>              fpu_rm_n       = orig_instr.rftype.rm;  // rm bits from instruction
+812        1/1                      end else if (issue_instr_i[i].fu == FPU_VEC &amp;&amp; CVA6Cfg.FpPresent) begin
+813        <font color = "grey">unreachable  </font>              fpu_valid_n[i] = 1'b1;
+814        <font color = "grey">unreachable  </font>              fpu_fmt_n      = orig_instr.rvftype.vfmt;  // vfmt bits from instruction
+815        <font color = "grey">unreachable  </font>              fpu_rm_n       = {2'b0, orig_instr.rvftype.repl};  // repl bit from instruction
+816                                 end
+                        MISSING_ELSE
+817                               end
+818                             endcase
+819                           end
+                        MISSING_ELSE
+820                         end
+821                         // if we got a flush request, de-assert the valid flag, otherwise we will start this
+822                         // functional unit with the wrong inputs
+823        1/1              if (flush_i) begin
+824        1/1                alu_valid_n    = '0;
+825        1/1                lsu_valid_n    = '0;
+826        1/1                mult_valid_n   = '0;
+827        1/1                fpu_valid_n    = '0;
+828        1/1                alu2_valid_n   = '0;
+829        1/1                csr_valid_n    = '0;
+830        1/1                branch_valid_n = '0;
+831                         end
+                        MISSING_ELSE
+832                       end
+833                       // FU select, assert the correct valid out signal (in the next cycle)
+834                       // This needs to be like this to make verilator happy. I know its ugly.
+835                       always_ff @(posedge clk_i or negedge rst_ni) begin
+836        1/1              if (!rst_ni) begin
+837        1/1                alu_valid_q    &lt;= '0;
+838        1/1                lsu_valid_q    &lt;= '0;
+839        1/1                mult_valid_q   &lt;= '0;
+840        1/1                fpu_valid_q    &lt;= '0;
+841        1/1                fpu_fmt_q      &lt;= '0;
+842        1/1                fpu_rm_q       &lt;= '0;
+843        1/1                alu2_valid_q   &lt;= '0;
+844        1/1                csr_valid_q    &lt;= '0;
+845        1/1                branch_valid_q &lt;= '0;
+846                         end else begin
+847        1/1                alu_valid_q    &lt;= alu_valid_n;
+848        1/1                lsu_valid_q    &lt;= lsu_valid_n;
+849        1/1                mult_valid_q   &lt;= mult_valid_n;
+850        1/1                fpu_valid_q    &lt;= fpu_valid_n;
+851        1/1                fpu_fmt_q      &lt;= fpu_fmt_n;
+852        1/1                fpu_rm_q       &lt;= fpu_rm_n;
+853        1/1                alu2_valid_q   &lt;= alu2_valid_n;
+854        1/1                csr_valid_q    &lt;= csr_valid_n;
+855        1/1                branch_valid_q &lt;= branch_valid_n;
+856                         end
+857                       end
+858                     
+859                       if (CVA6Cfg.CvxifEn) begin
+860                         always_comb begin
+861        1/1                cvxif_valid_n = '0;
+862        1/1                cvxif_off_instr_n = 32'b0;
+863        1/1                for (int unsigned i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+864        1/1                  if (!issue_instr_i[i].ex.valid &amp;&amp; issue_instr_valid_i[i] &amp;&amp; issue_ack_o[i]) begin
+865        1/1                    case (issue_instr_i[i].fu)
+866                                 CVXIF: begin
+867        1/1                        cvxif_valid_n[i]  = 1'b1;
+868        1/1                        cvxif_off_instr_n = orig_instr[i];
+869                                 end
+870        1/1                      default: ;
+871                               endcase
+872                             end
+                        MISSING_ELSE
+873                           end
+874        1/1                if (flush_i) begin
+875        1/1                  cvxif_valid_n = '0;
+876        1/1                  cvxif_off_instr_n = 32'b0;
+877                           end
+                        MISSING_ELSE
+878                         end
+879                         always_ff @(posedge clk_i or negedge rst_ni) begin
+880        1/1                if (!rst_ni) begin
+881        1/1                  cvxif_valid_q &lt;= '0;
+882        1/1                  cvxif_off_instr_q &lt;= 32'b0;
+883                           end else begin
+884        1/1                  cvxif_valid_q &lt;= cvxif_valid_n;
+885        1/1                  cvxif_off_instr_q &lt;= cvxif_off_instr_n;
+886                           end
+887                         end
+888                       end
+889                     
+890                       always_comb begin : gen_check_waw_dependencies
+891        1/1              stall_waw = '1;
+892        1/1              for (int unsigned i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+893        1/1                if (issue_instr_valid_i[i] &amp;&amp; !fu_busy[i]) begin
+894                             // -----------------------------------------
+895                             // WAW - Write After Write Dependency Check
+896                             // -----------------------------------------
+897                             // no other instruction has the same destination register -&gt; issue the instruction
+898        1/1                  if ((CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+899                                     issue_instr_i[i].op
+900                                 )) ? (rd_clobber_fpr[issue_instr_i[i].rd] == NONE) :
+901                                     (rd_clobber_gpr[issue_instr_i[i].rd] == NONE)) begin
+902        1/1                    stall_waw[i] = 1'b0;
+903                             end
+                        MISSING_ELSE
+904                             // or check that the target destination register will be written in this cycle by the
+905                             // commit stage
+906        1/1                  for (int unsigned c = 0; c &lt; CVA6Cfg.NrCommitPorts; c++) begin
+907        1/1                    if ((CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+908                                       issue_instr_i[i].op
+909                                   )) ? (we_fpr_i[c] &amp;&amp; waddr_i[c] == issue_instr_i[i].rd) :
+910                                       (we_gpr_i[c] &amp;&amp; waddr_i[c] == issue_instr_i[i].rd)) begin
+911        1/1                      stall_waw[i] = 1'b0;
+912                               end
+                        MISSING_ELSE
+913                             end
+914        1/1                  if (CVA6Cfg.SuperscalarEn &amp;&amp; i &gt; 0) begin
+915        <font color = "grey">unreachable  </font>          if ((issue_instr_i[i].rd == issue_instr_i[i-1].rd) &amp;&amp; (issue_instr_i[i].rd != '0)) begin
+916        <font color = "grey">unreachable  </font>            stall_waw[i] = 1'b1;
+917                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+918                             end
+                        MISSING_ELSE
+919                           end
+                        MISSING_ELSE
+920                         end
+921                       end
+922                     
+923                     
+924                       // We can issue an instruction if we do not detect that any other instruction is writing the same
+925                       // destination register.
+926                       // We also need to check if there is an unresolved branch in the scoreboard.
+927                       always_comb begin : issue_scoreboard
+928        1/1              for (int unsigned i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+929                           // default assignment
+930        1/1                issue_ack[i] = 1'b0;
+931                           // check that the instruction we got is valid
+932                           // and that the functional unit we need is not busy
+933        1/1                if (issue_instr_valid_i[i] &amp;&amp; !fu_busy[i]) begin
+934        1/1                  if (!stall_raw[i] &amp;&amp; !stall_waw[i]) begin
+935        1/1                    issue_ack[i] = 1'b1;
+936                             end
+                        MISSING_ELSE
+937        1/1                  if (issue_instr_i[i].ex.valid) begin
+938        1/1                    issue_ack[i] = 1'b1;
+939                             end
+                        MISSING_ELSE
+940                           end
+                        MISSING_ELSE
+941                         end
+942                     
+943        1/1              issue_ack_o = issue_ack;
+944                         // Do not acknoledge the issued instruction if transaction is not completed.
+945        1/1              if (issue_instr_i[0].fu == CVXIF &amp;&amp; !(x_transaction_accepted_o || x_transaction_rejected)) begin
+946        1/1                issue_ack_o[0] = issue_instr_i[0].ex.valid &amp;&amp; issue_instr_valid_i[0];
+947                         end
+                        MISSING_ELSE
+948        1/1              if (CVA6Cfg.SuperscalarEn) begin
+949        <font color = "grey">unreachable  </font>      if (!issue_ack_o[0]) begin
+950        <font color = "grey">unreachable  </font>        issue_ack_o[1] = 1'b0;
+951                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+952                         end
+                        MISSING_ELSE
+953                       end
+954                     
+955                       // ----------------------
+956                       // Integer Register File
+957                       // ----------------------
+958                       logic [  CVA6Cfg.NrRgprPorts-1:0][CVA6Cfg.XLEN-1:0] rdata;
+959                       logic [  CVA6Cfg.NrRgprPorts-1:0][             4:0] raddr_pack;
+960                     
+961                       // pack signals
+962                       logic [CVA6Cfg.NrCommitPorts-1:0][             4:0] waddr_pack;
+963                       logic [CVA6Cfg.NrCommitPorts-1:0][CVA6Cfg.XLEN-1:0] wdata_pack;
+964                       logic [CVA6Cfg.NrCommitPorts-1:0]                   we_pack;
+965                     
+966                       //adjust address to read from register file (when synchronous RAM is used reads take one cycle, so we advance the address)   
+967                       for (genvar i = 0; i &lt;= CVA6Cfg.NrIssuePorts - 1; i++) begin
+968                         assign raddr_pack[i*OPERANDS_PER_INSTR+0] = CVA6Cfg.FpgaEn &amp;&amp; CVA6Cfg.FpgaAlteraEn ? issue_instr_i_prev[i].rs1[4:0] : issue_instr_i[i].rs1[4:0];
+969                         assign raddr_pack[i*OPERANDS_PER_INSTR+1] = CVA6Cfg.FpgaEn &amp;&amp; CVA6Cfg.FpgaAlteraEn ? issue_instr_i_prev[i].rs2[4:0] : issue_instr_i[i].rs2[4:0];
+970                         if (OPERANDS_PER_INSTR == 3) begin
+971                           assign raddr_pack[i*OPERANDS_PER_INSTR+2] = CVA6Cfg.FpgaEn &amp;&amp; CVA6Cfg.FpgaAlteraEn ? issue_instr_i_prev[i].result[4:0] : issue_instr_i[i].result[4:0];
+972                         end
+973                       end
+974                     
+975                       for (genvar i = 0; i &lt; CVA6Cfg.NrCommitPorts; i++) begin : gen_write_back_port
+976                         assign waddr_pack[i] = waddr_i[i];
+977                         assign wdata_pack[i] = wdata_i[i];
+978                         assign we_pack[i]    = we_gpr_i[i];
+979                       end
+980                       if (CVA6Cfg.FpgaEn) begin : gen_fpga_regfile
+981                         ariane_regfile_fpga #(
+982                             .CVA6Cfg      (CVA6Cfg),
+983                             .DATA_WIDTH   (CVA6Cfg.XLEN),
+984                             .NR_READ_PORTS(CVA6Cfg.NrRgprPorts),
+985                             .ZERO_REG_ZERO(1)
+986                         ) i_ariane_regfile_fpga (
+987                             .clk_i,
+988                             .rst_ni,
+989                             .test_en_i(1'b0),
+990                             .raddr_i  (raddr_pack),
+991                             .rdata_o  (rdata),
+992                             .waddr_i  (waddr_pack),
+993                             .wdata_i  (wdata_pack),
+994                             .we_i     (we_pack)
+995                         );
+996                       end else begin : gen_asic_regfile
+997                         ariane_regfile #(
+998                             .CVA6Cfg      (CVA6Cfg),
+999                             .DATA_WIDTH   (CVA6Cfg.XLEN),
+1000                            .NR_READ_PORTS(CVA6Cfg.NrRgprPorts),
+1001                            .ZERO_REG_ZERO(1)
+1002                        ) i_ariane_regfile (
+1003                            .clk_i,
+1004                            .rst_ni,
+1005                            .test_en_i(1'b0),
+1006                            .raddr_i  (raddr_pack),
+1007                            .rdata_o  (rdata),
+1008                            .waddr_i  (waddr_pack),
+1009                            .wdata_i  (wdata_pack),
+1010                            .we_i     (we_pack)
+1011                        );
+1012                      end
+1013                    
+1014                      // -----------------------------
+1015                      // Floating-Point Register File
+1016                      // -----------------------------
+1017                      logic [2:0][CVA6Cfg.FLen-1:0] fprdata;
+1018                    
+1019                      // pack signals
+1020                      logic [2:0][4:0] fp_raddr_pack;
+1021                      logic [CVA6Cfg.NrCommitPorts-1:0][CVA6Cfg.XLEN-1:0] fp_wdata_pack;
+1022                    
+1023                      always_comb begin : assign_fp_raddr_pack
+1024       1/1              fp_raddr_pack = {
+1025                          issue_instr_i[0].result[4:0], issue_instr_i[0].rs2[4:0], issue_instr_i[0].rs1[4:0]
+1026                        };
+1027                    
+1028       1/1              if (CVA6Cfg.SuperscalarEn) begin
+1029       <font color = "grey">unreachable  </font>      if (!(issue_instr_i[0].fu inside {FPU, FPU_VEC})) begin
+1030       <font color = "grey">unreachable  </font>        fp_raddr_pack = {
+1031                              issue_instr_i[1].result[4:0], issue_instr_i[1].rs2[4:0], issue_instr_i[1].rs1[4:0]
+1032                            };
+1033                          end
+                   <font color = "red">==>  MISSING_ELSE</font>
+1034                        end
+                        MISSING_ELSE
+1035                      end
+1036                    
+1037                      generate
+1038                        if (CVA6Cfg.FpPresent) begin : float_regfile_gen
+1039                          for (genvar i = 0; i &lt; CVA6Cfg.NrCommitPorts; i++) begin : gen_fp_wdata_pack
+1040                            assign fp_wdata_pack[i] = {wdata_i[i][CVA6Cfg.FLen-1:0]};
+1041                          end
+1042                          if (CVA6Cfg.FpgaEn) begin : gen_fpga_fp_regfile
+1043                            ariane_regfile_fpga #(
+1044                                .CVA6Cfg      (CVA6Cfg),
+1045                                .DATA_WIDTH   (CVA6Cfg.FLen),
+1046                                .NR_READ_PORTS(3),
+1047                                .ZERO_REG_ZERO(0)
+1048                            ) i_ariane_fp_regfile_fpga (
+1049                                .clk_i,
+1050                                .rst_ni,
+1051                                .test_en_i(1'b0),
+1052                                .raddr_i  (fp_raddr_pack),
+1053                                .rdata_o  (fprdata),
+1054                                .waddr_i  (waddr_pack),
+1055                                .wdata_i  (fp_wdata_pack),
+1056                                .we_i     (we_fpr_i)
+1057                            );
+1058                          end else begin : gen_asic_fp_regfile
+1059                            ariane_regfile #(
+1060                                .CVA6Cfg      (CVA6Cfg),
+1061                                .DATA_WIDTH   (CVA6Cfg.FLen),
+1062                                .NR_READ_PORTS(3),
+1063                                .ZERO_REG_ZERO(0)
+1064                            ) i_ariane_fp_regfile (
+1065                                .clk_i,
+1066                                .rst_ni,
+1067                                .test_en_i(1'b0),
+1068                                .raddr_i  (fp_raddr_pack),
+1069                                .rdata_o  (fprdata),
+1070                                .waddr_i  (waddr_pack),
+1071                                .wdata_i  (fp_wdata_pack),
+1072                                .we_i     (we_fpr_i)
+1073                            );
+1074                          end
+1075                        end else begin : no_fpr_gen
+1076                          assign fprdata = '{default: '0};
+1077                        end
+1078                      endgenerate
+1079                    
+1080                      if (OPERANDS_PER_INSTR == 3) begin : gen_operand_c
+1081                        assign operand_c_fpr = {{CVA6Cfg.XLEN - CVA6Cfg.FLen{1'b0}}, fprdata[2]};
+1082                      end else begin
+1083                        assign operand_c_fpr = fprdata[2];
+1084                      end
+1085                    
+1086                      for (genvar i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+1087                        if (OPERANDS_PER_INSTR == 3) begin : gen_operand_c
+1088                          assign operand_c_gpr[i] = rdata[i*OPERANDS_PER_INSTR+2];
+1089                        end
+1090                    
+1091                        assign operand_a_regfile[i] = (CVA6Cfg.FpPresent &amp;&amp; is_rs1_fpr(
+1092                            issue_instr_i[i].op
+1093                        )) ? {{CVA6Cfg.XLEN - CVA6Cfg.FLen{1'b0}}, fprdata[0]} : rdata[i*OPERANDS_PER_INSTR+0];
+1094                        assign operand_b_regfile[i] = (CVA6Cfg.FpPresent &amp;&amp; is_rs2_fpr(
+1095                            issue_instr_i[i].op
+1096                        )) ? {{CVA6Cfg.XLEN - CVA6Cfg.FLen{1'b0}}, fprdata[1]} : rdata[i*OPERANDS_PER_INSTR+1];
+1097                        assign operand_c_regfile[i] = (OPERANDS_PER_INSTR == 3) ? ((CVA6Cfg.FpPresent &amp;&amp; is_imm_fpr(
+1098                            issue_instr_i[i].op
+1099                        )) ? operand_c_fpr : operand_c_gpr[i]) : operand_c_fpr;
+1100                      end
+1101                    
+1102                      // ----------------------
+1103                      // Registers (ID &lt;-&gt; EX)
+1104                      // ----------------------
+1105                    
+1106                      always_comb begin
+1107       1/1              pc_n = '0;
+1108       1/1              is_compressed_instr_n = 1'b0;
+1109       1/1              branch_predict_n = {cf_t'(0), {CVA6Cfg.VLEN{1'b0}}};
+1110       1/1              if (CVA6Cfg.SuperscalarEn) begin
+1111       <font color = "grey">unreachable  </font>      if (issue_instr_i[1].fu == CTRL_FLOW) begin
+1112       <font color = "grey">unreachable  </font>        pc_n                  = issue_instr_i[1].pc;
+1113       <font color = "grey">unreachable  </font>        is_compressed_instr_n = issue_instr_i[1].is_compressed;
+1114       <font color = "grey">unreachable  </font>        branch_predict_n      = issue_instr_i[1].bp;
+1115                          end
+                   <font color = "red">==>  MISSING_ELSE</font>
+1116                        end
+                        MISSING_ELSE
+1117       1/1              if (issue_instr_i[0].fu == CTRL_FLOW) begin
+1118       1/1                pc_n                  = issue_instr_i[0].pc;
+1119       1/1                is_compressed_instr_n = issue_instr_i[0].is_compressed;
+1120       1/1                branch_predict_n      = issue_instr_i[0].bp;
+1121                        end
+                        MISSING_ELSE
+1122       1/1              x_transaction_rejected_n = 1'b0;
+1123       1/1              if (issue_instr_i[0].fu == CVXIF) begin
+1124       1/1                x_transaction_rejected_n = x_transaction_rejected;
+1125                        end
+                        MISSING_ELSE
+1126                      end
+1127                    
+1128                    
+1129                      always_ff @(posedge clk_i or negedge rst_ni) begin
+1130       1/1              if (!rst_ni) begin
+1131       1/1                fu_data_q &lt;= '0;
+1132       1/1                if (CVA6Cfg.RVH) begin
+1133       <font color = "grey">unreachable  </font>        tinst_q &lt;= '0;
+1134                          end
+                        MISSING_ELSE
+1135       1/1                pc_o                     &lt;= '0;
+1136       1/1                is_zcmt_o                &lt;= '0;
+1137       1/1                is_compressed_instr_o    &lt;= 1'b0;
+1138       1/1                branch_predict_o         &lt;= {cf_t'(0), {CVA6Cfg.VLEN{1'b0}}};
+1139       1/1                x_transaction_rejected_o &lt;= 1'b0;
+1140                        end else begin
+1141       1/1                fu_data_q &lt;= fu_data_n;
+1142       1/1                pc_o &lt;= pc_n;
+1143       1/1                is_compressed_instr_o &lt;= is_compressed_instr_n;
+1144       1/1                branch_predict_o &lt;= branch_predict_n;
+1145       1/1                if (CVA6Cfg.RVH) begin
+1146       <font color = "grey">unreachable  </font>        tinst_q &lt;= tinst_n;
+1147                          end
+                        MISSING_ELSE
+1148       1/1                if (issue_instr_i[0].fu == CTRL_FLOW) begin
+1149       1/1(1 unreachable)          if (CVA6Cfg.RVZCMT) is_zcmt_o &lt;= issue_instr_i[0].is_zcmt;
+1150       1/1                  else is_zcmt_o &lt;= '0;
+1151                          end
+                        MISSING_ELSE
+1152       1/1                x_transaction_rejected_o &lt;= x_transaction_rejected_n;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod9.html" >issue_read_operands</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>58</td><td>58</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>58</td><td>58</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       249
+ EXPRESSION ((issue_instr_i[0].fu == CVXIF) &amp;&amp; ((!stall_waw[0])))
+             ---------------1--------------    --------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       249
+ SUB-EXPRESSION (issue_instr_i[0].fu == CVXIF)
+                ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       250
+ EXPRESSION (((!issue_instr_i[0].ex.valid)) &amp;&amp; issue_instr_valid_i[0] &amp;&amp; cvxif_req_allowed)
+             ---------------1--------------    -----------2----------    --------3--------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       251
+ EXPRESSION (x_issue_valid_o &amp;&amp; x_issue_ready_i &amp;&amp; x_issue_resp_i.accept)
+             -------1-------    -------2-------    ----------3----------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       252
+ EXPRESSION (x_issue_valid_o &amp;&amp; x_issue_ready_i &amp;&amp; ((~x_issue_resp_i.accept)))
+             -------1-------    -------2-------    -------------3------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       336
+ EXPRESSION (issue_instr_i[0].op == ADD)
+            --------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       677
+ EXPRESSION (x_transaction_rejected ? 1'b0 : (stall_rs1[0] || stall_rs2[0] || (((32'b00000000000000000000000000000010 == 3) &amp;&amp; stall_rs3[0]))))
+             -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       677
+ SUB-EXPRESSION (stall_rs1[0] || stall_rs2[0] || (((32'b00000000000000000000000000000010 == 3) &amp;&amp; stall_rs3[0])))
+                 ------1-----    ------2-----    -------------------------------3-------------------------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>0</td><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       728
+ SUB-EXPRESSION ((issue_instr_i[0].op == OFFLOAD) ? operand_c_regfile[0] : issue_instr_i[0].result)
+                 ----------------1---------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       728
+ SUB-EXPRESSION (issue_instr_i[0].op == OFFLOAD)
+                ----------------1---------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       786
+ EXPRESSION (((!issue_instr_i[i].ex.valid)) &amp;&amp; issue_instr_valid_i[i] &amp;&amp; issue_ack_o[i])
+             ---------------1--------------    -----------2----------    -------3------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       864
+ EXPRESSION (((!issue_instr_i[i].ex.valid)) &amp;&amp; issue_instr_valid_i[i] &amp;&amp; issue_ack_o[i])
+             ---------------1--------------    -----------2----------    -------3------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       893
+ EXPRESSION (issue_instr_valid_i[i] &amp;&amp; ((!fu_busy[i])))
+             -----------1----------    -------2-------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       915
+ EXPRESSION ((issue_instr_i[i].rd == issue_instr_i[(i - 1)].rd) &amp;&amp; (issue_instr_i[i].rd != '0))
+             -------------------------1------------------------    -------------2-------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       915
+ SUB-EXPRESSION (issue_instr_i[i].rd == issue_instr_i[(i - 1)].rd)
+                -------------------------1------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       915
+ SUB-EXPRESSION (issue_instr_i[i].rd != '0)
+                -------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       933
+ EXPRESSION (issue_instr_valid_i[i] &amp;&amp; ((!fu_busy[i])))
+             -----------1----------    -------2-------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       934
+ EXPRESSION (((!stall_raw[i])) &amp;&amp; ((!stall_waw[i])))
+             --------1--------    --------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       945
+ EXPRESSION ((issue_instr_i[0].fu == CVXIF) &amp;&amp; ( ! (x_transaction_accepted_o || x_transaction_rejected) ))
+             ---------------1--------------    -----------------------------2----------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       945
+ SUB-EXPRESSION (issue_instr_i[0].fu == CVXIF)
+                ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       945
+ SUB-EXPRESSION ( ! (x_transaction_accepted_o || x_transaction_rejected) )
+                    --------------------------1-------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       945
+ SUB-EXPRESSION (x_transaction_accepted_o || x_transaction_rejected)
+                 ------------1-----------    -----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       946
+ EXPRESSION (issue_instr_i[0].ex.valid &amp;&amp; issue_instr_valid_i[0])
+             ------------1------------    -----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       1111
+ EXPRESSION (issue_instr_i[1].fu == CTRL_FLOW)
+            -----------------1----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       1117
+ EXPRESSION (issue_instr_i[0].fu == CTRL_FLOW)
+            -----------------1----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       1123
+ EXPRESSION (issue_instr_i[0].fu == CVXIF)
+            ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       1148
+ EXPRESSION (issue_instr_i[0].fu == CTRL_FLOW)
+            -----------------1----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_12">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_issue_read_operands">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

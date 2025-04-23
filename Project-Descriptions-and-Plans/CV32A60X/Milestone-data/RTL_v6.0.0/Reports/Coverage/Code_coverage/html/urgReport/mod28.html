@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: serdiv</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_serdiv'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_serdiv')">serdiv</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.13</td>
+<td class="s10 cl rt"><a href="mod28.html#Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod28.html#Cond" > 98.26</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/serdiv.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/serdiv.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod28.html#inst_tag_73"  onclick="showContent('inst_tag_73')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.i_mult.i_div</a></td>
+<td class="s9 cl rt"> 99.13</td>
+<td class="s10 cl rt"><a href="mod28.html#Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod28.html#Cond" > 98.26</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_serdiv'>
+<hr>
+<a name="inst_tag_73"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_73" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.i_mult.i_div</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.13</td>
+<td class="s10 cl rt"><a href="mod28.html#Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod28.html#Cond" > 98.26</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.82</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 99.64</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod56.html#inst_tag_205" >i_mult</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod15.html#inst_tag_22" id="tag_urg_inst_22">i_lzc_a</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod15.html#inst_tag_23" id="tag_urg_inst_23">i_lzc_b</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_serdiv'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod28.html" >serdiv</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>60</td><td>60</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>169</td><td>35</td><td>35</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>248</td><td>25</td><td>25</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+168                         // default
+169        1/1              state_d    = state_q;
+170        1/1              in_rdy_o   = 1'b0;
+171        1/1              out_vld_o  = 1'b0;
+172        1/1              load_en    = 1'b0;
+173        1/1              a_reg_en   = 1'b0;
+174        1/1              b_reg_en   = 1'b0;
+175        1/1              res_reg_en = 1'b0;
+176                     
+177        1/1              unique case (state_q)
+178                           IDLE: begin
+179        1/1                  in_rdy_o = 1'b1;
+180                     
+181        1/1                  if (in_vld_i) begin
+182                               // CVA6: there is a cycle delay until the valid signal is asserted by the id stage
+183                               // Ara:  we need a stable handshake
+184        1/1                    in_rdy_o = (STABLE_HANDSHAKE) ? 1'b1 : 1'b0;
+185        1/1                    a_reg_en = 1'b1;
+186        1/1                    b_reg_en = 1'b1;
+187        1/1                    load_en  = 1'b1;
+188        1/1                    state_d  = DIVIDE;
+189                             end
+                        MISSING_ELSE
+190                           end
+191                           DIVIDE: begin
+192        1/1                  if (~(div_res_zero_q | op_b_zero_q | op_b_neg_one_q)) begin
+193        1/1                    a_reg_en   = ab_comp;
+194        1/1                    b_reg_en   = 1'b1;
+195        1/1                    res_reg_en = 1'b1;
+196                             end
+                        MISSING_ELSE
+197                             // can end the division immediately if the result is known
+198        1/1                  if (div_res_zero_q | op_b_zero_q | op_b_neg_one_q) begin
+199        1/1                    out_vld_o = 1'b1;
+200        1/1                    state_d   = FINISH;
+201        1/1                    if (out_rdy_i) begin
+202                                 // in_rdy_o = 1'b1;// there is a cycle delay until the valid signal is asserted by the id stage
+203        1/1                      state_d = IDLE;
+204                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+205        1/1                  end else if (cnt_zero) begin
+206        1/1                    state_d = FINISH;
+207                             end
+                        MISSING_ELSE
+208                           end
+209                           FINISH: begin
+210        1/1                  out_vld_o = 1'b1;
+211                     
+212        1/1                  if (out_rdy_i) begin
+213                               // in_rdy_o = 1'b1;// there is a cycle delay until the valid signal is asserted by the id stage
+214        1/1                    state_d = IDLE;
+215                             end
+                   <font color = "red">==>  MISSING_ELSE</font>
+216                           end
+217        1/1                default: state_d = IDLE;
+218                         endcase
+219                     
+220        1/1              if (flush_i) begin
+221        1/1                a_reg_en = 1'b0;
+222        1/1                b_reg_en = 1'b0;
+223        1/1                load_en  = 1'b0;
+224        1/1                state_d  = IDLE;
+225                         end
+                        MISSING_ELSE
+226                       end
+227                     
+228                       /////////////////////////////////////
+229                       // regs, flags
+230                       /////////////////////////////////////
+231                     
+232                       // get flags
+233                       assign rem_sel_d = (load_en) ? opcode_i[1] : rem_sel_q;
+234                       assign comp_inv_d = (load_en) ? opcode_i[0] &amp; op_b_sign : comp_inv_q;
+235                       assign op_b_zero_d = (load_en) ? op_b_zero : op_b_zero_q;
+236                       assign op_b_neg_one_d = (load_en) ? op_b_neg_one : op_b_neg_one_q;
+237                       assign res_inv_d       = (load_en) ? (~op_b_zero | opcode_i[1]) &amp; opcode_i[0] &amp; (op_a_sign ^ op_b_sign ^ op_b_neg_one) : res_inv_q;
+238                     
+239                       // transaction id
+240                       assign id_d = (load_en) ? id_i : id_q;
+241                       assign id_o = id_q;
+242                     
+243                       assign op_a_d = (a_reg_en) ? add_out : op_a_q;
+244                       assign op_b_d = (b_reg_en) ? b_mux : op_b_q;
+245                       assign res_d = (load_en) ? '0 : (res_reg_en) ? {res_q[$high(res_q)-1:0], ab_comp} : res_q;
+246                     
+247                       always_ff @(posedge clk_i or negedge rst_ni) begin : p_regs
+248        1/1              if (~rst_ni) begin
+249        1/1                state_q        &lt;= IDLE;
+250        1/1                op_a_q         &lt;= '0;
+251        1/1                op_b_q         &lt;= '0;
+252        1/1                res_q          &lt;= '0;
+253        1/1                cnt_q          &lt;= '0;
+254        1/1                id_q           &lt;= '0;
+255        1/1                rem_sel_q      &lt;= 1'b0;
+256        1/1                comp_inv_q     &lt;= 1'b0;
+257        1/1                res_inv_q      &lt;= 1'b0;
+258        1/1                op_b_zero_q    &lt;= 1'b0;
+259        1/1                op_b_neg_one_q &lt;= 1'b0;
+260        1/1                div_res_zero_q &lt;= 1'b0;
+261                         end else begin
+262        1/1                state_q        &lt;= state_d;
+263        1/1                op_a_q         &lt;= op_a_d;
+264        1/1                op_b_q         &lt;= op_b_d;
+265        1/1                res_q          &lt;= res_d;
+266        1/1                cnt_q          &lt;= cnt_d;
+267        1/1                id_q           &lt;= id_d;
+268        1/1                rem_sel_q      &lt;= rem_sel_d;
+269        1/1                comp_inv_q     &lt;= comp_inv_d;
+270        1/1                res_inv_q      &lt;= res_inv_d;
+271        1/1                op_b_zero_q    &lt;= op_b_zero_d;
+272        1/1                op_b_neg_one_q &lt;= op_b_neg_one_d;
+273        1/1                div_res_zero_q &lt;= div_res_zero_d;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod28.html" >serdiv</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">Conditions</td><td>115</td><td>113</td><td>98.26</td></tr>
+<tr class="s9"><td class="lf">Logical</td><td>115</td><td>113</td><td>98.26</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       103
+ EXPRESSION (lzc_b_no_one &amp; ((~op_b_sign)))
+             ------1-----   -------2------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       104
+ EXPRESSION (lzc_b_no_one &amp; op_b_sign)
+             ------1-----   ----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       106
+ EXPRESSION ((opcode_i[0] &amp; op_a_sign) ? ({(~op_a_i[(31 - 1):0]), 1'b1}) : op_a_i)
+             ------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       106
+ SUB-EXPRESSION (opcode_i[0] &amp; op_a_sign)
+                 -----1-----   ----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       107
+ EXPRESSION ((opcode_i[0] &amp; op_b_sign) ? ((~op_b_i)) : op_b_i)
+             ------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       107
+ SUB-EXPRESSION (opcode_i[0] &amp; op_b_sign)
+                 -----1-----   ----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       127
+ EXPRESSION (lzc_a_no_one ? WIDTH : ({1'b0, lzc_a_result}))
+             ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       133
+ EXPRESSION (load_en ? div_shift[6] : div_res_zero_q)
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       139
+ EXPRESSION (load_en &amp; ( ~ (opcode_i[0] &amp; (op_a_sign ^ op_b_sign)) ))
+             ---1---   ----------------------2----------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       139
+ SUB-EXPRESSION (opcode_i[0] &amp; (op_a_sign ^ op_b_sign))
+                 -----1-----   -----------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       139
+ SUB-EXPRESSION (op_a_sign ^ op_b_sign)
+                 ----1----   ----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       142
+ EXPRESSION (load_en ? op_a_i : op_b_q)
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       145
+ EXPRESSION (load_en ? op_b : ({comp_inv_q, op_b_q[31:1]}))
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       148
+ EXPRESSION (rem_sel_q ? (op_b_neg_one_q ? '0 : op_a_q) : (op_b_zero_q ? '1 : (op_b_neg_one_q ? op_a_q : res_q)))
+             ----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       148
+ SUB-EXPRESSION (op_b_neg_one_q ? '0 : op_a_q)
+                 -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       148
+ SUB-EXPRESSION (op_b_zero_q ? '1 : (op_b_neg_one_q ? op_a_q : res_q))
+                 -----1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       148
+ SUB-EXPRESSION (op_b_neg_one_q ? op_a_q : res_q)
+                 -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       151
+ EXPRESSION (res_inv_q ? ((-$signed(out_mux))) : out_mux)
+             ----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       154
+ EXPRESSION (((op_a_q == op_b_q) | ((op_a_q &gt; op_b_q) ^ comp_inv_q)) &amp; (((|op_a_q)) | op_b_zero_q))
+             ---------------------------1---------------------------   -------------2-------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       154
+ SUB-EXPRESSION ((op_a_q == op_b_q) | ((op_a_q &gt; op_b_q) ^ comp_inv_q))
+                 ---------1--------   ----------------2---------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       154
+ SUB-EXPRESSION (op_a_q == op_b_q)
+                ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       154
+ SUB-EXPRESSION ((op_a_q &gt; op_b_q) ^ comp_inv_q)
+                 --------1--------   -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       154
+ SUB-EXPRESSION (((|op_a_q)) | op_b_zero_q)
+                 -----1-----   -----2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       157
+ EXPRESSION (load_en ? 0 : op_a_q)
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       158
+ EXPRESSION (pm_sel ? ((add_tmp + add_mux)) : ((add_tmp - $signed(add_mux))))
+             ---1--
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       164
+ EXPRESSION (cnt_q == 5'b0)
+            -------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       165
+ EXPRESSION (load_en ? div_shift[($clog2(WIDTH) - 1):0] : (((~cnt_zero)) ? ((cnt_q - 1)) : cnt_q))
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       165
+ SUB-EXPRESSION (((~cnt_zero)) ? ((cnt_q - 1)) : cnt_q)
+                 ------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       192
+ SUB-EXPRESSION (div_res_zero_q | op_b_zero_q | op_b_neg_one_q)
+                 -------1------   -----2-----   -------3------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       198
+ EXPRESSION (div_res_zero_q | op_b_zero_q | op_b_neg_one_q)
+             -------1------   -----2-----   -------3------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       233
+ EXPRESSION (load_en ? opcode_i[1] : rem_sel_q)
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       234
+ EXPRESSION (load_en ? (opcode_i[0] &amp; op_b_sign) : comp_inv_q)
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       234
+ SUB-EXPRESSION (opcode_i[0] &amp; op_b_sign)
+                 -----1-----   ----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       235
+ EXPRESSION (load_en ? op_b_zero : op_b_zero_q)
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       236
+ EXPRESSION (load_en ? op_b_neg_one : op_b_neg_one_q)
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       237
+ EXPRESSION (load_en ? ((((~op_b_zero)) | opcode_i[1]) &amp; opcode_i[0] &amp; (op_a_sign ^ op_b_sign ^ op_b_neg_one)) : res_inv_q)
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       237
+ SUB-EXPRESSION ((((~op_b_zero)) | opcode_i[1]) &amp; opcode_i[0] &amp; (op_a_sign ^ op_b_sign ^ op_b_neg_one))
+                 ---------------1--------------   -----2-----   -------------------3------------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       237
+ SUB-EXPRESSION (((~op_b_zero)) | opcode_i[1])
+                 -------1------   -----2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       237
+ SUB-EXPRESSION (op_a_sign ^ op_b_sign ^ op_b_neg_one)
+                 ----1----   ----2----   ------3-----
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>0</td><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       240
+ EXPRESSION (load_en ? id_i : id_q)
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       243
+ EXPRESSION (a_reg_en ? add_out : op_a_q)
+             ----1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       244
+ EXPRESSION (b_reg_en ? b_mux : op_b_q)
+             ----1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       245
+ EXPRESSION (load_en ? '0 : (res_reg_en ? ({res_q[(31 - 1):0], ab_comp}) : res_q))
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       245
+ SUB-EXPRESSION (res_reg_en ? ({res_q[(31 - 1):0], ab_comp}) : res_q)
+                 -----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_73">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_serdiv">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

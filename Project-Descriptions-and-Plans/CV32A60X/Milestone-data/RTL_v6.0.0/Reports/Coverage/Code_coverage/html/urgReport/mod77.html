@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: controller</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_controller'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_controller')">controller</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod77.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod77.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/controller.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/controller.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod77.html#inst_tag_227"  onclick="showContent('inst_tag_227')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.controller_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod77.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod77.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_controller'>
+<hr>
+<a name="inst_tag_227"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_227" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.controller_i</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod77.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod77.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod38.html#inst_tag_151" >cva6_only_pipeline.i_cva6_pipeline</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_controller'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod77.html" >controller</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>47</td><td>47</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>92</td><td>41</td><td>41</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>245</td><td>1</td><td>1</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>252</td><td>5</td><td>5</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+91                        always_comb begin : flush_ctrl
+92         1/1              fence_active_d         = fence_active_q;
+93         1/1              set_pc_commit_o        = 1'b0;
+94         1/1              flush_if_o             = 1'b0;
+95         1/1              flush_unissued_instr_o = 1'b0;
+96         1/1              flush_id_o             = 1'b0;
+97         1/1              flush_ex_o             = 1'b0;
+98         1/1              flush_dcache           = 1'b0;
+99         1/1              flush_icache_o         = 1'b0;
+100        1/1              flush_tlb_o            = 1'b0;
+101        1/1              flush_tlb_vvma_o       = 1'b0;
+102        1/1              flush_tlb_gvma_o       = 1'b0;
+103        1/1              flush_bp_o             = 1'b0;
+104                         // ------------
+105                         // Mis-predict
+106                         // ------------
+107                         // flush on mispredict
+108        1/1              if (resolved_branch_i.is_mispredict) begin
+109                           // flush only un-issued instructions
+110        1/1                flush_unissued_instr_o = 1'b1;
+111                           // and if stage
+112        1/1                flush_if_o             = 1'b1;
+113                         end
+                        MISSING_ELSE
+114                     
+115                         // ---------------------------------
+116                         // FENCE
+117                         // ---------------------------------
+118        1/1              if (fence_i) begin
+119                           // this can be seen as a CSR instruction with side-effect
+120        1/1                set_pc_commit_o        = 1'b1;
+121        1/1                flush_if_o             = 1'b1;
+122        1/1                flush_unissued_instr_o = 1'b1;
+123        1/1                flush_id_o             = 1'b1;
+124        1/1                flush_ex_o             = 1'b1;
+125                           // this is not needed in the case since we
+126                           // have a write-through cache in this case
+127        1/1                if (CVA6Cfg.DcacheFlushOnFence) begin
+128        <font color = "grey">unreachable  </font>        flush_dcache   = 1'b1;
+129        <font color = "grey">unreachable  </font>        fence_active_d = 1'b1;
+130                           end
+                        MISSING_ELSE
+131                         end
+                        MISSING_ELSE
+132                     
+133                         // ---------------------------------
+134                         // FENCE.I
+135                         // ---------------------------------
+136        1/1              if (fence_i_i &amp;&amp; (CVA6Cfg.RVZifencei || CVA6Cfg.DCacheType == config_pkg::WB)) begin  /* FIXME */ //confirm that it's only config_pkg::WB and not others caches configurations
+137        <font color = "grey">unreachable  </font>      set_pc_commit_o        = 1'b1;
+138        <font color = "grey">unreachable  </font>      flush_if_o             = 1'b1;
+139        <font color = "grey">unreachable  </font>      flush_unissued_instr_o = 1'b1;
+140        <font color = "grey">unreachable  </font>      flush_id_o             = 1'b1;
+141        <font color = "grey">unreachable  </font>      flush_ex_o             = 1'b1;
+142        <font color = "grey">unreachable  </font>      flush_icache_o         = 1'b1;
+143                           // this is not needed in the case since we
+144                           // have a write-through cache in this case
+145        <font color = "grey">unreachable  </font>      if (CVA6Cfg.DcacheFlushOnFence) begin
+146        <font color = "grey">unreachable  </font>        flush_dcache   = 1'b1;
+147        <font color = "grey">unreachable  </font>        fence_active_d = 1'b1;
+148                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+149                         end
+                        MISSING_ELSE
+150                     
+151                         // this is not needed in the case since we
+152                         // have a write-through cache in this case
+153        1/1              if (CVA6Cfg.DcacheFlushOnFence) begin
+154                           // wait for the acknowledge here
+155        <font color = "grey">unreachable  </font>      if (flush_dcache_ack_i &amp;&amp; fence_active_q) begin
+156        <font color = "grey">unreachable  </font>        fence_active_d = 1'b0;
+157                             // keep the flush dcache signal high as long as we didn't get the acknowledge from the cache
+158        <font color = "grey">unreachable  </font>      end else if (fence_active_q) begin
+159        <font color = "grey">unreachable  </font>        flush_dcache = 1'b1;
+160                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+161                         end
+                        MISSING_ELSE
+162                         // ---------------------------------
+163                         // SFENCE.VMA
+164                         // ---------------------------------
+165        1/1              if (CVA6Cfg.RVS &amp;&amp; sfence_vma_i) begin
+166        <font color = "grey">unreachable  </font>      set_pc_commit_o        = 1'b1;
+167        <font color = "grey">unreachable  </font>      flush_if_o             = 1'b1;
+168        <font color = "grey">unreachable  </font>      flush_unissued_instr_o = 1'b1;
+169        <font color = "grey">unreachable  </font>      flush_id_o             = 1'b1;
+170        <font color = "grey">unreachable  </font>      flush_ex_o             = 1'b1;
+171                     
+172        <font color = "grey">unreachable  </font>      if (CVA6Cfg.RVH &amp;&amp; v_i) flush_tlb_vvma_o = 1'b1;
+173        <font color = "grey">unreachable  </font>      else flush_tlb_o = 1'b1;
+174                         end
+                        MISSING_ELSE
+175                     
+176                         // ---------------------------------
+177                         // HFENCE.VVMA
+178                         // ---------------------------------
+179        1/1              if (CVA6Cfg.RVH &amp;&amp; hfence_vvma_i) begin
+180        <font color = "grey">unreachable  </font>      set_pc_commit_o        = 1'b1;
+181        <font color = "grey">unreachable  </font>      flush_if_o             = 1'b1;
+182        <font color = "grey">unreachable  </font>      flush_unissued_instr_o = 1'b1;
+183        <font color = "grey">unreachable  </font>      flush_id_o             = 1'b1;
+184        <font color = "grey">unreachable  </font>      flush_ex_o             = 1'b1;
+185                     
+186        <font color = "grey">unreachable  </font>      flush_tlb_vvma_o       = 1'b1;
+187                         end
+                        MISSING_ELSE
+188                     
+189                         // ---------------------------------
+190                         // HFENCE.GVMA
+191                         // ---------------------------------
+192        1/1              if (CVA6Cfg.RVH &amp;&amp; hfence_gvma_i) begin
+193        <font color = "grey">unreachable  </font>      set_pc_commit_o        = 1'b1;
+194        <font color = "grey">unreachable  </font>      flush_if_o             = 1'b1;
+195        <font color = "grey">unreachable  </font>      flush_unissued_instr_o = 1'b1;
+196        <font color = "grey">unreachable  </font>      flush_id_o             = 1'b1;
+197        <font color = "grey">unreachable  </font>      flush_ex_o             = 1'b1;
+198                     
+199        <font color = "grey">unreachable  </font>      flush_tlb_gvma_o       = 1'b1;
+200                         end
+                        MISSING_ELSE
+201                     
+202                         // ---------------------------------
+203                         // CSR side effects and accelerate port
+204                         // ---------------------------------
+205                         // Set PC to commit stage and flush pipeline
+206        1/1              if (flush_csr_i || flush_acc_i) begin
+207        1/1                set_pc_commit_o        = 1'b1;
+208        1/1                flush_if_o             = 1'b1;
+209        1/1                flush_unissued_instr_o = 1'b1;
+210        1/1                flush_id_o             = 1'b1;
+211        1/1                flush_ex_o             = 1'b1;
+212        1/1              end else if (CVA6Cfg.RVA &amp;&amp; flush_commit_i) begin
+213        <font color = "grey">unreachable  </font>      set_pc_commit_o        = 1'b1;
+214        <font color = "grey">unreachable  </font>      flush_if_o             = 1'b1;
+215        <font color = "grey">unreachable  </font>      flush_unissued_instr_o = 1'b1;
+216        <font color = "grey">unreachable  </font>      flush_id_o             = 1'b1;
+217        <font color = "grey">unreachable  </font>      flush_ex_o             = 1'b1;
+218                         end
+                        MISSING_ELSE
+219                     
+220                         // ---------------------------------
+221                         // 1. Exception
+222                         // 2. Return from exception
+223                         // ---------------------------------
+224        1/1              if (ex_valid_i || eret_i || (CVA6Cfg.DebugEn &amp;&amp; set_debug_pc_i)) begin
+225                           // don't flush pcgen as we want to take the exception: Flush PCGen is not a flush signal
+226                           // for the PC Gen stage but instead tells it to take the PC we gave it
+227        1/1                set_pc_commit_o        = 1'b0;
+228        1/1                flush_if_o             = 1'b1;
+229        1/1                flush_unissued_instr_o = 1'b1;
+230        1/1                flush_id_o             = 1'b1;
+231        1/1                flush_ex_o             = 1'b1;
+232                           // this potentially reduces performance, but is needed
+233                           // to suppress speculative fetches to virtual memory from
+234                           // machine mode. TODO: remove when PMA checkers have been
+235                           // added to the system
+236        1/1                flush_bp_o             = 1'b1;
+237                         end
+                        MISSING_ELSE
+238                       end
+239                     
+240                       // ----------------------
+241                       // Halt Logic
+242                       // ----------------------
+243                       always_comb begin
+244                         // halt the core if the fence is active
+245        1/1              halt_o = halt_csr_i || halt_acc_i || (CVA6Cfg.DcacheFlushOnFence &amp;&amp; fence_active_q);
+246                       end
+247                     
+248                       // ----------------------
+249                       // Registers
+250                       // ----------------------
+251                       always_ff @(posedge clk_i or negedge rst_ni) begin
+252        1/1              if (~rst_ni) begin
+253        1/1                fence_active_q &lt;= 1'b0;
+254        1/1                flush_dcache_o &lt;= 1'b0;
+255                         end else begin
+256        1/1                fence_active_q &lt;= fence_active_d;
+257                           // register on the flush signal, this signal might be critical
+258        1/1                flush_dcache_o &lt;= flush_dcache;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod77.html" >controller</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       155
+ EXPRESSION (flush_dcache_ack_i &amp;&amp; fence_active_q)
+             ---------1--------    -------2------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       206
+ EXPRESSION (flush_csr_i || flush_acc_i)
+             -----1-----    -----2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       224
+ EXPRESSION (ex_valid_i || eret_i || ((1'b0 &amp;&amp; set_debug_pc_i)))
+             -----1----    ---2--    -------------3------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>0</td><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       245
+ EXPRESSION (halt_csr_i || halt_acc_i || ((1'b0 &amp;&amp; fence_active_q)))
+             -----1----    -----2----    -------------3------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>0</td><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>0</td><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_227">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_controller">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

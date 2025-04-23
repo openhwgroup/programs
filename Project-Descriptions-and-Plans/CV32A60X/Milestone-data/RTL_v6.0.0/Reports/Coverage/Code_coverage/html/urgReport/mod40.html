@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: ex_stage</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_ex_stage'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_ex_stage')">ex_stage</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod40.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod40.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/ex_stage.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/ex_stage.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod40.html#inst_tag_153"  onclick="showContent('inst_tag_153')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod40.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod40.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_ex_stage'>
+<hr>
+<a name="inst_tag_153"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_153" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod40.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod40.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.81</td>
+<td class="s9 cl rt"> 99.81</td>
+<td class="s9 cl rt"> 99.81</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod38.html#inst_tag_151" >cva6_only_pipeline.i_cva6_pipeline</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod19.html#inst_tag_27" id="tag_urg_inst_27">alu_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod72.html#inst_tag_222" id="tag_urg_inst_222">branch_unit_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod102.html#inst_tag_253" id="tag_urg_inst_253">csr_buffer_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod97.html#inst_tag_248" id="tag_urg_inst_248">gen_cvxif.cvxif_fu_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod56.html#inst_tag_205" id="tag_urg_inst_205">i_mult</a></td>
+<td class="s9 cl rt"> 99.83</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 99.66</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod3.html#inst_tag_5" id="tag_urg_inst_5">lsu_i</a></td>
+<td class="s9 cl rt"> 99.83</td>
+<td class="s9 cl rt"> 99.65</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_ex_stage'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod40.html" >ex_stage</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>21</td><td>21</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>303</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>377</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>393</td><td>1</td><td>1</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>400</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>531</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>633</td><td>2</td><td>2</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+302                         // data silence operation
+303        1/1              one_cycle_data = one_cycle_select[0] ? fu_data_i[0] : '0;
+304        1/1              rs1_forwarding = rs1_forwarding_i[0];
+305        1/1              rs2_forwarding = rs2_forwarding_i[0];
+306                     
+307        1/1              if (CVA6Cfg.SuperscalarEn) begin
+308        <font color = "grey">unreachable  </font>      if (one_cycle_select[1]) begin
+309        <font color = "grey">unreachable  </font>        one_cycle_data = fu_data_i[1];
+310        <font color = "grey">unreachable  </font>        rs1_forwarding = rs1_forwarding_i[1];
+311        <font color = "grey">unreachable  </font>        rs2_forwarding = rs2_forwarding_i[1];
+312                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+313                         end
+                        MISSING_ELSE
+314                       end
+315                     
+316                       // 1. ALU (combinatorial)
+317                       alu #(
+318                           .CVA6Cfg  (CVA6Cfg),
+319                           .HasBranch(1'b1),
+320                           .fu_data_t(fu_data_t)
+321                       ) alu_i (
+322                           .clk_i,
+323                           .rst_ni,
+324                           .fu_data_i       (one_cycle_data),
+325                           .result_o        (alu_result),
+326                           .alu_branch_res_o(alu_branch_res)
+327                       );
+328                     
+329                       // 2. Branch Unit (combinatorial)
+330                       // we don't silence the branch unit as this is already critical and we do
+331                       // not want to add another layer of logic
+332                       branch_unit #(
+333                           .CVA6Cfg(CVA6Cfg),
+334                           .bp_resolve_t(bp_resolve_t),
+335                           .branchpredict_sbe_t(branchpredict_sbe_t),
+336                           .exception_t(exception_t),
+337                           .fu_data_t(fu_data_t)
+338                       ) branch_unit_i (
+339                           .clk_i,
+340                           .rst_ni,
+341                           .v_i,
+342                           .debug_mode_i,
+343                           .fu_data_i         (one_cycle_data),
+344                           .pc_i,
+345                           .is_zcmt_i,
+346                           .is_compressed_instr_i,
+347                           .branch_valid_i    (|branch_valid_i),
+348                           .branch_comp_res_i (alu_branch_res),
+349                           .branch_result_o   (branch_result),
+350                           .branch_predict_i,
+351                           .resolved_branch_o,
+352                           .resolve_branch_o,
+353                           .branch_exception_o(flu_exception_o)
+354                       );
+355                     
+356                       // 3. CSR (sequential)
+357                       csr_buffer #(
+358                           .CVA6Cfg  (CVA6Cfg),
+359                           .fu_data_t(fu_data_t)
+360                       ) csr_buffer_i (
+361                           .clk_i,
+362                           .rst_ni,
+363                           .flush_i,
+364                           .fu_data_i   (one_cycle_data),
+365                           .csr_valid_i (|csr_valid_i),
+366                           .csr_ready_o (csr_ready),
+367                           .csr_result_o(csr_result),
+368                           .csr_commit_i,
+369                           .csr_addr_o
+370                       );
+371                     
+372                       assign flu_valid_o = |one_cycle_select | mult_valid;
+373                     
+374                       // result MUX
+375                       always_comb begin
+376                         // Branch result as default case
+377        1/1              flu_result_o   = {{CVA6Cfg.XLEN - CVA6Cfg.VLEN{1'b0}}, branch_result};
+378        1/1              flu_trans_id_o = one_cycle_data.trans_id;
+379                         // ALU result
+380        1/1              if (|alu_valid_i) begin
+381        1/1                flu_result_o = alu_result;
+382                           // CSR result
+383        1/1              end else if (|csr_valid_i) begin
+384        1/1                flu_result_o = csr_result;
+385        1/1              end else if (mult_valid) begin
+386        1/1                flu_result_o   = mult_result;
+387        1/1                flu_trans_id_o = mult_trans_id;
+388                         end
+                        MISSING_ELSE
+389                       end
+390                     
+391                       // ready flags for FLU
+392                       always_comb begin
+393        1/1              flu_ready_o = csr_ready &amp; mult_ready;
+394                       end
+395                     
+396                       // 4. Multiplication (Sequential)
+397                       fu_data_t mult_data;
+398                       // input silencing of multiplier
+399                       always_comb begin
+400        1/1              mult_data = mult_valid_i[0] ? fu_data_i[0] : '0;
+401        1/1              if (CVA6Cfg.SuperscalarEn) begin
+402        <font color = "grey">unreachable  </font>      if (mult_valid_i[1]) begin
+403        <font color = "grey">unreachable  </font>        mult_data = fu_data_i[1];
+404                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+405                         end
+                        MISSING_ELSE
+406                       end
+407                     
+408                       mult #(
+409                           .CVA6Cfg  (CVA6Cfg),
+410                           .fu_data_t(fu_data_t)
+411                       ) i_mult (
+412                           .clk_i,
+413                           .rst_ni,
+414                           .flush_i,
+415                           .mult_valid_i   (|mult_valid_i),
+416                           .fu_data_i      (mult_data),
+417                           .result_o       (mult_result),
+418                           .mult_valid_o   (mult_valid),
+419                           .mult_ready_o   (mult_ready),
+420                           .mult_trans_id_o(mult_trans_id)
+421                       );
+422                     
+423                       // ----------------
+424                       // FPU
+425                       // ----------------
+426                       logic fpu_valid;
+427                       logic [CVA6Cfg.TRANS_ID_BITS-1:0] fpu_trans_id;
+428                       logic [CVA6Cfg.XLEN-1:0] fpu_result;
+429                       logic alu2_valid;
+430                       logic [CVA6Cfg.XLEN-1:0] alu2_result;
+431                     
+432                       generate
+433                         if (CVA6Cfg.FpPresent) begin : fpu_gen
+434                           fu_data_t fpu_data;
+435                           always_comb begin
+436                             fpu_data = fpu_valid_i[0] ? fu_data_i[0] : '0;
+437                             if (CVA6Cfg.SuperscalarEn) begin
+438                               if (fpu_valid_i[1]) begin
+439                                 fpu_data = fu_data_i[1];
+440                               end
+441                             end
+442                           end
+443                     
+444                           fpu_wrap #(
+445                               .CVA6Cfg(CVA6Cfg),
+446                               .exception_t(exception_t),
+447                               .fu_data_t(fu_data_t)
+448                           ) fpu_i (
+449                               .clk_i,
+450                               .rst_ni,
+451                               .flush_i,
+452                               .fpu_valid_i(|fpu_valid_i),
+453                               .fpu_ready_o,
+454                               .fu_data_i(fpu_data),
+455                               .fpu_fmt_i,
+456                               .fpu_rm_i,
+457                               .fpu_frm_i,
+458                               .fpu_prec_i,
+459                               .fpu_trans_id_o(fpu_trans_id),
+460                               .result_o(fpu_result),
+461                               .fpu_valid_o(fpu_valid),
+462                               .fpu_exception_o
+463                           );
+464                         end else begin : no_fpu_gen
+465                           assign fpu_ready_o     = '0;
+466                           assign fpu_trans_id    = '0;
+467                           assign fpu_result      = '0;
+468                           assign fpu_valid       = '0;
+469                           assign fpu_exception_o = '0;
+470                         end
+471                       endgenerate
+472                     
+473                       // ----------------
+474                       // ALU2
+475                       // ----------------
+476                       fu_data_t alu2_data;
+477                       if (CVA6Cfg.SuperscalarEn) begin : alu2_gen
+478                         always_comb begin
+479                           alu2_data = alu2_valid_i[0] ? fu_data_i[0] : '0;
+480                           if (alu2_valid_i[1]) begin
+481                             alu2_data = fu_data_i[1];
+482                           end
+483                         end
+484                     
+485                         alu #(
+486                             .CVA6Cfg  (CVA6Cfg),
+487                             .HasBranch(1'b0),
+488                             .fu_data_t(fu_data_t)
+489                         ) alu2_i (
+490                             .clk_i,
+491                             .rst_ni,
+492                             .fu_data_i       (alu2_data),
+493                             .result_o        (alu2_result),
+494                             .alu_branch_res_o(  /* this ALU does not handle branching */)
+495                         );
+496                       end else begin
+497                         assign alu2_data   = '0;
+498                         assign alu2_result = '0;
+499                       end
+500                     
+501                       // result MUX
+502                       // This is really explicit so that synthesis tools can elide unused signals
+503                       if (CVA6Cfg.SuperscalarEn) begin
+504                         if (CVA6Cfg.FpPresent) begin
+505                           assign fpu_valid_o    = fpu_valid || |alu2_valid_i;
+506                           assign fpu_result_o   = fpu_valid ? fpu_result   : alu2_result;
+507                           assign fpu_trans_id_o = fpu_valid ? fpu_trans_id : alu2_data.trans_id;
+508                         end else begin
+509                           assign fpu_valid_o    = |alu2_valid_i;
+510                           assign fpu_result_o   = alu2_result;
+511                           assign fpu_trans_id_o = alu2_data.trans_id;
+512                         end
+513                       end else begin
+514                         if (CVA6Cfg.FpPresent) begin
+515                           assign fpu_valid_o    = fpu_valid;
+516                           assign fpu_result_o   = fpu_result;
+517                           assign fpu_trans_id_o = fpu_trans_id;
+518                         end else begin
+519                           assign fpu_valid_o    = '0;
+520                           assign fpu_result_o   = '0;
+521                           assign fpu_trans_id_o = '0;
+522                         end
+523                       end
+524                     
+525                       // ----------------
+526                       // Load-Store Unit
+527                       // ----------------
+528                       fu_data_t lsu_data;
+529                       logic [31:0] lsu_tinst;
+530                       always_comb begin
+531        1/1              lsu_data  = lsu_valid_i[0] ? fu_data_i[0] : '0;
+532        1/1              lsu_tinst = tinst_i[0];
+533                     
+534        1/1              if (CVA6Cfg.SuperscalarEn) begin
+535        <font color = "grey">unreachable  </font>      if (lsu_valid_i[1]) begin
+536        <font color = "grey">unreachable  </font>        lsu_data  = fu_data_i[1];
+537        <font color = "grey">unreachable  </font>        lsu_tinst = tinst_i[1];
+538                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+539                         end
+                        MISSING_ELSE
+540                       end
+541                     
+542                       load_store_unit #(
+543                           .CVA6Cfg          (CVA6Cfg),
+544                           .load_req_t       (load_req_t),
+545                           .load_rsp_t       (load_rsp_t),
+546                           .obi_store_req_t  (obi_store_req_t),
+547                           .obi_store_rsp_t  (obi_store_rsp_t),
+548                           .obi_amo_req_t    (obi_amo_req_t),
+549                           .obi_amo_rsp_t    (obi_amo_rsp_t),
+550                           .obi_load_req_t   (obi_load_req_t),
+551                           .obi_load_rsp_t   (obi_load_rsp_t),
+552                           .obi_mmu_ptw_req_t(obi_mmu_ptw_req_t),
+553                           .obi_mmu_ptw_rsp_t(obi_mmu_ptw_rsp_t),
+554                           .exception_t      (exception_t),
+555                           .fu_data_t        (fu_data_t),
+556                           .fetch_areq_t     (fetch_areq_t),
+557                           .fetch_arsp_t     (fetch_arsp_t),
+558                           .lsu_ctrl_t       (lsu_ctrl_t)
+559                       ) lsu_i (
+560                           .clk_i,
+561                           .rst_ni,
+562                           .flush_i,
+563                           .stall_st_pending_i,
+564                           .no_st_pending_o,
+565                           .fu_data_i             (lsu_data),
+566                           .lsu_ready_o,
+567                           .lsu_valid_i           (|lsu_valid_i),
+568                           .load_trans_id_o,
+569                           .load_result_o,
+570                           .load_valid_o,
+571                           .load_exception_o,
+572                           .store_trans_id_o,
+573                           .store_result_o,
+574                           .store_valid_o,
+575                           .store_exception_o,
+576                           .commit_i              (lsu_commit_i),
+577                           .commit_ready_o        (lsu_commit_ready_o),
+578                           .commit_tran_id_i,
+579                           .enable_translation_i,
+580                           .enable_g_translation_i,
+581                           .en_ld_st_translation_i,
+582                           .en_ld_st_g_translation_i,
+583                           .fetch_areq_i,
+584                           .fetch_arsp_o,
+585                           .priv_lvl_i,
+586                           .v_i,
+587                           .ld_st_priv_lvl_i,
+588                           .ld_st_v_i,
+589                           .csr_hs_ld_st_inst_o,
+590                           .sum_i,
+591                           .vs_sum_i,
+592                           .mxr_i,
+593                           .vmxr_i,
+594                           .satp_ppn_i,
+595                           .vsatp_ppn_i,
+596                           .hgatp_ppn_i,
+597                           .asid_i,
+598                           .vs_asid_i,
+599                           .asid_to_be_flushed_i  (asid_to_be_flushed),
+600                           .vmid_i,
+601                           .vmid_to_be_flushed_i  (vmid_to_be_flushed),
+602                           .vaddr_to_be_flushed_i (vaddr_to_be_flushed),
+603                           .gpaddr_to_be_flushed_i(gpaddr_to_be_flushed),
+604                           .flush_tlb_i,
+605                           .flush_tlb_vvma_i,
+606                           .flush_tlb_gvma_i,
+607                           .itlb_miss_o,
+608                           .dtlb_miss_o,
+609                           // DCACHE interfaces
+610                           .obi_amo_req_o         (obi_amo_req_o),
+611                           .obi_amo_rsp_i         (obi_amo_rsp_i),
+612                           .obi_store_req_o       (obi_store_req_o),
+613                           .obi_store_rsp_i       (obi_store_rsp_i),
+614                           .obi_load_req_o        (obi_load_req_o),
+615                           .obi_load_rsp_i        (obi_load_rsp_i),
+616                           .load_req_o            (load_req_o),
+617                           .load_rsp_i            (load_rsp_i),
+618                           .obi_mmu_ptw_req_o     (obi_mmu_ptw_req_o),
+619                           .obi_mmu_ptw_rsp_i     (obi_mmu_ptw_rsp_i),
+620                           .dcache_wbuffer_empty_i,
+621                           .dcache_wbuffer_not_ni_i,
+622                           .amo_valid_commit_i,
+623                           .tinst_i               (lsu_tinst),
+624                           .pmpcfg_i,
+625                           .pmpaddr_i,
+626                           .rvfi_lsu_ctrl_o,
+627                           .rvfi_mem_paddr_o
+628                       );
+629                     
+630                       if (CVA6Cfg.CvxifEn) begin : gen_cvxif
+631                         fu_data_t cvxif_data;
+632                         always_comb begin
+633        1/1                cvxif_data = x_valid_i[0] ? fu_data_i[0] : '0;
+634        1/1                if (CVA6Cfg.SuperscalarEn) begin
+635        <font color = "grey">unreachable  </font>        if (x_valid_i[1]) begin
+636        <font color = "grey">unreachable  </font>          cvxif_data = fu_data_i[1];
+637                             end
+                   <font color = "red">==>  MISSING_ELSE</font>
+638                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod40.html" >ex_stage</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>18</td><td>18</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>18</td><td>18</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       296
+ EXPRESSION (alu_valid_i | branch_valid_i | csr_valid_i)
+             -----1-----   -------2------   -----3-----
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       303
+ EXPRESSION (one_cycle_select[0] ? fu_data_i[0] : '0)
+             ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       372
+ EXPRESSION (((|one_cycle_select)) | mult_valid)
+             ----------1----------   -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       393
+ EXPRESSION (csr_ready &amp; mult_ready)
+             ----1----   -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       400
+ EXPRESSION (mult_valid_i[0] ? fu_data_i[0] : '0)
+             -------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       531
+ EXPRESSION (lsu_valid_i[0] ? fu_data_i[0] : '0)
+             -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       633
+ EXPRESSION (x_valid_i[0] ? fu_data_i[0] : '0)
+             ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_153">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_ex_stage">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

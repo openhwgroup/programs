@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: instr_realign</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_instr_realign'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_instr_realign')">instr_realign</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod106.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod106.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/instr_realign.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/instr_realign.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod106.html#inst_tag_258"  onclick="showContent('inst_tag_258')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend.i_instr_realign</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod106.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod106.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_instr_realign'>
+<hr>
+<a name="inst_tag_258"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_258" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend.i_instr_realign</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod106.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod106.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 99.24</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 98.47</td>
+<td class="wht cl rt"></td>
+<td><a href="mod6.html#inst_tag_9" >i_frontend</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_instr_realign'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod106.html" >instr_realign</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>36</td><td>36</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>68</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>348</td><td>11</td><td>11</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+67                          always_comb begin : re_align
+68         1/1                unaligned_d = unaligned_q;
+69         1/1                unaligned_address_d = {address_i[CVA6Cfg.VLEN-1:2], 2'b10};
+70         1/1                unaligned_instr_d = data_i[31:16];
+71                      
+72         1/1                valid_o[0] = valid_i;
+73         1/1                instr_o[0] = unaligned_q ? {data_i[15:0], unaligned_instr_q} : data_i[31:0];
+74         1/1                addr_o[0] = unaligned_q ? unaligned_address_q : address_i;
+75                      
+76         1/1                if (CVA6Cfg.INSTR_PER_FETCH != 1) begin
+77         1/1                  valid_o[CVA6Cfg.INSTR_PER_FETCH-1] = 1'b0;
+78         1/1                  instr_o[CVA6Cfg.INSTR_PER_FETCH-1] = '0;
+79         1/1                  addr_o[CVA6Cfg.INSTR_PER_FETCH-1]  = {address_i[CVA6Cfg.VLEN-1:2], 2'b10};
+80                            end
+                   <font color = "red">==>  MISSING_ELSE</font>
+81                            // this instruction is compressed or the last instruction was unaligned
+82         1/1                if (instr_is_compressed[0] || unaligned_q) begin
+83                              // check if this is instruction is still unaligned e.g.: it is not compressed
+84                              // if its compressed re-set unaligned flag
+85                              // for 32 bit we can simply check the next instruction and whether it is compressed or not
+86                              // if it is compressed the next fetch will contain an aligned instruction
+87                              // is instruction 1 also compressed
+88                              // yes? -&gt; no problem, no -&gt; we've got an unaligned instruction
+89         1/1                  if (instr_is_compressed[CVA6Cfg.INSTR_PER_FETCH-1] &amp;&amp; CVA6Cfg.RVC) begin
+90         1/1                    unaligned_d = 1'b0;
+91         1/1                    valid_o[CVA6Cfg.INSTR_PER_FETCH-1] = valid_i;
+92         1/1                    instr_o[CVA6Cfg.INSTR_PER_FETCH-1] = {16'b0, data_i[31:16]};
+93                              end else begin
+94                                // save the upper bits for next cycle
+95         1/1                    unaligned_d = 1'b1;
+96         1/1                    unaligned_instr_d = data_i[31:16];
+97         1/1                    unaligned_address_d = {address_i[CVA6Cfg.VLEN-1:2], 2'b10};
+98                              end
+99                            end  // else -&gt; normal fetch
+                        MISSING_ELSE
+100                     
+101                           // we started to fetch on a unaligned boundary with a whole instruction -&gt; wait until we've
+102                           // received the next instruction
+103        1/1                if (valid_i &amp;&amp; address_i[1]) begin
+104                             // the instruction is not compressed so we can't do anything in this cycle
+105        1/1                  if (!instr_is_compressed[0]) begin
+106        1/1                    valid_o = '0;
+107        1/1                    unaligned_d = 1'b1;
+108        1/1                    unaligned_address_d = {address_i[CVA6Cfg.VLEN-1:2], 2'b10};
+109        1/1                    unaligned_instr_d = data_i[15:0];
+110                               // the instruction isn't compressed but only the lower is ready
+111                             end else begin
+112        1/1                    valid_o = {{CVA6Cfg.INSTR_PER_FETCH - 1{1'b0}}, 1'b1};
+113                             end
+114                           end
+                        MISSING_ELSE
+115                         end
+116                       end else if (CVA6Cfg.FETCH_WIDTH == 64) begin : realign_bp_64
+117                         always_comb begin : re_align
+118                           unaligned_d         = 1'b0;
+119                           unaligned_address_d = unaligned_address_q;
+120                           unaligned_instr_d   = unaligned_instr_q;
+121                     
+122                           valid_o             = '0;
+123                           instr_o[0]          = '0;
+124                           addr_o[0]           = '0;
+125                           instr_o[1]          = '0;
+126                           addr_o[1]           = '0;
+127                           instr_o[2]          = '0;
+128                           addr_o[2]           = '0;
+129                           instr_o[3]          = {16'b0, data_i[63:48]};
+130                           addr_o[3]           = {address_i[CVA6Cfg.VLEN-1:3], 3'b110};
+131                     
+132                           case (address_i[2:1])
+133                             2'b00: begin
+134                               valid_o[0]  = valid_i;
+135                               valid_o[1]  = valid_i;
+136                     
+137                               unaligned_d = unaligned_q;
+138                     
+139                               // last instruction was unaligned
+140                               // TODO how are jumps + unaligned managed?
+141                               if (unaligned_q) begin
+142                                 // for 64 bit there exist the following options:
+143                                 //     64  48  32  16  0
+144                                 //     | 3 | 2 | 1 | 0 | &lt;- instruction slot
+145                                 // |   I   |   I   |   U   | -&gt; again unaligned
+146                                 // | * | C |   I   |   U   | -&gt; aligned
+147                                 // | * |   I   | C |   U   | -&gt; aligned
+148                                 // |   I   | C | C |   U   | -&gt; again unaligned
+149                                 // | * | C | C | C |   U   | -&gt; aligned
+150                                 // Legend: C = compressed, I = 32 bit instruction, U = unaligned upper half
+151                     
+152                                 instr_o[0] = {data_i[15:0], unaligned_instr_q};
+153                                 addr_o[0]  = unaligned_address_q;
+154                     
+155                                 instr_o[1] = data_i[47:16];
+156                                 addr_o[1]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b010};
+157                     
+158                                 if (instr_is_compressed[1]) begin
+159                                   instr_o[2] = data_i[63:32];
+160                                   addr_o[2]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b100};
+161                                   valid_o[2] = valid_i;
+162                     
+163                                   if (instr_is_compressed[2]) begin
+164                                     if (instr_is_compressed[3]) begin
+165                                       unaligned_d = 1'b0;
+166                                       valid_o[3]  = valid_i;
+167                                     end else begin
+168                                       unaligned_instr_d   = instr_o[3];
+169                                       unaligned_address_d = addr_o[3];
+170                                     end
+171                                   end else begin
+172                                     unaligned_d = 1'b0;
+173                                     valid_o[2]  = valid_i;
+174                                   end
+175                                 end else begin
+176                                   instr_o[2] = instr_o[3];
+177                                   addr_o[2]  = addr_o[3];
+178                                   if (instr_is_compressed[3]) begin
+179                                     unaligned_d = 1'b0;
+180                                     valid_o[2]  = valid_i;
+181                                   end else begin
+182                                     unaligned_instr_d   = instr_o[3];
+183                                     unaligned_address_d = addr_o[3];
+184                                   end
+185                                 end
+186                               end else begin
+187                                 instr_o[0] = data_i[31:0];
+188                                 addr_o[0]  = address_i;
+189                     
+190                                 if (instr_is_compressed[0]) begin
+191                                   instr_o[1] = data_i[47:16];
+192                                   addr_o[1]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b010};
+193                     
+194                                   //     64  48  32  16  0
+195                                   //     | 3 | 2 | 1 | 0 | &lt;- instruction slot
+196                                   // |   I   |   I   | C | -&gt; again unaligned
+197                                   // | * | C |   I   | C | -&gt; aligned
+198                                   // | * |   I   | C | C | -&gt; aligned
+199                                   // |   I   | C | C | C | -&gt; again unaligned
+200                                   // | * | C | C | C | C | -&gt; aligned
+201                                   if (instr_is_compressed[1]) begin
+202                                     instr_o[2] = data_i[63:32];
+203                                     addr_o[2]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b100};
+204                                     valid_o[2] = valid_i;
+205                     
+206                                     if (instr_is_compressed[2]) begin
+207                                       if (instr_is_compressed[3]) begin
+208                                         valid_o[3] = valid_i;
+209                                       end else begin
+210                                         unaligned_d         = 1'b1;
+211                                         unaligned_instr_d   = instr_o[3];
+212                                         unaligned_address_d = addr_o[3];
+213                                       end
+214                                     end
+215                                   end else begin
+216                                     instr_o[2] = instr_o[3];
+217                                     addr_o[2]  = addr_o[3];
+218                     
+219                                     if (instr_is_compressed[3]) begin
+220                                       valid_o[2] = valid_i;
+221                                     end else begin
+222                                       unaligned_d         = 1'b1;
+223                                       unaligned_instr_d   = instr_o[3];
+224                                       unaligned_address_d = addr_o[3];
+225                                     end
+226                                   end
+227                                 end else begin
+228                                   //     64     32       0
+229                                   //     | 3 | 2 | 1 | 0 | &lt;- instruction slot
+230                                   // |   I   | C |   I   |
+231                                   // | * | C | C |   I   |
+232                                   // | * |   I   |   I   |
+233                                   instr_o[1] = data_i[63:32];
+234                                   addr_o[1]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b100};
+235                     
+236                                   instr_o[2] = instr_o[3];
+237                                   addr_o[2]  = addr_o[3];
+238                     
+239                                   if (instr_is_compressed[2]) begin
+240                                     if (instr_is_compressed[3]) begin
+241                                       valid_o[2] = valid_i;
+242                                     end else begin
+243                                       unaligned_d         = 1'b1;
+244                                       unaligned_instr_d   = instr_o[3];
+245                                       unaligned_address_d = addr_o[3];
+246                                     end
+247                                   end
+248                                 end
+249                               end
+250                             end
+251                             // this means the previous instruction was either compressed or unaligned
+252                             // in any case we don't care
+253                             // TODO input is actually right-shifted so the code below is wrong
+254                             2'b01: begin
+255                               // 64  48  32  16  0
+256                               // | 3 | 2 | 1 | 0 | &lt;- instruction slot
+257                               // |   I   |   I   | -&gt; again unaligned
+258                               // | * | C |   I   | -&gt; aligned
+259                               // | * |   I   | C | -&gt; aligned
+260                               // |   I   | C | C | -&gt; again unaligned
+261                               // | * | C | C | C | -&gt; aligned
+262                               //   000 110 100 010 &lt;- unaligned address
+263                     
+264                               instr_o[0] = data_i[31:0];
+265                               addr_o[0]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b010};
+266                               valid_o[0] = valid_i;
+267                     
+268                               instr_o[2] = data_i[63:32];
+269                               addr_o[2]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b110};
+270                     
+271                               if (instr_is_compressed[0]) begin
+272                                 instr_o[1] = data_i[47:16];
+273                                 addr_o[1]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b100};
+274                                 valid_o[1] = valid_i;
+275                     
+276                                 if (instr_is_compressed[1]) begin
+277                                   if (instr_is_compressed[2]) begin
+278                                     valid_o[2] = valid_i;
+279                                   end else begin
+280                                     unaligned_d         = 1'b1;
+281                                     unaligned_instr_d   = instr_o[2];
+282                                     unaligned_address_d = addr_o[2];
+283                                   end
+284                                 end
+285                               end else begin
+286                                 instr_o[1] = instr_o[2];
+287                                 addr_o[1]  = addr_o[2];
+288                     
+289                                 if (instr_is_compressed[2]) begin
+290                                   valid_o[1] = valid_i;
+291                                 end else begin
+292                                   unaligned_d         = 1'b1;
+293                                   unaligned_instr_d   = instr_o[2];
+294                                   unaligned_address_d = addr_o[2];
+295                                 end
+296                               end
+297                             end
+298                             2'b10: begin
+299                               // 64  48  32  16  0
+300                               // | 3 | 2 | 1 | 0 | &lt;- instruction slot
+301                               // | * |   I   | C | &lt;- unaligned
+302                               // |   *   | C | C | &lt;- aligned
+303                               // |   *   |   I   | &lt;- aligned
+304                               //      1000 110 100 &lt;- unaligned address
+305                     
+306                               instr_o[0] = data_i[31:0];
+307                               addr_o[0]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b100};
+308                               valid_o[0] = valid_i;
+309                     
+310                               instr_o[1] = data_i[47:16];
+311                               addr_o[1]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b110};
+312                     
+313                               if (instr_is_compressed[0]) begin
+314                                 if (instr_is_compressed[1]) begin
+315                                   valid_o[1] = valid_i;
+316                                 end else begin
+317                                   unaligned_d         = 1'b1;
+318                                   unaligned_instr_d   = instr_o[1];
+319                                   unaligned_address_d = addr_o[1];
+320                                 end
+321                               end
+322                             end
+323                             // we started to fetch on a unaligned boundary with a whole instruction -&gt; wait until we've
+324                             // received the next instruction
+325                             2'b11: begin
+326                               //     64  48  32  16  0
+327                               // | 3 | 2 | 1 | 0 | &lt;- instruction slot
+328                               // |   *   |   I   | &lt;- unaligned
+329                               // |     *     | C | &lt;- aligned
+330                               //          1000 110 &lt;- unaligned address
+331                     
+332                               instr_o[0] = data_i[31:0];
+333                               addr_o[0]  = {address_i[CVA6Cfg.VLEN-1:3], 3'b110};
+334                     
+335                               if (instr_is_compressed[0]) begin
+336                                 valid_o[0] = valid_i;
+337                               end else begin
+338                                 unaligned_d         = 1'b1;
+339                                 unaligned_instr_d   = instr_o[0];
+340                                 unaligned_address_d = addr_o[0];
+341                               end
+342                             end
+343                           endcase
+344                         end
+345                       end
+346                     
+347                       always_ff @(posedge clk_i or negedge rst_ni) begin
+348        1/1              if (~rst_ni) begin
+349        1/1                unaligned_q         &lt;= 1'b0;
+350        1/1                unaligned_address_q &lt;= '0;
+351        1/1                unaligned_instr_q   &lt;= '0;
+352                         end else begin
+353        1/1                if (valid_i) begin
+354        1/1                  unaligned_address_q &lt;= unaligned_address_d;
+355        1/1                  unaligned_instr_q   &lt;= unaligned_instr_d;
+356                           end
+                        MISSING_ELSE
+357                     
+358        1/1                if (flush_i) begin
+359        1/1                  unaligned_q &lt;= 1'b0;
+360        1/1                end else if (valid_i) begin
+361        1/1                  unaligned_q &lt;= unaligned_d;
+362                           end
+                        MISSING_ELSE
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod106.html" >instr_realign</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>12</td><td>12</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>12</td><td>12</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       73
+ EXPRESSION (unaligned_q ? ({data_i[15:0], unaligned_instr_q}) : data_i[31:0])
+             -----1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       74
+ EXPRESSION (unaligned_q ? unaligned_address_q : address_i)
+             -----1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       82
+ EXPRESSION (instr_is_compressed[0] || unaligned_q)
+             -----------1----------    -----2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       89
+ EXPRESSION (instr_is_compressed[(32'b00000000000000000000000000000010 - 1)] &amp;&amp; 1'b1)
+             -------------------------------1-------------------------------    --2-
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       103
+ EXPRESSION (valid_i &amp;&amp; address_i[1])
+             ---1---    ------2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_258">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_instr_realign">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

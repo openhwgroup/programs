@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: branch_unit</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_branch_unit'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_branch_unit')">branch_unit</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod72.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod72.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/branch_unit.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/branch_unit.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod72.html#inst_tag_222"  onclick="showContent('inst_tag_222')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.branch_unit_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod72.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod72.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_branch_unit'>
+<hr>
+<a name="inst_tag_222"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_222" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.branch_unit_i</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod72.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod72.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod40.html#inst_tag_153" >ex_stage_i</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_branch_unit'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod72.html" >branch_unit</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>33</td><td>33</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>61</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>120</td><td>8</td><td>8</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+60                          // IMPROVEMENT: The ALU can be used to calculate the branch target
+61         1/1              jump_base = (fu_data_i.operation == ariane_pkg::JALR) ? fu_data_i.operand_a[CVA6Cfg.VLEN-1:0] : pc_i;
+62                      
+63         1/1              resolve_branch_o = 1'b0;
+64         1/1              resolved_branch_o.target_address = {CVA6Cfg.VLEN{1'b0}};
+65         1/1              resolved_branch_o.is_taken = 1'b0;
+66         1/1              resolved_branch_o.valid = branch_valid_i;
+67         1/1              resolved_branch_o.is_mispredict = 1'b0;
+68         1/1              resolved_branch_o.cf_type = branch_predict_i.cf;
+69                          // calculate next PC, depending on whether the instruction is compressed or not this may be different
+70                          // IMPROVEMENT: We already calculate this a couple of times, maybe re-use?
+71         1/1              next_pc                          = pc_i + ((is_compressed_instr_i) ? {{CVA6Cfg.VLEN-2{1'b0}}, 2'h2} : {{CVA6Cfg.VLEN-3{1'b0}}, 3'h4});
+72                          // calculate target address simple 64 bit addition
+73         1/1              target_address = $unsigned($signed(jump_base) + $signed(fu_data_i.imm[CVA6Cfg.VLEN-1:0]));
+74                          // on a JALR we are supposed to reset the LSB to 0 (according to the specification)
+75         2/2              if (fu_data_i.operation == ariane_pkg::JALR) target_address[0] = 1'b0;
+                        MISSING_ELSE
+76                          // we need to put the branch target address into rd, this is the result of this unit
+77         1/1              branch_result_o = next_pc;
+78         1/1              resolved_branch_o.pc = pc_i;
+79                          // There are only three sources of mispredicts:
+80                          // 1. Branches
+81                          // 2. Jumps to register addresses
+82                          // 3. Zcmt instructions
+83         1/1              if (branch_valid_i) begin
+84                            // write target address which goes to PC Gen or select target address if zcmt
+85         1/1                resolved_branch_o.target_address = (branch_comp_res_i) ? target_address : next_pc;
+86         1/1                resolved_branch_o.is_taken = branch_comp_res_i;
+87         1/1                if (CVA6Cfg.RVZCMT) begin
+88         <font color = "grey">unreachable  </font>        if (is_zcmt_i) begin
+89                                // Unconditional jump handling
+90         <font color = "grey">unreachable  </font>          resolved_branch_o.is_mispredict = 1'b1;  // miss prediction for ZCMT 
+91         <font color = "grey">unreachable  </font>          resolved_branch_o.cf_type = ariane_pkg::JumpR;
+92                              end
+                   <font color = "red">==>  MISSING_ELSE</font>
+93                            end
+                        MISSING_ELSE
+94                            // check the outcome of the branch speculation
+95         1/1                if (ariane_pkg::op_is_branch(fu_data_i.operation)) begin
+96                              // Set the `cf_type` of the output as `branch`, this will update the BHT.
+97         1/1                  resolved_branch_o.cf_type = ariane_pkg::Branch;
+98                              // If the ALU comparison does not agree with the BHT prediction set the resolution as mispredicted.
+99         1/1                  resolved_branch_o.is_mispredict  = branch_comp_res_i != (branch_predict_i.cf == ariane_pkg::Branch);
+100                           end
+                        MISSING_ELSE
+101        1/1                if (fu_data_i.operation == ariane_pkg::JALR
+102                               // check if the address of the jump register is correct and that we actually predicted
+103                               &amp;&amp; (branch_predict_i.cf == ariane_pkg::NoCF || target_address != branch_predict_i.predict_address)) begin
+104        1/1                  resolved_branch_o.is_mispredict = 1'b1;
+105                             // update BTB only if this wasn't a return
+106        1/1                  if (branch_predict_i.cf != ariane_pkg::Return)
+107        1/1                    resolved_branch_o.cf_type = ariane_pkg::JumpR;
+                        MISSING_ELSE
+108                           end
+                        MISSING_ELSE
+109                           // to resolve the branch in ID
+110        1/1                resolve_branch_o = 1'b1;
+111                         end
+                        MISSING_ELSE
+112                       end
+113                       // use ALU exception signal for storing instruction fetch exceptions if
+114                       // the target address is not aligned to a 2 byte boundary
+115                       //
+116                       logic jump_taken;
+117                       always_comb begin : exception_handling
+118                     
+119                         // Do a jump if it is either unconditional jump (JAL | JALR) or `taken` conditional jump
+120        1/1              branch_exception_o.cause = riscv::INSTR_ADDR_MISALIGNED;
+121        1/1              branch_exception_o.valid = 1'b0;
+122        1/1              if (CVA6Cfg.TvalEn)
+123        <font color = "grey">unreachable  </font>      branch_exception_o.tval = {{CVA6Cfg.XLEN - CVA6Cfg.VLEN{pc_i[CVA6Cfg.VLEN-1]}}, pc_i};
+124        1/1              else branch_exception_o.tval = '0;
+125        1/1              branch_exception_o.tval2 = {CVA6Cfg.GPLEN{1'b0}};
+126        1/1              branch_exception_o.tinst = '0;
+127        1/1              branch_exception_o.gva   = CVA6Cfg.RVH ? v_i : 1'b0;
+128                         // Only throw instruction address misaligned exception if this is indeed a `taken` conditional branch or
+129                         // an unconditional jump
+130        1/1              if (!CVA6Cfg.RVC) begin
+131        <font color = "grey">unreachable  </font>      jump_taken = !(ariane_pkg::op_is_branch(fu_data_i.operation)) ||
+132                               ((ariane_pkg::op_is_branch(fu_data_i.operation)) &amp;&amp; branch_comp_res_i);
+133        <font color = "grey">unreachable  </font>      if (branch_valid_i &amp;&amp; (target_address[0] || target_address[1]) &amp;&amp; jump_taken) begin
+134        <font color = "grey">unreachable  </font>        branch_exception_o.valid = 1'b1;
+135                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+136                         end
+                   <font color = "red">==>  MISSING_ELSE</font>
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod72.html" >branch_unit</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>26</td><td>26</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>26</td><td>26</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       61
+ EXPRESSION ((fu_data_i.operation == JALR) ? fu_data_i.operand_a[32'b00000000000000000000000000011111:0] : pc_i)
+             --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       61
+ SUB-EXPRESSION (fu_data_i.operation == JALR)
+                --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       71
+ EXPRESSION 
+ Number  Term
+      1  is_compressed_instr_i ? ({{(32'b00000000000000000000000000100000 - 2) {1'b0}}, 2'h2}) : ({{(32'b00000000000000000000000000100000 - 3) {1'b0}}, 3'h4}))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       75
+ EXPRESSION (fu_data_i.operation == JALR)
+            --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       85
+ EXPRESSION (branch_comp_res_i ? target_address : next_pc)
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       99
+ EXPRESSION (branch_comp_res_i != (branch_predict_i.cf == Branch))
+            ---------------------------1--------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       101
+ EXPRESSION ((fu_data_i.operation == JALR) &amp;&amp; ((branch_predict_i.cf == NoCF) || (target_address != branch_predict_i.predict_address)))
+             --------------1--------------    -------------------------------------------2-------------------------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       101
+ SUB-EXPRESSION (fu_data_i.operation == JALR)
+                --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       101
+ SUB-EXPRESSION ((branch_predict_i.cf == NoCF) || (target_address != branch_predict_i.predict_address))
+                 --------------1--------------    --------------------------2-------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       101
+ SUB-EXPRESSION (branch_predict_i.cf == NoCF)
+                --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       101
+ SUB-EXPRESSION (target_address != branch_predict_i.predict_address)
+                --------------------------1-------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       106
+ EXPRESSION (branch_predict_i.cf != Return)
+            ---------------1---------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       133
+ EXPRESSION (branch_valid_i &amp;&amp; (target_address[0] || target_address[1]) &amp;&amp; jump_taken)
+             -------1------    --------------------2-------------------    -----3----
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       133
+ SUB-EXPRESSION (target_address[0] || target_address[1])
+                 --------1--------    --------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_222">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_branch_unit">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
