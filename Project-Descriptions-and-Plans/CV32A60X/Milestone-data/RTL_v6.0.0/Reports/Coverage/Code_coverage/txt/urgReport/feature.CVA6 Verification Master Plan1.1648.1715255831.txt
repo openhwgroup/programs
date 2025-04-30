@@ -1,0 +1,31 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.TRAPs
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.57 --     --     --      99.57 
+
+Attribute/Annotation values:
+  description: 
+    Interrupts and Exceptions.
+    Specification: Done, Dvplan: Done, Verification execution: Done.
+
+
+-------------------------------------------------------------------------------
+
+Sub-features:
+
+SCORE  LINE   COND   ASSERT GROUP  NAME       
+ 99.15 --     --     --      99.15 Interrupts 
+100.00 --     --     --     100.00 Exceptions 
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+--     --     --     --     --     
+
+
+

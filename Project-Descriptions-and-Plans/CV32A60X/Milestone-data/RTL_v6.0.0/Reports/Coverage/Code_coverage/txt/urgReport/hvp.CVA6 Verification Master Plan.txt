@@ -1,0 +1,488 @@
+HVP Hierarchy
+
+
+
+
+----------------
+SCORE  LINE   COND   ASSERT GROUP  weight description                   Comment NAME                          
+ 97.02  99.79  98.39  92.31  97.58 1      CVA6 Verification Master Plan         CVA6 Verification Master Plan 
+
+  
+  ----------------
+  SCORE  LINE   COND   ASSERT GROUP  weight description                       Comment NAME                  
+   94.94 --     --      92.31  97.58 1      CVA6 features for programmer view         Programmer view level 
+
+    
+    ----------------
+    SCORE  LINE   COND   ASSERT GROUP  weight description                                                                                  Comment NAME 
+     99.74 --     --     --      99.74 1      Instruction Set Architecture
+    Specification: Done, Dvplan: Done, Verification execution: Done         ISA  
+
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME  
+       99.46 --     --     --      99.46 1      I extension         RV32I 
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME   
+        100.00 --     --     --     100.00 1                          ADD    
+        100.00 --     --     --     100.00 1                          ADDI   
+        100.00 --     --     --     100.00 1                          AND    
+        100.00 --     --     --     100.00 1                          ANDI   
+        100.00 --     --     --     100.00 1                          AUIPC  
+        100.00 --     --     --     100.00 1                          BEQ    
+        100.00 --     --     --     100.00 1                          BGE    
+        100.00 --     --     --     100.00 1                          BGEU   
+        100.00 --     --     --     100.00 1                          BLT    
+        100.00 --     --     --     100.00 1                          BLTU   
+        100.00 --     --     --     100.00 1                          BNE    
+        100.00 --     --     --     100.00 1                          EBREAK 
+        100.00 --     --     --     100.00 1                          ECALL  
+        100.00 --     --     --     100.00 1                          FENCE  
+         85.42 --     --     --      85.42 1                          JAL    
+         92.03 --     --     --      92.03 1                          JALR   
+        100.00 --     --     --     100.00 1                          LB     
+        100.00 --     --     --     100.00 1                          LBU    
+        100.00 --     --     --     100.00 1                          LH     
+        100.00 --     --     --     100.00 1                          LHU    
+        100.00 --     --     --     100.00 1                          LUI    
+        100.00 --     --     --     100.00 1                          LW     
+        100.00 --     --     --     100.00 1                          MRET   
+        100.00 --     --     --     100.00 1                          OR     
+        100.00 --     --     --     100.00 1                          ORI    
+        100.00 --     --     --     100.00 1                          SB     
+        100.00 --     --     --     100.00 1                          SH     
+        100.00 --     --     --     100.00 1                          SLL    
+        100.00 --     --     --     100.00 1                          SLLI   
+        100.00 --     --     --     100.00 1                          SLT    
+        100.00 --     --     --     100.00 1                          SLTI   
+        100.00 --     --     --     100.00 1                          SLTIU  
+        100.00 --     --     --     100.00 1                          SLTU   
+        100.00 --     --     --     100.00 1                          SRA    
+        100.00 --     --     --     100.00 1                          SRAI   
+        100.00 --     --     --     100.00 1                          SRL    
+        100.00 --     --     --     100.00 1                          SRLI   
+        100.00 --     --     --     100.00 1                          SUB    
+        100.00 --     --     --     100.00 1                          SW     
+        100.00 --     --     --     100.00 1                          WFI    
+        100.00 --     --     --     100.00 1                          XOR    
+        100.00 --     --     --     100.00 1                          XORI   
+
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME  
+      100.00 --     --     --     100.00 1      M extension         RV32M 
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME         
+        100.00 --     --     --     100.00 1                          DIV          
+        100.00 --     --     --     100.00 1                          DIV_RESULTS  
+        100.00 --     --     --     100.00 1                          DIVU         
+        100.00 --     --     --     100.00 1                          DIVU_RESULTS 
+        100.00 --     --     --     100.00 1                          MUL          
+        100.00 --     --     --     100.00 1                          MULH         
+        100.00 --     --     --     100.00 1                          MULHSU       
+        100.00 --     --     --     100.00 1                          MULHU        
+        100.00 --     --     --     100.00 1                          REM          
+        100.00 --     --     --     100.00 1                          REM_RESULTS  
+        100.00 --     --     --     100.00 1                          REMU         
+        100.00 --     --     --     100.00 1                          REMU_RESULTS 
+
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME  
+       99.97 --     --     --      99.97 1      C extension         RV32C 
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME     
+        100.00 --     --     --     100.00 1                          ADD      
+        100.00 --     --     --     100.00 1                          ADDI4SPN 
+        100.00 --     --     --     100.00 1                          ADDI16SP 
+        100.00 --     --     --     100.00 1                          ADDI     
+        100.00 --     --     --     100.00 1                          AND      
+        100.00 --     --     --     100.00 1                          ANDI     
+        100.00 --     --     --     100.00 1                          BEQZ     
+        100.00 --     --     --     100.00 1                          BNEZ     
+        100.00 --     --     --     100.00 1                          EBREAK   
+        100.00 --     --     --     100.00 1                          J        
+        100.00 --     --     --     100.00 1                          JAL      
+        100.00 --     --     --     100.00 1                          JALR     
+        100.00 --     --     --     100.00 1                          JR       
+        100.00 --     --     --     100.00 1                          LI       
+        100.00 --     --     --     100.00 1                          LUI      
+         99.55 --     --     --      99.55 1                          LW       
+        100.00 --     --     --     100.00 1                          LWSP     
+        100.00 --     --     --     100.00 1                          MV       
+        100.00 --     --     --     100.00 1                          NOP      
+        100.00 --     --     --     100.00 1                          OR       
+        100.00 --     --     --     100.00 1                          SLLI     
+        100.00 --     --     --     100.00 1                          SRAI     
+        100.00 --     --     --     100.00 1                          SRLI     
+        100.00 --     --     --     100.00 1                          SUB      
+         99.61 --     --     --      99.61 1                          SW       
+        100.00 --     --     --     100.00 1                          SWSP     
+        100.00 --     --     --     100.00 1                          XOR      
+
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT GROUP  weight description     Comment NAME      
+      100.00 --     --     --     100.00 1      ZICSR extension         RV32ZICSR 
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME   
+        100.00 --     --     --     100.00 1                          CSRRC  
+        100.00 --     --     --     100.00 1                          CSRRCI 
+        100.00 --     --     --     100.00 1                          CSRRS  
+        100.00 --     --     --     100.00 1                          CSRRSI 
+        100.00 --     --     --     100.00 1                          CSRRW  
+        100.00 --     --     --     100.00 1                          CSRRWI 
+
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT GROUP  weight description   Comment NAME    
+       99.95 --     --     --      99.95 1      ZCB extension         RV32ZCB 
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME   
+        100.00 --     --     --     100.00 1                          MUL    
+        100.00 --     --     --     100.00 1                          ZEXT_B 
+        100.00 --     --     --     100.00 1                          ZEXT_H 
+        100.00 --     --     --     100.00 1                          SEXT_B 
+        100.00 --     --     --     100.00 1                          SEXT_H 
+        100.00 --     --     --     100.00 1                          NOT    
+        100.00 --     --     --     100.00 1                          SB     
+         99.80 --     --     --      99.80 1                          SH     
+        100.00 --     --     --     100.00 1                          LBU    
+         99.83 --     --     --      99.83 1                          LHU    
+         99.83 --     --     --      99.83 1                          LH     
+
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT GROUP  weight description        Comment NAME   
+       99.67 --     --     --      99.67 1      Bitmanip extension         RV32ZB 
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME    
+        100.00 --     --     --     100.00 1                          RV32ZBA 
+
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME   
+          100.00 --     --     --     100.00 1                          SH1ADD 
+          100.00 --     --     --     100.00 1                          SH2ADD 
+          100.00 --     --     --     100.00 1                          SH3ADD 
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME    
+        100.00 --     --     --     100.00 1                          RV32ZBB 
+
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME   
+          100.00 --     --     --     100.00 1                          ANDN   
+          100.00 --     --     --     100.00 1                          MAX    
+          100.00 --     --     --     100.00 1                          MAXU   
+          100.00 --     --     --     100.00 1                          MIN    
+          100.00 --     --     --     100.00 1                          MINU   
+          100.00 --     --     --     100.00 1                          ORN    
+          100.00 --     --     --     100.00 1                          ROL    
+          100.00 --     --     --     100.00 1                          ROR    
+          100.00 --     --     --     100.00 1                          XNOR   
+          100.00 --     --     --     100.00 1                          RORI   
+          100.00 --     --     --     100.00 1                          CLZ    
+          100.00 --     --     --     100.00 1                          CPOP   
+          100.00 --     --     --     100.00 1                          CTZ    
+          100.00 --     --     --     100.00 1                          ORC_B  
+          100.00 --     --     --     100.00 1                          REV8   
+          100.00 --     --     --     100.00 1                          SEXT_B 
+          100.00 --     --     --     100.00 1                          SEXT_H 
+          100.00 --     --     --     100.00 1                          ZEXT_H 
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME    
+        100.00 --     --     --     100.00 1                          RV32ZBC 
+
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME   
+          100.00 --     --     --     100.00 1                          CLMUL  
+          100.00 --     --     --     100.00 1                          CLMULH 
+          100.00 --     --     --     100.00 1                          CLMULR 
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME    
+         98.70 --     --     --      98.70 1                          RV32ZBS 
+
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME  
+          100.00 --     --     --     100.00 1                          BCLR  
+          100.00 --     --     --     100.00 1                          BCLRI 
+          100.00 --     --     --     100.00 1                          BINV  
+          100.00 --     --     --     100.00 1                          BINVI 
+           95.83 --     --     --      95.83 1                          BSET  
+           93.75 --     --     --      93.75 1                          BSETI 
+          100.00 --     --     --     100.00 1                          BEXT  
+          100.00 --     --     --     100.00 1                          BEXTI 
+
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT GROUP  weight description            Comment                      NAME                             
+       98.84 --     --     --      98.84 1      Instructions sequences                              Instructions execution sequences 
+      100.00 --     --     --     100.00 1                             RVFI limitation issue(#1338) Illegal instructions             
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment                      NAME      
+        100.00 --     --     --     100.00 1                  RVFI limitation issue(#1338) I_EXT     
+        100.00 --     --     --     100.00 1                  RVFI limitation issue(#1338) M_EXT     
+        100.00 --     --     --     100.00 1                  RVFI limitation issue(#1338) ZICSR_EXT 
+
+    
+    ----------------
+    SCORE  LINE   COND   ASSERT GROUP  weight description                                                                           Comment NAME       
+    100.00 --     --     --     100.00 1      CSR registers access.
+    Specification: Done, Dvplan: Done, Verification execution: Done         CSR access 
+
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME           
+      100.00 --     --     --     100.00 1                          MSTATUS        
+      100.00 --     --     --     100.00 1                          MISA           
+      100.00 --     --     --     100.00 1                          MIE            
+      100.00 --     --     --     100.00 1                          MTVEC          
+      100.00 --     --     --     100.00 1                          MSTATUSH       
+      100.00 --     --     --     100.00 1                          MHPMEVENT3     
+      100.00 --     --     --     100.00 1                          MHPMEVENT4     
+      100.00 --     --     --     100.00 1                          MHPMEVENT5     
+      100.00 --     --     --     100.00 1                          MHPMEVENT6     
+      100.00 --     --     --     100.00 1                          MHPMEVENT7     
+      100.00 --     --     --     100.00 1                          MHPMEVENT8     
+      100.00 --     --     --     100.00 1                          MHPMEVENT9     
+      100.00 --     --     --     100.00 1                          MHPMEVENT10    
+      100.00 --     --     --     100.00 1                          MHPMEVENT11    
+      100.00 --     --     --     100.00 1                          MHPMEVENT12    
+      100.00 --     --     --     100.00 1                          MHPMEVENT13    
+      100.00 --     --     --     100.00 1                          MHPMEVENT14    
+      100.00 --     --     --     100.00 1                          MHPMEVENT15    
+      100.00 --     --     --     100.00 1                          MHPMEVENT16    
+      100.00 --     --     --     100.00 1                          MHPMEVENT17    
+      100.00 --     --     --     100.00 1                          MHPMEVENT18    
+      100.00 --     --     --     100.00 1                          MHPMEVENT19    
+      100.00 --     --     --     100.00 1                          MHPMEVENT20    
+      100.00 --     --     --     100.00 1                          MHPMEVENT21    
+      100.00 --     --     --     100.00 1                          MHPMEVENT22    
+      100.00 --     --     --     100.00 1                          MHPMEVENT23    
+      100.00 --     --     --     100.00 1                          MHPMEVENT24    
+      100.00 --     --     --     100.00 1                          MHPMEVENT25    
+      100.00 --     --     --     100.00 1                          MHPMEVENT26    
+      100.00 --     --     --     100.00 1                          MHPMEVENT27    
+      100.00 --     --     --     100.00 1                          MHPMEVENT28    
+      100.00 --     --     --     100.00 1                          MHPMEVENT29    
+      100.00 --     --     --     100.00 1                          MHPMEVENT30    
+      100.00 --     --     --     100.00 1                          MHPMEVENT31    
+      100.00 --     --     --     100.00 1                          MSCRATCH       
+      100.00 --     --     --     100.00 1                          MEPC           
+      100.00 --     --     --     100.00 1                          MCAUSE         
+      100.00 --     --     --     100.00 1                          MTVAL          
+      100.00 --     --     --     100.00 1                          MIP            
+      100.00 --     --     --     100.00 1                          PMPCFG0        
+      100.00 --     --     --     100.00 1                          PMPCFG1        
+      100.00 --     --     --     100.00 1                          PMPCFG2        
+      100.00 --     --     --     100.00 1                          PMPCFG3        
+      100.00 --     --     --     100.00 1                          PMPCFG4        
+      100.00 --     --     --     100.00 1                          PMPCFG5        
+      100.00 --     --     --     100.00 1                          PMPCFG6        
+      100.00 --     --     --     100.00 1                          PMPCFG7        
+      100.00 --     --     --     100.00 1                          PMPCFG8        
+      100.00 --     --     --     100.00 1                          PMPCFG9        
+      100.00 --     --     --     100.00 1                          PMPCFG10       
+      100.00 --     --     --     100.00 1                          PMPCFG11       
+      100.00 --     --     --     100.00 1                          PMPCFG12       
+      100.00 --     --     --     100.00 1                          PMPCFG13       
+      100.00 --     --     --     100.00 1                          PMPCFG14       
+      100.00 --     --     --     100.00 1                          PMPCFG15       
+      100.00 --     --     --     100.00 1                          PMPADDR0       
+      100.00 --     --     --     100.00 1                          PMPADDR1       
+      100.00 --     --     --     100.00 1                          PMPADDR2       
+      100.00 --     --     --     100.00 1                          PMPADDR3       
+      100.00 --     --     --     100.00 1                          PMPADDR4       
+      100.00 --     --     --     100.00 1                          PMPADDR5       
+      100.00 --     --     --     100.00 1                          PMPADDR6       
+      100.00 --     --     --     100.00 1                          PMPADDR7       
+      100.00 --     --     --     100.00 1                          PMPADDR8       
+      100.00 --     --     --     100.00 1                          PMPADDR9       
+      100.00 --     --     --     100.00 1                          PMPADDR10      
+      100.00 --     --     --     100.00 1                          PMPADDR11      
+      100.00 --     --     --     100.00 1                          PMPADDR12      
+      100.00 --     --     --     100.00 1                          PMPADDR13      
+      100.00 --     --     --     100.00 1                          PMPADDR14      
+      100.00 --     --     --     100.00 1                          PMPADDR15      
+      100.00 --     --     --     100.00 1                          PMPADDR16      
+      100.00 --     --     --     100.00 1                          PMPADDR17      
+      100.00 --     --     --     100.00 1                          PMPADDR18      
+      100.00 --     --     --     100.00 1                          PMPADDR19      
+      100.00 --     --     --     100.00 1                          PMPADDR20      
+      100.00 --     --     --     100.00 1                          PMPADDR21      
+      100.00 --     --     --     100.00 1                          PMPADDR22      
+      100.00 --     --     --     100.00 1                          PMPADDR23      
+      100.00 --     --     --     100.00 1                          PMPADDR24      
+      100.00 --     --     --     100.00 1                          PMPADDR25      
+      100.00 --     --     --     100.00 1                          PMPADDR26      
+      100.00 --     --     --     100.00 1                          PMPADDR27      
+      100.00 --     --     --     100.00 1                          PMPADDR28      
+      100.00 --     --     --     100.00 1                          PMPADDR29      
+      100.00 --     --     --     100.00 1                          PMPADDR30      
+      100.00 --     --     --     100.00 1                          PMPADDR31      
+      100.00 --     --     --     100.00 1                          PMPADDR32      
+      100.00 --     --     --     100.00 1                          PMPADDR33      
+      100.00 --     --     --     100.00 1                          PMPADDR34      
+      100.00 --     --     --     100.00 1                          PMPADDR35      
+      100.00 --     --     --     100.00 1                          PMPADDR36      
+      100.00 --     --     --     100.00 1                          PMPADDR37      
+      100.00 --     --     --     100.00 1                          PMPADDR38      
+      100.00 --     --     --     100.00 1                          PMPADDR39      
+      100.00 --     --     --     100.00 1                          PMPADDR40      
+      100.00 --     --     --     100.00 1                          PMPADDR41      
+      100.00 --     --     --     100.00 1                          PMPADDR42      
+      100.00 --     --     --     100.00 1                          PMPADDR43      
+      100.00 --     --     --     100.00 1                          PMPADDR44      
+      100.00 --     --     --     100.00 1                          PMPADDR45      
+      100.00 --     --     --     100.00 1                          PMPADDR46      
+      100.00 --     --     --     100.00 1                          PMPADDR47      
+      100.00 --     --     --     100.00 1                          PMPADDR48      
+      100.00 --     --     --     100.00 1                          PMPADDR49      
+      100.00 --     --     --     100.00 1                          PMPADDR50      
+      100.00 --     --     --     100.00 1                          PMPADDR51      
+      100.00 --     --     --     100.00 1                          PMPADDR52      
+      100.00 --     --     --     100.00 1                          PMPADDR53      
+      100.00 --     --     --     100.00 1                          PMPADDR54      
+      100.00 --     --     --     100.00 1                          PMPADDR55      
+      100.00 --     --     --     100.00 1                          PMPADDR56      
+      100.00 --     --     --     100.00 1                          PMPADDR57      
+      100.00 --     --     --     100.00 1                          PMPADDR58      
+      100.00 --     --     --     100.00 1                          PMPADDR59      
+      100.00 --     --     --     100.00 1                          PMPADDR60      
+      100.00 --     --     --     100.00 1                          PMPADDR61      
+      100.00 --     --     --     100.00 1                          PMPADDR62      
+      100.00 --     --     --     100.00 1                          PMPADDR63      
+      100.00 --     --     --     100.00 1                          MCYCLE         
+      100.00 --     --     --     100.00 1                          MINSTRET       
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER3   
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER4   
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER5   
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER6   
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER7   
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER8   
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER9   
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER10  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER11  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER12  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER13  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER14  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER15  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER16  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER17  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER18  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER19  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER20  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER21  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER22  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER23  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER24  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER25  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER26  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER27  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER28  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER29  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER30  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER31  
+      100.00 --     --     --     100.00 1                          MCYCLEH        
+      100.00 --     --     --     100.00 1                          MINSTRETH      
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER3H  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER4H  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER5H  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER6H  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER7H  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER8H  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER9H  
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER10H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER11H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER12H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER13H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER14H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER15H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER16H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER17H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER18H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER19H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER20H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER21H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER22H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER23H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER24H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER25H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER26H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER27H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER28H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER29H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER30H 
+      100.00 --     --     --     100.00 1                          MHPMCOUNTER31H 
+      100.00 --     --     --     100.00 1                          MVENDORID      
+      100.00 --     --     --     100.00 1                          MARCHID        
+      100.00 --     --     --     100.00 1                          MIMPID         
+      100.00 --     --     --     100.00 1                          MHARTID        
+      100.00 --     --     --     100.00 1                          MCONFIGPTR     
+
+    
+    ----------------
+    SCORE  LINE   COND   ASSERT GROUP  weight description                                                                                 Comment NAME  
+     99.57 --     --     --      99.57 1      Interrupts and Exceptions.
+    Specification: Done, Dvplan: Done, Verification execution: Done.         TRAPs 
+
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME       
+       99.15 --     --     --      99.15 1                          Interrupts 
+      100.00 --     --     --     100.00 1                          Exceptions 
+
+    
+    ----------------
+    SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME    
+     91.66 --     --      92.31  91.01 1                          CV-X-IF 
+
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME                
+       87.24 --     --      92.31  82.18 1                          Protocol            
+       99.84 --     --     --      99.84 1                          CV-XIF Instructions 
+
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME              
+        100.00 --     --     --     100.00 1                          SEQUENCE          
+         99.92 --     --     --      99.92 1                          CUS_CADD          
+         99.85 --     --     --      99.85 1                          CUS_ADD           
+         99.78 --     --     --      99.78 1                          CUS_ADD_MULTI     
+         99.79 --     --     --      99.79 1                          CUS_DOUBLE_RS1    
+         99.78 --     --     --      99.78 1                          CUS_DOUBLE_RS2    
+         99.79 --     --     --      99.79 1                          CUS_ADD_RS3_MADD  
+         99.73 --     --     --      99.73 1                          CUS_ADD_RS3_MSUB  
+         99.79 --     --     --      99.79 1                          CUS_ADD_RS3_NMADD 
+         99.80 --     --     --      99.80 1                          CUS_ADD_RS3_NMSUB 
+        100.00 --     --     --     100.00 1                          CUS_ADD_RS3_RTYPE 
+
+  
+  ----------------
+  SCORE  LINE   COND   ASSERT GROUP  weight description Comment NAME          
+   99.09  99.79  98.39 --     --     1                          Code coverage 
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: HVP Hierarchy</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.treetable.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.treetable.js"></script>
+<script type="text/javascript" src="js/.colResizable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    }  });
+  $("#hierarchyTable tbody tr").mousedown(function() {
+    $("tr.selected").removeClass("selected");
+    $("td.selected").removeClass("selected");
+    $(this).addClass("selected");
+    $(this).children().addClass("selected");
+  });
+  $("tr[data-tt-id='hierarchyTable_root']").each(function () {
+    $(this).attr("style", "display:none");
+  });
+  $("tr[data-tt-parent-id='hierarchyTable_root']").each(function () {
+    $(this).attr("style", "display:table-row");
+    $("#hierarchyTable").treetable("expandNode", $(this).attr("data-tt-id"));
+  });
+  $("table").colResizable({    liveDrag:true,
+    fixed:false,
+    draggingClass:"dragging"
+  });
+});
+function expandAll() {
+  $("#hierarchyTable").treetable("expandAll");
+}
+function collapseAll() {
+  if ($("tr[data-tt-parent-id='hierarchyTable_root']").length > 0) {
+    $("tr[data-tt-parent-id='hierarchyTable_root']").each(function () {
+      var nodeId = $(this).attr("data-tt-id");
+      var node = $("#hierarchyTable").treetable("node", nodeId);
+      $("#hierarchyTable").treetable("collapseNodeRecursive", node);
+    });
+  } else {
+    $("#hierarchyTable").treetable("collapseAll");
+  }
+}
+</script>
+</head>
+<body><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">HVP Hierarchy</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-center">
+<br clear=all>
+<table class="noborder">
+  <tr>
+    <td class="noborder"><input type="button" value="Expand All" onClick="expandAll()"></td>
+    <td class="noborder"><input type="button" value="Collapse All" onClick="collapseAll()"></td>
+  </tr>
+</table>
+<table id="hierarchyTable" border="0" cellpadding="0" cellspacing="0" class="sortable">
+  <thead class="table-header">
+    <tr>
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td><td>weight</td><td class="alfsrt">description</td><td class="alfsrt">Comment</td>    </tr>
+  </thead>
+  <tbody>
+    <tr data-tt-id="hierarchyTable_root">
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>    </tr>
+    <tr data-tt-id="p0" data-tt-parent-id="hierarchyTable_root">
+<td class="wht cl"><a href="plan.CVA6 Verification Master Plan1.2.html" >CVA6&nbsp;Verification&nbsp;Master&nbsp;Plan<a name="tag_urg_hvp_CVA6 Verification Master Plan"></a>
+</a></td>
+<td class="s9 cl rt"> 97.02</td>
+<td class="s9 cl rt"> 99.79</td>
+<td class="s9 cl rt"> 98.39</td>
+<td class="s9 cl rt"> 92.31</td>
+<td class="s9 cl rt"> 97.58</td>
+<td class="wht cl rt">1</td>
+<td class="wht cl">CVA6 Verification Master Plan</td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="p0-0" data-tt-parent-id="p0">
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.7.-1268999905.html" >Programmer&nbsp;view&nbsp;level<a name="tag_urg_hvp_CVA6 Verification Master Plan.Programmer view level"></a>
+</a></td>
+<td class="s9 cl rt"> 94.94</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s9 cl rt"> 92.31</td>
+<td class="s9 cl rt"> 97.58</td>
+<td class="wht cl rt">1</td>
+<td class="wht cl">CVA6 features for programmer view</td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="p0-0_subtree" data-tt-parent-id="p0-0">
+<td class="wht cl"><a href="hvp.CVA6 Verification Master Plan2.html" class=subtree>subtree...</a></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="p0-351" data-tt-parent-id="p0">
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.1726.1895599623.html" >Code&nbsp;coverage<a name="tag_urg_hvp_CVA6 Verification Master Plan.Code coverage"></a>
+</a></td>
+<td class="s9 cl rt"> 99.09</td>
+<td class="s9 cl rt"> 99.79</td>
+<td class="s9 cl rt"> 98.39</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl rt">1</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+
+<script>
+$("#hierarchyTable").treetable({ expandable: true });
+</script>
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: commit_stage</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_commit_stage'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_commit_stage')">commit_stage</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod62.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod62.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/commit_stage.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/commit_stage.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod62.html#inst_tag_212"  onclick="showContent('inst_tag_212')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.commit_stage_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod62.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod62.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_commit_stage'>
+<hr>
+<a name="inst_tag_212"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_212" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.commit_stage_i</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod62.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod62.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod38.html#inst_tag_151" >cva6_only_pipeline.i_cva6_pipeline</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_commit_stage'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod62.html" >commit_stage</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>70</td><td>70</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>115</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>140</td><td>52</td><td>52</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>373</td><td>15</td><td>15</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+114                       always_comb begin : dirty_fp_state
+115        1/1              dirty_fp_state_o = 1'b0;
+116        1/1              for (int i = 0; i &lt; CVA6Cfg.NrCommitPorts; i++) begin
+117        1/1                dirty_fp_state_o |= commit_ack_o[i] &amp; (commit_instr_i[i].fu inside {FPU, FPU_VEC} || (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(
+118                               commit_instr_i[i].op
+119                               // Check if we issued a vector floating-point instruction to the accellerator
+120                           ))) | commit_instr_i[i].fu == ACCEL &amp;&amp; commit_instr_i[i].vfp;
+121                         end
+122                       end
+123                     
+124                       assign commit_tran_id_o = commit_instr_i[0].trans_id;
+125                     
+126                       logic instr_0_is_amo;
+127                       logic [CVA6Cfg.NrCommitPorts-1:0] commit_macro_ack;
+128                       assign instr_0_is_amo = is_amo(commit_instr_i[0].op);
+129                     
+130                       logic amo_resp_ack;
+131                       assign amo_resp_ack = obi_amo_rsp_i.rvalid;  // &amp;&amp; amo_obi_req_o.rready;
+132                     
+133                     
+134                       // -------------------
+135                       // Commit Instruction
+136                       // -------------------
+137                       // write register file or commit instruction in LSU or CSR Buffer
+138                       always_comb begin : commit
+139                         // default assignments
+140        1/1              commit_ack_o[0] = 1'b0;
+141        1/1              commit_macro_ack[0] = 1'b0;
+142                     
+143        1/1              amo_valid_commit_o = 1'b0;
+144                     
+145        1/1              we_gpr_o[0] = 1'b0;
+146        1/1              we_fpr_o = '{default: 1'b0};
+147        1/1              commit_lsu_o = 1'b0;
+148        1/1              commit_csr_o = 1'b0;
+149                         // amos will commit on port 0
+150        1/1              wdata_o[0] = (CVA6Cfg.RVA &amp;&amp; amo_resp_ack) ? obi_amo_rsp_i.r.rdata : commit_instr_i[0].result;
+151        1/1              csr_op_o = ADD;  // this corresponds to a CSR NOP
+152        1/1              csr_wdata_o = {CVA6Cfg.XLEN{1'b0}};
+153        1/1              fence_i_o = 1'b0;
+154        1/1              fence_o = 1'b0;
+155        1/1              sfence_vma_o = 1'b0;
+156        1/1              hfence_vvma_o = 1'b0;
+157        1/1              hfence_gvma_o = 1'b0;
+158        1/1              csr_write_fflags_o = 1'b0;
+159        1/1              flush_commit_o = 1'b0;
+160                     
+161                         // we do not commit the instruction yet if we requested a halt
+162        1/1              if (commit_instr_i[0].valid &amp;&amp; !halt_i) begin
+163                           // we will not commit the instruction if we took an exception
+164        1/1                if (commit_instr_i[0].ex.valid) begin
+165                             // However we can drop it (with its exception)
+166        1/1                  if (CVA6Cfg.SpeculativeSb &amp;&amp; commit_drop_i[0]) begin
+167        <font color = "grey">unreachable  </font>          commit_ack_o[0] = 1'b1;
+168                             end
+                        MISSING_ELSE
+169                           end else begin
+170        1/1                  commit_ack_o[0] = 1'b1;
+171                     
+172        1/1                  if (CVA6Cfg.RVZCMP &amp;&amp; commit_instr_i[0].is_macro_instr &amp;&amp; commit_instr_i[0].is_last_macro_instr)
+173        <font color = "grey">unreachable  </font>          commit_macro_ack[0] = 1'b1;
+174        1/1                  else commit_macro_ack[0] = 1'b0;
+175                     
+176        1/1                  if (!commit_drop_i[0]) begin
+177                               // we can definitely write the register file
+178                               // if the instruction is not committing anything the destination
+179        1/1                    if (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(commit_instr_i[0].op)) begin
+180        <font color = "grey">unreachable  </font>            we_fpr_o[0] = 1'b1;
+181                               end else begin
+182        1/1                      we_gpr_o[0] = 1'b1;
+183                               end
+184                             end
+                   <font color = "red">==>  MISSING_ELSE</font>
+185                     
+186                             // check whether the instruction we retire was a store
+187        1/1                  if (commit_instr_i[0].fu == STORE &amp;&amp; !(CVA6Cfg.RVA &amp;&amp; instr_0_is_amo)) begin
+188                               // check if the LSU is ready to accept another commit entry (e.g.: a non-speculative store)
+189        1/1                    if (commit_lsu_ready_i) begin
+190        1/1                      commit_lsu_o = 1'b1;
+191                                 // stall in case the store buffer is not able to accept anymore instructions
+192                               end else begin
+193        1/1                      commit_ack_o[0] = 1'b0;
+194                               end
+195                             end
+                        MISSING_ELSE
+196                             // ---------
+197                             // FPU Flags
+198                             // ---------
+199        1/1                  if (CVA6Cfg.FpPresent) begin
+200        <font color = "grey">unreachable  </font>          if (commit_instr_i[0].fu inside {FPU, FPU_VEC}) begin
+201        <font color = "grey">unreachable  </font>            if (!commit_drop_i[0]) begin
+202                                   // write the CSR with potential exception flags from retiring floating point instruction
+203        <font color = "grey">unreachable  </font>              csr_wdata_o = {{CVA6Cfg.XLEN - 5{1'b0}}, commit_instr_i[0].ex.cause[4:0]};
+204        <font color = "grey">unreachable  </font>              csr_write_fflags_o = 1'b1;
+205                                 end
+                   <font color = "red">==>  MISSING_ELSE</font>
+206                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+207                             end
+                        MISSING_ELSE
+208                             // ---------
+209                             // CSR Logic
+210                             // ---------
+211                             // check whether the instruction we retire was a CSR instruction and it did not
+212                             // throw an exception
+213        1/1                  if (commit_instr_i[0].fu == CSR) begin
+214                               // write the CSR file
+215        1/1                    csr_op_o    = commit_instr_i[0].op;
+216        1/1                    csr_wdata_o = commit_instr_i[0].result;
+217        1/1                    if (!commit_drop_i[0]) begin
+218        1/1                      if (!csr_exception_i.valid) begin
+219        1/1                        commit_csr_o = 1'b1;
+220        1/1                        wdata_o[0]   = csr_rdata_i;
+221                                 end else begin
+222        1/1                        commit_ack_o[0] = 1'b0;
+223        1/1                        we_gpr_o[0] = 1'b0;
+224                                 end
+225                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+226                             end
+                        MISSING_ELSE
+227                             // ------------------
+228                             // SFENCE.VMA Logic
+229                             // ------------------
+230                             // sfence.vma is idempotent so we can safely re-execute it after returning
+231                             // from interrupt service routine
+232                             // check if this instruction was a SFENCE_VMA
+233        1/1                  if (CVA6Cfg.RVS &amp;&amp; commit_instr_i[0].op == SFENCE_VMA) begin
+234        <font color = "grey">unreachable  </font>          if (!commit_drop_i[0]) begin
+235                                 // no store pending so we can flush the TLBs and pipeline
+236        <font color = "grey">unreachable  </font>            sfence_vma_o = no_st_pending_i;
+237                                 // wait for the store buffer to drain until flushing the pipeline
+238        <font color = "grey">unreachable  </font>            commit_ack_o[0] = no_st_pending_i;
+239                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+240                             end
+                        MISSING_ELSE
+241                             // ------------------
+242                             // HFENCE.VVMA Logic
+243                             // ------------------
+244                             // hfence.vvma is idempotent so we can safely re-execute it after returning
+245                             // from interrupt service routine
+246                             // check if this instruction was a HFENCE_VVMA
+247        1/1                  if (CVA6Cfg.RVH &amp;&amp; commit_instr_i[0].op == HFENCE_VVMA) begin
+248        <font color = "grey">unreachable  </font>          if (!commit_drop_i[0]) begin
+249                                 // no store pending so we can flush the TLBs and pipeline
+250        <font color = "grey">unreachable  </font>            hfence_vvma_o   = no_st_pending_i;
+251                                 // wait for the store buffer to drain until flushing the pipeline
+252        <font color = "grey">unreachable  </font>            commit_ack_o[0] = no_st_pending_i;
+253                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+254                             end
+                        MISSING_ELSE
+255                             // ------------------
+256                             // HFENCE.GVMA Logic
+257                             // ------------------
+258                             // hfence.gvma is idempotent so we can safely re-execute it after returning
+259                             // from interrupt service routine
+260                             // check if this instruction was a HFENCE_GVMA
+261        1/1                  if (CVA6Cfg.RVH &amp;&amp; commit_instr_i[0].op == HFENCE_GVMA) begin
+262        <font color = "grey">unreachable  </font>          if (!commit_drop_i[0]) begin
+263                                 // no store pending so we can flush the TLBs and pipeline
+264        <font color = "grey">unreachable  </font>            hfence_gvma_o   = no_st_pending_i;
+265                                 // wait for the store buffer to drain until flushing the pipeline
+266        <font color = "grey">unreachable  </font>            commit_ack_o[0] = no_st_pending_i;
+267                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+268                             end
+                        MISSING_ELSE
+269                             // ------------------
+270                             // FENCE.I Logic
+271                             // ------------------
+272                             // fence.i is idempotent so we can safely re-execute it after returning
+273                             // from interrupt service routine
+274                             // Fence synchronizes data and instruction streams. That means that we need to flush the private icache
+275                             // and the private dcache. This is the most expensive instruction.
+276        1/1                  if ((commit_instr_i[0].op == FENCE_I &amp;&amp; CVA6Cfg.RVZifencei) || (flush_dcache_i &amp;&amp; CVA6Cfg.DCacheType == config_pkg::WB &amp;&amp; commit_instr_i[0].fu != STORE)) begin /* FIXME */ //confirm that it's only config_pkg::WB and not others caches configurations
+277        <font color = "grey">unreachable  </font>          if (!commit_drop_i[0]) begin
+278        <font color = "grey">unreachable  </font>            commit_ack_o[0] = no_st_pending_i;
+279                                 // tell the controller to flush the I$
+280        <font color = "grey">unreachable  </font>            fence_i_o = no_st_pending_i;
+281                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+282                             end
+                        MISSING_ELSE
+283                             // ------------------
+284                             // FENCE Logic
+285                             // ------------------
+286                             // fence is idempotent so we can safely re-execute it after returning
+287                             // from interrupt service routine
+288        1/1                  if (commit_instr_i[0].op == FENCE) begin
+289        1/1                    if (!commit_drop_i[0]) begin
+290        1/1                      commit_ack_o[0] = no_st_pending_i;
+291                                 // tell the controller to flush the D$
+292        1/1                      fence_o = no_st_pending_i;
+293                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+294                             end
+                        MISSING_ELSE
+295                             // ------------------
+296                             // AMO
+297                             // ------------------
+298        1/1                  if (CVA6Cfg.RVA &amp;&amp; instr_0_is_amo) begin
+299                               // AMO finished
+300        <font color = "grey">unreachable  </font>          commit_ack_o[0] = amo_resp_ack;
+301                               // flush the pipeline
+302        <font color = "grey">unreachable  </font>          flush_commit_o = amo_resp_ack;
+303        <font color = "grey">unreachable  </font>          amo_valid_commit_o = 1'b1;
+304        <font color = "grey">unreachable  </font>          we_gpr_o[0] = amo_resp_ack;
+305                             end
+                        MISSING_ELSE
+306                           end
+307                         end
+                        MISSING_ELSE
+308                     
+309        1/1              if (CVA6Cfg.NrCommitPorts &gt; 1) begin
+310        <font color = "grey">unreachable  </font>      commit_macro_ack[1] = 1'b0;
+311        <font color = "grey">unreachable  </font>      commit_ack_o[1]     = 1'b0;
+312        <font color = "grey">unreachable  </font>      we_gpr_o[1]         = 1'b0;
+313        <font color = "grey">unreachable  </font>      wdata_o[1]          = commit_instr_i[1].result;
+314                     
+315                           // -----------------
+316                           // Commit Port 2
+317                           // -----------------
+318                           // check if the second instruction can be committed as well and the first wasn't a CSR instruction
+319                           // also if we are in single step mode don't retire the second instruction
+320        <font color = "grey">unreachable  </font>      if (commit_ack_o[0] &amp;&amp; commit_instr_i[1].valid
+321                                                     &amp;&amp; !halt_i
+322                                                     &amp;&amp; !(commit_instr_i[0].fu inside {CSR})
+323                                                     &amp;&amp; !flush_dcache_i
+324                                                     &amp;&amp; !(CVA6Cfg.RVA &amp;&amp; instr_0_is_amo)
+325                                                     &amp;&amp; !single_step_i) begin
+326                             // only if the first instruction didn't throw an exception and this instruction won't throw an exception
+327                             // and the functional unit is of type ALU, LOAD, CTRL_FLOW, MULT, FPU or FPU_VEC
+328        <font color = "grey">unreachable  </font>        if (!commit_instr_i[1].ex.valid &amp;&amp; (commit_instr_i[1].fu inside {ALU, LOAD, CTRL_FLOW, MULT, FPU, FPU_VEC})) begin
+329                     
+330        <font color = "grey">unreachable  </font>          if (CVA6Cfg.RVZCMP &amp;&amp; commit_instr_i[1].is_macro_instr &amp;&amp; commit_instr_i[1].is_last_macro_instr)
+331        <font color = "grey">unreachable  </font>            commit_macro_ack[1] = 1'b1;
+332        <font color = "grey">unreachable  </font>          else commit_macro_ack[1] = 1'b0;
+333                     
+334        <font color = "grey">unreachable  </font>          commit_ack_o[1] = 1'b1;
+335                     
+336        <font color = "grey">unreachable  </font>          if (!commit_drop_i[1]) begin
+337        <font color = "grey">unreachable  </font>            if (CVA6Cfg.FpPresent &amp;&amp; ariane_pkg::is_rd_fpr(commit_instr_i[1].op))
+338        <font color = "grey">unreachable  </font>              we_fpr_o[1] = 1'b1;
+339        <font color = "grey">unreachable  </font>            else we_gpr_o[1] = 1'b1;
+340                     
+341                                 // additionally check if we are retiring an FPU instruction because we need to make sure that we write all
+342                                 // exception flags
+343        <font color = "grey">unreachable  </font>            if (CVA6Cfg.FpPresent) begin
+344        <font color = "grey">unreachable  </font>              if (commit_instr_i[1].fu inside {FPU, FPU_VEC}) begin
+345        <font color = "grey">unreachable  </font>                if (csr_write_fflags_o)
+346        <font color = "grey">unreachable  </font>                  csr_wdata_o = {
+347                                         {CVA6Cfg.XLEN - 5{1'b0}},
+348                                         (commit_instr_i[0].ex.cause[4:0] | commit_instr_i[1].ex.cause[4:0])
+349                                       };
+350        <font color = "grey">unreachable  </font>                else csr_wdata_o = {{CVA6Cfg.XLEN - 5{1'b0}}, commit_instr_i[1].ex.cause[4:0]};
+351        <font color = "grey">unreachable  </font>                csr_write_fflags_o = 1'b1;
+352                                   end
+                   <font color = "red">==>  MISSING_ELSE</font>
+353                                 end
+                   <font color = "red">==>  MISSING_ELSE</font>
+354                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+355                             end
+                   <font color = "red">==>  MISSING_ELSE</font>
+356                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+357                         end
+                        MISSING_ELSE
+358        1/1              if (CVA6Cfg.RVZCMP) begin
+359        <font color = "grey">unreachable  </font>      for (int i = 0; i &lt; CVA6Cfg.NrCommitPorts; i++) begin
+360        <font color = "grey">unreachable  </font>        commit_macro_ack_o[i] = commit_instr_i[i].is_macro_instr ? commit_macro_ack[i] : commit_ack_o[i];
+361                           end
+362        1/1              end else commit_macro_ack_o = commit_ack_o;
+363                       end
+364                     
+365                       // -----------------------------
+366                       // Exception &amp; Interrupt Logic
+367                       // -----------------------------
+368                       // here we know for sure that we are taking the exception
+369                       always_comb begin : exception_handling
+370                         // Multiple simultaneous interrupts and traps at the same privilege level are handled in the following decreasing
+371                         // priority order: external interrupts, software interrupts, timer interrupts, then finally any synchronous traps. (1.10 p.30)
+372                         // interrupts are correctly prioritized in the CSR reg file, exceptions are prioritized here
+373        1/1              exception_o.valid = 1'b0;
+374        1/1              exception_o.cause = '0;
+375        1/1              exception_o.tval  = '0;
+376        1/1              exception_o.tval2 = '0;
+377        1/1              exception_o.tinst = '0;
+378        1/1              exception_o.gva   = 1'b0;
+379                     
+380                         // we need a valid instruction in the commit stage
+381        1/1              if (commit_instr_i[0].valid &amp;&amp; !(CVA6Cfg.SpeculativeSb &amp;&amp; commit_drop_i[0])) begin
+382                           // ------------------------
+383                           // check for CSR exception
+384                           // ------------------------
+385        1/1                if (csr_exception_i.valid) begin
+386        1/1                  exception_o      = csr_exception_i;
+387                             // if no earlier exception happened the commit instruction will still contain
+388                             // the instruction bits from the ID stage. If a earlier exception happened we don't care
+389                             // as we will overwrite it anyway in the next IF bl
+390        1/1                  exception_o.tval = commit_instr_i[0].ex.tval;
+391        1/1                  if (CVA6Cfg.RVH) begin
+392        <font color = "grey">unreachable  </font>          exception_o.tinst = commit_instr_i[0].ex.tinst;
+393        <font color = "grey">unreachable  </font>          exception_o.tval2 = commit_instr_i[0].ex.tval2;
+394        <font color = "grey">unreachable  </font>          exception_o.gva   = commit_instr_i[0].ex.gva;
+395                             end
+                        MISSING_ELSE
+396                           end
+                        MISSING_ELSE
+397                           // ------------------------
+398                           // Earlier Exceptions
+399                           // ------------------------
+400                           // but we give precedence to exceptions which happened earlier e.g.: instruction page
+401                           // faults for example
+402        1/1                if (commit_instr_i[0].ex.valid) begin
+403        1/1                  exception_o = commit_instr_i[0].ex;
+404                           end
+                        MISSING_ELSE
+405                         end
+                        MISSING_ELSE
+406                         // Don't take any exceptions iff:
+407                         // - If we halted the processor
+408        1/1              if (halt_i) begin
+409        1/1                exception_o.valid = 1'b0;
+410                         end
+                   <font color = "red">==>  MISSING_ELSE</font>
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod62.html" >commit_stage</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>13</td><td>13</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>13</td><td>13</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       162
+ EXPRESSION (commit_instr_i[0].valid &amp;&amp; ((!halt_i)))
+             -----------1-----------    -----2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       187
+ EXPRESSION ((commit_instr_i[0].fu == STORE) &amp;&amp; ((!(1'b0 &amp;&amp; instr_0_is_amo))))
+             ---------------1---------------    --------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       187
+ SUB-EXPRESSION (commit_instr_i[0].fu == STORE)
+                ---------------1---------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       213
+ EXPRESSION (commit_instr_i[0].fu == CSR)
+            --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       288
+ EXPRESSION (commit_instr_i[0].op == FENCE)
+            ---------------1---------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       320
+ EXPRESSION 
+ Number  Term
+      1  commit_ack_o[0] &amp;&amp; 
+      2  commit_instr_i[1].valid &amp;&amp; 
+      3  ((!halt_i)) &amp;&amp; 
+      4  ((!(commit_instr_i[0].fu inside {CSR}))) &amp;&amp; 
+      5  ((!flush_dcache_i)) &amp;&amp; 
+      6  ((!(1'b0 &amp;&amp; instr_0_is_amo))) &amp;&amp; 
+      7  ((!single_step_i)))
+</pre>
+<table class="noborder">
+<col span="7" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>-5-</th><th>-6-</th><th>-7-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       328
+ EXPRESSION (((!commit_instr_i[1].ex.valid)) &amp;&amp; (commit_instr_i[1].fu inside {ALU, LOAD, CTRL_FLOW, MULT, FPU, FPU_VEC}))
+             ---------------1---------------    ------------------------------------2-----------------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       360
+ EXPRESSION (commit_instr_i[i].is_macro_instr ? commit_macro_ack[i] : commit_ack_o[i])
+             ----------------1---------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       381
+ EXPRESSION (commit_instr_i[0].valid &amp;&amp; ((!(1'b0 &amp;&amp; commit_drop_i[0]))))
+             -----------1-----------    ---------------2---------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_212">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_commit_stage">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

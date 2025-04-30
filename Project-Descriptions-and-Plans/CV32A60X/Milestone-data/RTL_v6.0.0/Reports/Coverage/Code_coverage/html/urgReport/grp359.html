@@ -1,0 +1,2915 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Group :: uvme_cva6_pkg::cg_exception::SHAPE{Guard_ON(cp_exception.IGN_ACCESS_FAULT_EXC,cp_exception.IGN_DEBUG_REQUEST,cp_exception.IGN_ENV_CALL_SMODE,cp_exception.IGN_ENV_CALL_UMODE,cp_exception.IGN_INSTR_ADDR_MISALIGNED_EXC,cp_exception.IGN_PAGE_FAULT_EXC),Guard_OFF(cp_exception.IGN_ADDR_MISALIGNED_EXC)}</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Group : uvme_cva6_pkg::cg_exception::SHAPE{Guard_ON(cp_exception.IGN_ACCESS_FAULT_EXC,cp_exception.IGN_DEBUG_REQUEST,cp_exception.IGN_ENV_CALL_SMODE,cp_exception.IGN_ENV_CALL_UMODE,cp_exception.IGN_INSTR_ADDR_MISALIGNED_EXC,cp_exception.IGN_PAGE_FAULT_EXC),Guard_OFF(cp_exception.IGN_ADDR_MISALIGNED_EXC)}</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Group : <a href="#"  onclick="showContent('uvme_cva6_pkg::cg_exception::SHAPE{Guard_ON(cp_exception.IGN_ACCESS_FAULT_EXC,cp_exception.IGN_DEBUG_REQUEST,cp_exception.IGN_ENV_CALL_SMODE,cp_exception.IGN_ENV_CALL_UMODE,cp_exception.IGN_INSTR_ADDR_MISALIGNED_EXC,cp_exception.IGN_PAGE_FAULT_EXC),Guard_OFF(cp_exception.IGN_ADDR_MISALIGNED_EXC)}')">uvme_cva6_pkg::cg_exception::SHAPE{Guard_ON(cp_exception.IGN_ACCESS_FAULT_EXC,cp_exception.IGN_DEBUG_REQUEST,cp_exception.IGN_ENV_CALL_SMODE,cp_exception.IGN_ENV_CALL_UMODE,cp_exception.IGN_INSTR_ADDR_MISALIGNED_EXC,cp_exception.IGN_PAGE_FAULT_EXC),Guard_OFF(cp_exception.IGN_ADDR_MISALIGNED_EXC)}</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td><b>SCORE</b></td><td>INSTANCES</td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>PER INSTANCE</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/8/riscv/nonsecure/cva6/verif/env/uvme/cov/uvme_exception_covg.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/8/riscv/nonsecure/cva6/verif/env/uvme/cov/uvme_exception_covg.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>1 Instances:</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="wht cl wordwrap"><a href="grp359.html#inst_tag_uvme_cva6_pkg.exception_cg"  onclick="showContent('uvme_cva6_pkg.exception_cg')">uvme_cva6_pkg.exception_cg</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+</div>
+</div>
+<div name='uvme_cva6_pkg.exception_cg'>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg"></a>
+<hr>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Group Instance : <a href="groups.html#tag_uvme_cva6_pkg.exception_cg" >uvme_cva6_pkg.exception_cg</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+</div>
+<hr>
+<br clear=all>
+<span class=repname>Summary for Group Instance   uvme_cva6_pkg.exception_cg
+</span>
+<br clear=all>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td><a href="#var_tbl_uvme_cva6_pkg.exception_cg" >Variables</a></td>
+<td class="rt">138</td>
+<td class="rt">0</td>
+<td class="rt">138</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td><a href="#crs_tbl_uvme_cva6_pkg.exception_cg" >Crosses</a></td>
+<td class="rt">128</td>
+<td class="rt">0</td>
+<td class="rt">128</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="var_tbl_uvme_cva6_pkg.exception_cg">Variables for Group Instance  uvme_cva6_pkg.exception_cg
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">VARIABLE</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>COMMENT</td></tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_exception"  onclick="checkLink(this)" target="detailFrame">cp_exception</a></td>
+<td class="rt">5</td>
+<td class="rt">0</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_trap"  onclick="checkLink(this)" target="detailFrame">cp_trap</a></td>
+<td class="rt">2</td>
+<td class="rt">0</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_ebreak"  onclick="checkLink(this)" target="detailFrame">cp_is_ebreak</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_dret"  onclick="checkLink(this)" target="detailFrame">cp_is_dret</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_ecall"  onclick="checkLink(this)" target="detailFrame">cp_is_ecall</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_fencei"  onclick="checkLink(this)" target="detailFrame">cp_is_fencei</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_csr"  onclick="checkLink(this)" target="detailFrame">cp_is_csr</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_write_csr"  onclick="checkLink(this)" target="detailFrame">cp_is_write_csr</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_not_write_csr"  onclick="checkLink(this)" target="detailFrame">cp_is_not_write_csr</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_illegal_csr"  onclick="checkLink(this)" target="detailFrame">cp_illegal_csr</a></td>
+<td class="rt">113</td>
+<td class="rt">0</td>
+<td class="rt">113</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_ro_csr"  onclick="checkLink(this)" target="detailFrame">cp_ro_csr</a></td>
+<td class="rt">5</td>
+<td class="rt">0</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_misalign_load"  onclick="checkLink(this)" target="detailFrame">cp_misalign_load</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_misalign_store"  onclick="checkLink(this)" target="detailFrame">cp_misalign_store</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_add_mem"  onclick="checkLink(this)" target="detailFrame">cp_add_mem</a></td>
+<td class="rt">4</td>
+<td class="rt">0</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="crs_tbl_uvme_cva6_pkg.exception_cg">Crosses for Group Instance  uvme_cva6_pkg.exception_cg
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CROSS</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>PRINT MISSING</td><td>COMMENT</td></tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_breakpoint"  onclick="checkLink(this)" target="detailFrame">cross_breakpoint</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_ecall"  onclick="checkLink(this)" target="detailFrame">cross_ecall</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_fencei"  onclick="checkLink(this)" target="detailFrame">cross_fencei</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_dret"  onclick="checkLink(this)" target="detailFrame">cross_dret</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_illegal_csr"  onclick="checkLink(this)" target="detailFrame">cross_illegal_csr</a></td>
+<td class="rt">113</td>
+<td class="rt">0</td>
+<td class="rt">113</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_illegal_write_csr"  onclick="checkLink(this)" target="detailFrame">cross_illegal_write_csr</a></td>
+<td class="rt">5</td>
+<td class="rt">0</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_misaligned_load"  onclick="checkLink(this)" target="detailFrame">cross_misaligned_load</a></td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_misaligned_store"  onclick="checkLink(this)" target="detailFrame">cross_misaligned_store</a></td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='uvme_cva6_pkg.exception_cg'>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_exception"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_exception">Summary for Variable cp_exception</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">5</td>
+<td class="rt">0</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_exception</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>DEBUG_REQUEST</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>STORE_PAGE_FAULT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>LOAD_PAGE_FAULT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>INSTR_PAGE_FAULT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>ENV_CALL_SMODE</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>ENV_CALL_UMODE</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>ST_ACCESS_FAULT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>LD_ACCESS_FAULT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>INSTR_ACCESS_FAULT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>INSTR_ADDR_MISALIGNED</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_DEBUG_REQUEST</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_PAGE_FAULT_EXC</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_ENV_CALL_SMODE</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_ENV_CALL_UMODE</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_ACCESS_FAULT_EXC</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_INSTR_ADDR_MISALIGNED_EXC</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_ADDR_MISALIGNED_EXC</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>ENV_CALL_MMODE</td>
+<td class="rt">1483</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ST_ADDR_MISALIGNED</td>
+<td class="rt">7642</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>LD_ADDR_MISALIGNED</td>
+<td class="rt">10538</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td class="rt">42553</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BREAKPOINT</td>
+<td class="rt">9731</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_trap"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_trap">Summary for Variable cp_trap</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">2</td>
+<td class="rt">0</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_trap</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>no_trap</td>
+<td class="rt">11354295</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>is_trap</td>
+<td class="rt">71947</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_ebreak"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_ebreak">Summary for Variable cp_is_ebreak</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_is_ebreak</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>is_ebreak</td>
+<td class="rt">9731</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_dret"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_dret">Summary for Variable cp_is_dret</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_is_dret</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>is_dret</td>
+<td class="rt">5085</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_ecall"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_ecall">Summary for Variable cp_is_ecall</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_is_ecall</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>is_ecall</td>
+<td class="rt">1483</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_fencei"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_fencei">Summary for Variable cp_is_fencei</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_is_fencei</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>is_fencei</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_csr"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_csr">Summary for Variable cp_is_csr</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_is_csr</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>is_csr_instr</td>
+<td class="rt">1584848</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_write_csr"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_write_csr">Summary for Variable cp_is_write_csr</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_is_write_csr</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>is_csr_write</td>
+<td class="rt">134617</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_not_write_csr"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_is_not_write_csr">Summary for Variable cp_is_not_write_csr</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_is_not_write_csr</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>is_not_csr_write</td>
+<td class="rt">11291625</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_illegal_csr"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_illegal_csr">Summary for Variable cp_illegal_csr</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">113</td>
+<td class="rt">0</td>
+<td class="rt">113</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_illegal_csr</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>UNSUPPORTED_CSR_USTATUS</td>
+<td class="rt">9853254</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_FFLAGS</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_FRM</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_FCSR</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_UIE</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_UTVEC</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_VSTART</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_VXSTAT</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_VXRM</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_USCRATCH</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_UEPC</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_UCAUSE</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_UTVAL</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_UIP</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SSTATUS</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SEDELEG</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SIDELEG</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SIE</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_STVEC</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SCOUNTEREN</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SSCRATCH</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SEPC</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SCAUSE</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_STVAL</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SIP</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SATP</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_MEDELEG</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_MIDELEG</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_MCOUNTEREN</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_MENVCFG</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_MENVCFGH</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_MTINST</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_MTVAL2</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_MSECCFG</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_MSECCFGH</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_TSELECT</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_TDATA1</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_TDATA2</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_TDATA3</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_TINFO</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_MCONTEXT</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_SCONTEXT</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_DCSR</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_DPC</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_DSCRATCH0</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_DSCRATCH1</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_CYCLE</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_TIME</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_INSTRET</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER3</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER4</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER5</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER6</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER7</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER8</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER9</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER10</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER11</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER12</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER13</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER14</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER15</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER16</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER17</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER18</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER19</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER20</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER21</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER22</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER23</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER24</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER25</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER26</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER27</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER28</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER29</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER30</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER31</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_VL</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_VTYPE</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_VLENB</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_CYCLEH</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_TIMEH</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_INSTRETH</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER3H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER4H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER5H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER6H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER7H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER8H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER9H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER10H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER11H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER12H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER13H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER14H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER15H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER16H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER17H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER18H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER19H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER20H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER21H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER22H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER23H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER24H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER25H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER26H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER27H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER28H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER29H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER30H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>UNSUPPORTED_CSR_HPMCOUNTER31H</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_ro_csr"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_ro_csr">Summary for Variable cp_ro_csr</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">5</td>
+<td class="rt">0</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_ro_csr</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>ONLY_READ_CSR_MVENDORID</td>
+<td class="rt">98</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ONLY_READ_CSR_MARCHID</td>
+<td class="rt">15</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ONLY_READ_CSR_MIMPID</td>
+<td class="rt">15</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ONLY_READ_CSR_MHARTID</td>
+<td class="rt">2372</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ONLY_READ_CSR_MCONFIGPTR</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_misalign_load"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_misalign_load">Summary for Variable cp_misalign_load</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_misalign_load</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>misalign_load</td>
+<td class="rt">7794</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_misalign_store"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_misalign_store">Summary for Variable cp_misalign_store</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_misalign_store</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>misalign_store</td>
+<td class="rt">6238</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cp_add_mem"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cp_add_mem">Summary for Variable cp_add_mem</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">4</td>
+<td class="rt">0</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_add_mem</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>add_mem_0</td>
+<td class="rt">11091554</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>add_mem_1</td>
+<td class="rt">103156</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>add_mem_2</td>
+<td class="rt">133139</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>add_mem_3</td>
+<td class="rt">98393</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cross_breakpoint"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cross_breakpoint">Summary for Cross cross_breakpoint</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_exception cp_is_ebreak<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>TOTAL</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_breakpoint</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_is_ebreak</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[DEBUG_REQUEST , STORE_PAGE_FAULT , LOAD_PAGE_FAULT , INSTR_PAGE_FAULT]</td>
+<td>[is_ebreak]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(4 bins)</td>
+</tr><tr class="wht">
+<td>[ENV_CALL_SMODE , ENV_CALL_UMODE , ST_ACCESS_FAULT , LD_ACCESS_FAULT , INSTR_ACCESS_FAULT]</td>
+<td>[is_ebreak]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(5 bins)</td>
+</tr><tr class="wht">
+<td>[INSTR_ADDR_MISALIGNED]</td>
+<td>[is_ebreak]</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_is_ebreak</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>BREAKPOINT</td>
+<td>is_ebreak</td>
+<td class="rt">9731</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_breakpoint</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>IGN</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cross_ecall"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cross_ecall">Summary for Cross cross_ecall</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_exception cp_is_ecall<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>TOTAL</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_ecall</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_is_ecall</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[DEBUG_REQUEST , STORE_PAGE_FAULT , LOAD_PAGE_FAULT , INSTR_PAGE_FAULT]</td>
+<td>[is_ecall]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(4 bins)</td>
+</tr><tr class="wht">
+<td>[ENV_CALL_SMODE , ENV_CALL_UMODE , ST_ACCESS_FAULT , LD_ACCESS_FAULT , INSTR_ACCESS_FAULT]</td>
+<td>[is_ecall]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(5 bins)</td>
+</tr><tr class="wht">
+<td>[INSTR_ADDR_MISALIGNED]</td>
+<td>[is_ecall]</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_is_ecall</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>ENV_CALL_MMODE</td>
+<td>is_ecall</td>
+<td class="rt">1483</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_ecall</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>IGN</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cross_fencei"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cross_fencei">Summary for Cross cross_fencei</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_exception cp_is_fencei<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>TOTAL</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_fencei</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_is_fencei</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[DEBUG_REQUEST , STORE_PAGE_FAULT , LOAD_PAGE_FAULT , INSTR_PAGE_FAULT]</td>
+<td>[is_fencei]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(4 bins)</td>
+</tr><tr class="wht">
+<td>[ENV_CALL_SMODE , ENV_CALL_UMODE , ST_ACCESS_FAULT , LD_ACCESS_FAULT , INSTR_ACCESS_FAULT]</td>
+<td>[is_fencei]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(5 bins)</td>
+</tr><tr class="wht">
+<td>[INSTR_ADDR_MISALIGNED]</td>
+<td>[is_fencei]</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_is_fencei</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>is_fencei</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_fencei</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>IGN</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cross_dret"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cross_dret">Summary for Cross cross_dret</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_exception cp_is_dret<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>TOTAL</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_dret</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_is_dret</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[DEBUG_REQUEST , STORE_PAGE_FAULT , LOAD_PAGE_FAULT , INSTR_PAGE_FAULT]</td>
+<td>[is_dret]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(4 bins)</td>
+</tr><tr class="wht">
+<td>[ENV_CALL_SMODE , ENV_CALL_UMODE , ST_ACCESS_FAULT , LD_ACCESS_FAULT , INSTR_ACCESS_FAULT]</td>
+<td>[is_dret]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(5 bins)</td>
+</tr><tr class="wht">
+<td>[INSTR_ADDR_MISALIGNED]</td>
+<td>[is_dret]</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_is_dret</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>is_dret</td>
+<td class="rt">5085</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_dret</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>IGN</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cross_illegal_csr"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cross_illegal_csr">Summary for Cross cross_illegal_csr</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_exception cp_illegal_csr cp_is_csr cp_is_not_write_csr<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>TOTAL</td>
+<td class="rt">113</td>
+<td class="rt">0</td>
+<td class="rt">113</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">113</td>
+<td class="rt">0</td>
+<td class="rt">113</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_illegal_csr</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_illegal_csr</td><td class="alfsrt">cp_is_csr</td><td class="alfsrt">cp_is_not_write_csr</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[DEBUG_REQUEST , STORE_PAGE_FAULT , LOAD_PAGE_FAULT , INSTR_PAGE_FAULT]</td>
+<td>[UNSUPPORTED_CSR_USTATUS , UNSUPPORTED_CSR_FFLAGS , UNSUPPORTED_CSR_FRM , UNSUPPORTED_CSR_FCSR , UNSUPPORTED_CSR_UIE , UNSUPPORTED_CSR_UTVEC , UNSUPPORTED_CSR_VSTART , UNSUPPORTED_CSR_VXSTAT , UNSUPPORTED_CSR_VXRM , UNSUPPORTED_CSR_USCRATCH , UNSUPPORTED_CSR_UEPC , UNSUPPORTED_CSR_UCAUSE , UNSUPPORTED_CSR_UTVAL , UNSUPPORTED_CSR_UIP , UNSUPPORTED_CSR_SSTATUS , UNSUPPORTED_CSR_SEDELEG , UNSUPPORTED_CSR_SIDELEG , UNSUPPORTED_CSR_SIE , UNSUPPORTED_CSR_STVEC , UNSUPPORTED_CSR_SCOUNTEREN , UNSUPPORTED_CSR_SSCRATCH , UNSUPPORTED_CSR_SEPC , UNSUPPORTED_CSR_SCAUSE , UNSUPPORTED_CSR_STVAL , UNSUPPORTED_CSR_SIP , UNSUPPORTED_CSR_SATP , UNSUPPORTED_CSR_MEDELEG , UNSUPPORTED_CSR_MIDELEG , UNSUPPORTED_CSR_MCOUNTEREN , UNSUPPORTED_CSR_MENVCFG , UNSUPPORTED_CSR_MENVCFGH , UNSUPPORTED_CSR_MTINST , UNSUPPORTED_CSR_MTVAL2 , UNSUPPORTED_CSR_MSECCFG , UNSUPPORTED_CSR_MSECCFGH , UNSUPPORTED_CSR_TSELECT , UNSUPPORTED_CSR_TDATA1 , UNSUPPORTED_CSR_TDATA2 , UNSUPPORTED_CSR_TDATA3 , UNSUPPORTED_CSR_TINFO , UNSUPPORTED_CSR_MCONTEXT , UNSUPPORTED_CSR_SCONTEXT , UNSUPPORTED_CSR_DCSR , UNSUPPORTED_CSR_DPC , UNSUPPORTED_CSR_DSCRATCH0 , UNSUPPORTED_CSR_DSCRATCH1 , UNSUPPORTED_CSR_CYCLE , UNSUPPORTED_CSR_TIME , UNSUPPORTED_CSR_INSTRET , UNSUPPORTED_CSR_HPMCOUNTER3 , UNSUPPORTED_CSR_HPMCOUNTER4 , UNSUPPORTED_CSR_HPMCOUNTER5 , UNSUPPORTED_CSR_HPMCOUNTER6 , UNSUPPORTED_CSR_HPMCOUNTER7 , UNSUPPORTED_CSR_HPMCOUNTER8 , UNSUPPORTED_CSR_HPMCOUNTER9 , UNSUPPORTED_CSR_HPMCOUNTER10 , UNSUPPORTED_CSR_HPMCOUNTER11 , UNSUPPORTED_CSR_HPMCOUNTER12 , UNSUPPORTED_CSR_HPMCOUNTER13 , UNSUPPORTED_CSR_HPMCOUNTER14 , UNSUPPORTED_CSR_HPMCOUNTER15 , UNSUPPORTED_CSR_HPMCOUNTER16 , UNSUPPORTED_CSR_HPMCOUNTER17 , UNSUPPORTED_CSR_HPMCOUNTER18 , UNSUPPORTED_CSR_HPMCOUNTER19 , UNSUPPORTED_CSR_HPMCOUNTER20 , UNSUPPORTED_CSR_HPMCOUNTER21 , UNSUPPORTED_CSR_HPMCOUNTER22 , UNSUPPORTED_CSR_HPMCOUNTER23 , UNSUPPORTED_CSR_HPMCOUNTER24 , UNSUPPORTED_CSR_HPMCOUNTER25 , UNSUPPORTED_CSR_HPMCOUNTER26 , UNSUPPORTED_CSR_HPMCOUNTER27 , UNSUPPORTED_CSR_HPMCOUNTER28 , UNSUPPORTED_CSR_HPMCOUNTER29 , UNSUPPORTED_CSR_HPMCOUNTER30 , UNSUPPORTED_CSR_HPMCOUNTER31 , UNSUPPORTED_CSR_VL , UNSUPPORTED_CSR_VTYPE , UNSUPPORTED_CSR_VLENB , UNSUPPORTED_CSR_CYCLEH , UNSUPPORTED_CSR_TIMEH , UNSUPPORTED_CSR_INSTRETH , UNSUPPORTED_CSR_HPMCOUNTER3H , UNSUPPORTED_CSR_HPMCOUNTER4H , UNSUPPORTED_CSR_HPMCOUNTER5H , UNSUPPORTED_CSR_HPMCOUNTER6H , UNSUPPORTED_CSR_HPMCOUNTER7H , UNSUPPORTED_CSR_HPMCOUNTER8H , UNSUPPORTED_CSR_HPMCOUNTER9H , UNSUPPORTED_CSR_HPMCOUNTER10H , UNSUPPORTED_CSR_HPMCOUNTER11H , UNSUPPORTED_CSR_HPMCOUNTER12H , UNSUPPORTED_CSR_HPMCOUNTER13H , UNSUPPORTED_CSR_HPMCOUNTER14H , UNSUPPORTED_CSR_HPMCOUNTER15H , UNSUPPORTED_CSR_HPMCOUNTER16H , UNSUPPORTED_CSR_HPMCOUNTER17H , UNSUPPORTED_CSR_HPMCOUNTER18H , UNSUPPORTED_CSR_HPMCOUNTER19H , UNSUPPORTED_CSR_HPMCOUNTER20H , UNSUPPORTED_CSR_HPMCOUNTER21H , UNSUPPORTED_CSR_HPMCOUNTER22H , UNSUPPORTED_CSR_HPMCOUNTER23H , UNSUPPORTED_CSR_HPMCOUNTER24H , UNSUPPORTED_CSR_HPMCOUNTER25H , UNSUPPORTED_CSR_HPMCOUNTER26H , UNSUPPORTED_CSR_HPMCOUNTER27H , UNSUPPORTED_CSR_HPMCOUNTER28H , UNSUPPORTED_CSR_HPMCOUNTER29H , UNSUPPORTED_CSR_HPMCOUNTER30H , UNSUPPORTED_CSR_HPMCOUNTER31H]</td>
+<td>[is_csr_instr]</td>
+<td>[is_not_csr_write]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(452 bins)</td>
+</tr><tr class="wht">
+<td>[ENV_CALL_SMODE , ENV_CALL_UMODE , ST_ACCESS_FAULT , LD_ACCESS_FAULT , INSTR_ACCESS_FAULT]</td>
+<td>[UNSUPPORTED_CSR_USTATUS , UNSUPPORTED_CSR_FFLAGS , UNSUPPORTED_CSR_FRM , UNSUPPORTED_CSR_FCSR , UNSUPPORTED_CSR_UIE , UNSUPPORTED_CSR_UTVEC , UNSUPPORTED_CSR_VSTART , UNSUPPORTED_CSR_VXSTAT , UNSUPPORTED_CSR_VXRM , UNSUPPORTED_CSR_USCRATCH , UNSUPPORTED_CSR_UEPC , UNSUPPORTED_CSR_UCAUSE , UNSUPPORTED_CSR_UTVAL , UNSUPPORTED_CSR_UIP , UNSUPPORTED_CSR_SSTATUS , UNSUPPORTED_CSR_SEDELEG , UNSUPPORTED_CSR_SIDELEG , UNSUPPORTED_CSR_SIE , UNSUPPORTED_CSR_STVEC , UNSUPPORTED_CSR_SCOUNTEREN , UNSUPPORTED_CSR_SSCRATCH , UNSUPPORTED_CSR_SEPC , UNSUPPORTED_CSR_SCAUSE , UNSUPPORTED_CSR_STVAL , UNSUPPORTED_CSR_SIP , UNSUPPORTED_CSR_SATP , UNSUPPORTED_CSR_MEDELEG , UNSUPPORTED_CSR_MIDELEG , UNSUPPORTED_CSR_MCOUNTEREN , UNSUPPORTED_CSR_MENVCFG , UNSUPPORTED_CSR_MENVCFGH , UNSUPPORTED_CSR_MTINST , UNSUPPORTED_CSR_MTVAL2 , UNSUPPORTED_CSR_MSECCFG , UNSUPPORTED_CSR_MSECCFGH , UNSUPPORTED_CSR_TSELECT , UNSUPPORTED_CSR_TDATA1 , UNSUPPORTED_CSR_TDATA2 , UNSUPPORTED_CSR_TDATA3 , UNSUPPORTED_CSR_TINFO , UNSUPPORTED_CSR_MCONTEXT , UNSUPPORTED_CSR_SCONTEXT , UNSUPPORTED_CSR_DCSR , UNSUPPORTED_CSR_DPC , UNSUPPORTED_CSR_DSCRATCH0 , UNSUPPORTED_CSR_DSCRATCH1 , UNSUPPORTED_CSR_CYCLE , UNSUPPORTED_CSR_TIME , UNSUPPORTED_CSR_INSTRET , UNSUPPORTED_CSR_HPMCOUNTER3 , UNSUPPORTED_CSR_HPMCOUNTER4 , UNSUPPORTED_CSR_HPMCOUNTER5 , UNSUPPORTED_CSR_HPMCOUNTER6 , UNSUPPORTED_CSR_HPMCOUNTER7 , UNSUPPORTED_CSR_HPMCOUNTER8 , UNSUPPORTED_CSR_HPMCOUNTER9 , UNSUPPORTED_CSR_HPMCOUNTER10 , UNSUPPORTED_CSR_HPMCOUNTER11 , UNSUPPORTED_CSR_HPMCOUNTER12 , UNSUPPORTED_CSR_HPMCOUNTER13 , UNSUPPORTED_CSR_HPMCOUNTER14 , UNSUPPORTED_CSR_HPMCOUNTER15 , UNSUPPORTED_CSR_HPMCOUNTER16 , UNSUPPORTED_CSR_HPMCOUNTER17 , UNSUPPORTED_CSR_HPMCOUNTER18 , UNSUPPORTED_CSR_HPMCOUNTER19 , UNSUPPORTED_CSR_HPMCOUNTER20 , UNSUPPORTED_CSR_HPMCOUNTER21 , UNSUPPORTED_CSR_HPMCOUNTER22 , UNSUPPORTED_CSR_HPMCOUNTER23 , UNSUPPORTED_CSR_HPMCOUNTER24 , UNSUPPORTED_CSR_HPMCOUNTER25 , UNSUPPORTED_CSR_HPMCOUNTER26 , UNSUPPORTED_CSR_HPMCOUNTER27 , UNSUPPORTED_CSR_HPMCOUNTER28 , UNSUPPORTED_CSR_HPMCOUNTER29 , UNSUPPORTED_CSR_HPMCOUNTER30 , UNSUPPORTED_CSR_HPMCOUNTER31 , UNSUPPORTED_CSR_VL , UNSUPPORTED_CSR_VTYPE , UNSUPPORTED_CSR_VLENB , UNSUPPORTED_CSR_CYCLEH , UNSUPPORTED_CSR_TIMEH , UNSUPPORTED_CSR_INSTRETH , UNSUPPORTED_CSR_HPMCOUNTER3H , UNSUPPORTED_CSR_HPMCOUNTER4H , UNSUPPORTED_CSR_HPMCOUNTER5H , UNSUPPORTED_CSR_HPMCOUNTER6H , UNSUPPORTED_CSR_HPMCOUNTER7H , UNSUPPORTED_CSR_HPMCOUNTER8H , UNSUPPORTED_CSR_HPMCOUNTER9H , UNSUPPORTED_CSR_HPMCOUNTER10H , UNSUPPORTED_CSR_HPMCOUNTER11H , UNSUPPORTED_CSR_HPMCOUNTER12H , UNSUPPORTED_CSR_HPMCOUNTER13H , UNSUPPORTED_CSR_HPMCOUNTER14H , UNSUPPORTED_CSR_HPMCOUNTER15H , UNSUPPORTED_CSR_HPMCOUNTER16H , UNSUPPORTED_CSR_HPMCOUNTER17H , UNSUPPORTED_CSR_HPMCOUNTER18H , UNSUPPORTED_CSR_HPMCOUNTER19H , UNSUPPORTED_CSR_HPMCOUNTER20H , UNSUPPORTED_CSR_HPMCOUNTER21H , UNSUPPORTED_CSR_HPMCOUNTER22H , UNSUPPORTED_CSR_HPMCOUNTER23H , UNSUPPORTED_CSR_HPMCOUNTER24H , UNSUPPORTED_CSR_HPMCOUNTER25H , UNSUPPORTED_CSR_HPMCOUNTER26H , UNSUPPORTED_CSR_HPMCOUNTER27H , UNSUPPORTED_CSR_HPMCOUNTER28H , UNSUPPORTED_CSR_HPMCOUNTER29H , UNSUPPORTED_CSR_HPMCOUNTER30H , UNSUPPORTED_CSR_HPMCOUNTER31H]</td>
+<td>[is_csr_instr]</td>
+<td>[is_not_csr_write]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(565 bins)</td>
+</tr><tr class="wht">
+<td>[INSTR_ADDR_MISALIGNED]</td>
+<td>[UNSUPPORTED_CSR_USTATUS , UNSUPPORTED_CSR_FFLAGS , UNSUPPORTED_CSR_FRM , UNSUPPORTED_CSR_FCSR , UNSUPPORTED_CSR_UIE , UNSUPPORTED_CSR_UTVEC , UNSUPPORTED_CSR_VSTART , UNSUPPORTED_CSR_VXSTAT , UNSUPPORTED_CSR_VXRM , UNSUPPORTED_CSR_USCRATCH , UNSUPPORTED_CSR_UEPC , UNSUPPORTED_CSR_UCAUSE , UNSUPPORTED_CSR_UTVAL , UNSUPPORTED_CSR_UIP , UNSUPPORTED_CSR_SSTATUS , UNSUPPORTED_CSR_SEDELEG , UNSUPPORTED_CSR_SIDELEG , UNSUPPORTED_CSR_SIE , UNSUPPORTED_CSR_STVEC , UNSUPPORTED_CSR_SCOUNTEREN , UNSUPPORTED_CSR_SSCRATCH , UNSUPPORTED_CSR_SEPC , UNSUPPORTED_CSR_SCAUSE , UNSUPPORTED_CSR_STVAL , UNSUPPORTED_CSR_SIP , UNSUPPORTED_CSR_SATP , UNSUPPORTED_CSR_MEDELEG , UNSUPPORTED_CSR_MIDELEG , UNSUPPORTED_CSR_MCOUNTEREN , UNSUPPORTED_CSR_MENVCFG , UNSUPPORTED_CSR_MENVCFGH , UNSUPPORTED_CSR_MTINST , UNSUPPORTED_CSR_MTVAL2 , UNSUPPORTED_CSR_MSECCFG , UNSUPPORTED_CSR_MSECCFGH , UNSUPPORTED_CSR_TSELECT , UNSUPPORTED_CSR_TDATA1 , UNSUPPORTED_CSR_TDATA2 , UNSUPPORTED_CSR_TDATA3 , UNSUPPORTED_CSR_TINFO , UNSUPPORTED_CSR_MCONTEXT , UNSUPPORTED_CSR_SCONTEXT , UNSUPPORTED_CSR_DCSR , UNSUPPORTED_CSR_DPC , UNSUPPORTED_CSR_DSCRATCH0 , UNSUPPORTED_CSR_DSCRATCH1 , UNSUPPORTED_CSR_CYCLE , UNSUPPORTED_CSR_TIME , UNSUPPORTED_CSR_INSTRET , UNSUPPORTED_CSR_HPMCOUNTER3 , UNSUPPORTED_CSR_HPMCOUNTER4 , UNSUPPORTED_CSR_HPMCOUNTER5 , UNSUPPORTED_CSR_HPMCOUNTER6 , UNSUPPORTED_CSR_HPMCOUNTER7 , UNSUPPORTED_CSR_HPMCOUNTER8 , UNSUPPORTED_CSR_HPMCOUNTER9 , UNSUPPORTED_CSR_HPMCOUNTER10 , UNSUPPORTED_CSR_HPMCOUNTER11 , UNSUPPORTED_CSR_HPMCOUNTER12 , UNSUPPORTED_CSR_HPMCOUNTER13 , UNSUPPORTED_CSR_HPMCOUNTER14 , UNSUPPORTED_CSR_HPMCOUNTER15 , UNSUPPORTED_CSR_HPMCOUNTER16 , UNSUPPORTED_CSR_HPMCOUNTER17 , UNSUPPORTED_CSR_HPMCOUNTER18 , UNSUPPORTED_CSR_HPMCOUNTER19 , UNSUPPORTED_CSR_HPMCOUNTER20 , UNSUPPORTED_CSR_HPMCOUNTER21 , UNSUPPORTED_CSR_HPMCOUNTER22 , UNSUPPORTED_CSR_HPMCOUNTER23 , UNSUPPORTED_CSR_HPMCOUNTER24 , UNSUPPORTED_CSR_HPMCOUNTER25 , UNSUPPORTED_CSR_HPMCOUNTER26 , UNSUPPORTED_CSR_HPMCOUNTER27 , UNSUPPORTED_CSR_HPMCOUNTER28 , UNSUPPORTED_CSR_HPMCOUNTER29 , UNSUPPORTED_CSR_HPMCOUNTER30 , UNSUPPORTED_CSR_HPMCOUNTER31 , UNSUPPORTED_CSR_VL , UNSUPPORTED_CSR_VTYPE , UNSUPPORTED_CSR_VLENB , UNSUPPORTED_CSR_CYCLEH , UNSUPPORTED_CSR_TIMEH , UNSUPPORTED_CSR_INSTRETH , UNSUPPORTED_CSR_HPMCOUNTER3H , UNSUPPORTED_CSR_HPMCOUNTER4H , UNSUPPORTED_CSR_HPMCOUNTER5H , UNSUPPORTED_CSR_HPMCOUNTER6H , UNSUPPORTED_CSR_HPMCOUNTER7H , UNSUPPORTED_CSR_HPMCOUNTER8H , UNSUPPORTED_CSR_HPMCOUNTER9H , UNSUPPORTED_CSR_HPMCOUNTER10H , UNSUPPORTED_CSR_HPMCOUNTER11H , UNSUPPORTED_CSR_HPMCOUNTER12H , UNSUPPORTED_CSR_HPMCOUNTER13H , UNSUPPORTED_CSR_HPMCOUNTER14H , UNSUPPORTED_CSR_HPMCOUNTER15H , UNSUPPORTED_CSR_HPMCOUNTER16H , UNSUPPORTED_CSR_HPMCOUNTER17H , UNSUPPORTED_CSR_HPMCOUNTER18H , UNSUPPORTED_CSR_HPMCOUNTER19H , UNSUPPORTED_CSR_HPMCOUNTER20H , UNSUPPORTED_CSR_HPMCOUNTER21H , UNSUPPORTED_CSR_HPMCOUNTER22H , UNSUPPORTED_CSR_HPMCOUNTER23H , UNSUPPORTED_CSR_HPMCOUNTER24H , UNSUPPORTED_CSR_HPMCOUNTER25H , UNSUPPORTED_CSR_HPMCOUNTER26H , UNSUPPORTED_CSR_HPMCOUNTER27H , UNSUPPORTED_CSR_HPMCOUNTER28H , UNSUPPORTED_CSR_HPMCOUNTER29H , UNSUPPORTED_CSR_HPMCOUNTER30H , UNSUPPORTED_CSR_HPMCOUNTER31H]</td>
+<td>[is_csr_instr]</td>
+<td>[is_not_csr_write]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(113 bins)</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_illegal_csr</td><td class="alfsrt">cp_is_csr</td><td class="alfsrt">cp_is_not_write_csr</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_USTATUS</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">7756</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_FFLAGS</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_FRM</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_FCSR</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_UIE</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_UTVEC</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_VSTART</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_VXSTAT</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_VXRM</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_USCRATCH</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_UEPC</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_UCAUSE</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_UTVAL</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_UIP</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SSTATUS</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SEDELEG</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SIDELEG</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SIE</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_STVEC</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SCOUNTEREN</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SSCRATCH</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SEPC</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SCAUSE</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_STVAL</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SIP</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SATP</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_MEDELEG</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_MIDELEG</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_MCOUNTEREN</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_MENVCFG</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_MENVCFGH</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_MTINST</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_MTVAL2</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_MSECCFG</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_MSECCFGH</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_TSELECT</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_TDATA1</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_TDATA2</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_TDATA3</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_TINFO</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_MCONTEXT</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_SCONTEXT</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_DCSR</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_DPC</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_DSCRATCH0</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_DSCRATCH1</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_CYCLE</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_TIME</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_INSTRET</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER3</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER4</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER5</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER6</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER7</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER8</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER9</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER10</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER11</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER12</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER13</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER14</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER15</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER16</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER17</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER18</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER19</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER20</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER21</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER22</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER23</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER24</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER25</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER26</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER27</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER28</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER29</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER30</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER31</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_VL</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_VTYPE</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_VLENB</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_CYCLEH</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_TIMEH</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_INSTRETH</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER3H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER4H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER5H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER6H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER7H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER8H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER9H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER10H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER11H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER12H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER13H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER14H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER15H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER16H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER17H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER18H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER19H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER20H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER21H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER22H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER23H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER24H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER25H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER26H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER27H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER28H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER29H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER30H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>UNSUPPORTED_CSR_HPMCOUNTER31H</td>
+<td>is_csr_instr</td>
+<td>is_not_csr_write</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_illegal_csr</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>IGN</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cross_illegal_write_csr"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cross_illegal_write_csr">Summary for Cross cross_illegal_write_csr</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_exception cp_ro_csr cp_is_write_csr<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>TOTAL</td>
+<td class="rt">5</td>
+<td class="rt">0</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">5</td>
+<td class="rt">0</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_illegal_write_csr</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_ro_csr</td><td class="alfsrt">cp_is_write_csr</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[DEBUG_REQUEST , STORE_PAGE_FAULT , LOAD_PAGE_FAULT , INSTR_PAGE_FAULT]</td>
+<td>[ONLY_READ_CSR_MVENDORID , ONLY_READ_CSR_MARCHID , ONLY_READ_CSR_MIMPID , ONLY_READ_CSR_MHARTID , ONLY_READ_CSR_MCONFIGPTR]</td>
+<td>[is_csr_write]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(20 bins)</td>
+</tr><tr class="wht">
+<td>[ENV_CALL_SMODE , ENV_CALL_UMODE , ST_ACCESS_FAULT , LD_ACCESS_FAULT , INSTR_ACCESS_FAULT]</td>
+<td>[ONLY_READ_CSR_MVENDORID , ONLY_READ_CSR_MARCHID , ONLY_READ_CSR_MIMPID , ONLY_READ_CSR_MHARTID , ONLY_READ_CSR_MCONFIGPTR]</td>
+<td>[is_csr_write]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(25 bins)</td>
+</tr><tr class="wht">
+<td>[INSTR_ADDR_MISALIGNED]</td>
+<td>[ONLY_READ_CSR_MVENDORID , ONLY_READ_CSR_MARCHID , ONLY_READ_CSR_MIMPID , ONLY_READ_CSR_MHARTID , ONLY_READ_CSR_MCONFIGPTR]</td>
+<td>[is_csr_write]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(5 bins)</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_ro_csr</td><td class="alfsrt">cp_is_write_csr</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>ONLY_READ_CSR_MVENDORID</td>
+<td>is_csr_write</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>ONLY_READ_CSR_MARCHID</td>
+<td>is_csr_write</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>ONLY_READ_CSR_MIMPID</td>
+<td>is_csr_write</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>ONLY_READ_CSR_MHARTID</td>
+<td>is_csr_write</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ILLEGAL_INSTR</td>
+<td>ONLY_READ_CSR_MCONFIGPTR</td>
+<td>is_csr_write</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_illegal_write_csr</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>IGN</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cross_misaligned_load"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cross_misaligned_load">Summary for Cross cross_misaligned_load</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_exception cp_misalign_load cp_add_mem<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>TOTAL</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_misaligned_load</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_misalign_load</td><td class="alfsrt">cp_add_mem</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[DEBUG_REQUEST , STORE_PAGE_FAULT , LOAD_PAGE_FAULT , INSTR_PAGE_FAULT]</td>
+<td>[misalign_load]</td>
+<td>[add_mem_0 , add_mem_1 , add_mem_2 , add_mem_3]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(16 bins)</td>
+</tr><tr class="wht">
+<td>[ENV_CALL_SMODE , ENV_CALL_UMODE , ST_ACCESS_FAULT , LD_ACCESS_FAULT , INSTR_ACCESS_FAULT]</td>
+<td>[misalign_load]</td>
+<td>[add_mem_0 , add_mem_1 , add_mem_2 , add_mem_3]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(20 bins)</td>
+</tr><tr class="wht">
+<td>[INSTR_ADDR_MISALIGNED]</td>
+<td>[misalign_load]</td>
+<td>[add_mem_0 , add_mem_1 , add_mem_2 , add_mem_3]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(4 bins)</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_misalign_load</td><td class="alfsrt">cp_add_mem</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>LD_ADDR_MISALIGNED</td>
+<td>misalign_load</td>
+<td>add_mem_1</td>
+<td class="rt">4612</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>LD_ADDR_MISALIGNED</td>
+<td>misalign_load</td>
+<td>add_mem_2</td>
+<td class="rt">1568</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>LD_ADDR_MISALIGNED</td>
+<td>misalign_load</td>
+<td>add_mem_3</td>
+<td class="rt">1614</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_misaligned_load</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>IGN_EXC</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_ADD</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.exception_cg.cross_misaligned_store"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.exception_cg.cross_misaligned_store">Summary for Cross cross_misaligned_store</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_exception cp_misalign_store cp_add_mem<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>TOTAL</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_misaligned_store</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_misalign_store</td><td class="alfsrt">cp_add_mem</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[DEBUG_REQUEST , STORE_PAGE_FAULT , LOAD_PAGE_FAULT , INSTR_PAGE_FAULT]</td>
+<td>[misalign_store]</td>
+<td>[add_mem_0 , add_mem_1 , add_mem_2 , add_mem_3]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(16 bins)</td>
+</tr><tr class="wht">
+<td>[ENV_CALL_SMODE , ENV_CALL_UMODE , ST_ACCESS_FAULT , LD_ACCESS_FAULT , INSTR_ACCESS_FAULT]</td>
+<td>[misalign_store]</td>
+<td>[add_mem_0 , add_mem_1 , add_mem_2 , add_mem_3]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(20 bins)</td>
+</tr><tr class="wht">
+<td>[INSTR_ADDR_MISALIGNED]</td>
+<td>[misalign_store]</td>
+<td>[add_mem_0 , add_mem_1 , add_mem_2 , add_mem_3]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(4 bins)</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_exception</td><td class="alfsrt">cp_misalign_store</td><td class="alfsrt">cp_add_mem</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>ST_ADDR_MISALIGNED</td>
+<td>misalign_store</td>
+<td>add_mem_1</td>
+<td class="rt">3155</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ST_ADDR_MISALIGNED</td>
+<td>misalign_store</td>
+<td>add_mem_2</td>
+<td class="rt">1533</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>ST_ADDR_MISALIGNED</td>
+<td>misalign_store</td>
+<td>add_mem_3</td>
+<td class="rt">1550</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_misaligned_store</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>IGN_EXC</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_ADD</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="uvme_cva6_pkg.exception_cg">
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_exception">Variable : cp_exception</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_trap">Variable : cp_trap</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_ebreak">Variable : cp_is_ebreak</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_dret">Variable : cp_is_dret</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_ecall">Variable : cp_is_ecall</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_fencei">Variable : cp_is_fencei</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_csr">Variable : cp_is_csr</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_write_csr">Variable : cp_is_write_csr</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_is_not_write_csr">Variable : cp_is_not_write_csr</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_illegal_csr">Variable : cp_illegal_csr</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_ro_csr">Variable : cp_ro_csr</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_misalign_load">Variable : cp_misalign_load</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_misalign_store">Variable : cp_misalign_store</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cp_add_mem">Variable : cp_add_mem</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_breakpoint">Cross : cross_breakpoint</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_ecall">Cross : cross_ecall</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_fencei">Cross : cross_fencei</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_dret">Cross : cross_dret</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_illegal_csr">Cross : cross_illegal_csr</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_illegal_write_csr">Cross : cross_illegal_write_csr</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_misaligned_load">Cross : cross_misaligned_load</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.exception_cg.cross_misaligned_store">Cross : cross_misaligned_store</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

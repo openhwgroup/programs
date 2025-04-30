@@ -1,0 +1,39 @@
+Dashboard
+
+Date: Fri Apr 18 07:04:36 2025
+
+User: runner_riscv-unsecure
+
+Version: W-2024.09-SP1-1
+Command line: urg -warn none -hvp_proj cva6_embedded -format both -group instcov_for_score -hvp_attributes weight+description+Comment -dir vcs_results/default/vcs.d/simv.vdb -plan cva6.hvp -tgl portsonly
+Number of tests: 2356
+
+-------------------------------------------------------------------------------
+Scores for Verification Plan
+SCORE  LINE   COND   ASSERT GROUP  NAME                          
+ 97.02  99.79  98.39  92.31  97.58 CVA6 Verification Master Plan 
+
+
+-------------------------------------------------------------------------------
+Total Coverage Summary 
+SCORE  LINE   COND   ASSERT GROUP  
+ 90.77  99.79  98.39  66.06  98.85 
+
+
+-------------------------------------------------------------------------------
+Hierarchical coverage data for top-level instances 
+SCORE  LINE   COND   ASSERT NAME         
+ 88.08  99.79  98.39  66.06 uvmt_cva6_tb 
+
+
+-------------------------------------------------------------------------------
+Total Module Definition Coverage Summary 
+SCORE  LINE   COND   ASSERT 
+ 90.31  99.78  98.81  72.34 
+
+
+-------------------------------------------------------------------------------
+Total Groups Coverage Summary 
+SCORE  INST SCORE WEIGHT 
+ 98.85  98.85     1      
+

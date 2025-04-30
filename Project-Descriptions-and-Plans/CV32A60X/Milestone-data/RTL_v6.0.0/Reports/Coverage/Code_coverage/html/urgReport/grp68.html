@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Group :: uvma_obi_memory_pkg::cg_obi</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Group : uvma_obi_memory_pkg::cg_obi</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Group : <a href="#"  onclick="showContent('uvma_obi_memory_pkg::cg_obi')">uvma_obi_memory_pkg::cg_obi</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td><b>SCORE</b></td><td>INSTANCES</td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>PER INSTANCE</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="s4 cl rt"> 41.67</td>
+<td class="s4 cl rt"> 41.67</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/8/riscv/nonsecure/cva6/verif/sim//../core-v-verif/lib/uvm_agents/uvma_obi_memory/src/comps/uvma_obi_memory_cov_model.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/8/riscv/nonsecure/cva6/verif/sim//../core-v-verif/lib/uvm_agents/uvma_obi_memory/src/comps/uvma_obi_memory_cov_model.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>3 Instances:</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="wht cl wordwrap"><a href="grp68.html#inst_tag_uvma_obi_memory_pkg.obi_cg"  onclick="showContent('uvma_obi_memory_pkg.obi_cg')">uvma_obi_memory_pkg.obi_cg</a></td>
+<td class="s4 cl rt"> 41.67</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="grp68.html#inst_tag_uvma_obi_memory_pkg.obi_cg_(1)"  onclick="showContent('uvma_obi_memory_pkg.obi_cg_(1)')">uvma_obi_memory_pkg.obi_cg_(1)</a></td>
+<td class="s4 cl rt"> 41.67</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="grp68.html#inst_tag_uvma_obi_memory_pkg.obi_cg_(2)"  onclick="showContent('uvma_obi_memory_pkg.obi_cg_(2)')">uvma_obi_memory_pkg.obi_cg_(2)</a></td>
+<td class="s4 cl rt"> 41.67</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+</div>
+</div>
+<div name='uvma_obi_memory_pkg.obi_cg'>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg"></a>
+<hr>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Group Instance : <a href="groups.html#tag_uvma_obi_memory_pkg.obi_cg" >uvma_obi_memory_pkg.obi_cg</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="s4 cl rt"> 41.67</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+</div>
+<hr>
+<br clear=all>
+<span class=repname>Summary for Group Instance   uvma_obi_memory_pkg.obi_cg
+</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s3">
+<td><a href="#var_tbl_uvma_obi_memory_pkg.obi_cg" >Variables</a></td>
+<td class="rt">14</td>
+<td class="rt">9</td>
+<td class="rt">5</td>
+<td class="rt">41.67 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="var_tbl_uvma_obi_memory_pkg.obi_cg">Variables for Group Instance  uvma_obi_memory_pkg.obi_cg
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">VARIABLE</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>COMMENT</td></tr><tr class="s5">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg.we"  onclick="checkLink(this)" target="detailFrame">we</a></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s5">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg.memtype"  onclick="checkLink(this)" target="detailFrame">memtype</a></td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">4</td>
+<td></td>
+</tr><tr class="s1">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg.prot"  onclick="checkLink(this)" target="detailFrame">prot</a></td>
+<td class="rt">6</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+<td class="rt">16.67 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">8</td>
+<td></td>
+</tr><tr class="s5">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg.err"  onclick="checkLink(this)" target="detailFrame">err</a></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">2</td>
+<td></td>
+</tr></table><br clear=all>
+</div>
+<div name='uvma_obi_memory_pkg.obi_cg_(1)'>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg_(1)"></a>
+<hr>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Group Instance : <a href="groups.html#tag_uvma_obi_memory_pkg.obi_cg_(1)" >uvma_obi_memory_pkg.obi_cg_(1)</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="s4 cl rt"> 41.67</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+</div>
+<hr>
+<br clear=all>
+<span class=repname>Summary for Group Instance   uvma_obi_memory_pkg.obi_cg_(1)
+</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s3">
+<td><a href="#var_tbl_uvma_obi_memory_pkg.obi_cg_(1)" >Variables</a></td>
+<td class="rt">14</td>
+<td class="rt">9</td>
+<td class="rt">5</td>
+<td class="rt">41.67 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="var_tbl_uvma_obi_memory_pkg.obi_cg_(1)">Variables for Group Instance  uvma_obi_memory_pkg.obi_cg_(1)
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">VARIABLE</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>COMMENT</td></tr><tr class="s5">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(1).we"  onclick="checkLink(this)" target="detailFrame">we</a></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s5">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(1).memtype"  onclick="checkLink(this)" target="detailFrame">memtype</a></td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">4</td>
+<td></td>
+</tr><tr class="s1">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(1).prot"  onclick="checkLink(this)" target="detailFrame">prot</a></td>
+<td class="rt">6</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+<td class="rt">16.67 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">8</td>
+<td></td>
+</tr><tr class="s5">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(1).err"  onclick="checkLink(this)" target="detailFrame">err</a></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">2</td>
+<td></td>
+</tr></table><br clear=all>
+</div>
+<div name='uvma_obi_memory_pkg.obi_cg_(2)'>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg_(2)"></a>
+<hr>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Group Instance : <a href="groups.html#tag_uvma_obi_memory_pkg.obi_cg_(2)" >uvma_obi_memory_pkg.obi_cg_(2)</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="s4 cl rt"> 41.67</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+</div>
+<hr>
+<br clear=all>
+<span class=repname>Summary for Group Instance   uvma_obi_memory_pkg.obi_cg_(2)
+</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s3">
+<td><a href="#var_tbl_uvma_obi_memory_pkg.obi_cg_(2)" >Variables</a></td>
+<td class="rt">14</td>
+<td class="rt">9</td>
+<td class="rt">5</td>
+<td class="rt">41.67 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="var_tbl_uvma_obi_memory_pkg.obi_cg_(2)">Variables for Group Instance  uvma_obi_memory_pkg.obi_cg_(2)
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">VARIABLE</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>COMMENT</td></tr><tr class="s5">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(2).we"  onclick="checkLink(this)" target="detailFrame">we</a></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s5">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(2).memtype"  onclick="checkLink(this)" target="detailFrame">memtype</a></td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">4</td>
+<td></td>
+</tr><tr class="s1">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(2).prot"  onclick="checkLink(this)" target="detailFrame">prot</a></td>
+<td class="rt">6</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+<td class="rt">16.67 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">8</td>
+<td></td>
+</tr><tr class="s5">
+<td><a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(2).err"  onclick="checkLink(this)" target="detailFrame">err</a></td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">2</td>
+<td></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='uvma_obi_memory_pkg.obi_cg'>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg.we"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg.we">Summary for Variable we</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>User Defined Bins</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for we</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>WRITE</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>READ</td>
+<td class="rt">15871660</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg.memtype"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg.memtype">Summary for Variable memtype</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>Automatically Generated Bins</td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for memtype</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[auto[1]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[auto[3]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[0]</td>
+<td class="rt">453</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[2]</td>
+<td class="rt">15871207</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg.prot"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg.prot">Summary for Variable prot</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s1">
+<td>Automatically Generated Bins</td>
+<td class="rt">6</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+<td class="rt">16.67 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for prot</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td nowrap>[auto[0] - auto[3]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">4</td>
+</tr><tr class="s3">
+<td>[auto[7]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>IGN_RSVD_PRIV</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+<td></td>
+</tr><tr class="wht">
+<td nowrap>[auto[4] - auto[5]]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(2 bins)</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[6]</td>
+<td class="rt">15871660</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg.err"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg.err">Summary for Variable err</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>Automatically Generated Bins</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for err</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[auto[1]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[0]</td>
+<td class="rt">15871660</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+</div>
+<div name='uvma_obi_memory_pkg.obi_cg_(1)'>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg_(1).we"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg_(1).we">Summary for Variable we</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>User Defined Bins</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for we</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>WRITE</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>READ</td>
+<td class="rt">1384478</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg_(1).memtype"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg_(1).memtype">Summary for Variable memtype</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>Automatically Generated Bins</td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for memtype</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[auto[1]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[auto[3]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[0]</td>
+<td class="rt">215</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[2]</td>
+<td class="rt">1384263</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg_(1).prot"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg_(1).prot">Summary for Variable prot</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s1">
+<td>Automatically Generated Bins</td>
+<td class="rt">6</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+<td class="rt">16.67 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for prot</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td nowrap>[auto[0] - auto[3]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">4</td>
+</tr><tr class="s3">
+<td>[auto[6]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>IGN_RSVD_PRIV</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+<td></td>
+</tr><tr class="wht">
+<td nowrap>[auto[4] - auto[5]]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(2 bins)</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[7]</td>
+<td class="rt">1384478</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg_(1).err"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg_(1).err">Summary for Variable err</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>Automatically Generated Bins</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for err</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[auto[1]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[0]</td>
+<td class="rt">1384478</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+</div>
+<div name='uvma_obi_memory_pkg.obi_cg_(2)'>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg_(2).we"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg_(2).we">Summary for Variable we</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>User Defined Bins</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for we</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>READ</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>WRITE</td>
+<td class="rt">1406193</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg_(2).memtype"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg_(2).memtype">Summary for Variable memtype</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>Automatically Generated Bins</td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for memtype</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[auto[1]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[auto[3]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[0]</td>
+<td class="rt">198</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[2]</td>
+<td class="rt">1405995</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg_(2).prot"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg_(2).prot">Summary for Variable prot</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s1">
+<td>Automatically Generated Bins</td>
+<td class="rt">6</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+<td class="rt">16.67 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for prot</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td nowrap>[auto[0] - auto[3]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">4</td>
+</tr><tr class="s3">
+<td>[auto[6]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>IGN_RSVD_PRIV</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+<td></td>
+</tr><tr class="wht">
+<td nowrap>[auto[4] - auto[5]]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(2 bins)</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[7]</td>
+<td class="rt">1406193</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_obi_memory_pkg.obi_cg_(2).err"></a><span class="repname" id="inst_tag_uvma_obi_memory_pkg.obi_cg_(2).err">Summary for Variable err</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>Automatically Generated Bins</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for err</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[auto[1]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[0]</td>
+<td class="rt">1406193</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="uvma_obi_memory_pkg.obi_cg">
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg.we">Variable : we</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg.memtype">Variable : memtype</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg.prot">Variable : prot</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg.err">Variable : err</a>    </li>
+  </ul>
+  <ul name="uvma_obi_memory_pkg.obi_cg_(1)">
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(1).we">Variable : we</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(1).memtype">Variable : memtype</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(1).prot">Variable : prot</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(1).err">Variable : err</a>    </li>
+  </ul>
+  <ul name="uvma_obi_memory_pkg.obi_cg_(2)">
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(2).we">Variable : we</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(2).memtype">Variable : memtype</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(2).prot">Variable : prot</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_obi_memory_pkg.obi_cg_(2).err">Variable : err</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

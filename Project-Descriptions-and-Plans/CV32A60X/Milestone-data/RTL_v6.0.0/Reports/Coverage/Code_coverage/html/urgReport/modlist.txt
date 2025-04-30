@@ -1,0 +1,63 @@
+Design Module List
+
+Total Module Definition Coverage Summary 
+SCORE  LINE   COND   ASSERT 
+ 90.31  99.78  98.81  72.34 
+
+
+Total modules in report: 43
+-------------------------------------------------------------------------------
+SCORE              LINE     COND     ASSERT   NAME                                                                 
+ 50.00             --       --        50.00   uvma_obi_memory_1p2_assert                                           
+ 81.82             --       --        81.82   uvma_obi_memory_assert                                               
+ 92.31             --       --        92.31   uvma_cvxif_assert                                                    
+ 94.19             --        94.19   --       rr_arb_tree                                                          
+ 97.78              98.18    97.37   --       scoreboard                                                           
+ 98.75              97.50   100.00   --       load_store_unit                                                      
+ 98.78             100.00    97.56   --       csr_regfile                                                          
+ 99.06              98.11   100.00   --       compressed_decoder                                                   
+ 99.12              99.73    98.51   --       decoder                                                              
+ 99.13             100.00    98.26   --       serdiv                                                               
+ 99.24             100.00    98.47   --       frontend                                                             
+100.00             100.00   100.00   --       ariane_regfile                                                       
+100.00             100.00   100.00   --       issue_read_operands                                                  
+100.00             100.00   100.00   --       cvxif_compressed_if_driver                                           
+100.00             100.00   100.00   --       lzc                                                                  
+                   
+  ---------------- 
+  SCORE              LINE     COND     ASSERT   NAME                                                               
+  100.00             100.00   --       --       lzc                                                                
+  100.00             --       100.00   --       lzc ( parameter WIDTH=2,MODE=0,CNT_WIDTH=1,gen_lzc.NumLevels=1 )   
+  100.00             --       100.00   --       lzc ( parameter WIDTH=32,MODE=1,CNT_WIDTH=5,gen_lzc.NumLevels=5 )  
+                   
+----------------   
+SCORE              LINE     COND     ASSERT   NAME                                                                 
+100.00             100.00   100.00   --       alu                                                                  
+100.00             100.00   100.00   --       instr_scan                                                           
+100.00             100.00   100.00   --       ras                                                                  
+100.00             100.00   100.00   --       cva6_pipeline                                                        
+100.00             100.00   100.00   --       ex_stage                                                             
+100.00             100.00   100.00   --       instr_queue                                                          
+100.00             100.00   100.00   --       bht                                                                  
+100.00             100.00   100.00   --       cvxif_issue_register_commit_if_driver                                
+100.00             --       --       100.00   uvmt_cv32a60x_interrupt_assert                                       
+100.00             100.00   100.00   --       cva6_fifo_v3                                                         
+100.00             100.00   100.00   --       mult                                                                 
+100.00             100.00   100.00   --       load_unit                                                            
+100.00             100.00   100.00   --       commit_stage                                                         
+100.00             100.00   100.00   --       store_buffer                                                         
+100.00             100.00   100.00   --       store_unit                                                           
+100.00             100.00   100.00   --       branch_unit                                                          
+100.00             100.00   100.00   --       controller                                                           
+100.00             100.00   100.00   --       lsu_bypass                                                           
+100.00             100.00   100.00   --       id_stage                                                             
+100.00             100.00   100.00   --       cvxif_fu                                                             
+100.00             --       100.00   --       issue_stage                                                          
+100.00             100.00   100.00   --       csr_buffer                                                           
+100.00             100.00   100.00   --       instr_realign                                                        
+100.00             100.00   100.00   --       multiplier                                                           
+--                 --       --       --       uvma_obi_memory_assert_if_wrp                                        
+--                 --       --       --       cva6_tb_wrapper                                                      
+--                 --       --       --       uvmt_cva6_dut_wrap                                                   
+--                 --       --       --       uvmt_cva6_tb                                                         
+

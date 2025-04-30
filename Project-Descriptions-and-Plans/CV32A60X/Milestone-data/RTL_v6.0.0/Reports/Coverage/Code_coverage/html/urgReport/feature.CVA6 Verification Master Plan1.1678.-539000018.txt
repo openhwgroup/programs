@@ -1,0 +1,35 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.CV-X-IF.CV-XIF Instructions.CUS_ADD
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.85 --     --     --      99.85 
+
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.85 --     --     --      99.85 
+
+
+-------------------------------------------------------------------------------
+
+Measure CUS_ADD: 
+
+Metrics: Group
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.85 --     --     --      99.85 
+
+
+Sources:
+
+group instance: uvme_cva6_pkg.uvme_cva6_pkg.cus_add_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                   
+ 99.85 --     --     --      99.85 uvme_cva6_pkg.uvme_cva6_pkg.cus_add_cg 
+
+
+
+

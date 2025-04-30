@@ -1,0 +1,37 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.ISA.RV32I.JALR
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 92.03 --     --     --      92.03 
+
+Attribute/Annotation values:
+  Comment: 
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+ 92.03 --     --     --      92.03 
+
+
+-------------------------------------------------------------------------------
+
+Measure JALR: 
+
+Metrics: Group
+SCORE  LINE   COND   ASSERT GROUP  
+ 92.03 --     --     --      92.03 
+
+
+Sources:
+
+group instance: uvma_isacov_pkg.uvma_isacov_pkg.rv32i_jalr_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                          
+ 92.03 --     --     --      92.03 uvma_isacov_pkg.uvma_isacov_pkg.rv32i_jalr_cg 
+
+
+
+

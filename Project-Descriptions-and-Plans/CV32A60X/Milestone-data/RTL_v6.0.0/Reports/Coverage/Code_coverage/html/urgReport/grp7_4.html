@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Group Instance : uvma_isacov_pkg.rv32zba_sh2add_cg</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.colResizable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76,
+      initClosed: true
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: true
+    }
+  });
+  westLayout = $('div.ui-layout-west').layout({
+    north__paneSelector: ".ui-layout-west-inner-north",
+    center__paneSelector: ".ui-layout-west-inner-center", 
+    north__size: 100,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+  $("table").colResizable({    liveDrag:true,
+    fixed:false,
+    draggingClass:"dragging"
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+</div>
+<div class="ui-layout-west">
+<div class="ui-layout-west-inner-north">
+</div>
+<div class="ui-layout-west-inner-center">
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs1"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs1">Summary for Variable cp_rs1</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>Automatically Generated Bins</td>
+<td class="rt">32</td>
+<td class="rt">0</td>
+<td class="rt">32</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for cp_rs1</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[0]</td>
+<td class="rt">574</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[1]</td>
+<td class="rt">537</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[2]</td>
+<td class="rt">565</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[3]</td>
+<td class="rt">553</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[4]</td>
+<td class="rt">582</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[5]</td>
+<td class="rt">546</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[6]</td>
+<td class="rt">556</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[7]</td>
+<td class="rt">594</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[8]</td>
+<td class="rt">554</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[9]</td>
+<td class="rt">553</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[10]</td>
+<td class="rt">559</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[11]</td>
+<td class="rt">515</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[12]</td>
+<td class="rt">587</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[13]</td>
+<td class="rt">560</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[14]</td>
+<td class="rt">557</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[15]</td>
+<td class="rt">569</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[16]</td>
+<td class="rt">531</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[17]</td>
+<td class="rt">517</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[18]</td>
+<td class="rt">541</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[19]</td>
+<td class="rt">561</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[20]</td>
+<td class="rt">570</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[21]</td>
+<td class="rt">577</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[22]</td>
+<td class="rt">512</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[23]</td>
+<td class="rt">513</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[24]</td>
+<td class="rt">564</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[25]</td>
+<td class="rt">544</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[26]</td>
+<td class="rt">544</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[27]</td>
+<td class="rt">531</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[28]</td>
+<td class="rt">539</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[29]</td>
+<td class="rt">551</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[30]</td>
+<td class="rt">550</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[31]</td>
+<td class="rt">520</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs2"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs2">Summary for Variable cp_rs2</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>Automatically Generated Bins</td>
+<td class="rt">32</td>
+<td class="rt">0</td>
+<td class="rt">32</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for cp_rs2</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[0]</td>
+<td class="rt">565</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[1]</td>
+<td class="rt">571</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[2]</td>
+<td class="rt">582</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[3]</td>
+<td class="rt">552</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[4]</td>
+<td class="rt">583</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[5]</td>
+<td class="rt">554</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[6]</td>
+<td class="rt">593</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[7]</td>
+<td class="rt">586</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[8]</td>
+<td class="rt">533</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[9]</td>
+<td class="rt">537</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[10]</td>
+<td class="rt">550</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[11]</td>
+<td class="rt">561</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[12]</td>
+<td class="rt">542</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[13]</td>
+<td class="rt">522</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[14]</td>
+<td class="rt">562</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[15]</td>
+<td class="rt">527</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[16]</td>
+<td class="rt">560</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[17]</td>
+<td class="rt">551</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[18]</td>
+<td class="rt">536</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[19]</td>
+<td class="rt">589</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[20]</td>
+<td class="rt">549</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[21]</td>
+<td class="rt">514</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[22]</td>
+<td class="rt">527</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[23]</td>
+<td class="rt">558</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[24]</td>
+<td class="rt">563</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[25]</td>
+<td class="rt">544</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[26]</td>
+<td class="rt">566</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[27]</td>
+<td class="rt">522</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[28]</td>
+<td class="rt">565</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[29]</td>
+<td class="rt">508</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[30]</td>
+<td class="rt">521</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[31]</td>
+<td class="rt">533</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd">Summary for Variable cp_rd</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>Automatically Generated Bins</td>
+<td class="rt">32</td>
+<td class="rt">0</td>
+<td class="rt">32</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for cp_rd</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto[0]</td>
+<td class="rt">616</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[1]</td>
+<td class="rt">609</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[2]</td>
+<td class="rt">522</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[3]</td>
+<td class="rt">618</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[4]</td>
+<td class="rt">564</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[5]</td>
+<td class="rt">552</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[6]</td>
+<td class="rt">567</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[7]</td>
+<td class="rt">506</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[8]</td>
+<td class="rt">534</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[9]</td>
+<td class="rt">529</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[10]</td>
+<td class="rt">560</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[11]</td>
+<td class="rt">567</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[12]</td>
+<td class="rt">529</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[13]</td>
+<td class="rt">535</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[14]</td>
+<td class="rt">535</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[15]</td>
+<td class="rt">521</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[16]</td>
+<td class="rt">545</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[17]</td>
+<td class="rt">585</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[18]</td>
+<td class="rt">545</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[19]</td>
+<td class="rt">524</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[20]</td>
+<td class="rt">528</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[21]</td>
+<td class="rt">542</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[22]</td>
+<td class="rt">568</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[23]</td>
+<td class="rt">538</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[24]</td>
+<td class="rt">572</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[25]</td>
+<td class="rt">546</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[26]</td>
+<td class="rt">560</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[27]</td>
+<td class="rt">528</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[28]</td>
+<td class="rt">572</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[29]</td>
+<td class="rt">536</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[30]</td>
+<td class="rt">560</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto[31]</td>
+<td class="rt">513</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_rs1_hazard"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_rs1_hazard">Summary for Variable cp_rd_rs1_hazard</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">32</td>
+<td class="rt">0</td>
+<td class="rt">32</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_rd_rs1_hazard</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>RD_00</td>
+<td class="rt">58</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_01</td>
+<td class="rt">69</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_02</td>
+<td class="rt">69</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_03</td>
+<td class="rt">81</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_04</td>
+<td class="rt">77</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_05</td>
+<td class="rt">63</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_06</td>
+<td class="rt">68</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_07</td>
+<td class="rt">71</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_08</td>
+<td class="rt">65</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_09</td>
+<td class="rt">54</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0a</td>
+<td class="rt">76</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0b</td>
+<td class="rt">55</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0c</td>
+<td class="rt">72</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0d</td>
+<td class="rt">67</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0e</td>
+<td class="rt">64</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0f</td>
+<td class="rt">55</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_10</td>
+<td class="rt">72</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_11</td>
+<td class="rt">68</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_12</td>
+<td class="rt">57</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_13</td>
+<td class="rt">68</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_14</td>
+<td class="rt">62</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_15</td>
+<td class="rt">69</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_16</td>
+<td class="rt">56</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_17</td>
+<td class="rt">52</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_18</td>
+<td class="rt">75</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_19</td>
+<td class="rt">58</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1a</td>
+<td class="rt">67</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1b</td>
+<td class="rt">56</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1c</td>
+<td class="rt">74</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1d</td>
+<td class="rt">59</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1e</td>
+<td class="rt">58</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1f</td>
+<td class="rt">57</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_rs2_hazard"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_rs2_hazard">Summary for Variable cp_rd_rs2_hazard</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">32</td>
+<td class="rt">0</td>
+<td class="rt">32</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_rd_rs2_hazard</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>RD_00</td>
+<td class="rt">59</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_01</td>
+<td class="rt">65</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_02</td>
+<td class="rt">67</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_03</td>
+<td class="rt">73</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_04</td>
+<td class="rt">73</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_05</td>
+<td class="rt">66</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_06</td>
+<td class="rt">58</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_07</td>
+<td class="rt">68</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_08</td>
+<td class="rt">57</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_09</td>
+<td class="rt">59</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0a</td>
+<td class="rt">67</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0b</td>
+<td class="rt">60</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0c</td>
+<td class="rt">63</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0d</td>
+<td class="rt">71</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0e</td>
+<td class="rt">67</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_0f</td>
+<td class="rt">54</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_10</td>
+<td class="rt">74</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_11</td>
+<td class="rt">70</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_12</td>
+<td class="rt">53</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_13</td>
+<td class="rt">67</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_14</td>
+<td class="rt">64</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_15</td>
+<td class="rt">58</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_16</td>
+<td class="rt">56</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_17</td>
+<td class="rt">55</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_18</td>
+<td class="rt">72</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_19</td>
+<td class="rt">68</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1a</td>
+<td class="rt">69</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1b</td>
+<td class="rt">64</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1c</td>
+<td class="rt">68</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1d</td>
+<td class="rt">60</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1e</td>
+<td class="rt">62</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>RD_1f</td>
+<td class="rt">71</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs1_value"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs1_value">Summary for Variable cp_rs1_value</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>Automatically Generated Bins</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for cp_rs1_value</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>auto_NON_ZERO</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>NON_ZERO_OFF</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto_ZERO</td>
+<td class="rt">6225</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_POSITIVE</td>
+<td class="rt">6027</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_NEGATIVE</td>
+<td class="rt">5374</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs2_value"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs2_value">Summary for Variable cp_rs2_value</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>Automatically Generated Bins</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for cp_rs2_value</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>auto_NON_ZERO</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>NON_ZERO_OFF</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto_ZERO</td>
+<td class="rt">6140</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_POSITIVE</td>
+<td class="rt">6170</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_NEGATIVE</td>
+<td class="rt">5316</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_value"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_value">Summary for Variable cp_rd_value</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>Automatically Generated Bins</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for cp_rd_value</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>auto_NON_ZERO</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>NON_ZERO_OFF</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto_ZERO</td>
+<td class="rt">3117</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_POSITIVE</td>
+<td class="rt">8363</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_NEGATIVE</td>
+<td class="rt">6146</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs1_toggle"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs1_toggle">Summary for Variable cp_rs1_toggle</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">64</td>
+<td class="rt">0</td>
+<td class="rt">64</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_rs1_toggle</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>BIT31_1</td>
+<td class="rt">5374</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT30_1</td>
+<td class="rt">3475</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT29_1</td>
+<td class="rt">3502</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT28_1</td>
+<td class="rt">3483</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT27_1</td>
+<td class="rt">3363</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT26_1</td>
+<td class="rt">3340</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT25_1</td>
+<td class="rt">3315</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT24_1</td>
+<td class="rt">3344</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT23_1</td>
+<td class="rt">3312</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT22_1</td>
+<td class="rt">3311</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT21_1</td>
+<td class="rt">3332</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT20_1</td>
+<td class="rt">3373</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT19_1</td>
+<td class="rt">3363</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT18_1</td>
+<td class="rt">3425</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT17_1</td>
+<td class="rt">3368</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT16_1</td>
+<td class="rt">3549</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT15_1</td>
+<td class="rt">4244</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT14_1</td>
+<td class="rt">4294</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT13_1</td>
+<td class="rt">4476</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT12_1</td>
+<td class="rt">4243</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT11_1</td>
+<td class="rt">4723</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT10_1</td>
+<td class="rt">4791</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT9_1</td>
+<td class="rt">4294</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT8_1</td>
+<td class="rt">3712</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT7_1</td>
+<td class="rt">4557</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT6_1</td>
+<td class="rt">4050</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT5_1</td>
+<td class="rt">4247</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT4_1</td>
+<td class="rt">5338</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT3_1</td>
+<td class="rt">5512</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT2_1</td>
+<td class="rt">5376</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT1_1</td>
+<td class="rt">4273</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT0_1</td>
+<td class="rt">4987</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT31_0</td>
+<td class="rt">12252</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT30_0</td>
+<td class="rt">14151</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT29_0</td>
+<td class="rt">14124</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT28_0</td>
+<td class="rt">14143</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT27_0</td>
+<td class="rt">14263</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT26_0</td>
+<td class="rt">14286</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT25_0</td>
+<td class="rt">14311</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT24_0</td>
+<td class="rt">14282</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT23_0</td>
+<td class="rt">14314</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT22_0</td>
+<td class="rt">14315</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT21_0</td>
+<td class="rt">14294</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT20_0</td>
+<td class="rt">14253</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT19_0</td>
+<td class="rt">14263</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT18_0</td>
+<td class="rt">14201</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT17_0</td>
+<td class="rt">14258</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT16_0</td>
+<td class="rt">14077</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT15_0</td>
+<td class="rt">13382</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT14_0</td>
+<td class="rt">13332</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT13_0</td>
+<td class="rt">13150</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT12_0</td>
+<td class="rt">13383</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT11_0</td>
+<td class="rt">12903</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT10_0</td>
+<td class="rt">12835</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT9_0</td>
+<td class="rt">13332</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT8_0</td>
+<td class="rt">13914</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT7_0</td>
+<td class="rt">13069</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT6_0</td>
+<td class="rt">13576</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT5_0</td>
+<td class="rt">13379</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT4_0</td>
+<td class="rt">12288</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT3_0</td>
+<td class="rt">12114</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT2_0</td>
+<td class="rt">12250</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT1_0</td>
+<td class="rt">13353</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT0_0</td>
+<td class="rt">12639</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs2_toggle"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs2_toggle">Summary for Variable cp_rs2_toggle</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">64</td>
+<td class="rt">0</td>
+<td class="rt">64</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_rs2_toggle</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>BIT31_1</td>
+<td class="rt">5316</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT30_1</td>
+<td class="rt">3518</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT29_1</td>
+<td class="rt">3511</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT28_1</td>
+<td class="rt">3550</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT27_1</td>
+<td class="rt">3394</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT26_1</td>
+<td class="rt">3426</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT25_1</td>
+<td class="rt">3398</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT24_1</td>
+<td class="rt">3430</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT23_1</td>
+<td class="rt">3375</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT22_1</td>
+<td class="rt">3380</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT21_1</td>
+<td class="rt">3372</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT20_1</td>
+<td class="rt">3371</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT19_1</td>
+<td class="rt">3361</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT18_1</td>
+<td class="rt">3415</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT17_1</td>
+<td class="rt">3388</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT16_1</td>
+<td class="rt">3612</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT15_1</td>
+<td class="rt">4299</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT14_1</td>
+<td class="rt">4242</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT13_1</td>
+<td class="rt">4474</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT12_1</td>
+<td class="rt">4294</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT11_1</td>
+<td class="rt">4713</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT10_1</td>
+<td class="rt">4711</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT9_1</td>
+<td class="rt">4290</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT8_1</td>
+<td class="rt">3781</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT7_1</td>
+<td class="rt">4602</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT6_1</td>
+<td class="rt">4115</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT5_1</td>
+<td class="rt">4257</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT4_1</td>
+<td class="rt">5402</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT3_1</td>
+<td class="rt">5399</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT2_1</td>
+<td class="rt">5453</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT1_1</td>
+<td class="rt">4323</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT0_1</td>
+<td class="rt">4984</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT31_0</td>
+<td class="rt">12310</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT30_0</td>
+<td class="rt">14108</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT29_0</td>
+<td class="rt">14115</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT28_0</td>
+<td class="rt">14076</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT27_0</td>
+<td class="rt">14232</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT26_0</td>
+<td class="rt">14200</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT25_0</td>
+<td class="rt">14228</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT24_0</td>
+<td class="rt">14196</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT23_0</td>
+<td class="rt">14251</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT22_0</td>
+<td class="rt">14246</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT21_0</td>
+<td class="rt">14254</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT20_0</td>
+<td class="rt">14255</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT19_0</td>
+<td class="rt">14265</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT18_0</td>
+<td class="rt">14211</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT17_0</td>
+<td class="rt">14238</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT16_0</td>
+<td class="rt">14014</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT15_0</td>
+<td class="rt">13327</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT14_0</td>
+<td class="rt">13384</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT13_0</td>
+<td class="rt">13152</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT12_0</td>
+<td class="rt">13332</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT11_0</td>
+<td class="rt">12913</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT10_0</td>
+<td class="rt">12915</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT9_0</td>
+<td class="rt">13336</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT8_0</td>
+<td class="rt">13845</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT7_0</td>
+<td class="rt">13024</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT6_0</td>
+<td class="rt">13511</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT5_0</td>
+<td class="rt">13369</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT4_0</td>
+<td class="rt">12224</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT3_0</td>
+<td class="rt">12227</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT2_0</td>
+<td class="rt">12173</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT1_0</td>
+<td class="rt">13303</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT0_0</td>
+<td class="rt">12642</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_toggle"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_toggle">Summary for Variable cp_rd_toggle</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">64</td>
+<td class="rt">0</td>
+<td class="rt">64</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_rd_toggle</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>BIT31_1</td>
+<td class="rt">6146</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT30_1</td>
+<td class="rt">4656</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT29_1</td>
+<td class="rt">4544</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT28_1</td>
+<td class="rt">4590</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT27_1</td>
+<td class="rt">4441</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT26_1</td>
+<td class="rt">4498</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT25_1</td>
+<td class="rt">4455</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT24_1</td>
+<td class="rt">4456</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT23_1</td>
+<td class="rt">4443</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT22_1</td>
+<td class="rt">4500</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT21_1</td>
+<td class="rt">4477</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT20_1</td>
+<td class="rt">4539</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT19_1</td>
+<td class="rt">4513</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT18_1</td>
+<td class="rt">4718</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT17_1</td>
+<td class="rt">5373</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT16_1</td>
+<td class="rt">5418</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT15_1</td>
+<td class="rt">5977</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT14_1</td>
+<td class="rt">5897</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT13_1</td>
+<td class="rt">6341</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT12_1</td>
+<td class="rt">6256</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT11_1</td>
+<td class="rt">6212</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT10_1</td>
+<td class="rt">5957</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT9_1</td>
+<td class="rt">6196</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT8_1</td>
+<td class="rt">5674</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT7_1</td>
+<td class="rt">6203</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT6_1</td>
+<td class="rt">6432</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT5_1</td>
+<td class="rt">6615</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT4_1</td>
+<td class="rt">6979</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT3_1</td>
+<td class="rt">6619</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT2_1</td>
+<td class="rt">6878</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT1_1</td>
+<td class="rt">4323</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT0_1</td>
+<td class="rt">4984</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT31_0</td>
+<td class="rt">11480</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT30_0</td>
+<td class="rt">12970</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT29_0</td>
+<td class="rt">13082</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT28_0</td>
+<td class="rt">13036</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT27_0</td>
+<td class="rt">13185</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT26_0</td>
+<td class="rt">13128</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT25_0</td>
+<td class="rt">13171</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT24_0</td>
+<td class="rt">13170</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT23_0</td>
+<td class="rt">13183</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT22_0</td>
+<td class="rt">13126</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT21_0</td>
+<td class="rt">13149</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT20_0</td>
+<td class="rt">13087</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT19_0</td>
+<td class="rt">13113</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT18_0</td>
+<td class="rt">12908</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT17_0</td>
+<td class="rt">12253</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT16_0</td>
+<td class="rt">12208</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT15_0</td>
+<td class="rt">11649</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT14_0</td>
+<td class="rt">11729</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT13_0</td>
+<td class="rt">11285</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT12_0</td>
+<td class="rt">11370</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT11_0</td>
+<td class="rt">11414</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT10_0</td>
+<td class="rt">11669</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT9_0</td>
+<td class="rt">11430</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT8_0</td>
+<td class="rt">11952</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT7_0</td>
+<td class="rt">11423</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT6_0</td>
+<td class="rt">11194</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT5_0</td>
+<td class="rt">11011</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT4_0</td>
+<td class="rt">10647</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT3_0</td>
+<td class="rt">11007</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT2_0</td>
+<td class="rt">10748</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT1_0</td>
+<td class="rt">13303</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>BIT0_0</td>
+<td class="rt">12642</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cross_rd_rs1_rs2"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cross_rd_rs1_rs2">Summary for Cross cross_rd_rs1_rs2</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_rd cp_rs1 cp_rs2<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_rd_rs1_rs2</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>IGN_OFF</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cross_rs1_rs2_value"></a><span class="repname" id="inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cross_rs1_rs2_value">Summary for Cross cross_rs1_rs2_value</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_rs1_value cp_rs2_value<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s10">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">9</td>
+<td class="rt">0</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_rs1_rs2_value</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_rs1_value</td><td class="alfsrt">cp_rs2_value</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[auto_ZERO]</td>
+<td>[auto_NON_ZERO]</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+<td></td>
+</tr><tr class="wht">
+<td>[auto_NON_ZERO]</td>
+<td>[auto_ZERO , auto_NON_ZERO , auto_POSITIVE , auto_NEGATIVE]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(4 bins)</td>
+</tr><tr class="wht">
+<td>[auto_POSITIVE , auto_NEGATIVE]</td>
+<td>[auto_NON_ZERO]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(2 bins)</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_rs1_value</td><td class="alfsrt">cp_rs2_value</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto_ZERO</td>
+<td>auto_ZERO</td>
+<td class="rt">3045</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_ZERO</td>
+<td>auto_POSITIVE</td>
+<td class="rt">1762</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_ZERO</td>
+<td>auto_NEGATIVE</td>
+<td class="rt">1418</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_POSITIVE</td>
+<td>auto_ZERO</td>
+<td class="rt">1602</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_POSITIVE</td>
+<td>auto_POSITIVE</td>
+<td class="rt">2647</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_POSITIVE</td>
+<td>auto_NEGATIVE</td>
+<td class="rt">1778</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_NEGATIVE</td>
+<td>auto_ZERO</td>
+<td class="rt">1493</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_NEGATIVE</td>
+<td>auto_POSITIVE</td>
+<td class="rt">1761</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_NEGATIVE</td>
+<td>auto_NEGATIVE</td>
+<td class="rt">2120</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs1">Variable : cp_rs1</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs2">Variable : cp_rs2</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd">Variable : cp_rd</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_rs1_hazard">Variable : cp_rd_rs1_hazard</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_rs2_hazard">Variable : cp_rd_rs2_hazard</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs1_value">Variable : cp_rs1_value</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs2_value">Variable : cp_rs2_value</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_value">Variable : cp_rd_value</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs1_toggle">Variable : cp_rs1_toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rs2_toggle">Variable : cp_rs2_toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cp_rd_toggle">Variable : cp_rd_toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cross_rd_rs1_rs2">Cross : cross_rd_rs1_rs2</a>    </li>
+    <li>
+      <a href="#inst_tag_uvma_isacov_pkg.rv32zba_sh2add_cg.cross_rs1_rs2_value">Cross : cross_rs1_rs2_value</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

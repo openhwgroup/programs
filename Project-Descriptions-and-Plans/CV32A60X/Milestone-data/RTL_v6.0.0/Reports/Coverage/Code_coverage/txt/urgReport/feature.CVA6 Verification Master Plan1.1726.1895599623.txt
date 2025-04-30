@@ -1,0 +1,35 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Code coverage
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.09  99.79  98.39 --     --     
+
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.09  99.79  98.39 --     --     
+
+
+-------------------------------------------------------------------------------
+
+Measure CV32A60X: 
+
+Metrics: Line, Cond
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.09  99.79  98.39 --     --     
+
+
+Sources:
+
+tree: uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                                            
+ 99.09  99.79  98.39 --     --     uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline 
+
+
+
+

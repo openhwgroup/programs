@@ -1,0 +1,33 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.ISA.RV32ZICSR
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+Attribute/Annotation values:
+  description: ZICSR extension
+
+
+-------------------------------------------------------------------------------
+
+Sub-features:
+
+SCORE  LINE   COND   ASSERT GROUP  NAME   
+100.00 --     --     --     100.00 CSRRC  
+100.00 --     --     --     100.00 CSRRCI 
+100.00 --     --     --     100.00 CSRRS  
+100.00 --     --     --     100.00 CSRRSI 
+100.00 --     --     --     100.00 CSRRW  
+100.00 --     --     --     100.00 CSRRWI 
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+--     --     --     --     --     
+
+
+

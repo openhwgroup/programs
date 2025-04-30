@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: instr_queue</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_instr_queue'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_instr_queue')">instr_queue</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod47.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod47.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/frontend/instr_queue.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/frontend/instr_queue.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod47.html#inst_tag_194"  onclick="showContent('inst_tag_194')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend.i_instr_queue</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod47.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod47.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_instr_queue'>
+<hr>
+<a name="inst_tag_194"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_194" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend.i_instr_queue</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod47.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod47.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 99.24</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 98.47</td>
+<td class="wht cl rt"></td>
+<td><a href="mod6.html#inst_tag_9" >i_frontend</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod51.html#inst_tag_199" id="tag_urg_inst_199">gen_instr_fifo[0].i_fifo_instr_data</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod15.html#inst_tag_20" id="tag_urg_inst_20">gen_multiple_instr_per_fetch_with_C.i_lzc_branch_index</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_instr_queue'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod47.html" >instr_queue</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>52</td><td>52</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>321</td><td>28</td><td>28</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>440</td><td>8</td><td>8</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>486</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>515</td><td>13</td><td>13</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+320                         always_comb begin
+321        1/1                idx_ds_d  = idx_ds_q;
+322                     
+323        1/1                pop_instr = '0;
+324                           // assemble fetch entry
+325        1/1                for (int unsigned i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+326        1/1                  fetch_entry_o[i].instruction = '0;
+327        1/1                  fetch_entry_o[i].address = pc_j[i];
+328        1/1                  fetch_entry_o[i].ex.valid = 1'b0;
+329        1/1                  fetch_entry_o[i].ex.cause = '0;
+330                     
+331        1/1                  fetch_entry_o[i].ex.tval = '0;
+332        1/1                  fetch_entry_o[i].ex.tval2 = '0;
+333        1/1                  fetch_entry_o[i].ex.gva = 1'b0;
+334        1/1                  fetch_entry_o[i].ex.tinst = '0;
+335        1/1                  fetch_entry_o[i].branch_predict.predict_address = address_out;
+336        1/1                  fetch_entry_o[i].branch_predict.cf = ariane_pkg::NoCF;
+337                           end
+338                     
+339                           // output mux select
+340        1/1                for (int unsigned i = 0; i &lt; CVA6Cfg.INSTR_PER_FETCH; i++) begin
+341        1/1                  if (idx_ds[0][i]) begin
+342        1/1                    if (CVA6Cfg.NrPMPEntries != 0 &amp;&amp; instr_data_out[i].ex == ariane_pkg::FE_INSTR_ACCESS_FAULT) begin
+343        <font color = "grey">unreachable  </font>            fetch_entry_o[0].ex.cause = riscv::INSTR_ACCESS_FAULT;
+344        1/1                    end else if (CVA6Cfg.RVH &amp;&amp; instr_data_out[i].ex == ariane_pkg::FE_INSTR_GUEST_PAGE_FAULT) begin
+345        <font color = "grey">unreachable  </font>            fetch_entry_o[0].ex.cause = riscv::INSTR_GUEST_PAGE_FAULT;
+346                               end else begin
+347        1/1                      fetch_entry_o[0].ex.cause = riscv::INSTR_PAGE_FAULT;
+348                               end
+349        1/1                    fetch_entry_o[0].instruction = instr_data_out[i].instr;
+350        1/1                    fetch_entry_o[0].ex.valid = ((CVA6Cfg.MmuPresent || CVA6Cfg.NrPMPEntries !=0) &amp;&amp; instr_data_out[i].ex != ariane_pkg::FE_NONE);
+351        1/1                    if (CVA6Cfg.TvalEn)
+352        <font color = "grey">unreachable  </font>            fetch_entry_o[0].ex.tval = {
+                        MISSING_ELSE
+353                                   {(CVA6Cfg.XLEN - CVA6Cfg.VLEN) {1'b0}}, instr_data_out[i].ex_vaddr
+354                                 };
+355        1/1                    if (CVA6Cfg.RVH) begin
+356        <font color = "grey">unreachable  </font>            fetch_entry_o[0].ex.tval2 = instr_data_out[i].ex_gpaddr;
+357        <font color = "grey">unreachable  </font>            fetch_entry_o[0].ex.tinst = instr_data_out[i].ex_tinst;
+358        <font color = "grey">unreachable  </font>            fetch_entry_o[0].ex.gva   = instr_data_out[i].ex_gva;
+359                               end
+                        MISSING_ELSE
+360        1/1                    fetch_entry_o[0].branch_predict.cf = instr_data_out[i].cf;
+361        1/1                    pop_instr[i] = fetch_entry_fire[0];
+362                             end
+                        MISSING_ELSE
+363                     
+364        1/1                  if (CVA6Cfg.SuperscalarEn) begin
+365        <font color = "grey">unreachable  </font>          if (idx_ds[1][i]) begin
+366        <font color = "grey">unreachable  </font>            if (instr_data_out[i].ex == ariane_pkg::FE_INSTR_ACCESS_FAULT) begin
+367        <font color = "grey">unreachable  </font>              fetch_entry_o[NID].ex.cause = riscv::INSTR_ACCESS_FAULT;
+368                                 end else begin
+369        <font color = "grey">unreachable  </font>              fetch_entry_o[NID].ex.cause = riscv::INSTR_PAGE_FAULT;
+370                                 end
+371        <font color = "grey">unreachable  </font>            fetch_entry_o[NID].instruction = instr_data_out[i].instr;
+372        <font color = "grey">unreachable  </font>            fetch_entry_o[NID].ex.valid = instr_data_out[i].ex != ariane_pkg::FE_NONE;
+373        <font color = "grey">unreachable  </font>            fetch_entry_o[NID].ex.tval = {{64 - CVA6Cfg.VLEN{1'b0}}, instr_data_out[i].ex_vaddr};
+374        <font color = "grey">unreachable  </font>            fetch_entry_o[NID].branch_predict.cf = instr_data_out[i].cf;
+375                                 // Cannot output two CF the same cycle.
+376        <font color = "grey">unreachable  </font>            pop_instr[i] = fetch_entry_fire[NID];
+377                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+378                             end
+                        MISSING_ELSE
+379                           end
+380                           // rotate the pointer left
+381        1/1                if (fetch_entry_fire[0]) begin
+382        1/1                  if (CVA6Cfg.SuperscalarEn) begin
+383        <font color = "grey">unreachable  </font>          idx_ds_d = fetch_entry_fire[NID] ? idx_ds[2] : idx_ds[1];
+384                             end else begin
+385        1/1                    idx_ds_d = idx_ds[1];
+386                             end
+387                           end
+                        MISSING_ELSE
+388                         end
+389                       end else begin : gen_downstream_itf_without_c
+390                         always_comb begin
+391                           idx_ds_d = '0;
+392                           idx_is_d = '0;
+393                           fetch_entry_o[0].instruction = instr_data_out[0].instr;
+394                           fetch_entry_o[0].address = pc_q;
+395                     
+396                           fetch_entry_o[0].ex.valid = instr_data_out[0].ex != ariane_pkg::FE_NONE;
+397                           if (instr_data_out[0].ex == ariane_pkg::FE_INSTR_ACCESS_FAULT) begin
+398                             fetch_entry_o[0].ex.cause = riscv::INSTR_ACCESS_FAULT;
+399                           end else begin
+400                             fetch_entry_o[0].ex.cause = riscv::INSTR_PAGE_FAULT;
+401                           end
+402                           if (CVA6Cfg.TvalEn)
+403                             fetch_entry_o[0].ex.tval = {{64 - CVA6Cfg.VLEN{1'b0}}, instr_data_out[0].ex_vaddr};
+404                           else fetch_entry_o[0].ex.tval = '0;
+405                           if (CVA6Cfg.RVH) begin
+406                             fetch_entry_o[0].ex.tval2 = instr_data_out[0].ex_gpaddr;
+407                             fetch_entry_o[0].ex.tinst = instr_data_out[0].ex_tinst;
+408                             fetch_entry_o[0].ex.gva   = instr_data_out[0].ex_gva;
+409                           end else begin
+410                             fetch_entry_o[0].ex.tval2 = '0;
+411                             fetch_entry_o[0].ex.tinst = '0;
+412                             fetch_entry_o[0].ex.gva   = 1'b0;
+413                           end
+414                     
+415                           fetch_entry_o[0].branch_predict.predict_address = address_out;
+416                           fetch_entry_o[0].branch_predict.cf = instr_data_out[0].cf;
+417                     
+418                           pop_instr[0] = fetch_entry_valid_o[0] &amp; fetch_entry_ready_i[0];
+419                         end
+420                       end
+421                     
+422                       for (genvar i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+423                         assign fetch_entry_is_cf[i] = fetch_entry_o[i].branch_predict.cf != ariane_pkg::NoCF;
+424                         assign fetch_entry_fire[i]  = fetch_entry_valid_o[i] &amp; fetch_entry_ready_i[i];
+425                       end
+426                     
+427                       assign pop_address = |(fetch_entry_is_cf &amp; fetch_entry_fire);
+428                     
+429                       // ----------------------
+430                       // Calculate (Next) PC
+431                       // ----------------------
+432                       assign pc_j[0] = pc_q;
+433                       for (genvar i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+434                         assign pc_j[i+1] = fetch_entry_is_cf[i] ? address_out : (
+435                           pc_j[i] + ((fetch_entry_o[i].instruction[1:0] != 2'b11) ? 'd2 : 'd4)
+436                         );
+437                       end
+438                     
+439                       always_comb begin
+440        1/1              pc_d = pc_q;
+441        1/1              reset_address_d = flush_i ? 1'b1 : reset_address_q;
+442                     
+443        1/1              if (fetch_entry_fire[0]) begin
+444        1/1                pc_d = pc_j[1];
+445        1/1                if (CVA6Cfg.SuperscalarEn) begin
+446        <font color = "grey">unreachable  </font>        if (fetch_entry_fire[NID]) begin
+447        <font color = "grey">unreachable  </font>          pc_d = pc_j[2];
+448                             end
+                   <font color = "red">==>  MISSING_ELSE</font>
+449                           end
+                        MISSING_ELSE
+450                         end
+                        MISSING_ELSE
+451                     
+452                         // we previously flushed so we need to reset the address
+453        1/1              if (valid_i[0] &amp;&amp; reset_address_q) begin
+454                           // this is the base of the first instruction
+455        1/1                pc_d = addr_i[0];
+456        1/1                reset_address_d = 1'b0;
+457                         end
+                        MISSING_ELSE
+458                       end
+459                     
+460                       // FIFOs
+461                       for (genvar i = 0; i &lt; CVA6Cfg.INSTR_PER_FETCH; i++) begin : gen_instr_fifo
+462                         // Make sure we don't save any instructions if we couldn't save the address
+463                         assign push_instr_fifo[i] = push_instr[i] &amp; ~address_overflow;
+464                         cva6_fifo_v3 #(
+465                             .FPGA_ALTERA(CVA6Cfg.FpgaAlteraEn),
+466                             .DEPTH(ariane_pkg::FETCH_FIFO_DEPTH),
+467                             .dtype(instr_data_t),
+468                             .FPGA_EN(CVA6Cfg.FpgaEn)
+469                         ) i_fifo_instr_data (
+470                             .clk_i     (clk_i),
+471                             .rst_ni    (rst_ni),
+472                             .flush_i   (flush_i),
+473                             .testmode_i(1'b0),
+474                             .full_o    (instr_queue_full[i]),
+475                             .empty_o   (instr_queue_empty[i]),
+476                             .usage_o   (),
+477                             .data_i    (instr_data_in[i]),
+478                             .push_i    (push_instr_fifo[i]),
+479                             .data_o    (instr_data_out[i]),
+480                             .pop_i     (pop_instr[i])
+481                         );
+482                       end
+483                       // or reduce and check whether we are retiring a taken branch (might be that the corresponding)
+484                       // fifo is full.
+485                       always_comb begin
+486        1/1              push_address = 1'b0;
+487                         // check if we are pushing a ctrl flow change, if so save the address
+488        1/1              for (int i = 0; i &lt; CVA6Cfg.INSTR_PER_FETCH; i++) begin
+489        1/1                push_address |= push_instr[i] &amp; (instr_data_in[i].cf != ariane_pkg::NoCF);
+490                         end
+491                       end
+492                     
+493                       cva6_fifo_v3 #(
+494                           .FPGA_ALTERA(CVA6Cfg.FpgaAlteraEn),
+495                           .DEPTH      (ariane_pkg::FETCH_ADDR_FIFO_DEPTH),
+496                           .DATA_WIDTH (CVA6Cfg.VLEN),
+497                           .FPGA_EN    (CVA6Cfg.FpgaEn)
+498                       ) i_fifo_address (
+499                           .clk_i     (clk_i),
+500                           .rst_ni    (rst_ni),
+501                           .flush_i   (flush_i),
+502                           .testmode_i(1'b0),
+503                           .full_o    (full_address),
+504                           .empty_o   (),
+505                           .usage_o   (),
+506                           .data_i    (predict_address_i),
+507                           .push_i    (push_address &amp; ~full_address),
+508                           .data_o    (address_out),
+509                           .pop_i     (pop_address)
+510                       );
+511                     
+512                     
+513                       if (CVA6Cfg.RVC) begin : gen_pc_q_with_c
+514                         always_ff @(posedge clk_i or negedge rst_ni) begin
+515        1/1                if (!rst_ni) begin
+516        1/1                  idx_ds_q        &lt;= 'b1;
+517        1/1                  idx_is_q        &lt;= '0;
+518        1/1                  pc_q            &lt;= '0;
+519        1/1                  reset_address_q &lt;= 1'b1;
+520                           end else begin
+521        1/1                  pc_q            &lt;= pc_d;
+522        1/1                  reset_address_q &lt;= reset_address_d;
+523        1/1                  if (flush_i) begin
+524                               // one-hot encoded
+525        1/1                    idx_ds_q        &lt;= 'b1;
+526                               // binary encoded
+527        1/1                    idx_is_q        &lt;= '0;
+528        1/1                    reset_address_q &lt;= 1'b1;
+529                             end else begin
+530        1/1                    idx_ds_q &lt;= idx_ds_d;
+531        1/1                    idx_is_q &lt;= idx_is_d;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod47.html" >instr_queue</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>45</td><td>45</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>45</td><td>45</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       151
+ EXPRESSION (((~(|instr_queue_full))) &amp; ((~full_address)))
+             ------------1-----------   --------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       156
+ EXPRESSION (cf_type_i[0] != NoCF)
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       156
+ EXPRESSION (cf_type_i[1] != NoCF)
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       285
+ EXPRESSION (full_address &amp; push_address)
+             ------1-----   ------2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       286
+ EXPRESSION (instr_overflow | address_overflow)
+             -------1------   --------2-------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       293
+ EXPRESSION (address_overflow ? addr_i[0] : addr_i[shamt])
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       366
+ EXPRESSION (instr_data_out[i].ex == FE_INSTR_ACCESS_FAULT)
+            -----------------------1-----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       372
+ EXPRESSION (instr_data_out[i].ex != FE_NONE)
+            ----------------1----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       383
+ EXPRESSION (fetch_entry_fire[NID] ? idx_ds[2] : idx_ds[1])
+             ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       423
+ EXPRESSION (fetch_entry_o[0].branch_predict.cf != NoCF)
+            ----------------------1---------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       424
+ EXPRESSION (fetch_entry_valid_o[0] &amp; fetch_entry_ready_i[0])
+             -----------1----------   -----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       434
+ EXPRESSION (fetch_entry_is_cf[0] ? address_out : (pc_j[0] + ((fetch_entry_o[0].instruction[1:0] != 2'b11) ? 'd2 : 'd4)))
+             ----------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       434
+ SUB-EXPRESSION ((fetch_entry_o[0].instruction[1:0] != 2'b11) ? 'd2 : 'd4)
+                 ----------------------1---------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       434
+ SUB-EXPRESSION (fetch_entry_o[0].instruction[1:0] != 2'b11)
+                ----------------------1---------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       441
+ EXPRESSION (flush_i ? 1'b1 : reset_address_q)
+             ---1---
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       453
+ EXPRESSION (valid_i[0] &amp;&amp; reset_address_q)
+             -----1----    -------2-------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       463
+ EXPRESSION (push_instr[0] &amp; ((~address_overflow)))
+             ------1------   ----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       463
+ EXPRESSION (push_instr[1] &amp; ((~address_overflow)))
+             ------1------   ----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       489
+ EXPRESSION (push_instr[i] &amp; (instr_data_in[i].cf != NoCF))
+             ------1------   --------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       489
+ SUB-EXPRESSION (instr_data_in[i].cf != NoCF)
+                --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       498
+ EXPRESSION (push_address &amp; ((~full_address)))
+             ------1-----   --------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_194">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_instr_queue">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

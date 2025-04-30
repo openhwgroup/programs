@@ -1,0 +1,37 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.ISA.Illegal instructions.I_EXT
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+Attribute/Annotation values:
+  Comment: RVFI limitation issue(#1338)
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+-------------------------------------------------------------------------------
+
+Measure I_EXT: 
+
+Metrics: Group
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+Sources:
+
+group instance: uvme_cva6_pkg.uvme_cva6_pkg.illegal_i_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                     
+100.00 --     --     --     100.00 uvme_cva6_pkg.uvme_cva6_pkg.illegal_i_cg 
+
+
+
+

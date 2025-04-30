@@ -1,0 +1,35 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.CV-X-IF.CV-XIF Instructions.CUS_ADD_RS3_NMSUB
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.80 --     --     --      99.80 
+
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.80 --     --     --      99.80 
+
+
+-------------------------------------------------------------------------------
+
+Measure CUS_ADD_RS3_NMSUB: 
+
+Metrics: Group
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.80 --     --     --      99.80 
+
+
+Sources:
+
+group instance: uvme_cva6_pkg.uvme_cva6_pkg.cus_add_rs3_nmsub_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                             
+ 99.80 --     --     --      99.80 uvme_cva6_pkg.uvme_cva6_pkg.cus_add_rs3_nmsub_cg 
+
+
+
+

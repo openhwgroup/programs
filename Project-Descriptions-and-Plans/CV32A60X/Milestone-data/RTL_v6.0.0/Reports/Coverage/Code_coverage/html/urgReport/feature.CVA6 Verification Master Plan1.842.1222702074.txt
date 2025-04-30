@@ -1,0 +1,40 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.CSR access.MHPMEVENT23
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+-------------------------------------------------------------------------------
+
+Measure MHPMEVENT23: 
+
+Metrics: Group
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+Sources:
+
+group instance: uvme_cva6_pkg.csr_reg_cov.mhpmevent23.mhpmevent23__read_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                       
+100.00 --     --     --     100.00 uvme_cva6_pkg.csr_reg_cov.mhpmevent23.mhpmevent23__read_cg 
+
+
+group instance: uvme_cva6_pkg.csr_reg_cov.mhpmevent23.mhpmevent23__write_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                                        
+100.00 --     --     --     100.00 uvme_cva6_pkg.csr_reg_cov.mhpmevent23.mhpmevent23__write_cg 
+
+
+
+
