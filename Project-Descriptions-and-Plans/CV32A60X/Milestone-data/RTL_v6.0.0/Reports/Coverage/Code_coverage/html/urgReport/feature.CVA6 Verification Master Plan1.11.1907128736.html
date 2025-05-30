@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: HVP Feature</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.colResizable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    }  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+  $("table").colResizable({    liveDrag:true,
+    fixed:false,
+    draggingClass:"dragging"
+  });
+});
+</script>
+</head>
+<body><div class="ui-layout-north">
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+<div id="north-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul>
+    <li>
+      <a href="hvp.CVA6 Verification Master Plan.html">HVP Hierarchy</a>    </li>
+    <li>
+      <a href="plan.CVA6 Verification Master Plan1.2.html">CVA6 Verification Master Plan</a>    </li>
+    <li>
+      <a href="feature.CVA6 Verification Master Plan1.7.-1268999905.html">Programmer view level</a>    </li>
+    <li>
+      <a href="feature.CVA6 Verification Master Plan1.9.744007432.html">ISA</a>    </li>
+    <li>
+      <a href="#">RV32I</a>    </li>
+  </ul>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div class=modhdr>
+<br clear=all>
+<span class=titlename><a name="tag_urg_hvp_CVA6 Verification Master Plan.Programmer view level.ISA.RV32I"></a>
+Feature : <a href="hvp.CVA6 Verification Master Plan.html#tag_urg_hvp_CVA6 Verification Master Plan.Programmer view level.ISA.RV32I" >CVA6&nbsp;Verification&nbsp;Master&nbsp;Plan.Programmer&nbsp;view&nbsp;level.ISA.RV32I</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="s9 cl rt"> 99.46</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s9 cl rt"> 99.46</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<a name="tag_urg_hvp_sub_features"></a>
+<br clear=all>
+<span class=repname>Sub-features:</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.14.620102707.html" >ADD</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.19.1820579082.html" >ADDI</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.24.348138217.html" >AND</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.29.1548614592.html" >ANDI</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.34.-1063089350.html" >AUIPC</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.39.-1986026400.html" >BEQ</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.44.-513274862.html" >BGE</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.49.590364253.html" >BGEU</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.54.-410704004.html" >BLT</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.59.692935111.html" >BLTU</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.64.1443833643.html" >BNE</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.69.1981000120.html" >EBREAK</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.74.1327615957.html" >ECALL</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.79.1949714563.html" >FENCE</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.84.-1478861081.html" >JAL</a></td>
+<td class="s8 cl rt"> 85.42</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s8 cl rt"> 85.42</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.89.-1424754475.html" >JALR</a></td>
+<td class="s9 cl rt"> 92.03</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s9 cl rt"> 92.03</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.94.-125646084.html" >LB</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.99.-921328815.html" >LBU</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.104.-288824778.html" >LH</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.109.-1084507509.html" >LHU</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.114.-2058400558.html" >LUI</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.119.1450712135.html" >LW</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.124.-1638494306.html" >MRET</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.129.-1186884177.html" >OR</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.134.-455422472.html" >ORI</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.139.-1586534205.html" >SB</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.144.-1749712899.html" >SH</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.149.-1508823099.html" >SLL</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.154.-308346724.html" >SLLI</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.159.336392141.html" >SLT</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.164.1536868516.html" >SLTI</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.169.1389942713.html" >SLTIU</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.174.1440031256.html" >SLTU</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.179.1159536372.html" >SRA</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.184.-1934954549.html" >SRAI</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.189.-1672001793.html" >SRL</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.194.-471525418.html" >SRLI</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.199.234857106.html" >SUB</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.204.-10175986.html" >SW</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.209.-1798651508.html" >WFI</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.214.-1249992531.html" >XOR</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.219.-49516156.html" >XORI</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><hr>
+<a name="tag_urg_hvp_measure_totals"></a>
+<br clear=all>
+<span class=repname>Measure Totals:</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl rt"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<hr>
+<a name="tag_urg_hvp_attr_val"></a>
+<br clear=all>
+<span class=repname>Attribute/Annotation values:</span>
+<br clear=all>
+<div class=ind1>
+description: I extension</div>
+<div class=ind1>
+Comment: </div>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul>
+    <li>
+      <a href="#tag_urg_hvp_CVA6 Verification Master Plan.Programmer view level.ISA.RV32I">Feature : CVA6&nbsp;Verification&nbsp;Master&nbsp;Plan.Programmer&nbsp;view&nbsp;level.ISA.RV32I</a>    </li>
+    <li>
+      <a href="#tag_urg_hvp_sub_features">Sub-features</a>    </li>
+    <li>
+      <a href="#tag_urg_hvp_measure_totals">Measure Totals</a>    </li>
+    <li>
+      <a href="#tag_urg_hvp_attr_val">Attribute/Annotation values</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

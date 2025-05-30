@@ -1,0 +1,35 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.CV-X-IF.CV-XIF Instructions.SEQUENCE
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+-------------------------------------------------------------------------------
+
+Measure SEQ: 
+
+Metrics: Group
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+Sources:
+
+group instance: uvme_cva6_pkg.uvme_cva6_pkg.cus_cvxif_seq_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                         
+100.00 --     --     --     100.00 uvme_cva6_pkg.uvme_cva6_pkg.cus_cvxif_seq_cg 
+
+
+
+

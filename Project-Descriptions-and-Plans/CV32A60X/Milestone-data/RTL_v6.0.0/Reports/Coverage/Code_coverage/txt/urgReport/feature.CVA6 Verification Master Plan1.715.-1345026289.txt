@@ -1,0 +1,215 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.CSR access
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+Attribute/Annotation values:
+  description: 
+    CSR registers access.
+    Specification: Done, Dvplan: Done, Verification execution: Done
+
+
+-------------------------------------------------------------------------------
+
+Sub-features:
+
+SCORE  LINE   COND   ASSERT GROUP  NAME           
+100.00 --     --     --     100.00 MSTATUS        
+100.00 --     --     --     100.00 MISA           
+100.00 --     --     --     100.00 MIE            
+100.00 --     --     --     100.00 MTVEC          
+100.00 --     --     --     100.00 MSTATUSH       
+100.00 --     --     --     100.00 MHPMEVENT3     
+100.00 --     --     --     100.00 MHPMEVENT4     
+100.00 --     --     --     100.00 MHPMEVENT5     
+100.00 --     --     --     100.00 MHPMEVENT6     
+100.00 --     --     --     100.00 MHPMEVENT7     
+100.00 --     --     --     100.00 MHPMEVENT8     
+100.00 --     --     --     100.00 MHPMEVENT9     
+100.00 --     --     --     100.00 MHPMEVENT10    
+100.00 --     --     --     100.00 MHPMEVENT11    
+100.00 --     --     --     100.00 MHPMEVENT12    
+100.00 --     --     --     100.00 MHPMEVENT13    
+100.00 --     --     --     100.00 MHPMEVENT14    
+100.00 --     --     --     100.00 MHPMEVENT15    
+100.00 --     --     --     100.00 MHPMEVENT16    
+100.00 --     --     --     100.00 MHPMEVENT17    
+100.00 --     --     --     100.00 MHPMEVENT18    
+100.00 --     --     --     100.00 MHPMEVENT19    
+100.00 --     --     --     100.00 MHPMEVENT20    
+100.00 --     --     --     100.00 MHPMEVENT21    
+100.00 --     --     --     100.00 MHPMEVENT22    
+100.00 --     --     --     100.00 MHPMEVENT23    
+100.00 --     --     --     100.00 MHPMEVENT24    
+100.00 --     --     --     100.00 MHPMEVENT25    
+100.00 --     --     --     100.00 MHPMEVENT26    
+100.00 --     --     --     100.00 MHPMEVENT27    
+100.00 --     --     --     100.00 MHPMEVENT28    
+100.00 --     --     --     100.00 MHPMEVENT29    
+100.00 --     --     --     100.00 MHPMEVENT30    
+100.00 --     --     --     100.00 MHPMEVENT31    
+100.00 --     --     --     100.00 MSCRATCH       
+100.00 --     --     --     100.00 MEPC           
+100.00 --     --     --     100.00 MCAUSE         
+100.00 --     --     --     100.00 MTVAL          
+100.00 --     --     --     100.00 MIP            
+100.00 --     --     --     100.00 PMPCFG0        
+100.00 --     --     --     100.00 PMPCFG1        
+100.00 --     --     --     100.00 PMPCFG2        
+100.00 --     --     --     100.00 PMPCFG3        
+100.00 --     --     --     100.00 PMPCFG4        
+100.00 --     --     --     100.00 PMPCFG5        
+100.00 --     --     --     100.00 PMPCFG6        
+100.00 --     --     --     100.00 PMPCFG7        
+100.00 --     --     --     100.00 PMPCFG8        
+100.00 --     --     --     100.00 PMPCFG9        
+100.00 --     --     --     100.00 PMPCFG10       
+100.00 --     --     --     100.00 PMPCFG11       
+100.00 --     --     --     100.00 PMPCFG12       
+100.00 --     --     --     100.00 PMPCFG13       
+100.00 --     --     --     100.00 PMPCFG14       
+100.00 --     --     --     100.00 PMPCFG15       
+100.00 --     --     --     100.00 PMPADDR0       
+100.00 --     --     --     100.00 PMPADDR1       
+100.00 --     --     --     100.00 PMPADDR2       
+100.00 --     --     --     100.00 PMPADDR3       
+100.00 --     --     --     100.00 PMPADDR4       
+100.00 --     --     --     100.00 PMPADDR5       
+100.00 --     --     --     100.00 PMPADDR6       
+100.00 --     --     --     100.00 PMPADDR7       
+100.00 --     --     --     100.00 PMPADDR8       
+100.00 --     --     --     100.00 PMPADDR9       
+100.00 --     --     --     100.00 PMPADDR10      
+100.00 --     --     --     100.00 PMPADDR11      
+100.00 --     --     --     100.00 PMPADDR12      
+100.00 --     --     --     100.00 PMPADDR13      
+100.00 --     --     --     100.00 PMPADDR14      
+100.00 --     --     --     100.00 PMPADDR15      
+100.00 --     --     --     100.00 PMPADDR16      
+100.00 --     --     --     100.00 PMPADDR17      
+100.00 --     --     --     100.00 PMPADDR18      
+100.00 --     --     --     100.00 PMPADDR19      
+100.00 --     --     --     100.00 PMPADDR20      
+100.00 --     --     --     100.00 PMPADDR21      
+100.00 --     --     --     100.00 PMPADDR22      
+100.00 --     --     --     100.00 PMPADDR23      
+100.00 --     --     --     100.00 PMPADDR24      
+100.00 --     --     --     100.00 PMPADDR25      
+100.00 --     --     --     100.00 PMPADDR26      
+100.00 --     --     --     100.00 PMPADDR27      
+100.00 --     --     --     100.00 PMPADDR28      
+100.00 --     --     --     100.00 PMPADDR29      
+100.00 --     --     --     100.00 PMPADDR30      
+100.00 --     --     --     100.00 PMPADDR31      
+100.00 --     --     --     100.00 PMPADDR32      
+100.00 --     --     --     100.00 PMPADDR33      
+100.00 --     --     --     100.00 PMPADDR34      
+100.00 --     --     --     100.00 PMPADDR35      
+100.00 --     --     --     100.00 PMPADDR36      
+100.00 --     --     --     100.00 PMPADDR37      
+100.00 --     --     --     100.00 PMPADDR38      
+100.00 --     --     --     100.00 PMPADDR39      
+100.00 --     --     --     100.00 PMPADDR40      
+100.00 --     --     --     100.00 PMPADDR41      
+100.00 --     --     --     100.00 PMPADDR42      
+100.00 --     --     --     100.00 PMPADDR43      
+100.00 --     --     --     100.00 PMPADDR44      
+100.00 --     --     --     100.00 PMPADDR45      
+100.00 --     --     --     100.00 PMPADDR46      
+100.00 --     --     --     100.00 PMPADDR47      
+100.00 --     --     --     100.00 PMPADDR48      
+100.00 --     --     --     100.00 PMPADDR49      
+100.00 --     --     --     100.00 PMPADDR50      
+100.00 --     --     --     100.00 PMPADDR51      
+100.00 --     --     --     100.00 PMPADDR52      
+100.00 --     --     --     100.00 PMPADDR53      
+100.00 --     --     --     100.00 PMPADDR54      
+100.00 --     --     --     100.00 PMPADDR55      
+100.00 --     --     --     100.00 PMPADDR56      
+100.00 --     --     --     100.00 PMPADDR57      
+100.00 --     --     --     100.00 PMPADDR58      
+100.00 --     --     --     100.00 PMPADDR59      
+100.00 --     --     --     100.00 PMPADDR60      
+100.00 --     --     --     100.00 PMPADDR61      
+100.00 --     --     --     100.00 PMPADDR62      
+100.00 --     --     --     100.00 PMPADDR63      
+100.00 --     --     --     100.00 MCYCLE         
+100.00 --     --     --     100.00 MINSTRET       
+100.00 --     --     --     100.00 MHPMCOUNTER3   
+100.00 --     --     --     100.00 MHPMCOUNTER4   
+100.00 --     --     --     100.00 MHPMCOUNTER5   
+100.00 --     --     --     100.00 MHPMCOUNTER6   
+100.00 --     --     --     100.00 MHPMCOUNTER7   
+100.00 --     --     --     100.00 MHPMCOUNTER8   
+100.00 --     --     --     100.00 MHPMCOUNTER9   
+100.00 --     --     --     100.00 MHPMCOUNTER10  
+100.00 --     --     --     100.00 MHPMCOUNTER11  
+100.00 --     --     --     100.00 MHPMCOUNTER12  
+100.00 --     --     --     100.00 MHPMCOUNTER13  
+100.00 --     --     --     100.00 MHPMCOUNTER14  
+100.00 --     --     --     100.00 MHPMCOUNTER15  
+100.00 --     --     --     100.00 MHPMCOUNTER16  
+100.00 --     --     --     100.00 MHPMCOUNTER17  
+100.00 --     --     --     100.00 MHPMCOUNTER18  
+100.00 --     --     --     100.00 MHPMCOUNTER19  
+100.00 --     --     --     100.00 MHPMCOUNTER20  
+100.00 --     --     --     100.00 MHPMCOUNTER21  
+100.00 --     --     --     100.00 MHPMCOUNTER22  
+100.00 --     --     --     100.00 MHPMCOUNTER23  
+100.00 --     --     --     100.00 MHPMCOUNTER24  
+100.00 --     --     --     100.00 MHPMCOUNTER25  
+100.00 --     --     --     100.00 MHPMCOUNTER26  
+100.00 --     --     --     100.00 MHPMCOUNTER27  
+100.00 --     --     --     100.00 MHPMCOUNTER28  
+100.00 --     --     --     100.00 MHPMCOUNTER29  
+100.00 --     --     --     100.00 MHPMCOUNTER30  
+100.00 --     --     --     100.00 MHPMCOUNTER31  
+100.00 --     --     --     100.00 MCYCLEH        
+100.00 --     --     --     100.00 MINSTRETH      
+100.00 --     --     --     100.00 MHPMCOUNTER3H  
+100.00 --     --     --     100.00 MHPMCOUNTER4H  
+100.00 --     --     --     100.00 MHPMCOUNTER5H  
+100.00 --     --     --     100.00 MHPMCOUNTER6H  
+100.00 --     --     --     100.00 MHPMCOUNTER7H  
+100.00 --     --     --     100.00 MHPMCOUNTER8H  
+100.00 --     --     --     100.00 MHPMCOUNTER9H  
+100.00 --     --     --     100.00 MHPMCOUNTER10H 
+100.00 --     --     --     100.00 MHPMCOUNTER11H 
+100.00 --     --     --     100.00 MHPMCOUNTER12H 
+100.00 --     --     --     100.00 MHPMCOUNTER13H 
+100.00 --     --     --     100.00 MHPMCOUNTER14H 
+100.00 --     --     --     100.00 MHPMCOUNTER15H 
+100.00 --     --     --     100.00 MHPMCOUNTER16H 
+100.00 --     --     --     100.00 MHPMCOUNTER17H 
+100.00 --     --     --     100.00 MHPMCOUNTER18H 
+100.00 --     --     --     100.00 MHPMCOUNTER19H 
+100.00 --     --     --     100.00 MHPMCOUNTER20H 
+100.00 --     --     --     100.00 MHPMCOUNTER21H 
+100.00 --     --     --     100.00 MHPMCOUNTER22H 
+100.00 --     --     --     100.00 MHPMCOUNTER23H 
+100.00 --     --     --     100.00 MHPMCOUNTER24H 
+100.00 --     --     --     100.00 MHPMCOUNTER25H 
+100.00 --     --     --     100.00 MHPMCOUNTER26H 
+100.00 --     --     --     100.00 MHPMCOUNTER27H 
+100.00 --     --     --     100.00 MHPMCOUNTER28H 
+100.00 --     --     --     100.00 MHPMCOUNTER29H 
+100.00 --     --     --     100.00 MHPMCOUNTER30H 
+100.00 --     --     --     100.00 MHPMCOUNTER31H 
+100.00 --     --     --     100.00 MVENDORID      
+100.00 --     --     --     100.00 MARCHID        
+100.00 --     --     --     100.00 MIMPID         
+100.00 --     --     --     100.00 MHARTID        
+100.00 --     --     --     100.00 MCONFIGPTR     
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+--     --     --     --     --     
+
+
+

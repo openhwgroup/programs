@@ -1,0 +1,1621 @@
+jobs:
+- category: Basic
+  description: Short tests to challenge most architectures with most testbenchs configurations
+  job_end_at: 1745359626
+  job_id: '54344'
+  job_stage_name: light tests
+  job_started_at: 1745359494
+  label: 1/1
+  metrics:
+  - columns:
+    - col_type: text
+      title: TARGET
+    - col_type: text
+      title: ISA
+    - col_type: text
+      title: TEST
+    - col_type: text
+      title: TEST LIST
+    - col_type: text
+      title: SIMULATOR
+    - col_type: text
+      title: MISMATCHES
+    - col_type: log
+      title: OUTPUT
+    - col_type: log
+      title: TANDEM REPORT
+    - col_type: log
+      title: TB LOGS
+    - col_type: log
+      title: DISASSEMBLY
+    display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - cv32a65x
+      - rv32imc_zba_zbb_zbs_zbc_zicsr
+      - hello_world
+      - custom
+      - vcs-uvm
+      - '0'
+      - logs/54344/artifacts/logs/logfile.log
+      - logs/54344/artifacts/logs/hello_world.cv32a65x.log.yaml
+      - logs/54344/artifacts/logs/hello_world.cv32a65x.log.iss
+      - logs/54344/artifacts/logs/hello_world.cv32a65x.log.csv
+      label: PASS
+      status: pass
+  sort_index: '0'
+  status: pass
+  title: Smoke test vcs-uvm cv32a65x
+  token: YC1745359626617443
+- category: Basic
+  description: Short tests to challenge most architectures with most testbenchs configurations
+  job_end_at: 1745359625
+  job_id: '54345'
+  job_stage_name: light tests
+  job_started_at: 1745359495
+  label: 1/1
+  metrics:
+  - columns:
+    - col_type: text
+      title: TARGET
+    - col_type: text
+      title: ISA
+    - col_type: text
+      title: TEST
+    - col_type: text
+      title: TEST LIST
+    - col_type: text
+      title: SIMULATOR
+    - col_type: text
+      title: MISMATCHES
+    - col_type: log
+      title: OUTPUT
+    - col_type: log
+      title: TANDEM REPORT
+    - col_type: log
+      title: TB LOGS
+    - col_type: log
+      title: DISASSEMBLY
+    display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbs_zbc_zicsr
+      - hello_world
+      - custom
+      - vcs-uvm
+      - '0'
+      - logs/54345/artifacts/logs/logfile.log
+      - logs/54345/artifacts/logs/hello_world.cv32a60x.log.yaml
+      - logs/54345/artifacts/logs/hello_world.cv32a60x.log.iss
+      - logs/54345/artifacts/logs/hello_world.cv32a60x.log.csv
+      label: PASS
+      status: pass
+  sort_index: '0'
+  status: pass
+  title: Smoke test vcs-uvm cv32a60x
+  token: YC1745359625733683
+- category: Basic
+  description: Short generated tests to challenge the CVA6-DV on STEP1 configuration
+  job_end_at: 1745359802
+  job_id: '54346'
+  job_stage_name: light tests
+  job_started_at: 1745359495
+  label: 3/3
+  metrics:
+  - columns:
+    - col_type: text
+      title: TARGET
+    - col_type: text
+      title: ISA
+    - col_type: text
+      title: TEST
+    - col_type: text
+      title: TEST LIST
+    - col_type: text
+      title: SIMULATOR
+    - col_type: text
+      title: MISMATCHES
+    - col_type: log
+      title: OUTPUT
+    - col_type: log
+      title: TANDEM REPORT
+    - col_type: log
+      title: TB LOGS
+    - col_type: log
+      title: DISASSEMBLY
+    display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_arithmetic_basic_test_comp
+      - generated tests
+      - vcs-uvm
+      - '0'
+      - logs/54346/artifacts/logs/logfile.log
+      - logs/54346/artifacts/logs/riscv_arithmetic_basic_test_comp_0.cv32a60x.log.yaml
+      - logs/54346/artifacts/logs/riscv_arithmetic_basic_test_comp_0.cv32a60x.log.iss
+      - logs/54346/artifacts/logs/riscv_arithmetic_basic_test_comp_0.cv32a60x.log.csv
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_load_store_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      - logs/54346/artifacts/logs/logfile.log
+      - logs/54346/artifacts/logs/riscv_load_store_test_0.cv32a60x.log.yaml
+      - logs/54346/artifacts/logs/riscv_load_store_test_0.cv32a60x.log.iss
+      - logs/54346/artifacts/logs/riscv_load_store_test_0.cv32a60x.log.csv
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_unaligned_load_store_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      - logs/54346/artifacts/logs/logfile.log
+      - logs/54346/artifacts/logs/riscv_unaligned_load_store_test_0.cv32a60x.log.yaml
+      - logs/54346/artifacts/logs/riscv_unaligned_load_store_test_0.cv32a60x.log.iss
+      - logs/54346/artifacts/logs/riscv_unaligned_load_store_test_0.cv32a60x.log.csv
+      label: PASS
+      status: pass
+  sort_index: '0'
+  status: pass
+  title: Smoke Generated test vcs-uvm
+  token: YC1745359802023774
+- category: Basic
+  description: Short tests to challenge target configurations
+  job_end_at: 1745359623
+  job_id: '54347'
+  job_stage_name: light tests
+  job_started_at: 1745359495
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '1'
+  status: pass
+  title: HW config vcs-uvm cv32a65x
+  token: YC1745359623988712
+- category: Performance
+  description: Performance indicator
+  job_end_at: 1745359953
+  job_id: '54348'
+  job_stage_name: heavy tests
+  job_started_at: 1745359806
+  label: 16 kCycles
+  metrics:
+  - display_name: Performance results
+    sort_index: 1
+    status: pass
+    type: table
+    value:
+    - col:
+      - cycles
+      - 16497
+    - col:
+      - Dhrystone/MHz
+      - 1212.3416378735528
+    - col:
+      - DMIPS/MHz
+      - 0.6900066237185845
+  sort_index: '5'
+  status: pass
+  title: smoke-bench cv32a60x
+  token: YC1745359953521045
+- category: Performance
+  description: Performance indicator
+  job_end_at: 1745359972
+  job_id: '54349'
+  job_stage_name: heavy tests
+  job_started_at: 1745359807
+  label: 15 kCycles
+  metrics:
+  - display_name: Performance results
+    sort_index: 1
+    status: pass
+    type: table
+    value:
+    - col:
+      - cycles
+      - 15236
+    - col:
+      - Dhrystone/MHz
+      - 1312.6804935678656
+    - col:
+      - DMIPS/MHz
+      - 0.7471146804597983
+  sort_index: '5'
+  status: pass
+  title: smoke-bench cv32a65x
+  token: YC1745359972077542
+- category: Lint Check
+  description: Report lint errors and warnings detected by Spyglass
+  job_end_at: 1745360097
+  job_id: '54350'
+  job_stage_name: heavy tests
+  job_started_at: 1745359807
+  label: PASS
+  metrics:
+  - columns:
+    - col_type: text
+      title: SEVERITY
+    - col_type: text
+      title: RULE NAME
+    - col_type: text
+      title: COUNT
+    - col_type: text
+      title: SHORT HELP
+    - col_type: text
+      title: DIFF
+    display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - WARNING
+      - STARC05-1.3.1.3
+      - '1'
+      - 'Asynchronous reset/preset signals must  not be used as non-reset/preset or  synchronous
+        reset/preset signals '
+      - SAME
+      label: PASS
+      status: pass
+    - col:
+      - WARNING
+      - W287b
+      - '21'
+      - 'Output port of an instance is not  connected '
+      - SAME
+      label: PASS
+      status: pass
+    - col:
+      - WARNING
+      - W415a
+      - '5'
+      - 'Signal may be multiply assigned (beside  initialization) in the same scope. '
+      - SAME
+      label: PASS
+      status: pass
+    - col:
+      - INFO
+      - HdlLibDuCheck_03
+      - '1'
+      - 'Reports that ''hdllibdu'' is not required  if no precompiled design unit
+        is   used  in current run. '
+      - SAME
+      label: PASS
+      status: pass
+    - col:
+      - INFO
+      - DetectTopDesignUnits
+      - '1'
+      - 'Identify the top-level design units in  user design. '
+      - SAME
+      label: PASS
+      status: pass
+    - col:
+      - INFO
+      - ElabSummary
+      - '1'
+      - 'Generates Elaborated design units  Summary data '
+      - SAME
+      label: PASS
+      status: pass
+  sort_index: '5'
+  status: pass
+  title: Report Spyglass Lint Errors
+  token: YC1745360097062965
+- category: Basic
+  description: Short tests to challenge most CoreV-X-Interface
+  job_end_at: 1745359962
+  job_id: '54351'
+  job_stage_name: heavy tests
+  job_started_at: 1745359808
+  label: 1/1
+  metrics:
+  - columns:
+    - col_type: text
+      title: TARGET
+    - col_type: text
+      title: ISA
+    - col_type: text
+      title: TEST
+    - col_type: text
+      title: TEST LIST
+    - col_type: text
+      title: SIMULATOR
+    - col_type: text
+      title: MISMATCHES
+    - col_type: log
+      title: OUTPUT
+    - col_type: log
+      title: TANDEM REPORT
+    - col_type: log
+      title: TB LOGS
+    - col_type: log
+      title: DISASSEMBLY
+    display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - cv32a65x
+      - rv32imc_zba_zbb_zbs_zbc_zicsr
+      - cvxif_add_nop
+      - cvxif
+      - vcs-uvm
+      - '0'
+      - logs/54351/artifacts/logs/logfile.log
+      - logs/54351/artifacts/logs/cvxif_add_nop.cv32a65x.log.yaml
+      - logs/54351/artifacts/logs/cvxif_add_nop.cv32a65x.log.iss
+      - logs/54351/artifacts/logs/cvxif_add_nop.cv32a65x.log.csv
+      label: PASS
+      status: pass
+  sort_index: '5'
+  status: pass
+  title: CVXIF non-regression test vcs-uvm
+  token: YC1745359962588153
+- category: Basic
+  description: Short tests to challenge most CoreV-X-Interface
+  job_end_at: 1745359938
+  job_id: '54352'
+  job_stage_name: heavy tests
+  job_started_at: 1745359808
+  label: 1/1
+  metrics:
+  - columns:
+    - col_type: text
+      title: TARGET
+    - col_type: text
+      title: ISA
+    - col_type: text
+      title: TEST
+    - col_type: text
+      title: TEST LIST
+    - col_type: text
+      title: SIMULATOR
+    - col_type: text
+      title: MISMATCHES
+    - col_type: log
+      title: OUTPUT
+    - col_type: log
+      title: TANDEM REPORT
+    - col_type: log
+      title: TB LOGS
+    - col_type: log
+      title: DISASSEMBLY
+    display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbs_zbc_zicsr
+      - cvxif_add_nop
+      - cvxif
+      - vcs-uvm
+      - '0'
+      - logs/54352/artifacts/logs/logfile.log
+      - logs/54352/artifacts/logs/cvxif_add_nop.cv32a60x.log.yaml
+      - logs/54352/artifacts/logs/cvxif_add_nop.cv32a60x.log.iss
+      - logs/54352/artifacts/logs/cvxif_add_nop.cv32a60x.log.csv
+      label: PASS
+      status: pass
+  sort_index: '5'
+  status: pass
+  title: CVXIF non-regression test vcs-uvm
+  token: YC1745359938087338
+- category: Performance
+  description: Performance indicator
+  job_end_at: 1745359945
+  job_id: '54354'
+  job_stage_name: heavy tests
+  job_started_at: 1745359808
+  label: 9 kCycles
+  metrics:
+  - display_name: Performance results
+    sort_index: 1
+    status: pass
+    type: table
+    value:
+    - col:
+      - cycles
+      - 9304
+    - col:
+      - Dhrystone/MHz
+      - 2149.6130696474634
+    - col:
+      - DMIPS/MHz
+      - 1.2234564995147772
+  sort_index: '5'
+  status: pass
+  title: benchmark dhrystone single
+  token: YC1745359945776695
+- category: Performance
+  description: Performance indicator
+  job_end_at: 1745359960
+  job_id: '54355'
+  job_stage_name: heavy tests
+  job_started_at: 1745359809
+  label: 8 kCycles
+  metrics:
+  - display_name: Performance results
+    sort_index: 1
+    status: pass
+    type: table
+    value:
+    - col:
+      - cycles
+      - 8465
+    - col:
+      - Dhrystone/MHz
+      - 2362.6698168930893
+    - col:
+      - DMIPS/MHz
+      - 1.344718165562373
+  sort_index: '5'
+  status: pass
+  title: benchmark dhrystone dual
+  token: YC1745359960227012
+- category: Performance
+  description: Performance indicator
+  job_end_at: 1745360817
+  job_id: '54356'
+  job_stage_name: heavy tests
+  job_started_at: 1745359809
+  label: 1292 kCycles
+  metrics:
+  - display_name: Performance results
+    sort_index: 1
+    status: pass
+    type: table
+    value:
+    - col:
+      - cycles
+      - 1292974
+    - col:
+      - CoreMark/MHz
+      - 3.0936430276246853
+  sort_index: '5'
+  status: pass
+  title: benchmark coremark single
+  token: YC1745360817394418
+- category: Performance
+  description: Performance indicator
+  job_end_at: 1745360902
+  job_id: '54357'
+  job_stage_name: heavy tests
+  job_started_at: 1745359810
+  label: 1195 kCycles
+  metrics:
+  - display_name: Performance results
+    sort_index: 1
+    status: pass
+    type: table
+    value:
+    - col:
+      - cycles
+      - 1195487
+    - col:
+      - CoreMark/MHz
+      - 3.3459167686474216
+  sort_index: '5'
+  status: pass
+  title: benchmark coremark dual
+  token: YC1745360902818049
+- category: Performance
+  description: Performance indicator
+  job_end_at: 1745359981
+  job_id: '54358'
+  job_stage_name: heavy tests
+  job_started_at: 1745359810
+  label: 19 kCycles
+  metrics:
+  - display_name: Performance results
+    sort_index: 1
+    status: pass
+    type: table
+    value:
+    - col:
+      - cycles
+      - 19785
+  sort_index: '5'
+  status: pass
+  title: benchmark ntt single
+  token: YC1745359981552914
+- category: Performance
+  description: Performance indicator
+  job_end_at: 1745359983
+  job_id: '54359'
+  job_stage_name: heavy tests
+  job_started_at: 1745359810
+  label: 15 kCycles
+  metrics:
+  - display_name: Performance results
+    sort_index: 1
+    status: pass
+    type: table
+    value:
+    - col:
+      - cycles
+      - 15847
+  sort_index: '5'
+  status: pass
+  title: benchmark ntt dual
+  token: YC1745359983465875
+- category: Code Coverage
+  description: Generate Hazard register (RAW) Arithmetic tests using CVA6-DV
+  job_end_at: 1745377828
+  job_id: '54361'
+  job_stage_name: heavy tests
+  job_started_at: 1745359811
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '11'
+  status: pass
+  title: Generated Hazard Arithmetic tests
+  token: YC1745377828946132
+- category: Code Coverage
+  description: Generate Random Illegal instruction tests using CVA6-DV
+  job_end_at: 1745374633
+  job_id: '54362'
+  job_stage_name: heavy tests
+  job_started_at: 1745359811
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '11'
+  status: pass
+  title: Generated Illegal instruction tests
+  token: YC1745374633805499
+- category: Code Coverage
+  description: Generate Random Arithmetic Jump tests using CVA6-DV
+  job_end_at: 1745372126
+  job_id: '54364'
+  job_stage_name: heavy tests
+  job_started_at: 1745359812
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '11'
+  status: pass
+  title: Generated Jump tests
+  token: YC1745372126470991
+- category: Code Coverage
+  description: Generate Random tests for cvxif using CVA6-DV
+  job_end_at: 1745373011
+  job_id: '54369'
+  job_stage_name: heavy tests
+  job_started_at: 1745359949
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '12'
+  status: pass
+  title: Generated Random xif tests
+  token: YC1745373011912729
+- category: Code Coverage
+  description: Generate Random Perf counter CSRs tests using CVA6-DV
+  job_end_at: 1745374424
+  job_id: '54366'
+  job_stage_name: heavy tests
+  job_started_at: 1745359814
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '16'
+  status: pass
+  title: Generated Perf counter CSRs tests
+  token: YC1745374424268076
+- category: Code Coverage
+  description: Generate Random Arithmetic & Load & Store & Branch tests with interrupts
+    using CVA6-DV
+  job_end_at: 1745374130
+  job_id: '54367'
+  job_stage_name: heavy tests
+  job_started_at: 1745359814
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '18'
+  status: pass
+  title: Generated Arithmetic & Load & Store & Branch tests with interrupts
+  token: YC1745374130479009
+- category: Code Coverage
+  description: Generate Random ecall & ebreak & Illegal instructions & CSR tests with
+    interrupts using CVA6-DV
+  job_end_at: 1745371080
+  job_id: '54368'
+  job_stage_name: heavy tests
+  job_started_at: 1745359941
+  label: 67/75
+  metrics:
+  - columns:
+    - col_type: text
+      title: TARGET
+    - col_type: text
+      title: ISA
+    - col_type: text
+      title: TEST
+    - col_type: text
+      title: TEST LIST
+    - col_type: text
+      title: SIMULATOR
+    - col_type: text
+      title: MISMATCHES
+    display_name: ''
+    sort_index: 1
+    status: fail
+    type: table_status
+    value:
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_ecall_ebreak_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - Not found
+      label: FAIL
+      status: fail
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - Not found
+      label: FAIL
+      status: fail
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - Not found
+      label: FAIL
+      status: fail
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_illegal_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '5'
+      label: FAIL
+      status: fail
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '5'
+      label: FAIL
+      status: fail
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '5'
+      label: FAIL
+      status: fail
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '5'
+      label: FAIL
+      status: fail
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '5'
+      label: FAIL
+      status: fail
+    - col:
+      - cv32a60x
+      - rv32imc_zba_zbb_zbc_zbs_zcb_zicsr
+      - riscv_interrupt_csr_test
+      - generated tests
+      - vcs-uvm
+      - '0'
+      label: PASS
+      status: pass
+  sort_index: '18'
+  status: fail
+  title: Generated ecall & ebreak & Illegal instructions & CSR tests with interrupts
+  token: YC1745371080122973
+- category: Functional Coverage
+  description: Report functional coverage
+  job_end_at: 1745384743
+  job_id: '54375'
+  job_stage_name: backend tests
+  job_started_at: 1745384168
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '14'
+  status: pass
+  title: Report functional coverage
+  token: YC1745384743362464
+- category: Code Coverage
+  description: Generate Random tests with only cvxif instructions using CVA6-DV
+  job_end_at: 1745365884
+  job_id: '54370'
+  job_stage_name: heavy tests
+  job_started_at: 1745359956
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '12'
+  status: pass
+  title: Generated Random full xif tests
+  token: YC1745365884379583
+- category: Code Coverage
+  description: Generate Random PMP CSRs tests using CVA6-DV
+  job_end_at: 1745374458
+  job_id: '54365'
+  job_stage_name: heavy tests
+  job_started_at: 1745359813
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '16'
+  status: pass
+  title: Generated PMP CSRs tests
+  token: YC1745374458782747
+- category: Functional Coverage
+  description: Execute directed tests to improve functional coverage of ISA
+  job_end_at: 1745360704
+  job_id: '54371'
+  job_stage_name: heavy tests
+  job_started_at: 1745359961
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '13'
+  status: pass
+  title: Directed tests
+  token: YC1745360704106544
+- category: Code Coverage
+  description: Report merge coverage of generated tests
+  job_end_at: 1745384499
+  job_id: '54374'
+  job_stage_name: backend tests
+  job_started_at: 1745384168
+  label: 99%
+  metrics:
+  - display_name: Coverage results
+    sort_index: 1
+    status: pass
+    type: table
+    value:
+    - col:
+      - COMPONENT
+      - SCORE
+      - LINE
+      - COND
+    - col:
+      - i_cva6_pipeline
+      - 99.06
+      - 99.79
+      - 98.34
+    - col:
+      - commit_stage_i
+      - 100.0
+      - 100.0
+      - 100.0
+    - col:
+      - controller_i
+      - 100.0
+      - 100.0
+      - 100.0
+    - col:
+      - csr_regfile_i
+      - 98.78
+      - 100.0
+      - 97.56
+    - col:
+      - ex_stage_i
+      - 99.81
+      - 99.81
+      - 99.81
+    - col:
+      - i_frontend
+      - 99.54
+      - 100.0
+      - 99.09
+    - col:
+      - id_stage_i
+      - 99.12
+      - 99.42
+      - 98.81
+    - col:
+      - issue_stage_i
+      - 97.36
+      - 99.62
+      - 95.1
+  sort_index: '14'
+  status: pass
+  title: Report merge coverage
+  token: YC1745384499037843
+- category: CSR tests
+  description: Execute CSRs directed tests for CV32A65X
+  job_end_at: 1745360546
+  job_id: '54372'
+  job_stage_name: heavy tests
+  job_started_at: 1745359965
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '15'
+  status: pass
+  title: CSRs Directed tests
+  token: YC1745360546166686
+- category: Code Coverage
+  description: Generate Random Arithmetic tests using CVA6-DV
+  job_end_at: 1745378685
+  job_id: '54360'
+  job_stage_name: heavy tests
+  job_started_at: 1745359810
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '11'
+  status: pass
+  title: Generated Random Arithmetic tests
+  token: YC1745378685463389
+- category: Code Coverage
+  description: Generate Random Load_store tests using CVA6-DV
+  job_end_at: 1745384156
+  job_id: '54363'
+  job_stage_name: heavy tests
+  job_started_at: 1745359812
+  label: PASS
+  metrics:
+  - display_name: ''
+    sort_index: 1
+    status: pass
+    type: table_status
+    value:
+    - col:
+      - Job completed without error. No metric extraction is configured
+      label: PASS
+      status: pass
+  sort_index: '11'
+  status: pass
+  title: Generated Random Load_store tests
+  token: YC1745384156529537
+label: FAIL
+runtime: 25386
+status: fail
+timestamp: 1745359387
+token: YC1745359387
+workflow_action: schedule
+workflow_repo: cva6
+workflow_uid: '1699'

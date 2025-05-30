@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Group :: uvme_cva6_pkg::cg_interrupt::SHAPE{Guard_ON(cp_interrupt.IGN_SOFTWARE_INTERRUPT,cp_interrupt.IGN_S_IRQ,cp_interrupt.IGN_VS_IRQ,cp_msie.IGN_MSIE,cp_msip.IGN_MSIP)}</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Group : uvme_cva6_pkg::cg_interrupt::SHAPE{Guard_ON(cp_interrupt.IGN_SOFTWARE_INTERRUPT,cp_interrupt.IGN_S_IRQ,cp_interrupt.IGN_VS_IRQ,cp_msie.IGN_MSIE,cp_msip.IGN_MSIP)}</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Group : <a href="#"  onclick="showContent('uvme_cva6_pkg::cg_interrupt::SHAPE{Guard_ON(cp_interrupt.IGN_SOFTWARE_INTERRUPT,cp_interrupt.IGN_S_IRQ,cp_interrupt.IGN_VS_IRQ,cp_msie.IGN_MSIE,cp_msip.IGN_MSIP)}')">uvme_cva6_pkg::cg_interrupt::SHAPE{Guard_ON(cp_interrupt.IGN_SOFTWARE_INTERRUPT,cp_interrupt.IGN_S_IRQ,cp_interrupt.IGN_VS_IRQ,cp_msie.IGN_MSIE,cp_msip.IGN_MSIP)}</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td><b>SCORE</b></td><td>INSTANCES</td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>PER INSTANCE</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="s9 cl rt"> 98.29</td>
+<td class="s9 cl rt"> 98.29</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/8/riscv/nonsecure/cva6/verif/env/uvme/cov/uvme_interrupt_covg.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/8/riscv/nonsecure/cva6/verif/env/uvme/cov/uvme_interrupt_covg.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>1 Instances:</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="wht cl wordwrap"><a href="grp142.html#inst_tag_uvme_cva6_pkg.interrupt_cg"  onclick="showContent('uvme_cva6_pkg.interrupt_cg')">uvme_cva6_pkg.interrupt_cg</a></td>
+<td class="s9 cl rt"> 98.29</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+</div>
+</div>
+<div name='uvme_cva6_pkg.interrupt_cg'>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg"></a>
+<hr>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Group Instance : <a href="groups.html#tag_uvme_cva6_pkg.interrupt_cg" >uvme_cva6_pkg.interrupt_cg</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
+<td class="s9 cl rt"> 98.29</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+</tr></table><br clear=all>
+<br clear=all>
+</div>
+<hr>
+<br clear=all>
+<span class=repname>Summary for Group Instance   uvme_cva6_pkg.interrupt_cg
+</span>
+<br clear=all>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td><a href="#var_tbl_uvme_cva6_pkg.interrupt_cg" >Variables</a></td>
+<td class="rt">21</td>
+<td class="rt">0</td>
+<td class="rt">21</td>
+<td class="rt">100.00</td>
+</tr><tr class="s9">
+<td><a href="#crs_tbl_uvme_cva6_pkg.interrupt_cg" >Crosses</a></td>
+<td class="rt">26</td>
+<td class="rt">2</td>
+<td class="rt">24</td>
+<td class="rt">92.31 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="var_tbl_uvme_cva6_pkg.interrupt_cg">Variables for Group Instance  uvme_cva6_pkg.interrupt_cg
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">VARIABLE</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>COMMENT</td></tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_interrupt"  onclick="checkLink(this)" target="detailFrame">cp_interrupt</a></td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mstatus_mie"  onclick="checkLink(this)" target="detailFrame">cp_mstatus_mie</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="wht">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_msie"  onclick="checkLink(this)" target="detailFrame">cp_msie</a></td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mtie"  onclick="checkLink(this)" target="detailFrame">cp_mtie</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_meie"  onclick="checkLink(this)" target="detailFrame">cp_meie</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="wht">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_msip"  onclick="checkLink(this)" target="detailFrame">cp_msip</a></td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mtip"  onclick="checkLink(this)" target="detailFrame">cp_mtip</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_meip"  onclick="checkLink(this)" target="detailFrame">cp_meip</a></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_group"  onclick="checkLink(this)" target="detailFrame">cp_group</a></td>
+<td class="rt">13</td>
+<td class="rt">0</td>
+<td class="rt">13</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="crs_tbl_uvme_cva6_pkg.interrupt_cg">Crosses for Group Instance  uvme_cva6_pkg.interrupt_cg
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CROSS</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>PRINT MISSING</td><td>COMMENT</td></tr><tr class="s9">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cross_external_interrupt"  onclick="checkLink(this)" target="detailFrame">cross_external_interrupt</a></td>
+<td class="rt">13</td>
+<td class="rt">1</td>
+<td class="rt">12</td>
+<td class="rt">92.31 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s9">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cross_timer_interrupt"  onclick="checkLink(this)" target="detailFrame">cross_timer_interrupt</a></td>
+<td class="rt">13</td>
+<td class="rt">1</td>
+<td class="rt">12</td>
+<td class="rt">92.31 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="wht">
+<td><a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cross_software_interrupt"  onclick="checkLink(this)" target="detailFrame">cross_software_interrupt</a></td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='uvme_cva6_pkg.interrupt_cg'>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_interrupt"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_interrupt">Summary for Variable cp_interrupt</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">3</td>
+<td class="rt">0</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_interrupt</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>HS_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>VS_MODE_TIMER_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>VS_MODE_SOFTWARE_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>VS_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>SUPERVISOR_MODE_TIMER_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>SUPERVISOR_MODE_SOFTWARE_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>SUPERVISOR_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>MACHINE_MODE_SOFTWARE_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_VS_IRQ</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_S_IRQ</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_SOFTWARE_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">73907</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">131538</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>NO_INTERRUPT</td>
+<td class="rt">1466022</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mstatus_mie"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mstatus_mie">Summary for Variable cp_mstatus_mie</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_mstatus_mie</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>GLOBAL_INTERRUPT_ENABLE</td>
+<td class="rt">369383</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_msie"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_msie">Summary for Variable cp_msie</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="wht">
+<td>User Defined Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_msie</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>MSIE</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_MSIE</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mtie"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mtie">Summary for Variable cp_mtie</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_mtie</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>MTIE</td>
+<td class="rt">7391606</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_meie"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_meie">Summary for Variable cp_meie</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_meie</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>MEIE</td>
+<td class="rt">7394272</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_msip"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_msip">Summary for Variable cp_msip</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="wht">
+<td>User Defined Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_msip</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>MSIP</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_MSIP</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mtip"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mtip">Summary for Variable cp_mtip</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_mtip</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>MTIP</td>
+<td class="rt">5591436</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_meip"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_meip">Summary for Variable cp_meip</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for cp_meip</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>MEIP</td>
+<td class="rt">4574259</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_group"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cp_group">Summary for Variable cp_group</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>Automatically Generated Bins</td>
+<td class="rt">13</td>
+<td class="rt">0</td>
+<td class="rt">13</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Bins for cp_group</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>auto_UNKNOWN_GROUP</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>auto_MISALIGN_LOAD_GROUP</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>auto_MISALIGN_STORE_GROUP</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>auto_FENCE_I_GROUP</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>auto_ALOAD_GROUP</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>auto_ASTORE_GROUP</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>auto_AMEM_GROUP</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_FENCE_I</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_MISALIGN</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_EXT_A</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr><tr class="wht">
+<td>IGN_UNKNOWN</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto_LOAD_GROUP</td>
+<td class="rt">1386614</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_STORE_GROUP</td>
+<td class="rt">1408780</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_ALU_GROUP</td>
+<td class="rt">5553126</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_BRANCH_GROUP</td>
+<td class="rt">656309</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_JUMP_GROUP</td>
+<td class="rt">250040</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_FENCE_GROUP</td>
+<td class="rt">11209</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_RET_GROUP</td>
+<td class="rt">284980</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_WFI_GROUP</td>
+<td class="rt">3292</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_CSR_GROUP</td>
+<td class="rt">1584848</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_ENV_GROUP</td>
+<td class="rt">11214</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_MUL_GROUP</td>
+<td class="rt">31911</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_MULTI_MUL_GROUP</td>
+<td class="rt">61789</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_DIV_GROUP</td>
+<td class="rt">82992</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cross_external_interrupt"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cross_external_interrupt">Summary for Cross cross_external_interrupt</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_group cp_interrupt<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s9">
+<td>TOTAL</td>
+<td class="rt">13</td>
+<td class="rt">1</td>
+<td class="rt">12</td>
+<td class="rt">92.31 </td>
+<td class="rt">1</td>
+</tr><tr class="s9">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">13</td>
+<td class="rt">1</td>
+<td class="rt">12</td>
+<td class="rt">92.31 </td>
+<td class="rt">1</td>
+</tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_external_interrupt</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">cp_group</td><td class="alfsrt">cp_interrupt</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[auto_ENV_GROUP]</td>
+<td>[MACHINE_MODE_EXTERNAL_INTERRUPT]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_group</td><td class="alfsrt">cp_interrupt</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[auto_UNKNOWN_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT , MACHINE_MODE_TIMER_INTERRUPT , MACHINE_MODE_SOFTWARE_INTERRUPT , MACHINE_MODE_EXTERNAL_INTERRUPT , NO_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(11 bins)</td>
+</tr><tr class="wht">
+<td>[auto_LOAD_GROUP , auto_STORE_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(14 bins)</td>
+</tr><tr class="wht">
+<td>[auto_LOAD_GROUP , auto_STORE_GROUP]</td>
+<td>[MACHINE_MODE_SOFTWARE_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(2 bins)</td>
+</tr><tr class="wht">
+<td>[auto_MISALIGN_LOAD_GROUP , auto_MISALIGN_STORE_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT , MACHINE_MODE_TIMER_INTERRUPT , MACHINE_MODE_SOFTWARE_INTERRUPT , MACHINE_MODE_EXTERNAL_INTERRUPT , NO_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(22 bins)</td>
+</tr><tr class="wht">
+<td>[auto_ALU_GROUP , auto_BRANCH_GROUP , auto_JUMP_GROUP , auto_FENCE_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(28 bins)</td>
+</tr><tr class="wht">
+<td>[auto_ALU_GROUP , auto_BRANCH_GROUP , auto_JUMP_GROUP , auto_FENCE_GROUP]</td>
+<td>[MACHINE_MODE_SOFTWARE_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(4 bins)</td>
+</tr><tr class="wht">
+<td>[auto_FENCE_I_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT , MACHINE_MODE_TIMER_INTERRUPT , MACHINE_MODE_SOFTWARE_INTERRUPT , MACHINE_MODE_EXTERNAL_INTERRUPT , NO_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(11 bins)</td>
+</tr><tr class="wht">
+<td>[auto_RET_GROUP , auto_WFI_GROUP , auto_CSR_GROUP , auto_ENV_GROUP , auto_MUL_GROUP , auto_MULTI_MUL_GROUP , auto_DIV_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(49 bins)</td>
+</tr><tr class="wht">
+<td>[auto_RET_GROUP , auto_WFI_GROUP , auto_CSR_GROUP , auto_ENV_GROUP , auto_MUL_GROUP , auto_MULTI_MUL_GROUP , auto_DIV_GROUP]</td>
+<td>[MACHINE_MODE_SOFTWARE_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(7 bins)</td>
+</tr><tr class="wht">
+<td>[auto_ALOAD_GROUP , auto_ASTORE_GROUP , auto_AMEM_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT , MACHINE_MODE_TIMER_INTERRUPT , MACHINE_MODE_SOFTWARE_INTERRUPT , MACHINE_MODE_EXTERNAL_INTERRUPT , NO_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(33 bins)</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_group</td><td class="alfsrt">cp_interrupt</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto_LOAD_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">175</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_STORE_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">105</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_ALU_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">4648</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_BRANCH_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">753</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_JUMP_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">375</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_FENCE_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">525</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_RET_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">123435</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_WFI_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">147</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_CSR_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">22</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_MUL_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">231</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_MULTI_MUL_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">478</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_DIV_GROUP</td>
+<td>MACHINE_MODE_EXTERNAL_INTERRUPT</td>
+<td class="rt">644</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_external_interrupt</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>NO_EXTERNAL_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cross_timer_interrupt"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cross_timer_interrupt">Summary for Cross cross_timer_interrupt</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_group cp_interrupt<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s9">
+<td>TOTAL</td>
+<td class="rt">13</td>
+<td class="rt">1</td>
+<td class="rt">12</td>
+<td class="rt">92.31 </td>
+<td class="rt">1</td>
+</tr><tr class="s9">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">13</td>
+<td class="rt">1</td>
+<td class="rt">12</td>
+<td class="rt">92.31 </td>
+<td class="rt">1</td>
+</tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for cross_timer_interrupt</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">cp_group</td><td class="alfsrt">cp_interrupt</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[auto_ENV_GROUP]</td>
+<td>[MACHINE_MODE_TIMER_INTERRUPT]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_group</td><td class="alfsrt">cp_interrupt</td><td>COUNT</td><td class="alfsrt">STATUS</td><th nowrap width=80></th></tr><tr class="wht">
+<td>[auto_UNKNOWN_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT , MACHINE_MODE_TIMER_INTERRUPT , MACHINE_MODE_SOFTWARE_INTERRUPT , MACHINE_MODE_EXTERNAL_INTERRUPT , NO_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(11 bins)</td>
+</tr><tr class="wht">
+<td>[auto_LOAD_GROUP , auto_STORE_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(14 bins)</td>
+</tr><tr class="wht">
+<td>[auto_LOAD_GROUP , auto_STORE_GROUP]</td>
+<td>[MACHINE_MODE_SOFTWARE_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(2 bins)</td>
+</tr><tr class="wht">
+<td>[auto_MISALIGN_LOAD_GROUP , auto_MISALIGN_STORE_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT , MACHINE_MODE_TIMER_INTERRUPT , MACHINE_MODE_SOFTWARE_INTERRUPT , MACHINE_MODE_EXTERNAL_INTERRUPT , NO_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(22 bins)</td>
+</tr><tr class="wht">
+<td>[auto_ALU_GROUP , auto_BRANCH_GROUP , auto_JUMP_GROUP , auto_FENCE_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(28 bins)</td>
+</tr><tr class="wht">
+<td>[auto_ALU_GROUP , auto_BRANCH_GROUP , auto_JUMP_GROUP , auto_FENCE_GROUP]</td>
+<td>[MACHINE_MODE_SOFTWARE_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(4 bins)</td>
+</tr><tr class="wht">
+<td>[auto_FENCE_I_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT , MACHINE_MODE_TIMER_INTERRUPT , MACHINE_MODE_SOFTWARE_INTERRUPT , MACHINE_MODE_EXTERNAL_INTERRUPT , NO_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(11 bins)</td>
+</tr><tr class="wht">
+<td>[auto_RET_GROUP , auto_WFI_GROUP , auto_CSR_GROUP , auto_ENV_GROUP , auto_MUL_GROUP , auto_MULTI_MUL_GROUP , auto_DIV_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(49 bins)</td>
+</tr><tr class="wht">
+<td>[auto_RET_GROUP , auto_WFI_GROUP , auto_CSR_GROUP , auto_ENV_GROUP , auto_MUL_GROUP , auto_MULTI_MUL_GROUP , auto_DIV_GROUP]</td>
+<td>[MACHINE_MODE_SOFTWARE_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(7 bins)</td>
+</tr><tr class="wht">
+<td>[auto_ALOAD_GROUP , auto_ASTORE_GROUP , auto_AMEM_GROUP]</td>
+<td>[HS_MODE_EXTERNAL_INTERRUPT , VS_MODE_TIMER_INTERRUPT , VS_MODE_SOFTWARE_INTERRUPT , VS_MODE_EXTERNAL_INTERRUPT , SUPERVISOR_MODE_TIMER_INTERRUPT , SUPERVISOR_MODE_SOFTWARE_INTERRUPT , SUPERVISOR_MODE_EXTERNAL_INTERRUPT , MACHINE_MODE_TIMER_INTERRUPT , MACHINE_MODE_SOFTWARE_INTERRUPT , MACHINE_MODE_EXTERNAL_INTERRUPT , NO_INTERRUPT]</td>
+<td align=center nowrap>--</td>
+<td>Excluded</td>
+<td>(33 bins)</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">cp_group</td><td class="alfsrt">cp_interrupt</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>auto_LOAD_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">152</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_STORE_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">79</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_ALU_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">4187</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_BRANCH_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">654</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_JUMP_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">320</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_FENCE_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">417</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_RET_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">66735</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_WFI_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">156</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_CSR_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_MUL_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">197</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_MULTI_MUL_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">425</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>auto_DIV_GROUP</td>
+<td>MACHINE_MODE_TIMER_INTERRUPT</td>
+<td class="rt">574</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_timer_interrupt</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>NO_TIMER_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_uvme_cva6_pkg.interrupt_cg.cross_software_interrupt"></a><span class="repname" id="inst_tag_uvme_cva6_pkg.interrupt_cg.cross_software_interrupt">Summary for Cross cross_software_interrupt</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: cp_group cp_interrupt<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="wht">
+<td>User Defined Cross Bins</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for cross_software_interrupt</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>NO_SOFTWARE_INTERRUPT</td>
+<td class="rt">0</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="uvme_cva6_pkg.interrupt_cg">
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_interrupt">Variable : cp_interrupt</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mstatus_mie">Variable : cp_mstatus_mie</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_msie">Variable : cp_msie</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mtie">Variable : cp_mtie</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_meie">Variable : cp_meie</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_msip">Variable : cp_msip</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_mtip">Variable : cp_mtip</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_meip">Variable : cp_meip</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cp_group">Variable : cp_group</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cross_external_interrupt">Cross : cross_external_interrupt</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cross_timer_interrupt">Cross : cross_timer_interrupt</a>    </li>
+    <li>
+      <a href="#inst_tag_uvme_cva6_pkg.interrupt_cg.cross_software_interrupt">Cross : cross_software_interrupt</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

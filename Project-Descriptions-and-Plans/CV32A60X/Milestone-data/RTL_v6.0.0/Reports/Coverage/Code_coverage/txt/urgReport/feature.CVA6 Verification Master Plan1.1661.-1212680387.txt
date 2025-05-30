@@ -1,0 +1,27 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.CV-X-IF
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 91.66 --     --      92.31  91.01 
+
+
+
+-------------------------------------------------------------------------------
+
+Sub-features:
+
+SCORE  LINE   COND   ASSERT GROUP  NAME                
+ 87.24 --     --      92.31  82.18 Protocol            
+ 99.84 --     --     --      99.84 CV-XIF Instructions 
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+--     --     --     --     --     
+
+
+

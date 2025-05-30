@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: id_stage</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_id_stage'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_id_stage')">id_stage</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod89.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod89.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/id_stage.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/id_stage.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod89.html#inst_tag_239"  onclick="showContent('inst_tag_239')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.id_stage_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod89.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod89.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_id_stage'>
+<hr>
+<a name="inst_tag_239"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_239" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.id_stage_i</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod89.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod89.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.12</td>
+<td class="s9 cl rt"> 99.42</td>
+<td class="s9 cl rt"> 98.81</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod38.html#inst_tag_151" >cva6_only_pipeline.i_cva6_pipeline</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod99.html#inst_tag_250" id="tag_urg_inst_250">genblk1.genblk1[0].compressed_decoder_i</a></td>
+<td class="s9 cl rt"> 99.06</td>
+<td class="s9 cl rt"> 98.11</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod11.html#inst_tag_14" id="tag_urg_inst_14">genblk1.genblk6.i_cvxif_compressed_if_driver_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod17.html#inst_tag_25" id="tag_urg_inst_25">genblk2[0].decoder_i</a></td>
+<td class="s9 cl rt"> 99.12</td>
+<td class="s9 cl rt"> 99.73</td>
+<td class="s9 cl rt"> 98.51</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_id_stage'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod89.html" >id_stage</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>20</td><td>20</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>281</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>417</td><td>10</td><td>10</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>448</td><td>3</td><td>3</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+280                         // No CVXIF, No ZCMP, No ZCMT =&gt; Connect directly compressed decoder to decoder
+281        1/1              is_illegal_deco    = is_illegal_rvc;
+282        1/1              instruction_deco   = instruction_rvc;
+283        1/1              is_compressed_deco = is_compressed_rvc;
+284        1/1              if (CVA6Cfg.CvxifEn) begin
+285        1/1                is_illegal_deco[0]    = is_illegal_cvxif_o;
+286        1/1                instruction_deco[0]   = instruction_cvxif_o;
+287        1/1                is_compressed_deco[0] = is_compressed_cvxif_o;
+288        <font color = "grey">unreachable  </font>    end else if (!CVA6Cfg.CvxifEn &amp;&amp; (CVA6Cfg.RVZCMP || CVA6Cfg.RVZCMT)) begin
+289        <font color = "grey">unreachable  </font>      is_illegal_deco[0]    = is_illegal_cvxif_i;
+290        <font color = "grey">unreachable  </font>      instruction_deco[0]   = instruction_cvxif_i;
+291        <font color = "grey">unreachable  </font>      is_compressed_deco[0] = is_compressed_cvxif_i;
+292                         end
+                   <font color = "red">==>  MISSING_ELSE</font>
+293                       end
+294                     
+295                     
+296                       for (genvar i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+297                         decoder #(
+298                             .CVA6Cfg(CVA6Cfg),
+299                             .branchpredict_sbe_t(branchpredict_sbe_t),
+300                             .exception_t(exception_t),
+301                             .irq_ctrl_t(irq_ctrl_t),
+302                             .scoreboard_entry_t(scoreboard_entry_t),
+303                             .interrupts_t(interrupts_t),
+304                             .INTERRUPTS(INTERRUPTS)
+305                         ) decoder_i (
+306                             .debug_req_i,
+307                             .irq_ctrl_i,
+308                             .irq_i,
+309                             .pc_i                      (fetch_entry_i[i].address),
+310                             .is_compressed_i           (is_compressed_deco[i]),
+311                             .is_macro_instr_i          (is_macro_instr[i]),
+312                             .is_zcmt_i                 (is_zcmt_instr[i]),
+313                             .is_last_macro_instr_i     (is_last_macro_instr),
+314                             .is_double_rd_macro_instr_i(is_double_rd_macro_instr),
+315                             .jump_address_i            (jump_address),
+316                             .is_illegal_i              (is_illegal_deco[i]),
+317                             .instruction_i             (instruction_deco[i]),
+318                             .compressed_instr_i        (fetch_entry_i[i].instruction[15:0]),
+319                             .branch_predict_i          (fetch_entry_i[i].branch_predict),
+320                             .ex_i                      (fetch_entry_i[i].ex),
+321                             .priv_lvl_i                (priv_lvl_i),
+322                             .v_i                       (v_i),
+323                             .debug_mode_i              (debug_mode_i),
+324                             .fs_i,
+325                             .vfs_i,
+326                             .frm_i,
+327                             .vs_i,
+328                             .tvm_i,
+329                             .tw_i,
+330                             .vtw_i,
+331                             .tsr_i,
+332                             .hu_i,
+333                             .instruction_o             (decoded_instruction[i]),
+334                             .orig_instr_o              (orig_instr[i]),
+335                             .is_control_flow_instr_o   (is_control_flow_instr[i])
+336                         );
+337                       end
+338                     
+339                       // ------------------
+340                       // 3. Pipeline Register
+341                       // ------------------
+342                       for (genvar i = 0; i &lt; CVA6Cfg.NrIssuePorts; i++) begin
+343                         assign issue_entry_o[i] = issue_q[i].sbe;
+344                         assign issue_entry_o_prev[i] = CVA6Cfg.FpgaAlteraEn ? issue_n[i].sbe : '0;
+345                         assign issue_entry_valid_o[i] = issue_q[i].valid;
+346                         assign is_ctrl_flow_o[i] = issue_q[i].is_ctrl_flow;
+347                         assign orig_instr_o[i] = issue_q[i].orig_instr;
+348                         assign was_compressed_o[i] = issue_q[i].was_compressed;
+349                       end
+350                     
+351                       if (CVA6Cfg.SuperscalarEn) begin
+352                         always_comb begin
+353                           issue_n = issue_q;
+354                           fetch_entry_ready_o = '0;
+355                           // instruction is not valid if we stall due to ZCMT or CVXIF
+356                           decoded_instruction_valid[0] = (CVA6Cfg.RVZCMT &amp;&amp; is_zcmt_instr[0] &amp;&amp; stall_macro_deco_zcmt) ||
+357                                                          (CVA6Cfg.CvxifEn &amp;&amp; is_illegal_cvxif_i &amp;&amp; ~stall_macro_deco) &amp;&amp; stall_instr_fetch[0]
+358                                                          ? 1'b0 : 1'b1;
+359                           // Instruction on port 1 are always valid. It is either 32bits or legal 16bits.
+360                           decoded_instruction_valid[1] = ~stall_instr_fetch[1];
+361                     
+362                           // Clear the valid flag if issue has acknowledged the instruction
+363                           if (issue_instr_ack_i[0]) begin
+364                             issue_n[0].valid = 1'b0;
+365                           end
+366                           if (issue_instr_ack_i[1]) begin
+367                             issue_n[1].valid = 1'b0;
+368                           end
+369                     
+370                           if (!issue_n[0].valid) begin
+371                             if (issue_n[1].valid) begin
+372                               issue_n[0] = issue_n[1];
+373                               issue_n[1].valid = 1'b0;
+374                             end else if (fetch_entry_valid_i[0]) begin
+375                               fetch_entry_ready_o[0] = ~stall_instr_fetch[0];
+376                               issue_n[0] = '{
+377                                   decoded_instruction_valid[0],
+378                                   decoded_instruction[0],
+379                                   orig_instr[0],
+380                                   is_control_flow_instr[0],
+381                                   is_compressed_rvc[0]
+382                               };
+383                             end
+384                           end
+385                     
+386                           if (!issue_n[1].valid) begin
+387                             if (fetch_entry_ready_o[0]) begin
+388                               if (fetch_entry_valid_i[1]) begin
+389                                 fetch_entry_ready_o[1] = ~stall_instr_fetch[1];
+390                                 issue_n[1] = '{
+391                                     decoded_instruction_valid[1],
+392                                     decoded_instruction[1],
+393                                     orig_instr[1],
+394                                     is_control_flow_instr[1],
+395                                     is_compressed_rvc[1]
+396                                 };
+397                               end
+398                             end else if (fetch_entry_valid_i[0]) begin
+399                               fetch_entry_ready_o[0] = ~stall_instr_fetch[0];
+400                               issue_n[1] = '{
+401                                   decoded_instruction_valid[0],
+402                                   decoded_instruction[0],
+403                                   orig_instr[0],
+404                                   is_control_flow_instr[0],
+405                                   is_compressed_rvc[0]
+406                               };
+407                             end
+408                           end
+409                     
+410                           if (flush_i) begin
+411                             issue_n[0].valid = 1'b0;
+412                             issue_n[1].valid = 1'b0;
+413                           end
+414                         end
+415                       end else begin
+416                         always_comb begin
+417        1/1                issue_n = issue_q;
+418        1/1                fetch_entry_ready_o = '0;
+419                           // instruction is not valid if we stall due to ZCMT or CVXIF
+420        1/1                decoded_instruction_valid[0] = (CVA6Cfg.RVZCMT &amp;&amp; is_zcmt_instr[0] &amp;&amp; stall_macro_deco_zcmt) ||
+421                                                          (CVA6Cfg.CvxifEn &amp;&amp; is_illegal_cvxif_i &amp;&amp; ~stall_macro_deco &amp;&amp; stall_instr_fetch[0])
+422                                                          ? 1'b0 : 1'b1;
+423                           // Clear the valid flag if issue has acknowledged the instruction
+424        2/2                if (issue_instr_ack_i[0]) issue_n[0].valid = 1'b0;
+                        MISSING_ELSE
+425                     
+426                           // if we have a space in the register and the fetch is valid, go get it
+427                           // or the issue stage is currently acknowledging an instruction, which means that we will have space
+428                           // for a new instruction
+429        1/1                if (!issue_n[0].valid &amp;&amp; fetch_entry_valid_i[0]) begin
+430        1/1                  fetch_entry_ready_o[0] = ~stall_instr_fetch[0];
+431        1/1                  issue_n[0] = '{
+432                                 decoded_instruction_valid[0],
+433                                 decoded_instruction[0],
+434                                 orig_instr[0],
+435                                 is_control_flow_instr[0],
+436                                 is_compressed_rvc[0]
+437                             };
+438                           end
+                        MISSING_ELSE
+439                     
+440                           // invalidate the pipeline register on a flush
+441        2/2                if (flush_i) issue_n[0].valid = 1'b0;
+                   <font color = "red">==>  MISSING_ELSE</font>
+442                         end
+443                       end
+444                       // -------------------------
+445                       // Registers (ID &lt;-&gt; Issue)
+446                       // -------------------------
+447                       always_ff @(posedge clk_i or negedge rst_ni) begin
+448        1/1              if (~rst_ni) begin
+449        1/1                issue_q &lt;= '0;
+450                         end else begin
+451        1/1                issue_q &lt;= issue_n;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod89.html" >id_stage</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>10</td><td>10</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>10</td><td>10</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       420
+ EXPRESSION 
+ Number  Term
+      1  ((((1'b0 &amp;&amp; is_zcmt_instr[0]) &amp;&amp; stall_macro_deco_zcmt)) || (1'b1 &amp;&amp; is_illegal_cvxif_i &amp;&amp; ((~stall_macro_deco)) &amp;&amp; stall_instr_fetch[0])) ? 1'b0 : 1'b1)
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       420
+ SUB-EXPRESSION ((((1'b0 &amp;&amp; is_zcmt_instr[0]) &amp;&amp; stall_macro_deco_zcmt)) || (1'b1 &amp;&amp; is_illegal_cvxif_i &amp;&amp; ((~stall_macro_deco)) &amp;&amp; stall_instr_fetch[0]))
+                 ---------------------------1---------------------------    --------------------------------------2--------------------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       420
+ SUB-EXPRESSION (1'b1 &amp;&amp; is_illegal_cvxif_i &amp;&amp; ((~stall_macro_deco)) &amp;&amp; stall_instr_fetch[0])
+                 --1-    ---------2--------    ----------3----------    ----------4---------
+</pre>
+<table class="noborder">
+<col span="4" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>-</td><td>1</td><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       429
+ EXPRESSION (((!issue_n[0].valid)) &amp;&amp; fetch_entry_valid_i[0])
+             ----------1----------    -----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_239">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_id_stage">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

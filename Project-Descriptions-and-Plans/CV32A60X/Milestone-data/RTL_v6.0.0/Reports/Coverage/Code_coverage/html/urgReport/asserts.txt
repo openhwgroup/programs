@@ -1,0 +1,143 @@
+Assertions
+
+
+Assertions by Category
+           ASSERT PROPERTIES SEQUENCES
+Total           0        109         0
+Category 0      0        109         0
+
+-------------------------------------------------------------------------------
+
+Assertions by Severity
+           ASSERT PROPERTIES SEQUENCES
+Total           0        109         0
+Severity 0      0        109         0
+
+-------------------------------------------------------------------------------
+
+Summary for Cover Properties
+             NUMBER PERCENT
+Total Number    109  100.00
+Uncovered        37   33.94
+Matches          72   66.06
+
+-------------------------------------------------------------------------------
+
+Detail Report for Cover Properties
+
+Cover Properties Uncovered:
+                                           COVER PROPERTIES                                           CATEGORY SEVERITY ATTEMPTS MATCHES INCOMPLETE
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_stable                                                    0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_gnt_assert_no_req                                     0        0 51202068       0        703
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_gnt_deassert_no_req                                   0        0 51202068       0         17
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_atomic_addr_aligned              0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_err_stable                       0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_exokay_lr_sc                     0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_exokay_stable                    0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_rchk_stable                      0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_rdata_stable                     0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_rid_stable                       0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_rready_assert_no_rvalid          0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_rready_deassert_no_rvalid        0        0 51202068       0       1469
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_ruser_stable                     0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_gnt_assert_no_req                                      0        0 51202068       0       2070
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_gnt_deassert_no_req                                    0        0 51202068       0        283
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_atomic_addr_aligned               0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_err_stable                        0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_exokay_lr_sc                      0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_exokay_stable                     0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_rchk_stable                       0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_rdata_stable                      0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_rid_stable                        0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_rready_assert_no_rvalid           0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_rready_deassert_no_rvalid         0        0 51202068       0       2353
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_ruser_stable                      0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_gnt_assert_no_req                                     0        0 51202068       0       1717
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_gnt_deassert_no_req                                   0        0 51202068       0        285
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_atomic_addr_aligned              0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_err_stable                       0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_exokay_lr_sc                     0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_exokay_stable                    0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_rchk_stable                      0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_rdata_stable                     0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_rid_stable                       0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_rready_assert_no_rvalid          0        0 51202068       0          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_rready_deassert_no_rvalid        0        0 51202068       0       1942
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_ruser_stable                     0        0 51202068       0          0
+
+Cover Properties Matches:
+                                      COVER PROPERTIES                                      CATEGORY SEVERITY ATTEMPTS  MATCHES INCOMPLETE
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_for_issue                                       0        0 51202068    92906          0
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_one_cycle                                       0        0 51202068    92906          0
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_compressed_instr                                       0        0 51202068   164164          0
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_reject_issue_req                                       0        0 51202068    33794          0
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_for_commit                                      0        0 51202068    59255      33651
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_trn_end                                         0        0 51202068    59255          0
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_stable_issue                                           0        0 51202068    55459          0
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_uncompressed_resp                                      0        0 51202068    29335          0
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs                                             0        0 51202068    55423          0
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs_valid                                       0        0 51202068    55459          0
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs                                             0        0 51202068    55437          0
+uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs_valid                                       0        0 51202068    55459          0
+uvmt_cva6_tb.cva6_dut_wrap.interrupt_assert.c_irq_m_ext_taken                                      0        0 51202068   129782          0
+uvmt_cva6_tb.cva6_dut_wrap.interrupt_assert.c_irq_m_timer_taken                                    0        0 51202068    73800          0
+uvmt_cva6_tb.cva6_dut_wrap.interrupt_assert.c_irq_priority                                         0        0 51202068    85719          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_addr_be_consistent                          0        0 51202068 24114634          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_addr_stable                                 0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_be_contiguous                               0        0 51202068 24112278          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_be_not_zero                                 0        0 51202068 24112278          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_be_stable                                   0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_r_after_a                                   0        0 51202068 15871660          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_req_until_gnt                               0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_wdata_stable                                0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.c_we_stable                                   0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_achk_stable            0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_aid_stable             0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_atop_stable            0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_auser_stable           0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_memtype_stable         0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_one_atomic_trn         0        0 51202068 24112278          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_prot_stable            0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_req_until_gnt          0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_rid_follows_aid        0        0 51202068 15871660          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_fetch_assert.u_assert.gen_1p2.u_1p2_assert.c_wuser_stable           0        0 51202068  8238280        905
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_addr_be_consistent                           0        0 51202068  2376883          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_addr_stable                                  0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_be_contiguous                                0        0 51202068  2376883          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_be_not_zero                                  0        0 51202068  2376883          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_be_stable                                    0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_r_after_a                                    0        0 51202068  1384478          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_req_until_gnt                                0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_wdata_stable                                 0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.c_we_stable                                    0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_achk_stable             0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_aid_stable              0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_atop_stable             0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_auser_stable            0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_memtype_stable          0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_one_atomic_trn          0        0 51202068  2376883          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_prot_stable             0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_req_until_gnt           0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_rid_follows_aid         0        0 51202068  1384478          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_load_assert.u_assert.gen_1p2.u_1p2_assert.c_wuser_stable            0        0 51202068   992402          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_addr_be_consistent                          0        0 51202068  2059374          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_addr_stable                                 0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_be_contiguous                               0        0 51202068  2059374          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_be_not_zero                                 0        0 51202068  2059374          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_be_stable                                   0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_r_after_a                                   0        0 51202068  1406193          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_req_until_gnt                               0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_wdata_stable                                0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.c_we_stable                                   0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_achk_stable            0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_aid_stable             0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_atop_stable            0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_auser_stable           0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_memtype_stable         0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_one_atomic_trn         0        0 51202068  2059374          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_prot_stable            0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_req_until_gnt          0        0 51202068   651997        250
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_rid_follows_aid        0        0 51202068  1406193          0
+uvmt_cva6_tb.cva6_dut_wrap.obi_store_assert.u_assert.gen_1p2.u_1p2_assert.c_wuser_stable           0        0 51202068   651997        250
+
+

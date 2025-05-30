@@ -1,0 +1,40 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.TRAPs.Interrupts
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.15 --     --     --      99.15 
+
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.15 --     --     --      99.15 
+
+
+-------------------------------------------------------------------------------
+
+Measure Interrupts: 
+
+Metrics: Group
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.15 --     --     --      99.15 
+
+
+Sources:
+
+group instance: uvma_interrupt_pkg::cg_interrupt
+SCORE  LINE   COND   ASSERT GROUP  NAME                                               
+100.00 --     --     --     100.00 uvma_interrupt_pkg.uvma_interrupt_pkg.interrupt_cg 
+
+
+group instance: uvme_cva6_pkg.uvme_cva6_pkg.interrupt_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                     
+ 98.29 --     --     --      98.29 uvme_cva6_pkg.uvme_cva6_pkg.interrupt_cg 
+
+
+
+

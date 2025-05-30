@@ -1,0 +1,35 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.ISA.RV32ZB.RV32ZBB.REV8
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+-------------------------------------------------------------------------------
+
+Measure REV8: 
+
+Metrics: Group
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+Sources:
+
+group instance: uvma_isacov_pkg.uvma_isacov_pkg.rv32zbb_rev8_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                            
+100.00 --     --     --     100.00 uvma_isacov_pkg.uvma_isacov_pkg.rv32zbb_rev8_cg 
+
+
+
+

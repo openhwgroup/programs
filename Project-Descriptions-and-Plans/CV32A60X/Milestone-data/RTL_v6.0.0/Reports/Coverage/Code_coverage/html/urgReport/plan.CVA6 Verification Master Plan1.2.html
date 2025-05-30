@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: HVP Plan</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.colResizable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    }  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+  $("table").colResizable({    liveDrag:true,
+    fixed:false,
+    draggingClass:"dragging"
+  });
+});
+</script>
+</head>
+<body><div class="ui-layout-north">
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+<div id="north-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul>
+    <li>
+      <a href="hvp.CVA6 Verification Master Plan.html">HVP Hierarchy</a>    </li>
+    <li>
+      <a href="#">CVA6 Verification Master Plan</a>    </li>
+  </ul>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div class=modhdr>
+<br clear=all>
+<span class=titlename><a name="tag_urg_hvp_CVA6 Verification Master Plan"></a>
+Plan : <a href="hvp.CVA6 Verification Master Plan.html#tag_urg_hvp_CVA6 Verification Master Plan" >CVA6&nbsp;Verification&nbsp;Master&nbsp;Plan</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="s9 cl rt"> 97.02</td>
+<td class="s9 cl rt"> 99.79</td>
+<td class="s9 cl rt"> 98.39</td>
+<td class="s9 cl rt"> 92.31</td>
+<td class="s9 cl rt"> 97.58</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<a name="tag_urg_hvp_sub_features"></a>
+<br clear=all>
+<span class=repname>Sub-features:</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl" nowrap><a href="feature.CVA6 Verification Master Plan1.7.-1268999905.html" >Programmer view level</a></td>
+<td class="s9 cl rt"> 94.94</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s9 cl rt"> 92.31</td>
+<td class="s9 cl rt"> 97.58</td>
+</tr><tr>
+<td class="wht cl"><a href="feature.CVA6 Verification Master Plan1.1726.1895599623.html" >Code coverage</a></td>
+<td class="s9 cl rt"> 99.09</td>
+<td class="s9 cl rt"> 99.79</td>
+<td class="s9 cl rt"> 98.39</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<hr>
+<a name="tag_urg_hvp_attr_def"></a>
+<br clear=all>
+<span class=repname>Attribute/Annotation definitions:</span>
+<br clear=all>
+<div class=ind1>
+owner (attribute/string) default: </div>
+<div class=ind1>
+at_least (attribute/integer) default: 0</div>
+<div class=ind1>
+weight (annotation/integer) default: 1</div>
+<div class=ind1>
+description (annotation/string) default: </div>
+<div class=ind1>
+test.expected (annotation/integer) default: 0</div>
+<div class=ind1>
+Comment (attribute/string) default: </div>
+<hr>
+<a name="tag_urg_hvp_metric_def"></a>
+<br clear=all>
+<span class=repname>Metric definitions:</span>
+<br clear=all>
+<br clear=all>
+<div class=ind1>
+<table align=left class="noborder">
+<tr>
+<td>Line</td>
+<td>ratio</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>Cond</td>
+<td>ratio</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>FSM</td>
+<td>ratio</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>Toggle</td>
+<td>ratio</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>Branch</td>
+<td>ratio</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>Assert</td>
+<td>ratio</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>Assert.assert</td>
+<td>ratio</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>Assert.cover</td>
+<td>ratio</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>Assert.ast_count</td>
+<td>integer</td>
+<td></td>
+<td>sum</td>
+</tr><tr>
+<td>Assert.cov_count</td>
+<td>integer</td>
+<td></td>
+<td>sum</td>
+</tr><tr>
+<td>Group</td>
+<td>percent</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>Group.count</td>
+<td>integer</td>
+<td></td>
+<td>sum</td>
+</tr><tr>
+<td>Group.grp_count</td>
+<td>integer</td>
+<td></td>
+<td>sum</td>
+</tr><tr>
+<td>Group.cvp_count</td>
+<td>integer</td>
+<td></td>
+<td>sum</td>
+</tr><tr>
+<td>Group.bin_count</td>
+<td>integer</td>
+<td></td>
+<td>sum</td>
+</tr><tr>
+<td>Group.covered_count</td>
+<td>integer</td>
+<td></td>
+<td>sum</td>
+</tr><tr>
+<td>Group.uncovered_count</td>
+<td>integer</td>
+<td></td>
+<td>sum</td>
+</tr><tr>
+<td>Group.excluded_count</td>
+<td>integer</td>
+<td></td>
+<td>sum</td>
+</tr><tr>
+<td>SnpsAvg</td>
+<td>aggregate[Line Cond FSM Toggle Branch Assert Group]</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>test</td>
+<td>enum[pass fail warn assert unknown(default)]</td>
+<td></td>
+<td>sum</td>
+</tr><tr>
+<td>test.completion</td>
+<td>ratio</td>
+<td></td>
+<td>average</td>
+</tr><tr>
+<td>AssertResult</td>
+<td>enum[successes failures unknown(default)]</td>
+<td></td>
+<td>sum</td>
+</tr></table></div>
+<br clear=all>
+<hr>
+<a name="tag_urg_hvp_attr_val"></a>
+<br clear=all>
+<span class=repname>Attribute/Annotation values:</span>
+<br clear=all>
+<div class=ind1>
+description: CVA6 Verification Master Plan</div>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul>
+    <li>
+      <a href="#tag_urg_hvp_CVA6 Verification Master Plan">Plan : CVA6&nbsp;Verification&nbsp;Master&nbsp;Plan</a>    </li>
+    <li>
+      <a href="#tag_urg_hvp_sub_features">Sub-features</a>    </li>
+    <li>
+      <a href="#tag_urg_hvp_attr_def">Attribute/Annotation definitions</a>    </li>
+    <li>
+      <a href="#tag_urg_hvp_metric_def">Metric definitions</a>    </li>
+    <li>
+      <a href="#tag_urg_hvp_attr_val">Attribute/Annotation values</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

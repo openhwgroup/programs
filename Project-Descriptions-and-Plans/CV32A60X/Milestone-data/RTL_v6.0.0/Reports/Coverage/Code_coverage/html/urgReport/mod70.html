@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: store_unit</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_store_unit'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_store_unit')">store_unit</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod70.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod70.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/store_unit.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/store_unit.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod70.html#inst_tag_220"  onclick="showContent('inst_tag_220')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.lsu_i.i_store_unit</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod70.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod70.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_store_unit'>
+<hr>
+<a name="inst_tag_220"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_220" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.lsu_i.i_store_unit</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod70.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod70.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 98.75</td>
+<td class="s9 cl rt"> 97.50</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod3.html#inst_tag_5" >lsu_i</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod68.html#inst_tag_218" id="tag_urg_inst_218">store_buffer_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_store_unit'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod70.html" >store_unit</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>53</td><td>53</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>94</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>162</td><td>22</td><td>22</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>223</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>321</td><td>17</td><td>17</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+93                          // Set addr[2] to 1'b0 when 32bits
+94         1/1              logic [ 2:0] addr_tmp = {(addr[2] &amp;&amp; CVA6Cfg.IS_XLEN64), addr[1:0]};
+95         1/1              logic [63:0] data_tmp = {64{1'b0}};
+96         1/1              case (addr_tmp)
+97         1/1                3'b000: data_tmp[CVA6Cfg.XLEN-1:0] = {data[CVA6Cfg.XLEN-1:0]};
+98                            3'b001:
+99         1/1                data_tmp[CVA6Cfg.XLEN-1:0] = {data[CVA6Cfg.XLEN-9:0], data[CVA6Cfg.XLEN-1:CVA6Cfg.XLEN-8]};
+100                           3'b010:
+101        1/1                data_tmp[CVA6Cfg.XLEN-1:0] = {data[CVA6Cfg.XLEN-17:0], data[CVA6Cfg.XLEN-1:CVA6Cfg.XLEN-16]};
+102                           3'b011:
+103        1/1                data_tmp[CVA6Cfg.XLEN-1:0] = {data[CVA6Cfg.XLEN-25:0], data[CVA6Cfg.XLEN-1:CVA6Cfg.XLEN-24]};
+104                           default:
+105        1/1                if (CVA6Cfg.IS_XLEN64) begin
+106        <font color = "grey">unreachable  </font>        case (addr_tmp)
+107        <font color = "grey">unreachable  </font>          3'b100:  data_tmp = {data[31:0], data[63:32]};
+108        <font color = "grey">unreachable  </font>          3'b101:  data_tmp = {data[23:0], data[63:24]};
+109        <font color = "grey">unreachable  </font>          3'b110:  data_tmp = {data[15:0], data[63:16]};
+110        <font color = "grey">unreachable  </font>          3'b111:  data_tmp = {data[7:0], data[63:8]};
+111        <font color = "grey">unreachable  </font>          default: data_tmp = {data[63:0]};
+112                             endcase
+113                           end
+                        MISSING_ELSE
+114                         endcase
+115        1/1              return data_tmp[CVA6Cfg.XLEN-1:0];
+116                       endfunction
+117                     
+118                       // it doesn't matter what we are writing back as stores don't return anything
+119                       assign result_o   = lsu_ctrl_i.data;
+120                     
+121                       // directly forward exception fields (valid bit is set below)
+122                       assign ex_o.cause = ex_i.cause;
+123                       assign ex_o.tval  = ex_i.tval;
+124                       assign ex_o.tval2 = CVA6Cfg.RVH ? ex_i.tval2 : '0;
+125                       assign ex_o.tinst = CVA6Cfg.RVH ? ex_i.tinst : '0;
+126                       assign ex_o.gva   = CVA6Cfg.RVH ? ex_i.gva : 1'b0;
+127                     
+128                       // store buffer control signals
+129                       logic instr_is_amo;
+130                       assign instr_is_amo = is_amo(lsu_ctrl_i.operation);
+131                       // keep the data and the byte enable for the second cycle (after address translation)
+132                       logic [CVA6Cfg.XLEN-1:0] st_data, st_data_n, st_data_q;
+133                       logic [(CVA6Cfg.XLEN/8)-1:0] st_be, st_be_n, st_be_q;
+134                       logic [1:0] st_data_size, st_data_size_n, st_data_size_q;
+135                       amo_t amo_op, amo_op_d, amo_op_q;
+136                     
+137                       logic store_buffer_valid, store_buffer_valid_d, store_buffer_valid_q;
+138                       logic store_buffer_valid_no_flush, store_buffer_valid_no_flush_d, store_buffer_valid_no_flush_q;
+139                     
+140                       logic amo_buffer_valid, amo_buffer_valid_d, amo_buffer_valid_q;
+141                     
+142                       logic store_buffer_ready, amo_buffer_ready;
+143                     
+144                       logic [CVA6Cfg.TRANS_ID_BITS-1:0] trans_id_n, trans_id_q;
+145                     
+146                       logic ex_s0, ex_s1;
+147                       logic stall_translation;
+148                     
+149                       // output assignments
+150                       assign vaddr_o = lsu_ctrl_i.vaddr;  // virtual address
+151                       assign hs_ld_st_inst_o = CVA6Cfg.RVH ? lsu_ctrl_i.hs_ld_st_inst : 1'b0;
+152                       assign hlvx_inst_o = CVA6Cfg.RVH ? lsu_ctrl_i.hlvx_inst : 1'b0;
+153                       assign tinst_o = CVA6Cfg.RVH ? lsu_ctrl_i.tinst : '0;  // transformed instruction
+154                     
+155                       assign stall_translation = CVA6Cfg.MmuPresent ? translation_req_o &amp;&amp; !dtlb_hit_i : 1'b0;
+156                     
+157                       assign ex_s0 = CVA6Cfg.MmuPresent &amp;&amp; stall_translation &amp;&amp; ex_i.valid;
+158                       assign ex_s1 = CVA6Cfg.MmuPresent ? (store_buffer_valid_q || (CVA6Cfg.RVA &amp;&amp; amo_buffer_valid_q)) &amp;&amp; ex_i.valid : valid_i &amp;&amp; ex_i.valid;
+159                     
+160                       always_comb begin : store_control
+161                         // default assignment
+162        1/1              translation_req_o             = 1'b0;
+163        1/1              valid_o                       = 1'b0;
+164        1/1              amo_buffer_valid_d            = 1'b0;
+165        1/1              store_buffer_valid_d          = 1'b0;
+166        1/1              store_buffer_valid_no_flush_d = 1'b0;
+167        1/1              pop_st_o                      = 1'b0;
+168        1/1              ex_o.valid                    = 1'b0;
+169        1/1              trans_id_n                    = lsu_ctrl_i.trans_id;
+170        1/1              trans_id_o                    = lsu_ctrl_i.trans_id;
+171                     
+172                         // REQUEST
+173        1/1              if (valid_i) begin
+174        1/1                translation_req_o = 1'b1;
+175        1/1                if (!CVA6Cfg.MmuPresent || !stall_translation) begin
+176        1/1                  if (CVA6Cfg.RVA &amp;&amp; instr_is_amo) begin
+177        <font color = "grey">unreachable  </font>          if (amo_buffer_ready) begin
+178        <font color = "grey">unreachable  </font>            pop_st_o = 1'b1;
+179        <font color = "grey">unreachable  </font>            amo_buffer_valid_d = !flush_i;
+180                                 // RETIRE STORE NO MMU
+181        <font color = "grey">unreachable  </font>            if (!CVA6Cfg.MmuPresent) begin
+182        <font color = "grey">unreachable  </font>              trans_id_o = lsu_ctrl_i.trans_id;
+183        <font color = "grey">unreachable  </font>              valid_o    = 1'b1;
+184        <font color = "grey">unreachable  </font>              ex_o.valid = ex_s1;
+185                                 end
+                   <font color = "red">==>  MISSING_ELSE</font>
+186                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+187                             end else begin
+188        1/1                    if (store_buffer_ready) begin
+189        1/1                      pop_st_o = 1'b1;
+190        1/1                      store_buffer_valid_d = !flush_i;
+191        1/1                      store_buffer_valid_no_flush_d = 1'b1;
+192                                 // RETIRE STORE NO MMU
+193        1/1                      if (!CVA6Cfg.MmuPresent) begin
+194        1/1                        trans_id_o = lsu_ctrl_i.trans_id;
+195        1/1                        valid_o    = 1'b1;
+196        1/1                        ex_o.valid = ex_s1;
+197                                 end
+                   <font color = "red">==>  MISSING_ELSE</font>
+198                               end
+                   <font color = "red">==>  MISSING_ELSE</font>
+199                             end
+200                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+201                         end
+                        MISSING_ELSE
+202                         // RETIRE STORE WITH MMU
+203        1/1              if (CVA6Cfg.MmuPresent) begin
+204        <font color = "grey">unreachable  </font>      if (store_buffer_valid_q || (CVA6Cfg.RVA &amp;&amp; amo_buffer_valid_q)) begin
+205        <font color = "grey">unreachable  </font>        trans_id_o = trans_id_q;
+206        <font color = "grey">unreachable  </font>        valid_o    = 1'b1;
+207        <font color = "grey">unreachable  </font>        ex_o.valid = ex_s1;
+208                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+209        <font color = "grey">unreachable  </font>      if (ex_s0) begin
+210        <font color = "grey">unreachable  </font>        trans_id_o = lsu_ctrl_i.trans_id;
+211        <font color = "grey">unreachable  </font>        valid_o    = 1'b1;
+212        <font color = "grey">unreachable  </font>        ex_o.valid = 1'b1;
+213        <font color = "grey">unreachable  </font>        pop_st_o = 1'b1;
+214                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+215                         end
+                        MISSING_ELSE
+216                       end
+217                     
+218                       // -----------
+219                       // Re-aligner
+220                       // -----------
+221                       // re-align the write data to comply with the address offset
+222                       always_comb begin
+223        1/1              st_be_n = lsu_ctrl_i.be;
+224                         // don't shift the data if we are going to perform an AMO as we still need to operate on this data
+225        1/1              st_data_n = (CVA6Cfg.RVA &amp;&amp; instr_is_amo) ? lsu_ctrl_i.data[CVA6Cfg.XLEN-1:0] :
+226                             data_align(lsu_ctrl_i.vaddr[2:0], {{64 - CVA6Cfg.XLEN{1'b0}}, lsu_ctrl_i.data});
+227        1/1              st_data_size_n = extract_transfer_size(lsu_ctrl_i.operation);
+228                         // save AMO op for next cycle
+229        1/1              if (CVA6Cfg.RVA) begin
+230        <font color = "grey">unreachable  </font>      case (lsu_ctrl_i.operation)
+231        <font color = "grey">unreachable  </font>        AMO_LRW, AMO_LRD:     amo_op_d = AMO_LR;
+232        <font color = "grey">unreachable  </font>        AMO_SCW, AMO_SCD:     amo_op_d = AMO_SC;
+233        <font color = "grey">unreachable  </font>        AMO_SWAPW, AMO_SWAPD: amo_op_d = AMO_SWAP;
+234        <font color = "grey">unreachable  </font>        AMO_ADDW, AMO_ADDD:   amo_op_d = AMO_ADD;
+235        <font color = "grey">unreachable  </font>        AMO_ANDW, AMO_ANDD:   amo_op_d = AMO_AND;
+236        <font color = "grey">unreachable  </font>        AMO_ORW, AMO_ORD:     amo_op_d = AMO_OR;
+237        <font color = "grey">unreachable  </font>        AMO_XORW, AMO_XORD:   amo_op_d = AMO_XOR;
+238        <font color = "grey">unreachable  </font>        AMO_MAXW, AMO_MAXD:   amo_op_d = AMO_MAX;
+239        <font color = "grey">unreachable  </font>        AMO_MAXWU, AMO_MAXDU: amo_op_d = AMO_MAXU;
+240        <font color = "grey">unreachable  </font>        AMO_MINW, AMO_MIND:   amo_op_d = AMO_MIN;
+241        <font color = "grey">unreachable  </font>        AMO_MINWU, AMO_MINDU: amo_op_d = AMO_MINU;
+242        <font color = "grey">unreachable  </font>        default:              amo_op_d = AMO_NONE;
+243                           endcase
+244                         end else begin
+245        1/1                amo_op_d = AMO_NONE;
+246                         end
+247                       end
+248                     
+249                       assign st_be = CVA6Cfg.MmuPresent ? st_be_q : st_be_n;
+250                       assign st_data = CVA6Cfg.MmuPresent ? st_data_q : st_data_n;
+251                       assign st_data_size = CVA6Cfg.MmuPresent ? st_data_size_q : st_data_size_n;
+252                       assign amo_op = CVA6Cfg.MmuPresent ? amo_op_q : amo_op_d;
+253                       assign store_buffer_valid = CVA6Cfg.MmuPresent ? store_buffer_valid_q &amp;&amp; !ex_s1 : store_buffer_valid_d;
+254                       assign store_buffer_valid_no_flush = CVA6Cfg.MmuPresent ? store_buffer_valid_no_flush_q &amp;&amp; !ex_s1 : store_buffer_valid_no_flush_d;
+255                       assign amo_buffer_valid = CVA6Cfg.MmuPresent ? amo_buffer_valid_q &amp;&amp; !ex_s1 : amo_buffer_valid_d;
+256                     
+257                       // ---------------
+258                       // Store Queue
+259                       // ---------------
+260                       store_buffer #(
+261                           .CVA6Cfg(CVA6Cfg),
+262                           .obi_store_req_t(obi_store_req_t),
+263                           .obi_store_rsp_t(obi_store_rsp_t)
+264                       ) store_buffer_i (
+265                           .clk_i,
+266                           .rst_ni,
+267                           .flush_i,
+268                           .stall_st_pending_i,
+269                           .no_st_pending_o,
+270                           .store_buffer_empty_o,
+271                           .page_offset_i,
+272                           .page_offset_matches_o,
+273                           .commit_i,
+274                           .commit_ready_o,
+275                           .ready_o              (store_buffer_ready),
+276                           .valid_i              (store_buffer_valid),
+277                           // the flush signal can be critical and we need this valid
+278                           // signal to check whether the page_offset matches or not,
+279                           // functionaly it doesn't make a difference whether we use
+280                           // the correct valid signal or not as we are flushing
+281                           // the whole pipeline anyway
+282                           .valid_without_flush_i(store_buffer_valid_no_flush),
+283                           .paddr_i              (paddr_i),
+284                           .rvfi_mem_paddr_o     (rvfi_mem_paddr_o),
+285                           .data_i               (st_data),
+286                           .be_i                 (st_be),
+287                           .data_size_i          (st_data_size),
+288                           .obi_store_req_o      (obi_store_req_o),
+289                           .obi_store_rsp_i      (obi_store_rsp_i)
+290                       );
+291                     
+292                       if (CVA6Cfg.RVA) begin
+293                         amo_buffer #(
+294                             .CVA6Cfg(CVA6Cfg),
+295                             .obi_amo_req_t(obi_amo_req_t),
+296                             .obi_amo_rsp_t(obi_amo_rsp_t)
+297                         ) i_amo_buffer (
+298                             .clk_i,
+299                             .rst_ni,
+300                             .flush_i,
+301                             .valid_i           (amo_buffer_valid),
+302                             .ready_o           (amo_buffer_ready),
+303                             .paddr_i           (paddr_i),
+304                             .amo_op_i          (amo_op),
+305                             .data_i            (st_data),
+306                             .data_size_i       (st_data_size),
+307                             .obi_amo_req_o     (obi_amo_req_o),
+308                             .obi_amo_rsp_i     (obi_amo_rsp_i),
+309                             .amo_valid_commit_i(amo_valid_commit_i),
+310                             .no_st_pending_i   (no_st_pending_o)
+311                         );
+312                       end else begin
+313                         assign amo_buffer_ready = '1;
+314                         assign obi_amo_req_o    = '0;
+315                       end
+316                     
+317                       // ---------------
+318                       // Registers
+319                       // ---------------
+320                       always_ff @(posedge clk_i or negedge rst_ni) begin
+321        1/1              if (~rst_ni) begin
+322        1/1                st_be_q                       &lt;= '0;
+323        1/1                st_data_q                     &lt;= '0;
+324        1/1                st_data_size_q                &lt;= '0;
+325        1/1                trans_id_q                    &lt;= '0;
+326        1/1                amo_op_q                      &lt;= AMO_NONE;
+327        1/1                amo_buffer_valid_q            &lt;= '0;
+328        1/1                store_buffer_valid_q          &lt;= '0;
+329        1/1                store_buffer_valid_no_flush_q &lt;= '0;
+330                         end else begin
+331        1/1                st_be_q                       &lt;= st_be_n;
+332        1/1                st_data_q                     &lt;= st_data_n;
+333        1/1                trans_id_q                    &lt;= trans_id_n;
+334        1/1                st_data_size_q                &lt;= st_data_size_n;
+335        1/1                amo_op_q                      &lt;= amo_op_d;
+336        1/1                amo_buffer_valid_q            &lt;= amo_buffer_valid_d;
+337        1/1                store_buffer_valid_q          &lt;= store_buffer_valid_d;
+338        1/1                store_buffer_valid_no_flush_q &lt;= store_buffer_valid_no_flush_d;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod70.html" >store_unit</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       158
+ SUB-EXPRESSION ((store_buffer_valid_q || ((1'b0 &amp;&amp; amo_buffer_valid_q))) &amp;&amp; ex_i.valid)
+                 ----------------------------1---------------------------    -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       158
+ SUB-EXPRESSION (store_buffer_valid_q || ((1'b0 &amp;&amp; amo_buffer_valid_q)))
+                 ----------1---------    ---------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       158
+ SUB-EXPRESSION (valid_i &amp;&amp; ex_i.valid)
+                 ---1---    -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       204
+ EXPRESSION (store_buffer_valid_q || ((1'b0 &amp;&amp; amo_buffer_valid_q)))
+             ----------1---------    ---------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_220">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_store_unit">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

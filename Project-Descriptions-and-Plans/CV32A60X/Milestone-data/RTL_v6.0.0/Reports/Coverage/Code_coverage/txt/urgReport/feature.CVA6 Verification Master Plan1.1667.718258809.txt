@@ -1,0 +1,36 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.CV-X-IF.CV-XIF Instructions
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.84 --     --     --      99.84 
+
+
+
+-------------------------------------------------------------------------------
+
+Sub-features:
+
+SCORE  LINE   COND   ASSERT GROUP  NAME              
+100.00 --     --     --     100.00 SEQUENCE          
+ 99.92 --     --     --      99.92 CUS_CADD          
+ 99.85 --     --     --      99.85 CUS_ADD           
+ 99.78 --     --     --      99.78 CUS_ADD_MULTI     
+ 99.79 --     --     --      99.79 CUS_DOUBLE_RS1    
+ 99.78 --     --     --      99.78 CUS_DOUBLE_RS2    
+ 99.79 --     --     --      99.79 CUS_ADD_RS3_MADD  
+ 99.73 --     --     --      99.73 CUS_ADD_RS3_MSUB  
+ 99.79 --     --     --      99.79 CUS_ADD_RS3_NMADD 
+ 99.80 --     --     --      99.80 CUS_ADD_RS3_NMSUB 
+100.00 --     --     --     100.00 CUS_ADD_RS3_RTYPE 
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+--     --     --     --     --     
+
+
+

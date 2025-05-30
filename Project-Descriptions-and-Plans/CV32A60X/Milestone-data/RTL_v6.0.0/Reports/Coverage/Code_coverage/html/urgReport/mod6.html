@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: frontend</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_frontend'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_frontend')">frontend</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.24</td>
+<td class="s10 cl rt"><a href="mod6.html#Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod6.html#Cond" > 98.47</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/frontend/frontend.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/frontend/frontend.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod6.html#inst_tag_9"  onclick="showContent('inst_tag_9')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend</a></td>
+<td class="s9 cl rt"> 99.24</td>
+<td class="s10 cl rt"><a href="mod6.html#Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod6.html#Cond" > 98.47</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_frontend'>
+<hr>
+<a name="inst_tag_9"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_9" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.24</td>
+<td class="s10 cl rt"><a href="mod6.html#Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod6.html#Cond" > 98.47</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.70</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 99.39</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod38.html#inst_tag_151" >cva6_only_pipeline.i_cva6_pipeline</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod48.html#inst_tag_195" id="tag_urg_inst_195">bht_gen.i_bht</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod22.html#inst_tag_35" id="tag_urg_inst_35">gen_instr_scan[0].i_instr_scan</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod47.html#inst_tag_194" id="tag_urg_inst_194">i_instr_queue</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod106.html#inst_tag_258" id="tag_urg_inst_258">i_instr_realign</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod32.html#inst_tag_77" id="tag_urg_inst_77">ras_gen.i_ras</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_frontend'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod6.html" >frontend</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>159</td><td>159</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>243</td><td>38</td><td>38</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>319</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>412</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>440</td><td>10</td><td>10</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>496</td><td>18</td><td>18</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>572</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>601</td><td>16</td><td>16</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>664</td><td>22</td><td>22</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>727</td><td>30</td><td>30</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+242                       always_comb begin
+243        1/1              taken_rvi_cf = '0;
+244        1/1              taken_rvc_cf = '0;
+245        1/1              predict_address = '0;
+246                     
+247        2/2              for (int i = 0; i &lt; CVA6Cfg.INSTR_PER_FETCH; i++) cf_type[i] = ariane_pkg::NoCF;
+248                     
+249        1/1              ras_push = 1'b0;
+250        1/1              ras_pop = 1'b0;
+251        1/1              ras_update = '0;
+252                     
+253                         // lower most prediction gets precedence
+254        1/1              for (int i = CVA6Cfg.INSTR_PER_FETCH - 1; i &gt;= 0; i--) begin
+255        1/1                unique case ({
+256                             is_branch[i], is_return[i], is_jump[i], is_jalr[i]
+257                           })
+258        1/1                  4'b0000: ;  // regular instruction e.g.: no branch
+259                             // unconditional jump to register, we need the BTB to resolve this
+260                             4'b0001: begin
+261        1/1                    ras_pop  = 1'b0;
+262        1/1                    ras_push = 1'b0;
+263        1/1                    if (CVA6Cfg.BTBEntries != 0 &amp;&amp; btb_prediction_shifted[i].valid) begin
+264        <font color = "grey">unreachable  </font>            predict_address = btb_prediction_shifted[i].target_address;
+265        <font color = "grey">unreachable  </font>            cf_type[i] = ariane_pkg::JumpR;
+266                               end
+                        MISSING_ELSE
+267                             end
+268                             // its an unconditional jump to an immediate
+269                             4'b0010: begin
+270        1/1                    ras_pop = 1'b0;
+271        1/1                    ras_push = 1'b0;
+272        1/1                    taken_rvi_cf[i] = rvi_jump[i];
+273        1/1                    taken_rvc_cf[i] = rvc_jump[i];
+274        1/1                    cf_type[i] = ariane_pkg::Jump;
+275                             end
+276                             // return
+277                             4'b0100: begin
+278                               // make sure to only alter the RAS if we actually consumed the instruction
+279        1/1                    ras_pop = ras_predict.valid &amp; instr_queue_consumed[i];
+280        1/1                    ras_push = 1'b0;
+281        1/1                    predict_address = ras_predict.ra;
+282        1/1                    cf_type[i] = ariane_pkg::Return;
+283                             end
+284                             // branch prediction
+285                             4'b1000: begin
+286        1/1                    ras_pop  = 1'b0;
+287        1/1                    ras_push = 1'b0;
+288                               // if we have a valid dynamic prediction use it
+289        1/1                    if (bht_prediction_shifted[i].valid) begin
+290        1/1                      taken_rvi_cf[i] = rvi_branch[i] &amp; bht_prediction_shifted[i].taken;
+291        1/1                      taken_rvc_cf[i] = rvc_branch[i] &amp; bht_prediction_shifted[i].taken;
+292                                 // otherwise default to static prediction
+293                               end else begin
+294                                 // set if immediate is negative - static prediction
+295        1/1                      taken_rvi_cf[i] = rvi_branch[i] &amp; rvi_imm[i][CVA6Cfg.VLEN-1];
+296        1/1                      taken_rvc_cf[i] = rvc_branch[i] &amp; rvc_imm[i][CVA6Cfg.VLEN-1];
+297                               end
+298        1/1                    if (taken_rvi_cf[i] || taken_rvc_cf[i]) begin
+299        1/1                      cf_type[i] = ariane_pkg::Branch;
+300                               end
+                        MISSING_ELSE
+301                             end
+302        1/1                  default: ;
+303                             // default: $error(&quot;Decoded more than one control flow&quot;);
+304                           endcase
+305                           // if this instruction, in addition, is a call, save the resulting address
+306                           // but only if we actually consumed the address
+307        1/1                if (is_call[i]) begin
+308        1/1                  ras_push   = instr_queue_consumed[i];
+309        1/1                  ras_update = addr[i] + (rvc_call[i] ? 2 : 4);
+310                           end
+                        MISSING_ELSE
+311                           // calculate the jump target address
+312        1/1                if (taken_rvc_cf[i] || taken_rvi_cf[i]) begin
+313        1/1                  predict_address = addr[i] + (taken_rvc_cf[i] ? rvc_imm[i] : rvi_imm[i]);
+314                           end
+                        MISSING_ELSE
+315                         end
+316                       end
+317                       // or reduce struct
+318                       always_comb begin
+319        1/1              bp_valid = 1'b0;
+320                         // BP cannot be valid if we have a return instruction and the RAS is not giving a valid address
+321                         // Check that we encountered a control flow and that for a return the RAS
+322                         // contains a valid prediction.
+323        1/1              for (int i = 0; i &lt; CVA6Cfg.INSTR_PER_FETCH; i++)
+324        1/1              bp_valid |= ((cf_type[i] != NoCF &amp; cf_type[i] != Return) | ((cf_type[i] == Return) &amp; ras_predict.valid));
+325                       end
+326                       assign is_mispredict = resolved_branch_i.is_mispredict;
+327                     
+328                       logic spec_req_non_idempot;
+329                     
+330                       // MMU interface
+331                       assign areq_o.fetch_vaddr = (vaddr_q &gt;&gt; CVA6Cfg.FETCH_ALIGN_BITS) &lt;&lt; CVA6Cfg.FETCH_ALIGN_BITS;
+332                     
+333                       // CHECK PMA regions
+334                     
+335                       logic paddr_is_cacheable, paddr_is_cacheable_q;  // asserted if physical address is non-cacheable
+336                       assign paddr_is_cacheable = config_pkg::is_inside_cacheable_regions(
+337                           CVA6Cfg, {{64 - CVA6Cfg.PLEN{1'b0}}, obi_fetch_req_o.a.addr}  //TO DO CHECK GRANULARITY
+338                       );
+339                     
+340                       logic paddr_nonidempotent;
+341                       assign paddr_nonidempotent = config_pkg::is_inside_nonidempotent_regions(
+342                           CVA6Cfg, {{64 - CVA6Cfg.PLEN{1'b0}}, obi_fetch_req_o.a.addr}  //TO DO CHECK GRANULARITY
+343                       );
+344                     
+345                       // Caches optimisation signals
+346                     
+347                       logic [CVA6Cfg.VLEN-1:0] vaddr_rvalid;
+348                       logic rvalid;
+349                       logic ex_rvalid;
+350                       logic pop_fetch;
+351                     
+352                       // in order to decouple the response interface from the request interface,
+353                       // we need a a buffer which can hold all inflight memory fetch requests
+354                       typedef struct packed {
+355                         logic [CVA6Cfg.VLEN-1:0] vaddr;  // scoreboard identifier
+356                       } fetchbuf_t;
+357                     
+358                       logic [CVA6Cfg.PLEN-1:0] paddr;
+359                     
+360                       // to support a throughput of one fetch per cycle, if the number of entries
+361                       // of the fetch buffer is 1, implement a fall-through mode. This however
+362                       // adds a combinational path between the request and response interfaces
+363                       // towards the cache.
+364                       localparam logic FETCHBUF_FALLTHROUGH = (CVA6Cfg.NrFetchBufEntries == 1);
+365                       localparam int unsigned REQ_ID_BITS = CVA6Cfg.NrFetchBufEntries &gt; 1 ? $clog2(
+366                           CVA6Cfg.NrFetchBufEntries
+367                       ) : 1;
+368                     
+369                       typedef logic [REQ_ID_BITS-1:0] fetchbuf_id_t;
+370                     
+371                       logic [CVA6Cfg.NrFetchBufEntries-1:0] fetchbuf_valid_q, fetchbuf_valid_d;
+372                       logic [CVA6Cfg.NrFetchBufEntries-1:0] fetchbuf_flushed_q, fetchbuf_flushed_d;
+373                       fetchbuf_t [CVA6Cfg.NrFetchBufEntries-1:0] fetchbuf_q;
+374                       logic fetchbuf_empty, fetchbuf_full;
+375                       fetchbuf_id_t fetchbuf_free_index;
+376                       logic fetchbuf_w, fetchbuf_w_q;
+377                       fetchbuf_id_t fetchbuf_windex, fetchbuf_windex_q;
+378                       logic         fetchbuf_r;
+379                       fetchbuf_t    fetchbuf_rdata;
+380                       fetchbuf_id_t fetchbuf_rindex;
+381                       fetchbuf_id_t fetchbuf_last_id_q;
+382                     
+383                       logic kill_req_d, kill_req_q;
+384                       logic ex_s1;
+385                     
+386                     
+387                       assign fetchbuf_full = &amp;fetchbuf_valid_q &amp;&amp; !(FETCHBUF_FALLTHROUGH &amp;&amp; fetchbuf_r);
+388                     
+389                     
+390                       //
+391                       //  buffer of outstanding fetchs
+392                     
+393                       //  write in the first available slot
+394                       generate
+395                         if (CVA6Cfg.NrFetchBufEntries &gt; 1) begin : fetchbuf_free_index_multi_gen
+396                           lzc #(
+397                               .WIDTH(CVA6Cfg.NrFetchBufEntries),
+398                               .MODE (1'b0)                        // Count leading zeros
+399                           ) lzc_windex_i (
+400                               .in_i   (~fetchbuf_valid_q),
+401                               .cnt_o  (fetchbuf_free_index),
+402                               .empty_o(fetchbuf_empty)
+403                           );
+404                         end else begin : fetchbuf_free_index_single_gen
+405                           assign fetchbuf_free_index = 1'b0;
+406                         end
+407                       endgenerate
+408                     
+409                       assign fetchbuf_windex = (FETCHBUF_FALLTHROUGH &amp;&amp; fetchbuf_r) ? fetchbuf_rindex : fetchbuf_free_index;
+410                     
+411                       always_comb begin : fetchbuf_comb
+412        1/1              fetchbuf_flushed_d = fetchbuf_flushed_q;
+413        1/1              fetchbuf_valid_d   = fetchbuf_valid_q;
+414                     
+415                         //  In case of flush, raise the flushed flag in all slots.
+416        1/1              if (flush_i) begin
+417        1/1                fetchbuf_flushed_d = '1;
+418                         end
+                        MISSING_ELSE
+419                         //  Free read entry (in the case of fall-through mode, free the entry
+420                         //  only if there is no pending fetch)
+421        1/1              if (fetchbuf_r &amp;&amp; (!FETCHBUF_FALLTHROUGH || !fetchbuf_w)) begin
+422        1/1                fetchbuf_valid_d[fetchbuf_rindex] = 1'b0;
+423                         end
+                        MISSING_ELSE
+424                         // Flush on bp_valid
+425        1/1              if (bp_valid) begin
+426        1/1                fetchbuf_flushed_d[fetchbuf_last_id_q] = 1'b1;
+427                         end
+                        MISSING_ELSE
+428                         // Free on exception
+429                         //if (fetchbuf_w_q &amp;&amp; ((CVA6Cfg.MmuPresent &amp;&amp; ex_s1) || bp_valid) || kill_req_q) begin
+430                         //  fetchbuf_valid_d[fetchbuf_windex_q] = 1'b0;
+431                         //end
+432                         //  Track a new outstanding operation in the fetch buffer
+433        1/1              if (fetchbuf_w) begin
+434        1/1                fetchbuf_flushed_d[fetchbuf_windex] = 1'b0;
+435        1/1                fetchbuf_valid_d[fetchbuf_windex]   = 1'b1;
+436                         end
+                        MISSING_ELSE
+437                       end
+438                     
+439                       always_ff @(posedge clk_i or negedge rst_ni) begin : fetchbuf_ff
+440        1/1              if (!rst_ni) begin
+441        1/1                fetchbuf_flushed_q &lt;= '0;
+442        1/1                fetchbuf_valid_q   &lt;= '0;
+443        1/1                fetchbuf_last_id_q &lt;= '0;
+444        1/1                fetchbuf_q         &lt;= '0;
+445                         end else begin
+446        1/1                fetchbuf_flushed_q &lt;= fetchbuf_flushed_d;
+447        1/1                fetchbuf_valid_q   &lt;= fetchbuf_valid_d;
+448        1/1                if (fetchbuf_w) begin
+449        1/1                  fetchbuf_last_id_q                &lt;= fetchbuf_windex;
+450        1/1                  fetchbuf_q[fetchbuf_windex].vaddr &lt;= vaddr_d;
+451                           end
+                        MISSING_ELSE
+452                         end
+453                       end
+454                     
+455                     
+456                     
+457                       typedef enum logic [1:0] {
+458                         TRANSPARENT,
+459                         REGISTRED
+460                       } obi_a_state_e;
+461                       obi_a_state_e obi_a_state_d, obi_a_state_q;
+462                     
+463                     
+464                       logic stall_obi, stall_translation;
+465                       logic data_req, data_rvalid;
+466                     
+467                       assign stall_ni = spec_req_non_idempot;
+468                       assign stall_obi = (obi_a_state_q == REGISTRED);  //&amp;&amp; !obi_load_rsp_i.gnt;
+469                       assign stall_translation = CVA6Cfg.MmuPresent ? areq_o.fetch_req &amp;&amp; (!arsp_i.fetch_valid) : 1'b0;
+470                       assign stall_instr_queue = instr_queue_ready;
+471                     
+472                       assign ex_s1 = (CVA6Cfg.MmuPresent &amp;&amp; arsp_i.fetch_exception.valid);
+473                     
+474                       // We need to flush the cache pipeline if:
+475                       // 1. We mispredicted
+476                       // 2. Want to flush the whole processor front-end
+477                       // 3. Need to replay an instruction because the fetch-fifo was full
+478                       assign kill_s1 = is_mispredict | flush_i | replay;
+479                       // if we have a valid branch-prediction we need to only kill the last cache request
+480                       // also if we killed the first stage we also need to kill the second stage (inclusive flush)
+481                       assign kill_s2 = kill_s1 | bp_valid;
+482                     
+483                       assign fetch_req_o.kill_req = kill_req_q || kill_s2 || ex_s1;
+484                     
+485                       assign data_rvalid = fetchbuf_r &amp;&amp; !fetchbuf_flushed_q[fetchbuf_rindex] &amp;&amp; !kill_s2;
+486                     
+487                       //assign obi_vaddr_d = pop_fetch ?  : obi_vaddr_qvaddr_d;
+488                       assign vaddr_d = (pop_fetch || kill_s2) ? npc_fetch_address : vaddr_q;
+489                       assign fetch_req_o.vaddr = npc_fetch_address;
+490                       assign paddr = CVA6Cfg.MmuPresent ? arsp_i.fetch_paddr : npc_fetch_address;
+491                     
+492                       assign data_req = (CVA6Cfg.MmuPresent ? fetchbuf_w_q &amp;&amp; !ex_s1 &amp;&amp; !bp_valid : fetchbuf_w);
+493                     
+494                       always_comb begin : p_fsm_common
+495                         // default assignmen
+496        1/1              kill_req_d = 1'b0;
+497        1/1              fetchbuf_w = 1'b0;
+498                         //response
+499        1/1              vaddr_rvalid = npc_fetch_address;
+500        1/1              rvalid    = 1'b0;
+501        1/1              ex_rvalid = 1'b0;
+502        1/1              pop_fetch = 1'b0; // release lsu_bypass fifo
+503                     
+504                         // REQUEST
+505                         //if (instr_queue_ready) begin
+506        1/1              areq_o.fetch_req = 1'b1;
+507        1/1              fetch_req_o.req = 1'b1;
+508        1/1              if (!CVA6Cfg.MmuPresent || fetch_rsp_i.ready) begin
+509        1/1                if (stall_ni || stall_obi || !instr_queue_ready || fetchbuf_full) begin
+510        1/1                  kill_req_d = CVA6Cfg.MmuPresent ? 1'b1 :  1'b0; // MmuPresent only : next cycle is s2 but we need to kill because not ready to sent tag
+511                           end else begin
+512        1/1                  fetchbuf_w  = !kill_s1 &amp;&amp; !flush_i; // record request into outstanding fetch fifo and trigger OBI request
+513        1/1                  pop_fetch = 1'b1;  // release lsu_bypass fifo
+514                           end
+515                         end
+                   <font color = "red">==>  MISSING_ELSE</font>
+516                         //end
+517                         // RETIRE FETCH
+518                         // we got an rvalid and it's corresponding request was not flushed
+519        1/1              if (data_rvalid) begin
+520        1/1                vaddr_rvalid = fetchbuf_q[fetchbuf_rindex].vaddr;
+521        1/1                rvalid    = !bp_valid &amp;&amp; !flush_i;
+522        1/1                ex_rvalid = 1'b0;
+523                           // RETIRE EXCEPTION (low priority)
+524        1/1              end else if (CVA6Cfg.MmuPresent &amp;&amp; ex_s1) begin
+525        <font color = "grey">unreachable  </font>      vaddr_rvalid = CVA6Cfg.MmuPresent ? fetchbuf_q[fetchbuf_windex_q].vaddr : npc_fetch_address;
+526        <font color = "grey">unreachable  </font>      rvalid    = !bp_valid &amp;&amp; !flush_i;
+527        <font color = "grey">unreachable  </font>      ex_rvalid = 1'b1;
+528        <font color = "grey">unreachable  </font>      pop_fetch = 1'b1; // release lsu_bypass fifo
+529                         end
+                        MISSING_ELSE
+530                     
+531                       end
+532                     
+533                       // ---------------
+534                       // Retire Load
+535                       // ---------------
+536                       assign fetchbuf_rindex = (CVA6Cfg.NrFetchBufEntries &gt; 1) ? fetchbuf_id_t'(obi_fetch_rsp_i.r.rid) : 1'b0;
+537                       assign fetchbuf_rdata = fetchbuf_q[fetchbuf_rindex];
+538                     
+539                       //  read the pending fetch buffer
+540                       assign fetchbuf_r = obi_fetch_rsp_i.rvalid;
+541                     
+542                     
+543                       //default obi state registred
+544                       assign obi_fetch_req_o.reqpar = !obi_fetch_req_o.req;
+545                       assign obi_fetch_req_o.a.addr = {
+546                         obi_a_state_q == TRANSPARENT ? paddr[CVA6Cfg.PLEN-1:CVA6Cfg.FETCH_ALIGN_BITS] : paddr_q[CVA6Cfg.PLEN-1:CVA6Cfg.FETCH_ALIGN_BITS],
+547                         {CVA6Cfg.FETCH_ALIGN_BITS{1'b0}}
+548                       };
+549                       assign obi_fetch_req_o.a.we = '0;
+550                       assign obi_fetch_req_o.a.be = '1;
+551                       assign obi_fetch_req_o.a.wdata = '0;
+552                       assign obi_fetch_req_o.a.aid = (!CVA6Cfg.MmuPresent &amp;&amp; (obi_a_state_q == TRANSPARENT)) ? fetchbuf_windex : fetchbuf_windex_q;
+553                       assign obi_fetch_req_o.a.a_optional.auser = '0;
+554                       assign obi_fetch_req_o.a.a_optional.wuser = '0;
+555                       assign obi_fetch_req_o.a.a_optional.atop = '0;
+556                       assign obi_fetch_req_o.a.a_optional.memtype[0] = '0;
+557                       assign obi_fetch_req_o.a.a_optional.memtype[1]= (!CVA6Cfg.MmuPresent &amp;&amp; (obi_a_state_q == TRANSPARENT)) ? paddr_is_cacheable : paddr_is_cacheable_q;
+558                       assign obi_fetch_req_o.a.a_optional.mid = '0;
+559                       assign obi_fetch_req_o.a.a_optional.prot[0] = '0;
+560                       assign obi_fetch_req_o.a.a_optional.prot[2:1] = 2'b11;
+561                       assign obi_fetch_req_o.a.a_optional.dbg = '0;
+562                       assign obi_fetch_req_o.a.a_optional.achk = '0;
+563                     
+564                       assign obi_fetch_req_o.rready = '1;  //always ready
+565                       assign obi_fetch_req_o.rreadypar = '0;
+566                     
+567                     
+568                     
+569                     
+570                       always_comb begin : p_fsm_obi_a
+571                         // default assignment
+572        1/1              obi_a_state_d = obi_a_state_q;
+573        1/1              obi_fetch_req_o.req    = 1'b0;
+574                     
+575        1/1              unique case (obi_a_state_q)
+576                           TRANSPARENT: begin
+577        1/1                  if (data_req) begin
+578        1/1                    obi_fetch_req_o.req = 1'b1;
+579        1/1                    if (!obi_fetch_rsp_i.gnt) begin
+580        1/1                      obi_a_state_d = REGISTRED;
+581                               end
+                        MISSING_ELSE
+582                             end
+                        MISSING_ELSE
+583                           end
+584                     
+585                           REGISTRED: begin
+586        1/1                  obi_fetch_req_o.req = 1'b1;
+587        1/1                  if (obi_fetch_rsp_i.gnt) begin
+588        1/1                    obi_a_state_d = TRANSPARENT;
+589                             end
+                        MISSING_ELSE
+590                           end
+591                     
+592                           default: begin
+593                             // we should never get here
+594        1/1                  obi_a_state_d = TRANSPARENT;
+595                           end
+596                         endcase
+597                       end
+598                     
+599                       // latch physical address for the tag cycle (one cycle after applying the index)
+600                       always_ff @(posedge clk_i or negedge rst_ni) begin
+601        1/1              if (~rst_ni) begin
+602        1/1                obi_a_state_q &lt;= TRANSPARENT;
+603        1/1                paddr_q &lt;= '0;
+604        1/1                paddr_is_cacheable_q &lt;= '0;
+605        1/1                kill_req_q &lt;= '0;
+606        1/1                fetchbuf_windex_q &lt;= '0;
+607        1/1                fetchbuf_w_q &lt;= '0;
+608        1/1                vaddr_q &lt;= '0;
+609                         end else begin
+610        1/1                if (obi_a_state_q == TRANSPARENT) begin
+611        1/1                  paddr_q &lt;= paddr;
+612        1/1                  paddr_is_cacheable_q &lt;= paddr_is_cacheable;
+613                           end
+                        MISSING_ELSE
+614        1/1                obi_a_state_q &lt;= obi_a_state_d;
+615        1/1                kill_req_q &lt;= kill_req_d;
+616                           //if (!ex_s1) begin
+617        1/1                fetchbuf_windex_q &lt;= fetchbuf_windex;
+618        1/1                fetchbuf_w_q &lt;= fetchbuf_w;
+619                           //end
+620        1/1                vaddr_q &lt;= vaddr_d;
+621                         end
+622                       end
+623                     
+624                       // Update Control Flow Predictions
+625                       bht_update_t bht_update;
+626                       btb_update_t btb_update;
+627                     
+628                       logic speculative_q, speculative_d;
+629                       assign speculative_d = (speculative_q &amp;&amp; !resolved_branch_i.valid || |is_branch || |is_return || |is_jalr) &amp;&amp; !flush_i;
+630                     
+631                       assign spec_req_non_idempot = CVA6Cfg.NonIdemPotenceEn ? speculative_d &amp;&amp; paddr_nonidempotent : 1'b0;
+632                     
+633                     
+634                       assign bht_update.valid = resolved_branch_i.valid
+635                                                     &amp; (resolved_branch_i.cf_type == ariane_pkg::Branch);
+636                       assign bht_update.pc = resolved_branch_i.pc;
+637                       assign bht_update.taken = resolved_branch_i.is_taken;
+638                       // only update mispredicted branches e.g. no returns from the RAS
+639                       assign btb_update.valid = resolved_branch_i.is_mispredict
+640                                                     &amp; (resolved_branch_i.cf_type == ariane_pkg::JumpR);
+641                       assign btb_update.pc = resolved_branch_i.pc;
+642                       assign btb_update.target_address = resolved_branch_i.target_address;
+643                     
+644                       // -------------------
+645                       // Next PC
+646                       // -------------------
+647                       // next PC (NPC) can come from (in order of precedence):
+648                       // 0. Default assignment/replay instruction
+649                       // 1. Branch Predict taken
+650                       // 2. Control flow change request (misprediction)
+651                       // 3. Return from environment call
+652                       // 4. Exception/Interrupt
+653                       // 5. Pipeline Flush because of CSR side effects
+654                       // Mis-predict handling is a little bit different
+655                       // select PC a.k.a PC Gen
+656                       always_comb begin : npc_select
+657                         automatic logic [CVA6Cfg.VLEN-1:0] fetch_address;
+658                         // check whether we come out of reset
+659                         // this is a workaround. some tools have issues
+660                         // having boot_addr_i in the asynchronous
+661                         // reset assignment to npc_q, even though
+662                         // boot_addr_i will be assigned a constant
+663                         // on the top-level.
+664        1/1              if (npc_rst_load_q) begin
+665        1/1                npc_d         = boot_addr_i;
+666        1/1                fetch_address = boot_addr_i;
+667                         end else begin
+668        1/1                fetch_address = npc_q;
+669                           // keep stable by default
+670        1/1                npc_d         = npc_q;
+671                         end
+672                         // 0. Branch Prediction
+673        1/1              if (bp_valid) begin
+674        1/1                fetch_address = predict_address;
+675        1/1                npc_d = predict_address;
+676                         end
+                        MISSING_ELSE
+677                         // 1. Default assignment
+678        1/1              if (pop_fetch) begin
+679        1/1                npc_d = {
+680                             fetch_address[CVA6Cfg.VLEN-1:CVA6Cfg.FETCH_ALIGN_BITS] + 1, {CVA6Cfg.FETCH_ALIGN_BITS{1'b0}}
+681                           };
+682                         end
+                        MISSING_ELSE
+683                         // 2. Replay instruction fetch
+684        1/1              if (replay) begin
+685        1/1                npc_d = replay_addr;
+686                         end
+                        MISSING_ELSE
+687                         // 3. Control flow change request
+688        1/1              if (is_mispredict) begin
+689        1/1                npc_d = resolved_branch_i.target_address;
+690                         end
+                        MISSING_ELSE
+691                         // 4. Return from environment call
+692        1/1              if (eret_i) begin
+693        1/1                npc_d = epc_i;
+694                         end
+                        MISSING_ELSE
+695                         // 5. Exception/Interrupt
+696        1/1              if (ex_valid_i) begin
+697        1/1                npc_d = trap_vector_base_i;
+698                         end
+                        MISSING_ELSE
+699                         // 6. Pipeline Flush because of CSR side effects
+700                         // On a pipeline flush start fetching from the next address
+701                         // of the instruction in the commit stage
+702                         // we either came here from a flush request of a CSR instruction or AMO,
+703                         // so as CSR or AMO instructions do not exist in a compressed form
+704                         // we can unconditionally do PC + 4 here
+705                         // or if the commit stage is halted, just take the current pc of the
+706                         // instruction in the commit stage
+707                         // IMPROVEMENT: This adder can at least be merged with the one in the csr_regfile stage
+708        1/1              if (set_pc_commit_i) begin
+709        1/1                npc_d = pc_commit_i + (halt_i ? '0 : {{CVA6Cfg.VLEN - 3{1'b0}}, 3'b100});
+710                         end
+                        MISSING_ELSE
+711                         // 7. Debug
+712                         // enter debug on a hard-coded base-address
+713        1/1              if (CVA6Cfg.DebugEn &amp;&amp; set_debug_pc_i)
+714        <font color = "grey">unreachable  </font>      npc_d = CVA6Cfg.DmBaseAddress[CVA6Cfg.VLEN-1:0] + CVA6Cfg.HaltAddress[CVA6Cfg.VLEN-1:0];
+                        MISSING_ELSE
+715        1/1              npc_fetch_address = fetch_address;
+716                       end
+717                     
+718                       logic [CVA6Cfg.FETCH_WIDTH-1:0] fetch_data;
+719                       logic fetch_valid_d;
+720                     
+721                       // re-align the cache line
+722                       assign fetch_data = ex_rvalid &amp;&amp; CVA6Cfg.MmuPresent ? '0 : obi_fetch_rsp_i.r.rdata &gt;&gt; {shamt, 4'b0};
+723                       assign fetch_valid_d = rvalid;
+724                       assign fetch_vaddr_d = vaddr_rvalid;
+725                     
+726                       always_ff @(posedge clk_i or negedge rst_ni) begin
+727        1/1              if (!rst_ni) begin
+728        1/1                npc_rst_load_q   &lt;= 1'b1;
+729        1/1                npc_q            &lt;= '0;
+730        1/1                speculative_q    &lt;= '0;
+731        1/1                fetch_data_q     &lt;= '0;
+732        1/1                fetch_valid_q    &lt;= 1'b0;
+733        1/1                fetch_vaddr_q    &lt;= 'b0;
+734        1/1                fetch_gpaddr_q   &lt;= 'b0;
+735        1/1                fetch_tinst_q    &lt;= 'b0;
+736        1/1                fetch_gva_q      &lt;= 1'b0;
+737        1/1                fetch_ex_valid_q &lt;= ariane_pkg::FE_NONE;
+738        1/1                btb_q            &lt;= '0;
+739        1/1                bht_q            &lt;= '0;
+740                         end else begin
+741        1/1                npc_rst_load_q &lt;= 1'b0;
+742        1/1                npc_q &lt;= npc_d;
+743        1/1                speculative_q &lt;= speculative_d;
+744        1/1                fetch_valid_q &lt;= fetch_valid_d;
+745        1/1                if (fetch_valid_d) begin
+746        1/1                  fetch_data_q  &lt;= fetch_data;
+747        1/1                  fetch_vaddr_q &lt;= fetch_vaddr_d;
+748        1/1                  if (CVA6Cfg.RVH) begin
+749        <font color = "grey">unreachable  </font>          fetch_gpaddr_q &lt;= arsp_i.fetch_exception.tval2[CVA6Cfg.GPLEN-1:0];
+750        <font color = "grey">unreachable  </font>          fetch_tinst_q  &lt;= arsp_i.fetch_exception.tinst;
+751        <font color = "grey">unreachable  </font>          fetch_gva_q    &lt;= arsp_i.fetch_exception.gva;
+752                             end else begin
+753        1/1                    fetch_gpaddr_q &lt;= 'b0;
+754        1/1                    fetch_tinst_q  &lt;= 'b0;
+755        1/1                    fetch_gva_q    &lt;= 1'b0;
+756                             end
+757                     
+758                             // Map the only three exceptions which can occur in the frontend to a two bit enum
+759        1/1                  if (CVA6Cfg.MmuPresent &amp;&amp; arsp_i.fetch_exception.cause == riscv::INSTR_GUEST_PAGE_FAULT) begin
+760        <font color = "grey">unreachable  </font>          fetch_ex_valid_q &lt;= ariane_pkg::FE_INSTR_GUEST_PAGE_FAULT;
+761        1/1                  end else if (CVA6Cfg.MmuPresent &amp;&amp; arsp_i.fetch_exception.cause == riscv::INSTR_PAGE_FAULT) begin
+762        <font color = "grey">unreachable  </font>          fetch_ex_valid_q &lt;= ariane_pkg::FE_INSTR_PAGE_FAULT;
+763        1/1                  end else if (CVA6Cfg.NrPMPEntries != 0 &amp;&amp; arsp_i.fetch_exception.cause == riscv::INSTR_ACCESS_FAULT) begin
+764        <font color = "grey">unreachable  </font>          fetch_ex_valid_q &lt;= ariane_pkg::FE_INSTR_ACCESS_FAULT;
+765                             end else begin
+766        1/1                    fetch_ex_valid_q &lt;= ariane_pkg::FE_NONE;
+767                             end
+768                             // save the uppermost prediction
+769        1/1                  btb_q &lt;= btb_prediction[CVA6Cfg.INSTR_PER_FETCH-1];
+770        1/1                  bht_q &lt;= bht_prediction[CVA6Cfg.INSTR_PER_FETCH-1];
+771                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod6.html" >frontend</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">Conditions</td><td>131</td><td>129</td><td>98.47</td></tr>
+<tr class="s9"><td class="lf">Logical</td><td>131</td><td>129</td><td>98.47</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       201
+ EXPRESSION (serving_unaligned ? bht_q : bht_prediction[addr[0][$clog2(32'b00000000000000000000000000000010):1]])
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       204
+ EXPRESSION (serving_unaligned ? btb_q : btb_prediction[addr[0][$clog2(32'b00000000000000000000000000000010):1]])
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       279
+ EXPRESSION (ras_predict.valid &amp; instr_queue_consumed[i])
+             --------1--------   -----------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       290
+ EXPRESSION (rvi_branch[i] &amp; bht_prediction_shifted[i].taken)
+             ------1------   ---------------2---------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       291
+ EXPRESSION (rvc_branch[i] &amp; bht_prediction_shifted[i].taken)
+             ------1------   ---------------2---------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       295
+ EXPRESSION (rvi_branch[i] &amp; rvi_imm[i][(32'b00000000000000000000000000100000 - 1)])
+             ------1------   ---------------------------2--------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       296
+ EXPRESSION (rvc_branch[i] &amp; rvc_imm[i][(32'b00000000000000000000000000100000 - 1)])
+             ------1------   ---------------------------2--------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       298
+ EXPRESSION (taken_rvi_cf[i] || taken_rvc_cf[i])
+             -------1-------    -------2-------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       309
+ EXPRESSION (rvc_call[i] ? 2 : 4)
+             -----1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       312
+ EXPRESSION (taken_rvc_cf[i] || taken_rvi_cf[i])
+             -------1-------    -------2-------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       313
+ EXPRESSION (taken_rvc_cf[i] ? rvc_imm[i] : rvi_imm[i])
+             -------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       324
+ EXPRESSION (((cf_type[i] != NoCF) &amp; (cf_type[i] != Return)) | ((cf_type[i] == Return) &amp; ras_predict.valid))
+             -----------------------1-----------------------   ----------------------2---------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       324
+ SUB-EXPRESSION ((cf_type[i] != NoCF) &amp; (cf_type[i] != Return))
+                 ----------1---------   -----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       324
+ SUB-EXPRESSION (cf_type[i] != NoCF)
+                ----------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       324
+ SUB-EXPRESSION (cf_type[i] != Return)
+                -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       324
+ SUB-EXPRESSION ((cf_type[i] == Return) &amp; ras_predict.valid)
+                 -----------1----------   --------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       324
+ SUB-EXPRESSION (cf_type[i] == Return)
+                -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       387
+ EXPRESSION (((&amp;fetchbuf_valid_q)) &amp;&amp; ( ! (FETCHBUF_FALLTHROUGH &amp;&amp; fetchbuf_r) ))
+             ----------1----------    ---------------------2--------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       387
+ SUB-EXPRESSION ( ! (FETCHBUF_FALLTHROUGH &amp;&amp; fetchbuf_r) )
+                    ------------------1-----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       387
+ SUB-EXPRESSION (FETCHBUF_FALLTHROUGH &amp;&amp; fetchbuf_r)
+                 ----------1---------    -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       409
+ EXPRESSION ((FETCHBUF_FALLTHROUGH &amp;&amp; fetchbuf_r) ? fetchbuf_rindex : fetchbuf_free_index)
+             ------------------1-----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       409
+ SUB-EXPRESSION (FETCHBUF_FALLTHROUGH &amp;&amp; fetchbuf_r)
+                 ----------1---------    -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       421
+ EXPRESSION (fetchbuf_r &amp;&amp; (((!FETCHBUF_FALLTHROUGH)) || ((!fetchbuf_w))))
+             -----1----    -----------------------2----------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       421
+ SUB-EXPRESSION (((!FETCHBUF_FALLTHROUGH)) || ((!fetchbuf_w)))
+                 ------------1------------    -------2-------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       468
+ EXPRESSION (obi_a_state_q == REGISTRED)
+            --------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       478
+ EXPRESSION (is_mispredict | flush_i | replay)
+             ------1------   ---2---   ---3--
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       481
+ EXPRESSION (kill_s1 | bp_valid)
+             ---1---   ----2---
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       483
+ EXPRESSION (kill_req_q || kill_s2 || ex_s1)
+             -----1----    ---2---    --3--
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>0</td><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td>0</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       485
+ EXPRESSION (fetchbuf_r &amp;&amp; ((!fetchbuf_flushed_q[fetchbuf_rindex])) &amp;&amp; ((!kill_s2)))
+             -----1----    --------------------2-------------------    ------3-----
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       488
+ EXPRESSION ((pop_fetch || kill_s2) ? npc_fetch_address : vaddr_q)
+             -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       488
+ SUB-EXPRESSION (pop_fetch || kill_s2)
+                 ----1----    ---2---
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       509
+ EXPRESSION (stall_ni || stall_obi || ((!instr_queue_ready)) || fetchbuf_full)
+             ----1---    ----2----    -----------3----------    ------4------
+</pre>
+<table class="noborder">
+<col span="4" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td>0</td><td>0</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       512
+ EXPRESSION (((!kill_s1)) &amp;&amp; ((!flush_i)))
+             ------1-----    ------2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       521
+ EXPRESSION (((!bp_valid)) &amp;&amp; ((!flush_i)))
+             ------1------    ------2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       526
+ EXPRESSION (((!bp_valid)) &amp;&amp; ((!flush_i)))
+             ------1------    ------2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       545
+ SUB-EXPRESSION 
+ Number  Term
+      1  (obi_a_state_q == TRANSPARENT) ? paddr[32'b00000000000000000000000000100001:32'b00000000000000000000000000000010] : paddr_q[32'b00000000000000000000000000100001:32'b00000000000000000000000000000010])
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       545
+ SUB-EXPRESSION (obi_a_state_q == TRANSPARENT)
+                ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       552
+ EXPRESSION ((((!1'b0)) &amp;&amp; (obi_a_state_q == TRANSPARENT)) ? fetchbuf_windex : fetchbuf_windex_q)
+             ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       552
+ SUB-EXPRESSION (((!1'b0)) &amp;&amp; (obi_a_state_q == TRANSPARENT))
+                 ----1----    ---------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       552
+ SUB-EXPRESSION (obi_a_state_q == TRANSPARENT)
+                ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       557
+ EXPRESSION ((((!1'b0)) &amp;&amp; (obi_a_state_q == TRANSPARENT)) ? paddr_is_cacheable : paddr_is_cacheable_q)
+             ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       557
+ SUB-EXPRESSION (((!1'b0)) &amp;&amp; (obi_a_state_q == TRANSPARENT))
+                 ----1----    ---------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       557
+ SUB-EXPRESSION (obi_a_state_q == TRANSPARENT)
+                ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       610
+ EXPRESSION (obi_a_state_q == TRANSPARENT)
+            ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       629
+ EXPRESSION (((speculative_q &amp;&amp; ((!resolved_branch_i.valid))) || ((|is_branch)) || ((|is_return)) || ((|is_jalr))) &amp;&amp; ((!flush_i)))
+             --------------------------------------------------1--------------------------------------------------    ------2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       629
+ SUB-EXPRESSION ((speculative_q &amp;&amp; ((!resolved_branch_i.valid))) || ((|is_branch)) || ((|is_return)) || ((|is_jalr)))
+                 -----------------------1-----------------------    -------2------    -------3------    ------4-----
+</pre>
+<table class="noborder">
+<col span="4" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       629
+ SUB-EXPRESSION (speculative_q &amp;&amp; ((!resolved_branch_i.valid)))
+                 ------1------    --------------2-------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       634
+ EXPRESSION (resolved_branch_i.valid &amp; (resolved_branch_i.cf_type == Branch))
+             -----------1-----------   ------------------2------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       634
+ SUB-EXPRESSION (resolved_branch_i.cf_type == Branch)
+                ------------------1------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       639
+ EXPRESSION (resolved_branch_i.is_mispredict &amp; (resolved_branch_i.cf_type == JumpR))
+             ---------------1---------------   ------------------2-----------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       639
+ SUB-EXPRESSION (resolved_branch_i.cf_type == JumpR)
+                ------------------1-----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       709
+ EXPRESSION (halt_i ? '0 : ({{(32'b00000000000000000000000000100000 - 3) {1'b0}}, 3'b100}))
+             ---1--
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_9">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_frontend">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

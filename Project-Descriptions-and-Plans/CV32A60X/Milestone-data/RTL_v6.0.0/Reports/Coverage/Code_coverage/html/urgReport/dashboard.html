@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Dashboard</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.colResizable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    }  });
+  $("table").colResizable({    liveDrag:true,
+    fixed:false,
+    draggingClass:"dragging"
+  });
+});
+</script>
+</head>
+<body><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Dashboard</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-center">
+Date: Fri Apr 18 07:04:35 2025
+<br clear=all>
+User: runner_riscv-unsecure
+<br clear=all>
+Version: W-2024.09-SP1-1<br clear=all>
+Command line: urg -warn none -hvp_proj cva6_embedded -format both -group instcov_for_score -hvp_attributes weight+description+Comment -dir vcs_results/default/vcs.d/simv.vdb -plan cva6.hvp -tgl portsonly 
+<br clear=all>
+Number of tests: 2356<br clear=all>
+<hr>
+<b>Scores for Verification Plan</b><br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td nowrap width=65>SCORE</td><td nowrap width=65>LINE</td><td nowrap width=65>COND</td><td nowrap width=65>ASSERT</td><td nowrap width=65>GROUP</td><td nowrap width=65 class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.02</td>
+<td class="s9 cl rt"> 99.79</td>
+<td class="s9 cl rt"> 98.39</td>
+<td class="s9 cl rt"> 92.31</td>
+<td class="s9 cl rt"> 97.58</td>
+<td><a href="hvp.CVA6 Verification Master Plan.html#tag_urg_hvp_CVA6 Verification Master Plan" >CVA6&nbsp;Verification&nbsp;Master&nbsp;Plan</a></td>
+</tr></table><br clear=all>
+<hr>
+<b>Total Coverage Summary</b>&nbsp;<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td nowrap width=65>SCORE</td><td nowrap width=65>LINE</td><td nowrap width=65>COND</td><td nowrap width=65>ASSERT</td><td nowrap width=65>GROUP</td></tr><tr>
+<td class="s9 cl rt"> 90.77</td>
+<td class="s9 cl rt"> 99.79</td>
+<td class="s9 cl rt"> 98.39</td>
+<td class="s6 cl rt"> 66.06</td>
+<td class="s9 cl rt"> 98.85</td>
+</tr></table><br clear=all>
+<hr>
+<b>Hierarchical coverage data for top-level instances</b>&nbsp;<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td nowrap width=65>SCORE</td><td nowrap width=65>LINE</td><td nowrap width=65>COND</td><td nowrap width=65>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 88.08</td>
+<td class="s9 cl rt"> 99.79</td>
+<td class="s9 cl rt"> 98.39</td>
+<td class="s6 cl rt"> 66.06</td>
+<td class="wordwrap"><a href="mod108.html#inst_tag_260" >uvmt_cva6_tb</a></td>
+</tr></table><br clear=all>
+<hr>
+<b>Total Module Definition Coverage Summary</b>&nbsp;<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td nowrap width=65>SCORE</td><td nowrap width=65>LINE</td><td nowrap width=65>COND</td><td nowrap width=65>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 90.31</td>
+<td class="s9 cl rt"> 99.78</td>
+<td class="s9 cl rt"> 98.81</td>
+<td class="s7 cl rt"> 72.34</td>
+</tr></table><br clear=all>
+<hr>
+<b>Total Groups Coverage Summary</b>&nbsp;<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td nowrap width=65>SCORE</td><td nowrap width=65>INST SCORE</td><td nowrap width=65>WEIGHT</td></tr><tr>
+<td class="s9 cl rt"> 98.85</td>
+<td class="s9 cl rt"> 98.85</td>
+<td class="wht cl rt">1     </td>
+</tr></table></div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

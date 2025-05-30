@@ -1,0 +1,37 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.ISA
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.74 --     --     --      99.74 
+
+Attribute/Annotation values:
+  description: 
+    Instruction Set Architecture
+    Specification: Done, Dvplan: Done, Verification execution: Done
+
+
+-------------------------------------------------------------------------------
+
+Sub-features:
+
+SCORE  LINE   COND   ASSERT GROUP  NAME                             
+ 99.46 --     --     --      99.46 RV32I                            
+100.00 --     --     --     100.00 RV32M                            
+ 99.97 --     --     --      99.97 RV32C                            
+100.00 --     --     --     100.00 RV32ZICSR                        
+ 99.95 --     --     --      99.95 RV32ZCB                          
+ 99.67 --     --     --      99.67 RV32ZB                           
+ 98.84 --     --     --      98.84 Instructions execution sequences 
+100.00 --     --     --     100.00 Illegal instructions             
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+--     --     --     --     --     
+
+
+

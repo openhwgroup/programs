@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: cva6_pipeline</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_cva6_pipeline'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_cva6_pipeline')">cva6_pipeline</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod38.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod38.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/cva6_pipeline.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/cva6_pipeline.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod38.html#inst_tag_151"  onclick="showContent('inst_tag_151')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod38.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod38.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_cva6_pipeline'>
+<hr>
+<a name="inst_tag_151"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_151" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod38.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod38.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.09</td>
+<td class="s9 cl rt"> 99.79</td>
+<td class="s9 cl rt"> 98.39</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod44.html#inst_tag_191" >cva6_tb_wrapper_i</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod62.html#inst_tag_212" id="tag_urg_inst_212">commit_stage_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod77.html#inst_tag_227" id="tag_urg_inst_227">controller_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod83.html#inst_tag_233" id="tag_urg_inst_233">csr_regfile_i</a></td>
+<td class="s9 cl rt"> 98.78</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 97.56</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod40.html#inst_tag_153" id="tag_urg_inst_153">ex_stage_i</a></td>
+<td class="s9 cl rt"> 99.81</td>
+<td class="s9 cl rt"> 99.81</td>
+<td class="s9 cl rt"> 99.81</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod6.html#inst_tag_9" id="tag_urg_inst_9">i_frontend</a></td>
+<td class="s9 cl rt"> 99.70</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 99.39</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod89.html#inst_tag_239" id="tag_urg_inst_239">id_stage_i</a></td>
+<td class="s9 cl rt"> 99.12</td>
+<td class="s9 cl rt"> 99.42</td>
+<td class="s9 cl rt"> 98.81</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod98.html#inst_tag_249" id="tag_urg_inst_249">issue_stage_i</a></td>
+<td class="s9 cl rt"> 97.36</td>
+<td class="s9 cl rt"> 99.62</td>
+<td class="s9 cl rt"> 95.10</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_cva6_pipeline'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod38.html" >cva6_pipeline</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>16</td><td>16</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>760</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>770</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">INITIAL</td><td>1296</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<pre class="code"><br clear=all>
+759                       always_comb begin : gen_cvxif_input_assignement
+760        1/1              x_compressed_ready = cvxif_resp_i.compressed_ready;
+761        1/1              x_compressed_resp  = cvxif_resp_i.compressed_resp;
+762        1/1              x_issue_ready      = cvxif_resp_i.issue_ready;
+763        1/1              x_issue_resp       = cvxif_resp_i.issue_resp;
+764        1/1              x_register_ready   = cvxif_resp_i.register_ready;
+765        1/1              x_result_valid     = cvxif_resp_i.result_valid;
+766        1/1              x_result           = cvxif_resp_i.result;
+767                       end
+768                       if (CVA6Cfg.CvxifEn) begin
+769                         always_comb begin : gen_cvxif_output_assignement
+770        1/1                cvxif_req.compressed_valid = x_compressed_valid;
+771        1/1                cvxif_req.compressed_req   = x_compressed_req;
+772        1/1                cvxif_req.issue_valid      = x_issue_valid;
+773        1/1                cvxif_req.issue_req        = x_issue_req;
+774        1/1                cvxif_req.register_valid   = x_register_valid;
+775        1/1                cvxif_req.register         = x_register;
+776        1/1                cvxif_req.commit_valid     = x_commit_valid;
+777        1/1                cvxif_req.commit           = x_commit;
+778        1/1                cvxif_req.result_ready     = x_result_ready;
+779                         end
+780                         assign trans_id_ex_id[X_WB] = x_trans_id_ex_id;
+781                         assign wbdata_ex_id[X_WB]   = x_result_ex_id;
+782                         assign ex_ex_ex_id[X_WB]    = x_exception_ex_id;
+783                         assign wt_valid_ex_id[X_WB] = x_valid_ex_id;
+784                       end else begin
+785                         assign cvxif_req = '0;
+786                       end
+787                       assign cvxif_req_o = cvxif_req;
+788                     
+789                       // ---------
+790                       // Issue
+791                       // ---------
+792                       issue_stage #(
+793                           .CVA6Cfg(CVA6Cfg),
+794                           .bp_resolve_t(bp_resolve_t),
+795                           .branchpredict_sbe_t(branchpredict_sbe_t),
+796                           .exception_t(exception_t),
+797                           .fu_data_t(fu_data_t),
+798                           .scoreboard_entry_t(scoreboard_entry_t),
+799                           .writeback_t(writeback_t),
+800                           .x_issue_req_t(x_issue_req_t),
+801                           .x_issue_resp_t(x_issue_resp_t),
+802                           .x_register_t(x_register_t),
+803                           .x_commit_t(x_commit_t)
+804                       ) issue_stage_i (
+805                           .clk_i,
+806                           .rst_ni,
+807                           .sb_full_o               (sb_full),
+808                           .flush_unissued_instr_i  (flush_unissued_instr_ctrl_id),
+809                           .flush_i                 (flush_ctrl_id),
+810                           // Accelerator
+811                           .stall_i                 (('0  /*FIXME*/)),
+812                           // ID Stage
+813                           .decoded_instr_i         (issue_entry_id_issue),
+814                           .decoded_instr_i_prev    (issue_entry_id_issue_prev),
+815                           .orig_instr_i            (orig_instr_id_issue),
+816                           .decoded_instr_valid_i   (issue_entry_valid_id_issue),
+817                           .is_ctrl_flow_i          (is_ctrl_fow_id_issue),
+818                           .decoded_instr_ack_o     (issue_instr_issue_id),
+819                           // Functional Units
+820                           .rs1_forwarding_o        (rs1_forwarding_id_ex),
+821                           .rs2_forwarding_o        (rs2_forwarding_id_ex),
+822                           .fu_data_o               (fu_data_id_ex),
+823                           .pc_o                    (pc_id_ex),
+824                           .is_zcmt_o               (zcmt_id_ex),
+825                           .is_compressed_instr_o   (is_compressed_instr_id_ex),
+826                           .tinst_o                 (tinst_ex),
+827                           // fixed latency unit ready
+828                           .flu_ready_i             (flu_ready_ex_id),
+829                           // ALU
+830                           .alu_valid_o             (alu_valid_id_ex),
+831                           // Branches and Jumps
+832                           .branch_valid_o          (branch_valid_id_ex),            // branch is valid
+833                           .branch_predict_o        (branch_predict_id_ex),          // branch predict to ex
+834                           .resolve_branch_i        (resolve_branch_ex_id),          // in order to resolve the branch
+835                           // LSU
+836                           .lsu_ready_i             (lsu_ready_ex_id),
+837                           .lsu_valid_o             (lsu_valid_id_ex),
+838                           // Multiplier
+839                           .mult_valid_o            (mult_valid_id_ex),
+840                           // FPU
+841                           .fpu_ready_i             (fpu_ready_ex_id),
+842                           .fpu_valid_o             (fpu_valid_id_ex),
+843                           .fpu_fmt_o               (fpu_fmt_id_ex),
+844                           .fpu_rm_o                (fpu_rm_id_ex),
+845                           // ALU2
+846                           .alu2_valid_o            (alu2_valid_id_ex),
+847                           // CSR
+848                           .csr_valid_o             (csr_valid_id_ex),
+849                           // CVXIF
+850                           .xfu_valid_o             (x_issue_valid_id_ex),
+851                           .xfu_ready_i             (x_issue_ready_ex_id),
+852                           .x_off_instr_o           (x_off_instr_id_ex),
+853                           .hart_id_i               (hart_id_i),
+854                           .x_issue_ready_i         (x_issue_ready),
+855                           .x_issue_resp_i          (x_issue_resp),
+856                           .x_issue_valid_o         (x_issue_valid),
+857                           .x_issue_req_o           (x_issue_req),
+858                           .x_register_ready_i      (x_register_ready),
+859                           .x_register_valid_o      (x_register_valid),
+860                           .x_register_o            (x_register),
+861                           .x_commit_valid_o        (x_commit_valid),
+862                           .x_commit_o              (x_commit),
+863                           .x_transaction_rejected_o(x_transaction_rejected),
+864                           // Accelerator
+865                           .issue_instr_o           (  /*FIXME*/),
+866                           .issue_instr_hs_o        (  /*FIXME*/),
+867                           // Commit
+868                           .trans_id_i              (trans_id_ex_id),
+869                           .resolved_branch_i       (resolved_branch),
+870                           .wbdata_i                (wbdata_ex_id),
+871                           .ex_ex_i                 (ex_ex_ex_id),
+872                           .wt_valid_i              (wt_valid_ex_id),
+873                           .x_we_i                  (x_we_ex_id),
+874                           .x_rd_i                  (x_rd_ex_id),
+875                     
+876                           .waddr_i              (waddr_commit_id),
+877                           .wdata_i              (wdata_commit_id),
+878                           .we_gpr_i             (we_gpr_commit_id),
+879                           .we_fpr_i             (we_fpr_commit_id),
+880                           .commit_instr_o       (commit_instr_id_commit),
+881                           .commit_drop_o        (commit_drop_id_commit),
+882                           .commit_ack_i         (commit_ack_commit_id),
+883                           // Performance Counters
+884                           .stall_issue_o        (stall_issue),
+885                           //RVFI
+886                           .rvfi_issue_pointer_o (rvfi_issue_pointer),
+887                           .rvfi_commit_pointer_o(rvfi_commit_pointer),
+888                           .rvfi_rs1_o           (rvfi_rs1),
+889                           .rvfi_rs2_o           (rvfi_rs2)
+890                       );
+891                     
+892                       // ---------
+893                       // EX
+894                       // ---------
+895                       ex_stage #(
+896                           .CVA6Cfg            (CVA6Cfg),
+897                           .bp_resolve_t       (bp_resolve_t),
+898                           .branchpredict_sbe_t(branchpredict_sbe_t),
+899                           .load_req_t         (load_req_t),
+900                           .load_rsp_t         (load_rsp_t),
+901                           .obi_store_req_t    (obi_store_req_t),
+902                           .obi_store_rsp_t    (obi_store_rsp_t),
+903                           .obi_amo_req_t      (obi_amo_req_t),
+904                           .obi_amo_rsp_t      (obi_amo_rsp_t),
+905                           .obi_load_req_t     (obi_load_req_t),
+906                           .obi_load_rsp_t     (obi_load_rsp_t),
+907                           .obi_mmu_ptw_req_t  (obi_mmu_ptw_req_t),
+908                           .obi_mmu_ptw_rsp_t  (obi_mmu_ptw_rsp_t),
+909                           .exception_t        (exception_t),
+910                           .fu_data_t          (fu_data_t),
+911                           .fetch_areq_t       (fetch_areq_t),
+912                           .fetch_arsp_t       (fetch_arsp_t),
+913                           .lsu_ctrl_t         (lsu_ctrl_t),
+914                           .x_result_t         (x_result_t)
+915                       ) ex_stage_i (
+916                           .clk_i(clk_i),
+917                           .rst_ni(rst_ni),
+918                           .debug_mode_i(debug_mode),
+919                           .flush_i(flush_ctrl_ex),
+920                           .rs1_forwarding_i(rs1_forwarding_id_ex),
+921                           .rs2_forwarding_i(rs2_forwarding_id_ex),
+922                           .fu_data_i(fu_data_id_ex),
+923                           .pc_i(pc_id_ex),
+924                           .is_zcmt_i(zcmt_id_ex),
+925                           .is_compressed_instr_i(is_compressed_instr_id_ex),
+926                           .tinst_i(tinst_ex),
+927                           // fixed latency units
+928                           .flu_result_o(flu_result_ex_id),
+929                           .flu_trans_id_o(flu_trans_id_ex_id),
+930                           .flu_valid_o(flu_valid_ex_id),
+931                           .flu_exception_o(flu_exception_ex_id),
+932                           .flu_ready_o(flu_ready_ex_id),
+933                           // ALU
+934                           .alu_valid_i(alu_valid_id_ex),
+935                           // Branches and Jumps
+936                           .branch_valid_i(branch_valid_id_ex),
+937                           .branch_predict_i(branch_predict_id_ex),  // branch predict to ex
+938                           .resolved_branch_o(resolved_branch),
+939                           .resolve_branch_o(resolve_branch_ex_id),
+940                           // CSR
+941                           .csr_valid_i(csr_valid_id_ex),
+942                           .csr_addr_o(csr_addr_ex_csr),
+943                           .csr_commit_i(csr_commit_commit_ex),  // from commit
+944                           .csr_hs_ld_st_inst_o(csr_hs_ld_st_inst_ex),  // signals a Hypervisor Load/Store Instruction
+945                           // MULT
+946                           .mult_valid_i(mult_valid_id_ex),
+947                           // LSU
+948                           .lsu_ready_o(lsu_ready_ex_id),
+949                           .lsu_valid_i(lsu_valid_id_ex),
+950                     
+951                           .load_result_o   (load_result_ex_id),
+952                           .load_trans_id_o (load_trans_id_ex_id),
+953                           .load_valid_o    (load_valid_ex_id),
+954                           .load_exception_o(load_exception_ex_id),
+955                     
+956                           .store_result_o   (store_result_ex_id),
+957                           .store_trans_id_o (store_trans_id_ex_id),
+958                           .store_valid_o    (store_valid_ex_id),
+959                           .store_exception_o(store_exception_ex_id),
+960                     
+961                           .lsu_commit_i            (lsu_commit_commit_ex),           // from commit
+962                           .lsu_commit_ready_o      (lsu_commit_ready_ex_commit),     // to commit
+963                           .commit_tran_id_i        (lsu_commit_trans_id),            // from commit
+964                           // Accelerator
+965                           .stall_st_pending_i      ('0  /*FIXME*/),
+966                           .no_st_pending_o         (no_st_pending_ex),               //
+967                           // FPU
+968                           .fpu_ready_o             (fpu_ready_ex_id),
+969                           .fpu_valid_i             (fpu_valid_id_ex),
+970                           .fpu_fmt_i               (fpu_fmt_id_ex),
+971                           .fpu_rm_i                (fpu_rm_id_ex),
+972                           .fpu_frm_i               (frm_csr_id_issue_ex),
+973                           .fpu_prec_i              (fprec_csr_ex),
+974                           .fpu_trans_id_o          (fpu_trans_id_ex_id),
+975                           .fpu_result_o            (fpu_result_ex_id),
+976                           .fpu_valid_o             (fpu_valid_ex_id),
+977                           .fpu_exception_o         (fpu_exception_ex_id),
+978                           // ALU2
+979                           .alu2_valid_i            (alu2_valid_id_ex),
+980                           .amo_valid_commit_i      (amo_valid_commit),
+981                           // CoreV-X-Interface
+982                           .x_valid_i               (x_issue_valid_id_ex),
+983                           .x_ready_o               (x_issue_ready_ex_id),
+984                           .x_off_instr_i           (x_off_instr_id_ex),
+985                           .x_transaction_rejected_i(x_transaction_rejected),
+986                           .x_trans_id_o            (x_trans_id_ex_id),
+987                           .x_exception_o           (x_exception_ex_id),
+988                           .x_result_o              (x_result_ex_id),
+989                           .x_valid_o               (x_valid_ex_id),
+990                           .x_we_o                  (x_we_ex_id),
+991                           .x_rd_o                  (x_rd_ex_id),
+992                           .x_result_valid_i        (x_result_valid),
+993                           .x_result_i              (x_result),
+994                           .x_result_ready_o        (x_result_ready),
+995                           // Accelerator
+996                           .acc_valid_i             ('0  /*FIXME*/),
+997                           // Performance counters
+998                           .itlb_miss_o             (itlb_miss_ex_perf),
+999                           .dtlb_miss_o             (dtlb_miss_ex_perf),
+1000                          // Memory Management
+1001                          .enable_translation_i    (enable_translation_csr_ex),      // from CSR
+1002                          .enable_g_translation_i  (enable_g_translation_csr_ex),    // from CSR
+1003                          .en_ld_st_translation_i  (en_ld_st_translation_csr_ex),
+1004                          .en_ld_st_g_translation_i(en_ld_st_g_translation_csr_ex),
+1005                          .flush_tlb_i             (flush_tlb_ctrl_ex),
+1006                          .flush_tlb_vvma_i        (flush_tlb_vvma_ctrl_ex),
+1007                          .flush_tlb_gvma_i        (flush_tlb_gvma_ctrl_ex),
+1008                          .priv_lvl_i              (priv_lvl),                       // from CSR
+1009                          .v_i                     (v),                              // from CSR
+1010                          .ld_st_priv_lvl_i        (ld_st_priv_lvl_csr_ex),          // from CSR
+1011                          .ld_st_v_i               (ld_st_v_csr_ex),                 // from CSR
+1012                          .sum_i                   (sum_csr_ex),                     // from CSR
+1013                          .vs_sum_i                (vs_sum_csr_ex),                  // from CSR
+1014                          .mxr_i                   (mxr_csr_ex),                     // from CSR
+1015                          .vmxr_i                  (vmxr_csr_ex),                    // from CSR
+1016                          .satp_ppn_i              (satp_ppn_csr_ex),                // from CSR
+1017                          .asid_i                  (asid_csr_ex),                    // from CSR
+1018                          .vsatp_ppn_i             (vsatp_ppn_csr_ex),               // from CSR
+1019                          .vs_asid_i               (vs_asid_csr_ex),                 // from CSR
+1020                          .hgatp_ppn_i             (hgatp_ppn_csr_ex),               // from CSR
+1021                          .vmid_i                  (vmid_csr_ex),                    // from CSR
+1022                          .fetch_areq_i            (fetch_areq_frontend_ex),
+1023                          .fetch_arsp_o            (fetch_arsp_ex_frontend),
+1024                          // DCACHE interfaces
+1025                          .obi_store_req_o         (obi_store_req_o),
+1026                          .obi_store_rsp_i         (obi_store_rsp_i),
+1027                          .obi_amo_req_o           (obi_amo_req_o),
+1028                          .obi_amo_rsp_i           (obi_amo_rsp_i),
+1029                          .load_req_o              (load_req_o),
+1030                          .load_rsp_i              (load_rsp_i),
+1031                          .obi_load_req_o          (obi_load_req_o),
+1032                          .obi_load_rsp_i          (obi_load_rsp_i),
+1033                          .obi_mmu_ptw_req_o       (obi_mmu_ptw_req_o),
+1034                          .obi_mmu_ptw_rsp_i       (obi_mmu_ptw_rsp_i),
+1035                    
+1036                          .dcache_wbuffer_empty_i (dcache_wbuffer_empty_i),
+1037                          .dcache_wbuffer_not_ni_i(dcache_wbuffer_not_ni_i),
+1038                          // PMP
+1039                          .pmpcfg_i               (pmpcfg),
+1040                          .pmpaddr_i              (pmpaddr),
+1041                          //RVFI
+1042                          .rvfi_lsu_ctrl_o        (rvfi_lsu_ctrl),
+1043                          .rvfi_mem_paddr_o       (rvfi_mem_paddr)
+1044                      );
+1045                    
+1046                      // ---------
+1047                      // Commit
+1048                      // ---------
+1049                    
+1050                      // we have to make sure that the whole write buffer path is empty before
+1051                      // used e.g. for fence instructions.
+1052                      assign no_st_pending_commit = no_st_pending_ex &amp; dcache_wbuffer_empty_i;
+1053                    
+1054                      commit_stage #(
+1055                          .CVA6Cfg(CVA6Cfg),
+1056                          .exception_t(exception_t),
+1057                          .scoreboard_entry_t(scoreboard_entry_t),
+1058                          .obi_amo_rsp_t(obi_amo_rsp_t)
+1059                      ) commit_stage_i (
+1060                          .clk_i,
+1061                          .rst_ni,
+1062                          .halt_i            (halt_ctrl),
+1063                          .flush_dcache_i    (dcache_flush_o),
+1064                          .exception_o       (ex_commit),
+1065                          .dirty_fp_state_o  (dirty_fp_state),
+1066                          .single_step_i     (single_step_csr_commit),         // // Accelerator /*FIXME*/
+1067                          .commit_instr_i    (commit_instr_id_commit),
+1068                          .commit_drop_i     (commit_drop_id_commit),
+1069                          .commit_ack_o      (commit_ack_commit_id),
+1070                          .commit_macro_ack_o(commit_macro_ack),
+1071                          .waddr_o           (waddr_commit_id),
+1072                          .wdata_o           (wdata_commit_id),
+1073                          .we_gpr_o          (we_gpr_commit_id),
+1074                          .we_fpr_o          (we_fpr_commit_id),
+1075                          .obi_amo_rsp_i     (obi_amo_rsp_i),
+1076                          .pc_o              (pc_commit),
+1077                          .csr_op_o          (csr_op_commit_csr),
+1078                          .csr_wdata_o       (csr_wdata_commit_csr),
+1079                          .csr_rdata_i       (csr_rdata_csr_commit),
+1080                          .csr_write_fflags_o(csr_write_fflags_commit_cs),
+1081                          .csr_exception_i   (csr_exception_csr_commit),
+1082                          .commit_lsu_o      (lsu_commit_commit_ex),
+1083                          .commit_lsu_ready_i(lsu_commit_ready_ex_commit),
+1084                          .commit_tran_id_o  (lsu_commit_trans_id),
+1085                          .amo_valid_commit_o(amo_valid_commit),
+1086                          .no_st_pending_i   (no_st_pending_commit),
+1087                          .commit_csr_o      (csr_commit_commit_ex),
+1088                          .fence_i_o         (fence_i_commit_controller),
+1089                          .fence_o           (fence_commit_controller),
+1090                          .flush_commit_o    (flush_commit),
+1091                          .sfence_vma_o      (sfence_vma_commit_controller),
+1092                          .hfence_vvma_o     (hfence_vvma_commit_controller),
+1093                          .hfence_gvma_o     (hfence_gvma_commit_controller)
+1094                      );
+1095                    
+1096                      assign commit_ack = commit_macro_ack &amp; ~(commit_drop_id_commit &amp; CVA6Cfg.SpeculativeSb);
+1097                    
+1098                      // ---------
+1099                      // CSR
+1100                      // ---------
+1101                      csr_regfile #(
+1102                          .CVA6Cfg           (CVA6Cfg),
+1103                          .exception_t       (exception_t),
+1104                          .jvt_t             (jvt_t),
+1105                          .irq_ctrl_t        (irq_ctrl_t),
+1106                          .scoreboard_entry_t(scoreboard_entry_t),
+1107                          .rvfi_probes_csr_t (rvfi_probes_csr_t),
+1108                          .MHPMCounterNum    (MHPMCounterNum)
+1109                      ) csr_regfile_i (
+1110                          .clk_i,
+1111                          .rst_ni,
+1112                          .time_irq_i,
+1113                          .flush_o                 (flush_csr_ctrl),
+1114                          .halt_csr_o              (halt_csr_ctrl),
+1115                          .commit_instr_i          (commit_instr_id_commit[0]),
+1116                          .commit_ack_i            (commit_ack),
+1117                          .boot_addr_i             (boot_addr_i[CVA6Cfg.VLEN-1:0]),
+1118                          .hart_id_i               (hart_id_i[CVA6Cfg.XLEN-1:0]),
+1119                          .ex_i                    (ex_commit),
+1120                          .csr_op_i                (csr_op_commit_csr),
+1121                          .csr_addr_i              (csr_addr_ex_csr),
+1122                          .csr_wdata_i             (csr_wdata_commit_csr),
+1123                          .csr_rdata_o             (csr_rdata_csr_commit),
+1124                          .dirty_fp_state_i        (dirty_fp_state),
+1125                          .csr_write_fflags_i      (csr_write_fflags_commit_cs),
+1126                          // Accelerator
+1127                          .dirty_v_state_i         ('0  /*FIXME*/),
+1128                          .pc_i                    (pc_commit),
+1129                          .csr_exception_o         (csr_exception_csr_commit),
+1130                          .epc_o                   (epc_commit_pcgen),
+1131                          .eret_o                  (eret),
+1132                          .trap_vector_base_o      (trap_vector_base_commit_pcgen),
+1133                          .priv_lvl_o              (priv_lvl),
+1134                          .v_o                     (v),
+1135                          // Accelerator
+1136                          .acc_fflags_ex_i         ('0  /*FIXME*/),
+1137                          .acc_fflags_ex_valid_i   ('0  /*FIXME*/),
+1138                          .fs_o                    (fs),
+1139                          .vfs_o                   (vfs),
+1140                          .fflags_o                (fflags_csr_commit),
+1141                          .frm_o                   (frm_csr_id_issue_ex),
+1142                          .fprec_o                 (fprec_csr_ex),
+1143                          .vs_o                    (vs),
+1144                          .irq_ctrl_o              (irq_ctrl_csr_id),
+1145                          .en_translation_o        (enable_translation_csr_ex),
+1146                          .en_g_translation_o      (enable_g_translation_csr_ex),
+1147                          .en_ld_st_translation_o  (en_ld_st_translation_csr_ex),
+1148                          .en_ld_st_g_translation_o(en_ld_st_g_translation_csr_ex),
+1149                          .ld_st_priv_lvl_o        (ld_st_priv_lvl_csr_ex),
+1150                          .ld_st_v_o               (ld_st_v_csr_ex),
+1151                          .csr_hs_ld_st_inst_i     (csr_hs_ld_st_inst_ex),
+1152                          .sum_o                   (sum_csr_ex),
+1153                          .vs_sum_o                (vs_sum_csr_ex),
+1154                          .mxr_o                   (mxr_csr_ex),
+1155                          .vmxr_o                  (vmxr_csr_ex),
+1156                          .satp_ppn_o              (satp_ppn_csr_ex),
+1157                          .asid_o                  (asid_csr_ex),
+1158                          .vsatp_ppn_o             (vsatp_ppn_csr_ex),
+1159                          .vs_asid_o               (vs_asid_csr_ex),
+1160                          .hgatp_ppn_o             (hgatp_ppn_csr_ex),
+1161                          .vmid_o                  (vmid_csr_ex),
+1162                          .irq_i,
+1163                          .ipi_i,
+1164                          .debug_req_i,
+1165                          .set_debug_pc_o          (set_debug_pc),
+1166                          .tvm_o                   (tvm_csr_id),
+1167                          .tw_o                    (tw_csr_id),
+1168                          .vtw_o                   (vtw_csr_id),
+1169                          .tsr_o                   (tsr_csr_id),
+1170                          .hu_o                    (hu),
+1171                          .debug_mode_o            (debug_mode),
+1172                          .single_step_o           (single_step_csr_commit),
+1173                          .icache_en_o             (icache_enable_o),
+1174                          .dcache_en_o             (dcache_enable_o),
+1175                          // Accelerator
+1176                          .acc_cons_en_o           (  /*FIXME*/),
+1177                          .perf_addr_o             (addr_csr_perf),
+1178                          .perf_data_o             (data_csr_perf),
+1179                          .perf_data_i             (data_perf_csr),
+1180                          .perf_we_o               (we_csr_perf),
+1181                          .pmpcfg_o                (pmpcfg),
+1182                          .pmpaddr_o               (pmpaddr),
+1183                          .mcountinhibit_o         (mcountinhibit_csr_perf),
+1184                          .jvt_o                   (jvt),
+1185                          //RVFI
+1186                          .rvfi_csr_o              (rvfi_csr)
+1187                      );
+1188                    
+1189                      // ------------------------
+1190                      // Performance Counters
+1191                      // ------------------------
+1192                      if (CVA6Cfg.PerfCounterEn) begin : gen_perf_counter
+1193                        perf_counters #(
+1194                            .CVA6Cfg           (CVA6Cfg),
+1195                            .bp_resolve_t      (bp_resolve_t),
+1196                            .exception_t       (exception_t),
+1197                            .scoreboard_entry_t(scoreboard_entry_t),
+1198                            .fetch_req_t       (fetch_req_t),
+1199                            .obi_fetch_req_t   (fetch_req_t),
+1200                            .obi_store_req_t   (obi_store_req_t),
+1201                            .obi_amo_req_t     (obi_amo_req_t),
+1202                            .load_req_t        (load_req_t),
+1203                            .obi_load_req_t    (obi_load_req_t),
+1204                            .obi_mmu_ptw_req_t (obi_mmu_ptw_req_t),
+1205                            .NumMissPorts      (1  /*FIXME*/)         //WT cache only ??
+1206                        ) perf_counters_i (
+1207                            .clk_i         (clk_i),
+1208                            .rst_ni        (rst_ni),
+1209                            .debug_mode_i  (debug_mode),
+1210                            .addr_i        (addr_csr_perf),
+1211                            .we_i          (we_csr_perf),
+1212                            .data_i        (data_csr_perf),
+1213                            .data_o        (data_perf_csr),
+1214                            .commit_instr_i(commit_instr_id_commit),
+1215                            .commit_ack_i  (commit_ack),
+1216                    
+1217                            .l1_icache_miss_i   (icache_miss_i),
+1218                            .l1_dcache_miss_i   (dcache_miss_i),
+1219                            .itlb_miss_i        (itlb_miss_ex_perf),
+1220                            .dtlb_miss_i        (dtlb_miss_ex_perf),
+1221                            .sb_full_i          (sb_full),
+1222                            // TODO this is more complex that that
+1223                            // If superscalar then we additionally have to check [1] when transaction 0 succeeded
+1224                            .if_empty_i         (~fetch_valid_if_id[0]),
+1225                            .ex_i               (ex_commit),
+1226                            .eret_i             (eret),
+1227                            .resolved_branch_i  (resolved_branch),
+1228                            .branch_exceptions_i(flu_exception_ex_id),
+1229                    
+1230                            .fetch_req_i      (fetch_req_o),
+1231                            .fetch_obi_req_i  (obi_fetch_req_o),
+1232                            .obi_store_req_i  (obi_store_req_o),
+1233                            .obi_amo_req_i    (obi_amo_req_o),
+1234                            .load_req_i       (load_req_o),
+1235                            .obi_load_req_i   (obi_load_req_o),
+1236                            .obi_mmu_ptw_req_i(obi_mmu_ptw_req_o),
+1237                    
+1238                            .miss_vld_bits_i('0  /*FIXME*/),          //WT cache only ??
+1239                            .i_tlb_flush_i  (flush_tlb_ctrl_ex),
+1240                            .stall_issue_i  (stall_issue),
+1241                            .mcountinhibit_i(mcountinhibit_csr_perf)
+1242                        );
+1243                      end : gen_perf_counter
+1244                      else begin : gen_no_perf_counter
+1245                        assign data_perf_csr = '0;
+1246                      end : gen_no_perf_counter
+1247                    
+1248                      // ------------
+1249                      // Controller
+1250                      // ------------
+1251                      controller #(
+1252                          .CVA6Cfg(CVA6Cfg),
+1253                          .bp_resolve_t(bp_resolve_t)
+1254                      ) controller_i (
+1255                          .clk_i,
+1256                          .rst_ni,
+1257                          // virtualization mode
+1258                          .v_i                   (v),
+1259                          // flush ports
+1260                          .set_pc_commit_o       (set_pc_ctrl_pcgen),
+1261                          .flush_if_o            (flush_ctrl_if),
+1262                          .flush_unissued_instr_o(flush_unissued_instr_ctrl_id),
+1263                          .flush_id_o            (flush_ctrl_id),
+1264                          .flush_ex_o            (flush_ctrl_ex),
+1265                          .flush_bp_o            (flush_ctrl_bp),
+1266                          .flush_icache_o        (icache_flush_o),
+1267                          .flush_dcache_o        (dcache_flush_o),
+1268                          .flush_dcache_ack_i    (dcache_flush_ack_i),
+1269                          .flush_tlb_o           (flush_tlb_ctrl_ex),
+1270                          .flush_tlb_vvma_o      (flush_tlb_vvma_ctrl_ex),
+1271                          .flush_tlb_gvma_o      (flush_tlb_gvma_ctrl_ex),
+1272                          .halt_csr_i            (halt_csr_ctrl),
+1273                          // Accelerator
+1274                          .halt_acc_i            ('0  /*FIXME*/),
+1275                          .halt_o                (halt_ctrl),
+1276                          // control ports
+1277                          .eret_i                (eret),
+1278                          .ex_valid_i            (ex_commit.valid),
+1279                          .set_debug_pc_i        (set_debug_pc),
+1280                          .resolved_branch_i     (resolved_branch),
+1281                          .flush_csr_i           (flush_csr_ctrl),
+1282                          .fence_i_i             (fence_i_commit_controller),
+1283                          .fence_i               (fence_commit_controller),
+1284                          .sfence_vma_i          (sfence_vma_commit_controller),
+1285                          .hfence_vvma_i         (hfence_vvma_commit_controller),
+1286                          .hfence_gvma_i         (hfence_gvma_commit_controller),
+1287                          .flush_commit_i        (flush_commit),
+1288                          // Accelerator
+1289                          .flush_acc_i           ('0  /*FIXME*/)
+1290                      );
+1291                    
+1292                      // -------------------
+1293                      // Parameter Check
+1294                      // -------------------
+1295                      // pragma translate_off
+1296       <font color = "grey">unreachable  </font>  initial config_pkg::check_cfg(CVA6Cfg);
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod38.html" >cva6_pipeline</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       1052
+ EXPRESSION (no_st_pending_ex &amp; dcache_wbuffer_empty_i)
+             --------1-------   -----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       1096
+ EXPRESSION (commit_macro_ack &amp; ((~(commit_drop_id_commit &amp; 1'b0))))
+             --------1-------   -----------------2-----------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_151">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_cva6_pipeline">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
