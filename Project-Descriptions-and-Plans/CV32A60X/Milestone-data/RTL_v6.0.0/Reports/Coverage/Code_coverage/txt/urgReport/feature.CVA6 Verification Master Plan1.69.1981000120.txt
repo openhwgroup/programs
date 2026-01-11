@@ -1,0 +1,37 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.ISA.RV32I.EBREAK
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+Attribute/Annotation values:
+  Comment: 
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+-------------------------------------------------------------------------------
+
+Measure EBREAK: 
+
+Metrics: Group
+SCORE  LINE   COND   ASSERT GROUP  
+100.00 --     --     --     100.00 
+
+
+Sources:
+
+group instance: uvma_isacov_pkg.uvma_isacov_pkg.rv32i_ebreak_cg
+SCORE  LINE   COND   ASSERT GROUP  NAME                                            
+100.00 --     --     --     100.00 uvma_isacov_pkg.uvma_isacov_pkg.rv32i_ebreak_cg 
+
+
+
+

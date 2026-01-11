@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: cva6_fifo_v3</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_cva6_fifo_v3'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_cva6_fifo_v3')">cva6_fifo_v3</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod51.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod51.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/cva6_fifo_v3.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/cva6_fifo_v3.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod51.html#inst_tag_199"  onclick="showContent('inst_tag_199')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend.i_instr_queue.gen_instr_fifo[0].i_fifo_instr_data</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod51.html#inst_tag_199_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod51.html#inst_tag_199_Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='inst_tag_199'>
+<hr>
+<a name="inst_tag_199"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_199" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend.i_instr_queue.gen_instr_fifo[0].i_fifo_instr_data</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod51.html#inst_tag_199_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod51.html#inst_tag_199_Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod47.html#inst_tag_194" >i_instr_queue</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_cva6_fifo_v3'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod51.html" >cva6_fifo_v3</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>48</td><td>48</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>79</td><td>27</td><td>27</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>157</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>210</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">INITIAL</td><td>220</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<pre class="code"><br clear=all>
+78                          // default assignment
+79         1/1              read_pointer_n  = read_pointer_q;
+80         1/1              write_pointer_n = write_pointer_q;
+81         1/1              status_cnt_n    = status_cnt_q;
+82         1/1(1 unreachable)      if (FPGA_EN &amp;&amp; FPGA_ALTERA) data_ft_n = data_ft_q;
+                        MISSING_ELSE
+83         1/1(1 unreachable)      if (FPGA_EN &amp;&amp; FPGA_ALTERA) first_word_n = first_word_q;
+                        MISSING_ELSE
+84         1/1              if (FPGA_EN) begin
+85         <font color = "grey">unreachable  </font>      fifo_ram_we            = '0;
+86         <font color = "grey">unreachable  </font>      fifo_ram_write_address = '0;
+87         <font color = "grey">unreachable  </font>      fifo_ram_wdata         = '0;
+88         <font color = "grey">unreachable  </font>      if (DEPTH == 0) begin
+89         <font color = "grey">unreachable  </font>        data_o = data_i;
+90                            end else begin
+91         <font color = "grey">unreachable  </font>        if (FPGA_ALTERA) data_o = first_word_q ? data_ft_q : fifo_ram_rdata;
+92         <font color = "grey">unreachable  </font>        else data_o = fifo_ram_rdata;
+93                            end
+94                          end else begin
+95         1/1                data_o     = (DEPTH == 0) ? data_i : mem_q[read_pointer_q];
+96         1/1                mem_n      = mem_q;
+97         1/1                gate_clock = 1'b1;
+98                          end
+99                      
+100                         // push a new element to the queue
+101        1/1              if (push_i &amp;&amp; ~full_o) begin
+102        1/1                if (FPGA_EN) begin
+103        <font color = "grey">unreachable  </font>        fifo_ram_we = 1'b1;
+104        <font color = "grey">unreachable  </font>        fifo_ram_write_address = write_pointer_q;
+105        <font color = "grey">unreachable  </font>        fifo_ram_wdata = data_i;
+106        <font color = "grey">unreachable  </font>        if (FPGA_ALTERA) first_word_n = first_word_q &amp;&amp; pop_i;
+                   <font color = "red">==>  MISSING_ELSE</font>
+107                           end else begin
+108                             // push the data onto the queue
+109        1/1                  mem_n[write_pointer_q] = data_i;
+110                             // un-gate the clock, we want to write something
+111        1/1                  gate_clock = 1'b0;
+112                           end
+113                     
+114                           // increment the write counter
+115        1/1(1 unreachable)        if (write_pointer_q == FifoDepth[ADDR_DEPTH-1:0] - 1) write_pointer_n = '0;
+116        1/1                else write_pointer_n = write_pointer_q + 1;
+117                           // increment the overall counter
+118        1/1                status_cnt_n = status_cnt_q + 1;
+119                         end
+                        MISSING_ELSE
+120                     
+121        1/1              if (pop_i &amp;&amp; ~empty_o) begin
+122        1/1                data_ft_n = data_i;
+123        1/1(1 unreachable)        if (FPGA_EN &amp;&amp; FPGA_ALTERA) first_word_n = first_word_q &amp;&amp; push_i;
+                        MISSING_ELSE
+124                           // read from the queue is a default assignment
+125                           // but increment the read pointer...
+126        1/1(1 unreachable)        if (read_pointer_n == FifoDepth[ADDR_DEPTH-1:0] - 1) read_pointer_n = '0;
+127        1/1                else read_pointer_n = read_pointer_q + 1;
+128                           // ... and decrement the overall count
+129        1/1                status_cnt_n = status_cnt_q - 1;
+130                         end
+                        MISSING_ELSE
+131                     
+132                         // keep the count pointer stable if we push and pop at the same time
+133        2/2              if (push_i &amp;&amp; pop_i &amp;&amp; ~full_o &amp;&amp; ~empty_o) status_cnt_n = status_cnt_q;
+                        MISSING_ELSE
+134                     
+135                         // FIFO is in pass through mode -&gt; do not change the pointers
+136        1/1              if ((FALL_THROUGH || (FPGA_EN &amp;&amp; FPGA_ALTERA)) &amp;&amp; (status_cnt_q == 0) &amp;&amp; push_i) begin
+137        <font color = "grey">unreachable  </font>      if (FALL_THROUGH) data_o = data_i;
+                   <font color = "red">==>  MISSING_ELSE</font>
+138        <font color = "grey">unreachable  </font>      if (FPGA_EN &amp;&amp; FPGA_ALTERA) begin
+139        <font color = "grey">unreachable  </font>        data_ft_n = data_i;
+140        <font color = "grey">unreachable  </font>        first_word_n = '1;
+141                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+142        <font color = "grey">unreachable  </font>      if (pop_i) begin
+143        <font color = "grey">unreachable  </font>        first_word_n = '0;
+144        <font color = "grey">unreachable  </font>        status_cnt_n = status_cnt_q;
+145        <font color = "grey">unreachable  </font>        read_pointer_n = read_pointer_q;
+146        <font color = "grey">unreachable  </font>        write_pointer_n = write_pointer_q;
+147                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+148                         end
+                        MISSING_ELSE
+149                     
+150        1/1(1 unreachable)      if (FPGA_EN) fifo_ram_read_address = (FPGA_ALTERA == 1) ? read_pointer_n : read_pointer_q;
+151        1/1              else fifo_ram_read_address = '0;
+152                     
+153                       end
+154                     
+155                       // sequential process
+156                       always_ff @(posedge clk_i or negedge rst_ni) begin
+157        1/1              if (~rst_ni) begin
+158        1/1                read_pointer_q  &lt;= '0;
+159        1/1                write_pointer_q &lt;= '0;
+160        1/1                status_cnt_q    &lt;= '0;
+161        1/1(1 unreachable)        if (FPGA_ALTERA) first_word_q &lt;= '0;
+                        MISSING_ELSE
+162        1/1(1 unreachable)        if (FPGA_ALTERA) data_ft_q &lt;= '0;
+                        MISSING_ELSE
+163                         end else begin
+164        1/1                if (flush_i) begin
+165        1/1                  read_pointer_q  &lt;= '0;
+166        1/1                  write_pointer_q &lt;= '0;
+167        1/1                  status_cnt_q    &lt;= '0;
+168        1/1(1 unreachable)          if (FPGA_ALTERA) first_word_q &lt;= '0;
+                        MISSING_ELSE
+169        1/1(1 unreachable)          if (FPGA_ALTERA) data_ft_q &lt;= '0;
+                        MISSING_ELSE
+170                           end else begin
+171        1/1                  read_pointer_q  &lt;= read_pointer_n;
+172        1/1                  write_pointer_q &lt;= write_pointer_n;
+173        1/1                  status_cnt_q    &lt;= status_cnt_n;
+174        1/1(1 unreachable)          if (FPGA_ALTERA) data_ft_q &lt;= data_ft_n;
+                        MISSING_ELSE
+175        1/1(1 unreachable)          if (FPGA_ALTERA) first_word_q &lt;= first_word_n;
+                        MISSING_ELSE
+176                           end
+177                         end
+178                       end
+179                     
+180                       if (FPGA_EN) begin : gen_fpga_queue
+181                         if (FPGA_ALTERA) begin
+182                           SyncDpRam_ind_r_w #(
+183                               .ADDR_WIDTH(ADDR_DEPTH),
+184                               .DATA_DEPTH(DEPTH),
+185                               .DATA_WIDTH($bits(dtype))
+186                           ) fifo_ram (
+187                               .Clk_CI   (clk_i),
+188                               .WrEn_SI  (fifo_ram_we),
+189                               .RdAddr_DI(fifo_ram_read_address),
+190                               .WrAddr_DI(fifo_ram_write_address),
+191                               .WrData_DI(fifo_ram_wdata),
+192                               .RdData_DO(fifo_ram_rdata)
+193                           );
+194                         end else begin
+195                           AsyncDpRam #(
+196                               .ADDR_WIDTH(ADDR_DEPTH),
+197                               .DATA_DEPTH(DEPTH),
+198                               .DATA_WIDTH($bits(dtype))
+199                           ) fifo_ram (
+200                               .Clk_CI   (clk_i),
+201                               .WrEn_SI  (fifo_ram_we),
+202                               .RdAddr_DI(fifo_ram_read_address),
+203                               .WrAddr_DI(fifo_ram_write_address),
+204                               .WrData_DI(fifo_ram_wdata),
+205                               .RdData_DO(fifo_ram_rdata)
+206                           );
+207                         end
+208                       end else begin : gen_asic_queue
+209                         always_ff @(posedge clk_i or negedge rst_ni) begin
+210        1/1                if (~rst_ni) begin
+211        1/1                  mem_q &lt;= '0;
+212        1/1                end else if (!gate_clock) begin
+213        1/1                  mem_q &lt;= mem_n;
+214                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod51.html" >cva6_fifo_v3</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>19</td><td>19</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>19</td><td>19</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       71
+ EXPRESSION (status_cnt_q == FifoDepth[ADDR_DEPTH:0])
+            --------------------1--------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       72
+ EXPRESSION ((status_cnt_q == 3'b0) &amp; ((~(FALL_THROUGH &amp; push_i))))
+             -----------1----------   --------------2-------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       72
+ SUB-EXPRESSION (status_cnt_q == 3'b0)
+                -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       91
+ EXPRESSION (first_word_q ? data_ft_q : fifo_ram_rdata)
+             ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       101
+ EXPRESSION (push_i &amp;&amp; ((~full_o)))
+             ---1--    -----2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       106
+ EXPRESSION (first_word_q &amp;&amp; pop_i)
+             ------1-----    --2--
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       115
+ EXPRESSION (write_pointer_q == (FifoDepth[(ADDR_DEPTH - 1):0] - 1))
+            ----------------------------1---------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       121
+ EXPRESSION (pop_i &amp;&amp; ((~empty_o)))
+             --1--    ------2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       123
+ EXPRESSION (first_word_q &amp;&amp; push_i)
+             ------1-----    ---2--
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       126
+ EXPRESSION (read_pointer_n == (FifoDepth[(ADDR_DEPTH - 1):0] - 1))
+            ---------------------------1---------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       133
+ EXPRESSION (push_i &amp;&amp; pop_i &amp;&amp; ((~full_o)) &amp;&amp; ((~empty_o)))
+             ---1--    --2--    -----3-----    ------4-----
+</pre>
+<table class="noborder">
+<col span="4" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+<div name='inst_tag_199'>
+<a name="inst_tag_199_Line"></a>
+<b>Line Coverage for Instance : <a href="mod51.html#inst_tag_199" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend.i_instr_queue.gen_instr_fifo[0].i_fifo_instr_data</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>48</td><td>48</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>79</td><td>27</td><td>27</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>157</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>210</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">INITIAL</td><td>220</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<pre class="code"><br clear=all>
+78                          // default assignment
+79         1/1              read_pointer_n  = read_pointer_q;
+80         1/1              write_pointer_n = write_pointer_q;
+81         1/1              status_cnt_n    = status_cnt_q;
+82         1/1(1 unreachable)      if (FPGA_EN &amp;&amp; FPGA_ALTERA) data_ft_n = data_ft_q;
+                        MISSING_ELSE
+83         1/1(1 unreachable)      if (FPGA_EN &amp;&amp; FPGA_ALTERA) first_word_n = first_word_q;
+                        MISSING_ELSE
+84         1/1              if (FPGA_EN) begin
+85         <font color = "grey">unreachable  </font>      fifo_ram_we            = '0;
+86         <font color = "grey">unreachable  </font>      fifo_ram_write_address = '0;
+87         <font color = "grey">unreachable  </font>      fifo_ram_wdata         = '0;
+88         <font color = "grey">unreachable  </font>      if (DEPTH == 0) begin
+89         <font color = "grey">unreachable  </font>        data_o = data_i;
+90                            end else begin
+91         <font color = "grey">unreachable  </font>        if (FPGA_ALTERA) data_o = first_word_q ? data_ft_q : fifo_ram_rdata;
+92         <font color = "grey">unreachable  </font>        else data_o = fifo_ram_rdata;
+93                            end
+94                          end else begin
+95         1/1                data_o     = (DEPTH == 0) ? data_i : mem_q[read_pointer_q];
+96         1/1                mem_n      = mem_q;
+97         1/1                gate_clock = 1'b1;
+98                          end
+99                      
+100                         // push a new element to the queue
+101        1/1              if (push_i &amp;&amp; ~full_o) begin
+102        1/1                if (FPGA_EN) begin
+103        <font color = "grey">unreachable  </font>        fifo_ram_we = 1'b1;
+104        <font color = "grey">unreachable  </font>        fifo_ram_write_address = write_pointer_q;
+105        <font color = "grey">unreachable  </font>        fifo_ram_wdata = data_i;
+106        <font color = "grey">unreachable  </font>        if (FPGA_ALTERA) first_word_n = first_word_q &amp;&amp; pop_i;
+                   <font color = "red">==>  MISSING_ELSE</font>
+107                           end else begin
+108                             // push the data onto the queue
+109        1/1                  mem_n[write_pointer_q] = data_i;
+110                             // un-gate the clock, we want to write something
+111        1/1                  gate_clock = 1'b0;
+112                           end
+113                     
+114                           // increment the write counter
+115        1/1(1 unreachable)        if (write_pointer_q == FifoDepth[ADDR_DEPTH-1:0] - 1) write_pointer_n = '0;
+116        1/1                else write_pointer_n = write_pointer_q + 1;
+117                           // increment the overall counter
+118        1/1                status_cnt_n = status_cnt_q + 1;
+119                         end
+                        MISSING_ELSE
+120                     
+121        1/1              if (pop_i &amp;&amp; ~empty_o) begin
+122        1/1                data_ft_n = data_i;
+123        1/1(1 unreachable)        if (FPGA_EN &amp;&amp; FPGA_ALTERA) first_word_n = first_word_q &amp;&amp; push_i;
+                        MISSING_ELSE
+124                           // read from the queue is a default assignment
+125                           // but increment the read pointer...
+126        1/1(1 unreachable)        if (read_pointer_n == FifoDepth[ADDR_DEPTH-1:0] - 1) read_pointer_n = '0;
+127        1/1                else read_pointer_n = read_pointer_q + 1;
+128                           // ... and decrement the overall count
+129        1/1                status_cnt_n = status_cnt_q - 1;
+130                         end
+                        MISSING_ELSE
+131                     
+132                         // keep the count pointer stable if we push and pop at the same time
+133        2/2              if (push_i &amp;&amp; pop_i &amp;&amp; ~full_o &amp;&amp; ~empty_o) status_cnt_n = status_cnt_q;
+                        MISSING_ELSE
+134                     
+135                         // FIFO is in pass through mode -&gt; do not change the pointers
+136        1/1              if ((FALL_THROUGH || (FPGA_EN &amp;&amp; FPGA_ALTERA)) &amp;&amp; (status_cnt_q == 0) &amp;&amp; push_i) begin
+137        <font color = "grey">unreachable  </font>      if (FALL_THROUGH) data_o = data_i;
+                   <font color = "red">==>  MISSING_ELSE</font>
+138        <font color = "grey">unreachable  </font>      if (FPGA_EN &amp;&amp; FPGA_ALTERA) begin
+139        <font color = "grey">unreachable  </font>        data_ft_n = data_i;
+140        <font color = "grey">unreachable  </font>        first_word_n = '1;
+141                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+142        <font color = "grey">unreachable  </font>      if (pop_i) begin
+143        <font color = "grey">unreachable  </font>        first_word_n = '0;
+144        <font color = "grey">unreachable  </font>        status_cnt_n = status_cnt_q;
+145        <font color = "grey">unreachable  </font>        read_pointer_n = read_pointer_q;
+146        <font color = "grey">unreachable  </font>        write_pointer_n = write_pointer_q;
+147                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+148                         end
+                        MISSING_ELSE
+149                     
+150        1/1(1 unreachable)      if (FPGA_EN) fifo_ram_read_address = (FPGA_ALTERA == 1) ? read_pointer_n : read_pointer_q;
+151        1/1              else fifo_ram_read_address = '0;
+152                     
+153                       end
+154                     
+155                       // sequential process
+156                       always_ff @(posedge clk_i or negedge rst_ni) begin
+157        1/1              if (~rst_ni) begin
+158        1/1                read_pointer_q  &lt;= '0;
+159        1/1                write_pointer_q &lt;= '0;
+160        1/1                status_cnt_q    &lt;= '0;
+161        1/1(1 unreachable)        if (FPGA_ALTERA) first_word_q &lt;= '0;
+                        MISSING_ELSE
+162        1/1(1 unreachable)        if (FPGA_ALTERA) data_ft_q &lt;= '0;
+                        MISSING_ELSE
+163                         end else begin
+164        1/1                if (flush_i) begin
+165        1/1                  read_pointer_q  &lt;= '0;
+166        1/1                  write_pointer_q &lt;= '0;
+167        1/1                  status_cnt_q    &lt;= '0;
+168        1/1(1 unreachable)          if (FPGA_ALTERA) first_word_q &lt;= '0;
+                        MISSING_ELSE
+169        1/1(1 unreachable)          if (FPGA_ALTERA) data_ft_q &lt;= '0;
+                        MISSING_ELSE
+170                           end else begin
+171        1/1                  read_pointer_q  &lt;= read_pointer_n;
+172        1/1                  write_pointer_q &lt;= write_pointer_n;
+173        1/1                  status_cnt_q    &lt;= status_cnt_n;
+174        1/1(1 unreachable)          if (FPGA_ALTERA) data_ft_q &lt;= data_ft_n;
+                        MISSING_ELSE
+175        1/1(1 unreachable)          if (FPGA_ALTERA) first_word_q &lt;= first_word_n;
+                        MISSING_ELSE
+176                           end
+177                         end
+178                       end
+179                     
+180                       if (FPGA_EN) begin : gen_fpga_queue
+181                         if (FPGA_ALTERA) begin
+182                           SyncDpRam_ind_r_w #(
+183                               .ADDR_WIDTH(ADDR_DEPTH),
+184                               .DATA_DEPTH(DEPTH),
+185                               .DATA_WIDTH($bits(dtype))
+186                           ) fifo_ram (
+187                               .Clk_CI   (clk_i),
+188                               .WrEn_SI  (fifo_ram_we),
+189                               .RdAddr_DI(fifo_ram_read_address),
+190                               .WrAddr_DI(fifo_ram_write_address),
+191                               .WrData_DI(fifo_ram_wdata),
+192                               .RdData_DO(fifo_ram_rdata)
+193                           );
+194                         end else begin
+195                           AsyncDpRam #(
+196                               .ADDR_WIDTH(ADDR_DEPTH),
+197                               .DATA_DEPTH(DEPTH),
+198                               .DATA_WIDTH($bits(dtype))
+199                           ) fifo_ram (
+200                               .Clk_CI   (clk_i),
+201                               .WrEn_SI  (fifo_ram_we),
+202                               .RdAddr_DI(fifo_ram_read_address),
+203                               .WrAddr_DI(fifo_ram_write_address),
+204                               .WrData_DI(fifo_ram_wdata),
+205                               .RdData_DO(fifo_ram_rdata)
+206                           );
+207                         end
+208                       end else begin : gen_asic_queue
+209                         always_ff @(posedge clk_i or negedge rst_ni) begin
+210        1/1                if (~rst_ni) begin
+211        1/1                  mem_q &lt;= '0;
+212        1/1                end else if (!gate_clock) begin
+213        1/1                  mem_q &lt;= mem_n;
+214                           end
+                   <font color = "red">==>  MISSING_ELSE</font>
+</pre>
+<hr>
+<a name="inst_tag_199_Cond"></a>
+<b>Cond Coverage for Instance : <a href="mod51.html#inst_tag_199" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend.i_instr_queue.gen_instr_fifo[0].i_fifo_instr_data</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>19</td><td>19</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>19</td><td>19</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       71
+ EXPRESSION (status_cnt_q == FifoDepth[ADDR_DEPTH:0])
+            --------------------1--------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       72
+ EXPRESSION ((status_cnt_q == 3'b0) &amp; ((~(FALL_THROUGH &amp; push_i))))
+             -----------1----------   --------------2-------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       72
+ SUB-EXPRESSION (status_cnt_q == 3'b0)
+                -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       91
+ EXPRESSION (first_word_q ? data_ft_q : fifo_ram_rdata)
+             ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       101
+ EXPRESSION (push_i &amp;&amp; ((~full_o)))
+             ---1--    -----2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       106
+ EXPRESSION (first_word_q &amp;&amp; pop_i)
+             ------1-----    --2--
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       115
+ EXPRESSION (write_pointer_q == (FifoDepth[(ADDR_DEPTH - 1):0] - 1))
+            ----------------------------1---------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       121
+ EXPRESSION (pop_i &amp;&amp; ((~empty_o)))
+             --1--    ------2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       123
+ EXPRESSION (first_word_q &amp;&amp; push_i)
+             ------1-----    ---2--
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       126
+ EXPRESSION (read_pointer_n == (FifoDepth[(ADDR_DEPTH - 1):0] - 1))
+            ---------------------------1---------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       133
+ EXPRESSION (push_i &amp;&amp; pop_i &amp;&amp; ((~full_o)) &amp;&amp; ((~empty_o)))
+             ---1--    --2--    -----3-----    ------4-----
+</pre>
+<table class="noborder">
+<col span="4" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_199">
+    <li>
+      <a href="#inst_tag_199_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_199_Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_cva6_fifo_v3">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

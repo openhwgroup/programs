@@ -1,0 +1,55 @@
+HVP Plan
+
+===============================================================================
+Plan : CVA6 Verification Master Plan
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 97.02  99.79  98.39  92.31  97.58 
+
+Attribute/Annotation definitions:
+  owner (attribute/string) default: 
+  at_least (attribute/integer) default: 0
+  weight (annotation/integer) default: 1
+  description (annotation/string) default: 
+  test.expected (annotation/integer) default: 0
+  Comment (attribute/string) default: 
+
+Metric definitions:
+  Line                  ratio                                                average 
+  Cond                  ratio                                                average 
+  FSM                   ratio                                                average 
+  Toggle                ratio                                                average 
+  Branch                ratio                                                average 
+  Assert                ratio                                                average 
+  Assert.assert         ratio                                                average 
+  Assert.cover          ratio                                                average 
+  Assert.ast_count      integer                                              sum     
+  Assert.cov_count      integer                                              sum     
+  Group                 percent                                              average 
+  Group.count           integer                                              sum     
+  Group.grp_count       integer                                              sum     
+  Group.cvp_count       integer                                              sum     
+  Group.bin_count       integer                                              sum     
+  Group.covered_count   integer                                              sum     
+  Group.uncovered_count integer                                              sum     
+  Group.excluded_count  integer                                              sum     
+  SnpsAvg               aggregate[Line Cond FSM Toggle Branch Assert Group]  average 
+  test                  enum[pass fail warn assert unknown(default)]         sum     
+  test.completion       ratio                                                average 
+  AssertResult          enum[successes failures unknown(default)]            sum     
+
+
+Attribute/Annotation values:
+  description: CVA6 Verification Master Plan
+
+
+
+-------------------------------------------------------------------------------
+
+Sub-features:
+
+SCORE  LINE   COND   ASSERT GROUP  NAME                  
+ 94.94 --     --      92.31  97.58 Programmer view level 
+ 99.09  99.79  98.39 --     --     Code coverage         
+
+

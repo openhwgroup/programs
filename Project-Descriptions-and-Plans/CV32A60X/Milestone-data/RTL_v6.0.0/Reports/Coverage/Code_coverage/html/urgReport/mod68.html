@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: store_buffer</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_store_buffer'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_store_buffer')">store_buffer</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod68.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod68.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/store_buffer.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/store_buffer.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod68.html#inst_tag_218"  onclick="showContent('inst_tag_218')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.lsu_i.i_store_unit.store_buffer_i</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod68.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod68.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_store_buffer'>
+<hr>
+<a name="inst_tag_218"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_218" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.lsu_i.i_store_unit.store_buffer_i</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod68.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod68.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod70.html#inst_tag_220" >i_store_unit</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_store_buffer'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod68.html" >store_buffer</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>75</td><td>75</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>88</td><td>23</td><td>23</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>172</td><td>23</td><td>23</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>233</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>260</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>275</td><td>9</td><td>9</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+87                          automatic logic [$clog2(DEPTH_SPEC):0] speculative_status_cnt;
+88         1/1              speculative_status_cnt      = speculative_status_cnt_q;
+89                      
+90                          // default assignments
+91         1/1              speculative_read_pointer_n  = speculative_read_pointer_q;
+92         1/1              speculative_write_pointer_n = speculative_write_pointer_q;
+93         1/1              speculative_queue_n         = speculative_queue_q;
+94                          // LSU interface
+95                          // we are ready to accept a new entry and the input data is valid
+96         1/1              if (valid_i) begin
+97         1/1                speculative_queue_n[speculative_write_pointer_q].address = paddr_i;
+98         1/1                speculative_queue_n[speculative_write_pointer_q].data = data_i;
+99         1/1                speculative_queue_n[speculative_write_pointer_q].be = be_i;
+100        1/1                speculative_queue_n[speculative_write_pointer_q].data_size = data_size_i;
+101        1/1                speculative_queue_n[speculative_write_pointer_q].valid = 1'b1;
+102                           // advance the write pointer
+103        1/1                speculative_write_pointer_n = speculative_write_pointer_q + 1'b1;
+104        1/1                speculative_status_cnt++;
+105                         end
+                        MISSING_ELSE
+106                     
+107                         // evict the current entry out of this queue, the commit queue will thankfully take it and commit it
+108                         // to the memory hierarchy
+109        1/1              if (commit_i) begin
+110                           // invalidate
+111        1/1                speculative_queue_n[speculative_read_pointer_q].valid = 1'b0;
+112                           // advance the read pointer
+113        1/1                speculative_read_pointer_n = speculative_read_pointer_q + 1'b1;
+114        1/1                speculative_status_cnt--;
+115                         end
+                        MISSING_ELSE
+116                     
+117        1/1              speculative_status_cnt_n = speculative_status_cnt;
+118                     
+119                         // when we flush evict the speculative stores
+120        1/1              if (flush_i) begin
+121                           // reset all valid flags
+122        2/2                for (int unsigned i = 0; i &lt; DEPTH_SPEC; i++) speculative_queue_n[i].valid = 1'b0;
+123                     
+124        1/1                speculative_write_pointer_n = speculative_read_pointer_q;
+125                           // also reset the status count
+126        1/1                speculative_status_cnt_n = 'b0;
+127                         end
+                        MISSING_ELSE
+128                     
+129                         // we are ready if the speculative and the commit queue have a space left
+130        1/1              ready_o = CVA6Cfg.MmuPresent ? (speculative_status_cnt_n &lt; (DEPTH_SPEC)) || commit_i : speculative_status_cnt_q &lt; (DEPTH_SPEC);
+131                       end
+132                     
+133                       // ----------------------------------------
+134                       // Commit Queue - Memory Interface
+135                       // ----------------------------------------
+136                     
+137                       logic direct_req_from_speculative;
+138                       // we will never kill a request in the store buffer since we already know that the translation is valid
+139                       // e.g.: a kill request will only be necessary if we are not sure if the requested memory address will result in a TLB fault
+140                     
+141                       assign rvfi_mem_paddr_o = direct_req_from_speculative ? speculative_queue_q[speculative_read_pointer_q].address : commit_queue_n[commit_read_pointer_n].address;
+142                     
+143                       assign obi_store_req_o.reqpar = !obi_store_req_o.req;
+144                       assign obi_store_req_o.a.addr = direct_req_from_speculative ? speculative_queue_q[speculative_read_pointer_q].address : commit_queue_q[commit_read_pointer_q].address;
+145                       assign obi_store_req_o.a.we = 1'b1;
+146                       assign obi_store_req_o.a.be = direct_req_from_speculative ? speculative_queue_q[speculative_read_pointer_q].be : commit_queue_q[commit_read_pointer_q].be;
+147                       assign obi_store_req_o.a.wdata = direct_req_from_speculative ? speculative_queue_q[speculative_read_pointer_q].data : commit_queue_q[commit_read_pointer_q].data;
+148                       assign obi_store_req_o.a.aid = '0;
+149                       assign obi_store_req_o.a.a_optional.auser = '0;
+150                       assign obi_store_req_o.a.a_optional.wuser = '0;
+151                       assign obi_store_req_o.a.a_optional.atop = '0;
+152                       assign obi_store_req_o.a.a_optional.memtype[0] = '0;
+153                       assign obi_store_req_o.a.a_optional.memtype[1] = config_pkg::is_inside_cacheable_regions(
+154                           CVA6Cfg,
+155                           {
+156                             {64 - CVA6Cfg.PLEN{1'b0}},
+157                             direct_req_from_speculative ? speculative_queue_q[speculative_read_pointer_q].address : commit_queue_q[commit_read_pointer_q].address
+158                           }  //TO DO CHECK GRANULARITY
+159                       );
+160                       assign obi_store_req_o.a.a_optional.mid = '0;
+161                       assign obi_store_req_o.a.a_optional.prot[2:1] = 2'b11;
+162                       assign obi_store_req_o.a.a_optional.prot[0] = 1'b1;  //data
+163                       assign obi_store_req_o.a.a_optional.dbg = '0;
+164                       assign obi_store_req_o.a.a_optional.achk = '0;
+165                     
+166                       //TODO check parity : obi_store_rsp_i.gntpar != obi_store_rsp_i.gnt
+167                       assign obi_store_req_o.rready = '1;  //always ready
+168                       assign obi_store_req_o.rreadypar = '0;
+169                     
+170                       always_comb begin : store_if
+171                         automatic logic [$clog2(DEPTH_COMMIT):0] commit_status_cnt;
+172        1/1              commit_status_cnt           = commit_status_cnt_q;
+173                     
+174        1/1              commit_ready_o              = (commit_status_cnt_q &lt; DEPTH_COMMIT);
+175                         // no store is pending if we don't have any element in the commit queue e.g.: it is empty
+176        1/1              no_st_pending_o             = (commit_status_cnt_q == 0);
+177                         // default assignments
+178        1/1              commit_read_pointer_n       = commit_read_pointer_q;
+179        1/1              commit_write_pointer_n      = commit_write_pointer_q;
+180                     
+181        1/1              commit_queue_n              = commit_queue_q;
+182                     
+183        1/1              obi_store_req_o.req         = 1'b0;
+184                     
+185        1/1              direct_req_from_speculative = 1'b0;
+186                     
+187                         // there should be no commit when we are flushing
+188                         // if the entry in the commit queue is valid and not speculative anymore we can issue this instruction
+189        1/1              if (commit_queue_q[commit_read_pointer_q].valid &amp;&amp; !stall_st_pending_i) begin
+190        1/1                obi_store_req_o.req = 1'b1;
+191        1/1                if (obi_store_rsp_i.gnt) begin
+192                             // we can evict it from the commit buffer
+193        1/1                  commit_queue_n[commit_read_pointer_q].valid = 1'b0;
+194                             // advance the read_pointer
+195        1/1                  commit_read_pointer_n = commit_read_pointer_q + 1'b1;
+196        1/1                  commit_status_cnt--;
+197                           end
+                        MISSING_ELSE
+198        1/1              end else if (speculative_queue_q[speculative_read_pointer_q].valid) begin
+199        1/1                if (commit_i &amp;&amp; (commit_write_pointer_q == speculative_read_pointer_q) &amp;&amp; !stall_st_pending_i) begin
+200        1/1                  obi_store_req_o.req = 1'b1;
+201        1/1                  direct_req_from_speculative = 1'b1;
+202                           end
+                        MISSING_ELSE
+203                         end
+                        MISSING_ELSE
+204                         // we ignore the rvalid signal for now as we assume that the store
+205                         // happened if we got a grant
+206                     
+207                         // shift the store request from the speculative buffer to the non-speculative
+208        1/1              if (commit_i &amp;&amp; !(obi_store_rsp_i.gnt &amp;&amp; direct_req_from_speculative)) begin
+209        1/1                commit_queue_n[commit_write_pointer_q] = speculative_queue_q[speculative_read_pointer_q];
+210        1/1                commit_write_pointer_n = commit_write_pointer_n + 1'b1;
+211        1/1                commit_status_cnt++;
+212                         end
+                        MISSING_ELSE
+213                     
+214        1/1              commit_status_cnt_n = commit_status_cnt;
+215                       end
+216                     
+217                       // ------------------
+218                       // Address Checker
+219                       // ------------------
+220                       // The load should return the data stored by the most recent store to the
+221                       // same physical address.  The most direct way to implement this is to
+222                       // maintain physical addresses in the store buffer.
+223                     
+224                       // Of course, there are other micro-architectural techniques to accomplish
+225                       // the same thing: you can interlock and wait for the store buffer to
+226                       // drain if the load VA matches any store VA modulo the page size (i.e.
+227                       // bits 11:0).  As a special case, it is correct to bypass if the full VA
+228                       // matches, and no younger stores' VAs match in bits 11:0.
+229                       //
+230                       // checks if the requested load is in the store buffer
+231                       // page offsets are virtually and physically the same
+232                       always_comb begin : address_checker
+233        1/1              page_offset_matches_o = 1'b0;
+234                     
+235                         // check if the LSBs are identical and the entry is valid
+236        1/1              for (int unsigned i = 0; i &lt; DEPTH_COMMIT; i++) begin
+237                           // Check if the page offset matches and whether the entry is valid, for the commit queue
+238        1/1                if ((page_offset_i[11:3] == commit_queue_q[i].address[11:3]) &amp;&amp; commit_queue_q[i].valid) begin
+239        1/1                  page_offset_matches_o = 1'b1;
+240        1/1                  break;
+241                           end
+                        MISSING_ELSE
+242                         end
+243                     
+244        1/1              for (int unsigned i = 0; i &lt; DEPTH_SPEC; i++) begin
+245                           // do the same for the speculative queue
+246        1/1                if ((page_offset_i[11:3] == speculative_queue_q[i].address[11:3]) &amp;&amp; speculative_queue_q[i].valid) begin
+247        1/1                  page_offset_matches_o = 1'b1;
+248        1/1                  break;
+249                           end
+                        MISSING_ELSE
+250                         end
+251                         // or it matches with the entry we are currently putting into the queue
+252        1/1              if ((page_offset_i[11:3] == paddr_i[11:3]) &amp;&amp; valid_without_flush_i) begin
+253        1/1                page_offset_matches_o = 1'b1;
+254                         end
+                        MISSING_ELSE
+255                       end
+256                     
+257                     
+258                       // registers
+259                       always_ff @(posedge clk_i or negedge rst_ni) begin : p_spec
+260        1/1              if (~rst_ni) begin
+261        1/1                speculative_queue_q         &lt;= '{default: 0};
+262        1/1                speculative_read_pointer_q  &lt;= '0;
+263        1/1                speculative_write_pointer_q &lt;= '0;
+264        1/1                speculative_status_cnt_q    &lt;= '0;
+265                         end else begin
+266        1/1                speculative_queue_q         &lt;= speculative_queue_n;
+267        1/1                speculative_read_pointer_q  &lt;= speculative_read_pointer_n;
+268        1/1                speculative_write_pointer_q &lt;= speculative_write_pointer_n;
+269        1/1                speculative_status_cnt_q    &lt;= speculative_status_cnt_n;
+270                         end
+271                       end
+272                     
+273                       // registers
+274                       always_ff @(posedge clk_i or negedge rst_ni) begin : p_commit
+275        1/1              if (~rst_ni) begin
+276        1/1                commit_queue_q         &lt;= '{default: 0};
+277        1/1                commit_read_pointer_q  &lt;= '0;
+278        1/1                commit_write_pointer_q &lt;= '0;
+279        1/1                commit_status_cnt_q    &lt;= '0;
+280                         end else begin
+281        1/1                commit_queue_q         &lt;= commit_queue_n;
+282        1/1                commit_read_pointer_q  &lt;= commit_read_pointer_n;
+283        1/1                commit_write_pointer_q &lt;= commit_write_pointer_n;
+284        1/1                commit_status_cnt_q    &lt;= commit_status_cnt_n;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod68.html" >store_buffer</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>46</td><td>46</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>46</td><td>46</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       82
+ EXPRESSION ((speculative_status_cnt_q == 3'b0) &amp; ((!valid_i)) &amp; no_st_pending_o)
+             -----------------1----------------   ------2-----   -------3-------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       82
+ SUB-EXPRESSION (speculative_status_cnt_q == 3'b0)
+                -----------------1----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       141
+ EXPRESSION (direct_req_from_speculative ? speculative_queue_q[speculative_read_pointer_q].address : commit_queue_n[commit_read_pointer_n].address)
+             -------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       144
+ EXPRESSION (direct_req_from_speculative ? speculative_queue_q[speculative_read_pointer_q].address : commit_queue_q[commit_read_pointer_q].address)
+             -------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       146
+ EXPRESSION (direct_req_from_speculative ? speculative_queue_q[speculative_read_pointer_q].be : commit_queue_q[commit_read_pointer_q].be)
+             -------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       147
+ EXPRESSION (direct_req_from_speculative ? speculative_queue_q[speculative_read_pointer_q].data : commit_queue_q[commit_read_pointer_q].data)
+             -------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       176
+ EXPRESSION (commit_status_cnt_q == 3'b0)
+            --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       189
+ EXPRESSION (commit_queue_q[commit_read_pointer_q].valid &amp;&amp; ((!stall_st_pending_i)))
+             ---------------------1---------------------    -----------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       199
+ EXPRESSION (commit_i &amp;&amp; (commit_write_pointer_q == speculative_read_pointer_q) &amp;&amp; ((!stall_st_pending_i)))
+             ----1---    ---------------------------2--------------------------    -----------3-----------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       199
+ SUB-EXPRESSION (commit_write_pointer_q == speculative_read_pointer_q)
+                ---------------------------1--------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       208
+ EXPRESSION (commit_i &amp;&amp; ( ! (obi_store_rsp_i.gnt &amp;&amp; direct_req_from_speculative) ))
+             ----1---    -----------------------------2----------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       208
+ SUB-EXPRESSION ( ! (obi_store_rsp_i.gnt &amp;&amp; direct_req_from_speculative) )
+                    --------------------------1-------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       208
+ SUB-EXPRESSION (obi_store_rsp_i.gnt &amp;&amp; direct_req_from_speculative)
+                 ---------1---------    -------------2-------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       238
+ EXPRESSION ((page_offset_i[11:3] == commit_queue_q[i].address[11:3]) &amp;&amp; commit_queue_q[i].valid)
+             ----------------------------1---------------------------    -----------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       238
+ SUB-EXPRESSION (page_offset_i[11:3] == commit_queue_q[i].address[11:3])
+                ----------------------------1---------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       246
+ EXPRESSION ((page_offset_i[11:3] == speculative_queue_q[i].address[11:3]) &amp;&amp; speculative_queue_q[i].valid)
+             ------------------------------1------------------------------    --------------2-------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       246
+ SUB-EXPRESSION (page_offset_i[11:3] == speculative_queue_q[i].address[11:3])
+                ------------------------------1------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       252
+ EXPRESSION ((page_offset_i[11:3] == paddr_i[11:3]) &amp;&amp; valid_without_flush_i)
+             -------------------1------------------    ----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       252
+ SUB-EXPRESSION (page_offset_i[11:3] == paddr_i[11:3])
+                -------------------1------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_218">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_store_buffer">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

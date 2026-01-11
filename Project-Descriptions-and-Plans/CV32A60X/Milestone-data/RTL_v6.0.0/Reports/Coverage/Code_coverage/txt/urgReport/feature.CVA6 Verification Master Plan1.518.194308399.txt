@@ -1,0 +1,31 @@
+HVP Feature
+
+===============================================================================
+Feature : CVA6 Verification Master Plan.Programmer view level.ISA.RV32ZB
+===============================================================================
+SCORE  LINE   COND   ASSERT GROUP  
+ 99.67 --     --     --      99.67 
+
+Attribute/Annotation values:
+  description: Bitmanip extension
+
+
+-------------------------------------------------------------------------------
+
+Sub-features:
+
+SCORE  LINE   COND   ASSERT GROUP  NAME    
+100.00 --     --     --     100.00 RV32ZBA 
+100.00 --     --     --     100.00 RV32ZBB 
+100.00 --     --     --     100.00 RV32ZBC 
+ 98.70 --     --     --      98.70 RV32ZBS 
+
+-------------------------------------------------------------------------------
+
+Measure Totals:
+
+SCORE  LINE   COND   ASSERT GROUP  
+--     --     --     --     --     
+
+
+

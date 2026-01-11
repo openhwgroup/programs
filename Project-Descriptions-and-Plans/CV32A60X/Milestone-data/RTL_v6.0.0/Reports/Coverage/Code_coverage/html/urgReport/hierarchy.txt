@@ -1,0 +1,159 @@
+Design Hierarchy
+
+
+----------------
+SCORE  LINE   COND   ASSERT              
+ 88.08  99.79  98.39  66.06 uvmt_cva6_tb 
+  
+  ----------------
+  SCORE  LINE   COND   ASSERT               
+   88.08  99.79  98.39  66.06 cva6_dut_wrap 
+    
+    ----------------
+    SCORE  LINE   COND   ASSERT                   
+     99.09  99.79  98.39 --     cva6_tb_wrapper_i 
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT                                    
+       99.09  99.79  98.39 --     cva6_only_pipeline.i_cva6_pipeline 
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT                
+        100.00 100.00 100.00 --     commit_stage_i 
+        100.00 100.00 100.00 --     controller_i   
+         98.78 100.00  97.56 --     csr_regfile_i  
+         99.81  99.81  99.81 --     ex_stage_i     
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT       
+          100.00 100.00 100.00 --     alu_i 
+            
+            ----------------
+            SCORE  LINE   COND   ASSERT                        
+            100.00 100.00 100.00 --     gen_bitmanip.i_clz_64b 
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT                      
+          100.00 100.00 100.00 --     branch_unit_i        
+          100.00 100.00 100.00 --     csr_buffer_i         
+          100.00 100.00 100.00 --     gen_cvxif.cvxif_fu_i 
+           99.83 100.00  99.66 --     i_mult               
+            
+            ----------------
+            SCORE  LINE   COND   ASSERT       
+             99.82 100.00  99.64 --     i_div 
+              
+              ----------------
+              SCORE  LINE   COND   ASSERT         
+              100.00 100.00 100.00 --     i_lzc_a 
+              100.00 100.00 100.00 --     i_lzc_b 
+            
+            ----------------
+            SCORE  LINE   COND   ASSERT              
+            100.00 100.00 100.00 --     i_multiplier 
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT       
+           99.83  99.65 100.00 --     lsu_i 
+            
+            ----------------
+            SCORE  LINE   COND   ASSERT              
+            100.00 100.00 100.00 --     i_load_unit  
+            100.00 100.00 100.00 --     i_store_unit 
+              
+              ----------------
+              SCORE  LINE   COND   ASSERT                
+              100.00 100.00 100.00 --     store_buffer_i 
+            
+            ----------------
+            SCORE  LINE   COND   ASSERT              
+            100.00 100.00 100.00 --     lsu_bypass_i 
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT            
+         99.70 100.00  99.39 --     i_frontend 
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT                                
+          100.00 100.00 100.00 --     bht_gen.i_bht                  
+          100.00 100.00 100.00 --     gen_instr_scan[0].i_instr_scan 
+          100.00 100.00 100.00 --     i_instr_queue                  
+            
+            ----------------
+            SCORE  LINE   COND   ASSERT                                                        
+            100.00 100.00 100.00 --     gen_instr_fifo[0].i_fifo_instr_data                    
+            100.00 100.00 100.00 --     gen_multiple_instr_per_fetch_with_C.i_lzc_branch_index 
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT                 
+          100.00 100.00 100.00 --     i_instr_realign 
+          100.00 100.00 100.00 --     ras_gen.i_ras   
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT            
+         99.12  99.42  98.81 --     id_stage_i 
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT                                                
+           99.06  98.11 100.00 --     genblk1.genblk1[0].compressed_decoder_i        
+          100.00 100.00 100.00 --     genblk1.genblk6.i_cvxif_compressed_if_driver_i 
+           99.12  99.73  98.51 --     genblk2[0].decoder_i                           
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT               
+         97.36  99.62  95.10 --     issue_stage_i 
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT                       
+           97.46 100.00  94.92 --     i_issue_read_operands 
+            
+            ----------------
+            SCORE  LINE   COND   ASSERT                                         
+            100.00 100.00 100.00 --     gen_asic_regfile.i_ariane_regfile       
+             94.19 --      94.19 --     genblk5[0].i_sel_rs1                    
+             94.19 --      94.19 --     genblk5[0].i_sel_rs2                    
+             94.19 --      94.19 --     genblk5[0].i_sel_rs3                    
+            100.00 100.00 100.00 --     i_cvxif_issue_register_commit_if_driver 
+          
+          ----------------
+          SCORE  LINE   COND   ASSERT              
+           97.78  98.18  97.37 --     i_scoreboard 
+    
+    ----------------
+    SCORE  LINE   COND   ASSERT                  
+     92.31 --     --      92.31 cvxif_assert     
+    100.00 --     --     100.00 interrupt_assert 
+     61.29 --     --      61.29 obi_fetch_assert 
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT          
+       61.29 --     --      61.29 u_assert 
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT                      
+         50.00 --     --      50.00 gen_1p2.u_1p2_assert 
+    
+    ----------------
+    SCORE  LINE   COND   ASSERT                 
+     61.29 --     --      61.29 obi_load_assert 
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT          
+       61.29 --     --      61.29 u_assert 
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT                      
+         50.00 --     --      50.00 gen_1p2.u_1p2_assert 
+    
+    ----------------
+    SCORE  LINE   COND   ASSERT                  
+     61.29 --     --      61.29 obi_store_assert 
+      
+      ----------------
+      SCORE  LINE   COND   ASSERT          
+       61.29 --     --      61.29 u_assert 
+        
+        ----------------
+        SCORE  LINE   COND   ASSERT                      
+         50.00 --     --      50.00 gen_1p2.u_1p2_assert 
+

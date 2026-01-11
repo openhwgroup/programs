@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: mult</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_mult'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_mult')">mult</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod56.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod56.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/mult.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/mult.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod56.html#inst_tag_205"  onclick="showContent('inst_tag_205')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.i_mult</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod56.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod56.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_mult'>
+<hr>
+<a name="inst_tag_205"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_205" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.i_mult</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod56.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod56.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.83</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 99.66</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod40.html#inst_tag_153" >ex_stage_i</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod28.html#inst_tag_73" id="tag_urg_inst_73">i_div</a></td>
+<td class="s9 cl rt"> 99.82</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 99.64</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod109.html#inst_tag_261" id="tag_urg_inst_261">i_multiplier</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_mult'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod56.html" >mult</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>93</td><td>8</td><td>8</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>152</td><td>3</td><td>3</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+92                          // silence the inputs
+93         1/1              operand_a = '0;
+94         1/1              operand_b = '0;
+95                          // control signals
+96         1/1              word_op_d = word_op_q;
+97                      
+98                          // we've go a new division operation
+99         1/1              if (mult_valid_i &amp;&amp; fu_data_i.operation inside {DIV, DIVU, DIVW, DIVUW, REM, REMU, REMW, REMUW}) begin
+100                           // is this a word operation?
+101        1/1                if (CVA6Cfg.IS_XLEN64 &amp;&amp; (fu_data_i.operation == DIVW || fu_data_i.operation == DIVUW || fu_data_i.operation == REMW || fu_data_i.operation == REMUW)) begin
+102                             // yes so check if we should sign extend this is only done for a signed operation
+103        <font color = "grey">unreachable  </font>        if (div_signed) begin
+104        <font color = "grey">unreachable  </font>          operand_a = sext32to64(fu_data_i.operand_a[31:0]);
+105        <font color = "grey">unreachable  </font>          operand_b = sext32to64(fu_data_i.operand_b[31:0]);
+106                             end else begin
+107        <font color = "grey">unreachable  </font>          operand_a = fu_data_i.operand_a[31:0];
+108        <font color = "grey">unreachable  </font>          operand_b = fu_data_i.operand_b[31:0];
+109                             end
+110                     
+111                             // save whether we want sign extend the result or not, this is done for all word operations
+112        <font color = "grey">unreachable  </font>        word_op_d = 1'b1;
+113                           end else begin
+114                             // regular op
+115        1/1                  operand_a = fu_data_i.operand_a;
+116        1/1                  operand_b = fu_data_i.operand_b;
+117        1/1                  word_op_d = 1'b0;
+118                           end
+119                         end
+                        MISSING_ELSE
+120                       end
+121                     
+122                       // ---------------------
+123                       // Serial Divider
+124                       // ---------------------
+125                       serdiv #(
+126                           .CVA6Cfg(CVA6Cfg),
+127                           .WIDTH  (CVA6Cfg.XLEN)
+128                       ) i_div (
+129                           .clk_i    (clk_i),
+130                           .rst_ni   (rst_ni),
+131                           .id_i     (fu_data_i.trans_id),
+132                           .op_a_i   (operand_a),
+133                           .op_b_i   (operand_b),
+134                           .opcode_i ({rem, div_signed}),   // 00: udiv, 10: urem, 01: div, 11: rem
+135                           .in_vld_i (div_valid_op),
+136                           .in_rdy_o (mult_ready_o),
+137                           .flush_i  (flush_i),
+138                           .out_vld_o(div_valid),
+139                           .out_rdy_i(div_ready_i),
+140                           .id_o     (div_trans_id),
+141                           .res_o    (result)
+142                       );
+143                     
+144                       // Result multiplexer
+145                       // if it was a signed word operation the bit will be set and the result will be sign extended accordingly
+146                       assign div_result = (CVA6Cfg.IS_XLEN64 &amp;&amp; word_op_q) ? sext32to64(result) : result;
+147                     
+148                       // ---------------------
+149                       // Registers
+150                       // ---------------------
+151                       always_ff @(posedge clk_i or negedge rst_ni) begin
+152        1/1              if (~rst_ni) begin
+153        1/1                word_op_q &lt;= '0;
+154                         end else begin
+155        1/1                word_op_q &lt;= word_op_d;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod56.html" >mult</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>20</td><td>20</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>20</td><td>20</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       40
+ EXPRESSION (((~flush_i)) &amp;&amp; mult_valid_i &amp;&amp; (fu_data_i.operation inside {MUL, MULH, MULHU, MULHSU, MULW, CLMUL, CLMULH, CLMULR}))
+             ------1-----    ------2-----    ------------------------------------------3-----------------------------------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       42
+ EXPRESSION (((~flush_i)) &amp;&amp; mult_valid_i &amp;&amp; (fu_data_i.operation inside {DIV, DIVU, DIVW, DIVUW, REM, REMU, REMW, REMUW}))
+             ------1-----    ------2-----    --------------------------------------3--------------------------------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       49
+ EXPRESSION (mul_valid ? 1'b0 : 1'b1)
+             ----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       50
+ EXPRESSION (mul_valid ? mul_trans_id : div_trans_id)
+             ----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       51
+ EXPRESSION (mul_valid ? mul_result : div_result)
+             ----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       52
+ EXPRESSION (div_valid | mul_valid)
+             ----1----   ----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       99
+ EXPRESSION (mult_valid_i &amp;&amp; (fu_data_i.operation inside {DIV, DIVU, DIVW, DIVUW, REM, REMU, REMW, REMUW}))
+             ------1-----    --------------------------------------2--------------------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_205">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_mult">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: HVP Feature</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.colResizable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    }  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+  $("table").colResizable({    liveDrag:true,
+    fixed:false,
+    draggingClass:"dragging"
+  });
+});
+</script>
+</head>
+<body><div class="ui-layout-north">
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+<div id="north-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul>
+    <li>
+      <a href="hvp.CVA6 Verification Master Plan.html">HVP Hierarchy</a>    </li>
+    <li>
+      <a href="plan.CVA6 Verification Master Plan1.2.html">CVA6 Verification Master Plan</a>    </li>
+    <li>
+      <a href="feature.CVA6 Verification Master Plan1.7.-1268999905.html">Programmer view level</a>    </li>
+    <li>
+      <a href="feature.CVA6 Verification Master Plan1.1661.-1212680387.html">CV-X-IF</a>    </li>
+    <li>
+      <a href="#">Protocol</a>    </li>
+  </ul>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div class=modhdr>
+<br clear=all>
+<span class=titlename><a name="tag_urg_hvp_CVA6 Verification Master Plan.Programmer view level.CV-X-IF.Protocol"></a>
+Feature : <a href="hvp.CVA6 Verification Master Plan.html#tag_urg_hvp_CVA6 Verification Master Plan.Programmer view level.CV-X-IF.Protocol" >CVA6&nbsp;Verification&nbsp;Master&nbsp;Plan.Programmer&nbsp;view&nbsp;level.CV-X-IF.Protocol</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="s8 cl rt"> 87.24</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s9 cl rt"> 92.31</td>
+<td class="s8 cl rt"> 82.18</td>
+</tr></table><br clear=all>
+<hr>
+<a name="tag_urg_hvp_measure_totals"></a>
+<br clear=all>
+<span class=repname>Measure Totals:</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="s8 cl rt"> 87.24</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s9 cl rt"> 92.31</td>
+<td class="s8 cl rt"> 82.18</td>
+</tr></table><br clear=all>
+<hr>
+<a name="measure_Protocol"></a>
+<br clear=all>
+<span class=repname>Measure Protocol: </span>
+<br clear=all>
+Metrics: Group, Assert<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="s8 cl rt"> 87.24</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s9 cl rt"> 92.31</td>
+<td class="s8 cl rt"> 82.18</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Sources:</span>
+<br clear=all>
+<a name="group instance: uvma_cvxif_pkg.uvma_cvxif_pkg.request_cg"></a>
+group instance: uvma_cvxif_pkg.uvma_cvxif_pkg.request_cg<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="grp0.html#inst_tag_uvma_cvxif_pkg.request_cg" >uvma_cvxif_pkg.uvma_cvxif_pkg.request_cg</a></td>
+<td class="s6 cl rt"> 69.44</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s6 cl rt"> 69.44</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="group instance: uvma_cvxif_pkg.uvma_cvxif_pkg.response_cg"></a>
+group instance: uvma_cvxif_pkg.uvma_cvxif_pkg.response_cg<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="grp1.html#inst_tag_uvma_cvxif_pkg.response_cg" >uvma_cvxif_pkg.uvma_cvxif_pkg.response_cg</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="group instance: uvma_cvxif_pkg.uvma_cvxif_pkg.result_cg"></a>
+group instance: uvma_cvxif_pkg.uvma_cvxif_pkg.result_cg<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="grp2.html#inst_tag_uvma_cvxif_pkg.result_cg" >uvma_cvxif_pkg.uvma_cvxif_pkg.result_cg</a></td>
+<td class="s7 cl rt"> 77.08</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s7 cl rt"> 77.08</td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_for_issue"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_for_issue<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_for_issue" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_for_issue</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_one_cycle"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_one_cycle<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_one_cycle" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_commit_one_cycle</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_compressed_instr"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_compressed_instr<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_compressed_instr" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_compressed_instr</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_reject_issue_req"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_reject_issue_req<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_reject_issue_req" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_reject_issue_req</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_for_commit"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_for_commit<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_for_commit" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_for_commit</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_stable"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_stable<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_stable" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_stable</a></td>
+<td class="s0 cl rt">  0.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s0 cl rt">  0.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_trn_end"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_trn_end<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_trn_end" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_result_trn_end</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_stable_issue"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_stable_issue<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_stable_issue" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_stable_issue</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_uncompressed_resp"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_uncompressed_resp<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_uncompressed_resp" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.cov_uncompressed_resp</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs_valid"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs_valid<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs_valid" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs_valid</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs_valid"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs_valid<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs_valid" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs_valid</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[0].cov_rs</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<a name="property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs"></a>
+property: uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td>GROUP</td></tr><tr>
+<td class="wht cl"><a href="asserts.html#tag_hvp_ast_uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs" >uvmt_cva6_tb.cva6_dut_wrap.cvxif_assert.gen0[1].cov_rs</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+<td class="wht cl"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul>
+    <li>
+      <a href="#tag_urg_hvp_CVA6 Verification Master Plan.Programmer view level.CV-X-IF.Protocol">Feature : CVA6&nbsp;Verification&nbsp;Master&nbsp;Plan.Programmer&nbsp;view&nbsp;level.CV-X-IF.Protocol</a>    </li>
+    <li>
+      <a href="#tag_urg_hvp_measure_totals">Measure Totals</a>    </li>
+    <li>
+      <a href="#measure_Protocol">Measure Protocol</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

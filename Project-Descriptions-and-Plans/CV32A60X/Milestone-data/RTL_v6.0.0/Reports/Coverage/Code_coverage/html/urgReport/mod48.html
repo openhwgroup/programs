@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: bht</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_bht'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_bht')">bht</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod48.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod48.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/frontend/bht.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/frontend/bht.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod48.html#inst_tag_195"  onclick="showContent('inst_tag_195')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend.bht_gen.i_bht</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod48.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod48.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_bht'>
+<hr>
+<a name="inst_tag_195"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_195" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.i_frontend.bht_gen.i_bht</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod48.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod48.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 99.24</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 98.47</td>
+<td class="wht cl rt"></td>
+<td><a href="mod6.html#inst_tag_9" >i_frontend</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_bht'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod48.html" >bht</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>19</td><td>19</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>82</td><td>13</td><td>13</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>106</td><td>6</td><td>6</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+81                          always_comb begin : update_bht
+82         1/1                bht_d = bht_q;
+83         1/1                saturation_counter = bht_q[update_pc][update_row_index].saturation_counter;
+84                      
+85         1/1                if ((bht_update_i.valid &amp;&amp; CVA6Cfg.DebugEn &amp;&amp; !debug_mode_i) || (bht_update_i.valid &amp;&amp; !CVA6Cfg.DebugEn)) begin
+86         1/1                  bht_d[update_pc][update_row_index].valid = 1'b1;
+87                      
+88         1/1                  if (saturation_counter == 2'b11) begin
+89                                // we can safely decrease it
+90         1/1                    if (!bht_update_i.taken)
+91         1/1                      bht_d[update_pc][update_row_index].saturation_counter = saturation_counter - 1;
+                        MISSING_ELSE
+92                                // then check if it saturated in the negative regime e.g.: branch not taken
+93         1/1                  end else if (saturation_counter == 2'b00) begin
+94                                // we can safely increase it
+95         1/1                    if (bht_update_i.taken)
+96         1/1                      bht_d[update_pc][update_row_index].saturation_counter = saturation_counter + 1;
+                        MISSING_ELSE
+97                              end else begin  // otherwise we are not in any boundaries and can decrease or increase it
+98         1/1                    if (bht_update_i.taken)
+99         1/1                      bht_d[update_pc][update_row_index].saturation_counter = saturation_counter + 1;
+100        1/1                    else bht_d[update_pc][update_row_index].saturation_counter = saturation_counter - 1;
+101                             end
+102                           end
+                        MISSING_ELSE
+103                         end
+104                     
+105                         always_ff @(posedge clk_i or negedge rst_ni) begin
+106        1/1                if (!rst_ni) begin
+107        1/1                  for (int unsigned i = 0; i &lt; NR_ROWS; i++) begin
+108        1/1                    for (int j = 0; j &lt; CVA6Cfg.INSTR_PER_FETCH; j++) begin
+109        1/1                      bht_q[i][j] &lt;= '0;
+110                               end
+111                             end
+112                           end else begin
+113                             // evict all entries
+114        1/1                  if (flush_bp_i) begin
+115        <font color = "grey">unreachable  </font>          for (int i = 0; i &lt; NR_ROWS; i++) begin
+116        <font color = "grey">unreachable  </font>            for (int j = 0; j &lt; CVA6Cfg.INSTR_PER_FETCH; j++) begin
+117        <font color = "grey">unreachable  </font>              bht_q[i][j].valid &lt;= 1'b0;
+118        <font color = "grey">unreachable  </font>              bht_q[i][j].saturation_counter &lt;= 2'b10;
+119                                 end
+120                               end
+121                             end else begin
+122        1/1                    bht_q &lt;= bht_d;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod48.html" >bht</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>12</td><td>12</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>12</td><td>12</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       78
+ EXPRESSION (bht_q[index][0].saturation_counter[1] == 1'b1)
+            -----------------------1-----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       78
+ EXPRESSION (bht_q[index][1].saturation_counter[1] == 1'b1)
+            -----------------------1-----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       85
+ EXPRESSION ((((bht_update_i.valid &amp;&amp; 1'b0) &amp;&amp; (!debug_mode_i))) || (bht_update_i.valid &amp;&amp; ((!1'b0))))
+             -------------------------1-------------------------    ----------------2----------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       85
+ SUB-EXPRESSION (bht_update_i.valid &amp;&amp; ((!1'b0)))
+                 ---------1--------    ----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       88
+ EXPRESSION (gen_asic_bht.saturation_counter == 2'b11)
+            ---------------------1--------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       93
+ EXPRESSION (gen_asic_bht.saturation_counter == 2'b0)
+            --------------------1--------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_195">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_bht">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

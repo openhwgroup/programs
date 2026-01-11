@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: compressed_decoder</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_compressed_decoder'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_compressed_decoder')">compressed_decoder</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.06</td>
+<td class="s9 cl rt"><a href="mod99.html#Line" > 98.11</a></td>
+<td class="s10 cl rt"><a href="mod99.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/compressed_decoder.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/compressed_decoder.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod99.html#inst_tag_250"  onclick="showContent('inst_tag_250')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.id_stage_i.genblk1.genblk1[0].compressed_decoder_i</a></td>
+<td class="s9 cl rt"> 99.06</td>
+<td class="s9 cl rt"><a href="mod99.html#Line" > 98.11</a></td>
+<td class="s10 cl rt"><a href="mod99.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_compressed_decoder'>
+<hr>
+<a name="inst_tag_250"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_250" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.id_stage_i.genblk1.genblk1[0].compressed_decoder_i</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.06</td>
+<td class="s9 cl rt"><a href="mod99.html#Line" > 98.11</a></td>
+<td class="s10 cl rt"><a href="mod99.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.06</td>
+<td class="s9 cl rt"> 98.11</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod89.html#inst_tag_239" >id_stage_i</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_compressed_decoder'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod99.html" >compressed_decoder</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>106</td><td>104</td><td>98.11</td></tr>
+<tr class="s9"><td class="lf">ALWAYS</td><td>43</td><td>106</td><td>104</td><td>98.11</td></tr>
+</table>
+<pre class="code"><br clear=all>
+42                        always_comb begin
+43         1/1              illegal_instr_o  = 1'b0;
+44         1/1              is_compressed_o  = 1'b1;
+45         1/1              instr_o          = instr_i;
+46         1/1              is_macro_instr_o = 0;
+47         1/1              is_zcmt_instr_o  = 1'b0;
+48                      
+49                          // I: |    imm[11:0]    | rs1 | funct3 |    rd    | opcode |
+50                          // S: | imm[11:5] | rs2 | rs1 | funct3 | imm[4:0] | opcode |
+51         1/1              unique case (instr_i[1:0])
+52                            // C0
+53                            riscv::OpcodeC0: begin
+54         1/1                  unique case (instr_i[15:13])
+55                                riscv::OpcodeC0Addi4spn: begin
+56                                  // c.addi4spn -&gt; addi rd', x2, imm
+57         1/1                      instr_o = {
+58                                    2'b0,
+59                                    instr_i[10:7],
+60                                    instr_i[12:11],
+61                                    instr_i[5],
+62                                    instr_i[6],
+63                                    2'b00,
+64                                    5'h02,
+65                                    3'b000,
+66                                    2'b01,
+67                                    instr_i[4:2],
+68                                    riscv::OpcodeOpImm
+69                                  };
+70         2/2                      if (instr_i[12:5] == 8'b0) illegal_instr_o = 1'b1;
+                        MISSING_ELSE
+71                                end
+72                      
+73                                riscv::OpcodeC0Fld: begin
+74         1/1                      if (CVA6Cfg.FpPresent) begin
+75                                    // c.fld -&gt; fld rd', imm(rs1')
+76                                    // CLD: | funct3 | imm[5:3] | rs1' | imm[7:6] | rd' | C0 |
+77         <font color = "grey">unreachable  </font>              instr_o = {
+78                                      4'b0,
+79                                      instr_i[6:5],
+80                                      instr_i[12:10],
+81                                      3'b000,
+82                                      2'b01,
+83                                      instr_i[9:7],
+84                                      3'b011,
+85                                      2'b01,
+86                                      instr_i[4:2],
+87                                      riscv::OpcodeLoadFp
+88                                    };
+89                                  end else begin
+90         1/1                        illegal_instr_o = 1'b1;
+91                                  end
+92                                end
+93                      
+94                                riscv::OpcodeC0Lw: begin
+95                                  // c.lw -&gt; lw rd', imm(rs1')
+96         1/1                      instr_o = {
+97                                    5'b0,
+98                                    instr_i[5],
+99                                    instr_i[12:10],
+100                                   instr_i[6],
+101                                   2'b00,
+102                                   2'b01,
+103                                   instr_i[9:7],
+104                                   3'b010,
+105                                   2'b01,
+106                                   instr_i[4:2],
+107                                   riscv::OpcodeLoad
+108                                 };
+109                               end
+110                     
+111                               riscv::OpcodeC0Ld: begin
+112                                 // RV64
+113                                 //   c.ld -&gt; ld rd', imm(rs1')
+114                                 // RV32
+115                                 //   c.flw -&gt; flw fprd', imm(rs1')
+116        1/1                      if (CVA6Cfg.IS_XLEN64) begin
+117                                   // CLD: | funct3 | imm[5:3] | rs1' | imm[7:6] | rd' | C0 |
+118        <font color = "grey">unreachable  </font>              instr_o = {
+119                                     4'b0,
+120                                     instr_i[6:5],
+121                                     instr_i[12:10],
+122                                     3'b000,
+123                                     2'b01,
+124                                     instr_i[9:7],
+125                                     3'b011,
+126                                     2'b01,
+127                                     instr_i[4:2],
+128                                     riscv::OpcodeLoad
+129                                   };
+130                                 end else begin
+131        1/1                        if (CVA6Cfg.FpPresent) begin
+132                                     // CFLW: | funct3 (change to LW) | imm[5:3] | rs1' | imm[2|6] | rd' | C0 |
+133        <font color = "grey">unreachable  </font>                instr_o = {
+134                                       5'b0,
+135                                       instr_i[5],
+136                                       instr_i[12:10],
+137                                       instr_i[6],
+138                                       2'b00,
+139                                       2'b01,
+140                                       instr_i[9:7],
+141                                       3'b010,
+142                                       2'b01,
+143                                       instr_i[4:2],
+144                                       riscv::OpcodeLoadFp
+145                                     };
+146                                   end else begin
+147        1/1                          illegal_instr_o = 1'b1;
+148                                   end
+149                                 end
+150                               end
+151                     
+152                               riscv::OpcodeC0Zcb: begin
+153        1/1                      if (CVA6Cfg.RVZCB) begin
+154        1/1                        unique case (instr_i[12:10])
+155                                     3'b000: begin
+156                                       // c.lbu -&gt; lbu rd', uimm(rs1')
+157        1/1                            instr_o = {
+158                                         10'b0,
+159                                         instr_i[5],
+160                                         instr_i[6],
+161                                         2'b01,
+162                                         instr_i[9:7],
+163                                         3'b100,
+164                                         2'b01,
+165                                         instr_i[4:2],
+166                                         riscv::OpcodeLoad
+167                                       };
+168                                     end
+169                     
+170                                     3'b001: begin
+171        1/1                            if (instr_i[6]) begin
+172                                         // c.lh -&gt; lh rd', uimm(rs1')
+173        1/1                              instr_o = {
+174                                           10'b0,
+175                                           instr_i[5],
+176                                           1'b0,
+177                                           2'b01,
+178                                           instr_i[9:7],
+179                                           3'b001,
+180                                           2'b01,
+181                                           instr_i[4:2],
+182                                           riscv::OpcodeLoad
+183                                         };
+184                                       end else begin
+185                                         // c.lhu -&gt; lhu rd', uimm(rs1')
+186        1/1                              instr_o = {
+187                                           10'b0,
+188                                           instr_i[5],
+189                                           1'b0,
+190                                           2'b01,
+191                                           instr_i[9:7],
+192                                           3'b101,
+193                                           2'b01,
+194                                           instr_i[4:2],
+195                                           riscv::OpcodeLoad
+196                                         };
+197                                       end
+198                                     end
+199                     
+200                                     3'b010: begin
+201                                       // c.sb -&gt; sb rs2', uimm(rs1')
+202        1/1                            instr_o = {
+203                                         7'b0,
+204                                         2'b01,
+205                                         instr_i[4:2],
+206                                         2'b01,
+207                                         instr_i[9:7],
+208                                         3'b000,
+209                                         3'b0,
+210                                         instr_i[5],
+211                                         instr_i[6],
+212                                         riscv::OpcodeStore
+213                                       };
+214                                     end
+215                     
+216                                     3'b011: begin
+217                                       // c.sh -&gt; sh rs2', uimm(rs1')
+218        1/1                            instr_o = {
+219                                         7'b0,
+220                                         2'b01,
+221                                         instr_i[4:2],
+222                                         2'b01,
+223                                         instr_i[9:7],
+224                                         3'b001,
+225                                         3'b0,
+226                                         instr_i[5],
+227                                         1'b0,
+228                                         riscv::OpcodeStore
+229                                       };
+230                                     end
+231                     
+232                                     default: begin
+233        1/1                            illegal_instr_o = 1'b1;
+234                                     end
+235                                   endcase
+236                     
+237                                 end else begin
+238        <font color = "grey">unreachable  </font>              instr_o = instr_i;
+239        <font color = "grey">unreachable  </font>              illegal_instr_o = 1'b1;
+240                                 end
+241                               end
+242                     
+243                               riscv::OpcodeC0Fsd: begin
+244        1/1                      if (CVA6Cfg.FpPresent) begin
+245                                   // c.fsd -&gt; fsd rs2', imm(rs1')
+246        <font color = "grey">unreachable  </font>              instr_o = {
+247                                     4'b0,
+248                                     instr_i[6:5],
+249                                     instr_i[12],
+250                                     2'b01,
+251                                     instr_i[4:2],
+252                                     2'b01,
+253                                     instr_i[9:7],
+254                                     3'b011,
+255                                     instr_i[11:10],
+256                                     3'b000,
+257                                     riscv::OpcodeStoreFp
+258                                   };
+259                                 end else begin
+260        1/1                        illegal_instr_o = 1'b1;
+261                                 end
+262                               end
+263                     
+264                               riscv::OpcodeC0Sw: begin
+265                                 // c.sw -&gt; sw rs2', imm(rs1')
+266        1/1                      instr_o = {
+267                                   5'b0,
+268                                   instr_i[5],
+269                                   instr_i[12],
+270                                   2'b01,
+271                                   instr_i[4:2],
+272                                   2'b01,
+273                                   instr_i[9:7],
+274                                   3'b010,
+275                                   instr_i[11:10],
+276                                   instr_i[6],
+277                                   2'b00,
+278                                   riscv::OpcodeStore
+279                                 };
+280                               end
+281                     
+282                               riscv::OpcodeC0Sd: begin
+283                                 // RV64
+284                                 //   c.sd -&gt; sd rs2', imm(rs1')
+285                                 // RV32
+286                                 //   c.fsw -&gt; fsw fprs2', imm(rs1')
+287        1/1                      if (CVA6Cfg.IS_XLEN64) begin
+288        <font color = "grey">unreachable  </font>              instr_o = {
+289                                     4'b0,
+290                                     instr_i[6:5],
+291                                     instr_i[12],
+292                                     2'b01,
+293                                     instr_i[4:2],
+294                                     2'b01,
+295                                     instr_i[9:7],
+296                                     3'b011,
+297                                     instr_i[11:10],
+298                                     3'b000,
+299                                     riscv::OpcodeStore
+300                                   };
+301                                 end else begin
+302        1/1                        if (CVA6Cfg.FpPresent) begin
+303        <font color = "grey">unreachable  </font>                instr_o = {
+304                                       5'b0,
+305                                       instr_i[5],
+306                                       instr_i[12],
+307                                       2'b01,
+308                                       instr_i[4:2],
+309                                       2'b01,
+310                                       instr_i[9:7],
+311                                       3'b010,
+312                                       instr_i[11:10],
+313                                       instr_i[6],
+314                                       2'b00,
+315                                       riscv::OpcodeStoreFp
+316                                     };
+317                                   end else begin
+318        1/1                          illegal_instr_o = 1'b1;
+319                                   end
+320                                 end
+321                               end
+322                     
+323                               default: begin
+324        <font color = "red">0/1     ==>              illegal_instr_o = 1'b1;</font>
+325                               end
+326                             endcase
+327                           end
+328                     
+329                           // C1
+330                           riscv::OpcodeC1: begin
+331        1/1                  unique case (instr_i[15:13])
+332                               riscv::OpcodeC1Addi: begin
+333                                 // c.addi -&gt; addi rd, rd, nzimm
+334                                 // c.nop -&gt; addi 0, 0, 0
+335        1/1                      instr_o = {
+336                                   {6{instr_i[12]}},
+337                                   instr_i[12],
+338                                   instr_i[6:2],
+339                                   instr_i[11:7],
+340                                   3'b0,
+341                                   instr_i[11:7],
+342                                   riscv::OpcodeOpImm
+343                                 };
+344                               end
+345                     
+346                     
+347                               riscv::OpcodeC1Addiw: begin  // or riscv::OpcodeC1Jal for RV32IC
+348        1/1                      if (CVA6Cfg.IS_XLEN64) begin
+349                                   // c.addiw -&gt; addiw rd, rd, nzimm for RV64IC
+350        <font color = "grey">unreachable  </font>              if (instr_i[11:7] != 5'h0) begin  // only valid if the destination is not r0
+351        <font color = "grey">unreachable  </font>                instr_o = {
+352                                       {6{instr_i[12]}},
+353                                       instr_i[12],
+354                                       instr_i[6:2],
+355                                       instr_i[11:7],
+356                                       3'b0,
+357                                       instr_i[11:7],
+358                                       riscv::OpcodeOpImm32
+359                                     };
+360                                   end else begin
+361        <font color = "grey">unreachable  </font>                illegal_instr_o = 1'b1;
+362                                   end
+363                                 end else begin
+364                                   // c.jal -&gt; jal x1, imm for RV32IC only
+365        1/1                        instr_o = {
+366                                     instr_i[12],
+367                                     instr_i[8],
+368                                     instr_i[10:9],
+369                                     instr_i[6],
+370                                     instr_i[7],
+371                                     instr_i[2],
+372                                     instr_i[11],
+373                                     instr_i[5:3],
+374                                     {9{instr_i[12]}},
+375                                     5'b1,
+376                                     riscv::OpcodeJal
+377                                   };
+378                     
+379                     
+380                     
+381                                 end
+382                               end
+383                     
+384                               riscv::OpcodeC1Li: begin
+385                                 // c.li -&gt; addi rd, x0, nzimm
+386        1/1                      instr_o = {
+387                                   {6{instr_i[12]}},
+388                                   instr_i[12],
+389                                   instr_i[6:2],
+390                                   5'b0,
+391                                   3'b0,
+392                                   instr_i[11:7],
+393                                   riscv::OpcodeOpImm
+394                                 };
+395                               end
+396                     
+397                               riscv::OpcodeC1LuiAddi16sp: begin
+398                                 // c.lui -&gt; lui rd, imm
+399        1/1                      instr_o = {{15{instr_i[12]}}, instr_i[6:2], instr_i[11:7], riscv::OpcodeLui};
+400                     
+401        1/1                      if (instr_i[11:7] == 5'h02) begin
+402                                   // c.addi16sp -&gt; addi x2, x2, nzimm
+403        1/1                        instr_o = {
+404                                     {3{instr_i[12]}},
+405                                     instr_i[4:3],
+406                                     instr_i[5],
+407                                     instr_i[2],
+408                                     instr_i[6],
+409                                     4'b0,
+410                                     5'h02,
+411                                     3'b000,
+412                                     5'h02,
+413                                     riscv::OpcodeOpImm
+414                                   };
+415                                 end
+                        MISSING_ELSE
+416                     
+417        2/2                      if ({instr_i[12], instr_i[6:2]} == 6'b0) illegal_instr_o = 1'b1;
+                        MISSING_ELSE
+418                               end
+419                     
+420                               riscv::OpcodeC1MiscAlu: begin
+421        1/1                      unique case (instr_i[11:10])
+422                                   2'b00, 2'b01: begin
+423                                     // 00: c.srli -&gt; srli rd, rd, shamt
+424                                     // 01: c.srai -&gt; srai rd, rd, shamt
+425        1/1                          instr_o = {
+426                                       1'b0,
+427                                       instr_i[10],
+428                                       4'b0,
+429                                       instr_i[12],
+430                                       instr_i[6:2],
+431                                       2'b01,
+432                                       instr_i[9:7],
+433                                       3'b101,
+434                                       2'b01,
+435                                       instr_i[9:7],
+436                                       riscv::OpcodeOpImm
+437                                     };
+438                                   end
+439                     
+440                                   2'b10: begin
+441                                     // c.andi -&gt; andi rd, rd, imm
+442        1/1                          instr_o = {
+443                                       {6{instr_i[12]}},
+444                                       instr_i[12],
+445                                       instr_i[6:2],
+446                                       2'b01,
+447                                       instr_i[9:7],
+448                                       3'b111,
+449                                       2'b01,
+450                                       instr_i[9:7],
+451                                       riscv::OpcodeOpImm
+452                                     };
+453                                   end
+454                     
+455                                   2'b11: begin
+456        1/1                          unique case ({
+457                                       instr_i[12], instr_i[6:5]
+458                                     })
+459                                       3'b000: begin
+460                                         // c.sub -&gt; sub rd', rd', rs2'
+461        1/1                              instr_o = {
+462                                           2'b01,
+463                                           5'b0,
+464                                           2'b01,
+465                                           instr_i[4:2],
+466                                           2'b01,
+467                                           instr_i[9:7],
+468                                           3'b000,
+469                                           2'b01,
+470                                           instr_i[9:7],
+471                                           riscv::OpcodeOp
+472                                         };
+473                                       end
+474                     
+475                                       3'b001: begin
+476                                         // c.xor -&gt; xor rd', rd', rs2'
+477        1/1                              instr_o = {
+478                                           7'b0,
+479                                           2'b01,
+480                                           instr_i[4:2],
+481                                           2'b01,
+482                                           instr_i[9:7],
+483                                           3'b100,
+484                                           2'b01,
+485                                           instr_i[9:7],
+486                                           riscv::OpcodeOp
+487                                         };
+488                                       end
+489                     
+490                                       3'b010: begin
+491                                         // c.or  -&gt; or  rd', rd', rs2'
+492        1/1                              instr_o = {
+493                                           7'b0,
+494                                           2'b01,
+495                                           instr_i[4:2],
+496                                           2'b01,
+497                                           instr_i[9:7],
+498                                           3'b110,
+499                                           2'b01,
+500                                           instr_i[9:7],
+501                                           riscv::OpcodeOp
+502                                         };
+503                                       end
+504                     
+505                                       3'b011: begin
+506                                         // c.and -&gt; and rd', rd', rs2'
+507        1/1                              instr_o = {
+508                                           7'b0,
+509                                           2'b01,
+510                                           instr_i[4:2],
+511                                           2'b01,
+512                                           instr_i[9:7],
+513                                           3'b111,
+514                                           2'b01,
+515                                           instr_i[9:7],
+516                                           riscv::OpcodeOp
+517                                         };
+518                                       end
+519                     
+520                                       3'b100: begin
+521        1/1                              if (CVA6Cfg.IS_XLEN64) begin
+522                                           // c.subw -&gt; subw rd', rd', rs2'
+523        <font color = "grey">unreachable  </font>                      instr_o = {
+524                                             2'b01,
+525                                             5'b0,
+526                                             2'b01,
+527                                             instr_i[4:2],
+528                                             2'b01,
+529                                             instr_i[9:7],
+530                                             3'b000,
+531                                             2'b01,
+532                                             instr_i[9:7],
+533                                             riscv::OpcodeOp32
+534                                           };
+535                                         end else begin
+536        1/1                                illegal_instr_o = 1'b1;
+537                                         end
+538                                       end
+539                     
+540                                       3'b101: begin
+541        1/1                              if (CVA6Cfg.IS_XLEN64) begin
+542                                           // c.addw -&gt; addw rd', rd', rs2'
+543        <font color = "grey">unreachable  </font>                      instr_o = {
+544                                             2'b00,
+545                                             5'b0,
+546                                             2'b01,
+547                                             instr_i[4:2],
+548                                             2'b01,
+549                                             instr_i[9:7],
+550                                             3'b000,
+551                                             2'b01,
+552                                             instr_i[9:7],
+553                                             riscv::OpcodeOp32
+554                                           };
+555                                         end else begin
+556        1/1                                illegal_instr_o = 1'b1;
+557                                         end
+558                                       end
+559                     
+560                                       3'b110: begin
+561        1/1                              if (CVA6Cfg.RVZCB) begin
+562                                           // c.mul -&gt; mul rd', rd', rs2'
+563        1/1                                instr_o = {
+564                                             6'b0,
+565                                             1'b1,
+566                                             2'b01,
+567                                             instr_i[4:2],
+568                                             2'b01,
+569                                             instr_i[9:7],
+570                                             3'b000,
+571                                             2'b01,
+572                                             instr_i[9:7],
+573                                             riscv::OpcodeOp
+574                                           };
+575                                         end else begin
+576        <font color = "grey">unreachable  </font>                      instr_o = instr_i;
+577        <font color = "grey">unreachable  </font>                      illegal_instr_o = 1'b1;
+578                                         end
+579                                       end
+580                     
+581                                       3'b111: begin
+582        1/1                              if (CVA6Cfg.RVZCB) begin
+583                     
+584        1/1                                unique case (instr_i[4:2])
+585                                             3'b000: begin
+586                                               // c.zext.b -&gt; andi rd', rd', 0xff
+587        1/1                                    instr_o = {
+588                                                 4'b0,
+589                                                 8'hFF,
+590                                                 2'b01,
+591                                                 instr_i[9:7],
+592                                                 3'b111,
+593                                                 2'b01,
+594                                                 instr_i[9:7],
+595                                                 riscv::OpcodeOpImm
+596                                               };
+597                                             end
+598                     
+599                                             3'b001: begin
+600        1/1                                    if (CVA6Cfg.RVB) begin
+601                                                 // c.sext.b -&gt; sext.b rd', rd'
+602        1/1                                      instr_o = {
+603                                                   7'h30,
+604                                                   5'h4,
+605                                                   2'b01,
+606                                                   instr_i[9:7],
+607                                                   3'b001,
+608                                                   2'b01,
+609                                                   instr_i[9:7],
+610                                                   riscv::OpcodeOpImm
+611                                                 };
+612        <font color = "grey">unreachable  </font>                          end else illegal_instr_o = 1'b1;
+613                                             end
+614                     
+615                                             3'b010: begin
+616        1/1                                    if (CVA6Cfg.RVB) begin
+617                                                 // c.zext.h -&gt; zext.h rd', rd'
+618        1/1                                      if (CVA6Cfg.IS_XLEN64) begin
+619        <font color = "grey">unreachable  </font>                              instr_o = {
+620                                                     7'h4,
+621                                                     5'h0,
+622                                                     2'b01,
+623                                                     instr_i[9:7],
+624                                                     3'b100,
+625                                                     2'b01,
+626                                                     instr_i[9:7],
+627                                                     riscv::OpcodeOp32
+628                                                   };
+629                                                 end else begin
+630        1/1                                        instr_o = {
+631                                                     7'h4,
+632                                                     5'h0,
+633                                                     2'b01,
+634                                                     instr_i[9:7],
+635                                                     3'b100,
+636                                                     2'b01,
+637                                                     instr_i[9:7],
+638                                                     riscv::OpcodeOp
+639                                                   };
+640                                                 end
+641        <font color = "grey">unreachable  </font>                          end else illegal_instr_o = 1'b1;
+642                                             end
+643                     
+644                                             3'b011: begin
+645        1/1                                    if (CVA6Cfg.RVB) begin
+646                                                 // c.sext.h -&gt; sext.h rd', rd'
+647        1/1                                      instr_o = {
+648                                                   7'h30,
+649                                                   5'h5,
+650                                                   2'b01,
+651                                                   instr_i[9:7],
+652                                                   3'b001,
+653                                                   2'b01,
+654                                                   instr_i[9:7],
+655                                                   riscv::OpcodeOpImm
+656                                                 };
+657        <font color = "grey">unreachable  </font>                          end else illegal_instr_o = 1'b1;
+658                                             end
+659                     
+660                                             3'b100: begin
+661        1/1                                    if (CVA6Cfg.RVB) begin
+662                                                 // c.zext.w -&gt; add.uw
+663        1/1                                      if (CVA6Cfg.IS_XLEN64) begin
+664        <font color = "grey">unreachable  </font>                              instr_o = {
+665                                                     7'h4,
+666                                                     5'h0,
+667                                                     2'b01,
+668                                                     instr_i[9:7],
+669                                                     3'b000,
+670                                                     2'b01,
+671                                                     instr_i[9:7],
+672                                                     riscv::OpcodeOp32
+673                                                   };
+674                                                 end else begin
+675        1/1                                        illegal_instr_o = 1'b1;
+676                                                 end
+677        <font color = "grey">unreachable  </font>                          end else illegal_instr_o = 1'b1;
+678                                             end
+679                     
+680                                             3'b101: begin
+681                                               // c.not -&gt; xori rd', rd', -1
+682        1/1                                    instr_o = {
+683                                                 12'hFFF,
+684                                                 2'b01,
+685                                                 instr_i[9:7],
+686                                                 3'b100,
+687                                                 2'b01,
+688                                                 instr_i[9:7],
+689                                                 riscv::OpcodeOpImm
+690                                               };
+691                                             end
+692                     
+693                                             default: begin
+694        1/1                                    instr_o = instr_i;
+695        1/1                                    illegal_instr_o = 1;
+696                                             end
+697                                           endcase
+698                                         end
+                   <font color = "red">==>  MISSING_ELSE</font>
+699                                       end
+700                                     endcase
+701                                   end
+702                                 endcase
+703                               end
+704                     
+705                               riscv::OpcodeC1J: begin
+706                                 // 101: c.j   -&gt; jal x0, imm
+707        1/1                      instr_o = {
+708                                   instr_i[12],
+709                                   instr_i[8],
+710                                   instr_i[10:9],
+711                                   instr_i[6],
+712                                   instr_i[7],
+713                                   instr_i[2],
+714                                   instr_i[11],
+715                                   instr_i[5:3],
+716                                   {9{instr_i[12]}},
+717                                   4'b0,
+718                                   ~instr_i[15],
+719                                   riscv::OpcodeJal
+720                                 };
+721                               end
+722                     
+723                               riscv::OpcodeC1Beqz, riscv::OpcodeC1Bnez: begin
+724                                 // 0: c.beqz -&gt; beq rs1', x0, imm
+725                                 // 1: c.bnez -&gt; bne rs1', x0, imm
+726        1/1                      instr_o = {
+727                                   {4{instr_i[12]}},
+728                                   instr_i[6:5],
+729                                   instr_i[2],
+730                                   5'b0,
+731                                   2'b01,
+732                                   instr_i[9:7],
+733                                   2'b00,
+734                                   instr_i[13],
+735                                   instr_i[11:10],
+736                                   instr_i[4:3],
+737                                   instr_i[12],
+738                                   riscv::OpcodeBranch
+739                                 };
+740                               end
+741                             endcase
+742                           end
+743                     
+744                           // C2
+745                           riscv::OpcodeC2: begin
+746        1/1                  unique case (instr_i[15:13])
+747                               riscv::OpcodeC2Slli: begin
+748                                 // c.slli -&gt; slli rd, rd, shamt
+749        1/1                      instr_o = {
+750                                   6'b0,
+751                                   instr_i[12],
+752                                   instr_i[6:2],
+753                                   instr_i[11:7],
+754                                   3'b001,
+755                                   instr_i[11:7],
+756                                   riscv::OpcodeOpImm
+757                                 };
+758                               end
+759                     
+760                               riscv::OpcodeC2Fldsp: begin
+761        1/1                      if (CVA6Cfg.FpPresent) begin
+762                                   // c.fldsp -&gt; fld rd, imm(x2)
+763        <font color = "grey">unreachable  </font>              instr_o = {
+764                                     3'b0,
+765                                     instr_i[4:2],
+766                                     instr_i[12],
+767                                     instr_i[6:5],
+768                                     3'b000,
+769                                     5'h02,
+770                                     3'b011,
+771                                     instr_i[11:7],
+772                                     riscv::OpcodeLoadFp
+773                                   };
+774                                 end else begin
+775        1/1                        illegal_instr_o = 1'b1;
+776                                 end
+777                               end
+778                     
+779                               riscv::OpcodeC2Lwsp: begin
+780                                 // c.lwsp -&gt; lw rd, imm(x2)
+781        1/1                      instr_o = {
+782                                   4'b0,
+783                                   instr_i[3:2],
+784                                   instr_i[12],
+785                                   instr_i[6:4],
+786                                   2'b00,
+787                                   5'h02,
+788                                   3'b010,
+789                                   instr_i[11:7],
+790                                   riscv::OpcodeLoad
+791                                 };
+792        2/2                      if (instr_i[11:7] == 5'b0) illegal_instr_o = 1'b1;
+                        MISSING_ELSE
+793                               end
+794                     
+795                               riscv::OpcodeC2Ldsp: begin
+796                                 // RV64
+797                                 //   c.ldsp -&gt; ld rd, imm(x2)
+798                                 // RV32
+799                                 //   c.flwsp -&gt; flw fprd, imm(x2)
+800        1/1                      if (CVA6Cfg.IS_XLEN64) begin
+801        <font color = "grey">unreachable  </font>              instr_o = {
+802                                     3'b0,
+803                                     instr_i[4:2],
+804                                     instr_i[12],
+805                                     instr_i[6:5],
+806                                     3'b000,
+807                                     5'h02,
+808                                     3'b011,
+809                                     instr_i[11:7],
+810                                     riscv::OpcodeLoad
+811                                   };
+812        <font color = "grey">unreachable  </font>              if (instr_i[11:7] == 5'b0) illegal_instr_o = 1'b1;
+                   <font color = "red">==>  MISSING_ELSE</font>
+813                                 end else begin
+814        1/1                        if (CVA6Cfg.FpPresent) begin
+815        <font color = "grey">unreachable  </font>                instr_o = {
+816                                       4'b0,
+817                                       instr_i[3:2],
+818                                       instr_i[12],
+819                                       instr_i[6:4],
+820                                       2'b00,
+821                                       5'h02,
+822                                       3'b010,
+823                                       instr_i[11:7],
+824                                       riscv::OpcodeLoadFp
+825                                     };
+826                                   end else begin
+827        1/1                          illegal_instr_o = 1'b1;
+828                                   end
+829                                 end
+830                               end
+831                     
+832                               riscv::OpcodeC2JalrMvAdd: begin
+833        1/1                      if (instr_i[12] == 1'b0) begin
+834                                   // c.mv -&gt; add rd/rs1, x0, rs2
+835        1/1                        instr_o = {7'b0, instr_i[6:2], 5'b0, 3'b0, instr_i[11:7], riscv::OpcodeOp};
+836                     
+837        1/1                        if (instr_i[6:2] == 5'b0) begin
+838                                     // c.jr -&gt; jalr x0, rd/rs1, 0
+839        1/1                          instr_o = {12'b0, instr_i[11:7], 3'b0, 5'b0, riscv::OpcodeJalr};
+840                                     // rs1 != 0
+841        1/1                          illegal_instr_o = (instr_i[11:7] != '0) ? 1'b0 : 1'b1;
+842                                   end
+                        MISSING_ELSE
+843                                 end else begin
+844                                   // c.add -&gt; add rd, rd, rs2
+845        1/1                        instr_o = {7'b0, instr_i[6:2], instr_i[11:7], 3'b0, instr_i[11:7], riscv::OpcodeOp};
+846                     
+847        1/1                        if (instr_i[6:2] == 5'b0) begin
+848        1/1                          if (instr_i[11:7] == 5'b0) begin
+849                                       // c.ebreak -&gt; ebreak
+850        1/1                            instr_o = {32'h00_10_00_73};
+851                                     end else begin
+852                                       // c.jalr -&gt; jalr x1, rs1, 0
+853        1/1                            instr_o = {12'b0, instr_i[11:7], 3'b000, 5'b00001, riscv::OpcodeJalr};
+854                                     end
+855                                   end
+                        MISSING_ELSE
+856                                 end
+857                               end
+858                     
+859                               riscv::OpcodeC2Fsdsp: begin
+860        1/1                      if (CVA6Cfg.FpPresent) begin
+861                                   // c.fsdsp -&gt; fsd rs2, imm(x2)
+862        <font color = "grey">unreachable  </font>              instr_o = {
+863                                     3'b0,
+864                                     instr_i[9:7],
+865                                     instr_i[12],
+866                                     instr_i[6:2],
+867                                     5'h02,
+868                                     3'b011,
+869                                     instr_i[11:10],
+870                                     3'b000,
+871                                     riscv::OpcodeStoreFp
+872                                   };
+873        1/1                      end else if (CVA6Cfg.RVZCMP &amp;&amp; (instr_i[12:10] == 3'b110 || instr_i[12:10] == 3'b111 || instr_i[12:10] == 3'b011)) begin
+874        <font color = "grey">unreachable  </font>              is_macro_instr_o = 1;
+875        <font color = "grey">unreachable  </font>              instr_o = instr_i;
+876        1/1                      end else if (CVA6Cfg.RVZCMT &amp;&amp; (instr_i[12:10] == 3'b000))  //jt/jalt instruction
+877        <font color = "grey">unreachable  </font>              is_zcmt_instr_o = 1'b1;
+878        1/1                      else illegal_instr_o = 1'b1;
+879                               end
+880                               riscv::OpcodeC2Swsp: begin
+881                                 // c.swsp -&gt; sw rs2, imm(x2)
+882        1/1                      instr_o = {
+883                                   4'b0,
+884                                   instr_i[8:7],
+885                                   instr_i[12],
+886                                   instr_i[6:2],
+887                                   5'h02,
+888                                   3'b010,
+889                                   instr_i[11:9],
+890                                   2'b00,
+891                                   riscv::OpcodeStore
+892                                 };
+893                               end
+894                     
+895                               riscv::OpcodeC2Sdsp: begin
+896                                 // RV64
+897                                 //   c.sdsp -&gt; sd rs2, imm(x2)
+898                                 // RV32
+899                                 //   c.fswsp -&gt; fsw fprs2, imm(x2)
+900        1/1                      if (CVA6Cfg.IS_XLEN64) begin
+901        <font color = "grey">unreachable  </font>              instr_o = {
+902                                     3'b0,
+903                                     instr_i[9:7],
+904                                     instr_i[12],
+905                                     instr_i[6:2],
+906                                     5'h02,
+907                                     3'b011,
+908                                     instr_i[11:10],
+909                                     3'b000,
+910                                     riscv::OpcodeStore
+911                                   };
+912                                 end else begin
+913        1/1                        if (CVA6Cfg.FpPresent) begin
+914        <font color = "grey">unreachable  </font>                instr_o = {
+915                                       4'b0,
+916                                       instr_i[8:7],
+917                                       instr_i[12],
+918                                       instr_i[6:2],
+919                                       5'h02,
+920                                       3'b010,
+921                                       instr_i[11:9],
+922                                       2'b00,
+923                                       riscv::OpcodeStoreFp
+924                                     };
+925                                   end else begin
+926        1/1                          illegal_instr_o = 1'b1;
+927                                   end
+928                                 end
+929                               end
+930                     
+931                               default: begin
+932        <font color = "red">0/1     ==>              illegal_instr_o = 1'b1;</font>
+933                               end
+934                             endcase
+935                           end
+936                     
+937                           // normal instruction
+938        1/1                default: is_compressed_o = 1'b0;
+939                         endcase
+940                     
+941                         // Check if the instruction was illegal, if it was then output the offending instruction (zero-extended)
+942        1/1              if (illegal_instr_o) begin
+943        1/1                instr_o = instr_i;
+944                         end
+                   <font color = "red">==>  MISSING_ELSE</font>
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod99.html" >compressed_decoder</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>20</td><td>20</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>20</td><td>20</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       70
+ EXPRESSION (instr_i[12:5] == 8'b0)
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       350
+ EXPRESSION (instr_i[11:7] != 5'b0)
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       401
+ EXPRESSION (instr_i[11:7] == 5'h02)
+            ------------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       417
+ EXPRESSION ({instr_i[12], instr_i[6:2]} == 6'b0)
+            ------------------1------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       792
+ EXPRESSION (instr_i[11:7] == 5'b0)
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       812
+ EXPRESSION (instr_i[11:7] == 5'b0)
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="wht"><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       833
+ EXPRESSION (instr_i[12] == 1'b0)
+            ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       837
+ EXPRESSION (instr_i[6:2] == 5'b0)
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       841
+ EXPRESSION ((instr_i[11:7] != '0) ? 1'b0 : 1'b1)
+             ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       841
+ SUB-EXPRESSION (instr_i[11:7] != '0)
+                ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       847
+ EXPRESSION (instr_i[6:2] == 5'b0)
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       848
+ EXPRESSION (instr_i[11:7] == 5'b0)
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_250">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_compressed_decoder">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: multiplier</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_multiplier'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_multiplier')">multiplier</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod109.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod109.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/multiplier.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/multiplier.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod109.html#inst_tag_261"  onclick="showContent('inst_tag_261')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.i_mult.i_multiplier</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod109.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod109.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_multiplier'>
+<hr>
+<a name="inst_tag_261"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_261" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.i_mult.i_multiplier</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod109.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod109.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod56.html#inst_tag_205" >i_mult</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_multiplier'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod109.html" >multiplier</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>33</td><td>33</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>66</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>93</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>122</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>136</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>149</td><td>9</td><td>9</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+65                          always_comb begin
+66         1/1                clmul_d = '0;
+67         1/1                for (int i = 0; i &lt;= CVA6Cfg.XLEN; i++) begin
+68         1/1                  clmul_d = (|((operand_b &gt;&gt; i) &amp; 1)) ? clmul_d ^ (operand_a &lt;&lt; i) : clmul_d;
+69                            end
+70                          end
+71                      
+72                          // clmulr + clmulh result generator
+73                          for (genvar i = 0; i &lt; CVA6Cfg.XLEN; i++) begin
+74                            assign clmulr_d[i] = clmul_d[(CVA6Cfg.XLEN-1)-i];
+75                          end
+76                        end
+77                      
+78                        // Pipeline register
+79                        logic [CVA6Cfg.TRANS_ID_BITS-1:0] trans_id_q;
+80                        logic                             mult_valid_q;
+81                        fu_op operator_d, operator_q;
+82                        logic [CVA6Cfg.XLEN*2-1:0] mult_result_d, mult_result_q;
+83                      
+84                        // control registers
+85                        logic sign_a, sign_b;
+86                      
+87                        // control signals
+88                        assign mult_valid_o = mult_valid_q;
+89                        assign mult_trans_id_o = trans_id_q;
+90                      
+91                        // Sign Select MUX
+92                        always_comb begin
+93         1/1              sign_a = 1'b0;
+94         1/1              sign_b = 1'b0;
+95                      
+96                          // signed multiplication
+97         1/1              if (operation_i == MULH) begin
+98         1/1                sign_a = 1'b1;
+99         1/1                sign_b = 1'b1;
+100                           // signed - unsigned multiplication
+101        1/1              end else if (operation_i == MULHSU) begin
+102        1/1                sign_a = 1'b1;
+103                           // unsigned multiplication
+104                         end else begin
+105        1/1                sign_a = 1'b0;
+106        1/1                sign_b = 1'b0;
+107                         end
+108                       end
+109                     
+110                     
+111                       // single stage version
+112                       assign mult_result_d = $signed(
+113                           {operand_a_i[CVA6Cfg.XLEN-1] &amp; sign_a, operand_a_i}
+114                       ) * $signed(
+115                           {operand_b_i[CVA6Cfg.XLEN-1] &amp; sign_b, operand_b_i}
+116                       );
+117                     
+118                     
+119                       assign operator_d = operation_i;
+120                     
+121                       always_comb begin : p_selmux
+122        1/1              unique case (operator_q)
+123        1/1                MULH, MULHU, MULHSU: result_o = mult_result_q[CVA6Cfg.XLEN*2-1:CVA6Cfg.XLEN];
+124        1/1                CLMUL:               result_o = clmul_q;
+125        1/1                CLMULH:              result_o = clmulr_q &gt;&gt; 1;
+126        1/1                CLMULR:              result_o = clmulr_q;
+127                           // MUL performs an CVA6Cfg.XLEN-bit×CVA6Cfg.XLEN-bit multiplication and places the lower CVA6Cfg.XLEN bits in the destination register
+128                           default: begin
+129        1/1(1 unreachable)          if (operator_q == MULW &amp;&amp; CVA6Cfg.IS_XLEN64) result_o = sext32to64(mult_result_q[31:0]);
+130        1/1                  else result_o = mult_result_q[CVA6Cfg.XLEN-1:0];  // including MUL
+131                           end
+132                         endcase
+133                       end
+134                       if (CVA6Cfg.RVB) begin
+135                         always_ff @(posedge clk_i or negedge rst_ni) begin
+136        1/1                if (~rst_ni) begin
+137        1/1                  clmul_q  &lt;= '0;
+138        1/1                  clmulr_q &lt;= '0;
+139                           end else begin
+140        1/1                  clmul_q  &lt;= clmul_d;
+141        1/1                  clmulr_q &lt;= clmulr_d;
+142                           end
+143                         end
+144                       end
+145                       // -----------------------
+146                       // Output pipeline register
+147                       // -----------------------
+148                       always_ff @(posedge clk_i or negedge rst_ni) begin
+149        1/1              if (~rst_ni) begin
+150        1/1                mult_valid_q  &lt;= '0;
+151        1/1                trans_id_q    &lt;= '0;
+152        1/1                operator_q    &lt;= MUL;
+153        1/1                mult_result_q &lt;= '0;
+154                         end else begin
+155                           // Input silencing
+156        1/1                trans_id_q    &lt;= trans_id_i;
+157                           // Output Register
+158        1/1                mult_valid_q  &lt;= mult_valid_i;
+159        1/1                operator_q    &lt;= operator_d;
+160        1/1                mult_result_q &lt;= mult_result_d;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod109.html" >multiplier</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>20</td><td>20</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>20</td><td>20</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       51
+ EXPRESSION (operation_i == CLMULR)
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       52
+ EXPRESSION (operation_i == CLMULH)
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       61
+ EXPRESSION ((clmul_rmode | clmul_hmode) ? operand_a_rev : operand_a_i)
+             -------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       61
+ SUB-EXPRESSION (clmul_rmode | clmul_hmode)
+                 -----1-----   -----2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       62
+ EXPRESSION ((clmul_rmode | clmul_hmode) ? operand_b_rev : operand_b_i)
+             -------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       62
+ SUB-EXPRESSION (clmul_rmode | clmul_hmode)
+                 -----1-----   -----2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       68
+ EXPRESSION (((|((operand_b &gt;&gt; i) &amp; 1))) ? ((clmul_d ^ (operand_a &lt;&lt; i))) : clmul_d)
+             -------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       97
+ EXPRESSION (operation_i == MULH)
+            ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       101
+ EXPRESSION (operation_i == MULHSU)
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_261">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_multiplier">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

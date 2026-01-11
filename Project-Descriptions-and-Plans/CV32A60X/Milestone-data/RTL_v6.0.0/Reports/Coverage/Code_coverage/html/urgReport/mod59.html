@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: load_unit</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a> | <a href="hvp.CVA6 Verification Master Plan.html" ><b>hvp</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_load_unit'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_load_unit')">load_unit</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod59.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod59.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('cva6/core/load_unit.sv')">/gitlab-runner/riscv-unsecure/builds/pcHoz_AFu/12/riscv/nonsecure/cva6/core/load_unit.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod59.html#inst_tag_208"  onclick="showContent('inst_tag_208')">uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.lsu_i.i_load_unit</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod59.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod59.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_load_unit'>
+<hr>
+<a name="inst_tag_208"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_208" >uvmt_cva6_tb.cva6_dut_wrap.cva6_tb_wrapper_i.cva6_only_pipeline.i_cva6_pipeline.ex_stage_i.lsu_i.i_load_unit</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod59.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod59.html#Cond" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 98.75</td>
+<td class="s9 cl rt"> 97.50</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod3.html#inst_tag_5" >lsu_i</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>ASSERT</td></tr><tr>
+<td colspan=5>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_load_unit'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod59.html" >load_unit</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>82</td><td>82</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>158</td><td>10</td><td>10</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>182</td><td>12</td><td>12</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>274</td><td>27</td><td>27</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>345</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>374</td><td>16</td><td>16</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>453</td><td>6</td><td>6</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+157                       always_comb begin : ldbuf_comb
+158        1/1              ldbuf_flushed_d = ldbuf_flushed_q;
+159        1/1              ldbuf_valid_d   = ldbuf_valid_q;
+160                     
+161                         //  In case of flush, raise the flushed flag in all slots.
+162        1/1              if (flush_i) begin
+163        1/1                ldbuf_flushed_d = '1;
+164                         end
+                        MISSING_ELSE
+165                         //  Free read entry (in the case of fall-through mode, free the entry
+166                         //  only if there is no pending load)
+167        1/1              if (ldbuf_r &amp;&amp; (!LDBUF_FALLTHROUGH || !ldbuf_w)) begin
+168        1/1                ldbuf_valid_d[ldbuf_rindex] = 1'b0;
+169                         end
+                        MISSING_ELSE
+170                         // Free on exception
+171        1/1              if (CVA6Cfg.MmuPresent &amp;&amp; (ldbuf_w_q &amp;&amp; ex_i.valid)) begin
+172        <font color = "grey">unreachable  </font>      ldbuf_valid_d[ldbuf_windex_q] = 1'b0;
+173                         end
+                        MISSING_ELSE
+174                         //  Track a new outstanding operation in the load buffer
+175        1/1              if (ldbuf_w) begin
+176        1/1                ldbuf_flushed_d[ldbuf_windex] = 1'b0;
+177        1/1                ldbuf_valid_d[ldbuf_windex]   = 1'b1;
+178                         end
+                        MISSING_ELSE
+179                       end
+180                     
+181                       always_ff @(posedge clk_i or negedge rst_ni) begin : ldbuf_ff
+182        1/1              if (!rst_ni) begin
+183        1/1                ldbuf_flushed_q &lt;= '0;
+184        1/1                ldbuf_valid_q   &lt;= '0;
+185        1/1                ldbuf_last_id_q &lt;= '0;
+186        1/1                ldbuf_q         &lt;= '0;
+187                         end else begin
+188        1/1                ldbuf_flushed_q &lt;= ldbuf_flushed_d;
+189        1/1                ldbuf_valid_q   &lt;= ldbuf_valid_d;
+190        1/1                if (ldbuf_w) begin
+191        1/1                  ldbuf_last_id_q                      &lt;= ldbuf_windex;
+192        1/1                  ldbuf_q[ldbuf_windex].trans_id       &lt;= lsu_ctrl_i.trans_id;
+193        1/1                  ldbuf_q[ldbuf_windex].address_offset &lt;= lsu_ctrl_i.vaddr[CVA6Cfg.XLEN_ALIGN_BYTES-1:0];
+194        1/1                  ldbuf_q[ldbuf_windex].operation      &lt;= lsu_ctrl_i.operation;
+195                           end
+                        MISSING_ELSE
+196                         end
+197                       end
+198                     
+199                       // page offset is defined as the lower 12 bits, feed through for address checker
+200                       assign page_offset_o = lsu_ctrl_i.vaddr[11:0];
+201                       // feed-through the virtual address for VA translation
+202                       assign vaddr_o = lsu_ctrl_i.vaddr;
+203                       assign hs_ld_st_inst_o = CVA6Cfg.RVH ? lsu_ctrl_i.hs_ld_st_inst : 1'b0;
+204                       assign hlvx_inst_o = CVA6Cfg.RVH ? lsu_ctrl_i.hlvx_inst : 1'b0;
+205                       // feed-through the transformed instruction for mmu
+206                       assign tinst_o = CVA6Cfg.RVH ? lsu_ctrl_i.tinst : '0;
+207                     
+208                       // output address
+209                       // we can now output the lower 12 bit as the index to the cache
+210                       assign load_req_o.address_index = lsu_ctrl_i.vaddr[CVA6Cfg.DCACHE_INDEX_WIDTH-1:0];
+211                       assign load_req_o.be = lsu_ctrl_i.be;
+212                     
+213                       // request id = index of the load buffer's entry
+214                       assign load_req_o.aid = ldbuf_windex;
+215                       // directly forward exception fields (valid bit is set below)
+216                       assign ex_o.cause = ex_i.cause;
+217                       assign ex_o.tval = ex_i.tval;
+218                       assign ex_o.tval2 = CVA6Cfg.RVH ? ex_i.tval2 : '0;
+219                       assign ex_o.tinst = CVA6Cfg.RVH ? ex_i.tinst : '0;
+220                       assign ex_o.gva = CVA6Cfg.RVH ? ex_i.gva : 1'b0;
+221                     
+222                       logic [CVA6Cfg.PLEN-1:0] paddr;
+223                     
+224                       assign paddr = CVA6Cfg.MmuPresent ? paddr_i : lsu_ctrl_i.vaddr; //paddr_i is delayed in s1, but no s1 in mode no MMU
+225                     
+226                       // CHECK PMA regions
+227                     
+228                       logic paddr_is_cacheable, paddr_is_cacheable_q;  // asserted if physical address is non-cacheable
+229                       assign paddr_is_cacheable = config_pkg::is_inside_cacheable_regions(
+230                           CVA6Cfg, {{52 - CVA6Cfg.PPNW{1'b0}}, dtlb_ppn_i, 12'd0}
+231                       );
+232                     
+233                       logic paddr_nonidempotent;
+234                       assign paddr_nonidempotent = config_pkg::is_inside_nonidempotent_regions(
+235                           CVA6Cfg, {{52 - CVA6Cfg.PPNW{1'b0}}, dtlb_ppn_i, 12'd0}
+236                       );
+237                     
+238                       // Check that NI operations follow the necessary conditions
+239                       logic not_commit_time;
+240                       logic inflight_stores;
+241                       logic stall_ni;
+242                       assign not_commit_time = commit_tran_id_i != lsu_ctrl_i.trans_id;
+243                       assign inflight_stores = (!dcache_wbuffer_not_ni_i || !store_buffer_empty_i);
+244                     
+245                       typedef enum logic [1:0] {
+246                         TRANSPARENT,
+247                         REGISTRED
+248                       } obi_a_state_e;
+249                       obi_a_state_e obi_a_state_d, obi_a_state_q;
+250                     
+251                       // ---------------
+252                       // Load Control
+253                       // ---------------
+254                       logic ex_s0, ex_s1, kill_s1;
+255                     
+256                       logic stall_obi, stall_translation;
+257                       logic data_req, data_rvalid;
+258                     
+259                       assign load_req_o.kill_req = kill_req_q || kill_s1;
+260                     
+261                       assign stall_ni = (inflight_stores || not_commit_time) &amp;&amp; (paddr_nonidempotent &amp;&amp; CVA6Cfg.NonIdemPotenceEn);
+262                       assign stall_obi = (obi_a_state_q == REGISTRED);  //&amp;&amp; !obi_load_rsp_i.gnt;
+263                       assign stall_translation = CVA6Cfg.MmuPresent ? translation_req_o &amp;&amp; !dtlb_hit_i : 1'b0;
+264                     
+265                       assign ex_s0 = CVA6Cfg.MmuPresent &amp;&amp; stall_translation &amp;&amp; ex_i.valid;
+266                       assign ex_s1 = ((CVA6Cfg.MmuPresent ? ldbuf_w_q : valid_i) &amp;&amp; ex_i.valid);
+267                       assign kill_s1 = CVA6Cfg.MmuPresent ? ex_s1 : 1'b0;
+268                     
+269                       assign data_rvalid = obi_load_rsp_i.rvalid &amp;&amp; !ldbuf_flushed_q[ldbuf_rindex];
+270                       assign data_req = (CVA6Cfg.MmuPresent ? ldbuf_w_q &amp;&amp; !ex_s1 : ldbuf_w);
+271                     
+272                       always_comb begin : p_fsm_common
+273                         // default assignment
+274        1/1              load_req_o.req = '0;
+275        1/1              kill_req_d = 1'b0;
+276        1/1              ldbuf_w = 1'b0;
+277        1/1              translation_req_o = 1'b0;
+278                         //response
+279        1/1              trans_id_o = lsu_ctrl_i.trans_id;
+280        1/1              valid_o    = 1'b0;
+281        1/1              ex_o.valid = 1'b0;
+282        1/1              pop_ld_o = 1'b0; // release lsu_bypass fifo
+283                     
+284                         // REQUEST
+285        1/1              if (valid_i) begin
+286        1/1                translation_req_o = 1'b1;
+287        1/1                if (!page_offset_matches_i) begin
+288        1/1                  load_req_o.req = 1'b1;
+289        1/1                  if (!CVA6Cfg.MmuPresent || load_rsp_i.gnt) begin
+290        1/1                    if (stall_translation || stall_ni || stall_obi || ldbuf_full || flush_i) begin
+291        1/1                      kill_req_d = 1'b1;  // MmuPresent only: next cycle is s2 but we need to kill because not ready to send tag
+292                               end else begin
+293        1/1                      ldbuf_w  = CVA6Cfg.MmuPresent ? 1'b1 : !ex_s1;  // record request into outstanding load fifo and trigger OBI request
+294        1/1                      pop_ld_o = !ex_s1;  // release lsu_bypass fifo
+295                               end
+296                             end
+                   <font color = "red">==>  MISSING_ELSE</font>
+297                           end
+                        MISSING_ELSE
+298                         end
+                        MISSING_ELSE
+299                         // RETIRE LOAD
+300                         // we got an rvalid and it's corresponding request was not flushed
+301        1/1              if (data_rvalid) begin
+302        1/1                trans_id_o = ldbuf_q[ldbuf_rindex].trans_id;
+303        1/1                valid_o    = 1'b1;
+304        1/1                ex_o.valid = 1'b0;
+305                           // RETIRE EXCEPTION (low priority)
+306        1/1              end else if (ex_s1) begin
+307        1/1                trans_id_o = CVA6Cfg.MmuPresent ? ldbuf_q[ldbuf_windex_q].trans_id : lsu_ctrl_i.trans_id;
+308        1/1                valid_o    = 1'b1;
+309        1/1                ex_o.valid = 1'b1;
+310        1/1                pop_ld_o = 1'b1; // release lsu_bypass fifo
+311                           // RETIRE EXCEPTION (low priority)
+312        1/1              end else if (CVA6Cfg.MmuPresent &amp;&amp; ex_s0) begin
+313        <font color = "grey">unreachable  </font>      trans_id_o = lsu_ctrl_i.trans_id;
+314        <font color = "grey">unreachable  </font>      valid_o    = 1'b1;
+315        <font color = "grey">unreachable  </font>      ex_o.valid = 1'b1;
+316        <font color = "grey">unreachable  </font>      pop_ld_o = 1'b1; // release lsu_bypass fifo
+317                         end
+                        MISSING_ELSE
+318                     
+319                       end
+320                     
+321                     
+322                       //default obi state registred
+323                       assign obi_load_req_o.reqpar = !obi_load_req_o.req;
+324                       assign obi_load_req_o.a.addr = obi_a_state_q == TRANSPARENT ? paddr : paddr_q;
+325                       assign obi_load_req_o.a.we = '0;
+326                       assign obi_load_req_o.a.be = (!CVA6Cfg.MmuPresent &amp;&amp; (obi_a_state_q == TRANSPARENT)) ? lsu_ctrl_i.be : be_q;
+327                       assign obi_load_req_o.a.wdata = '0;
+328                       assign obi_load_req_o.a.aid = (!CVA6Cfg.MmuPresent &amp;&amp; (obi_a_state_q == TRANSPARENT)) ? ldbuf_windex : ldbuf_windex_q;
+329                       assign obi_load_req_o.a.a_optional.auser = '0;
+330                       assign obi_load_req_o.a.a_optional.wuser = '0;
+331                       assign obi_load_req_o.a.a_optional.atop = '0;
+332                       assign obi_load_req_o.a.a_optional.memtype[0] = '0;
+333                       assign obi_load_req_o.a.a_optional.memtype[1]= (!CVA6Cfg.MmuPresent &amp;&amp; (obi_a_state_q == TRANSPARENT)) ? paddr_is_cacheable : paddr_is_cacheable_q;
+334                       assign obi_load_req_o.a.a_optional.mid = '0;
+335                       assign obi_load_req_o.a.a_optional.prot[2:1] = 2'b11;
+336                       assign obi_load_req_o.a.a_optional.prot[0] = 1'b1;  //data
+337                       assign obi_load_req_o.a.a_optional.dbg = '0;
+338                       assign obi_load_req_o.a.a_optional.achk = '0;
+339                     
+340                       assign obi_load_req_o.rready = '1;  //always ready
+341                       assign obi_load_req_o.rreadypar = '0;
+342                     
+343                       always_comb begin : p_fsm_obi_a
+344                         // default assignment
+345        1/1              obi_a_state_d = obi_a_state_q;
+346        1/1              obi_load_req_o.req    = 1'b0;
+347                     
+348        1/1              unique case (obi_a_state_q)
+349                           TRANSPARENT: begin
+350        1/1                  if (data_req) begin
+351        1/1                    obi_load_req_o.req = 1'b1;
+352        1/1                    if (!obi_load_rsp_i.gnt) begin
+353        1/1                      obi_a_state_d = REGISTRED;
+354                               end
+                        MISSING_ELSE
+355                             end
+                        MISSING_ELSE
+356                           end
+357                     
+358                           REGISTRED: begin
+359        1/1                  obi_load_req_o.req = 1'b1;
+360        1/1                  if (obi_load_rsp_i.gnt) begin
+361        1/1                    obi_a_state_d = TRANSPARENT;
+362                             end
+                        MISSING_ELSE
+363                           end
+364                     
+365                           default: begin
+366                             // we should never get here
+367        1/1                  obi_a_state_d = TRANSPARENT;
+368                           end
+369                         endcase
+370                       end
+371                     
+372                       // latch physical address for the tag cycle (one cycle after applying the index)
+373                       always_ff @(posedge clk_i or negedge rst_ni) begin
+374        1/1              if (~rst_ni) begin
+375        1/1                obi_a_state_q &lt;= TRANSPARENT;
+376        1/1                paddr_q &lt;= '0;
+377        1/1                be_q &lt;= '0;
+378        1/1                paddr_is_cacheable_q &lt;= '0;
+379        1/1                kill_req_q &lt;= '0;
+380        1/1                ldbuf_windex_q &lt;= '0;
+381        1/1                ldbuf_w_q &lt;= '0;
+382                         end else begin
+383        1/1                if (obi_a_state_q == TRANSPARENT) begin
+384        1/1                  paddr_q &lt;= paddr;
+385        1/1                  be_q &lt;= lsu_ctrl_i.be;
+386        1/1                  paddr_is_cacheable_q &lt;= paddr_is_cacheable;
+387                           end
+                        MISSING_ELSE
+388        1/1                obi_a_state_q &lt;= obi_a_state_d;
+389        1/1                kill_req_q &lt;= kill_req_d;
+390                           //if (!ex_s1) begin
+391        1/1                ldbuf_windex_q &lt;= ldbuf_windex;
+392        1/1                ldbuf_w_q &lt;= ldbuf_w;
+393                           //end
+394                         end
+395                       end
+396                     
+397                     
+398                       // ---------------
+399                       // Retire Load
+400                       // ---------------
+401                       assign ldbuf_rindex = (CVA6Cfg.NrLoadBufEntries &gt; 1) ? ldbuf_id_t'(obi_load_rsp_i.r.rid) : 1'b0;
+402                       assign ldbuf_rdata = ldbuf_q[ldbuf_rindex];
+403                     
+404                       //  read the pending load buffer
+405                       assign ldbuf_r    = obi_load_rsp_i.rvalid;
+406                     
+407                       // ---------------
+408                       // Sign Extend
+409                       // ---------------
+410                       logic [CVA6Cfg.XLEN-1:0] shifted_data;
+411                     
+412                       // realign as needed
+413                       assign shifted_data = obi_load_rsp_i.r.rdata &gt;&gt; {ldbuf_rdata.address_offset, 3'b000};
+414                     
+415                       /*  // result mux (leaner code, but more logic stages.
+416                         // can be used instead of the code below (in between //result mux fast) if timing is not so critical)
+417                         always_comb begin
+418                             unique case (ldbuf_rdata.operation)
+419                                 LWU:        result_o = shifted_data[31:0];
+420                                 LHU:        result_o = shifted_data[15:0];
+421                                 LBU:        result_o = shifted_data[7:0];
+422                                 LW:         result_o = 64'(signed'(shifted_data[31:0]));
+423                                 LH:         result_o = 64'(signed'(shifted_data[15:0]));
+424                                 LB:         result_o = 64'(signed'(shifted_data[ 7:0]));
+425                                 default:    result_o = shifted_data;
+426                             endcase
+427                         end  */
+428                     
+429                       // result mux fast
+430                       logic [        (CVA6Cfg.XLEN/8)-1:0] rdata_sign_bits;
+431                       logic [CVA6Cfg.XLEN_ALIGN_BYTES-1:0] rdata_offset;
+432                       logic rdata_sign_bit, rdata_is_signed, rdata_is_fp_signed;
+433                     
+434                     
+435                       // prepare these signals for faster selection in the next cycle
+436                       assign rdata_is_signed    =   ldbuf_rdata.operation inside {ariane_pkg::LW,  ariane_pkg::LH,  ariane_pkg::LB, ariane_pkg::HLV_W, ariane_pkg::HLV_H, ariane_pkg::HLV_B};
+437                       assign rdata_is_fp_signed =   ldbuf_rdata.operation inside {ariane_pkg::FLW, ariane_pkg::FLH, ariane_pkg::FLB};
+438                       assign rdata_offset       = ((ldbuf_rdata.operation inside {ariane_pkg::LW,  ariane_pkg::FLW, ariane_pkg::HLV_W}) &amp; CVA6Cfg.IS_XLEN64) ? ldbuf_rdata.address_offset + 3 :
+439                                                     ( ldbuf_rdata.operation inside {ariane_pkg::LH,  ariane_pkg::FLH, ariane_pkg::HLV_H})                     ? ldbuf_rdata.address_offset + 1 :
+440                                                                                                                                              ldbuf_rdata.address_offset;
+441                     
+442                       for (genvar i = 0; i &lt; (CVA6Cfg.XLEN / 8); i++) begin : gen_sign_bits
+443                         assign rdata_sign_bits[i] = obi_load_rsp_i.r.rdata[(i+1)*8-1];
+444                       end
+445                     
+446                     
+447                       // select correct sign bit in parallel to result shifter above
+448                       // pull to 0 if unsigned
+449                       assign rdata_sign_bit = rdata_is_signed &amp; rdata_sign_bits[rdata_offset] | (CVA6Cfg.FpPresent &amp;&amp; rdata_is_fp_signed);
+450                     
+451                       // result mux
+452                       always_comb begin
+453        1/1              unique case (ldbuf_rdata.operation)
+454                           ariane_pkg::LW, ariane_pkg::LWU, ariane_pkg::HLV_W, ariane_pkg::HLV_WU, ariane_pkg::HLVX_WU:
+455        1/1                result_o = {{CVA6Cfg.XLEN - 32{rdata_sign_bit}}, shifted_data[31:0]};
+456                           ariane_pkg::LH, ariane_pkg::LHU, ariane_pkg::HLV_H, ariane_pkg::HLV_HU, ariane_pkg::HLVX_HU:
+457        1/1                result_o = {{CVA6Cfg.XLEN - 32 + 16{rdata_sign_bit}}, shifted_data[15:0]};
+458                           ariane_pkg::LB, ariane_pkg::LBU, ariane_pkg::HLV_B, ariane_pkg::HLV_BU:
+459        1/1                result_o = {{CVA6Cfg.XLEN - 32 + 24{rdata_sign_bit}}, shifted_data[7:0]};
+460                           default: begin
+461                             // FLW, FLH and FLB have been defined here in default case to improve Code Coverage
+462        1/1                  if (CVA6Cfg.FpPresent) begin
+463        <font color = "grey">unreachable  </font>          unique case (ldbuf_rdata.operation)
+464                                 ariane_pkg::FLW: begin
+465        <font color = "grey">unreachable  </font>              result_o = {{CVA6Cfg.XLEN - 32{rdata_sign_bit}}, shifted_data[31:0]};
+466                                 end
+467                                 ariane_pkg::FLH: begin
+468        <font color = "grey">unreachable  </font>              result_o = {{CVA6Cfg.XLEN - 32 + 16{rdata_sign_bit}}, shifted_data[15:0]};
+469                                 end
+470                                 ariane_pkg::FLB: begin
+471        <font color = "grey">unreachable  </font>              result_o = {{CVA6Cfg.XLEN - 32 + 24{rdata_sign_bit}}, shifted_data[7:0]};
+472                                 end
+473                                 default: begin
+474        <font color = "grey">unreachable  </font>              result_o = shifted_data[CVA6Cfg.XLEN-1:0];
+475                                 end
+476                               endcase
+477                             end else begin
+478        1/1                    result_o = shifted_data[CVA6Cfg.XLEN-1:0];
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod59.html" >load_unit</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>65</td><td>65</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>65</td><td>65</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       134
+ EXPRESSION (((&amp;ldbuf_valid_q)) &amp;&amp; ( ! (LDBUF_FALLTHROUGH &amp;&amp; ldbuf_r) ))
+             ---------1--------    ------------------2-----------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       134
+ SUB-EXPRESSION ( ! (LDBUF_FALLTHROUGH &amp;&amp; ldbuf_r) )
+                    ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       134
+ SUB-EXPRESSION (LDBUF_FALLTHROUGH &amp;&amp; ldbuf_r)
+                 --------1--------    ---2---
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       155
+ EXPRESSION ((LDBUF_FALLTHROUGH &amp;&amp; ldbuf_r) ? ldbuf_rindex : ldbuf_free_index)
+             ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       155
+ SUB-EXPRESSION (LDBUF_FALLTHROUGH &amp;&amp; ldbuf_r)
+                 --------1--------    ---2---
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       167
+ EXPRESSION (ldbuf_r &amp;&amp; (((!LDBUF_FALLTHROUGH)) || ((!ldbuf_w))))
+             ---1---    --------------------2-------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       167
+ SUB-EXPRESSION (((!LDBUF_FALLTHROUGH)) || ((!ldbuf_w)))
+                 -----------1----------    ------2-----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       242
+ EXPRESSION (commit_tran_id_i != lsu_ctrl_i.trans_id)
+            --------------------1--------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       243
+ EXPRESSION (((!dcache_wbuffer_not_ni_i)) || ((!store_buffer_empty_i)))
+             --------------1-------------    ------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       259
+ EXPRESSION (kill_req_q || kill_s1)
+             -----1----    ---2---
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       262
+ EXPRESSION (obi_a_state_q == REGISTRED)
+            --------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       266
+ EXPRESSION (((1'b0 ? ldbuf_w_q : valid_i)) &amp;&amp; ex_i.valid)
+             ---------------1--------------    -----2----
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       269
+ EXPRESSION (obi_load_rsp_i.rvalid &amp;&amp; ((!ldbuf_flushed_q[ldbuf_rindex])))
+             ----------1----------    -----------------2----------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       290
+ EXPRESSION (stall_translation || stall_ni || stall_obi || ldbuf_full || flush_i)
+             --------1--------    ----2---    ----3----    -----4----    ---5---
+</pre>
+<table class="noborder">
+<col span="5" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>-5-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td class="lf">Unreachable</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="lf">Unreachable</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       324
+ EXPRESSION ((obi_a_state_q == TRANSPARENT) ? paddr : paddr_q)
+             ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       324
+ SUB-EXPRESSION (obi_a_state_q == TRANSPARENT)
+                ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       326
+ EXPRESSION ((((!1'b0)) &amp;&amp; (obi_a_state_q == TRANSPARENT)) ? lsu_ctrl_i.be : be_q)
+             ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       326
+ SUB-EXPRESSION (((!1'b0)) &amp;&amp; (obi_a_state_q == TRANSPARENT))
+                 ----1----    ---------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       326
+ SUB-EXPRESSION (obi_a_state_q == TRANSPARENT)
+                ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       328
+ EXPRESSION ((((!1'b0)) &amp;&amp; (obi_a_state_q == TRANSPARENT)) ? ldbuf_windex : ldbuf_windex_q)
+             ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       328
+ SUB-EXPRESSION (((!1'b0)) &amp;&amp; (obi_a_state_q == TRANSPARENT))
+                 ----1----    ---------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       328
+ SUB-EXPRESSION (obi_a_state_q == TRANSPARENT)
+                ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       333
+ EXPRESSION ((((!1'b0)) &amp;&amp; (obi_a_state_q == TRANSPARENT)) ? paddr_is_cacheable : paddr_is_cacheable_q)
+             ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       333
+ SUB-EXPRESSION (((!1'b0)) &amp;&amp; (obi_a_state_q == TRANSPARENT))
+                 ----1----    ---------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>-</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>-</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       333
+ SUB-EXPRESSION (obi_a_state_q == TRANSPARENT)
+                ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       383
+ EXPRESSION (obi_a_state_q == TRANSPARENT)
+            ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       438
+ SUB-EXPRESSION ((ldbuf_rdata.operation inside {LH, FLH, HLV_H}) ? ((ldbuf_rdata.address_offset + 1)) : ldbuf_rdata.address_offset)
+                 -----------------------1-----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       449
+ EXPRESSION ((rdata_is_signed &amp; rdata_sign_bits[rdata_offset]) | ((1'b0 &amp;&amp; rdata_is_fp_signed)))
+             ------------------------1------------------------   ---------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>0</td><td>1</td><td class="lf">Unreachable</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       449
+ SUB-EXPRESSION (rdata_is_signed &amp; rdata_sign_bits[rdata_offset])
+                 -------1-------   --------------2--------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_208">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+  <ul name="tag_load_unit">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
