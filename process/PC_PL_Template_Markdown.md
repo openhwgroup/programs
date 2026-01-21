@@ -1,18 +1,30 @@
-# OpenHW Project Concept And Project Launch Markdown Template: Instructions
-*This template is divided into two parts:*
-- *The **Project Concept (PC)** required fields are shown in the first part.*
-- *The additional **Project Launch (PL)** required and optional fields are shown in the second part.*
+# OpenHW Project Concept and Project Launch markdown template: Instructions
+*This template presents both PC and PL templates as well as instructions for use*
 
-*Delete any sections not needed for your proposal*
 
-*The normal proposal flow is:*
-- ***The PC proposal*** *is prepared and presented to TWG. The PC proposal introduces the project and explains the market drivers and the "why"* 
-  - *TWG grants PC gate with feedback, or rejects PC gate with feedback*
-  - *If PC granted, additional work is carried out to prepare the **PL proposal***. 
-- *The **PL proposal** contains updates to the PC fields and adds additional fields. The PL proposal explains the "what" of the project.* 
-  - *For software porting projects, the PL should contain the feature list*
-  - *For IP core or other complex projects, the PL should contain a high level feature list (the user manual with feature specification is developed for the Plan Approved gate).*
+*In the **normal OpenHW project flow**:*
+- *The **PC*** 
+  - *Introduces the intitial project concept and team, associated market drivers or user requirements (the "why") along with basic scope of the project*
+  - *Typically lacks detail such as a feature list, architecture or complete project team.* 
+  - *If PC approved by the TWG, the project team completes the project description in the **PL proposal***. 
+  - *The PC as approved is retained in the programs repository*
 
+- *The **PL***:
+  - *Is a separate document to the PC, which it updates and completes.*
+  - *The architecture, major features and project phases (the "what" - but not necessarily final level of detail)*
+  - *The project team is identified* 
+  - *If PL approved by the TWG, the project team completes the feature specification and project plan in the **Plan Approved (PA) proposal***. *
+
+*The flow for **OpenHW software projects** whose scope/target is a family of related targets (such as CORE-V 32 bit 4 stage cores):*
+- *PC and PL are written as top-level projects addressing the target family.* 
+- *Any PC and PL sections intended for a particular target, e.g., preliminary feature list, are identified as target-specific*
+- *The PA describes a "subproject" for a particular target. Each PA should contain the full feature list and project plan for a particular target*
+- *There would normally be multiple PA sub-projects for top-level SW projects*
+
+*The flow for **OpenHW Advanced RISC-V Verification Methodology (ARVM)** subprojects:*
+- *The ARVM PC is written as a top-level project addressing multiple ARVM subprojects* 
+- *The PL and PA describe an ARVM "subproject". The PA  contains the full feature list and project plan for the subproject*
+- *There will be multiple PL/PA subprojects for the ARVM top-level project*
 
 <hr/>
 
@@ -113,7 +125,7 @@
 ### Feature Requirements
 *Features are more granular than Components.* 
 *For SW porting projects, this list serves as the detailed project reference for features*
-*For IP Cores or more complext projects, a user manual with requirements specification is produced at the PA gate, which may supercede this list of features*
+*For IP Cores or more complext projects, a user manual with requirements specification is produced at the PA gate, which may supersede this list of features*
 
 #### Feature 1
 #### Feature 2
@@ -134,7 +146,7 @@
 ### Funding for project aspects - requirement and availability 
 
 ## Architecture and/or context diagrams 
-*Architecture (internal blocks and interconnections), and context (depiction of the the project content within its operational context), are both encouraged where appropriate to depict functionality to both subject matter experts and to non-experts*
+*Architecture (internal blocks and interconnections), and context (depiction of the project content within its operational context), are both encouraged where appropriate to depict functionality to both subject matter experts and to non-experts*
 
 
 
